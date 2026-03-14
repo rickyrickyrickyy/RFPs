@@ -1,0 +1,14 @@
+---
+description: When the user says "remember this" (or similar) in the RFP repo, store the conversation in Marceline's memory. Save to memory/YYYY-MM-DD_short-slug.memory.md.
+alwaysApply: true
+---
+
+# Remember — store in Marceline’s memory (RFP repo)
+
+When the user says they want to **remember** this conversation (or "this chat", "save to Marceline's memory", "save for Marceline") in this workspace:
+
+1. **Summarise** the current conversation (or the part they indicate) into a concise memory note: markdown, `##` heading, key facts/decisions/context.
+2. **Save to** `memory/YYYY-MM-DD_short-slug.memory.md` (e.g. `memory/2026-03-14_rfp-p6-priorities.memory.md`).
+3. **Create the file** in this repo. Keep the memory concise so Marceline can load it quickly next time.
+
+If the user names another agent or repo, they may intend the Agents repo remember workflow instead; in that case you can say "For the Agents repo, use that workspace and say 'remember this for Marceline' there."
