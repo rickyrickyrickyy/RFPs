@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2.2 Plug ejection / juice collection — P6 RFP</title>
+  <style>
+    :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
+    a { color: var(--accent); }
+    h1 { font-size: 1.35rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.25rem; }
+    ul, ol { padding-left: 1.25rem; }
+    .back { margin-bottom: 1rem; font-size: 0.9rem; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    figure img { max-width: 100%; height: auto; border: 1px solid var(--border); }
+    figcaption { margin-top: 0.35rem; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <p class="back"><a href="../index.html">← P6 RFP index</a></p>
+  <h1>2.2 Plug ejection / plunger drive / juice collection</h1>
+  <p class="muted">Plunger, filter, plug cutter interface; plug ejection into disposal core chute.</p>
+
+  <h2>Plug ejection (extraction cycle)</h2>
+  <ol>
+    <li><strong>Pressing stroke:</strong> Juice leaves the oranges into the branched Y-section of the <a href="../Collection/">collector</a>. The plug remains in the plug cutter / filter area.</li>
+    <li><strong>Plug ejection:</strong> After the pressing stroke, the <strong>plug ejection system</strong> pushes a <strong>plunger</strong> through the <strong>filter</strong>, pushes the <strong>plug</strong> back out of the <strong>plug cutter</strong>, and the plug <strong>falls into the core chute</strong> of the <a href="../Outflow-disposal/">disposal system</a>.</li>
+    <li><strong>Disposal:</strong> Meanwhile, peels fall to the sides of the peelers, avoid the core chutes, two channels; the two augers take peels and plugs/cores away separately (<a href="../Outflow-disposal/">Outflow-disposal</a>).</li>
+  </ol>
+
+  <h2>Components</h2>
+  <ul>
+    <li><strong>Plunger</strong> — pushes through filter to eject plug (multiple in parallel)</li>
+    <li><strong>Plunger actuator bar / plate</strong> — light purple; carries plungers in unison</li>
+    <li><strong>Plug ejection channels/housings</strong> — green; filter/plug-cutter interface → core chute</li>
+    <li><strong>Actuator rods</strong> — red, yellow — connect to drive</li>
+    <li><strong>Guides/bushings</strong> — orange, light blue</li>
+    <li><strong>Return spring</strong> — yellow helical (return motion)</li>
+    <li><strong>Filter</strong> — plunger passes through; juice to collector</li>
+    <li><strong>Plug cutter</strong> — (in <a href="../Collection/">Collection</a>); plug ejected by this system</li>
+    <li><strong>Plunger drive bracket</strong></li>
+  </ul>
+
+  <h2>Overview figures</h2>
+  <p class="muted">Seven CAD views — see <a href="images/README.md">images/README.md</a>.</p>
+  <figure style="margin:1.25rem 0;"><img src="images/plug-ejection-exploded-1.png" alt="Plug ejection exploded" style="max-width:100%;height:auto;border:1px solid var(--border);"><figcaption class="muted" style="margin-top:0.35rem;">Figure 1. Exploded — actuator bar, blue plungers, green housings, rods, spring.</figcaption></figure>
+  <figure style="margin:1.25rem 0;"><img src="images/plug-ejection-housings-2.png" alt="Plug ejection housings"><figcaption class="muted" style="margin-top:0.35rem;">Figure 2. Actuator plate, plungers into green housing; core chute side.</figcaption></figure>
+  <figure style="margin:1.25rem 0;"><img src="images/plug-ejection-front-3.png" alt="Plug ejection front"><figcaption class="muted" style="margin-top:0.35rem;">Figure 3. Front — vertical plungers, base, actuator mechanisms, green supports.</figcaption></figure>
+  <figure style="margin:1.25rem 0;"><img src="images/plug-ejection-plungers-4.png" alt="Plug ejection plungers"><figcaption class="muted" style="margin-top:0.35rem;">Figure 4. Plunger assemblies — purple plate, blue plungers, green blocks, rods.</figcaption></figure>
+  <figure style="margin:1.25rem 0;"><img src="images/plug-ejection-top-5.png" alt="Plug ejection top"><figcaption class="muted" style="margin-top:0.35rem;">Figure 5. Top — structural bar, four plunger assemblies, green blocks.</figcaption></figure>
+  <figure style="margin:1.25rem 0;"><img src="images/plug-ejection-single-6.png" alt="Plug ejection single"><figcaption class="muted" style="margin-top:0.35rem;">Figure 6. Single station — plunger rod, yoke-like actuation, housing.</figcaption></figure>
+  <figure style="margin:1.25rem 0;"><img src="images/plug-ejection-left-7.png" alt="Plug ejection left"><figcaption class="muted" style="margin-top:0.35rem;">Figure 7. Left — plunger rod, green housing, spring, bushings, actuation.</figcaption></figure>
+
+  <h2>Interfaces</h2>
+  <ul>
+    <li><strong>Input:</strong> Plug in plug cutter/filter after pressing stroke (from <a href="../Collection/">Collection</a>).</li>
+    <li><strong>Output:</strong> Plug ejected → falls into <a href="../Outflow-disposal/">disposal</a> core chute.</li>
+    <li><strong>Drive:</strong> Plunger actuation from <a href="../Drivetrain/">drivetrain</a> / <a href="../Transmission/">transmission</a> (yoke/cam).</li>
+  </ul>
+
+  <p><a href="PlugEjection.md">PlugEjection.md</a> (source)</p>
+</body>
+</html>

@@ -46,36 +46,60 @@ Use these as RFP sections. For each: add photos, Q&A, and flush out part/paramet
 
 ### 2.3 Drivetrain
 
-- Bearings  
-- Plunger drive rods  
-- Yoke  
-- Plunger pull bracket  
-- Sumitomo reducer  
-- Reducer mount  
-- Two gears  
-- Drive belt motor transmission  
-- Protection pulley guard  
+**Components (CAD):** Driven gear #FFE696, passive gear #237A3A, two cam bearings #4AB6F6 (interface with [transmission](../Transmission/) yoke), passive gear shaft #3683E6, locating roller bearing SKF_F4BRP 208-SRB-CRH_ECY 213 #7D26B5, non-locating roller bearing SKF_F4BRP 208-SRB-CLE, reducer spacer #366D20, **Sumitomo Cyclo 6000 reducer** #5EB45D, **V-belt** #572D9A (DIN 2215 17×957, 2-belt, 1000 mm long), **WEG 22 1450 rpm motor** #6A37BB, stainless steel motor mount plate spacer #D2B545, wooden motor mount plate #207E96.
+
+**Reminders:** Add Sumitomo Cyclo 6000 reducer specs; add more WEG 22 motor specs. More drivetrain details to be added later.
+
+**RFP content:** `RFPs/Drivetrain/` (Drivetrain.md, 12 CAD views — 10 drivetrain, 2 cam/yoke interface, colour key).
+
+### Transmission subsystem (yoke, shafts, bearings)
+
+**Function:** Transmits force from the **gears** (drivetrain) to the **extraction/synchronisation system**, which presses fruit against the **collection system** on the **collection system mount plate** (formerly static/loaded mount plate).
+
+**Components:** Yoke (#2F9EBA), two 35 mm drive shafts with shaft mounts at both ends (#798C2E), two LMK35UU linear bearings (#3582E4), transmission mount plate (#B341C3) on frame.
+
+**RFP content:** `RFPs/Transmission/` (overview, CAD views, colour key, interfaces).
 
 ---
 
-### 2.4 Outflow / bin subsystem
+### Collection subsystem (static peelers, juice, filter, plug)
 
-- Peel bin and core chutes  
-- Peel and core disposal augers  
-- Peel deflectors  
+**Components:** Collection mount plate (#27C16A), static peelers (#F36F3B), static deflectors (#CCDF3F — keep peels sliding towards static plate; two angled surfaces for stiffness and potential forming vs welding), juice collectors / Y-tubes (#FFFF50), filter tube (#287F3F), plug cutter (#4DB7F5). Mounts on frame’s loaded mount plate (collection system mount plate).
+
+**Function:** Driven + static peelers mesh; oranges fall between; fingers interlace → peel to extraction chamber/outflow chute; plug cutter cuts centre plug; juice → filter tube slots → yellow collector → Y-branch → ribbed connection (standard rubber pipes). **Reminder:** Send 34 mm standard connector for quick connection.
+
+**RFP content:** `RFPs/Collection/` (overview, 11 CAD views, colour key).
+
+---
+
+### 2.4 Outflow / disposal subsystem
+
+**Disposal system:** **Peel chute** (red #D43C3C, folded sheet metal), **core chutes** (welded to peel chute), **two augers** (#28B399) that take peels and plugs/cores away separately. Alternative CAD colours: peel chute #2768BC, core chutes #D79132, augers #FFED9E.
+
+**Cycle (after pressing stroke):** [Plug ejection](../Plug-ejection/) pushes plunger through filter → plug out of plug cutter → plug **falls into core chute**. Peels fall to **sides of peelers**, **avoid core chutes**, **two channels** for separate processing; augers take peels and plugs/cores away separately.
+
+**Also:** Peel deflectors. **RFP content:** `RFPs/Outflow-disposal/` (Disposal.md, 9 CAD views, colour key).
+
+---
+
+### 2.2 Plug ejection (plunger / juice collection)
+
+**Plug ejection (after pressing stroke):** System pushes **plunger** through **filter**, pushes **plug** back out of **plug cutter** → plug **falls into** [disposal](../Outflow-disposal/) **core chute**. Components: plunger, filter, plug cutter interface, plunger drive bracket, juice outflow collection. See [Collection](../Collection/) (juice to Y-section, plug cutter) and [Outflow-disposal](../Outflow-disposal/) (core chute, peel chute, augers).
+
+**RFP content:** `RFPs/Plug-ejection/` (PlugEjection.md, README, index, **7 CAD views** in images/ — actuator bar, plungers, green housings, rods, spring).
 
 ---
 
 ### 2.5 Frame
 
-- **Main frame** — primary structure (from your RFP draft: 80×80×5 GB/T square tubes; #8 C-brackets; fully welded).  
-- **Driven bracket** — drivetrain / drive shaft mounting  
-- **Drivetrain mount plate** — between drivetrain and linear bearing  
-- **Linear bearing mount plate** — two drive shafts through; drivetrain pushes through  
-- **Loaded mount plate** — static peelers mounted here  
+- **Main frame** — primary structure (80×80×5 GB/T square tubes; #8 C-brackets; fully welded). Six legs with M24 tapped endplates; **6111K669 M24 100 mm Swivel Leveling Mount** (McMaster) at each leg.  
+- **Loaded mount plate** — collection assembly; collection module and static side of extraction (juicer mashes oranges into).  
+- **Transmission mount plate** (formerly bearing mount plate) — part of **transmission subsystem**: yoke, two 35 mm shafts, two LMK35UU linear bearings and this plate.  
+- **Drivetrain mount plate** — two gears, housed tapered roller bearings (gears on top), reducer spacer, Sumitomo reducer.  
+- **Driven bracket** — drivetrain / drive shaft mounting (as needed).  
 
-Design focus: stability, alignment, force transmission, smooth linear bearing operation, secure peeler mounting.  
-**Existing RFP content:** `RFPs/Frame/Frame.md` (feet, levelling, side rails, dowels, assembly steps, H7 drill/ream).
+All three plates mounted from top onto frame, then onto the two side rails. Design focus: stability, alignment, force transmission, smooth transmission/yoke operation, secure peeler mounting.  
+**RFP content:** `RFPs/Frame/Frame.md` and `RFPs/Frame/images/` (CAD views, colour key, feet, levelling, side rails, dowels, assembly steps, H7 drill/ream).
 
 ---
 
