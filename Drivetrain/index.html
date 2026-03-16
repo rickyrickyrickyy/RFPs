@@ -15,10 +15,19 @@
     .muted { color: var(--muted); font-size: 0.9rem; }
     table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
     th, td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
-    .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.25rem; margin: 1.5rem 0; }
-    .gallery figure { margin: 0; }
-    .gallery figure img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
-    .gallery figcaption { margin-top: 0.35rem; font-size: 0.85rem; color: var(--muted); }
+    .swatch { display: inline-block; width: 1.25rem; height: 1.25rem; border: 1px solid var(--border); border-radius: 3px; vertical-align: middle; }
+    .slideshow { margin: 1.5rem 0; }
+    .slideshow .slide { display: none; }
+    .slideshow .slide.active { display: block; }
+    .slideshow .slide img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
+    .slideshow-caption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); min-height: 2.5em; }
+    .slideshow-controls { display: flex; align-items: center; gap: 1rem; margin-top: 0.75rem; flex-wrap: wrap; }
+    .slideshow-controls button { background: var(--border); color: var(--text); border: none; padding: 0.35rem 0.75rem; border-radius: 4px; cursor: pointer; font-size: 0.9rem; }
+    .slideshow-controls button:hover { background: var(--accent); color: #fff; }
+    .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
+    .iface-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    .iface-table th, .iface-table td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
+    .iface-table th { color: var(--muted); font-weight: 600; }
     .reminder { background: rgba(88, 166, 255, 0.12); border: 1px solid var(--accent); border-radius: 6px; padding: 0.75rem 1rem; margin: 1rem 0; font-size: 0.95rem; }
   </style>
 </head>
@@ -29,48 +38,82 @@
 
   <div class="reminder"><strong>Reminders:</strong> Provide <strong>Sumitomo Cyclo 6000 reducer</strong> specs. Provide <strong>more specs</strong> for <strong>WEG 22 1450 rpm</strong> motor. Additional drivetrain details to be added later.</div>
 
-  <h2>Components (CAD colour key)</h2>
-  <p class="muted">See <a href="#fig1">Figure 1</a>, <a href="#fig7">Figure 7</a>, <a href="#fig10">Figure 10</a> for yoke/cam interface and gear assembly.</p>
+  <h2>Subassemblies</h2>
+  <p class="muted">Subassembly subdirectories with detailed pages (to be added).</p>
+  <ul>
+    <li>Motor, reducer (Sumitomo Cyclo 6000), gear train, belt drive — detail pages TBD</li>
+  </ul>
+
+  <h2>Colour key (this subsystem’s figures)</h2>
+  <p class="muted">Applies only to the CAD views in this section. Other subsystems use their own colour sets.</p>
   <table>
-    <tr><th>Colour (hex)</th><th>Component</th></tr>
-    <tr><td>#FFE696</td><td><strong>Driven gear</strong></td></tr>
-    <tr><td>#237A3A</td><td><strong>Passive gear</strong></td></tr>
-    <tr><td>#4AB6F6</td><td><strong>Two cam bearings</strong> — interface with yoke of transmission subsystem</td></tr>
-    <tr><td>#3683E6</td><td><strong>Passive gear shaft</strong></td></tr>
-    <tr><td>#7D26B5</td><td><strong>Locating roller bearing</strong> SKF_F4BRP 208-SRB-CRH_ECY 213 (passive gear sits on)</td></tr>
-    <tr><td>—</td><td><strong>Non-locating roller bearing</strong> SKF_F4BRP 208-SRB-CLE (driven gear sits on)</td></tr>
-    <tr><td>#366D20</td><td><strong>Reducer spacer</strong></td></tr>
-    <tr><td>#5EB45D</td><td><strong>Sumitomo Cyclo 6000 reducer</strong></td></tr>
-    <tr><td>#572D9A</td><td><strong>V-belt</strong> — DIN 2215 17×957, 2-belt, 1000 mm long</td></tr>
-    <tr><td>#6A37BB</td><td><strong>WEG 22 1450 rpm motor</strong></td></tr>
-    <tr><td>#D2B545</td><td><strong>Stainless steel motor mount plate spacer</strong></td></tr>
-    <tr><td>#207E96</td><td><strong>Wooden motor mount plate</strong></td></tr>
+    <tr><th>Colour</th><th>Component</th></tr>
+    <tr><td><span class="swatch" style="background-color:#FDB159" title="#FDB159"></span></td><td><strong>Top mounting plate</strong></td></tr>
+    <tr><td><span class="swatch" style="background-color:#D72F8B" title="#D72F8B"></span></td><td><strong>Driving gear</strong> (large spur gear), motor cover plate</td></tr>
+    <tr><td><span class="swatch" style="background-color:#9EE653" title="#9EE653"></span></td><td><strong>Driven gear</strong> (spur gear meshing with driving gear)</td></tr>
+    <tr><td><span class="swatch" style="background-color:#7D5EC0" title="#7D5EC0"></span></td><td><strong>Shaft extensions / cam bearings</strong> — vertical posts on gears; interface with transmission yoke</td></tr>
+    <tr><td><span class="swatch" style="background-color:#71E3ED" title="#71E3ED"></span></td><td><strong>Central disc of driven gear</strong>, top rim of gearbox housing, bearing</td></tr>
+    <tr><td><span class="swatch" style="background-color:#E8D1A3" title="#E8D1A3"></span></td><td><strong>Sumitomo Cyclo 6000 reducer</strong> — gearbox main body</td></tr>
+    <tr><td><span class="swatch" style="background-color:#26835F" title="#26835F"></span></td><td><strong>WEG 22 1450 rpm motor</strong></td></tr>
+    <tr><td><span class="swatch" style="background-color:#419BD9" title="#419BD9"></span></td><td><strong>Pulleys and V-belt</strong> — DIN 2215 17×957, 2-belt, 1000 mm long</td></tr>
+    <tr><td><span class="swatch" style="background-color:#B85C38" title="#B85C38"></span></td><td><strong>Central beam / bracket</strong> (horizontal support across gears)</td></tr>
   </table>
 
-  <h2 id="gallery">Gallery</h2>
-  <p class="muted">Drivetrain and cam/yoke interface. Refer to figures in the text as <a href="#fig1">Figure 1</a>, <a href="#fig2">Figure 2</a>, etc.</p>
-  <div class="gallery">
-    <figure id="fig1"><img src="images/drivetrain-isometric-1.png" alt="Drivetrain isometric"><figcaption>Figure 1. Isometric — gears, bearings, reducer, motor, V-belt.</figcaption></figure>
-    <figure id="fig2"><img src="images/drivetrain-top-2.png" alt="Drivetrain top"><figcaption>Figure 2. Top-down — two gears, reducer spacer, mounting.</figcaption></figure>
-    <figure id="fig3"><img src="images/drivetrain-elevated-3.png" alt="Drivetrain elevated"><figcaption>Figure 3. Elevated front-right — gear stack, reducer, motor, V-belt.</figcaption></figure>
-    <figure id="fig4"><img src="images/drivetrain-front-right-4.png" alt="Drivetrain front-right"><figcaption>Figure 4. Front-right — mounting plate, gears, cam bearings, reducer, motor, spacers.</figcaption></figure>
-    <figure id="fig5"><img src="images/drivetrain-front-5.png" alt="Drivetrain front"><figcaption>Figure 5. Front — motor, V-belt, reducer, gears, cam bearings.</figcaption></figure>
-    <figure id="fig6"><img src="images/drivetrain-side-6.png" alt="Drivetrain side"><figcaption>Figure 6. Right side — passive gear shaft, cam bearing, gears, motor, reducer.</figcaption></figure>
-    <figure id="fig7"><img src="images/drivetrain-yoke-interface-7.png" alt="Cam bearings / yoke interface"><figcaption>Figure 7. Cam bearings interfacing with transmission subsystem yoke.</figcaption></figure>
-    <figure id="fig8"><img src="images/drivetrain-front-alt-8.png" alt="Drivetrain front alt"><figcaption>Figure 8. Front/side — gears, bearings, reducer, motor.</figcaption></figure>
-    <figure id="fig9"><img src="images/drivetrain-cross-section-9.png" alt="Drivetrain cross-section"><figcaption>Figure 9. Cross-section — yoke, cam bearings, mount plates, gears, reducer, motor, V-belt.</figcaption></figure>
-    <figure id="fig10"><img src="images/drivetrain-top-yoke-10.png" alt="Drivetrain top yoke"><figcaption>Figure 10. Top — two gears meshing, yoke (#2F9EBA), cam bearings in yoke.</figcaption></figure>
-    <figure id="fig11"><img src="images/drivetrain-back-11.png" alt="Drivetrain back"><figcaption>Figure 11. Back — motor, reducer, V-belt, mounting.</figcaption></figure>
-    <figure id="fig12"><img src="images/drivetrain-front-12.png" alt="Drivetrain front 12"><figcaption>Figure 12. Front — full assembly.</figcaption></figure>
+  <h2 id="gallery">Figures</h2>
+  <p class="muted">Drivetrain: motor, reducer, belt, gear train, cam bearings. Refer to figures as <a href="#fig1">Figure 1</a>, <a href="#fig2">Figure 2</a>, etc.</p>
+  <div class="slideshow" id="drive-slideshow">
+    <div class="slideshow-track">
+      <div class="slide active" id="fig1" data-caption="Figure 1. Isometric top-front-right — mounting plate, driving gear (magenta), driven gear (lime green), reducer, motor, pulleys and belt."><img src="images/drivetrain-1.png" alt="Drivetrain isometric"></div>
+      <div class="slide" id="fig2" data-caption="Figure 2. Elevated isometric — gear train on orange plate, gearbox (beige), motor (dark green), belt drive (blue)."><img src="images/drivetrain-2.png" alt="Drivetrain elevated"></div>
+      <div class="slide" id="fig3" data-caption="Figure 3. Top-down — two gears (magenta, lime green), central beam, shaft extensions (purple), bearings."><img src="images/drivetrain-3.png" alt="Drivetrain top"></div>
+      <div class="slide" id="fig4" data-caption="Figure 4. Isometric — frame, gear train, driven gear (green), driving gear (magenta), reducer, motor, belt."><img src="images/drivetrain-4.png" alt="Drivetrain isometric 2"></div>
+      <div class="slide" id="fig5" data-caption="Figure 5. Side — motor (dark green), gearbox (beige), belt (blue), central housing, beam and mounts."><img src="images/drivetrain-5.png" alt="Drivetrain side"></div>
+      <div class="slide" id="fig6" data-caption="Figure 6. Side — motor, reducer, belt drive; gears (green, magenta), shaft components (purple)."><img src="images/drivetrain-6.png" alt="Drivetrain side 2"></div>
+    </div>
+    <p class="slideshow-caption" id="drive-caption" aria-live="polite">Figure 1. Isometric top-front-right — mounting plate, driving gear (magenta), driven gear (lime green), reducer, motor, pulleys and belt.</p>
+    <div class="slideshow-controls">
+      <button type="button" id="drive-prev" aria-label="Previous">← Previous</button>
+      <span class="slideshow-counter" id="drive-counter">1 / 6</span>
+      <button type="button" id="drive-next" aria-label="Next">Next →</button>
+    </div>
   </div>
 
   <h2>Interfaces</h2>
   <ul>
     <li><strong>Input:</strong> WEG 22 1450 rpm motor → V-belt → Sumitomo Cyclo 6000 reducer.</li>
-    <li><strong>Output:</strong> Two cam bearings (#4AB6F6) interface with <a href="../Transmission/">yoke</a> of transmission subsystem.</li>
+    <li><strong>Output:</strong> Shaft extensions / cam bearings <span class="swatch" style="background-color:#7D5EC0" title="#7D5EC0"></span> interface with <a href="../Transmission/">yoke</a> of transmission subsystem.</li>
     <li><strong>Mount:</strong> <a href="../Frame/">Drivetrain mount plate</a> on main frame.</li>
   </ul>
 
+  <h2>Interfaces and tolerances</h2>
+  <p class="muted">Known interfaces and tolerances. Links go to related subsystems.</p>
+  <table class="iface-table">
+    <thead><tr><th>Part</th><th>Interface / tolerance</th><th>Related</th></tr></thead>
+    <tbody>
+      <tr><td>Drivetrain mount plate</td><td>Mounts to frame; H7/dowel alignment per frame</td><td><a href="../Frame/">Frame</a></td></tr>
+      <tr><td>Cam bearings</td><td>Interface with transmission yoke; drive linear motion</td><td><a href="../Transmission/">Transmission</a></td></tr>
+      <tr><td>V-belt</td><td>DIN 2215 17×957; 2-belt; 1000 mm long</td><td>—</td></tr>
+      <tr><td>Sumitomo Cyclo 6000</td><td>Reducer; specs TBD</td><td>—</td></tr>
+      <tr><td>WEG 22 1450 rpm</td><td>Motor; specs TBD</td><td>—</td></tr>
+    </tbody>
+  </table>
+
   <p><a href="Drivetrain.md">Drivetrain.md</a> (source)</p>
+  <script>
+(function(){
+  var el = document.getElementById('drive-slideshow');
+  if (!el) return;
+  var slides = el.querySelectorAll('.slide');
+  var cap = document.getElementById('drive-caption');
+  var counter = document.getElementById('drive-counter');
+  var n = slides.length;
+  var i = 0;
+  function go(k) { i = (k + n) % n; slides.forEach(function(s,j){ s.classList.toggle('active', j===i); }); if (cap) cap.textContent = slides[i].getAttribute('data-caption') || ''; if (counter) counter.textContent = (i+1) + ' / ' + n; }
+  el.querySelector('#drive-prev').addEventListener('click', function(){ go(i-1); });
+  el.querySelector('#drive-next').addEventListener('click', function(){ go(i+1); });
+  var hash = window.location.hash;
+  if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
+})();
+  </script>
 </body>
 </html>

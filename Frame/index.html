@@ -14,16 +14,32 @@
     .back { margin-bottom: 1rem; font-size: 0.9rem; }
     .muted { color: var(--muted); font-size: 0.9rem; }
     ol { padding-left: 1.25rem; }
-    .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.25rem; margin: 1.5rem 0; }
-    .gallery figure { margin: 0; }
-    .gallery figure img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
-    .gallery figcaption { margin-top: 0.35rem; font-size: 0.85rem; color: var(--muted); }
+    .swatch { display: inline-block; width: 1.25rem; height: 1.25rem; border: 1px solid var(--border); border-radius: 3px; vertical-align: middle; flex-shrink: 0; }
+    .slideshow { margin: 1.5rem 0; }
+    .slideshow-track { position: relative; }
+    .slideshow .slide { display: none; }
+    .slideshow .slide.active { display: block; }
+    .slideshow .slide img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
+    .slideshow-caption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); min-height: 2.5em; }
+    .slideshow-controls { display: flex; align-items: center; gap: 1rem; margin-top: 0.75rem; flex-wrap: wrap; }
+    .slideshow-controls button { background: var(--border); color: var(--text); border: none; padding: 0.35rem 0.75rem; border-radius: 4px; cursor: pointer; font-size: 0.9rem; }
+    .slideshow-controls button:hover { background: var(--accent); color: #fff; }
+    .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
+    .iface-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    .iface-table th, .iface-table td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
+    .iface-table th { color: var(--muted); font-weight: 600; }
   </style>
 </head>
 <body>
   <p class="back"><a href="../index.html">← Back to P6 RFP overview</a></p>
   <h1>2.5 Frame</h1>
   <p class="muted">Primary structure; design focus: stability, alignment, force transmission, smooth linear bearing operation, secure peeler mounting.</p>
+
+  <h2>Subassemblies</h2>
+  <p class="muted">Subassembly subdirectories with detailed pages (to be added).</p>
+  <ul>
+    <li>Main frame, loaded mount plate, transmission mount plate, drivetrain mount plate — detail pages TBD</li>
+  </ul>
 
   <h2>Overview</h2>
   <p>The frame is the <strong>primary structure</strong> of the P6 machine (see <a href="#fig1">Figure 1</a>, <a href="#fig2">Figure 2</a>). All other subsystems mount to it: drivetrain, plunger/juice collection, intake/peelers, outflow, and CIP. It must provide a stable, repeatable base so that:</p>
@@ -33,7 +49,7 @@
     <li><strong>Peelers</strong> (on the loaded mount plate) stay fixed for extraction and CIP.</li>
   </ul>
   <p>Repeatable alignment is achieved with dowels and H7 drill/ream holes in the side rails.</p>
-  <p><strong>Key interfaces:</strong> Main frame (#26C16A) → <strong>drivetrain mount plate</strong> (#9075CD); main frame → <strong>transmission mount plate</strong> (#B341C3); main frame → <strong>loaded mount plate</strong> (#34E682, collection assembly). All three plates are mounted from the top onto the frame and side rails. Leveling: 6111K669 M24 100 mm Swivel Leveling Mount (McMaster) on M24 tapped endplates at bottom of legs (<a href="#fig5">Figure 5</a>, <a href="#fig6">Figure 6</a>, <a href="#fig7">Figure 7</a>). Enclosure/shell: <a href="../Enclosure-shell/">Enclosure-shell</a>.</p>
+  <p><strong>Key interfaces:</strong> Main frame <span class="swatch" style="background-color:#26C16A" title="#26C16A"></span> → <strong>drivetrain mount plate</strong> <span class="swatch" style="background-color:#9075CD" title="#9075CD"></span>; main frame → <strong>transmission mount plate</strong> <span class="swatch" style="background-color:#B341C3" title="#B341C3"></span>; main frame → <strong>loaded mount plate</strong> <span class="swatch" style="background-color:#34E682" title="#34E682"></span> (collection assembly). All three plates are mounted from the top onto the frame and side rails. Leveling: 6111K669 M24 100 mm Swivel Leveling Mount (McMaster) on M24 tapped endplates at bottom of legs (<a href="#fig5">Figure 5</a>, <a href="#fig6">Figure 6</a>, <a href="#fig7">Figure 7</a>). Enclosure/shell: <a href="../Enclosure-shell/">Enclosure-shell</a>.</p>
 
   <h2>Design principles</h2>
   <p>These principles guide frame design and any changes to the current configuration.</p>
@@ -72,37 +88,59 @@
     </tbody>
   </table>
 
-  <h2>Figure key (CAD colour coding)</h2>
+  <h2>Colour key (this subsystem’s figures)</h2>
+  <p class="muted">Applies only to the CAD views in this section. Other subsystems use their own colour sets.</p>
   <table style="width:100%; border-collapse: collapse; font-size: 0.9rem;">
-    <tr style="border-bottom: 1px solid var(--border);"><th style="text-align:left; padding: 0.35rem 0.5rem 0.35rem 0;">Colour (hex)</th><th style="text-align:left; padding: 0.35rem 0;">Component</th></tr>
-    <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.35rem 0.5rem;">#26C16A</td><td style="padding: 0.35rem 0;">Main frame</td></tr>
-    <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.35rem 0.5rem;">#34E682</td><td style="padding: 0.35rem 0;">Loaded mount plate (collection assembly; static side of extraction)</td></tr>
-    <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.35rem 0.5rem;">#B341C3</td><td style="padding: 0.35rem 0;">Transmission mount plate (yoke, two 35 mm shafts, two LMK35UU linear bearings)</td></tr>
-    <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.35rem 0.5rem;">#9075CD</td><td style="padding: 0.35rem 0;">Drivetrain mount plate (gears, housed tapered roller bearings, reducer spacer, Sumitomo reducer)</td></tr>
-    <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.35rem 0.5rem;">#FFD691</td><td style="padding: 0.35rem 0;">6111K669 M24 100 mm Swivel Leveling Mount (McMaster), M24 tapped endplates on legs</td></tr>
+    <tr style="border-bottom: 1px solid var(--border);"><th style="text-align:left; padding: 0.35rem 0.5rem 0.35rem 0;">Colour</th><th style="text-align:left; padding: 0.35rem 0;">Component</th></tr>
+    <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.35rem 0.5rem;"><span class="swatch" style="background-color:#26C16A" title="#26C16A"></span></td><td style="padding: 0.35rem 0;">Main frame</td></tr>
+    <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.35rem 0.5rem;"><span class="swatch" style="background-color:#34E682" title="#34E682"></span></td><td style="padding: 0.35rem 0;">Loaded mount plate (collection assembly; static side of extraction)</td></tr>
+    <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.35rem 0.5rem;"><span class="swatch" style="background-color:#B341C3" title="#B341C3"></span></td><td style="padding: 0.35rem 0;">Transmission mount plate (yoke, two 35 mm shafts, two LMK35UU linear bearings)</td></tr>
+    <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.35rem 0.5rem;"><span class="swatch" style="background-color:#9075CD" title="#9075CD"></span></td><td style="padding: 0.35rem 0;">Drivetrain mount plate (gears, housed tapered roller bearings, reducer spacer, Sumitomo reducer)</td></tr>
+    <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.35rem 0.5rem;"><span class="swatch" style="background-color:#FFD691" title="#FFD691"></span></td><td style="padding: 0.35rem 0;">6111K669 M24 100 mm Swivel Leveling Mount (McMaster), M24 tapped endplates on legs</td></tr>
   </table>
 
-  <h2 id="gallery">Gallery</h2>
+  <h2 id="gallery">Figures</h2>
   <p class="muted">CAD views. Refer to figures in the text as <a href="#fig1">Figure 1</a>, <a href="#fig2">Figure 2</a>, etc.</p>
-  <div class="gallery">
-    <figure id="fig1"><img src="images/overview-full-frame.png" alt="Isometric — main frame, three plates, leveling mounts"><figcaption>Figure 1. Isometric — main frame, three interface plates, leveling mounts.</figcaption></figure>
-    <figure id="fig2"><img src="images/overview-three-interfaces.png" alt="Top-down — three loaded interfaces on side rails"><figcaption>Figure 2. Top-down — loaded (#34E682), transmission (#B341C3), drivetrain (#9075CD) mount plates.</figcaption></figure>
-    <figure id="fig3"><img src="images/overview-isometric-alt.png" alt="Isometric alternate view"><figcaption>Figure 3. Isometric alternate.</figcaption></figure>
-    <figure id="fig4"><img src="images/overview-perspective.png" alt="Perspective view"><figcaption>Figure 4. Perspective view.</figcaption></figure>
-    <figure id="fig5"><img src="images/overview-front-six-feet.png" alt="Front — six legs, six leveling mounts"><figcaption>Figure 5. Front/angled — six legs, six leveling mounts; loaded plate (left), transmission plate (right).</figcaption></figure>
-    <figure id="fig6"><img src="images/overview-right-side.png" alt="Right side — frame, feet, loaded and transmission plates"><figcaption>Figure 6. Right side — leveling mounts, loaded plate (left), transmission plate (right).</figcaption></figure>
-    <figure id="fig7"><img src="images/overview-side-three-plates.png" alt="Side — all three plates, six feet"><figcaption>Figure 7. Side — loaded (left), transmission (centre), drivetrain (right); six feet.</figcaption></figure>
+  <div class="slideshow" id="frame-slideshow">
+    <div class="slideshow-track">
+      <div class="slide active" id="fig1" data-caption="Figure 1. Isometric — main frame, three interface plates, leveling mounts."><img src="images/overview-full-frame.png" alt="Isometric — main frame, three plates, leveling mounts"></div>
+      <div class="slide" id="fig2" data-caption="Figure 2. Top-down — loaded, transmission, drivetrain mount plates."><img src="images/overview-three-interfaces.png" alt="Top-down — three loaded interfaces on side rails"></div>
+      <div class="slide" id="fig3" data-caption="Figure 3. Isometric alternate."><img src="images/overview-isometric-alt.png" alt="Isometric alternate view"></div>
+      <div class="slide" id="fig4" data-caption="Figure 4. Perspective view."><img src="images/overview-perspective.png" alt="Perspective view"></div>
+      <div class="slide" id="fig5" data-caption="Figure 5. Front/angled — six legs, six leveling mounts; loaded plate (left), transmission plate (right)."><img src="images/overview-front-six-feet.png" alt="Front — six legs, six leveling mounts"></div>
+      <div class="slide" id="fig6" data-caption="Figure 6. Right side — leveling mounts, loaded plate (left), transmission plate (right)."><img src="images/overview-right-side.png" alt="Right side — frame, feet, loaded and transmission plates"></div>
+      <div class="slide" id="fig7" data-caption="Figure 7. Side — loaded (left), transmission (centre), drivetrain (right); six feet."><img src="images/overview-side-three-plates.png" alt="Side — all three plates, six feet"></div>
+    </div>
+    <p class="slideshow-caption" id="frame-caption" aria-live="polite">Figure 1. Isometric — main frame, three interface plates, leveling mounts.</p>
+    <div class="slideshow-controls">
+      <button type="button" id="frame-prev" aria-label="Previous">← Previous</button>
+      <span class="slideshow-counter" id="frame-counter">1 / 7</span>
+      <button type="button" id="frame-next" aria-label="Next">Next →</button>
+    </div>
   </div>
 
   <h2>Components</h2>
   <ul>
-    <li><strong>Main frame</strong> (#26C16A) — 80×80×5 GB/T square tubes, #8 C-brackets, fully welded; six legs with M24 tapped endplates</li>
-    <li><strong>Leveling mounts</strong> (#FFD691) — 6111K669 M24 100 mm Swivel Leveling Mount (McMaster)</li>
-    <li><strong>Loaded mount plate</strong> (#34E682) — collection assembly; collection module and static side of extraction</li>
-    <li><strong>Transmission mount plate</strong> (#B341C3) — transmission subsystem: yoke, two 35 mm shafts, two LMK35UU linear bearings (formerly bearing mount plate)</li>
-    <li><strong>Drivetrain mount plate</strong> (#9075CD) — two gears, housed tapered roller bearings, reducer spacer, Sumitomo reducer</li>
+    <li><strong>Main frame</strong> <span class="swatch" style="background-color:#26C16A" title="#26C16A"></span> — 80×80×5 GB/T square tubes, #8 C-brackets, fully welded; six legs with M24 tapped endplates</li>
+    <li><strong>Leveling mounts</strong> <span class="swatch" style="background-color:#FFD691" title="#FFD691"></span> — 6111K669 M24 100 mm Swivel Leveling Mount (McMaster)</li>
+    <li><strong>Loaded mount plate</strong> <span class="swatch" style="background-color:#34E682" title="#34E682"></span> — collection assembly; collection module and static side of extraction</li>
+    <li><strong>Transmission mount plate</strong> <span class="swatch" style="background-color:#B341C3" title="#B341C3"></span> — transmission subsystem: yoke, two 35 mm shafts, two LMK35UU linear bearings (formerly bearing mount plate)</li>
+    <li><strong>Drivetrain mount plate</strong> <span class="swatch" style="background-color:#9075CD" title="#9075CD"></span> — two gears, housed tapered roller bearings, reducer spacer, Sumitomo reducer</li>
     <li><strong>Driven bracket</strong> — drivetrain / drive shaft mounting (as needed)</li>
   </ul>
+
+  <h2>Interfaces and tolerances</h2>
+  <p class="muted">Known interfaces and tolerances for frame parts. Links go to related subsystems.</p>
+  <table class="iface-table">
+    <thead><tr><th>Part</th><th>Interface / tolerance</th><th>Related</th></tr></thead>
+    <tbody>
+      <tr><td>Main frame</td><td>80×80×5 GB/T square tubes; #8 C-brackets; side rails with dowel holes (H7 drill/ream for repeatable alignment)</td><td>—</td></tr>
+      <tr><td>Leveling mounts</td><td>6111K669 M24 100 mm (McMaster); M24 tapped endplates on six legs</td><td>—</td></tr>
+      <tr><td>Loaded mount plate</td><td>Mounts from top onto frame; H7 holes for dowels; shims for fit-up</td><td><a href="../Collection/">Collection</a></td></tr>
+      <tr><td>Transmission mount plate</td><td>Mounts from top onto frame; H7 holes for dowels</td><td><a href="../Transmission/">Transmission</a></td></tr>
+      <tr><td>Drivetrain mount plate</td><td>Mounts from top onto frame; H7 holes for dowels</td><td><a href="../Drivetrain/">Drivetrain</a></td></tr>
+    </tbody>
+  </table>
 
   <h2>Details (from RFP draft)</h2>
   <p>Main frame: 80×80×5 GB/T square tubes as main load-bearing members; #8 C-brackets for supporting members; all fully welded. Leveling: 6111K669 M24 100 mm Swivel Leveling Mounts (McMaster) on M24 tapped endplates at bottom of frame legs (six feet). Side rails with square holes for dowels; bolts and nuts secure bodies to cross beams.</p>
@@ -117,5 +155,21 @@
   </ol>
 
   <p><a href="Frame.md">Frame.md</a> (source)</p>
+  <script>
+(function(){
+  var el = document.getElementById('frame-slideshow');
+  if (!el) return;
+  var slides = el.querySelectorAll('.slide');
+  var cap = document.getElementById('frame-caption');
+  var counter = document.getElementById('frame-counter');
+  var n = slides.length;
+  var i = 0;
+  function go(k) { i = (k + n) % n; slides.forEach(function(s,j){ s.classList.toggle('active', j===i); }); if (cap) cap.textContent = slides[i].getAttribute('data-caption') || ''; if (counter) counter.textContent = (i+1) + ' / ' + n; }
+  el.querySelector('#frame-prev').addEventListener('click', function(){ go(i-1); });
+  el.querySelector('#frame-next').addEventListener('click', function(){ go(i+1); });
+  var hash = window.location.hash;
+  if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
+})();
+  </script>
 </body>
 </html>

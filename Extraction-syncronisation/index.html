@@ -5,30 +5,162 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>2.1b Extraction &amp; synchronisation — P6 RFP</title>
   <style>
-    :root { --bg: #1a1d21; --card: #24282e; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
+    :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
     body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
     a { color: var(--accent); }
     h1 { font-size: 1.35rem; }
     h2 { font-size: 1.1rem; margin-top: 1.25rem; }
+    ul, ol { padding-left: 1.25rem; }
     .back { margin-bottom: 1rem; font-size: 0.9rem; }
     .muted { color: var(--muted); font-size: 0.9rem; }
+    .swatch { display: inline-block; width: 1.25rem; height: 1.25rem; border: 1px solid var(--border); border-radius: 3px; vertical-align: middle; }
+    table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+    th, td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
+    .slideshow { margin: 1.5rem 0; }
+    .slideshow .slide { display: none; }
+    .slideshow .slide.active { display: block; }
+    .slideshow .slide img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
+    .slideshow-caption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); min-height: 2.5em; }
+    .slideshow-controls { display: flex; align-items: center; gap: 1rem; margin-top: 0.75rem; flex-wrap: wrap; }
+    .slideshow-controls button { background: var(--border); color: var(--text); border: none; padding: 0.35rem 0.75rem; border-radius: 4px; cursor: pointer; font-size: 0.9rem; }
+    .slideshow-controls button:hover { background: var(--accent); color: #fff; }
+    .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
+    .iface-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    .iface-table th, .iface-table td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
+    .iface-table th { color: var(--muted); font-weight: 600; }
+    .reminder { background: rgba(88, 166, 255, 0.12); border: 1px solid var(--accent); border-radius: 6px; padding: 0.75rem 1rem; margin: 1rem 0; font-size: 0.95rem; }
   </style>
 </head>
 <body>
   <p class="back"><a href="../index.html">← Back to P6 RFP overview</a></p>
   <h1>2.1b Extraction &amp; synchronisation</h1>
-  <p class="muted">This section is to be completed. Part of intake (2.1). Fruit sync, peelers, staging.</p>
+  <p class="muted">Driven peelers, driven bracket (yoke mounts), fruit support, roller, chute deflectors. Stages oranges from the feeder and meshes with static peelers for extraction. Part of intake (2.1).</p>
 
-  <h2>Scope</h2>
+  <h2>Function</h2>
   <ul>
-    <li>Fruit synchronisation — drops oranges one at a time into extraction</li>
-    <li>Peelers</li>
-    <li>Fruit support / staging</li>
-    <li>Interface with 90° entry tube and feeder</li>
+    <li><strong>Fruit support</strong> <span class="swatch" style="background-color:#2ECC71" title="bright green"></span> directs fruit from the pipe to the peeler and reduces risk of fruit falling to the sides; oranges fall onto it as they are staged to drop into the peelers’ jaws (see <a href="#fruit-support">Fruit support detail</a> below).</li>
+    <li><strong>Roller</strong> <span class="swatch" style="background-color:#9B59B6" title="purple"></span> pushes open a spring on the <a href="../Feeder/">feeder system</a> that drops an orange onto the fruit support.</li>
+    <li><strong>Driven peelers</strong> <span class="swatch" style="background-color:#E67E22" title="orange"></span> mesh with the <a href="../Collection/">static peelers</a> (collection) to process fruit; the <strong>driven bracket</strong> <span class="swatch" style="background-color:#F1C40F" title="yellow"></span> has to handle a lot of load from the yokes and mashes against the static peelers.</li>
+    <li><strong>Chute deflectors</strong> <span class="swatch" style="background-color:#E74C3C" title="red"></span> redirect peel from the base of the peeler to the back of the bin; mounted to the driven bracket; bent plate design; they also prevent peel from falling into the chutes during the compression stroke of the juicing cycle.</li>
+    <li><strong>Yokes</strong> connect to the 2 sets of 4× mount holes on the back of the driven bracket (see <a href="#fig6">Figure 6</a>); drive comes from <a href="../Transmission/">transmission</a> / <a href="../Drivetrain/">drivetrain</a>.</li>
   </ul>
-  <p>See also <a href="../Feeder/">2.1 Intake feeder system</a> for the full list.</p>
 
-  <h2>Status</h2>
-  <p>Photos and Q&A TBD; parameters TBD.</p>
+  <div class="reminder" style="margin-top:0;"><strong>Peel deflectors (WIP):</strong> The <strong>chute deflector</strong> (this subsystem) and the <strong><a href="../Collection/">static deflector</a></strong> (collection) are both work in progress. Ensure they are easily manufacturable, do not collide during motion, and are rigid and clean.</div>
+
+  <h2>Colour key (this subsystem’s figures)</h2>
+  <p class="muted">Applies only to the CAD views in this section. Other subsystems use their own colour sets.</p>
+  <table>
+    <tr><th>Colour</th><th>Component</th></tr>
+    <tr><td><span class="swatch" style="background-color:#E67E22" title="orange"></span></td><td><strong>Driven peelers</strong> — blade-like segments; mesh with static peelers for extraction</td></tr>
+    <tr><td><span class="swatch" style="background-color:#F1C40F" title="yellow"></span></td><td><strong>Driven bracket</strong> — carries load from yokes; mashes against static peelers; 2 sets of 4× mount holes on back for yokes</td></tr>
+    <tr><td><span class="swatch" style="background-color:#2ECC71" title="bright green"></span></td><td><strong>Fruit support</strong> — oranges fall onto this as they are staged to drop into the peelers’ jaws</td></tr>
+    <tr><td><span class="swatch" style="background-color:#1E8449" title="dark green"></span></td><td><strong>Central pin</strong> — at centre of each driven peeler set</td></tr>
+    <tr><td><span class="swatch" style="background-color:#9B59B6" title="purple"></span></td><td><strong>Roller</strong> — pushes open spring on feeder to drop an orange onto the fruit support</td></tr>
+    <tr><td><span class="swatch" style="background-color:#E74C3C" title="red"></span></td><td><strong>Chute deflectors</strong> — redirect peel from base of peeler to back of bin; mounted to driven bracket; bent plate design; prevent peel from entering chutes during compression stroke</td></tr>
+  </table>
+
+  <h2>Subassemblies</h2>
+  <p class="muted">Subassembly subdirectories with detailed pages.</p>
+  <ul>
+    <li><a href="fruit-support/">Fruit support</a> — rails, connecting link, pusher; direct fruit from pipe to peeler</li>
+    <li>Driven peelers, driven bracket, chute deflectors — detail pages TBD</li>
+  </ul>
+
+  <h2>Components (overview)</h2>
+  <ul>
+    <li><strong>Driven peelers</strong> <span class="swatch" style="background-color:#E67E22" title="orange"></span> — four sets; mesh with static peelers (<a href="../Collection/">Collection</a>)</li>
+    <li><strong>Driven bracket</strong> <span class="swatch" style="background-color:#F1C40F" title="yellow"></span> — structural base; yoke mount holes on back</li>
+    <li><strong>Fruit support</strong> <span class="swatch" style="background-color:#2ECC71" title="bright green"></span> — 3 pairs of angled rails, base bolted to drive bracket; staging platform for oranges; pusher (roller attachment) at one end</li>
+    <li><strong>Central pin</strong> <span class="swatch" style="background-color:#1E8449" title="dark green"></span> — one per peeler set</li>
+    <li><strong>Roller</strong> <span class="swatch" style="background-color:#9B59B6" title="purple"></span> — four; interface with feeder spring</li>
+    <li><strong>Chute deflectors</strong> <span class="swatch" style="background-color:#E74C3C" title="red"></span> — four; beneath driven bracket; redirect peel to back of bin; bent plate; mounted to driven bracket</li>
+  </ul>
+
+  <h2 id="fruit-support">Fruit support (detail)</h2>
+  <p><strong>Purpose:</strong> To direct fruit from the pipe to the peeler and remove risk of fruit falling to the sides.</p>
+  <ul>
+    <li><strong>3 pairs of flat angled rails.</strong> Height is tallest at the ends and tapers down to lowest at the center so oranges roll towards the center two rails. Length of rails varies to match tube diameter.</li>
+    <li><strong>Connecting link</strong> to maintain spacing and parallelism between rails and perpendicularity to the plate.</li>
+    <li><strong>Indexing slots</strong> with varying spacing for inserting rails.</li>
+    <li><strong>Top edge of rails</strong> must be filleted to prevent cutting of fruit.</li>
+    <li><strong>Base</strong> is bolted to the drive bracket for easy removal (ideal for regular replacing of rollers).</li>
+  </ul>
+  <p><strong>Design for CIP:</strong> The angled plates are welded together as rails so the clean-in-place system can spray through the gaps to clean the two peelers below.</p>
+  <p><strong>Rail angle:</strong> Rails are angled downwards so oranges roll towards the front. Current angle is 3°; increase to <strong>8°</strong> required because a 5° downwards slope was added to the top face of the driven bracket. From the front view, the fruit support rails are higher on the sides than the center rails, ensuring oranges roll towards the center.</p>
+  <p><strong>Pusher:</strong> The pusher <span class="swatch" style="background-color:#29724C" title="dark green"></span> is where the roller is attached using a bolt. This part was designed as cut and welded sheet steel but could be made as a formed component.</p>
+  <p class="muted">Fruit support detail figures use the colour key below (figures 9–11).</p>
+  <table>
+    <tr><th>Colour</th><th>Fruit support component</th></tr>
+    <tr><td><span class="swatch" style="background-color:#386AA3" title="blue"></span></td><td><strong>Base plate</strong> — bolted to drive bracket</td></tr>
+    <tr><td><span class="swatch" style="background-color:#89D960" title="light green"></span></td><td><strong>Outer rails</strong> (pair) — tallest</td></tr>
+    <tr><td><span class="swatch" style="background-color:#E4B0CE" title="magenta"></span></td><td><strong>Middle rails</strong> (pair)</td></tr>
+    <tr><td><span class="swatch" style="background-color:#CE7C2C" title="orange"></span></td><td><strong>Inner rails</strong> (pair) — shortest</td></tr>
+    <tr><td><span class="swatch" style="background-color:#9B7FBD" title="lavender"></span></td><td><strong>Connecting link</strong> — spacing and parallelism between rails</td></tr>
+    <tr><td><span class="swatch" style="background-color:#29724C" title="dark green"></span></td><td><strong>Pusher</strong> — roller attached with bolt</td></tr>
+    <tr><td><span class="swatch" style="background-color:#B79057" title="tan"></span></td><td><strong>Pusher support</strong> — arm/structure for pusher</td></tr>
+  </table>
+  <p class="muted">There is room for improvement in this system; the 8° rail angle and formed pusher are among the targets.</p>
+
+  <h2 id="gallery">Figures</h2>
+  <p class="muted">CAD views. Figures 1–8: full assembly. Figures 9–11: fruit support detail. Use the colour keys above.</p>
+  <div class="slideshow" id="ext-slideshow">
+    <div class="slideshow-track">
+      <div class="slide active" id="fig1" data-caption="Figure 1. Isometric — four modules; chute deflectors (red) beneath peelers; driven peelers, fruit support, rollers."><img src="images/extraction-1.png" alt="Extraction sync isometric"></div>
+      <div class="slide" id="fig2" data-caption="Figure 2. Front — driven bracket, four peeler units with central pins, fruit support, rollers; chute deflectors (red) beneath each unit."><img src="images/extraction-2.png" alt="Extraction sync front"></div>
+      <div class="slide" id="fig3" data-caption="Figure 3. Side — fruit support above peelers; rollers; driven bracket; chute deflectors (red) at bottom."><img src="images/extraction-3.png" alt="Extraction sync side"></div>
+      <div class="slide" id="fig4" data-caption="Figure 4. Right — driven peelers, driven bracket, fruit support, roller, chute deflector (red)."><img src="images/extraction-4.png" alt="Extraction sync right"></div>
+      <div class="slide" id="fig5" data-caption="Figure 5. Side — driven bracket, peelers, fruit support, rollers; chute deflectors (red) beneath bracket."><img src="images/extraction-5.png" alt="Extraction sync side 2"></div>
+      <div class="slide" id="fig6" data-caption="Figure 6. Front — driven bracket, fruit support, rollers; chute deflectors (red); four stations."><img src="images/extraction-6.png" alt="Extraction sync front 2"></div>
+      <div class="slide" id="fig7" data-caption="Figure 7. Front — four modules; fruit support (bright green), driven peelers (orange), chute deflectors (red), driven bracket (yellow)."><img src="images/extraction-7.png" alt="Extraction sync front 3"></div>
+      <div class="slide" id="fig8" data-caption="Figure 8. Front/side — four modules; chute deflectors (red) visible."><img src="images/extraction-8.png" alt="Extraction sync front side"></div>
+      <div class="slide" id="fig9" data-caption="Figure 9. Fruit support — schematic: base plate (blue), 3 pairs of rails (light green, magenta, orange), connecting link (lavender), pusher (dark green)."><img src="images/fruit-support-1.png" alt="Fruit support schematic"></div>
+      <div class="slide" id="fig10" data-caption="Figure 10. Fruit support 3D — base plate, rails (tallest at ends, taper to center), connecting links, pusher (tan support, dark green pusher)."><img src="images/fruit-support-2.png" alt="Fruit support 3D"></div>
+      <div class="slide" id="fig11" data-caption="Figure 11. Fruit support front — base plate, six rails (height profile), pusher (dark green) and support structure."><img src="images/fruit-support-3.png" alt="Fruit support front"></div>
+    </div>
+    <p class="slideshow-caption" id="ext-caption" aria-live="polite">Figure 1. Isometric — four modules; chute deflectors (red) beneath peelers; driven peelers, fruit support, rollers.</p>
+    <div class="slideshow-controls">
+      <button type="button" id="ext-prev" aria-label="Previous">← Previous</button>
+      <span class="slideshow-counter" id="ext-counter">1 / 11</span>
+      <button type="button" id="ext-next" aria-label="Next">Next →</button>
+    </div>
+  </div>
+
+  <h2>Interfaces</h2>
+  <ul>
+    <li><strong>Input (motion):</strong> Yokes from <a href="../Transmission/">transmission</a> connect to 2 sets of 4× mount holes on back of driven bracket.</li>
+    <li><strong>Input (fruit):</strong> <a href="../Feeder/">Feeder</a> drops oranges via roller/spring onto fruit support.</li>
+    <li><strong>Output:</strong> Fruit drops into peelers’ jaws; driven peelers mesh with <a href="../Collection/">static peelers</a> (collection) for extraction.</li>
+  </ul>
+
+  <h2>Interfaces and tolerances</h2>
+  <p class="muted">Known interfaces. Links go to related subsystems.</p>
+  <table class="iface-table">
+    <thead><tr><th>Part</th><th>Interface / tolerance</th><th>Related</th></tr></thead>
+    <tbody>
+      <tr><td>Driven bracket</td><td>2 sets of 4× mount holes on back for yokes; carries yoke load; mashes against static peelers</td><td><a href="../Transmission/">Transmission</a>, <a href="../Collection/">Collection</a></td></tr>
+      <tr><td>Driven peelers</td><td>Mesh with static peelers for extraction</td><td><a href="../Collection/">Collection</a></td></tr>
+      <tr><td>Fruit support</td><td>Directs fruit from pipe to peeler; 3 pairs angled rails (height taper to center); base bolted to drive bracket for easy removal; rails 3°→8° (5° slope on driven bracket); pusher for roller; CIP spray through gaps</td><td><a href="../Feeder/">Feeder</a></td></tr>
+      <tr><td>Roller</td><td>Pushes open spring on feeder to release one orange onto fruit support</td><td><a href="../Feeder/">Feeder</a></td></tr>
+      <tr><td>Chute deflectors</td><td>Redirect peel to back of bin; prevent peel from entering chutes during compression stroke; mounted to driven bracket; bent plate (WIP — no collision, rigid, clean, manufacturable)</td><td><a href="../Outflow-disposal/">Outflow-disposal</a>, <a href="../Collection/">Collection</a> (static deflector)</td></tr>
+    </tbody>
+  </table>
+
+  <p>See also <a href="../Feeder/">2.1 Intake feeder system</a> for the full intake list.</p>
+  <script>
+(function(){
+  var el = document.getElementById('ext-slideshow');
+  if (!el) return;
+  var slides = el.querySelectorAll('.slide');
+  var cap = document.getElementById('ext-caption');
+  var counter = document.getElementById('ext-counter');
+  var n = slides.length;
+  var i = 0;
+  function go(k) { i = (k + n) % n; slides.forEach(function(s,j){ s.classList.toggle('active', j===i); }); if (cap) cap.textContent = slides[i].getAttribute('data-caption') || ''; if (counter) counter.textContent = (i+1) + ' / ' + n; }
+  el.querySelector('#ext-prev').addEventListener('click', function(){ go(i-1); });
+  el.querySelector('#ext-next').addEventListener('click', function(){ go(i+1); });
+  var hash = window.location.hash;
+  if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
+})();
+  </script>
 </body>
 </html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fruit support — Extraction &amp; synchronisation</title>
+  <style>
+    :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
+    a { color: var(--accent); }
+    h1 { font-size: 1.35rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.25rem; }
+    ul { padding-left: 1.25rem; }
+    .back { margin-bottom: 1rem; font-size: 0.9rem; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    .swatch { display: inline-block; width: 1.25rem; height: 1.25rem; border: 1px solid var(--border); border-radius: 3px; vertical-align: middle; }
+    table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+    th, td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
+    .slide img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; margin: 0.5rem 0; }
+    .img-border { max-width: 100%; height: auto; border: 1px solid #30363d; display: block; margin: 0.5rem 0; }
+  </style>
+</head>
+<body>
+  <p class="back"><a href="../index.html">← Back to Extraction &amp; synchronisation</a></p>
+  <h1>Fruit support (subassembly)</h1>
+  <p class="muted">Subassembly of <a href="../index.html">2. Extraction &amp; synchronisation</a>. Directs fruit from the pipe to the peeler.</p>
+
+  <h2>Purpose</h2>
+  <p>To direct fruit from the pipe to the peeler and remove risk of fruit falling to the sides.</p>
+
+  <h2>Design</h2>
+  <ul>
+    <li><strong>3 pairs of flat angled rails.</strong> Height is tallest at the ends and tapers down to lowest at the center so oranges roll towards the center two rails. Length of rails varies to match tube diameter.</li>
+    <li><strong>Connecting link</strong> to maintain spacing and parallelism between rails and perpendicularity to the plate.</li>
+    <li><strong>Indexing slots</strong> with varying spacing for inserting rails.</li>
+    <li><strong>Top edge of rails</strong> must be filleted to prevent cutting of fruit.</li>
+    <li><strong>Base</strong> is bolted to the drive bracket for easy removal (ideal for regular replacing of rollers).</li>
+  </ul>
+  <p><strong>Design for CIP:</strong> The angled plates are welded together as rails so the clean-in-place system can spray through the gaps to clean the two peelers below.</p>
+  <p><strong>Rail angle:</strong> Rails are angled downwards so oranges roll towards the front. Current angle is 3°; increase to <strong>8°</strong> required because a 5° downwards slope was added to the top face of the driven bracket. From the front view, the fruit support rails are higher on the sides than the center rails, ensuring oranges roll towards the center.</p>
+  <p><strong>Pusher:</strong> The pusher <span class="swatch" style="background-color:#29724C"></span> is where the roller is attached using a bolt. This part was designed as cut and welded sheet steel but could be made as a formed component.</p>
+  <p class="muted">There is room for improvement in this system; the 8° rail angle and formed pusher are among the targets.</p>
+
+  <h2>Colour key (fruit support detail views)</h2>
+  <table>
+    <tr><th>Colour</th><th>Component</th></tr>
+    <tr><td><span class="swatch" style="background-color:#386AA3"></span></td><td>Base plate — bolted to drive bracket</td></tr>
+    <tr><td><span class="swatch" style="background-color:#89D960"></span></td><td>Outer rails (pair) — tallest</td></tr>
+    <tr><td><span class="swatch" style="background-color:#E4B0CE"></span></td><td>Middle rails (pair)</td></tr>
+    <tr><td><span class="swatch" style="background-color:#CE7C2C"></span></td><td>Inner rails (pair) — shortest</td></tr>
+    <tr><td><span class="swatch" style="background-color:#9B7FBD"></span></td><td>Connecting link</td></tr>
+    <tr><td><span class="swatch" style="background-color:#29724C"></span></td><td>Pusher — roller attached with bolt</td></tr>
+    <tr><td><span class="swatch" style="background-color:#B79057"></span></td><td>Pusher support</td></tr>
+  </table>
+
+  <h2>Figures</h2>
+  <p class="muted">See <a href="../index.html#gallery">Extraction &amp; synchronisation figures 9–11</a> for fruit support CAD views (schematic, 3D, front).</p>
+  <p><img src="../images/fruit-support-1.png" alt="Fruit support schematic" class="img-border">
+  <img src="../images/fruit-support-2.png" alt="Fruit support 3D" class="img-border">
+  <img src="../images/fruit-support-3.png" alt="Fruit support front" class="img-border"></p>
+
+  <h2>Interfaces</h2>
+  <ul>
+    <li><strong>Mount:</strong> Base bolted to drive bracket (extraction/sync).</li>
+    <li><strong>Input:</strong> Fruit from feeder (drops onto fruit support).</li>
+    <li><strong>Output:</strong> Fruit rolls to center rails and drops into peelers’ jaws.</li>
+    <li><strong>Pusher/roller:</strong> Roller (from extraction/sync) attached with bolt; interfaces with <a href="../../Feeder/feeding-subassembly/">feeder sync spring</a>.</li>
+  </ul>
+
+  <p class="back"><a href="../index.html">← Back to Extraction &amp; synchronisation</a></p>
+</body>
+</html>

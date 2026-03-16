@@ -33,6 +33,12 @@ Use these as RFP sections. For each: add photos, Q&A, and flush out part/paramet
 
 **RFP approach:** One subsystem at a time; file photos; ask as many questions as possible per part/parameter.
 
+### 2.1b Extraction & synchronisation
+
+**Components (local CAD colours for this subsystem only):** Driven peelers (orange), driven bracket (yellow), fruit support (bright green), central pin (dark green), roller (purple), **chute deflectors (red)** — redirect peel from base of peeler to **back of bin**; mounted to **driven bracket**; **bent plate** design; prevent peel from falling into chutes during compression stroke. **Driven bracket** has to handle a lot of load from the yokes and mashes against the static peelers; **yokes** connect to the 2 sets of 4× mount holes on the back of the driven bracket. **Fruit support** directs fruit from pipe to peeler; 3 pairs of flat angled rails (height tallest at ends, taper to center), connecting link, base bolted to drive bracket; rails angled for CIP spray-through; angle 3°→8° (5° slope on driven bracket); pusher (dark green) for roller; oranges staged here then drop into peelers’ jaws. **Roller** pushes open a spring on the feeder system that drops an orange onto the fruit support.
+
+**RFP content:** `RFPs/Extraction-syncronisation/` (index, 8 CAD views, **local colour key** for this section only). **Note:** CAD colour keys are per subsystem (Inventor colour sets can differ between assemblies); each section has its own legend.
+
 ---
 
 ### 2.2 Plunger drive / juice collection system
@@ -46,11 +52,11 @@ Use these as RFP sections. For each: add photos, Q&A, and flush out part/paramet
 
 ### 2.3 Drivetrain
 
-**Components (CAD):** Driven gear #FFE696, passive gear #237A3A, two cam bearings #4AB6F6 (interface with [transmission](../Transmission/) yoke), passive gear shaft #3683E6, locating roller bearing SKF_F4BRP 208-SRB-CRH_ECY 213 #7D26B5, non-locating roller bearing SKF_F4BRP 208-SRB-CLE, reducer spacer #366D20, **Sumitomo Cyclo 6000 reducer** #5EB45D, **V-belt** #572D9A (DIN 2215 17×957, 2-belt, 1000 mm long), **WEG 22 1450 rpm motor** #6A37BB, stainless steel motor mount plate spacer #D2B545, wooden motor mount plate #207E96.
+**Components (CAD — local colour key for this subsystem’s figures):** Top mounting plate #FDB159, driving gear #D72F8B, driven gear #9EE653, shaft extensions / cam bearings #7D5EC0 (interface with [transmission](../Transmission/) yoke), central disc / gearbox top #71E3ED, **Sumitomo Cyclo 6000 reducer** #E8D1A3, **WEG 22 1450 rpm motor** #26835F, **pulleys and V-belt** #419BD9 (DIN 2215 17×957, 2-belt, 1000 mm long), central beam #B85C38.
 
 **Reminders:** Add Sumitomo Cyclo 6000 reducer specs; add more WEG 22 motor specs. More drivetrain details to be added later.
 
-**RFP content:** `RFPs/Drivetrain/` (Drivetrain.md, 12 CAD views — 10 drivetrain, 2 cam/yoke interface, colour key).
+**RFP content:** `RFPs/Drivetrain/` (Drivetrain.md, 6 CAD views, local colour key).
 
 ### Transmission subsystem (yoke, shafts, bearings)
 
@@ -64,9 +70,11 @@ Use these as RFP sections. For each: add photos, Q&A, and flush out part/paramet
 
 ### Collection subsystem (static peelers, juice, filter, plug)
 
-**Components:** Collection mount plate (#27C16A), static peelers (#F36F3B), static deflectors (#CCDF3F — keep peels sliding towards static plate; two angled surfaces for stiffness and potential forming vs welding), juice collectors / Y-tubes (#FFFF50), filter tube (#287F3F), plug cutter (#4DB7F5). Mounts on frame’s loaded mount plate (collection system mount plate).
+**Components:** Collection mount plate (#27C16A), static peelers (#F36F3B), **static deflectors** (#CCDF3F — redirect peel from base of peeler to **front of bin**; mounted to **static loaded plate**; **flat plate** design), juice collectors / Y-tubes (#FFFF50), filter tube (#287F3F), plug cutter (#4DB7F5). Mounts on frame’s loaded mount plate (collection system mount plate).
 
 **Function:** Driven + static peelers mesh; oranges fall between; fingers interlace → peel to extraction chamber/outflow chute; plug cutter cuts centre plug; juice → filter tube slots → yellow collector → Y-branch → ribbed connection (standard rubber pipes). **Reminder:** Send 34 mm standard connector for quick connection.
+
+**Peel deflectors (WIP):** **Static deflector** (Collection) — redirects peel to front of bin; mounted to static loaded plate; flat plate. **Chute deflector** (Extraction/sync) — redirects peel to back of bin; mounted to driven bracket; bent plate. Both: ensure easily manufacturable, no collision during motion, rigid and clean.
 
 **RFP content:** `RFPs/Collection/` (overview, 11 CAD views, colour key).
 
@@ -86,7 +94,7 @@ Use these as RFP sections. For each: add photos, Q&A, and flush out part/paramet
 
 **Plug ejection (after pressing stroke):** System pushes **plunger** through **filter**, pushes **plug** back out of **plug cutter** → plug **falls into** [disposal](../Outflow-disposal/) **core chute**. Components: plunger, filter, plug cutter interface, plunger drive bracket, juice outflow collection. See [Collection](../Collection/) (juice to Y-section, plug cutter) and [Outflow-disposal](../Outflow-disposal/) (core chute, peel chute, augers).
 
-**RFP content:** `RFPs/Plug-ejection/` (PlugEjection.md, README, index, **7 CAD views** in images/ — actuator bar, plungers, green housings, rods, spring).
+**RFP content:** `RFPs/Plug-ejection/` (PlugEjection.md, README, index, **6 CAD views** in images/ — plunger #5151FA, plunger drive bracket #D1A4FF, plunger drive rods #B31B5B, LMK16 linear bearing #EBA13D, plunger drive spring #8CC135).
 
 ---
 

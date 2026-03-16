@@ -15,62 +15,116 @@
     .muted { color: var(--muted); font-size: 0.9rem; }
     table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
     th, td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
-    .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.25rem; margin: 1.5rem 0; }
-    .gallery figure { margin: 0; }
-    .gallery figure img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
-    .gallery figcaption { margin-top: 0.35rem; font-size: 0.85rem; color: var(--muted); }
+    .swatch { display: inline-block; width: 1.25rem; height: 1.25rem; border: 1px solid var(--border); border-radius: 3px; vertical-align: middle; }
+    .slideshow { margin: 1.5rem 0; }
+    .slideshow .slide { display: none; }
+    .slideshow .slide.active { display: block; }
+    .slideshow .slide img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
+    .slideshow-caption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); min-height: 2.5em; }
+    .slideshow-controls { display: flex; align-items: center; gap: 1rem; margin-top: 0.75rem; flex-wrap: wrap; }
+    .slideshow-controls button { background: var(--border); color: var(--text); border: none; padding: 0.35rem 0.75rem; border-radius: 4px; cursor: pointer; font-size: 0.9rem; }
+    .slideshow-controls button:hover { background: var(--accent); color: #fff; }
+    .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
+    .iface-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    .iface-table th, .iface-table td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
+    .iface-table th { color: var(--muted); font-weight: 600; }
     .reminder { background: rgba(88, 166, 255, 0.12); border: 1px solid var(--accent); border-radius: 6px; padding: 0.75rem 1rem; margin: 1rem 0; font-size: 0.95rem; }
   </style>
 </head>
 <body>
   <p class="back"><a href="../index.html">← Back to P6 RFP overview</a></p>
   <h1>Collection subsystem</h1>
-  <p class="muted">Static peelers (#F36F3B), static deflectors (#CCDF3F), juice collectors (Y-tubes), filter tube, plug cutter, collection mount plate. Mounts on the frame’s loaded mount plate.</p>
+  <p class="muted">Static peelers (<span class="swatch" style="background-color:#F36F3B" title="#F36F3B"></span>), static deflectors <span class="swatch" style="background-color:#CCDF3F" title="#CCDF3F"></span>, juice collectors (Y-tubes), filter tube, plug cutter, collection mount plate. Mounts on the frame’s loaded mount plate.</p>
 
   <div class="reminder"><strong>Reminder:</strong> Send the <strong>34 mm standard connector</strong> for quick connection (juice collector Y-tube outlets).</div>
+  <div class="reminder"><strong>Peel deflectors (WIP):</strong> The <strong>static deflector</strong> (this subsystem) and the <strong><a href="../Extraction-syncronisation/">chute deflector</a></strong> (extraction/synchronisation) are both work in progress. Ensure they are easily manufacturable, do not collide during motion, and are rigid and clean.</div>
 
   <h2>Function</h2>
   <ul>
-    <li><strong>Driven</strong> and <strong>static</strong> peelers (#F36F3B) mesh; oranges fall between them; fingers interlace → fruit mashed, <strong>peel</strong> squeezed into extraction chamber and outflow chute. Static deflectors (#CCDF3F) keep peels sliding towards the static plate (see <a href="#fig1">Figure 1</a>, <a href="#fig5">Figure 5</a>, <a href="#fig10">Figure 10</a>).</li>
+    <li><strong>Driven</strong> and <strong>static</strong> peelers (<span class="swatch" style="background-color:#F36F3B" title="#F36F3B"></span>) mesh; oranges fall between them; fingers interlace → fruit mashed, <strong>peel</strong> squeezed into extraction chamber and outflow chute. <strong>Static deflectors</strong> <span class="swatch" style="background-color:#CCDF3F" title="#CCDF3F"></span> redirect peel from the base of the peeler to the front of the bin; mounted to the static loaded plate; flat plate design (see <a href="#fig1">Figure 1</a>, <a href="#fig5">Figure 5</a>, <a href="#fig10">Figure 10</a>).</li>
     <li><strong>Plug cutter</strong> (#4DB7F5) cuts a cylindrical plug from the centre of oranges during juicing.</li>
     <li><strong>Juice</strong> flows out of oranges through <strong>slots in the filter tube</strong> (#287F3F) into the <strong>yellow collector</strong> (#FFFF50), then out via the <strong>Y-branched tube</strong> to a <strong>ribbed connection</strong> for standard rubber pipes.</li>
   </ul>
   <h2>Extraction cycle and disposal</h2>
   <p>After the <strong>pressing stroke</strong> (juice to Y-section): the <a href="../Plug-ejection/">plug ejection system</a> pushes a <strong>plunger</strong> through the <strong>filter</strong>, pushes the <strong>plug</strong> back out of the plug cutter, and the plug <strong>falls into the core chute</strong> of the <a href="../Outflow-disposal/">disposal system</a>. Meanwhile, <strong>peels</strong> fall to the <strong>sides of the peelers</strong>, <strong>avoid the core chutes</strong>, and separate into <strong>two channels</strong>; the disposal system (two augers) takes peels and plugs/cores away separately.</p>
 
-  <h2>Components (CAD colour key)</h2>
+  <h2>Subassemblies</h2>
+  <p class="muted">Subassembly subdirectories with detailed pages (to be added).</p>
+  <ul>
+    <li>Static peelers, static deflectors, juice collectors (Y-tubes), filter tube, plug cutter — detail pages TBD</li>
+  </ul>
+
+  <h2>Colour key (this subsystem’s figures)</h2>
+  <p class="muted">Applies only to the CAD views in this section. Other subsystems use their own colour sets.</p>
   <table>
-    <tr><th>Colour (hex)</th><th>Component</th></tr>
-    <tr><td>#27C16A</td><td><strong>Collection mount plate</strong> — bright green; mounts to frame</td></tr>
-    <tr><td>#F36F3B</td><td><strong>Static peelers</strong> — interlace with driven peelers to mash fruit</td></tr>
-    <tr><td>#CCDF3F</td><td><strong>Static deflectors</strong> — keep peels sliding towards static plate; two angled surfaces for stiffness and potential forming (vs welding)</td></tr>
-    <tr><td>#FFFF50</td><td><strong>Juice collectors (Y-tubes)</strong> — yellow; ribbed connection for rubber pipes</td></tr>
-    <tr><td>#287F3F</td><td><strong>Filter tube</strong> — dark green; juice flows through slots into collector</td></tr>
-    <tr><td>#4DB7F5</td><td><strong>Plug cutter</strong> — light blue; cuts centre plug from oranges</td></tr>
+    <tr><th>Colour</th><th>Component</th></tr>
+    <tr><td><span class="swatch" style="background-color:#27C16A" title="#27C16A"></span></td><td><strong>Collection mount plate</strong> — bright green; mounts to frame</td></tr>
+    <tr><td><span class="swatch" style="background-color:#F36F3B" title="#F36F3B"></span></td><td><strong>Static peelers</strong> — interlace with driven peelers to mash fruit</td></tr>
+    <tr><td><span class="swatch" style="background-color:#CCDF3F" title="#CCDF3F"></span></td><td><strong>Static deflectors</strong> — redirect peel from base of peeler to front of bin; mounted to static loaded plate; flat plate design</td></tr>
+    <tr><td><span class="swatch" style="background-color:#FFFF50" title="#FFFF50"></span></td><td><strong>Juice collectors (Y-tubes)</strong> — yellow; ribbed connection for rubber pipes</td></tr>
+    <tr><td><span class="swatch" style="background-color:#287F3F" title="#287F3F"></span></td><td><strong>Filter tube</strong> — dark green; juice flows through slots into collector</td></tr>
+    <tr><td><span class="swatch" style="background-color:#4DB7F5" title="#4DB7F5"></span></td><td><strong>Plug cutter</strong> — light blue; cuts centre plug from oranges</td></tr>
   </table>
 
-  <h2 id="gallery">Gallery</h2>
+  <h2 id="gallery">Figures</h2>
   <p class="muted">CAD views (with static deflectors). Refer to figures in the text as <a href="#fig1">Figure 1</a>, <a href="#fig2">Figure 2</a>, etc.</p>
-  <div class="gallery">
-    <figure id="fig1"><img src="images/collection-with-deflectors-1.png" alt="Collection with deflectors 1"><figcaption>Figure 1. Collection subassembly with static deflectors — elevated angled view.</figcaption></figure>
-    <figure id="fig2"><img src="images/collection-with-deflectors-2.png" alt="Collection with deflectors 2"><figcaption>Figure 2. Right-side isometric — mount plate, static peelers, juice collectors, filter tubes, plug cutters, static deflectors.</figcaption></figure>
-    <figure id="fig3"><img src="images/collection-with-deflectors-3.png" alt="Collection with deflectors 3"><figcaption>Figure 3. Collection with static deflectors — front/angled.</figcaption></figure>
-    <figure id="fig4"><img src="images/collection-with-deflectors-4.png" alt="Collection with deflectors 4"><figcaption>Figure 4. Front — four units, static peelers, deflectors, juice collectors, filter tubes.</figcaption></figure>
-    <figure id="fig5"><img src="images/collection-with-deflectors-5.png" alt="Collection with deflectors 5"><figcaption>Figure 5. Front — mount plate, static peelers (#F36F3B), deflectors (#CCDF3F), Y-tubes, filter tubes.</figcaption></figure>
-    <figure id="fig6"><img src="images/collection-with-deflectors-6.png" alt="Collection with deflectors 6"><figcaption>Figure 6. Front-right — juice collectors, filter tubes, static peelers, static deflectors.</figcaption></figure>
-    <figure id="fig7"><img src="images/collection-with-deflectors-7.png" alt="Collection with deflectors 7"><figcaption>Figure 7. Right side — mount plate, static peelers, deflectors, juice collector, filter tube, plug cutter.</figcaption></figure>
-    <figure id="fig8"><img src="images/collection-with-deflectors-8.png" alt="Collection with deflectors 8"><figcaption>Figure 8. Side cross-section — peelers, deflectors, Y-tubes, filter tube, plug cutter.</figcaption></figure>
-    <figure id="fig9"><img src="images/collection-with-deflectors-9.png" alt="Collection with deflectors 9"><figcaption>Figure 9. Side — four static peelers with plug cutters, five static deflectors.</figcaption></figure>
-    <figure id="fig10"><img src="images/collection-with-deflectors-10.png" alt="Collection with deflectors 10"><figcaption>Figure 10. Top — static peelers (#F36F3B), static deflectors (#CCDF3F) on mount plate.</figcaption></figure>
+  <div class="slideshow" id="coll-slideshow">
+    <div class="slideshow-track">
+      <div class="slide active" id="fig1" data-caption="Figure 1. Collection subassembly with static deflectors — elevated angled view."><img src="images/collection-with-deflectors-1.png" alt="Collection with deflectors 1"></div>
+      <div class="slide" id="fig2" data-caption="Figure 2. Right-side isometric — mount plate, static peelers, juice collectors, filter tubes, plug cutters, static deflectors."><img src="images/collection-with-deflectors-2.png" alt="Collection with deflectors 2"></div>
+      <div class="slide" id="fig3" data-caption="Figure 3. Collection with static deflectors — front/angled."><img src="images/collection-with-deflectors-3.png" alt="Collection with deflectors 3"></div>
+      <div class="slide" id="fig4" data-caption="Figure 4. Front — four units, static peelers, deflectors, juice collectors, filter tubes."><img src="images/collection-with-deflectors-4.png" alt="Collection with deflectors 4"></div>
+      <div class="slide" id="fig5" data-caption="Figure 5. Front — mount plate, static peelers, deflectors, Y-tubes, filter tubes."><img src="images/collection-with-deflectors-5.png" alt="Collection with deflectors 5"></div>
+      <div class="slide" id="fig6" data-caption="Figure 6. Front-right — juice collectors, filter tubes, static peelers, static deflectors."><img src="images/collection-with-deflectors-6.png" alt="Collection with deflectors 6"></div>
+      <div class="slide" id="fig7" data-caption="Figure 7. Right side — mount plate, static peelers, deflectors, juice collector, filter tube, plug cutter."><img src="images/collection-with-deflectors-7.png" alt="Collection with deflectors 7"></div>
+      <div class="slide" id="fig8" data-caption="Figure 8. Side cross-section — peelers, deflectors, Y-tubes, filter tube, plug cutter."><img src="images/collection-with-deflectors-8.png" alt="Collection with deflectors 8"></div>
+      <div class="slide" id="fig9" data-caption="Figure 9. Side — four static peelers with plug cutters, five static deflectors."><img src="images/collection-with-deflectors-9.png" alt="Collection with deflectors 9"></div>
+      <div class="slide" id="fig10" data-caption="Figure 10. Top — static peelers, static deflectors on mount plate."><img src="images/collection-with-deflectors-10.png" alt="Collection with deflectors 10"></div>
+    </div>
+    <p class="slideshow-caption" id="coll-caption" aria-live="polite">Figure 1. Collection subassembly with static deflectors — elevated angled view.</p>
+    <div class="slideshow-controls">
+      <button type="button" id="coll-prev" aria-label="Previous">← Previous</button>
+      <span class="slideshow-counter" id="coll-counter">1 / 10</span>
+      <button type="button" id="coll-next" aria-label="Next">Next →</button>
+    </div>
   </div>
 
   <h2>Interfaces</h2>
   <ul>
-    <li><strong>Mount:</strong> Collection mount plate (#27C16A) on <a href="../Frame/">loaded mount plate</a> (frame).</li>
+    <li><strong>Mount:</strong> Collection mount plate <span class="swatch" style="background-color:#27C16A" title="#27C16A"></span> on <a href="../Frame/">loaded mount plate</a> (frame).</li>
     <li><strong>Input:</strong> Fruit from extraction/synchronisation; driven peelers mesh with static peelers.</li>
     <li><strong>Output:</strong> Peel → extraction chamber / outflow chute; juice → filter → yellow collector → Y-tube → ribbed connection (34 mm standard connector for quick connection).</li>
   </ul>
 
+  <h2>Interfaces and tolerances</h2>
+  <p class="muted">Known interfaces and tolerances. Links go to related subsystems.</p>
+  <table class="iface-table">
+    <thead><tr><th>Part</th><th>Interface / tolerance</th><th>Related</th></tr></thead>
+    <tbody>
+      <tr><td>Collection mount plate</td><td>Mounts to frame loaded mount plate; alignment per frame H7/dowel</td><td><a href="../Frame/">Frame</a></td></tr>
+      <tr><td>Static peelers</td><td>Mesh with driven peelers (extraction/sync); peels to sides, avoid core chutes</td><td><a href="../Outflow-disposal/">Outflow-disposal</a></td></tr>
+      <tr><td>Filter tube</td><td>Plunger passes through for plug ejection; juice slots to collector</td><td><a href="../Plug-ejection/">Plug-ejection</a></td></tr>
+      <tr><td>Plug cutter</td><td>Plug cut during juicing; plug ejected by plug ejection system into core chute</td><td><a href="../Plug-ejection/">Plug-ejection</a>, <a href="../Outflow-disposal/">Outflow-disposal</a></td></tr>
+      <tr><td>Juice collector (Y-tube)</td><td>34 mm standard connector for quick connection; ribbed connection for rubber pipes</td><td>—</td></tr>
+    </tbody>
+  </table>
+
   <p><a href="Collection.md">Collection.md</a> (source)</p>
+  <script>
+(function(){
+  var el = document.getElementById('coll-slideshow');
+  if (!el) return;
+  var slides = el.querySelectorAll('.slide');
+  var cap = document.getElementById('coll-caption');
+  var counter = document.getElementById('coll-counter');
+  var n = slides.length;
+  var i = 0;
+  function go(k) { i = (k + n) % n; slides.forEach(function(s,j){ s.classList.toggle('active', j===i); }); if (cap) cap.textContent = slides[i].getAttribute('data-caption') || ''; if (counter) counter.textContent = (i+1) + ' / ' + n; }
+  el.querySelector('#coll-prev').addEventListener('click', function(){ go(i-1); });
+  el.querySelector('#coll-next').addEventListener('click', function(){ go(i+1); });
+  var hash = window.location.hash;
+  if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
+})();
+  </script>
 </body>
 </html>

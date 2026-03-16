@@ -13,16 +13,33 @@
     ul, ol { padding-left: 1.25rem; }
     .back { margin-bottom: 1rem; font-size: 0.9rem; }
     .muted { color: var(--muted); font-size: 0.9rem; }
-    .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.25rem; margin: 1.5rem 0; }
-    .gallery figure { margin: 0; }
-    .gallery figure img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
-    .gallery figcaption { margin-top: 0.35rem; font-size: 0.85rem; color: var(--muted); }
+    .swatch { display: inline-block; width: 1.25rem; height: 1.25rem; border: 1px solid var(--border); border-radius: 3px; vertical-align: middle; }
+    table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+    th, td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
+    .slideshow { margin: 1.5rem 0; }
+    .slideshow .slide { display: none; }
+    .slideshow .slide.active { display: block; }
+    .slideshow .slide img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
+    .slideshow-caption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); min-height: 2.5em; }
+    .slideshow-controls { display: flex; align-items: center; gap: 1rem; margin-top: 0.75rem; flex-wrap: wrap; }
+    .slideshow-controls button { background: var(--border); color: var(--text); border: none; padding: 0.35rem 0.75rem; border-radius: 4px; cursor: pointer; font-size: 0.9rem; }
+    .slideshow-controls button:hover { background: var(--accent); color: #fff; }
+    .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
+    .iface-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    .iface-table th, .iface-table td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
+    .iface-table th { color: var(--muted); font-weight: 600; }
   </style>
 </head>
 <body>
   <p class="back"><a href="../index.html">← Back to P6 RFP overview</a></p>
   <h1>2.2 Plug ejection / plunger drive / juice collection</h1>
   <p class="muted">Plunger, filter, plug cutter interface; plug ejection into disposal core chute.</p>
+
+  <h2>Subassemblies</h2>
+  <p class="muted">Subassembly subdirectories with detailed pages (to be added).</p>
+  <ul>
+    <li>Plunger assembly, plunger drive bracket, juice outflow collection — detail pages TBD</li>
+  </ul>
 
   <h2>Plug ejection (extraction cycle)</h2>
   <ol>
@@ -31,29 +48,46 @@
     <li><strong>Disposal:</strong> Meanwhile, peels fall to the sides of the peelers, avoid the core chutes, two channels; the two augers take peels and plugs/cores away separately (<a href="../Outflow-disposal/">Outflow-disposal</a>).</li>
   </ol>
 
-  <h2>Components</h2>
+  <h2>Colour key (this subsystem’s figures)</h2>
+  <p class="muted">Applies only to the CAD views in this section. Other subsystems use their own colour sets.</p>
+  <table>
+    <tr><th>Colour</th><th>Component</th></tr>
+    <tr><td><span class="swatch" style="background-color:#5151FA" title="#5151FA"></span></td><td><strong>Plunger</strong> — pushes through filter to eject plug (four in parallel)</td></tr>
+    <tr><td><span class="swatch" style="background-color:#D1A4FF" title="#D1A4FF"></span></td><td><strong>Plunger drive bracket</strong> — C-channel; carries plungers and connects to plunger drive rods</td></tr>
+    <tr><td><span class="swatch" style="background-color:#B31B5B" title="#B31B5B"></span></td><td><strong>Plunger drive rods</strong> — linear actuation; pass through LMK16 bearings and into green housings</td></tr>
+    <tr><td><span class="swatch" style="background-color:#EBA13D" title="#EBA13D"></span></td><td><strong>LMK16 linear bearing</strong> — guides plunger drive rods at housing interfaces</td></tr>
+    <tr><td><span class="swatch" style="background-color:#8CC135" title="#8CC135"></span></td><td><strong>Plunger drive spring</strong> — helical; return force, coiled around rod in green housing</td></tr>
+  </table>
+  <p class="muted">Green rectangular housings enclose the spring and guide the rods; they interface with the filter/plug-cutter station and core chute.</p>
+
+  <h2>Components (overview)</h2>
   <ul>
-    <li><strong>Plunger</strong> — pushes through filter to eject plug (multiple in parallel)</li>
-    <li><strong>Plunger actuator bar / plate</strong> — light purple; carries plungers in unison</li>
-    <li><strong>Plug ejection channels/housings</strong> — green; filter/plug-cutter interface → core chute</li>
-    <li><strong>Actuator rods</strong> — red, yellow — connect to drive</li>
-    <li><strong>Guides/bushings</strong> — orange, light blue</li>
-    <li><strong>Return spring</strong> — yellow helical (return motion)</li>
-    <li><strong>Filter</strong> — plunger passes through; juice to collector</li>
+    <li><strong>Plunger</strong> <span class="swatch" style="background-color:#5151FA" title="#5151FA"></span> — pushes through filter to eject plug (multiple in parallel)</li>
+    <li><strong>Plunger drive bracket</strong> <span class="swatch" style="background-color:#D1A4FF" title="#D1A4FF"></span> — carries plungers; driven by plunger drive rods</li>
+    <li><strong>Plunger drive rods</strong> <span class="swatch" style="background-color:#B31B5B" title="#B31B5B"></span> — linear motion; pass through LMK16 bearings</li>
+    <li><strong>LMK16 linear bearing</strong> <span class="swatch" style="background-color:#EBA13D" title="#EBA13D"></span> — guides rods at housing entry/exit</li>
+    <li><strong>Plunger drive spring</strong> <span class="swatch" style="background-color:#8CC135" title="#8CC135"></span> — return force in housing</li>
+    <li><strong>Filter</strong> — plunger passes through; juice to collector (<a href="../Collection/">Collection</a>)</li>
     <li><strong>Plug cutter</strong> — (in <a href="../Collection/">Collection</a>); plug ejected by this system</li>
-    <li><strong>Plunger drive bracket</strong></li>
   </ul>
 
-  <h2 id="gallery">Gallery</h2>
+  <h2 id="gallery">Figures</h2>
   <p class="muted">CAD views. Refer to figures in the text as <a href="#fig1">Figure 1</a>, <a href="#fig2">Figure 2</a>, etc.</p>
-  <div class="gallery">
-    <figure id="fig1"><img src="images/plug-ejection-exploded-1.png" alt="Plug ejection exploded"><figcaption>Figure 1. Exploded — actuator bar, blue plungers, green housings, rods, spring.</figcaption></figure>
-    <figure id="fig2"><img src="images/plug-ejection-housings-2.png" alt="Plug ejection housings"><figcaption>Figure 2. Actuator plate, plungers into green housing; core chute side.</figcaption></figure>
-    <figure id="fig3"><img src="images/plug-ejection-front-3.png" alt="Plug ejection front"><figcaption>Figure 3. Front — vertical plungers, base, actuator mechanisms, green supports.</figcaption></figure>
-    <figure id="fig4"><img src="images/plug-ejection-plungers-4.png" alt="Plug ejection plungers"><figcaption>Figure 4. Plunger assemblies — purple plate, blue plungers, green blocks, rods.</figcaption></figure>
-    <figure id="fig5"><img src="images/plug-ejection-top-5.png" alt="Plug ejection top"><figcaption>Figure 5. Top — structural bar, four plunger assemblies, green blocks.</figcaption></figure>
-    <figure id="fig6"><img src="images/plug-ejection-single-6.png" alt="Plug ejection single"><figcaption>Figure 6. Single station — plunger rod, yoke-like actuation, housing.</figcaption></figure>
-    <figure id="fig7"><img src="images/plug-ejection-left-7.png" alt="Plug ejection left"><figcaption>Figure 7. Left — plunger rod, green housing, spring, bushings, actuation.</figcaption></figure>
+  <div class="slideshow" id="plug-slideshow">
+    <div class="slideshow-track">
+      <div class="slide active" id="fig1" data-caption="Figure 1. Exploded — plunger drive bracket, plungers, plunger drive rods, LMK16 linear bearing, plunger drive spring, green housings."><img src="images/plug-ejection-1.png" alt="Plug ejection exploded"></div>
+      <div class="slide" id="fig2" data-caption="Figure 2. Right — green housing, plunger drive rod, plunger drive spring, plunger drive bracket, plunger, LMK16 bearings."><img src="images/plug-ejection-2.png" alt="Plug ejection right"></div>
+      <div class="slide" id="fig3" data-caption="Figure 3. Orthogonal — central housing, plunger drive bracket, plunger, spring, plunger drive rods, LMK16 bearings (left and right)."><img src="images/plug-ejection-3.png" alt="Plug ejection orthogonal"></div>
+      <div class="slide" id="fig4" data-caption="Figure 4. Top — two green housings, plunger drive bracket with clamps, plunger drive rod through system, plunger, LMK16, plunger drive spring in right housing."><img src="images/plug-ejection-4.png" alt="Plug ejection top"></div>
+      <div class="slide" id="fig5" data-caption="Figure 5. Front — plunger drive bracket, four sub-assemblies (V-bracket, plunger, rods, springs), green end blocks."><img src="images/plug-ejection-5.png" alt="Plug ejection front"></div>
+      <div class="slide" id="fig6" data-caption="Figure 6. Front elevated — plunger drive bracket, four plungers, LMK16 at left/right, green housings, plunger drive rods."><img src="images/plug-ejection-6.png" alt="Plug ejection front elevated"></div>
+    </div>
+    <p class="slideshow-caption" id="plug-caption" aria-live="polite">Figure 1. Exploded — plunger drive bracket, plungers, plunger drive rods, LMK16 linear bearing, plunger drive spring, green housings.</p>
+    <div class="slideshow-controls">
+      <button type="button" id="plug-prev" aria-label="Previous">← Previous</button>
+      <span class="slideshow-counter" id="plug-counter">1 / 6</span>
+      <button type="button" id="plug-next" aria-label="Next">Next →</button>
+    </div>
   </div>
 
   <h2>Interfaces</h2>
@@ -63,6 +97,37 @@
     <li><strong>Drive:</strong> Plunger actuation from <a href="../Drivetrain/">drivetrain</a> / <a href="../Transmission/">transmission</a> (yoke/cam).</li>
   </ul>
 
+  <h2>Interfaces and tolerances</h2>
+  <p class="muted">Known interfaces and tolerances. Links go to related subsystems. Once every subsystem has an overview, subassemblies will be described in detail with how they interface with other components.</p>
+  <table class="iface-table">
+    <thead><tr><th>Part</th><th>Interface / tolerance</th><th>Related</th></tr></thead>
+    <tbody>
+      <tr><td>Plunger</td><td>Passes through filter; ejects plug from plug cutter</td><td><a href="../Collection/">Collection</a></td></tr>
+      <tr><td>Plunger drive bracket</td><td>Carries four plungers; connected to plunger drive rods; moves in unison</td><td>—</td></tr>
+      <tr><td>Plunger drive rods</td><td>Slide through LMK16 linear bearings; pass into green housings; driven by drivetrain/transmission</td><td><a href="../Drivetrain/">Drivetrain</a>, <a href="../Transmission/">Transmission</a></td></tr>
+      <tr><td>LMK16 linear bearing</td><td>At housing entry/exit; guides plunger drive rods</td><td>—</td></tr>
+      <tr><td>Plunger drive spring</td><td>Coiled around rod in green housing; return force</td><td>—</td></tr>
+      <tr><td>Plug (output)</td><td>Falls into core chute after ejection</td><td><a href="../Outflow-disposal/">Outflow-disposal</a></td></tr>
+      <tr><td>Filter / plug cutter</td><td>Housed in collection; plunger interfaces with same station</td><td><a href="../Collection/">Collection</a></td></tr>
+    </tbody>
+  </table>
+
   <p><a href="PlugEjection.md">PlugEjection.md</a> (source)</p>
+  <script>
+(function(){
+  var el = document.getElementById('plug-slideshow');
+  if (!el) return;
+  var slides = el.querySelectorAll('.slide');
+  var cap = document.getElementById('plug-caption');
+  var counter = document.getElementById('plug-counter');
+  var n = slides.length;
+  var i = 0;
+  function go(k) { i = (k + n) % n; slides.forEach(function(s,j){ s.classList.toggle('active', j===i); }); if (cap) cap.textContent = slides[i].getAttribute('data-caption') || ''; if (counter) counter.textContent = (i+1) + ' / ' + n; }
+  el.querySelector('#plug-prev').addEventListener('click', function(){ go(i-1); });
+  el.querySelector('#plug-next').addEventListener('click', function(){ go(i+1); });
+  var hash = window.location.hash;
+  if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
+})();
+  </script>
 </body>
 </html>

@@ -10,41 +10,40 @@ The **plug ejection system** is part of the plunger drive / juice collection sub
 
 3. **Disposal:** Meanwhile, peels fall to the sides of the peelers, avoid the core chutes, and separate into two channels; the two augers take peels and plugs/cores away separately (see [Outflow-disposal](../Outflow-disposal/)).
 
-## Components (from RFP context)
+## Components (CAD colour key)
 
-- **Plunger** — pushes through filter to eject plug (multiple plungers in parallel)
-- **Plunger actuator bar / plate** — light purple; carries plungers, moves in unison
-- **Plug ejection channels/housings** — green; contain filter/plug-cutter interface; plugs exit to core chute
-- **Actuator rods** — red, yellow — connect to drive mechanism
-- **Guides/bushings** — orange, light blue — at housing interfaces
-- **Return spring** — yellow helical spring in housing (return motion)
+| Colour (hex) | Component |
+|--------------|-----------|
+| #5151FA | **Plunger** — pushes through filter to eject plug (four in parallel) |
+| #D1A4FF | **Plunger drive bracket** — C-channel; carries plungers, connects to plunger drive rods |
+| #B31B5B | **Plunger drive rods** — linear actuation; pass through LMK16 bearings and into green housings |
+| #EBA13D | **LMK16 linear bearing** — guides plunger drive rods at housing interfaces |
+| #8CC135 | **Plunger drive spring** — helical; return force, coiled around rod in green housing |
+
+Green rectangular housings enclose the spring and guide the rods; they interface with the filter/plug-cutter station and core chute.
+
 - **Filter** — juice through slots into collector; plunger passes through for plug ejection
 - **Plug cutter** — (in [Collection](../Collection/)); plug cut during juicing, ejected by this system
-- **Plunger drive bracket** — (drivetrain/plunger side)
-- **Juice outflow collection** — (collection Y-tubes, filter, etc.)
 
 ## Overview figures
 
-![Plug ejection exploded 1](images/plug-ejection-exploded-1.png)  
-*Figure 1. Exploded — actuator bar, blue plungers, green housings, rods, spring.*
+![Plug ejection 1](images/plug-ejection-1.png)  
+*Figure 1. Exploded — plunger drive bracket, plungers, plunger drive rods, LMK16 linear bearing, plunger drive spring, green housings.*
 
-![Plug ejection housings 2](images/plug-ejection-housings-2.png)  
-*Figure 2. Actuator plate, plungers into green housing; core chute side.*
+![Plug ejection 2](images/plug-ejection-2.png)  
+*Figure 2. Right — green housing, plunger drive rod, plunger drive spring, plunger drive bracket, plunger, LMK16 bearings.*
 
-![Plug ejection front 3](images/plug-ejection-front-3.png)  
-*Figure 3. Front — vertical plungers, base, actuator mechanisms, green supports.*
+![Plug ejection 3](images/plug-ejection-3.png)  
+*Figure 3. Orthogonal — central housing, plunger drive bracket, plunger, spring, plunger drive rods, LMK16 bearings (left and right).*
 
-![Plug ejection plungers 4](images/plug-ejection-plungers-4.png)  
-*Figure 4. Plunger assemblies — purple plate, blue plungers, green blocks, connecting rods.*
+![Plug ejection 4](images/plug-ejection-4.png)  
+*Figure 4. Top — two green housings, plunger drive bracket with clamps, plunger drive rod, plunger, LMK16, plunger drive spring in right housing.*
 
-![Plug ejection top 5](images/plug-ejection-top-5.png)  
-*Figure 5. Top — structural bar, four plunger assemblies, green blocks.*
+![Plug ejection 5](images/plug-ejection-5.png)  
+*Figure 5. Front — plunger drive bracket, four sub-assemblies (V-bracket, plunger, rods, springs), green end blocks.*
 
-![Plug ejection single 6](images/plug-ejection-single-6.png)  
-*Figure 6. Single station — plunger rod, yoke-like actuation, housing.*
-
-![Plug ejection left 7](images/plug-ejection-left-7.png)  
-*Figure 7. Left — plunger rod, green housing, spring, bushings, actuation.*
+![Plug ejection 6](images/plug-ejection-6.png)  
+*Figure 6. Front elevated — plunger drive bracket, four plungers, LMK16 at left/right, green housings, plunger drive rods.*
 
 ## Interfaces
 

@@ -15,16 +15,31 @@
     .muted { color: var(--muted); font-size: 0.9rem; }
     table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
     th, td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
-    .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.25rem; margin: 1.5rem 0; }
-    .gallery figure { margin: 0; }
-    .gallery figure img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
-    .gallery figcaption { margin-top: 0.35rem; font-size: 0.85rem; color: var(--muted); }
+    .swatch { display: inline-block; width: 1.25rem; height: 1.25rem; border: 1px solid var(--border); border-radius: 3px; vertical-align: middle; }
+    .slideshow { margin: 1.5rem 0; }
+    .slideshow .slide { display: none; }
+    .slideshow .slide.active { display: block; }
+    .slideshow .slide img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
+    .slideshow-caption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); min-height: 2.5em; }
+    .slideshow-controls { display: flex; align-items: center; gap: 1rem; margin-top: 0.75rem; flex-wrap: wrap; }
+    .slideshow-controls button { background: var(--border); color: var(--text); border: none; padding: 0.35rem 0.75rem; border-radius: 4px; cursor: pointer; font-size: 0.9rem; }
+    .slideshow-controls button:hover { background: var(--accent); color: #fff; }
+    .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
+    .iface-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    .iface-table th, .iface-table td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
+    .iface-table th { color: var(--muted); font-weight: 600; }
   </style>
 </head>
 <body>
   <p class="back"><a href="../index.html">← Back to P6 RFP overview</a></p>
   <h1>2.4 Outflow / disposal subsystem</h1>
   <p class="muted">Peel chute (red), core chutes (welded to it), two augers (teal). Peels and plugs/cores taken away separately.</p>
+
+  <h2>Subassemblies</h2>
+  <p class="muted">Subassembly subdirectories with detailed pages (to be added).</p>
+  <ul>
+    <li>Peel chute, core chutes, augers — detail pages TBD</li>
+  </ul>
 
   <h2>Function (extraction cycle context)</h2>
   <ol>
@@ -34,27 +49,36 @@
     <li><strong>Augers:</strong> The two augers take the peels and the plugs/cores away separately.</li>
   </ol>
 
-  <h2>Components (CAD colour key)</h2>
+  <h2>Colour key (this subsystem’s figures)</h2>
+  <p class="muted">Applies only to the CAD views in this section. Other subsystems use their own colour sets.</p>
   <table>
-    <tr><th>Colour (hex)</th><th>Component</th></tr>
-    <tr><td>#D43C3C</td><td><strong>Peel chute</strong> — red; folded sheet metal; peels from sides of peelers</td></tr>
-    <tr><td>welded to chute</td><td><strong>Core chutes</strong> — plugs/cores fall here after plug ejection</td></tr>
-    <tr><td>#28B399</td><td><strong>Two augers</strong> — teal; take peels and plugs/cores away separately</td></tr>
+    <tr><th>Colour</th><th>Component</th></tr>
+    <tr><td><span class="swatch" style="background-color:#D43C3C" title="#D43C3C"></span></td><td><strong>Peel chute</strong> — red; folded sheet metal; peels from sides of peelers</td></tr>
+    <tr><td>—</td><td><strong>Core chutes</strong> — welded to peel chute; plugs/cores fall here after plug ejection</td></tr>
+    <tr><td><span class="swatch" style="background-color:#28B399" title="#28B399"></span></td><td><strong>Two augers</strong> — teal; take peels and plugs/cores away separately</td></tr>
   </table>
-  <p class="muted">Alternative (some views): peel chute #2768BC, core chutes #D79132, augers #FFED9E.</p>
+  <p class="muted">Alternative (some views): peel chute <span class="swatch" style="background-color:#2768BC" title="#2768BC"></span>, core chutes <span class="swatch" style="background-color:#D79132" title="#D79132"></span>, augers <span class="swatch" style="background-color:#FFED9E" title="#FFED9E"></span>.</p>
 
-  <h2 id="gallery">Gallery</h2>
+  <h2 id="gallery">Figures</h2>
   <p class="muted">CAD views. Refer to figures in the text as <a href="#fig1">Figure 1</a>, <a href="#fig2">Figure 2</a>, etc.</p>
-  <div class="gallery">
-    <figure id="fig1"><img src="images/disposal-top-isometric.png" alt="Top isometric"><figcaption>Figure 1. Top-down isometric — red chute on teal base, two channels.</figcaption></figure>
-    <figure id="fig2"><img src="images/disposal-chute-augers.png" alt="Chute and augers"><figcaption>Figure 2. Red peel chute with core chutes; two teal augers.</figcaption></figure>
-    <figure id="fig3"><img src="images/disposal-chute-only.png" alt="Chute only"><figcaption>Figure 3. Red chute only, above frame.</figcaption></figure>
-    <figure id="fig4"><img src="images/disposal-right-chute-core.png" alt="Right chute and core"><figcaption>Figure 4. Right — red chute, core chutes, teal augers below.</figcaption></figure>
-    <figure id="fig5"><img src="images/disposal-front-chute-frame.png" alt="Front chute and frame"><figcaption>Figure 5. Front — red folded sheet metal chute above teal frame.</figcaption></figure>
-    <figure id="fig6"><img src="images/disposal-right-u-channels.png" alt="Right U-channels"><figcaption>Figure 6. Right — red chute; two teal U-shaped auger housings.</figcaption></figure>
-    <figure id="fig7"><img src="images/disposal-alt-blue-orange.png" alt="Alt blue/orange"><figcaption>Figure 7. Alternative — blue peel chute, orange core chutes.</figcaption></figure>
-    <figure id="fig8"><img src="images/disposal-alt-isometric.png" alt="Alt isometric"><figcaption>Figure 8. Alternative — blue chute, orange core chutes, channels.</figcaption></figure>
-    <figure id="fig9"><img src="images/disposal-red-core-teal-channels.png" alt="Red core teal channels"><figcaption>Figure 9. Red chute, four core chutes, teal auger channels.</figcaption></figure>
+  <div class="slideshow" id="disp-slideshow">
+    <div class="slideshow-track">
+      <div class="slide active" id="fig1" data-caption="Figure 1. Top-down isometric — red chute on teal base, two channels."><img src="images/disposal-top-isometric.png" alt="Top isometric"></div>
+      <div class="slide" id="fig2" data-caption="Figure 2. Red peel chute with core chutes; two teal augers."><img src="images/disposal-chute-augers.png" alt="Chute and augers"></div>
+      <div class="slide" id="fig3" data-caption="Figure 3. Red chute only, above frame."><img src="images/disposal-chute-only.png" alt="Chute only"></div>
+      <div class="slide" id="fig4" data-caption="Figure 4. Right — red chute, core chutes, teal augers below."><img src="images/disposal-right-chute-core.png" alt="Right chute and core"></div>
+      <div class="slide" id="fig5" data-caption="Figure 5. Front — red folded sheet metal chute above teal frame."><img src="images/disposal-front-chute-frame.png" alt="Front chute and frame"></div>
+      <div class="slide" id="fig6" data-caption="Figure 6. Right — red chute; two teal U-shaped auger housings."><img src="images/disposal-right-u-channels.png" alt="Right U-channels"></div>
+      <div class="slide" id="fig7" data-caption="Figure 7. Alternative — blue peel chute, orange core chutes."><img src="images/disposal-alt-blue-orange.png" alt="Alt blue/orange"></div>
+      <div class="slide" id="fig8" data-caption="Figure 8. Alternative — blue chute, orange core chutes, channels."><img src="images/disposal-alt-isometric.png" alt="Alt isometric"></div>
+      <div class="slide" id="fig9" data-caption="Figure 9. Red chute, four core chutes, teal auger channels."><img src="images/disposal-red-core-teal-channels.png" alt="Red core teal channels"></div>
+    </div>
+    <p class="slideshow-caption" id="disp-caption" aria-live="polite">Figure 1. Top-down isometric — red chute on teal base, two channels.</p>
+    <div class="slideshow-controls">
+      <button type="button" id="disp-prev" aria-label="Previous">← Previous</button>
+      <span class="slideshow-counter" id="disp-counter">1 / 9</span>
+      <button type="button" id="disp-next" aria-label="Next">Next →</button>
+    </div>
   </div>
 
   <h2>Interfaces</h2>
@@ -64,6 +88,33 @@
     <li><strong>Output:</strong> Two augers convey peels and plugs/cores away separately.</li>
   </ul>
 
+  <h2>Interfaces and tolerances</h2>
+  <p class="muted">Known interfaces and tolerances. Links go to related subsystems.</p>
+  <table class="iface-table">
+    <thead><tr><th>Part</th><th>Interface / tolerance</th><th>Related</th></tr></thead>
+    <tbody>
+      <tr><td>Core chutes</td><td>Receive plugs from plug ejection; welded to peel chute</td><td><a href="../Plug-ejection/">Plug-ejection</a></td></tr>
+      <tr><td>Peel chute</td><td>Receives peels from sides of peelers (collection/extraction); two channels</td><td><a href="../Collection/">Collection</a></td></tr>
+      <tr><td>Augers</td><td>Two augers; convey peels and plugs/cores away separately</td><td>—</td></tr>
+    </tbody>
+  </table>
+
   <p><a href="Disposal.md">Disposal.md</a> (source)</p>
+  <script>
+(function(){
+  var el = document.getElementById('disp-slideshow');
+  if (!el) return;
+  var slides = el.querySelectorAll('.slide');
+  var cap = document.getElementById('disp-caption');
+  var counter = document.getElementById('disp-counter');
+  var n = slides.length;
+  var i = 0;
+  function go(k) { i = (k + n) % n; slides.forEach(function(s,j){ s.classList.toggle('active', j===i); }); if (cap) cap.textContent = slides[i].getAttribute('data-caption') || ''; if (counter) counter.textContent = (i+1) + ' / ' + n; }
+  el.querySelector('#disp-prev').addEventListener('click', function(){ go(i-1); });
+  el.querySelector('#disp-next').addEventListener('click', function(){ go(i+1); });
+  var hash = window.location.hash;
+  if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
+})();
+  </script>
 </body>
 </html>
