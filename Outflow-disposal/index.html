@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2.4 Outflow / disposal — P6 RFP</title>
+  <style>
+    :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
+    a { color: var(--accent); }
+    h1 { font-size: 1.35rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.25rem; }
+    ul { padding-left: 1.25rem; }
+    .back { margin-bottom: 1rem; font-size: 0.9rem; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+    th, td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
+    .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.25rem; margin: 1.5rem 0; }
+    .gallery figure { margin: 0; }
+    .gallery figure img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
+    .gallery figcaption { margin-top: 0.35rem; font-size: 0.85rem; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <p class="back"><a href="../index.html">← Back to P6 RFP overview</a></p>
+  <h1>2.4 Outflow / disposal subsystem</h1>
+  <p class="muted">Peel chute (red), core chutes (welded to it), two augers (teal). Peels and plugs/cores taken away separately.</p>
+
+  <h2>Function (extraction cycle context)</h2>
+  <ol>
+    <li><strong>Pressing stroke:</strong> Juice leaves the oranges into the branched Y-section of the collector (<a href="../Collection/">Collection</a>).</li>
+    <li><strong>Plug ejection:</strong> The <a href="../Plug-ejection/">plug ejection system</a> pushes a plunger through the filter, pushes the plug back out of the plug cutter, and the plug <strong>falls into the core chute</strong> (see <a href="#fig2">Figure 2</a>, <a href="#fig4">Figure 4</a>, <a href="#fig9">Figure 9</a>).</li>
+    <li><strong>Peels:</strong> Meanwhile, peels fall to the <strong>sides of the peelers</strong> and <strong>avoid the core chutes</strong>, <strong>separating into two channels</strong> for separate processing.</li>
+    <li><strong>Augers:</strong> The two augers take the peels and the plugs/cores away separately.</li>
+  </ol>
+
+  <h2>Components (CAD colour key)</h2>
+  <table>
+    <tr><th>Colour (hex)</th><th>Component</th></tr>
+    <tr><td>#D43C3C</td><td><strong>Peel chute</strong> — red; folded sheet metal; peels from sides of peelers</td></tr>
+    <tr><td>welded to chute</td><td><strong>Core chutes</strong> — plugs/cores fall here after plug ejection</td></tr>
+    <tr><td>#28B399</td><td><strong>Two augers</strong> — teal; take peels and plugs/cores away separately</td></tr>
+  </table>
+  <p class="muted">Alternative (some views): peel chute #2768BC, core chutes #D79132, augers #FFED9E.</p>
+
+  <h2 id="gallery">Gallery</h2>
+  <p class="muted">CAD views. Refer to figures in the text as <a href="#fig1">Figure 1</a>, <a href="#fig2">Figure 2</a>, etc.</p>
+  <div class="gallery">
+    <figure id="fig1"><img src="images/disposal-top-isometric.png" alt="Top isometric"><figcaption>Figure 1. Top-down isometric — red chute on teal base, two channels.</figcaption></figure>
+    <figure id="fig2"><img src="images/disposal-chute-augers.png" alt="Chute and augers"><figcaption>Figure 2. Red peel chute with core chutes; two teal augers.</figcaption></figure>
+    <figure id="fig3"><img src="images/disposal-chute-only.png" alt="Chute only"><figcaption>Figure 3. Red chute only, above frame.</figcaption></figure>
+    <figure id="fig4"><img src="images/disposal-right-chute-core.png" alt="Right chute and core"><figcaption>Figure 4. Right — red chute, core chutes, teal augers below.</figcaption></figure>
+    <figure id="fig5"><img src="images/disposal-front-chute-frame.png" alt="Front chute and frame"><figcaption>Figure 5. Front — red folded sheet metal chute above teal frame.</figcaption></figure>
+    <figure id="fig6"><img src="images/disposal-right-u-channels.png" alt="Right U-channels"><figcaption>Figure 6. Right — red chute; two teal U-shaped auger housings.</figcaption></figure>
+    <figure id="fig7"><img src="images/disposal-alt-blue-orange.png" alt="Alt blue/orange"><figcaption>Figure 7. Alternative — blue peel chute, orange core chutes.</figcaption></figure>
+    <figure id="fig8"><img src="images/disposal-alt-isometric.png" alt="Alt isometric"><figcaption>Figure 8. Alternative — blue chute, orange core chutes, channels.</figcaption></figure>
+    <figure id="fig9"><img src="images/disposal-red-core-teal-channels.png" alt="Red core teal channels"><figcaption>Figure 9. Red chute, four core chutes, teal auger channels.</figcaption></figure>
+  </div>
+
+  <h2>Interfaces</h2>
+  <ul>
+    <li><strong>Input (plugs):</strong> From <a href="../Plug-ejection/">plug ejection</a> — plug falls into core chute.</li>
+    <li><strong>Input (peels):</strong> From <a href="../Collection/">collection</a>/extraction — peels to sides of peelers, two channels.</li>
+    <li><strong>Output:</strong> Two augers convey peels and plugs/cores away separately.</li>
+  </ul>
+
+  <p><a href="Disposal.md">Disposal.md</a> (source)</p>
+</body>
+</html>

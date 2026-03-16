@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>P6 RFP — Delijuice 870/970 Industrial Prototype</title>
+  <style>
+    :root { --bg: #1a1d21; --card: #24282e; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; --draft: #8b949e; }
+    * { box-sizing: border-box; }
+    body { font-family: system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 0; }
+    .wrap { max-width: 56rem; margin: 0 auto; padding: 1.5rem; }
+    header { border-bottom: 1px solid var(--border); padding-bottom: 1rem; margin-bottom: 1.5rem; }
+    h1 { font-size: 1.5rem; font-weight: 600; margin: 0 0 0.25rem 0; }
+    .subtitle { color: var(--muted); font-size: 0.95rem; margin: 0; }
+    .intro { margin: 1rem 0 1.5rem 0; color: var(--text); font-size: 0.98rem; }
+    nav { margin: 1.5rem 0; }
+    nav h2 { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 0 0 0.6rem 0; }
+    nav ul { list-style: none; padding: 0; margin: 0; }
+    nav li { margin: 0.35rem 0; display: flex; align-items: center; gap: 0.5rem; }
+    nav a { color: var(--accent); text-decoration: none; }
+    nav a:hover { text-decoration: underline; }
+    .badge { font-size: 0.7rem; padding: 0.15rem 0.45rem; border-radius: 4px; background: var(--card); color: var(--draft); border: 1px solid var(--border); }
+    .badge.ready { color: #7ee787; border-color: #238636; background: rgba(35,134,54,0.15); }
+    section { margin: 2rem 0; padding: 1rem 0; border-top: 1px solid var(--border); }
+    section h2 { font-size: 1.2rem; margin: 0 0 0.75rem 0; }
+    section h3 { font-size: 1rem; margin: 1rem 0 0.5rem 0; }
+    section ul { margin: 0.5rem 0; padding-left: 1.25rem; }
+    section li { margin: 0.25rem 0; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    footer { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>P6 RFP — Delijuice 870/970</h1>
+      <p class="subtitle">Industrial prototype subsystem RFPs. Drawings target: April 1st (Sean/YES). JX operations: October.</p>
+    </header>
+
+    <p class="intro">Subsystem RFPs for the P6 industrial prototype. Use the links below to navigate. Sections <span class="badge ready">with content</span> include CAD views and descriptions; <span class="badge">to be completed</span> are placeholders for future detail.</p>
+
+    <nav>
+      <h2>Reference</h2>
+      <ul>
+        <li><a href="Overview/">P6 context summary</a></li>
+      </ul>
+      <h2>Subsystems with content</h2>
+      <ul>
+        <li><a href="Frame/">2.5 Frame</a> <span class="badge ready">with content</span></li>
+        <li><a href="Transmission/">Transmission (yoke, shafts, bearings)</a> <span class="badge ready">with content</span></li>
+        <li><a href="Collection/">Collection (static peelers, juice, filter, plug)</a> <span class="badge ready">with content</span></li>
+        <li><a href="Plug-ejection/">2.2 Plug ejection / juice collection</a> <span class="badge ready">with content</span></li>
+        <li><a href="Drivetrain/">2.3 Drivetrain</a> <span class="badge ready">with content</span></li>
+        <li><a href="Outflow-disposal/">2.4 Outflow / disposal</a> <span class="badge ready">with content</span></li>
+      </ul>
+      <h2>Subsystems to be completed</h2>
+      <ul>
+        <li><a href="Feeder/">2.1 Intake feeder system</a> <span class="badge">to be completed</span></li>
+        <li><a href="Extraction-syncronisation/">2.1b Extraction &amp; synchronisation</a> <span class="badge">to be completed</span></li>
+        <li><a href="Enclosure-shell/">Enclosure / shell</a> <span class="badge">to be completed</span></li>
+        <li><a href="Clean-in-place/">2.6 Clean-in-place (CIP)</a> <span class="badge">to be completed</span></li>
+        <li><a href="Controls-Electronics/">2.7 Controls and electronics</a> <span class="badge">to be completed</span></li>
+      </ul>
+      <h2>General &amp; integration</h2>
+      <ul>
+        <li><a href="general/">3. General design and manufacturing</a> <span class="badge">to be completed</span></li>
+        <li><a href="3rd-party/">4. Third-party and site integration</a> <span class="badge">to be completed</span></li>
+      </ul>
+    </nav>
+
+    <section>
+      <h2>Overview</h2>
+      <p>P6 is the current industrial prototype (Delijuice 870/970). Jiangxi (JX) factory with LTA; miniplant 8,160 L/h, 6 extractors. CAD: Inventor → SolidWorks. Each subsystem section includes a gallery of figures and, where filled in, component lists, interfaces, and design notes. Refer to <a href="Overview/">P6 context summary</a> for the full subsystem list and context.</p>
+    </section>
+
+    <footer>
+      Last updated: 2026-03-15.
+    </footer>
+  </div>
+</body>
+</html>

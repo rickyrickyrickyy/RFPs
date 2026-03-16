@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Transmission subsystem — P6 RFP</title>
+  <style>
+    :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
+    a { color: var(--accent); }
+    h1 { font-size: 1.35rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.25rem; }
+    ul { padding-left: 1.25rem; }
+    .back { margin-bottom: 1rem; font-size: 0.9rem; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+    th, td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
+    .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.25rem; margin: 1.5rem 0; }
+    .gallery figure { margin: 0; }
+    .gallery figure img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
+    .gallery figcaption { margin-top: 0.35rem; font-size: 0.85rem; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <p class="back"><a href="../index.html">← Back to P6 RFP overview</a></p>
+  <h1>Transmission subsystem</h1>
+  <p class="muted">Yoke, two 35 mm drive shafts (with shaft mounts), two LMK35UU linear bearings, transmission mount plate. Mounts on the main frame.</p>
+
+  <h2>Function</h2>
+  <p>The transmission <strong>transmits force from the gears</strong> (drivetrain) <strong>to the extraction/synchronisation system</strong> (see <a href="#fig1">Figure 1</a>, <a href="#fig3">Figure 3</a>). That system then <strong>presses fruit against the collection system</strong> mounted on the <strong>collection system mount plate</strong> (formerly the static mount plate / loaded mount plate).</p>
+  <p>Load path: <strong>Gears (drivetrain)</strong> → <strong>transmission (yoke, shafts, bearings)</strong> → <strong>extraction/synchronisation</strong> → fruit pressed against <strong>collection system</strong> on <strong>collection system mount plate</strong>.</p>
+
+  <h2>Components (CAD colour key)</h2>
+  <table>
+    <tr><th>Colour (hex)</th><th>Component</th></tr>
+    <tr><td>#2F9EBA</td><td><strong>Yoke</strong> — moving part; transmits force to extraction/synchronisation</td></tr>
+    <tr><td>#798C2E</td><td><strong>Two drive shafts</strong> with <strong>shaft mounts</strong> at both ends (35 mm)</td></tr>
+    <tr><td>#3582E4</td><td><strong>Two LMK35UU linear bearings</strong> — guide linear motion of shafts</td></tr>
+    <tr><td>#B341C3</td><td><strong>Transmission mount plate</strong> — mounts to main frame</td></tr>
+  </table>
+
+  <h2 id="gallery">Gallery</h2>
+  <p class="muted">CAD views. Refer to figures in the text as <a href="#fig1">Figure 1</a>, <a href="#fig2">Figure 2</a>, etc.</p>
+  <div class="gallery">
+    <figure id="fig1"><img src="images/transmission-overview.png" alt="Transmission assembly — mount plate, yoke, shafts, bearings"><figcaption>Figure 1. Transmission assembly: mount plate, yoke, two shafts, two LMK35UU linear bearings.</figcaption></figure>
+    <figure id="fig2"><img src="images/transmission-side.png" alt="Side view — yoke, shafts, bearings"><figcaption>Figure 2. Side view — yoke, shafts, shaft mounts, linear bearings.</figcaption></figure>
+    <figure id="fig3"><img src="images/transmission-isometric.png" alt="Isometric — transmission"><figcaption>Figure 3. Isometric — transmission mount plate, yoke, drive shafts, bearings.</figcaption></figure>
+    <figure id="fig4"><img src="images/transmission-side-plate.png" alt="Side profile — plate, shafts, yoke"><figcaption>Figure 4. Side profile — plate, shafts, bearings, yoke.</figcaption></figure>
+    <figure id="fig5"><img src="images/transmission-right.png" alt="Right-side view"><figcaption>Figure 5. Right-side view.</figcaption></figure>
+    <figure id="fig6"><img src="images/transmission-side-yoke.png" alt="Side — yoke and bearings on plate"><figcaption>Figure 6. Side — yoke, shafts, bearings on transmission mount plate.</figcaption></figure>
+    <figure id="fig7"><img src="images/transmission-top.png" alt="Top view — yoke, shafts; collection mount plate"><figcaption>Figure 7. Top/slightly isometric — yoke, shafts, bearings; collection system mount plate in view.</figcaption></figure>
+  </div>
+
+  <h2>Interfaces</h2>
+  <ul>
+    <li><strong>Input:</strong> Force from gears (drivetrain) on drivetrain mount plate.</li>
+    <li><strong>Output:</strong> Linear motion of yoke → extraction/synchronisation → fruit pressed against collection system.</li>
+    <li><strong>Mount:</strong> Transmission mount plate (#B341C3) on main frame. See <a href="../Frame/">Frame</a>. Collection system on <a href="../Frame/">loaded mount plate</a> (#34E682).</li>
+  </ul>
+
+  <p><a href="Transmission.md">Transmission.md</a> (source)</p>
+</body>
+</html>

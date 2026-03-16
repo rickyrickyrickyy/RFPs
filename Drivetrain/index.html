@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2.3 Drivetrain — P6 RFP</title>
+  <style>
+    :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
+    a { color: var(--accent); }
+    h1 { font-size: 1.35rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.25rem; }
+    ul { padding-left: 1.25rem; }
+    .back { margin-bottom: 1rem; font-size: 0.9rem; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+    th, td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
+    .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.25rem; margin: 1.5rem 0; }
+    .gallery figure { margin: 0; }
+    .gallery figure img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
+    .gallery figcaption { margin-top: 0.35rem; font-size: 0.85rem; color: var(--muted); }
+    .reminder { background: rgba(88, 166, 255, 0.12); border: 1px solid var(--accent); border-radius: 6px; padding: 0.75rem 1rem; margin: 1rem 0; font-size: 0.95rem; }
+  </style>
+</head>
+<body>
+  <p class="back"><a href="../index.html">← Back to P6 RFP overview</a></p>
+  <h1>2.3 Drivetrain subsystem</h1>
+  <p class="muted">Motor → V-belt → reducer → gear train → cam bearings → interface with <a href="../Transmission/">transmission</a> yoke. Mounts on drivetrain mount plate (frame).</p>
+
+  <div class="reminder"><strong>Reminders:</strong> Provide <strong>Sumitomo Cyclo 6000 reducer</strong> specs. Provide <strong>more specs</strong> for <strong>WEG 22 1450 rpm</strong> motor. Additional drivetrain details to be added later.</div>
+
+  <h2>Components (CAD colour key)</h2>
+  <p class="muted">See <a href="#fig1">Figure 1</a>, <a href="#fig7">Figure 7</a>, <a href="#fig10">Figure 10</a> for yoke/cam interface and gear assembly.</p>
+  <table>
+    <tr><th>Colour (hex)</th><th>Component</th></tr>
+    <tr><td>#FFE696</td><td><strong>Driven gear</strong></td></tr>
+    <tr><td>#237A3A</td><td><strong>Passive gear</strong></td></tr>
+    <tr><td>#4AB6F6</td><td><strong>Two cam bearings</strong> — interface with yoke of transmission subsystem</td></tr>
+    <tr><td>#3683E6</td><td><strong>Passive gear shaft</strong></td></tr>
+    <tr><td>#7D26B5</td><td><strong>Locating roller bearing</strong> SKF_F4BRP 208-SRB-CRH_ECY 213 (passive gear sits on)</td></tr>
+    <tr><td>—</td><td><strong>Non-locating roller bearing</strong> SKF_F4BRP 208-SRB-CLE (driven gear sits on)</td></tr>
+    <tr><td>#366D20</td><td><strong>Reducer spacer</strong></td></tr>
+    <tr><td>#5EB45D</td><td><strong>Sumitomo Cyclo 6000 reducer</strong></td></tr>
+    <tr><td>#572D9A</td><td><strong>V-belt</strong> — DIN 2215 17×957, 2-belt, 1000 mm long</td></tr>
+    <tr><td>#6A37BB</td><td><strong>WEG 22 1450 rpm motor</strong></td></tr>
+    <tr><td>#D2B545</td><td><strong>Stainless steel motor mount plate spacer</strong></td></tr>
+    <tr><td>#207E96</td><td><strong>Wooden motor mount plate</strong></td></tr>
+  </table>
+
+  <h2 id="gallery">Gallery</h2>
+  <p class="muted">Drivetrain and cam/yoke interface. Refer to figures in the text as <a href="#fig1">Figure 1</a>, <a href="#fig2">Figure 2</a>, etc.</p>
+  <div class="gallery">
+    <figure id="fig1"><img src="images/drivetrain-isometric-1.png" alt="Drivetrain isometric"><figcaption>Figure 1. Isometric — gears, bearings, reducer, motor, V-belt.</figcaption></figure>
+    <figure id="fig2"><img src="images/drivetrain-top-2.png" alt="Drivetrain top"><figcaption>Figure 2. Top-down — two gears, reducer spacer, mounting.</figcaption></figure>
+    <figure id="fig3"><img src="images/drivetrain-elevated-3.png" alt="Drivetrain elevated"><figcaption>Figure 3. Elevated front-right — gear stack, reducer, motor, V-belt.</figcaption></figure>
+    <figure id="fig4"><img src="images/drivetrain-front-right-4.png" alt="Drivetrain front-right"><figcaption>Figure 4. Front-right — mounting plate, gears, cam bearings, reducer, motor, spacers.</figcaption></figure>
+    <figure id="fig5"><img src="images/drivetrain-front-5.png" alt="Drivetrain front"><figcaption>Figure 5. Front — motor, V-belt, reducer, gears, cam bearings.</figcaption></figure>
+    <figure id="fig6"><img src="images/drivetrain-side-6.png" alt="Drivetrain side"><figcaption>Figure 6. Right side — passive gear shaft, cam bearing, gears, motor, reducer.</figcaption></figure>
+    <figure id="fig7"><img src="images/drivetrain-yoke-interface-7.png" alt="Cam bearings / yoke interface"><figcaption>Figure 7. Cam bearings interfacing with transmission subsystem yoke.</figcaption></figure>
+    <figure id="fig8"><img src="images/drivetrain-front-alt-8.png" alt="Drivetrain front alt"><figcaption>Figure 8. Front/side — gears, bearings, reducer, motor.</figcaption></figure>
+    <figure id="fig9"><img src="images/drivetrain-cross-section-9.png" alt="Drivetrain cross-section"><figcaption>Figure 9. Cross-section — yoke, cam bearings, mount plates, gears, reducer, motor, V-belt.</figcaption></figure>
+    <figure id="fig10"><img src="images/drivetrain-top-yoke-10.png" alt="Drivetrain top yoke"><figcaption>Figure 10. Top — two gears meshing, yoke (#2F9EBA), cam bearings in yoke.</figcaption></figure>
+    <figure id="fig11"><img src="images/drivetrain-back-11.png" alt="Drivetrain back"><figcaption>Figure 11. Back — motor, reducer, V-belt, mounting.</figcaption></figure>
+    <figure id="fig12"><img src="images/drivetrain-front-12.png" alt="Drivetrain front 12"><figcaption>Figure 12. Front — full assembly.</figcaption></figure>
+  </div>
+
+  <h2>Interfaces</h2>
+  <ul>
+    <li><strong>Input:</strong> WEG 22 1450 rpm motor → V-belt → Sumitomo Cyclo 6000 reducer.</li>
+    <li><strong>Output:</strong> Two cam bearings (#4AB6F6) interface with <a href="../Transmission/">yoke</a> of transmission subsystem.</li>
+    <li><strong>Mount:</strong> <a href="../Frame/">Drivetrain mount plate</a> on main frame.</li>
+  </ul>
+
+  <p><a href="Drivetrain.md">Drivetrain.md</a> (source)</p>
+</body>
+</html>

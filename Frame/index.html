@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2.5 Frame — P6 RFP</title>
+  <style>
+    :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
+    a { color: var(--accent); }
+    h1 { font-size: 1.35rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.25rem; }
+    ul { padding-left: 1.25rem; }
+    .back { margin-bottom: 1rem; font-size: 0.9rem; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    ol { padding-left: 1.25rem; }
+    .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.25rem; margin: 1.5rem 0; }
+    .gallery figure { margin: 0; }
+    .gallery figure img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
+    .gallery figcaption { margin-top: 0.35rem; font-size: 0.85rem; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <p class="back"><a href="../index.html">← Back to P6 RFP overview</a></p>
+  <h1>2.5 Frame</h1>
+  <p class="muted">Primary structure; design focus: stability, alignment, force transmission, smooth linear bearing operation, secure peeler mounting.</p>
+
+  <h2>Overview</h2>
+  <p>The frame is the <strong>primary structure</strong> of the P6 machine (see <a href="#fig1">Figure 1</a>, <a href="#fig2">Figure 2</a>). All other subsystems mount to it: drivetrain, plunger/juice collection, intake/peelers, outflow, and CIP. It must provide a stable, repeatable base so that:</p>
+  <ul>
+    <li><strong>Drivetrain</strong> forces are carried without deflection that would affect timing or bearing life.</li>
+    <li><strong>Transmission</strong> (yoke, two 35 mm shafts, LMK35UU linear bearings on the transmission mount plate) stays aligned so the yoke travels smoothly.</li>
+    <li><strong>Peelers</strong> (on the loaded mount plate) stay fixed for extraction and CIP.</li>
+  </ul>
+  <p>Repeatable alignment is achieved with dowels and H7 drill/ream holes in the side rails.</p>
+  <p><strong>Key interfaces:</strong> Main frame (#26C16A) → <strong>drivetrain mount plate</strong> (#9075CD); main frame → <strong>transmission mount plate</strong> (#B341C3); main frame → <strong>loaded mount plate</strong> (#34E682, collection assembly). All three plates are mounted from the top onto the frame and side rails. Leveling: 6111K669 M24 100 mm Swivel Leveling Mount (McMaster) on M24 tapped endplates at bottom of legs (<a href="#fig5">Figure 5</a>, <a href="#fig6">Figure 6</a>, <a href="#fig7">Figure 7</a>). Enclosure/shell: <a href="../Enclosure-shell/">Enclosure-shell</a>.</p>
+
+  <h2>Design principles</h2>
+  <p>These principles guide frame design and any changes to the current configuration.</p>
+  <table style="width:100%; border-collapse: collapse; font-size: 0.95rem;">
+    <thead>
+      <tr style="border-bottom: 1px solid var(--border);">
+        <th style="text-align:left; padding: 0.4rem 0.5rem 0.4rem 0;">Principle</th>
+        <th style="text-align:left; padding: 0.4rem 0;">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom: 1px solid var(--border);">
+        <td style="padding: 0.5rem 0.5rem 0.5rem 0; vertical-align: top;"><strong>Stability</strong></td>
+        <td style="padding: 0.5rem 0;">Resist deflection under operating loads so alignment and timing are maintained. Stiffness of the welded structure and plate interfaces is critical.</td>
+      </tr>
+      <tr style="border-bottom: 1px solid var(--border);">
+        <td style="padding: 0.5rem 0.5rem 0.5rem 0; vertical-align: top;"><strong>Alignment</strong></td>
+        <td style="padding: 0.5rem 0;">The three main interfaces (drivetrain, transmission, loaded mount plates) shall be located and oriented so drive shafts, bearings, and peelers align to design intent. Dowels and H7 holes provide repeatable alignment after disassembly.</td>
+      </tr>
+      <tr style="border-bottom: 1px solid var(--border);">
+        <td style="padding: 0.5rem 0.5rem 0.5rem 0; vertical-align: top;"><strong>Force transmission</strong></td>
+        <td style="padding: 0.5rem 0;">Reaction forces from drivetrain and plunger shall be carried through the frame into the floor without local distortion. Load paths clear; joints adequate.</td>
+      </tr>
+      <tr style="border-bottom: 1px solid var(--border);">
+        <td style="padding: 0.5rem 0.5rem 0.5rem 0; vertical-align: top;"><strong>Repeatability</strong></td>
+        <td style="padding: 0.5rem 0;">Plates and brackets removable and remountable without loss of alignment. H7 holes and dowels define the datum; shims for fit-up.</td>
+      </tr>
+      <tr style="border-bottom: 1px solid var(--border);">
+        <td style="padding: 0.5rem 0.5rem 0.5rem 0; vertical-align: top;"><strong>Serviceability</strong></td>
+        <td style="padding: 0.5rem 0;">Subassemblies removable and reinstallable for maintenance. No permanent “fit once” alignment.</td>
+      </tr>
+      <tr style="border-bottom: 1px solid var(--border);">
+        <td style="padding: 0.5rem 0.5rem 0.5rem 0; vertical-align: top;"><strong>Manufacturability</strong></td>
+        <td style="padding: 0.5rem 0;">Materials, weldability, and assembly sequence achievable by the fabrication partner (e.g. Sean/YES).</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Figure key (CAD colour coding)</h2>
+  <table style="width:100%; border-collapse: collapse; font-size: 0.9rem;">
+    <tr style="border-bottom: 1px solid var(--border);"><th style="text-align:left; padding: 0.35rem 0.5rem 0.35rem 0;">Colour (hex)</th><th style="text-align:left; padding: 0.35rem 0;">Component</th></tr>
+    <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.35rem 0.5rem;">#26C16A</td><td style="padding: 0.35rem 0;">Main frame</td></tr>
+    <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.35rem 0.5rem;">#34E682</td><td style="padding: 0.35rem 0;">Loaded mount plate (collection assembly; static side of extraction)</td></tr>
+    <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.35rem 0.5rem;">#B341C3</td><td style="padding: 0.35rem 0;">Transmission mount plate (yoke, two 35 mm shafts, two LMK35UU linear bearings)</td></tr>
+    <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.35rem 0.5rem;">#9075CD</td><td style="padding: 0.35rem 0;">Drivetrain mount plate (gears, housed tapered roller bearings, reducer spacer, Sumitomo reducer)</td></tr>
+    <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.35rem 0.5rem;">#FFD691</td><td style="padding: 0.35rem 0;">6111K669 M24 100 mm Swivel Leveling Mount (McMaster), M24 tapped endplates on legs</td></tr>
+  </table>
+
+  <h2 id="gallery">Gallery</h2>
+  <p class="muted">CAD views. Refer to figures in the text as <a href="#fig1">Figure 1</a>, <a href="#fig2">Figure 2</a>, etc.</p>
+  <div class="gallery">
+    <figure id="fig1"><img src="images/overview-full-frame.png" alt="Isometric — main frame, three plates, leveling mounts"><figcaption>Figure 1. Isometric — main frame, three interface plates, leveling mounts.</figcaption></figure>
+    <figure id="fig2"><img src="images/overview-three-interfaces.png" alt="Top-down — three loaded interfaces on side rails"><figcaption>Figure 2. Top-down — loaded (#34E682), transmission (#B341C3), drivetrain (#9075CD) mount plates.</figcaption></figure>
+    <figure id="fig3"><img src="images/overview-isometric-alt.png" alt="Isometric alternate view"><figcaption>Figure 3. Isometric alternate.</figcaption></figure>
+    <figure id="fig4"><img src="images/overview-perspective.png" alt="Perspective view"><figcaption>Figure 4. Perspective view.</figcaption></figure>
+    <figure id="fig5"><img src="images/overview-front-six-feet.png" alt="Front — six legs, six leveling mounts"><figcaption>Figure 5. Front/angled — six legs, six leveling mounts; loaded plate (left), transmission plate (right).</figcaption></figure>
+    <figure id="fig6"><img src="images/overview-right-side.png" alt="Right side — frame, feet, loaded and transmission plates"><figcaption>Figure 6. Right side — leveling mounts, loaded plate (left), transmission plate (right).</figcaption></figure>
+    <figure id="fig7"><img src="images/overview-side-three-plates.png" alt="Side — all three plates, six feet"><figcaption>Figure 7. Side — loaded (left), transmission (centre), drivetrain (right); six feet.</figcaption></figure>
+  </div>
+
+  <h2>Components</h2>
+  <ul>
+    <li><strong>Main frame</strong> (#26C16A) — 80×80×5 GB/T square tubes, #8 C-brackets, fully welded; six legs with M24 tapped endplates</li>
+    <li><strong>Leveling mounts</strong> (#FFD691) — 6111K669 M24 100 mm Swivel Leveling Mount (McMaster)</li>
+    <li><strong>Loaded mount plate</strong> (#34E682) — collection assembly; collection module and static side of extraction</li>
+    <li><strong>Transmission mount plate</strong> (#B341C3) — transmission subsystem: yoke, two 35 mm shafts, two LMK35UU linear bearings (formerly bearing mount plate)</li>
+    <li><strong>Drivetrain mount plate</strong> (#9075CD) — two gears, housed tapered roller bearings, reducer spacer, Sumitomo reducer</li>
+    <li><strong>Driven bracket</strong> — drivetrain / drive shaft mounting (as needed)</li>
+  </ul>
+
+  <h2>Details (from RFP draft)</h2>
+  <p>Main frame: 80×80×5 GB/T square tubes as main load-bearing members; #8 C-brackets for supporting members; all fully welded. Leveling: 6111K669 M24 100 mm Swivel Leveling Mounts (McMaster) on M24 tapped endplates at bottom of frame legs (six feet). Side rails with square holes for dowels; bolts and nuts secure bodies to cross beams.</p>
+
+  <h2>Assembly steps</h2>
+  <ol>
+    <li>Adjust the frame to be flat by increasing the height of the six feet.</li>
+    <li>Mount the plates to the frame and add shims where needed so plates and brackets are flush to the frame.</li>
+    <li>Fasten the plate to the frame with bolts.</li>
+    <li>Drill and ream H7 holes through the three plates and into the side rails for repeatable alignment.</li>
+    <li>Unfasten bolts; build subassemblies; reassemble onto the frame using the drilled holes as reference.</li>
+  </ol>
+
+  <p><a href="Frame.md">Frame.md</a> (source)</p>
+</body>
+</html>
