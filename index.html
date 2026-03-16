@@ -24,6 +24,7 @@
     .badge { font-size: 0.7rem; padding: 0.15rem 0.45rem; border-radius: 4px; background: var(--card); color: var(--draft); border: 1px solid var(--border); }
     .badge.ready { color: #7ee787; border-color: #238636; background: rgba(35,134,54,0.15); }
     section { margin: 2rem 0; padding: 1rem 0; border-top: 1px solid var(--border); }
+    section.preamble { border-top: none; margin-top: 0; padding-top: 0; }
     section h2 { font-size: 1.2rem; margin: 0 0 0.75rem 0; }
     section h3 { font-size: 1rem; margin: 1rem 0 0.5rem 0; }
     section ul { margin: 0.5rem 0; padding-left: 1.25rem; }
@@ -39,7 +40,12 @@
       <p class="subtitle">Industrial prototype subsystem RFPs. Drawings target: April 1st (Sean/YES). JX operations: October.</p>
     </header>
 
-    <p class="intro">Subsystem RFPs for the P6 industrial prototype. Use the links below to navigate. Sections <span class="badge ready">with content</span> include CAD views and descriptions; <span class="badge">to be completed</span> are placeholders for future detail.</p>
+    <section class="preamble">
+      <h2>Introduction</h2>
+      <p>P6 is the current industrial prototype (Delijuice 870/970). Jiangxi (JX) factory with LTA; miniplant 8,160 L/h, 6 extractors. Each subsystem section includes a gallery of figures and, where filled in, component lists, interfaces, and design notes. Refer to <a href="Overview/">Project overview</a> for the full subsystem list and context.</p>
+      <p class="muted"><strong>CAD colours:</strong> Colour keys are <strong>per subsystem</strong>. Each section has its own legend for the figures in that section. Use the legend on the relevant subsystem page when reading its CAD views.</p>
+      <p class="intro">Use the links below to navigate. Sections <span class="badge ready">with content</span> include CAD views and descriptions; <span class="badge">to be completed</span> are placeholders for future detail.</p>
+    </section>
 
     <nav>
       <h2>Reference</h2>
@@ -130,12 +136,6 @@
         <li><a href="3rd-party/">Third-party and site integration</a> <span class="badge">to be completed</span></li>
       </ul>
     </nav>
-
-    <section>
-      <h2>Overview</h2>
-      <p>P6 is the current industrial prototype (Delijuice 870/970). Jiangxi (JX) factory with LTA; miniplant 8,160 L/h, 6 extractors. Each subsystem section includes a gallery of figures and, where filled in, component lists, interfaces, and design notes. Refer to <a href="Overview/">Project overview</a> for the full subsystem list and context.</p>
-      <p class="muted"><strong>CAD colours:</strong> Colour keys are <strong>per subsystem</strong>. Each section has its own legend for the figures in that section. Use the legend on the relevant subsystem page when reading its CAD views.</p>
-    </section>
 
     <footer>
       Last updated: 2026-03-16.
