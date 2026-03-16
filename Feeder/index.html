@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>2.1 Intake feeder — P6 RFP</title>
+  <title>1. Intake feeder — P6 RFP</title>
   <style>
     :root { --bg: #1a1d21; --card: #24282e; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
     body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
@@ -13,39 +13,86 @@
     ul { padding-left: 1.25rem; }
     .back { margin-bottom: 1rem; font-size: 0.9rem; }
     .muted { color: var(--muted); font-size: 0.9rem; }
+    .swatch { display: inline-block; width: 1.25rem; height: 1.25rem; border: 1px solid var(--border); border-radius: 3px; vertical-align: middle; }
+    table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+    th, td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
+    .slideshow { margin: 1.5rem 0; }
+    .slideshow .slide { display: none; }
+    .slideshow .slide.active { display: block; }
+    .slideshow .slide img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
+    .slideshow-caption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); min-height: 2.5em; }
+    .slideshow-controls { display: flex; align-items: center; gap: 1rem; margin-top: 0.75rem; flex-wrap: wrap; }
+    .slideshow-controls button { background: var(--border); color: var(--text); border: none; padding: 0.35rem 0.75rem; border-radius: 4px; cursor: pointer; font-size: 0.9rem; }
+    .slideshow-controls button:hover { background: var(--accent); color: #fff; }
+    .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
   </style>
 </head>
 <body>
   <p class="back"><a href="../index.html">← Back to P6 RFP overview</a></p>
-  <h1>2.1 Intake feeder system</h1>
-  <p class="muted">This section is to be completed. Add photos, Q&A, and part/parameter details as you flush out requirements.</p>
+  <h1>1. Intake feeder system</h1>
+  <p class="muted">Top-level feeder: feeder body, brace, feeding subassembly, and entry tubes. The feeder body rotates using the feeder hinge. See <a href="feeding-subassembly/">Feeding subassembly</a> for per-unit detail (mount plate, 90° entry tube, straight tube, spring guide, sync spring).</p>
+
+  <h2>Colour key &amp; components</h2>
+  <p class="muted">CAD colours for this section. Per-unit detail: <a href="feeding-subassembly/">Feeding subassembly</a>.</p>
+  <table>
+    <tr><th>Colour(s)</th><th>Component</th></tr>
+    <tr><td><span class="swatch" style="background-color:#DDA44E"></span></td><td><strong>Feeder body</strong> — orange-tan base; rotates on feeder hinge for access/CIP</td></tr>
+    <tr><td><span class="swatch" style="background-color:#41733B"></span> <span class="swatch" style="background-color:#71AEE8"></span></td><td><strong>Brace</strong> — dark green + light blue; welded to lid, supports system</td></tr>
+    <tr><td>Lime green</td><td><strong>Feeding subassembly</strong> — one per station; curved tube, sync springs, mount plate, 90° tube</td></tr>
+    <tr><td><span class="swatch" style="background-color:#FFE297"></span></td><td><strong>Entry tubes</strong> — light yellow; guide fruit into each feeding subassembly</td></tr>
+  </table>
+
+  <h2 id="gallery">Top-level feeder views</h2>
+  <p class="muted">CAD views showing feeder body, brace, feeding subassembly, and entry tubes. Refer to <a href="#fig1">Figure 1</a>, <a href="#fig2">Figure 2</a>, etc.</p>
+  <div class="slideshow" id="feeder-slideshow">
+    <div class="slideshow-track">
+      <div class="slide active" id="fig1" data-caption="Figure 1. Top-level — feeder body (orange-tan), lime green feeding subassembly, light yellow entry tubes, dark green and light blue brace, magenta base."><img src="images/feeder-1.png" alt="Feeder top-level view"></div>
+      <div class="slide" id="fig2" data-caption="Figure 2. Elevated — feeder body, braces, feeding subassembly, entry tubes."><img src="images/feeder-2.png" alt="Feeder elevated"></div>
+      <div class="slide" id="fig3" data-caption="Figure 3. Side — feeder body, brace, lime green feeding subassembly, entry tubes."><img src="images/feeder-3.png" alt="Feeder side"></div>
+      <div class="slide" id="fig4" data-caption="Figure 4. Front — four feeding units on feeder body; brace and entry tubes per unit."><img src="images/feeder-4.png" alt="Feeder front four units"></div>
+      <div class="slide" id="fig5" data-caption="Figure 5. Side — feeder body, feeding subassembly with spring mechanism; feeder hinge allows body rotation."><img src="images/feeder-5.png" alt="Feeder side with spring"></div>
+      <div class="slide" id="fig6" data-caption="Figure 6. Front — four units; helical conveyor connecting bases; brace and entry tubes."><img src="images/feeder-6.png" alt="Feeder front with conveyor"></div>
+      <div class="slide" id="fig7" data-caption="Figure 7. Side angled — four lime green feeding subassemblies, springs, brace."><img src="images/feeder-7.png" alt="Feeder side angled"></div>
+      <div class="slide" id="fig8" data-caption="Figure 8. Top — four lime green subassemblies on feeder body; entry tubes in background."><img src="images/feeder-8.png" alt="Feeder top view"></div>
+      <div class="slide" id="fig9" data-caption="Figure 9. Close-up — feeding subassembly base, entry tubes, brace detail."><img src="images/feeder-9.png" alt="Feeder close-up"></div>
+    </div>
+    <p class="slideshow-caption" id="feeder-caption" aria-live="polite">Figure 1. Top-level — feeder body (orange-tan), lime green feeding subassembly, light yellow entry tubes, dark green and light blue brace, magenta base.</p>
+    <div class="slideshow-controls">
+      <button type="button" id="feeder-prev" aria-label="Previous">← Previous</button>
+      <span class="slideshow-counter" id="feeder-counter">1 / 9</span>
+      <button type="button" id="feeder-next" aria-label="Next">Next →</button>
+    </div>
+  </div>
 
   <h2>Subassemblies</h2>
-  <p class="muted">Subassembly subdirectories with detailed pages.</p>
   <ul>
-    <li><a href="feeding-subassembly/">Feeding subassembly</a> — mount plate, flanged 90° entry tube, straight tube and spring guide, sync spring</li>
+    <li><a href="feeding-subassembly/">Feeding subassembly</a> — mount plate, flanged 90° entry tube, straight tube and spring guide, sync spring (8 CAD views, colour key, parameters)</li>
     <li>Feeder body, 90° entry tube, external duct — detail pages TBD</li>
   </ul>
 
-  <h2>Components</h2>
+  <h2>Interfaces</h2>
   <ul>
-    <li><strong>Feeder body</strong></li>
-    <li><strong>90° entry tube</strong> — CIP nozzle installed</li>
-    <li><strong>External duct</strong> — oranges from hopper into machine</li>
-    <li><strong><a href="feeding-subassembly/">Feeding subassembly</a></strong> — feeds oranges one at a time to extraction; mount plate, flanged 90° entry tube, straight tube and spring guide, sync spring (see separate page for CAD views and design parameters)</li>
-    <li><strong>Peelers</strong></li>
-    <li><strong>Juice collection system</strong></li>
-    <li><strong>Fruit support</strong> — staging to drop oranges one at a time (<a href="../Extraction-syncronisation/">extraction/synchronisation</a>)</li>
+    <li><strong>Feeder hinge</strong> — feeder body rotates for access and CIP; overcentered hinge (see <a href="../Enclosure-shell/">Enclosure / shell</a>).</li>
+    <li><strong>Brace</strong> — welded to lid; supports feeding subassembly and entry tubes.</li>
+    <li><strong>Fruit flow</strong> — entry tubes → feeding subassembly → <a href="../Extraction-syncronisation/">extraction &amp; synchronisation</a> (fruit support, peelers).</li>
   </ul>
 
-  <h2>RFP approach</h2>
-  <p>One subsystem at a time; file photos; ask as many questions as possible per part/parameter.</p>
-
-  <h2>Status</h2>
-  <ul>
-    <li><a href="feeding-subassembly/">Feeding subassembly</a> — page with 8 CAD views, colour key, spring and 90° pipe parameters</li>
-    <li>Top-level feeder photos and Q&A — TBD</li>
-    <li>Parameters and tolerances (other components) — TBD</li>
-  </ul>
+  <p class="back"><a href="../index.html">← Back to P6 RFP overview</a></p>
+  <script>
+(function(){
+  var el = document.getElementById('feeder-slideshow');
+  if (!el) return;
+  var slides = el.querySelectorAll('.slide');
+  var cap = document.getElementById('feeder-caption');
+  var counter = document.getElementById('feeder-counter');
+  var n = slides.length;
+  var i = 0;
+  function go(k) { i = (k + n) % n; slides.forEach(function(s,j){ s.classList.toggle('active', j===i); }); if (cap) cap.textContent = slides[i].getAttribute('data-caption') || ''; if (counter) counter.textContent = (i+1) + ' / ' + n; }
+  el.querySelector('#feeder-prev').addEventListener('click', function(){ go(i-1); });
+  el.querySelector('#feeder-next').addEventListener('click', function(){ go(i+1); });
+  var hash = window.location.hash;
+  if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
+})();
+  </script>
 </body>
 </html>

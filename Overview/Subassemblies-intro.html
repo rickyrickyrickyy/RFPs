@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How subassemblies fit together — P6 RFP</title>
+  <style>
+    :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
+    a { color: var(--accent); }
+    h1 { font-size: 1.35rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.5rem; }
+    h3 { font-size: 1rem; margin-top: 1rem; color: var(--muted); }
+    ul, ol { padding-left: 1.25rem; }
+    .back { margin-bottom: 1rem; font-size: 0.9rem; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    section { margin: 1.25rem 0; }
+    li { margin: 0.35rem 0; }
+    .flow { background: rgba(88, 166, 255, 0.08); border: 1px solid var(--border); border-radius: 8px; padding: 1rem 1.25rem; margin: 1rem 0; }
+    .flow ol { margin: 0.5rem 0 0 1rem; }
+  </style>
+</head>
+<body>
+  <p class="back"><a href="../index.html">← Back to P6 RFP overview</a></p>
+  <h1>How subassemblies fit together</h1>
+  <p class="muted">Introduction to the assembly flow: how fruit moves through the machine and how each subsystem and subassembly connects.</p>
+
+  <section>
+    <h2>Product flow (fruit → juice and waste)</h2>
+    <div class="flow">
+      <ol>
+        <li><strong><a href="../Feeder/">Intake feeder</a></strong> — Oranges enter via external duct/hopper. The <strong>feeder body</strong> (on its hinge) supports the <strong>feeding subassembly</strong> and <strong>entry tubes</strong>. Sync springs drop fruit one at a time onto the <strong><a href="../Extraction-syncronisation/">fruit support</a></strong>.</li>
+        <li><strong><a href="../Extraction-syncronisation/">Extraction &amp; synchronisation</a></strong> — <strong>Fruit support</strong> stages each orange; <strong>driven peelers</strong> (on the <strong>driven bracket</strong>) mesh with <strong><a href="../Collection/">static peelers</a></strong>. <strong>Chute deflectors</strong> (extraction) direct peel to the back of the bin. Fingers interlace; peel goes to disposal; juice and plug stay with the collection side.</li>
+        <li><strong><a href="../Collection/">Collection</a></strong> — Static peelers, <strong>juice collectors</strong> (Y-tubes), <strong>filter tube</strong>, and <strong>plug cutter</strong> are on the <strong>collection (loaded) mount plate</strong>. Juice flows through filter slots into collectors; the centre plug is held in the plug cutter. <strong>Static deflectors</strong> direct peel to the front of the bin.</li>
+        <li><strong><a href="../Plug-ejection/">Plug ejection</a></strong> — After the pressing stroke, the <strong>plunger</strong> (driven by the <strong>plunger drive bracket</strong>, rods, and springs) pushes through the filter and ejects the plug from the plug cutter. The plug falls into the <strong><a href="../Outflow-disposal/">core chute</a></strong>; juice has already left via the collectors.</li>
+        <li><strong><a href="../Outflow-disposal/">Outflow / disposal</a></strong> — <strong>Peel chute</strong> and <strong>core chutes</strong> receive peel and plugs; <strong>augers</strong> carry both away separately for further processing.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section>
+    <h2>Drive and structure</h2>
+    <ul>
+      <li><strong><a href="../Drivetrain/">Drivetrain</a></strong> — Motor (WEG 22) and reducer (Sumitomo Cyclo 6000) drive a belt and <strong>gear train</strong>. Output goes to <strong>cam bearings</strong> (shaft extensions) that connect to the <strong><a href="../Transmission/">transmission</a></strong>.</li>
+      <li><strong><a href="../Transmission/">Transmission</a></strong> — <strong>Yoke</strong> and two 35 mm <strong>drive shafts</strong> with <strong>LMK35UU</strong> linear bearings convert rotary motion into the linear stroke that drives <strong>extraction</strong> (driven bracket, peelers) and the <strong>plug ejection</strong> cycle.</li>
+      <li><strong><a href="../Frame/">Frame</a></strong> — <strong>Main frame</strong> carries three interface plates: <strong>loaded mount plate</strong> (collection + static side of extraction), <strong>transmission mount plate</strong> (yoke, shafts, bearings), and <strong>drivetrain mount plate</strong>. Leveling mounts at each leg.</li>
+      <li><strong><a href="../Enclosure-shell/">Enclosure / shell</a></strong> — <strong>Plunger cover</strong> and <strong>drivetrain cover</strong> protect users; <strong>overcentered hinges</strong> hold lids open or shut. The <strong>feeder</strong> is also hinged for access and CIP.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Subassembly hierarchy</h2>
+    <p>On the <a href="../index.html">main index</a>, each subsystem (1–11) lists its <strong>subassemblies</strong> as indented sub-items. For example:</p>
+    <ul>
+      <li>Under <strong>1. Intake feeder</strong>: Feeding subassembly (with its own page and CAD views).</li>
+      <li>Under <strong>2. Extraction &amp; synchronisation</strong>: Fruit support, driven peelers, driven bracket, chute deflectors.</li>
+      <li>Under <strong>4. Collection</strong>: Static peelers, juice collectors, plug cutter, static deflectors.</li>
+      <li>Under <strong>5. Plug ejection</strong>: Plunger assembly, juice outflow.</li>
+      <li>Under <strong>6. Drivetrain</strong>: Motor, reducer, gear train.</li>
+      <li>Under <strong>7. Outflow / disposal</strong>: Peel chute, core chutes, augers.</li>
+      <li>Under <strong>8. Frame</strong>: Main frame, loaded mount plate, transmission mount plate, drivetrain mount plate.</li>
+    </ul>
+    <p class="muted">Detail and interfaces for subassemblies are owner-provided; final tolerancing and assembly are for contractors. Use the <a href="Questions-for-RFP.html">Questions for RFP</a> list to flush out parameters per subsystem and subassembly.</p>
+  </section>
+
+  <p class="back"><a href="../index.html">← Back to P6 RFP overview</a></p>
+</body>
+</html>

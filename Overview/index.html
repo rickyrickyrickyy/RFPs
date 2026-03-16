@@ -3,27 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>P6 overview — RFP</title>
+  <title>Project overview — P6 RFP</title>
   <style>
-    :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; }
+    :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
     body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
     a { color: var(--accent); }
     h1 { font-size: 1.35rem; }
-    h2 { font-size: 1.1rem; margin-top: 1.25rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.5rem; }
+    h3 { font-size: 1rem; margin-top: 1rem; color: var(--muted); }
     ul { padding-left: 1.25rem; }
     .back { margin-bottom: 1rem; font-size: 0.9rem; }
     .muted { color: var(--muted); font-size: 0.9rem; }
+    section { margin: 1rem 0; }
+    li { margin: 0.35rem 0; }
   </style>
 </head>
 <body>
   <p class="back"><a href="../index.html">← Back to P6 RFP overview</a></p>
-  <h1>P6 overview</h1>
-  <p class="muted">Single reference for P6 and RFP structure.</p>
+  <h1>Project overview</h1>
+  <p class="muted">Single reference for the P6 industrial prototype and RFP structure.</p>
 
-  <h2>What P6 is</h2>
-  <p>P6 = current industrial prototype (Delijuice 870/970). Newest version; prototyping in China. Design work with Jamieson. Jiangxi (JX) factory with LTA; miniplant 8,160 L/h, 6 extractors. Drawings target: April 1st (Sean/YES, Shenzhen). JX operations pressure: October.</p>
+  <section>
+    <h2>What P6 is</h2>
+    <p><strong>P6</strong> is the current industrial prototype (Delijuice 870/970). Newest version; prototyping in China with design work via Jamieson. Extractors, deflectors, screw conveyors. Machine lineage: P3 → P4 → P5 (Brazil 2002, Sumitomo cyclo refs) → <strong>P6</strong> (current). 323 = commercial/countertop (separate).</p>
+    <ul>
+      <li><strong>Jiangxi (JX):</strong> Factory with <strong>LTA (Long Tai An)</strong>. Miniplant: 8,160 L/h, 6 extractors, turbo-filter, pasteurizer. <strong>LTA pressure for operations by October.</strong></li>
+      <li><strong>Drawings target:</strong> April 1st for Sean/YES fabrication (China, Shenzhen area).</li>
+      <li><strong>CAD:</strong> Currently Inventor → switching to SolidWorks.</li>
+    </ul>
+  </section>
 
-  <h2>Full context</h2>
-  <p>See <a href="P6-RFP-context-summary.md">P6-RFP-context-summary.md</a> in this folder for the full consolidated context (subsystems, backlog, where things live).</p>
+  <section>
+    <h2>Subsystems (1–11)</h2>
+    <p>Each subsystem has its own RFP section with photos, Q&amp;A, and part/parameter details. Subassemblies are listed under each subsystem on the <a href="../index.html">main index</a>. CAD colour keys are <strong>per subsystem</strong> (Inventor colour sets can differ); use the legend on each subsystem page.</p>
+    <ul>
+      <li><strong>1.</strong> <a href="../Feeder/">Intake feeder system</a> — feeder body, brace, feeding subassembly, entry tubes; feeder hinge for rotation</li>
+      <li><strong>2.</strong> <a href="../Extraction-syncronisation/">Extraction &amp; synchronisation</a> — fruit support, driven peelers, driven bracket, chute deflectors</li>
+      <li><strong>3.</strong> <a href="../Transmission/">Transmission</a> — yoke, shafts, LMK35UU bearings</li>
+      <li><strong>4.</strong> <a href="../Collection/">Collection</a> — static peelers, juice collectors, filter tube, plug cutter, static deflectors</li>
+      <li><strong>5.</strong> <a href="../Plug-ejection/">Plug ejection / juice collection</a> — plunger, plunger drive bracket, LMK16, springs</li>
+      <li><strong>6.</strong> <a href="../Drivetrain/">Drivetrain</a> — motor (WEG 22), reducer (Sumitomo Cyclo 6000), gear train, belt</li>
+      <li><strong>7.</strong> <a href="../Outflow-disposal/">Outflow / disposal</a> — peel chute, core chutes, augers</li>
+      <li><strong>8.</strong> <a href="../Frame/">Frame</a> — main frame, loaded mount plate, transmission mount plate, drivetrain mount plate, leveling mounts</li>
+      <li><strong>9.</strong> <a href="../Enclosure-shell/">Enclosure / shell</a> — plunger cover, drivetrain cover, overcentered hinges</li>
+      <li><strong>10.</strong> <a href="../Clean-in-place/">Clean-in-place (CIP)</a> — nozzles, pipes, third-party control</li>
+      <li><strong>11.</strong> <a href="../Controls-Electronics/">Controls and electronics</a> — user panel, motor starter, safety switches, yoke position (TBD)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>General design and manufacturing (RFP scope)</h2>
+    <ul>
+      <li>Material for every component</li>
+      <li>Manufacturing method per part</li>
+      <li>Fasteners — full selection and assembly process</li>
+      <li>Tolerancing — between components; agree with manufacturers how to achieve</li>
+      <li>Post-processing to achieve tolerances</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Third-party and site integration (Jiangxi)</h2>
+    <p>Compatible with existing third-party equipment. Jiangxi: Kaiyi or similar orange juicing line provider (line build + training). Equipment context: JBT Marel–style citrus processing; feed lines in China → assume interface with Chinese equipment. Interfaces: oranges in from their lines; peels out via their augers; juice to tanks/pumps.</p>
+  </section>
+
+  <p class="back"><a href="../index.html">← Back to P6 RFP overview</a></p>
 </body>
 </html>

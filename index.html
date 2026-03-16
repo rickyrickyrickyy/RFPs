@@ -16,7 +16,9 @@
     nav { margin: 1.5rem 0; }
     nav h2 { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 0 0 0.6rem 0; }
     nav ul { list-style: none; padding: 0; margin: 0; }
+    nav ul.nav-sub { margin-left: 1.25rem; margin-top: 0.2rem; margin-bottom: 0.35rem; padding-left: 0.75rem; border-left: 2px solid var(--border); }
     nav li { margin: 0.35rem 0; display: flex; align-items: center; gap: 0.5rem; }
+    nav li.sub { margin: 0.2rem 0; font-size: 0.95rem; }
     nav a { color: var(--accent); text-decoration: none; }
     nav a:hover { text-decoration: underline; }
     .badge { font-size: 0.7rem; padding: 0.15rem 0.45rem; border-radius: 4px; background: var(--card); color: var(--draft); border: 1px solid var(--border); }
@@ -42,21 +44,70 @@
     <nav>
       <h2>Reference</h2>
       <ul>
-        <li><a href="Overview/">P6 context summary</a></li>
+        <li><a href="Overview/">Project overview</a> — what P6 is, subsystems, scope</li>
+        <li><a href="Overview/Subassemblies-intro.html">How subassemblies fit together</a> — introduction to assembly flow</li>
         <li><a href="Overview/Questions-for-RFP.html">Questions for RFP</a> — questions to answer per subsystem and subassembly</li>
+        <li><a href="Overview/BOM.html">Bill of materials (BOM)</a> — component names (EN / 中文 / PT) for translation</li>
       </ul>
       <h2>Subsystems (1–11)</h2>
-      <p class="muted" style="margin: 0.25rem 0 0.5rem 0; font-size: 0.85rem;">Each subsystem may contain subassembly subdirectories with detailed pages.</p>
+      <p class="muted" style="margin: 0.25rem 0 0.5rem 0; font-size: 0.85rem;">Subassemblies are listed under each subsystem. Detail and interfaces are owner-provided; final tolerancing and assembly are for contractors.</p>
       <ul>
-        <li><strong>1.</strong> <a href="Feeder/">Intake feeder system</a> <span class="badge">to be completed</span> — subassemblies: <a href="Feeder/feeding-subassembly/">Feeding subassembly</a> <span class="badge ready">with content</span></li>
-        <li><strong>2.</strong> <a href="Extraction-syncronisation/">Extraction &amp; synchronisation</a> <span class="badge ready">with content</span> — subassemblies: <a href="Extraction-syncronisation/fruit-support/">Fruit support</a> <span class="badge ready">with content</span>, driven peelers, driven bracket, chute deflectors (pages TBD)</li>
+        <li><strong>1.</strong> <a href="Feeder/">Intake feeder system</a> <span class="badge ready">with content</span>
+          <ul class="nav-sub">
+            <li class="sub"><a href="Feeder/feeding-subassembly/">Feeding subassembly</a> <span class="badge ready">with content</span></li>
+          </ul>
+        </li>
+        <li><strong>2.</strong> <a href="Extraction-syncronisation/">Extraction &amp; synchronisation</a> <span class="badge ready">with content</span>
+          <ul class="nav-sub">
+            <li class="sub"><a href="Extraction-syncronisation/fruit-support/">Fruit support</a> <span class="badge ready">with content</span></li>
+            <li class="sub">Driven peelers (page TBD)</li>
+            <li class="sub">Driven bracket (page TBD)</li>
+            <li class="sub">Chute deflectors (page TBD)</li>
+          </ul>
+        </li>
         <li><strong>3.</strong> <a href="Transmission/">Transmission (yoke, shafts, bearings)</a> <span class="badge ready">with content</span></li>
-        <li><strong>4.</strong> <a href="Collection/">Collection (static peelers, juice, filter, plug)</a> <span class="badge ready">with content</span> — subassemblies: static peelers, juice collectors, plug cutter, static deflectors (pages TBD)</li>
-        <li><strong>5.</strong> <a href="Plug-ejection/">Plug ejection / juice collection</a> <span class="badge ready">with content</span> — subassemblies: plunger assembly, juice outflow (pages TBD)</li>
-        <li><strong>6.</strong> <a href="Drivetrain/">Drivetrain</a> <span class="badge ready">with content</span> — subassemblies: motor, reducer, gear train (pages TBD)</li>
-        <li><strong>7.</strong> <a href="Outflow-disposal/">Outflow / disposal</a> <span class="badge ready">with content</span> — subassemblies: peel chute, core chutes, augers (pages TBD)</li>
-        <li><strong>8.</strong> <a href="Frame/">Frame</a> <span class="badge ready">with content</span> — subassemblies: main frame, loaded mount plate, transmission mount plate, drivetrain mount plate (pages TBD)</li>
-        <li><strong>9.</strong> <a href="Enclosure-shell/">Enclosure / shell</a> <span class="badge ready">with content</span> — protective covers (plunger, drivetrain), overcentered hinges (springs/assembly TBD)</li>
+        <li><strong>4.</strong> <a href="Collection/">Collection (static peelers, juice, filter, plug)</a> <span class="badge ready">with content</span>
+          <ul class="nav-sub">
+            <li class="sub">Static peelers (page TBD)</li>
+            <li class="sub">Juice collectors (page TBD)</li>
+            <li class="sub">Plug cutter (page TBD)</li>
+            <li class="sub">Static deflectors (page TBD)</li>
+          </ul>
+        </li>
+        <li><strong>5.</strong> <a href="Plug-ejection/">Plug ejection / juice collection</a> <span class="badge ready">with content</span>
+          <ul class="nav-sub">
+            <li class="sub">Plunger assembly (page TBD)</li>
+            <li class="sub">Juice outflow (page TBD)</li>
+          </ul>
+        </li>
+        <li><strong>6.</strong> <a href="Drivetrain/">Drivetrain</a> <span class="badge ready">with content</span>
+          <ul class="nav-sub">
+            <li class="sub">Motor (page TBD)</li>
+            <li class="sub">Reducer (page TBD)</li>
+            <li class="sub">Gear train (page TBD)</li>
+          </ul>
+        </li>
+        <li><strong>7.</strong> <a href="Outflow-disposal/">Outflow / disposal</a> <span class="badge ready">with content</span>
+          <ul class="nav-sub">
+            <li class="sub">Peel chute (page TBD)</li>
+            <li class="sub">Core chutes (page TBD)</li>
+            <li class="sub">Augers (page TBD)</li>
+          </ul>
+        </li>
+        <li><strong>8.</strong> <a href="Frame/">Frame</a> <span class="badge ready">with content</span>
+          <ul class="nav-sub">
+            <li class="sub">Main frame (page TBD)</li>
+            <li class="sub">Loaded mount plate (page TBD)</li>
+            <li class="sub">Transmission mount plate (page TBD)</li>
+            <li class="sub">Drivetrain mount plate (page TBD)</li>
+          </ul>
+        </li>
+        <li><strong>9.</strong> <a href="Enclosure-shell/">Enclosure / shell</a> <span class="badge ready">with content</span>
+          <ul class="nav-sub">
+            <li class="sub">Protective covers (plunger, drivetrain)</li>
+            <li class="sub">Overcentered hinges (springs/assembly TBD)</li>
+          </ul>
+        </li>
         <li><strong>10.</strong> <a href="Clean-in-place/">Clean-in-place (CIP)</a> <span class="badge">to be completed</span></li>
         <li><strong>11.</strong> <a href="Controls-Electronics/">Controls and electronics</a> <span class="badge">to be completed</span></li>
       </ul>
@@ -69,12 +120,12 @@
 
     <section>
       <h2>Overview</h2>
-      <p>P6 is the current industrial prototype (Delijuice 870/970). Jiangxi (JX) factory with LTA; miniplant 8,160 L/h, 6 extractors. CAD: Inventor → SolidWorks. Each subsystem section includes a gallery of figures and, where filled in, component lists, interfaces, and design notes. Refer to <a href="Overview/">P6 context summary</a> for the full subsystem list and context.</p>
+      <p>P6 is the current industrial prototype (Delijuice 870/970). Jiangxi (JX) factory with LTA; miniplant 8,160 L/h, 6 extractors. CAD: Inventor → SolidWorks. Each subsystem section includes a gallery of figures and, where filled in, component lists, interfaces, and design notes. Refer to <a href="Overview/">Project overview</a> for the full subsystem list and context.</p>
       <p class="muted"><strong>CAD colours:</strong> Colour keys are <strong>per subsystem</strong>. Each section has its own legend for the figures in that section (Inventor colour sets can differ between assemblies). Use the legend on the relevant subsystem page when reading its CAD views.</p>
     </section>
 
     <footer>
-      Last updated: 2026-03-15.
+      Last updated: 2026-03-16.
     </footer>
   </div>
 </body>
