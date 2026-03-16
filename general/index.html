@@ -18,19 +18,27 @@
 <body>
   <p class="back"><a href="../index.html">← Back to P6 RFP overview</a></p>
   <h1>3. General design and manufacturing (RFP scope)</h1>
-  <p class="muted">This section is to be completed. Applies across all subsystems.</p>
+  <p class="muted">Cross-cutting scope for all subsystems. For food-safety and surface requirements, see <a href="../Overview/">Project overview</a> → General design, manufacturing, and food-safety requirements.</p>
 
-  <h2>Scope</h2>
-  <ul>
-    <li><strong>Material</strong> — for every component</li>
-    <li><strong>Manufacturing method</strong> — per part</li>
-    <li><strong>Fasteners</strong> — full selection and assembly process</li>
-    <li><strong>Tolerancing</strong> — between components; agree with manufacturers how to achieve</li>
-    <li><strong>Post-processing</strong> — to achieve tolerances</li>
-    <li><strong>CAD:</strong> Currently Inventor → <strong>switching to SolidWorks</strong></li>
-  </ul>
+  <h2>Material selection</h2>
+  <p>Every component must have a specified material. Choose materials to suit function, load, environment (including food and splash zones), and cost. Document material per part or subassembly in each subsystem RFP.</p>
+
+  <h2>Manufacturing method and manufacturability</h2>
+  <p>For each part, decide the manufacturing method (e.g. laser/plasma cut, bent sheet, machining, casting, weldment) and optimize for manufacturability. Consider complexity, volume, and tolerances. Prefer stock sizes and simple operations where possible.</p>
+
+  <h2>Fastener selection and assembly process</h2>
+  <p>All fasteners must be selected (type, size, grade) and the assembly process for every subassembly and the full machine must be defined. Minimise variety of fastener sizes; design for clear access, tooling, and repeatable torque. See Overview for food-zone rules (no exposed threads in food/splash zones, standoffs, etc.).</p>
+
+  <h2>Tolerancing</h2>
+  <p>Tolerancing between components is critical for fit, alignment, and bearing life. Specify tolerances that are sufficient for function and agree with manufacturers how they will be achieved (process capability, inspection, rework). Document critical interfaces in each subsystem.</p>
+
+  <h2>Post-processing</h2>
+  <p>Select post-processing (e.g. grinding, honing, polishing, deburring, passivation) where needed to achieve surface finish, dimensions, or food-safety requirements. Specify per part or zone; manufacturers may propose methods that meet the spec.</p>
+
+  <h2>CAD: Inventor → SolidWorks</h2>
+  <p>Parts are currently drawn in Inventor. The project is switching to SolidWorks. New and revised deliverables should be in SolidWorks; migration and conversion of existing Inventor data to be planned as needed.</p>
 
   <h2>Status</h2>
-  <p>Material and method TBD per subsystem; fastener list and tolerance strategy TBD.</p>
+  <p>Material and method TBD per subsystem. Fastener list and assembly sequence TBD. Tolerance strategy and manufacturer alignment in progress.</p>
 </body>
 </html>
