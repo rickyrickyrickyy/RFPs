@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How subassemblies fit together — Frame — P6 RFP</title>
+  <style>
+    :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
+    a { color: var(--accent); }
+    h1 { font-size: 1.35rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.5rem; }
+    h3 { font-size: 1rem; margin-top: 1rem; color: var(--muted); }
+    ul, ol { padding-left: 1.25rem; }
+    .back { margin-bottom: 1rem; font-size: 0.9rem; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    section { margin: 1.25rem 0; }
+    li { margin: 0.35rem 0; }
+    .flow { background: rgba(88, 166, 255, 0.08); border: 1px solid var(--border); border-radius: 8px; padding: 1rem 1.25rem; margin: 1rem 0; }
+    .flow ol { margin: 0.5rem 0 0 1rem; }
+  </style>
+</head>
+<body>
+  <p class="back"><a href="index.html">← Back to Frame</a> · <a href="../index.html">P6 RFP overview</a></p>
+  <h1>How subassemblies fit together</h1>
+  <p class="muted">Part of the <a href="index.html">Frame</a> section. How fruit moves through the machine and how each subsystem connects.</p>
+
+  <section>
+    <h2>Product flow (fruit → juice and waste)</h2>
+    <div class="flow">
+      <ol>
+        <li><strong><a href="../Feeder/">Intake feeder</a></strong> — Fruit enters via duct/hopper. The feeder body (on its hinge) supports the feeding subassembly and entry tubes. Sync springs drop fruit one at a time onto the <a href="../Extraction-syncronisation/">fruit support</a>.</li>
+        <li><strong><a href="../Extraction-syncronisation/">Extraction &amp; synchronisation</a></strong> — Fruit support stages each orange; driven peelers (on the driven bracket) mesh with <a href="../Collection/">static peelers</a>. Chute deflectors direct peel to the back of the bin. Fingers interlace; peel goes to disposal; juice and plug stay with the collection side.</li>
+        <li><strong><a href="../Collection/">Collection</a></strong> — Static peelers, juice collectors (Y-tubes), filter tube, and plug cutter sit on the loaded mount plate. Juice flows through filter slots into collectors; the centre plug is held in the plug cutter. Static deflectors direct peel to the front of the bin.</li>
+        <li><strong><a href="../Plug-ejection/">Plug ejection</a></strong> — After the pressing stroke, the plunger (driven by the plunger drive bracket, rods, and springs) ejects the plug from the plug cutter. The plug falls into the <a href="../Outflow-disposal/">core chute</a>; juice has already left via the collectors.</li>
+        <li><strong><a href="../Outflow-disposal/">Outflow / disposal</a></strong> — Peel chute and core chutes receive peel and plugs; augers carry both away separately.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section>
+    <h2>Drive and structure</h2>
+    <ul>
+      <li><strong><a href="../Drivetrain/">Drivetrain</a></strong> — Motor and reducer drive the belt and gear train. Cam bearings (shaft extensions) connect to the <a href="../Transmission/">transmission</a>.</li>
+      <li><strong><a href="../Transmission/">Transmission</a></strong> — Yoke and two 35 mm drive shafts with LMK35UU linear bearings convert rotary motion into the linear stroke that drives extraction (driven bracket, peelers) and plug ejection.</li>
+      <li><strong><a href="index.html">Frame</a></strong> — Main frame carries three interface plates: loaded mount plate (collection + static side of extraction), transmission mount plate (yoke, shafts, bearings), and drivetrain mount plate. Leveling mounts at each leg.</li>
+      <li><strong><a href="../Enclosure-shell/">Enclosure / shell</a></strong> — Plunger cover and drivetrain cover protect users; overcentered hinges hold lids open or shut. The feeder is also hinged for access and CIP.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Subassembly hierarchy</h2>
+    <p>On the <a href="../index.html">main index</a>, each subsystem (1–11) lists its subassemblies as indented items:</p>
+    <ul>
+      <li><strong>1. Frame</strong> — Frame construction, three interface plates, assembly process</li>
+      <li><strong>2. Drivetrain</strong> — Motor, reducer, gears and cam bearings, mount plate</li>
+      <li><strong>3. Transmission system</strong> — Transmission mount plate, drive shafts, yoke</li>
+      <li><strong>4. Collection</strong> — Static peelers, juice collectors, plug cutter, static deflectors</li>
+      <li><strong>5. Extraction &amp; synchronisation</strong> — Fruit support, driven peelers, driven bracket, chute deflectors</li>
+      <li><strong>6. Intake feeder</strong> — Feeding subassembly, feeder body, entry tubes, feeder hinges</li>
+      <li><strong>7. Plug ejection</strong> — Plunger drive bracket, plungers, plunger drive system in side panels</li>
+      <li><strong>8. Outflow / disposal</strong> — Peel chute, core chutes, augers, deflectors</li>
+      <li><strong>9. Enclosure / shell</strong> — Covers and overcentered hinges</li>
+    </ul>
+    <p class="muted">Detail and interfaces are owner-provided; final tolerancing and assembly are for contractors. See <a href="../Overview/Questions-for-RFP.html">Questions for RFP</a> to flush out parameters per subsystem and subassembly.</p>
+  </section>
+
+  <p class="back"><a href="index.html">← Back to Frame</a> · <a href="../index.html">P6 RFP overview</a></p>
+</body>
+</html>

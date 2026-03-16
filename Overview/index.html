@@ -24,27 +24,37 @@
   <p class="muted">Single reference for the P6 industrial prototype and RFP structure.</p>
 
   <section>
+    <h2>Top-level assemblies</h2>
+    <p>Overview of all top-level assemblies by colour (CAD colour key). Add image as <code>Overview/images/top-level-assemblies.png</code> when ready.</p>
+    <p><img src="images/top-level-assemblies.png" alt="Top-level assemblies by colour" style="max-width:100%; height:auto; border:1px solid var(--border); border-radius:6px;"></p>
+  </section>
+
+  <section>
     <h2>What P6 is</h2>
     <p><strong>P6</strong> is the current industrial prototype (Delijuice 870/970). Newest version; prototyping in China with design work via Jamieson. Extractors, deflectors, screw conveyors. Machine lineage: P3 → P4 → P5 (Brazil 2002, Sumitomo cyclo refs) → <strong>P6</strong> (current). 323 = commercial/countertop (separate).</p>
     <ul>
       <li><strong>Jiangxi (JX):</strong> Factory with <strong>LTA (Long Tai An)</strong>. Miniplant: 8,160 L/h, 6 extractors, turbo-filter, pasteurizer. <strong>LTA pressure for operations by October.</strong></li>
       <li><strong>Drawings target:</strong> April 1st for Sean/YES fabrication (China, Shenzhen area).</li>
-      <li><strong>CAD:</strong> Currently Inventor → switching to SolidWorks.</li>
     </ul>
   </section>
 
   <section>
+    <h2>How the machine works</h2>
+    <p><a href="Delijuice-cycle.html">Delijuice extraction cycle</a> — the four steps (fruit intake, compression, juice outflow, plug expulsion) and stroke timing.</p>
+  </section>
+
+  <section>
     <h2>Subsystems (1–11)</h2>
-    <p>Each subsystem has its own RFP section with photos, Q&amp;A, and part/parameter details. Subassemblies are listed under each subsystem on the <a href="../index.html">main index</a>. CAD colour keys are <strong>per subsystem</strong> (Inventor colour sets can differ); use the legend on each subsystem page.</p>
+    <p>Each subsystem has its own RFP section with photos, Q&amp;A, and part/parameter details. Subassemblies are listed under each subsystem on the <a href="../index.html">main index</a>. CAD colour keys are <strong>per subsystem</strong>; use the legend on each subsystem page.</p>
     <ul>
-      <li><strong>1.</strong> <a href="../Feeder/">Intake feeder system</a> — feeder body, brace, feeding subassembly, entry tubes; feeder hinge for rotation</li>
-      <li><strong>2.</strong> <a href="../Extraction-syncronisation/">Extraction &amp; synchronisation</a> — fruit support, driven peelers, driven bracket, chute deflectors</li>
-      <li><strong>3.</strong> <a href="../Transmission/">Transmission</a> — yoke, shafts, LMK35UU bearings</li>
+      <li><strong>1.</strong> <a href="../Frame/">Frame</a> — frame construction, three main loaded interface plates, intended assembly process (with exploded views)</li>
+      <li><strong>2.</strong> <a href="../Drivetrain/">Drivetrain</a> — motor, reducer, gears and cam bearings, motor/drivetrain mount plate</li>
+      <li><strong>3.</strong> <a href="../Transmission/">Transmission system</a> — transmission mount plate, drive shafts, yoke</li>
       <li><strong>4.</strong> <a href="../Collection/">Collection</a> — static peelers, juice collectors, filter tube, plug cutter, static deflectors</li>
-      <li><strong>5.</strong> <a href="../Plug-ejection/">Plug ejection / juice collection</a> — plunger, plunger drive bracket, LMK16, springs</li>
-      <li><strong>6.</strong> <a href="../Drivetrain/">Drivetrain</a> — motor (WEG 22), reducer (Sumitomo Cyclo 6000), gear train, belt</li>
-      <li><strong>7.</strong> <a href="../Outflow-disposal/">Outflow / disposal</a> — peel chute, core chutes, augers</li>
-      <li><strong>8.</strong> <a href="../Frame/">Frame</a> — main frame, loaded mount plate, transmission mount plate, drivetrain mount plate, leveling mounts</li>
+      <li><strong>5.</strong> <a href="../Extraction-syncronisation/">Extraction &amp; synchronisation</a> — fruit support, driven peelers, driven bracket, chute deflectors</li>
+      <li><strong>6.</strong> <a href="../Feeder/">Intake feeder system</a> — feeding subassembly, feeder body, entry tubes, feeder hinges</li>
+      <li><strong>7.</strong> <a href="../Plug-ejection/">Plug ejection</a> — plunger drive bracket, plungers, plunger drive system in side panels</li>
+      <li><strong>8.</strong> <a href="../Outflow-disposal/">Outflow / disposal</a> — peel chute, core chutes, augers, deflectors</li>
       <li><strong>9.</strong> <a href="../Enclosure-shell/">Enclosure / shell</a> — plunger cover, drivetrain cover, overcentered hinges</li>
       <li><strong>10.</strong> <a href="../Clean-in-place/">Clean-in-place (CIP)</a> — nozzles, pipes, third-party control</li>
       <li><strong>11.</strong> <a href="../Controls-Electronics/">Controls and electronics</a> — user panel, motor starter, safety switches, yoke position (TBD)</li>
@@ -52,13 +62,27 @@
   </section>
 
   <section>
-    <h2>General design and manufacturing (RFP scope)</h2>
+    <h2>General design, manufacturing, and food-safety requirements</h2>
+    <h3>Materials, food safety, and surfaces</h3>
     <ul>
-      <li>Material for every component</li>
-      <li>Manufacturing method per part</li>
-      <li>Fasteners — full selection and assembly process</li>
-      <li>Tolerancing — between components; agree with manufacturers how to achieve</li>
-      <li>Post-processing to achieve tolerances</li>
+      <li>Use food-safe materials in all food and splash zones (e.g. stainless steels and compatible polymers); avoid galvanic pairs and corrosive finishes.</li>
+      <li>In food zones target surface roughness around Ra 0.8–1.6 μm so surfaces are cleanable and do not trap pulp.</li>
+      <li>Follow NSF-style guidance: no shelves, pockets, or hidden areas in food or splash zones; all food and liquid must have a defined path to drain.</li>
+      <li>Seal or weld all seams in food and splash zones so there are no capillary gaps; avoid lap joints and unsealed overlaps in these areas.</li>
+      <li>Deburr all edges; no sharp edges or burrs exposed to operators or in any zone that can collect food.</li>
+    </ul>
+    <h3>Fasteners and joints</h3>
+    <ul>
+      <li>Minimise the number of different fastener sizes; where practical restrict to M3, M5, M10, and M16 for increasing strength levels.</li>
+      <li>Avoid exposed threads in food and splash zones; use standoffs, weld studs, or through-holes with nuts outside the zone.</li>
+      <li>Prefer dowel pins for locating parts in shear; use shoulder bolts for joints that carry shear and rotation.</li>
+      <li>Minimise total fastener count with shared brackets and clear load paths; design for easy disassembly and reassembly for cleaning.</li>
+    </ul>
+    <h3>Design for manufacturability</h3>
+    <ul>
+      <li>Favour symmetric parts and avoid unnecessary handedness where possible.</li>
+      <li>Minimise machining and secondary processing by using stock sizes, simple weldments, and laser/plasma-cut profiles.</li>
+      <li>Specify tolerances sufficient for function; post-processing methods (e.g. grinding, honing, polishing) are selected by manufacturers to meet these tolerances.</li>
     </ul>
   </section>
 

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Loads and load paths — Frame — P6 RFP</title>
+  <style>
+    :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
+    a { color: var(--accent); }
+    h1 { font-size: 1.35rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.5rem; }
+    h3 { font-size: 1rem; margin-top: 1rem; color: var(--muted); }
+    ul, ol { padding-left: 1.25rem; }
+    .back { margin-bottom: 1rem; font-size: 0.9rem; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    section { margin: 1.25rem 0; }
+    li { margin: 0.35rem 0; }
+    table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+    th, td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
+    th { color: var(--muted); font-weight: 600; }
+  </style>
+</head>
+<body>
+  <p class="back"><a href="index.html">← Back to Frame</a> · <a href="../index.html">P6 RFP overview</a></p>
+  <h1>Loads and load paths</h1>
+  <p class="muted">Part of the <a href="index.html">Frame</a> section. How operating loads are carried through the frame to the floor.</p>
+
+  <section>
+    <h2>Primary loads</h2>
+    <p>The frame must carry reaction forces from the <a href="../Drivetrain/">drivetrain</a>, <a href="../Transmission/">transmission</a>, <a href="../Extraction-syncronisation/">extraction</a> (driven bracket and peelers), and <a href="../Plug-ejection/">plug ejection</a> (plunger drive) without excessive deflection. Alignment between yoke, bearings, and peelers must be maintained for timing and bearing life.</p>
+    <table>
+      <thead><tr><th>Source</th><th>Load type</th><th>Path through frame</th></tr></thead>
+      <tbody>
+        <tr><td>Drivetrain (motor, reducer, gears)</td><td>Reaction to drive torque; weight of motor, reducer, gear train</td><td>Drivetrain mount plate → side rails → main frame → leveling mounts → floor</td></tr>
+        <tr><td>Transmission (yoke, shafts, bearings)</td><td>Reaction to linear stroke force; inertia of yoke and driven mass</td><td>Transmission mount plate → side rails → main frame → leveling mounts → floor</td></tr>
+        <tr><td>Extraction (driven bracket, peelers)</td><td>Compression force during juicing; reaction from static peelers</td><td>Loaded mount plate (collection side) ↔ driven bracket; loaded plate → side rails → main frame → floor</td></tr>
+        <tr><td>Plug ejection (plunger drive)</td><td>Reaction to plunger force (compression springs, rod load)</td><td>Plunger housings and bracket react into loaded/collection structure; into loaded mount plate and side rails → main frame → floor</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Load path principles</h2>
+    <ul>
+      <li><strong>Clear paths</strong> — No single member or joint should see disproportionate load; loads should spread through the welded structure and into the three plates as intended.</li>
+      <li><strong>Minimise deflection</strong> — Stiffness of the main frame and plate interfaces is critical so that yoke travel, peeler mesh, and plunger alignment stay within design intent.</li>
+      <li><strong>Reaction into floor</strong> — All operating loads must be carried down through the legs into the leveling mounts (M24 endplates) and the floor; no floating or cantilevered reaction paths.</li>
+      <li><strong>Joints</strong> — Bolted interfaces (plates to frame, brackets to plates) must be adequate for shear and tension; dowels carry locating and shear where specified.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Notes for RFP</h2>
+    <p>Contractors may be asked to verify or document load paths for the as-built configuration. Detailed reaction magnitudes and FEA (if any) can be added here or in the Frame section as the design is frozen.</p>
+  </section>
+
+  <p class="back"><a href="index.html">← Back to Frame</a> · <a href="../index.html">P6 RFP overview</a></p>
+</body>
+</html>
