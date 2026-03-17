@@ -35,7 +35,7 @@ Short snapshot so Marceline and Cursor have current context. Update when priorit
 
 - **Full P6 context:** [Overview/P6-RFP-context-summary.md](Overview/P6-RFP-context-summary.md)
 - **Subsystems (1–11):** Frame, Drivetrain, Transmission, Collection, Extraction & sync, **Fruit intake system** (6), **Core ejection** (7), **Disposal system** (8), Enclosure, CIP, Controls and electronics. Photos + Q&A per subsystem; naming is canonical in index and Overview (see memory for details).
-- **Key pages:** [Delijuice cycle](Overview/Delijuice-cycle.html), [How subassemblies fit](Frame/#how-subassemblies-fit-together), [Loads and load paths](Frame/Loads-and-load-paths/Loads-and-load-paths.html). Frame — draft in [Frame/Frame.md](Frame/Frame.md).
+- **Key pages:** [Delijuice cycle](Overview/Delijuice-cycle.html), [How subassemblies fit](Frame/#how-subassemblies-fit-together), [Loads and load paths](Frame/Loads-and-load-paths/Loads-and-load-paths.html).
 
 ### Due dates
 

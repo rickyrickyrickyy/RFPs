@@ -34,3 +34,7 @@ Use these in index.html, Overview, subsystem pages, Frame/How-subassemblies-fit,
 - Renames applied site-wide (Fruit intake, Core ejection, Disposal); plug→core in prose; "plug cutter" unchanged.
 - Marceline persistent-memory strategy: repo-based memory, new rule to load context for RFP work and offer to save memory; README and marceline.md updated; memory files created for training and how-to-work.
 - Changes pushed to main where requested; other edits committed in repo.
+
+## Website clarity note
+
+- The public HTML pages should not link to internal `.md` “source” files at the bottom, to avoid confusing readers. Keep sources in the repo for editing, but don’t surface them on the website unless explicitly requested.
