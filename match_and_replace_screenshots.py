@@ -17,37 +17,37 @@ SCREENSHOTS_DIR = REPO / "screenshots"
 
 # Gallery images referenced in HTML (relative to REPO): (subdir, filename)
 GALLERY_IMAGES = [
-    # Overview slideshows (assembled, exploded, closeups, assembly steps)
-    ("Overview/images/assembled", "01.png"),
-    ("Overview/images/assembled", "02.png"),
-    ("Overview/images/assembled", "03.png"),
-    ("Overview/images/assembled", "04.png"),
-    ("Overview/images/assembled", "05.png"),
-    ("Overview/images/assembled", "06.png"),
-    ("Overview/images/assembled", "07.png"),
-    ("Overview/images/assembled", "08.png"),
-    ("Overview/images/assembled", "09.png"),
-    ("Overview/images/assembled", "10.png"),
-    ("Overview/images/exploded", "01.png"),
-    ("Overview/images/exploded", "02.png"),
-    ("Overview/images/exploded", "03.png"),
-    ("Overview/images/exploded", "04.png"),
-    ("Overview/images/exploded", "05.png"),
-    ("Overview/images/exploded", "06.png"),
-    ("Overview/images/exploded", "07.png"),
-    ("Overview/images/exploded", "08.png"),
-    ("Overview/images/subsystem-closeups", "01.png"),
-    ("Overview/images/subsystem-closeups", "02.png"),
-    ("Overview/images/subsystem-closeups", "03.png"),
-    ("Overview/images/subsystem-closeups", "04.png"),
-    ("Overview/images/subsystem-closeups", "05.png"),
-    ("Overview/images/subsystem-closeups", "06.png"),
-    ("Overview/images/subsystem-closeups", "07.png"),
-    ("Overview/images/assembly-steps", "01.png"),
-    ("Overview/images/assembly-steps", "02.png"),
-    ("Overview/images/assembly-steps", "03.png"),
-    ("Overview/images/assembly-steps", "04.png"),
-    ("Overview/images/assembly-steps", "05.png"),
+    # Overview slideshows (assembled in Overview/images; exploded/assembly-steps in Frame)
+    ("Overview/images", "01.png"),
+    ("Overview/images", "02.png"),
+    ("Overview/images", "03.png"),
+    ("Overview/images", "04.png"),
+    ("Overview/images", "05.png"),
+    ("Overview/images", "06.png"),
+    ("Overview/images", "07.png"),
+    ("Overview/images", "08.png"),
+    ("Overview/images", "09.png"),
+    ("Overview/images", "10.png"),
+    ("Frame/exploded", "01.png"),
+    ("Frame/exploded", "02.png"),
+    ("Frame/exploded", "03.png"),
+    ("Frame/exploded", "04.png"),
+    ("Frame/exploded", "05.png"),
+    ("Frame/exploded", "06.png"),
+    ("Frame/exploded", "07.png"),
+    ("Frame/exploded", "08.png"),
+    ("Frame/subsystem-closeups", "01.png"),
+    ("Frame/subsystem-closeups", "02.png"),
+    ("Frame/subsystem-closeups", "03.png"),
+    ("Frame/subsystem-closeups", "04.png"),
+    ("Frame/subsystem-closeups", "05.png"),
+    ("Frame/subsystem-closeups", "06.png"),
+    ("Frame/subsystem-closeups", "07.png"),
+    ("Frame/assembly-steps", "01.png"),
+    ("Frame/assembly-steps", "02.png"),
+    ("Frame/assembly-steps", "03.png"),
+    ("Frame/assembly-steps", "04.png"),
+    ("Frame/assembly-steps", "05.png"),
     # Other subsystem galleries
     ("Enclosure-shell/images", "covers-1.png"),
     ("Enclosure-shell/images", "covers-2.png"),
@@ -59,13 +59,13 @@ GALLERY_IMAGES = [
     ("Enclosure-shell/images", "covers-8.png"),
     ("Enclosure-shell/images", "covers-9.png"),
     ("Enclosure-shell/images", "covers-10.png"),
-    ("Frame/images", "overview-full-frame.png"),
-    ("Frame/images", "overview-three-interfaces.png"),
-    ("Frame/images", "overview-isometric-alt.png"),
-    ("Frame/images", "overview-perspective.png"),
-    ("Frame/images", "overview-front-six-feet.png"),
-    ("Frame/images", "overview-right-side.png"),
-    ("Frame/images", "overview-side-three-plates.png"),
+    ("Frame/Loads-and-load-paths/images", "overview-full-frame.png"),
+    ("Frame/Loads-and-load-paths/images", "overview-three-interfaces.png"),
+    ("Frame/Loads-and-load-paths/images", "overview-isometric-alt.png"),
+    ("Frame/Loads-and-load-paths/images", "overview-perspective.png"),
+    ("Frame/Loads-and-load-paths/images", "overview-front-six-feet.png"),
+    ("Frame/Loads-and-load-paths/images", "overview-right-side.png"),
+    ("Frame/Loads-and-load-paths/images", "overview-side-three-plates.png"),
     ("Outflow-disposal/images", "disposal-top-isometric.png"),
     ("Outflow-disposal/images", "disposal-chute-augers.png"),
     ("Outflow-disposal/images", "disposal-chute-only.png"),
@@ -162,34 +162,33 @@ def main():
         if h is not None:
             screenshot_hashes.append((p, h))
 
-    print("Matching (gallery <- best screenshot, 1:1 assignment)...")
-    # All pairs (gallery_idx, screenshot_idx, distance)
-    pairs = []
-    for gi, (g_path, g_sub, g_name, g_h) in enumerate(gallery_hashes):
-        for si, (s_path, s_h) in enumerate(screenshot_hashes):
-            d = g_h - s_h
-            pairs.append((d, gi, si))
-    pairs.sort(key=lambda x: x[0])
-
-    assigned_gallery = set()
+    print("Matching (each gallery slot <- best remaining screenshot for that slot)...")
+    # Per-slot assignment: for each gallery image, pick the best-matching screenshot
+    # that hasn't been used yet. This keeps the right screenshot in the right slot.
     assigned_screenshot = set()
-    mapping = []  # (gallery_path, screenshot_path)
-    for d, gi, si in pairs:
-        if gi in assigned_gallery or si in assigned_screenshot:
-            continue
-        assigned_gallery.add(gi)
-        assigned_screenshot.add(si)
-        g_path = gallery_hashes[gi][0]
-        s_path = screenshot_hashes[si][0]
-        mapping.append((g_path, s_path, d))
+    mapping = []  # (gallery_path, screenshot_path, distance)
+    for g_path, g_sub, g_name, g_h in gallery_hashes:
+        best_si = None
+        best_d = None
+        for si, (s_path, s_h) in enumerate(screenshot_hashes):
+            if si in assigned_screenshot:
+                continue
+            d = g_h - s_h
+            if best_d is None or d < best_d:
+                best_d = d
+                best_si = si
+        if best_si is not None:
+            assigned_screenshot.add(best_si)
+            s_path = screenshot_hashes[best_si][0]
+            mapping.append((g_path, s_path, best_d))
 
     print(f"Assigned {len(mapping)} gallery images.")
-    for g_path, s_path, d in mapping:
-        print(f"  {g_path.relative_to(REPO)} <- {s_path.name} (dist={d})")
+    for g_path, s_path, dist in mapping:
+        print(f"  {g_path.relative_to(REPO)} <- {s_path.name} (dist={dist})")
         shutil.copy2(s_path, g_path)
     print("Done. Gallery images replaced with best-matching screenshots.")
-    if len(assigned_gallery) < len(gallery_hashes):
-        print(f"  Warning: {len(gallery_hashes) - len(assigned_gallery)} gallery images had no assignment (not enough screenshots?).")
+    if len(mapping) < len(gallery_hashes):
+        print(f"  Warning: {len(gallery_hashes) - len(mapping)} gallery images had no assignment (not enough screenshots?).")
     return 0
 
 
