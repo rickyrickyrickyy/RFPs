@@ -1,20 +1,23 @@
 # 2.3 Drivetrain subsystem
 
-Power transmission from motor to transmission (yoke). Mounts on **drivetrain mount plate** (frame). **Shaft extensions / cam bearings** (#7D5EC0) interface with the **yoke** of the [transmission subsystem](../Transmission/).
+Power transmission from motor to transmission (yoke). Mounts on **drivetrain mount plate** (frame). **Cam bearings** (**#4AB6F6**) interface with the **yoke** of the [transmission subsystem](../Transmission/).
 
 ## Components (CAD — this subsystem’s figures only)
 
 | Hex | Component |
 |-----|-----------|
-| #FDB159 | Top mounting plate |
-| #D72F8B | Driving gear, motor cover plate |
-| #9EE653 | Driven gear |
-| #7D5EC0 | Shaft extensions / cam bearings (interface with yoke) |
-| #71E3ED | Central disc of driven gear, top of gearbox housing, bearing |
-| #E8D1A3 | Sumitomo Cyclo 6000 reducer *(specs to be added)* |
-| #26835F | WEG 22 1450 rpm motor *(more specs to be added)* |
-| #419BD9 | Pulleys and V-belt — DIN 2215 17×957, 2-belt, 1000 mm long |
-| #B85C38 | Central beam / bracket |
+| #FFE696 | Driven gear |
+| #237A3A | Passive gear |
+| #4AB6F6 | Cam bearings (interface with yoke) |
+| #3683E6 | Passive gear shaft |
+| #7D26B5 | Locating roller bearing — SKF_F4BRP 208-SRB-CRH_ECY 213 |
+| — | Non-locating roller bearing — SKF_F4BRP 208-SRB-CLE |
+| #366D20 | Reducer spacer |
+| #5EB45D | Sumitomo Cyclo 6000 reducer *(specs to be added)* |
+| #572D9A | V-belt — DIN 2215 17×957, 2-belt, 1000 mm |
+| #6A37BB | WEG W22 1450 rpm motor *(more specs to be added)* |
+| #D2B545 | Stainless motor mount spacer |
+| #207E96 | Wooden motor mount plate |
 
 ## Reminders
 
@@ -24,7 +27,7 @@ Power transmission from motor to transmission (yoke). Mounts on **drivetrain mou
 
 ## Images
 
-Six CAD views in **[images/](images/)** with a **local colour key** for this subsystem. See [images/README.md](images/README.md). Full doc: [Drivetrain.md](Drivetrain.md), [index.html](index.html).
+Seven CAD views in **[images/](images/)** with a **local colour key** for this subsystem. See [images/README.md](images/README.md). Full doc: [Drivetrain.md](Drivetrain.md), [index.html](index.html).
 
 ## See also
 

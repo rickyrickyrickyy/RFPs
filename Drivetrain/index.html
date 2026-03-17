@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>2.3 Drivetrain — P6 RFP</title>
+  <title>2. Drivetrain — P6 RFP</title>
   <style>
     :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
     body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
@@ -33,24 +33,27 @@
 </head>
 <body>
   <p class="back"><a href="../index.html">← Back to P6 RFP overview</a></p>
-  <h1>2.3 Drivetrain subsystem</h1>
+  <h1>2. Drivetrain</h1>
   <p class="muted">Motor → V-belt → reducer → gear train → cam bearings → interface with <a href="../Transmission/">transmission</a> yoke. Mounts on drivetrain mount plate (frame).</p>
 
   <div class="reminder"><strong>Reminders:</strong> Provide <strong>Sumitomo Cyclo 6000 reducer</strong> specs. Provide <strong>more specs</strong> for <strong>WEG 22 1450 rpm</strong> motor. Additional drivetrain details to be added later.</div>
 
   <h2>Colour key &amp; components</h2>
-  <p class="muted">CAD colours for this section. Motor, reducer, gear train: detail pages TBD.</p>
+  <p class="muted">CAD colours for this section. Applies to the drivetrain figures on this page.</p>
   <table>
     <tr><th>Colour(s)</th><th>Component</th></tr>
-    <tr><td><span class="swatch" style="background-color:#FDB159"></span></td><td><strong>Top mounting plate</strong></td></tr>
-    <tr><td><span class="swatch" style="background-color:#D72F8B"></span></td><td><strong>Driving gear</strong> (large spur), motor cover plate</td></tr>
-    <tr><td><span class="swatch" style="background-color:#9EE653"></span></td><td><strong>Driven gear</strong> (spur meshing with driving gear)</td></tr>
-    <tr><td><span class="swatch" style="background-color:#7D5EC0"></span></td><td><strong>Shaft extensions / cam bearings</strong> — interface with <a href="../Transmission/">transmission</a> yoke</td></tr>
-    <tr><td><span class="swatch" style="background-color:#71E3ED"></span></td><td><strong>Central disc of driven gear</strong>, gearbox top rim, bearing</td></tr>
-    <tr><td><span class="swatch" style="background-color:#E8D1A3"></span></td><td><strong>Sumitomo Cyclo 6000 reducer</strong> — gearbox body</td></tr>
-    <tr><td><span class="swatch" style="background-color:#26835F"></span></td><td><strong>WEG 22 1450 rpm motor</strong></td></tr>
-    <tr><td><span class="swatch" style="background-color:#419BD9"></span></td><td><strong>Pulleys and V-belt</strong> — DIN 2215 17×957, 2-belt, 1000 mm</td></tr>
-    <tr><td><span class="swatch" style="background-color:#B85C38"></span></td><td><strong>Central beam / bracket</strong> — horizontal support across gears</td></tr>
+    <tr><td><span class="swatch" style="background-color:#FFE696"></span></td><td><strong>Driven gear</strong></td></tr>
+    <tr><td><span class="swatch" style="background-color:#237A3A"></span></td><td><strong>Passive gear</strong></td></tr>
+    <tr><td><span class="swatch" style="background-color:#4AB6F6"></span></td><td><strong>Cam bearings</strong> — interface with <a href="../Transmission/">transmission</a> yoke</td></tr>
+    <tr><td><span class="swatch" style="background-color:#3683E6"></span></td><td><strong>Passive gear shaft</strong></td></tr>
+    <tr><td><span class="swatch" style="background-color:#7D26B5"></span></td><td><strong>Locating roller bearing</strong> — SKF_F4BRP 208-SRB-CRH_ECY 213</td></tr>
+    <tr><td>—</td><td><strong>Non-locating roller bearing</strong> — SKF_F4BRP 208-SRB-CLE</td></tr>
+    <tr><td><span class="swatch" style="background-color:#366D20"></span></td><td><strong>Reducer spacer</strong></td></tr>
+    <tr><td><span class="swatch" style="background-color:#5EB45D"></span></td><td><strong>Sumitomo Cyclo 6000 reducer</strong></td></tr>
+    <tr><td><span class="swatch" style="background-color:#572D9A"></span></td><td><strong>V-belt</strong> — DIN 2215 17×957, 2-belt, 1000 mm</td></tr>
+    <tr><td><span class="swatch" style="background-color:#6A37BB"></span></td><td><strong>WEG W22 1450 rpm motor</strong></td></tr>
+    <tr><td><span class="swatch" style="background-color:#D2B545"></span></td><td><strong>Stainless motor mount spacer</strong></td></tr>
+    <tr><td><span class="swatch" style="background-color:#207E96"></span></td><td><strong>Wooden motor mount plate</strong></td></tr>
   </table>
 
   <h2>Component summaries</h2>
@@ -70,17 +73,18 @@
   <p class="muted">Drivetrain: motor, reducer, belt, gear train, cam bearings. Refer to figures as <a href="#fig1">Figure 1</a>, <a href="#fig2">Figure 2</a>, etc.</p>
   <div class="slideshow" id="drive-slideshow">
     <div class="slideshow-track">
-      <div class="slide active" id="fig1" data-caption="Figure 1. Isometric top-front-right — mounting plate, driving gear (magenta), driven gear (lime green), reducer, motor, pulleys and belt."><img src="images/drivetrain-1.png" alt="Drivetrain isometric"></div>
-      <div class="slide" id="fig2" data-caption="Figure 2. Elevated isometric — gear train on orange plate, gearbox (beige), motor (dark green), belt drive (blue)."><img src="images/drivetrain-2.png" alt="Drivetrain elevated"></div>
-      <div class="slide" id="fig3" data-caption="Figure 3. Top-down — two gears (magenta, lime green), central beam, shaft extensions (purple), bearings."><img src="images/drivetrain-3.png" alt="Drivetrain top"></div>
-      <div class="slide" id="fig4" data-caption="Figure 4. Isometric — frame, gear train, driven gear (green), driving gear (magenta), reducer, motor, belt."><img src="images/drivetrain-4.png" alt="Drivetrain isometric 2"></div>
-      <div class="slide" id="fig5" data-caption="Figure 5. Side — motor (dark green), gearbox (beige), belt (blue), central housing, beam and mounts."><img src="images/drivetrain-5.png" alt="Drivetrain side"></div>
-      <div class="slide" id="fig6" data-caption="Figure 6. Side — motor, reducer, belt drive; gears (green, magenta), shaft components (purple)."><img src="images/drivetrain-6.png" alt="Drivetrain side 2"></div>
+      <div class="slide active" id="fig1" data-caption="Figure 1. Drivetrain assembly — mounting plate, driving gear (magenta), driven gear (lime green), reducer, motor, pulleys and V-belt."><img src="images/drivetrain-1.png" alt="Drivetrain assembly view 1"></div>
+      <div class="slide" id="fig2" data-caption="Figure 2. Drivetrain assembly — gear train on mounting plate, gearbox (beige), motor (dark green), belt drive (blue)."><img src="images/drivetrain-2.png" alt="Drivetrain assembly view 2"></div>
+      <div class="slide" id="fig3" data-caption="Figure 3. Gear train and shaft extensions — two gears (magenta, lime green), central beam, cam bearings (purple), reducer."><img src="images/drivetrain-3.png" alt="Drivetrain gear train and shafts"></div>
+      <div class="slide" id="fig4" data-caption="Figure 4. Drivetrain detail — driven gear, driving gear, reducer body, motor, pulleys and belt."><img src="images/drivetrain-4.png" alt="Drivetrain detail"></div>
+      <div class="slide" id="fig5" data-caption="Figure 5. Drivetrain — gear train, reducer, motor and V-belt drive."><img src="images/drivetrain-5.png" alt="Drivetrain gear train and belt"></div>
+      <div class="slide" id="fig6" data-caption="Figure 6. Drivetrain detail — shaft extensions (purple), gears, central beam, mounting plate."><img src="images/drivetrain-6.png" alt="Drivetrain shafts and gears"></div>
+      <div class="slide" id="fig7" data-caption="Figure 7. Side view — motor, reducer, V-belt drive, central housing, beam and mounts."><img src="images/drivetrain-7.png" alt="Drivetrain side view"></div>
     </div>
-    <p class="slideshow-caption" id="drive-caption" aria-live="polite">Figure 1. Isometric top-front-right — mounting plate, driving gear (magenta), driven gear (lime green), reducer, motor, pulleys and belt.</p>
+    <p class="slideshow-caption" id="drive-caption" aria-live="polite">Figure 1. Drivetrain assembly — mounting plate, driving gear (magenta), driven gear (lime green), reducer, motor, pulleys and V-belt.</p>
     <div class="slideshow-controls">
       <button type="button" id="drive-prev" aria-label="Previous">← Previous</button>
-      <span class="slideshow-counter" id="drive-counter">1 / 6</span>
+      <span class="slideshow-counter" id="drive-counter">1 / 7</span>
       <button type="button" id="drive-next" aria-label="Next">Next →</button>
     </div>
   </div>
@@ -88,7 +92,7 @@
   <h2>Interfaces</h2>
   <ul>
     <li><strong>Input:</strong> WEG 22 1450 rpm motor → V-belt → Sumitomo Cyclo 6000 reducer.</li>
-    <li><strong>Output:</strong> Shaft extensions / cam bearings <span class="swatch" style="background-color:#7D5EC0" title="#7D5EC0"></span> interface with <a href="../Transmission/">yoke</a> of transmission subsystem.</li>
+    <li><strong>Output:</strong> Cam bearings <span class="swatch" style="background-color:#4AB6F6" title="#4AB6F6"></span> interface with <a href="../Transmission/">yoke</a> of transmission subsystem.</li>
     <li><strong>Mount:</strong> <a href="../Frame/">Drivetrain mount plate</a> on main frame.</li>
   </ul>
 

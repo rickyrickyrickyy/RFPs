@@ -1,20 +1,22 @@
 # Drivetrain subsystem — images
 
-Six CAD views of the drivetrain: motor, reducer, V-belt, gear train, mounting plate, cam bearings / shaft extensions.
+Seven CAD views of the drivetrain: motor, reducer, V-belt, gear train, mounting plate, cam bearings / shaft extensions.
 
 ## CAD colour key (this subsystem’s figures only)
 
 | Colour (hex) | Component |
 |--------------|-----------|
-| **#FDB159** | **Top mounting plate** — orange/gold |
-| **#D72F8B** | **Driving gear** (large spur gear), motor cover plate — magenta |
-| **#9EE653** | **Driven gear** (spur gear meshing with driving gear) — lime green |
-| **#7D5EC0** | **Shaft extensions / cam bearings** — purple; interface with transmission yoke |
-| **#71E3ED** | **Central disc of driven gear**, top rim of gearbox housing, bearing — light blue/cyan |
-| **#E8D1A3** | **Sumitomo Cyclo 6000 reducer** — gearbox main body (beige) |
-| **#26835F** | **WEG 22 1450 rpm motor** — dark green |
-| **#419BD9** | **Pulleys and V-belt** — medium blue; DIN 2215 17×957, 2-belt, 1000 mm long |
-| **#B85C38** | **Central beam / bracket** — horizontal support across gears (orange-brown) |
+| **#FFE696** | **Driven gear** |
+| **#237A3A** | **Passive gear** |
+| **#4AB6F6** | **Cam bearings** — interface with transmission yoke |
+| **#3683E6** | **Passive gear shaft** |
+| **#7D26B5** | **Locating roller bearing** — SKF_F4BRP 208-SRB-CRH_ECY 213 |
+| **#366D20** | **Reducer spacer** |
+| **#5EB45D** | **Sumitomo Cyclo 6000 reducer** |
+| **#572D9A** | **V-belt** — DIN 2215 17×957, 2-belt, 1000 mm |
+| **#6A37BB** | **WEG W22 1450 rpm motor** |
+| **#D2B545** | **Stainless motor mount spacer** |
+| **#207E96** | **Wooden motor mount plate** |
 
 Other subsystems use different colour sets.
 
@@ -27,9 +29,10 @@ Other subsystems use different colour sets.
 
 | Filename | Description |
 |----------|-------------|
-| drivetrain-1.png | Isometric top-front-right — mounting plate, driving gear, driven gear, reducer, motor, pulleys and belt |
-| drivetrain-2.png | Elevated isometric — gear train on orange plate, gearbox, motor, belt drive |
-| drivetrain-3.png | Top-down — two gears, central beam, shaft extensions (purple), bearings |
-| drivetrain-4.png | Isometric — frame, gear train, driven gear, driving gear, reducer, motor, belt |
-| drivetrain-5.png | Side — motor, gearbox, belt, central housing, beam and mounts |
-| drivetrain-6.png | Side — motor, reducer, belt drive; gears, shaft components |
+| drivetrain-1.png | Drivetrain assembly — mounting plate, driving gear, driven gear, reducer, motor, pulleys and V-belt |
+| drivetrain-2.png | Drivetrain assembly — gear train on mounting plate, gearbox, motor, belt drive |
+| drivetrain-3.png | Gear train and shaft extensions — two gears, central beam, cam bearings, reducer |
+| drivetrain-4.png | Drivetrain detail — driven gear, driving gear, reducer body, motor, pulleys and belt |
+| drivetrain-5.png | Drivetrain — gear train, reducer, motor and V-belt drive |
+| drivetrain-6.png | Drivetrain detail — shaft extensions, gears, central beam, mounting plate |
+| drivetrain-7.png | Side view — motor, reducer, V-belt drive, central housing, beam and mounts |
