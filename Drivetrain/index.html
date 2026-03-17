@@ -34,40 +34,31 @@
 <body>
   <p class="back"><a href="../index.html">← Back to P6 RFP overview</a></p>
   <h1>2. Drivetrain</h1>
-  <p class="muted">Motor → V-belt → reducer → gear train → cam bearings → interface with <a href="../Transmission/">transmission</a> yoke. Mounts on drivetrain mount plate (frame).</p>
 
+  <h2>Subpages</h2>
+  <p class="muted">Motor and reducer, Gears and cam bearings, Drivetrain mount plate — detail pages TBD.</p>
+
+  <h2>Introduction</h2>
+  <p>Motor → V-belt → reducer → gear train → cam bearings → interface with <a href="../Transmission/">transmission</a> yoke. Mounts on drivetrain mount plate (frame).</p>
   <div class="reminder"><strong>Reminders:</strong> Provide <strong>Sumitomo Cyclo 6000 reducer</strong> specs. Provide <strong>more specs</strong> for <strong>WEG 22 1450 rpm</strong> motor. Additional drivetrain details to be added later.</div>
 
   <h2>Colour key &amp; components</h2>
   <p class="muted">CAD colours for this section. Applies to the drivetrain figures on this page.</p>
   <table>
     <tr><th>Colour(s)</th><th>Component</th></tr>
-    <tr><td><span class="swatch" style="background-color:#FFE696"></span></td><td><strong>Driven gear</strong></td></tr>
-    <tr><td><span class="swatch" style="background-color:#237A3A"></span></td><td><strong>Passive gear</strong></td></tr>
-    <tr><td><span class="swatch" style="background-color:#4AB6F6"></span></td><td><strong>Cam bearings</strong> — interface with <a href="../Transmission/">transmission</a> yoke</td></tr>
-    <tr><td><span class="swatch" style="background-color:#3683E6"></span></td><td><strong>Passive gear shaft</strong></td></tr>
-    <tr><td><span class="swatch" style="background-color:#7D26B5"></span></td><td><strong>Locating roller bearing</strong> — SKF_F4BRP 208-SRB-CRH_ECY 213</td></tr>
-    <tr><td>—</td><td><strong>Non-locating roller bearing</strong> — SKF_F4BRP 208-SRB-CLE</td></tr>
-    <tr><td><span class="swatch" style="background-color:#366D20"></span></td><td><strong>Reducer spacer</strong></td></tr>
-    <tr><td><span class="swatch" style="background-color:#5EB45D"></span></td><td><strong>Sumitomo Cyclo 6000 reducer</strong></td></tr>
-    <tr><td><span class="swatch" style="background-color:#572D9A"></span></td><td><strong>V-belt</strong> — DIN 2215 17×957, 2-belt, 1000 mm</td></tr>
-    <tr><td><span class="swatch" style="background-color:#6A37BB"></span></td><td><strong>WEG W22 1450 rpm motor</strong></td></tr>
-    <tr><td><span class="swatch" style="background-color:#D2B545"></span></td><td><strong>Stainless motor mount spacer</strong></td></tr>
-    <tr><td><span class="swatch" style="background-color:#207E96"></span></td><td><strong>Wooden motor mount plate</strong></td></tr>
+    <tr><td><span class="swatch" style="background-color:#CA2B6D"></span></td><td><strong>Driven gear</strong> — transfers reducer output torque into the gear train; set backlash to prevent binding.</td></tr>
+    <tr><td><span class="swatch" style="background-color:#9EDA3B"></span></td><td><strong>Passive gear</strong> — mates with driven gear to transmit torque to the cam-bearing shaft; backlash and tooth contact are critical.</td></tr>
+    <tr><td><span class="swatch" style="background-color:#8E6FD3"></span></td><td><strong>Cam bearings</strong> — interface with <a href="../Transmission/">transmission</a> yoke</td></tr>
+    <tr><td><span class="swatch" style="background-color:#F0DE44"></span></td><td><strong>Passive gear shaft</strong> — supports passive gear and cam bearings; alignment controls yoke stroke smoothness.</td></tr>
+    <tr><td><span class="swatch" style="background-color:#7EFF7D"></span></td><td><strong>Locating roller bearing</strong> — SKF_F4BRP 208-SRB-CRH_ECY 213</td></tr>
+    <tr><td><span class="swatch" style="background-color:#6F3BC2"></span></td><td><strong>Non-locating roller bearing</strong> — SKF_F4BRP 208-SRB-CLE</td></tr>
+    <tr><td><span class="swatch" style="background-color:#41A3DD"></span></td><td><strong>Reducer spacer</strong> — sets reducer standoff/position so pulleys and shafts stay in plane.</td></tr>
+    <tr><td><span class="swatch" style="background-color:#FFE99C"></span></td><td><strong>Sumitomo Cyclo 6000 reducer</strong> — speed reduction and torque increase between motor and gear train; lubrication/mounting per Sumitomo manual.</td></tr>
+    <tr><td><span class="swatch" style="background-color:#2FAD50"></span></td><td><strong>V-belt</strong> — DIN 2215 17×957, 2-belt, 1000 mm</td></tr>
+    <tr><td><span class="swatch" style="background-color:#226634"></span></td><td><strong>WEG W22 1450 rpm motor</strong> — prime mover for the drivetrain; final electrical/mechanical specs TBD.</td></tr>
+    <tr><td><span class="swatch" style="background-color:#6D7F23"></span></td><td><strong>Stainless motor mount spacer</strong> — positions motor/pulleys for belt alignment; resists compression under bolt preload.</td></tr>
+    <tr><td><span class="swatch" style="background-color:#BC4ACC"></span></td><td><strong>Wooden motor mount plate</strong> — motor mounting base; provides adjustability for belt tensioning (material may change in final design).</td></tr>
   </table>
-
-  <h2>Component summaries</h2>
-  <ul>
-    <li><strong>Bearings</strong> — support shaft rotation, reduce friction, and need regular inspection/greasing to maintain life.</li>
-    <li><strong>Plunger drive rods</strong> — connect the drivetrain/yoke to the core ejection plungers; alignment is critical so rods run freely through their linear bearings.</li>
-    <li><strong>Yoke</strong> — joins the plunger drive rods and converts rotary motion from the cam bearings into the linear stroke for extraction and core ejection.</li>
-    <li><strong>Plunger pull / drive bracket</strong> — links the rods to the plungers and keeps all four plungers moving together; requires precise alignment with the filter tube and plug cutter.</li>
-    <li><strong>Sumitomo reducer</strong> — reduces motor speed and increases torque; follow the Sumitomo manual for mounting, lubrication, and maintenance intervals.</li>
-    <li><strong>Reducer mount</strong> — locates and supports the reducer on the drivetrain mount plate so the motor, belt, and gears stay in alignment under load.</li>
-    <li><strong>Two gears</strong> — transmit torque from the reducer to the cam bearings; spacing and backlash must be set so teeth share load without binding.</li>
-    <li><strong>Drive belt and motor transmission</strong> — couple the WEG motor to the reducer; belt tension and alignment should be easy to inspect and adjust.</li>
-    <li><strong>Pulley guard</strong> — prevents accidental contact with the belt and pulleys and should be removable for maintenance but secure in normal operation.</li>
-  </ul>
 
   <h2 id="gallery">Figures</h2>
   <p class="muted">Drivetrain: motor, reducer, belt, gear train, cam bearings. Refer to figures as <a href="#fig1">Figure 1</a>, <a href="#fig2">Figure 2</a>, etc.</p>
@@ -89,14 +80,28 @@
     </div>
   </div>
 
-  <h2>Interfaces</h2>
+  <h2>Discussion</h2>
+  <h3>Component summaries</h3>
+  <ul>
+    <li><strong>Bearings</strong> — support shaft rotation, reduce friction, and need regular inspection/greasing to maintain life.</li>
+    <li><strong>Plunger drive rods</strong> — connect the drivetrain/yoke to the core ejection plungers; alignment is critical so rods run freely through their linear bearings.</li>
+    <li><strong>Yoke</strong> — joins the plunger drive rods and converts rotary motion from the cam bearings into the linear stroke for extraction and core ejection.</li>
+    <li><strong>Plunger pull / drive bracket</strong> — links the rods to the plungers and keeps all four plungers moving together; requires precise alignment with the filter tube and plug cutter.</li>
+    <li><strong>Sumitomo reducer</strong> — reduces motor speed and increases torque; follow the Sumitomo manual for mounting, lubrication, and maintenance intervals.</li>
+    <li><strong>Reducer mount</strong> — locates and supports the reducer on the drivetrain mount plate so the motor, belt, and gears stay in alignment under load.</li>
+    <li><strong>Two gears</strong> — transmit torque from the reducer to the cam bearings; spacing and backlash must be set so teeth share load without binding.</li>
+    <li><strong>Drive belt and motor transmission</strong> — couple the WEG motor to the reducer; belt tension and alignment should be easy to inspect and adjust.</li>
+    <li><strong>Pulley guard</strong> — prevents accidental contact with the belt and pulleys and should be removable for maintenance but secure in normal operation.</li>
+  </ul>
+
+  <h3>Interfaces</h3>
   <ul>
     <li><strong>Input:</strong> WEG 22 1450 rpm motor → V-belt → Sumitomo Cyclo 6000 reducer.</li>
     <li><strong>Output:</strong> Cam bearings <span class="swatch" style="background-color:#4AB6F6" title="#4AB6F6"></span> interface with <a href="../Transmission/">yoke</a> of transmission subsystem.</li>
     <li><strong>Mount:</strong> <a href="../Frame/">Drivetrain mount plate</a> on main frame.</li>
   </ul>
 
-  <h2>Interfaces and tolerances</h2>
+  <h3>Interfaces and tolerances</h3>
   <p class="muted">Known interfaces and tolerances. Links go to related subsystems.</p>
   <table class="iface-table">
     <thead><tr><th>Part</th><th>Interface / tolerance</th><th>Related</th></tr></thead>

@@ -34,28 +34,24 @@
 <body>
   <p class="back"><a href="../index.html">← Back to P6 RFP overview</a></p>
   <h1>5. Collection</h1>
-  <p class="muted">Static peelers (<span class="swatch" style="background-color:#F36F3B" title="#F36F3B"></span>), static deflectors <span class="swatch" style="background-color:#CCDF3F" title="#CCDF3F"></span>, juice collectors (Y-tubes), filter tube, plug cutter, collection mount plate. Mounts on the frame’s loaded mount plate.</p>
+
+  <h2>Subpages</h2>
+  <p class="muted">Juice collection, Plungers and filter — detail pages TBD.</p>
+
+  <h2>Introduction</h2>
+  <p>Static peelers (<span class="swatch" style="background-color:#F36F3B" title="#F36F3B"></span>), static deflectors <span class="swatch" style="background-color:#CCDF3F" title="#CCDF3F"></span>, juice collectors (Y-tubes), filter tube, plug cutter, collection mount plate. Mounts on the frame’s loaded mount plate.</p>
 
   <div class="reminder"><strong>Reminder:</strong> Send the <strong>34 mm standard connector</strong> for quick connection (juice collector Y-tube outlets).</div>
   <div class="reminder"><strong>Peel deflectors (WIP):</strong> The <strong>static deflector</strong> (this subsystem) and the <strong><a href="../Extraction-syncronisation/">chute deflector</a></strong> (extraction/synchronisation) are both work in progress. Ensure they are easily manufacturable, do not collide during motion, and are rigid and clean.</div>
-
-  <h2>Function</h2>
-  <ul>
-    <li><strong>Driven</strong> and <strong>static</strong> peelers (<span class="swatch" style="background-color:#F36F3B" title="#F36F3B"></span>) mesh; oranges fall between them; fingers interlace → fruit mashed, <strong>peel</strong> squeezed into extraction chamber and outflow chute. <strong>Static deflectors</strong> <span class="swatch" style="background-color:#CCDF3F" title="#CCDF3F"></span> redirect peel from the base of the peeler to the front of the bin; mounted to the static loaded plate; flat plate design (see <a href="#fig1">Figure 1</a>, <a href="#fig5">Figure 5</a>, <a href="#fig10">Figure 10</a>).</li>
-    <li><strong>Plug cutter</strong> (#4DB7F5) cuts a cylindrical plug from the centre of oranges during juicing.</li>
-    <li><strong>Juice</strong> flows out of oranges through <strong>slots in the filter tube</strong> (#287F3F) into the <strong>yellow collector</strong> (#FFFF50), then out via the <strong>Y-branched tube</strong> to a <strong>ribbed connection</strong> for standard rubber pipes.</li>
-  </ul>
-  <h2>Extraction cycle and disposal</h2>
-  <p>After the <strong>pressing stroke</strong> (juice to Y-section): the <a href="../Plug-ejection/">core ejection system</a> pushes a <strong>plunger</strong> through the <strong>filter</strong>, pushes the <strong>core</strong> back out of the plug cutter, and the core <strong>falls into the core chute</strong> of the <a href="../Outflow-disposal/">disposal system</a>. Meanwhile, <strong>peels</strong> fall to the <strong>sides of the peelers</strong>, <strong>avoid the core chutes</strong>, and separate into <strong>two channels</strong>; the disposal system (two augers) takes peels and cores away separately.</p>
 
   <h2>Colour key &amp; components</h2>
   <p class="muted">CAD colours for this section. Static peelers, deflectors, juice collectors, filter tube, plug cutter — detail pages TBD.</p>
   <table>
     <tr><th>Colour(s)</th><th>Component</th></tr>
-    <tr><td><span class="swatch" style="background-color:#27C16A"></span></td><td><strong>Collection mount plate</strong> — mounts to frame loaded plate</td></tr>
+    <tr><td><span class="swatch" style="background-color:#27C16A"></span></td><td><strong>Collection mount plate</strong> — mounts to frame loaded plate; carries static peelers, deflectors, collectors, filter tube, plug cutter.</td></tr>
     <tr><td><span class="swatch" style="background-color:#F36F3B"></span></td><td><strong>Static peelers</strong> — interlace with driven peelers to mash fruit</td></tr>
     <tr><td><span class="swatch" style="background-color:#CCDF3F"></span></td><td><strong>Static deflectors</strong> — redirect peel to front of bin; flat plate; mounted to loaded plate</td></tr>
-    <tr><td><span class="swatch" style="background-color:#FFFF50"></span></td><td><strong>Juice collectors (Y-tubes)</strong> — ribbed connection for rubber pipes</td></tr>
+    <tr><td><span class="swatch" style="background-color:#FFFF50"></span></td><td><strong>Juice collectors (Y-tubes)</strong> — collect juice from filter slots; 34 mm quick-connector outlet and ribbed hose connection.</td></tr>
     <tr><td><span class="swatch" style="background-color:#287F3F"></span></td><td><strong>Filter tube</strong> — juice flows through slots into collector</td></tr>
     <tr><td><span class="swatch" style="background-color:#4DB7F5"></span></td><td><strong>Plug cutter</strong> — cuts centre plug from oranges</td></tr>
   </table>
@@ -83,14 +79,24 @@
     </div>
   </div>
 
-  <h2>Interfaces</h2>
+  <h2>Discussion</h2>
+  <h3>Function</h3>
+  <ul>
+    <li><strong>Driven</strong> and <strong>static</strong> peelers (<span class="swatch" style="background-color:#F36F3B" title="#F36F3B"></span>) mesh; oranges fall between them; fingers interlace → fruit mashed, <strong>peel</strong> squeezed into extraction chamber and outflow chute. <strong>Static deflectors</strong> <span class="swatch" style="background-color:#CCDF3F" title="#CCDF3F"></span> redirect peel from the base of the peeler to the front of the bin; mounted to the static loaded plate; flat plate design (see <a href="#fig1">Figure 1</a>, <a href="#fig5">Figure 5</a>, <a href="#fig10">Figure 10</a>).</li>
+    <li><strong>Plug cutter</strong> (#4DB7F5) cuts a cylindrical plug from the centre of oranges during juicing.</li>
+    <li><strong>Juice</strong> flows out of oranges through <strong>slots in the filter tube</strong> (#287F3F) into the <strong>yellow collector</strong> (#FFFF50), then out via the <strong>Y-branched tube</strong> to a <strong>ribbed connection</strong> for standard rubber pipes.</li>
+  </ul>
+  <h3>Extraction cycle and disposal</h3>
+  <p>After the <strong>pressing stroke</strong> (juice to Y-section): the <a href="../Plug-ejection/">core ejection system</a> pushes a <strong>plunger</strong> through the <strong>filter</strong>, pushes the <strong>core</strong> back out of the plug cutter, and the core <strong>falls into the core chute</strong> of the <a href="../Outflow-disposal/">disposal system</a>. Meanwhile, <strong>peels</strong> fall to the <strong>sides of the peelers</strong>, <strong>avoid the core chutes</strong>, and separate into <strong>two channels</strong>; the disposal system (two augers) takes peels and cores away separately.</p>
+
+  <h3>Interfaces</h3>
   <ul>
     <li><strong>Mount:</strong> Collection mount plate <span class="swatch" style="background-color:#27C16A" title="#27C16A"></span> on <a href="../Frame/">loaded mount plate</a> (frame).</li>
     <li><strong>Input:</strong> Fruit from extraction/synchronisation; driven peelers mesh with static peelers.</li>
     <li><strong>Output:</strong> Peel → extraction chamber / outflow chute; juice → filter → yellow collector → Y-tube → ribbed connection (34 mm standard connector for quick connection).</li>
   </ul>
 
-  <h2>Interfaces and tolerances</h2>
+  <h3>Interfaces and tolerances</h3>
   <p class="muted">Known interfaces and tolerances. Links go to related subsystems.</p>
   <table class="iface-table">
     <thead><tr><th>Part</th><th>Interface / tolerance</th><th>Related</th></tr></thead>

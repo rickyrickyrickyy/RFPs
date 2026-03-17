@@ -19,9 +19,15 @@
 <body>
   <p class="back"><a href="../index.html">← Back to P6 RFP overview</a></p>
   <h1>11. Controls and electronics</h1>
-  <p class="muted">User interface, safety, motor power, and yoke position. The subsystem consists of the control panel, safety switches, motor power electronics, and the yoke position sensor (under development).</p>
 
-  <h2>User control panel</h2>
+  <h2>Subpages</h2>
+  <p class="muted">Machine control definition and UI, Motor power management, Yoke position sensor (TBD) — content on this page.</p>
+
+  <h2>Introduction</h2>
+  <p>User interface, safety, motor power, and yoke position. The subsystem consists of the control panel, safety switches, motor power electronics, and the yoke position sensor (under development).</p>
+
+  <h2>Discussion</h2>
+  <h3>User control panel</h3>
   <p>Operator interface for power, run control, and status.</p>
   <ul>
     <li><strong>Emergency stop</strong> — hard stop; machine cannot run until reset.</li>
@@ -30,10 +36,10 @@
     <li><strong>Indicator lights</strong> — machine open (when any of the 3 lids is open), plus indicator(s) for other sensor status as needed.</li>
   </ul>
 
-  <h2>Safety switches</h2>
+  <h3>Safety switches</h3>
   <p>Safety switches on <strong>3 lids</strong> (e.g. plunger cover, drivetrain cover, feeder). When any lid is open, the machine shuts off and cannot run. Interlock logic must be fail-safe.</p>
 
-  <h2>Motor control and power management</h2>
+  <h3>Motor control and power management</h3>
   <p>AC power distribution and motor drive for the <a href="../Drivetrain/">drivetrain</a> motor.</p>
   <ul>
     <li><strong>AC contactor</strong> — main power switching for the motor circuit.</li>
@@ -42,10 +48,10 @@
     <li><strong>Motor:</strong> <strong>WEG W22</strong> — spec sheet to be provided; document power rating, voltage, speed/torque, and mounting for the RFP.</li>
   </ul>
 
-  <h2>Yoke position sensor</h2>
+  <h3>Yoke position sensor</h3>
   <p>Encoder or other means to detect the position of the <a href="../Transmission/">yoke</a> in the cycle. Required to know where the yoke is for controlled stop position and cycle logic. <span class="tbd">TBD — needs further development.</span></p>
 
-  <h2>Status</h2>
+  <h3>Status</h3>
   <p>Photos and Q&A TBD. WEG W22 spec to be linked when available. Yoke position sensor is a backlog item.</p>
 </body>
 </html>
