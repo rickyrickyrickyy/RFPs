@@ -19,6 +19,16 @@
     table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
     th, td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
     th { color: var(--muted); font-weight: 600; }
+    .slideshow { margin: 1.5rem 0; }
+    .slideshow-track { position: relative; }
+    .slideshow .slide { display: none; }
+    .slideshow .slide.active { display: block; }
+    .slideshow .slide img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
+    .slideshow-caption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); min-height: 2.5em; }
+    .slideshow-controls { display: flex; align-items: center; gap: 1rem; margin-top: 0.75rem; flex-wrap: wrap; }
+    .slideshow-controls button { background: var(--border); color: var(--text); border: none; padding: 0.35rem 0.75rem; border-radius: 4px; cursor: pointer; font-size: 0.9rem; }
+    .slideshow-controls button:hover { background: var(--accent); color: #fff; }
+    .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
   </style>
 </head>
 <body>
@@ -55,6 +65,44 @@
     <p>Contractors may be asked to verify or document load paths for the as-built configuration. Detailed reaction magnitudes and FEA (if any) can be added here or in the Frame section as the design is frozen.</p>
   </section>
 
+  <section>
+    <h2 id="gallery">Figures</h2>
+    <p class="muted">CAD views. Refer to figures in the text as <a href="#fig1">Figure 1</a>, <a href="#fig2">Figure 2</a>, etc.</p>
+    <div class="slideshow" id="frame-slideshow">
+      <div class="slideshow-track">
+        <div class="slide active" id="fig1" data-caption="Figure 1. Isometric — main frame, three interface plates, leveling mounts."><img src="images/overview-full-frame.png" alt="Isometric — main frame, three plates, leveling mounts"></div>
+        <div class="slide" id="fig2" data-caption="Figure 2. Top-down — loaded, transmission, drivetrain mount plates."><img src="images/overview-three-interfaces.png" alt="Top-down — three loaded interfaces on side rails"></div>
+        <div class="slide" id="fig3" data-caption="Figure 3. Isometric alternate."><img src="images/overview-isometric-alt.png" alt="Isometric alternate view"></div>
+        <div class="slide" id="fig4" data-caption="Figure 4. Perspective view."><img src="images/overview-perspective.png" alt="Perspective view"></div>
+        <div class="slide" id="fig5" data-caption="Figure 5. Front/angled — six legs, six leveling mounts; loaded plate (left), transmission plate (right)."><img src="images/overview-front-six-feet.png" alt="Front — six legs, six leveling mounts"></div>
+        <div class="slide" id="fig6" data-caption="Figure 6. Right side — leveling mounts, loaded plate (left), transmission plate (right)."><img src="images/overview-right-side.png" alt="Right side — frame, feet, loaded and transmission plates"></div>
+        <div class="slide" id="fig7" data-caption="Figure 7. Side — loaded (left), transmission (centre), drivetrain (right); six feet."><img src="images/overview-side-three-plates.png" alt="Side — all three plates, six feet"></div>
+      </div>
+      <p class="slideshow-caption" id="frame-caption" aria-live="polite">Figure 1. Isometric — main frame, three interface plates, leveling mounts.</p>
+      <div class="slideshow-controls">
+        <button type="button" id="frame-prev" aria-label="Previous">← Previous</button>
+        <span class="slideshow-counter" id="frame-counter">1 / 7</span>
+        <button type="button" id="frame-next" aria-label="Next">Next →</button>
+      </div>
+    </div>
+  </section>
+
   <p class="back"><a href="index.html">← Back to Frame</a> · <a href="../index.html">P6 RFP overview</a></p>
+  <script>
+(function(){
+  var el = document.getElementById('frame-slideshow');
+  if (!el) return;
+  var slides = el.querySelectorAll('.slide');
+  var cap = document.getElementById('frame-caption');
+  var counter = document.getElementById('frame-counter');
+  var n = slides.length;
+  var i = 0;
+  function go(k) { i = (k + n) % n; slides.forEach(function(s,j){ s.classList.toggle('active', j===i); }); if (cap) cap.textContent = slides[i].getAttribute('data-caption') || ''; if (counter) counter.textContent = (i+1) + ' / ' + n; }
+  el.querySelector('#frame-prev').addEventListener('click', function(){ go(i-1); });
+  el.querySelector('#frame-next').addEventListener('click', function(){ go(i+1); });
+  var hash = window.location.hash;
+  if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
+})();
+  </script>
 </body>
 </html>

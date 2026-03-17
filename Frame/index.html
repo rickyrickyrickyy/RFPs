@@ -28,13 +28,18 @@
     .iface-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
     .iface-table th, .iface-table td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
     .iface-table th { color: var(--muted); font-weight: 600; }
+    table.colour-key { width: 100%; border-collapse: collapse; font-size: 0.85rem; margin: 0.5rem 0; }
+    table.colour-key th, table.colour-key td { text-align: left; padding: 0.4rem 0.6rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+    table.colour-key th { color: var(--muted); font-weight: 600; white-space: nowrap; }
+    table.colour-key td.sw { width: 6rem; }
+    table.colour-key td.sw .na { color: var(--muted); font-size: 0.9em; }
   </style>
 </head>
 <body>
   <p class="back"><a href="../index.html">← Back to P6 RFP overview</a></p>
   <h1>2.5 Frame</h1>
   <p class="muted">Primary structure; design focus: stability, alignment, force transmission, smooth linear bearing operation, secure peeler mounting.</p>
-  <p><a href="How-subassemblies-fit.html">How subassemblies fit together</a> · <a href="Loads-and-load-paths.html">Loads and load paths</a></p>
+  <p><a href="Loads-and-load-paths.html">Loads and load paths</a></p>
 
   <h2>Colour key &amp; components</h2>
   <p class="muted">Primary structure; all subsystems mount to it. Main frame, loaded plate, transmission plate, drivetrain plate — detail pages TBD. Three plates mount from top onto frame and side rails; alignment via dowels and H7. Leveling: 6111K669 M24 100 mm Swivel Leveling Mount (McMaster) on M24 endplates at legs.</p>
@@ -85,24 +90,7 @@
   </table>
 
   <h2 id="gallery">Figures</h2>
-  <p class="muted">CAD views. Refer to figures in the text as <a href="#fig1">Figure 1</a>, <a href="#fig2">Figure 2</a>, etc.</p>
-  <div class="slideshow" id="frame-slideshow">
-    <div class="slideshow-track">
-      <div class="slide active" id="fig1" data-caption="Figure 1. Isometric — main frame, three interface plates, leveling mounts."><img src="images/overview-full-frame.png" alt="Isometric — main frame, three plates, leveling mounts"></div>
-      <div class="slide" id="fig2" data-caption="Figure 2. Top-down — loaded, transmission, drivetrain mount plates."><img src="images/overview-three-interfaces.png" alt="Top-down — three loaded interfaces on side rails"></div>
-      <div class="slide" id="fig3" data-caption="Figure 3. Isometric alternate."><img src="images/overview-isometric-alt.png" alt="Isometric alternate view"></div>
-      <div class="slide" id="fig4" data-caption="Figure 4. Perspective view."><img src="images/overview-perspective.png" alt="Perspective view"></div>
-      <div class="slide" id="fig5" data-caption="Figure 5. Front/angled — six legs, six leveling mounts; loaded plate (left), transmission plate (right)."><img src="images/overview-front-six-feet.png" alt="Front — six legs, six leveling mounts"></div>
-      <div class="slide" id="fig6" data-caption="Figure 6. Right side — leveling mounts, loaded plate (left), transmission plate (right)."><img src="images/overview-right-side.png" alt="Right side — frame, feet, loaded and transmission plates"></div>
-      <div class="slide" id="fig7" data-caption="Figure 7. Side — loaded (left), transmission (centre), drivetrain (right); six feet."><img src="images/overview-side-three-plates.png" alt="Side — all three plates, six feet"></div>
-    </div>
-    <p class="slideshow-caption" id="frame-caption" aria-live="polite">Figure 1. Isometric — main frame, three interface plates, leveling mounts.</p>
-    <div class="slideshow-controls">
-      <button type="button" id="frame-prev" aria-label="Previous">← Previous</button>
-      <span class="slideshow-counter" id="frame-counter">1 / 7</span>
-      <button type="button" id="frame-next" aria-label="Next">Next →</button>
-    </div>
-  </div>
+  <p class="muted">CAD views are now on <a href="Loads-and-load-paths.html#gallery">Loads and load paths</a>.</p>
 
   <h2>Components</h2>
   <ul>
@@ -130,30 +118,156 @@
   <h2>Details (from RFP draft)</h2>
   <p>Main frame: 80×80×5 GB/T square tubes as main load-bearing members; #8 C-brackets for supporting members; all fully welded. Leveling: 6111K669 M24 100 mm Swivel Leveling Mounts (McMaster) on M24 tapped endplates at bottom of frame legs (six feet). Side rails with square holes for dowels; bolts and nuts secure bodies to cross beams.</p>
 
-  <h2>Assembly steps</h2>
-  <ol>
-    <li>Adjust the frame to be flat by increasing the height of the six feet.</li>
-    <li>Mount the plates to the frame and add shims where needed so plates and brackets are flush to the frame.</li>
-    <li>Fasten the plate to the frame with bolts.</li>
-    <li>Drill and ream H7 holes through the three plates and into the side rails for repeatable alignment.</li>
-    <li>Unfasten bolts; build subassemblies; reassemble onto the frame using the drilled holes as reference.</li>
-  </ol>
+  <h2 id="how-subassemblies-fit-together">How subassemblies fit together</h2>
+  <p class="muted">Exploded view and assembly sequence, plus subsystem interfaces.</p>
+
+  <h3>Exploded view</h3>
+  <p class="muted">Top-level assembly in exploded state. Figures 1–8.</p>
+  <div class="slideshow" id="frame-exploded-slideshow">
+    <div class="slideshow-track">
+      <div class="slide active" data-caption="Figure 1. Top-level assembly (exploded)."><img src="../Overview/images/exploded/01.png" alt="Top-level assembly exploded 1"></div>
+      <div class="slide" data-caption="Figure 2. Top-level assembly (exploded)."><img src="../Overview/images/exploded/02.png" alt="Top-level assembly exploded 2"></div>
+      <div class="slide" data-caption="Figure 3. Top-level assembly (exploded)."><img src="../Overview/images/exploded/03.png" alt="Top-level assembly exploded 3"></div>
+      <div class="slide" data-caption="Figure 4. Top-level assembly (exploded)."><img src="../Overview/images/exploded/04.png" alt="Top-level assembly exploded 4"></div>
+      <div class="slide" data-caption="Figure 5. Top-level assembly (exploded)."><img src="../Overview/images/exploded/05.png" alt="Top-level assembly exploded 5"></div>
+      <div class="slide" data-caption="Figure 6. Top-level assembly (exploded)."><img src="../Overview/images/exploded/06.png" alt="Top-level assembly exploded 6"></div>
+      <div class="slide" data-caption="Figure 7. Top-level assembly (exploded)."><img src="../Overview/images/exploded/07.png" alt="Top-level assembly exploded 7"></div>
+      <div class="slide" data-caption="Figure 8. Top-level assembly (exploded)."><img src="../Overview/images/exploded/08.png" alt="Top-level assembly exploded 8"></div>
+    </div>
+    <p class="slideshow-caption" id="frame-exploded-caption" aria-live="polite">Figure 1. Top-level assembly (exploded).</p>
+    <div class="slideshow-controls">
+      <button type="button" id="frame-exploded-prev" aria-label="Previous">← Previous</button>
+      <span class="slideshow-counter" id="frame-exploded-counter">1 / 8</span>
+      <button type="button" id="frame-exploded-next" aria-label="Next">Next →</button>
+    </div>
+  </div>
+
+  <h3>Assembly steps</h3>
+  <p class="muted">CAD sequence showing major sub-assemblies being placed onto the frame. 5 figures.</p>
+  <div class="slideshow" id="frame-assembly-steps-slideshow">
+    <div class="slideshow-track">
+      <div class="slide active" data-caption="Figure 1. Step 1: Mount the main 3 interfaces on the frame"><img src="../Overview/images/assembly-steps/01.png" alt="Assembly step 1"></div>
+      <div class="slide" data-caption="Figure 2. Step 2: Mount the yoke and extraction/synchronisation system on the drive shafts"><img src="../Overview/images/assembly-steps/02.png" alt="Assembly step 2"></div>
+      <div class="slide" data-caption="Figure 3. Step 3.1: Place the plunger drive system between the 2 mount plates, connect the plunger drive shaft to the yoke and plunger drive bracket"><img src="../Overview/images/assembly-steps/03.png" alt="Assembly step 3 — Plunger drive between mount plates"></div>
+      <div class="slide" data-caption="Figure 4. Step 3.2: Plunger drive system in place"><img src="../Overview/images/assembly-steps/04.png" alt="Assembly step 4"></div>
+      <div class="slide" data-caption="Figure 5. Step 4: Mount the hinges to the mount plates, then connect them to the feeder body and shells."><img src="../Overview/images/assembly-steps/05.png" alt="Assembly step 5"></div>
+    </div>
+    <p class="slideshow-caption" id="frame-assembly-steps-caption" aria-live="polite">Figure 1. Assembly step.</p>
+    <div class="slideshow-controls">
+      <button type="button" id="frame-assembly-steps-prev" aria-label="Previous">← Previous</button>
+      <span class="slideshow-counter" id="frame-assembly-steps-counter">1 / 5</span>
+      <button type="button" id="frame-assembly-steps-next" aria-label="Next">Next →</button>
+    </div>
+  </div>
+
+  <h3>Subsystem colour legend</h3>
+  <p class="muted">CAD colour key for the top-level assembly. Each subsystem links to its RFP section.</p>
+  <table class="colour-key">
+    <thead>
+      <tr>
+        <th class="sw">Colour</th><th>Subsystem</th>
+        <th class="sw">Colour</th><th>Subsystem</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="sw"><span class="swatch" style="background:#A4E637"></span></td><td><a href="../Frame/">Frame</a></td>
+        <td class="sw"><span class="swatch" style="background:#FFE899"></span> <span class="swatch" style="background:#FF95DA"></span> <span class="swatch" style="background:#1E7334"></span></td><td><a href="../Drivetrain/">Drivetrain</a></td>
+      </tr>
+      <tr>
+        <td class="sw"><span class="swatch" style="background:#C41D63"></span> <span class="swatch" style="background:#E6612E"></span></td><td><a href="../Transmission/">Transmission</a></td>
+        <td class="sw"><span class="swatch" style="background:#FCAB3B"></span></td><td><a href="../Collection/">Collection</a></td>
+      </tr>
+      <tr>
+        <td class="sw"><span class="swatch" style="background:#317DDE"></span></td><td><a href="../Extraction-syncronisation/">Extraction &amp; synchronisation</a></td>
+        <td class="sw"><span class="swatch" style="background:#71C32D"></span></td><td><a href="../Feeder/">Fruit intake</a></td>
+      </tr>
+      <tr>
+        <td class="sw"><span class="swatch" style="background:#F4FF43"></span> <span class="swatch" style="background:#2E7BDD"></span> <span class="swatch" style="background:#9B79E6"></span> <span class="swatch" style="background:#F9A93C"></span></td><td><a href="../Plug-ejection/">Core ejection</a></td>
+        <td class="sw"><span class="swatch" style="background:#D822B0"></span> <span class="swatch" style="background:#2793AE"></span></td><td><a href="../Outflow-disposal/">Disposal</a></td>
+      </tr>
+      <tr>
+        <td class="sw"><span class="swatch" style="background:#489B27"></span> <span class="swatch" style="background:#F54646"></span> <span class="swatch" style="background:#7838DC"></span> <span class="swatch" style="background:#469925"></span> <span class="swatch" style="background:#F44545"></span></td><td><a href="../Enclosure-shell/">Enclosure / shell</a></td>
+        <td class="sw"><span class="na">—</span></td><td><a href="../Clean-in-place/">CIP</a></td>
+      </tr>
+      <tr>
+        <td class="sw"><span class="na">—</span></td><td><a href="../Controls-Electronics/">Controls &amp; electronics</a></td>
+        <td class="sw"></td><td></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Subsystem closeups</h3>
+  <p class="muted">Close-ups of how key subsystems fit together. 7 figures.</p>
+  <div class="slideshow" id="frame-subsystem-closeups-slideshow">
+    <div class="slideshow-track">
+      <div class="slide active" data-caption="Figure 1. Plunger driver, collection, and plunger — core ejection and collection interface."><img src="../Overview/images/subsystem-closeups/01.png" alt="Subsystem closeup 1"></div>
+      <div class="slide" data-caption="Figure 2. Plunger driver, collection, and plunger — core ejection and collection interface."><img src="../Overview/images/subsystem-closeups/02.png" alt="Subsystem closeup 2"></div>
+      <div class="slide" data-caption="Figure 3. Yoke, drivetrain, and extraction synchronisation — transmission and extraction interface."><img src="../Overview/images/subsystem-closeups/03.png" alt="Subsystem closeup 3"></div>
+      <div class="slide" data-caption="Figure 4. Yoke, drivetrain, and extraction synchronisation — transmission and extraction interface."><img src="../Overview/images/subsystem-closeups/04.png" alt="Subsystem closeup 4"></div>
+      <div class="slide" data-caption="Figure 5. Shell and hinges to mount plates — enclosure and hinge connections."><img src="../Overview/images/subsystem-closeups/05.png" alt="Subsystem closeup 5"></div>
+      <div class="slide" data-caption="Figure 6. Shell and hinges to mount plates — enclosure and hinge connections."><img src="../Overview/images/subsystem-closeups/06.png" alt="Subsystem closeup 6"></div>
+      <div class="slide" data-caption="Figure 7. Shell and hinges to mount plates — enclosure and hinge connections."><img src="../Overview/images/subsystem-closeups/07.png" alt="Subsystem closeup 7"></div>
+    </div>
+    <p class="slideshow-caption" id="frame-subsystem-closeups-caption" aria-live="polite">Figure 1. Plunger driver, collection, and plunger — core ejection and collection interface.</p>
+    <div class="slideshow-controls">
+      <button type="button" id="frame-subsystem-closeups-prev" aria-label="Previous">← Previous</button>
+      <span class="slideshow-counter" id="frame-subsystem-closeups-counter">1 / 7</span>
+      <button type="button" id="frame-subsystem-closeups-next" aria-label="Next">Next →</button>
+    </div>
+  </div>
+
+  <h3>Drive and structure</h3>
+  <ul>
+    <li><strong><a href="../Drivetrain/">Drivetrain</a></strong> — Motor and reducer drive the belt and gear train. Cam bearings (shaft extensions) connect to the <a href="../Transmission/">transmission</a>.</li>
+    <li><strong><a href="../Transmission/">Transmission</a></strong> — Yoke and two 35 mm drive shafts with LMK35UU linear bearings convert rotary motion into the linear stroke that drives extraction (driven bracket, peelers) and core ejection.</li>
+    <li><strong><a href="index.html">Frame</a></strong> — Main frame carries three interface plates: loaded mount plate (collection + static side of extraction), transmission mount plate (yoke, shafts, bearings), and drivetrain mount plate. Leveling mounts at each leg.</li>
+    <li><strong><a href="../Enclosure-shell/">Enclosure / shell</a></strong> — Plunger cover and drivetrain cover protect users; overcentered hinges hold lids open or shut. The feeder is also hinged for access and CIP.</li>
+  </ul>
+
+  <h3>Subassembly hierarchy</h3>
+  <p>On the <a href="../index.html">main index</a>, each subsystem (1–11) lists its subassemblies as indented items:</p>
+  <ul>
+    <li><strong>1. Frame</strong> — Frame construction, three interface plates, assembly process</li>
+    <li><strong>2. Drivetrain</strong> — Motor, reducer, gears and cam bearings, mount plate</li>
+    <li><strong>3. Transmission system</strong> — Transmission mount plate, drive shafts, yoke</li>
+    <li><strong>4. Extraction &amp; synchronisation</strong> — Fruit support, driven peelers, driven bracket, chute deflectors</li>
+    <li><strong>5. Collection</strong> — Static peelers, juice collectors, plug cutter, static deflectors</li>
+    <li><strong>6. Fruit intake system</strong> — Feeding subassembly, feeder body, entry tubes, feeder hinges</li>
+    <li><strong>7. Core ejection</strong> — Plunger drive bracket, plungers, plunger drive system in side panels</li>
+    <li><strong>8. Disposal system</strong> — Peel chute, core chutes, augers, deflectors</li>
+    <li><strong>9. Enclosure / shell</strong> — Covers and overcentered hinges</li>
+  </ul>
+  <p class="muted">Detail and interfaces are owner-provided; final tolerancing and assembly are for contractors. See <a href="../Overview/Questions-for-RFP.html">Questions for RFP</a> to flush out parameters per subsystem and subassembly.</p>
 
   <p><a href="Frame.md">Frame.md</a> (source)</p>
   <script>
 (function(){
-  var el = document.getElementById('frame-slideshow');
-  if (!el) return;
-  var slides = el.querySelectorAll('.slide');
-  var cap = document.getElementById('frame-caption');
-  var counter = document.getElementById('frame-counter');
-  var n = slides.length;
-  var i = 0;
-  function go(k) { i = (k + n) % n; slides.forEach(function(s,j){ s.classList.toggle('active', j===i); }); if (cap) cap.textContent = slides[i].getAttribute('data-caption') || ''; if (counter) counter.textContent = (i+1) + ' / ' + n; }
-  el.querySelector('#frame-prev').addEventListener('click', function(){ go(i-1); });
-  el.querySelector('#frame-next').addEventListener('click', function(){ go(i+1); });
-  var hash = window.location.hash;
-  if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
+  function initSlideshow(id) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    var slides = el.querySelectorAll('.slide');
+    var capId = id.replace('-slideshow','-caption');
+    var counterId = id.replace('-slideshow','-counter');
+    var prevId = id.replace('-slideshow','-prev');
+    var nextId = id.replace('-slideshow','-next');
+    var cap = document.getElementById(capId);
+    var counter = document.getElementById(counterId);
+    var n = slides.length, i = 0;
+    function go(k) {
+      i = (k + n) % n;
+      slides.forEach(function(s,j){ s.classList.toggle('active', j===i); });
+      if (cap) cap.textContent = slides[i].getAttribute('data-caption') || '';
+      if (counter) counter.textContent = (i+1) + ' / ' + n;
+    }
+    var prevBtn = document.getElementById(prevId);
+    var nextBtn = document.getElementById(nextId);
+    if (prevBtn) prevBtn.addEventListener('click', function(){ go(i-1); });
+    if (nextBtn) nextBtn.addEventListener('click', function(){ go(i+1); });
+  }
+  initSlideshow('frame-exploded-slideshow');
+  initSlideshow('frame-assembly-steps-slideshow');
+  initSlideshow('frame-subsystem-closeups-slideshow');
 })();
   </script>
 </body>

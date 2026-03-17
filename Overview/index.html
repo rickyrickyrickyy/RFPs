@@ -33,6 +33,8 @@
     table.colour-key td.sw { width: 6rem; }
     table.colour-key td.desc { max-width: 28rem; }
     table.colour-key td.sw .na { color: var(--muted); font-size: 0.9em; }
+    .flow { background: rgba(88, 166, 255, 0.08); border: 1px solid var(--border); border-radius: 8px; padding: 1rem 1.25rem; margin: 1rem 0; }
+    .flow ol { margin: 0.5rem 0 0 1rem; }
   </style>
 </head>
 <body>
@@ -57,18 +59,31 @@
     <h2>How the machine works</h2>
     <p><a href="Delijuice-cycle.html">Delijuice extraction cycle</a> — the four steps (fruit intake, compression, juice outflow, core expulsion) and stroke timing.</p>
   </section>
+
+  <section>
+    <h2>Product flow (fruit → juice and waste)</h2>
+    <div class="flow">
+      <ol>
+        <li><strong><a href="../Feeder/">Fruit intake system</a></strong> — Fruit enters via duct/hopper. The feeder body (on its hinge) supports the feeding subassembly and entry tubes. Sync springs drop fruit one at a time onto the <a href="../Extraction-syncronisation/">fruit support</a>.</li>
+        <li><strong><a href="../Extraction-syncronisation/">Extraction &amp; synchronisation</a></strong> — Fruit support stages each orange; driven peelers (on the driven bracket) mesh with <a href="../Collection/">static peelers</a>. Chute deflectors direct peel to the back of the bin. Fingers interlace; peel goes to disposal; juice and core stay with the collection side.</li>
+        <li><strong><a href="../Collection/">Collection</a></strong> — Static peelers, juice collectors (Y-tubes), filter tube, and plug cutter sit on the loaded mount plate. Juice flows through filter slots into collectors; the centre core is held in the plug cutter. Static deflectors direct peel to the front of the bin.</li>
+        <li><strong><a href="../Plug-ejection/">Core ejection</a></strong> — After the pressing stroke, the plunger (driven by the plunger drive bracket, rods, and springs) ejects the core from the plug cutter. The core falls into the <a href="../Outflow-disposal/">core chute</a>; juice has already left via the collectors.</li>
+        <li><strong><a href="../Outflow-disposal/">Disposal system</a></strong> — Peel chute and core chutes receive peel and cores; augers carry both away separately.</li>
+      </ol>
+    </div>
+  </section>
   
   <section>
     <h2>Top-level assemblies</h2>
-    <p>Each subsystem has its own RFP section with photos, Q&A, and part/parameter details. Subassemblies are listed under each subsystem on the main index. CAD colour keys are per subsystem; the legend below lists all 11 subsystems with their CAD colour(s) and a short description..</p>
+    <p>Each subsystem has its own RFP section with photos, Q&A, and part/parameter details. The legend below lists all 11 subsystems with their CAD colour(s) and a short description..</p>
     <table class="colour-key">
       <thead><tr><th class="n">#</th><th class="sw">Colour</th><th>Subsystem</th><th class="desc">Purpose</th></tr></thead>
       <tbody>
         <tr><td class="n">1</td><td class="sw"><span class="swatch" style="background:#A4E637"></span></td><td><a href="../Frame/">Frame</a></td><td class="desc">Main mounting structure for all subsystems</td></tr>
         <tr><td class="n">2</td><td class="sw"><span class="swatch" style="background:#FFE899"></span> <span class="swatch" style="background:#FF95DA"></span> <span class="swatch" style="background:#1E7334"></span></td><td><a href="../Drivetrain/">Drivetrain</a></td><td class="desc">Power system for the juicer</td></tr>
         <tr><td class="n">3</td><td class="sw"><span class="swatch" style="background:#C41D63"></span> <span class="swatch" style="background:#E6612E"></span></td><td><a href="../Transmission/">Transmission system</a></td><td class="desc">Transmits force from the drivetrain to the extraction/synchronisation system</td></tr>
-        <tr><td class="n">4</td><td class="sw"><span class="swatch" style="background:#FCAB3B"></span></td><td><a href="../Collection/">Collection</a></td><td class="desc">Collects juice from the fruit</td></tr>
-        <tr><td class="n">5</td><td class="sw"><span class="swatch" style="background:#317DDE"></span></td><td><a href="../Extraction-syncronisation/">Extraction &amp; synchronisation</a></td><td class="desc">   Synchronizes the extraction of juice from the fruit</td></tr>
+        <tr><td class="n">4</td><td class="sw"><span class="swatch" style="background:#317DDE"></span></td><td><a href="../Extraction-syncronisation/">Extraction &amp; synchronisation</a></td><td class="desc">Synchronizes the extraction of juice from the fruit</td></tr>
+        <tr><td class="n">5</td><td class="sw"><span class="swatch" style="background:#FCAB3B"></span></td><td><a href="../Collection/">Collection</a></td><td class="desc">Collects juice from the fruit</td></tr>
         <tr><td class="n">6</td><td class="sw"><span class="swatch" style="background:#71C32D"></span></td><td><a href="../Feeder/">Fruit intake system</a></td><td class="desc">Feeds the fruit into the juicer</td></tr>
         <tr><td class="n">7</td><td class="sw"><span class="swatch" style="background:#F4FF43"></span> <span class="swatch" style="background:#2E7BDD"></span> <span class="swatch" style="background:#9B79E6"></span> <span class="swatch" style="background:#F9A93C"></span></td><td><a href="../Plug-ejection/">Core ejection</a></td><td class="desc">Expels the core of the fruit</td></tr>
         <tr><td class="n">8</td><td class="sw"><span class="swatch" style="background:#D822B0"></span> <span class="swatch" style="background:#2793AE"></span></td><td><a href="../Outflow-disposal/">Disposal system</a></td><td class="desc">Funnels the peel and core of the fruit into augers</td></tr>
@@ -100,71 +115,8 @@
         <button type="button" id="top-assembled-next" aria-label="Next">Next →</button>
       </div>
     </div>
-
-    <h3>Exploded views</h3>
-    <p class="muted">Top-level assembly in exploded state. Figures 1–8.</p>
-    <div class="slideshow" id="top-exploded-slideshow">
-      <div class="slideshow-track">
-        <div class="slide active" id="expl1" data-caption="Figure 1. Top-level assembly (exploded)."><img src="images/exploded/01.png" alt="Top-level assembly exploded 1"></div>
-        <div class="slide" id="expl2" data-caption="Figure 2. Top-level assembly (exploded)."><img src="images/exploded/02.png" alt="Top-level assembly exploded 2"></div>
-        <div class="slide" id="expl3" data-caption="Figure 3. Top-level assembly (exploded)."><img src="images/exploded/03.png" alt="Top-level assembly exploded 3"></div>
-        <div class="slide" id="expl4" data-caption="Figure 4. Top-level assembly (exploded)."><img src="images/exploded/04.png" alt="Top-level assembly exploded 4"></div>
-        <div class="slide" id="expl5" data-caption="Figure 5. Top-level assembly (exploded)."><img src="images/exploded/05.png" alt="Top-level assembly exploded 5"></div>
-        <div class="slide" id="expl6" data-caption="Figure 6. Top-level assembly (exploded)."><img src="images/exploded/06.png" alt="Top-level assembly exploded 6"></div>
-        <div class="slide" id="expl7" data-caption="Figure 7. Top-level assembly (exploded)."><img src="images/exploded/07.png" alt="Top-level assembly exploded 7"></div>
-        <div class="slide" id="expl8" data-caption="Figure 8. Top-level assembly (exploded)."><img src="images/exploded/08.png" alt="Top-level assembly exploded 8"></div>
-      </div>
-      <p class="slideshow-caption" id="top-exploded-caption" aria-live="polite">Figure 1. Top-level assembly (exploded).</p>
-      <div class="slideshow-controls">
-        <button type="button" id="top-exploded-prev" aria-label="Previous">← Previous</button>
-        <span class="slideshow-counter" id="top-exploded-counter">1 / 8</span>
-        <button type="button" id="top-exploded-next" aria-label="Next">Next →</button>
-      </div>
-    </div>
   </section>
 
-  <section>
-    <h2>Assembly steps</h2>
-    <p>CAD sequence showing major sub-assemblies being placed onto the frame. 5 figures.</p>
-    <div class="slideshow" id="assembly-steps-slideshow">
-      <div class="slideshow-track">
-        <div class="slide active" data-caption="Figure 1. Assembly step."><img src="images/assembly-steps/01.png" alt="Assembly step 1"></div>
-        <div class="slide" data-caption="Figure 2. Assembly step."><img src="images/assembly-steps/02.png" alt="Assembly step 2"></div>
-        <div class="slide" data-caption="Figure 3. Assembly step: Plunger drive system between mount plates."><img src="images/assembly-steps/03.png" alt="Assembly step 3 — Plunger drive between mount plates"></div>
-        <div class="slide" data-caption="Figure 4. Assembly step."><img src="images/assembly-steps/04.png" alt="Assembly step 4"></div>
-        <div class="slide" data-caption="Figure 5. Assembly step."><img src="images/assembly-steps/05.png" alt="Assembly step 5"></div>
-      </div>
-      <p class="slideshow-caption" id="assembly-steps-caption" aria-live="polite">Figure 1. Assembly step.</p>
-      <div class="slideshow-controls">
-        <button type="button" id="assembly-steps-prev" aria-label="Previous">← Previous</button>
-        <span class="slideshow-counter" id="assembly-steps-counter">1 / 5</span>
-        <button type="button" id="assembly-steps-next" aria-label="Next">Next →</button>
-      </div>
-    </div>
-  </section>
-
-
-  <section>
-    <h2>Subsystem closeups</h2>
-    <p class="muted">Close-ups of how key subsystems fit together: plunger driver, collection, and plunger; yoke, drivetrain, and extraction synchronisation; shell and hinges to mount plates. 7 figures.</p>
-    <div class="slideshow" id="subsystem-closeups-slideshow">
-      <div class="slideshow-track">
-        <div class="slide active" data-caption="Figure 1. Plunger driver, collection, and plunger — core ejection and collection interface."><img src="images/subsystem-closeups/01.png" alt="Subsystem closeup 1"></div>
-        <div class="slide" data-caption="Figure 2. Plunger driver, collection, and plunger — core ejection and collection interface."><img src="images/subsystem-closeups/02.png" alt="Subsystem closeup 2"></div>
-        <div class="slide" data-caption="Figure 3. Yoke, drivetrain, and extraction synchronisation — transmission and extraction interface."><img src="images/subsystem-closeups/03.png" alt="Subsystem closeup 3"></div>
-        <div class="slide" data-caption="Figure 4. Yoke, drivetrain, and extraction synchronisation — transmission and extraction interface."><img src="images/subsystem-closeups/04.png" alt="Subsystem closeup 4"></div>
-        <div class="slide" data-caption="Figure 5. Shell and hinges to mount plates — enclosure and hinge connections."><img src="images/subsystem-closeups/05.png" alt="Subsystem closeup 5"></div>
-        <div class="slide" data-caption="Figure 6. Shell and hinges to mount plates — enclosure and hinge connections."><img src="images/subsystem-closeups/06.png" alt="Subsystem closeup 6"></div>
-        <div class="slide" data-caption="Figure 7. Shell and hinges to mount plates — enclosure and hinge connections."><img src="images/subsystem-closeups/07.png" alt="Subsystem closeup 7"></div>
-      </div>
-      <p class="slideshow-caption" id="subsystem-closeups-caption" aria-live="polite">Figure 1. Plunger driver, collection, and plunger — core ejection and collection interface.</p>
-      <div class="slideshow-controls">
-        <button type="button" id="subsystem-closeups-prev" aria-label="Previous">← Previous</button>
-        <span class="slideshow-counter" id="subsystem-closeups-counter">1 / 7</span>
-        <button type="button" id="subsystem-closeups-next" aria-label="Next">Next →</button>
-      </div>
-    </div>
-  </section>
 
   <section id="general-design">
     <h2>General design, manufacturing, and food-safety requirements</h2>
@@ -217,9 +169,6 @@
     if (nextBtn) nextBtn.addEventListener('click', function(){ go(i+1); });
   }
   initSlideshow('top-assembled-slideshow');
-  initSlideshow('top-exploded-slideshow');
-  initSlideshow('subsystem-closeups-slideshow');
-  initSlideshow('assembly-steps-slideshow');
 })();
   </script>
 </body>

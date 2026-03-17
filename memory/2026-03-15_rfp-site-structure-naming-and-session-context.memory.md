@@ -19,7 +19,7 @@ Use these in index.html, Overview, subsystem pages, Frame/How-subassemblies-fit,
 ## Key pages and locations
 
 - **Delijuice cycle:** `Overview/Delijuice-cycle.html` — four steps (fruit intake, compression, juice outflow, core expulsion); reverse stroke = intake + core expulsion, forward = compression + juice outflow. Terminology: core (not plug) in body text; "plug cutter" kept as part name.
-- **How subassemblies fit together:** `Frame/How-subassemblies-fit.html` (moved from Overview). Linked from Frame index and from main index under Frame only.
+- **How subassemblies fit together:** now merged into `Frame/index.html` (anchor `#how-subassemblies-fit-together`).
 - **Loads and load paths:** `Frame/Loads-and-load-paths.html` — drivetrain, transmission, extraction, core ejection reaction loads and paths to floor.
 - **Project overview:** `Overview/index.html` — top-level assemblies image (placeholder `Overview/images/top-level-assemblies.png`), What P6 is, How the machine works (link to Delijuice cycle), Subsystems list, General design/food-safety, Third-party.
 - **Controls and electronics:** User control panel (E-stop, on/off, start/stop, indicators), Safety switches (3 lids), Motor control and power (AC contactor, starter, WEG W22), Yoke position sensor (TBD).
