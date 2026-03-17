@@ -1,0 +1,7 @@
+.venv/
+.venv-colors/
+screenshots/
+
+# Cursor / workspace artifacts
+.cursor/skills/
+RFPs.code-workspace
