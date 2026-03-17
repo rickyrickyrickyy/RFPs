@@ -16,6 +16,19 @@
     .muted { color: var(--muted); font-size: 0.9rem; }
     section { margin: 1rem 0; }
     li { margin: 0.35rem 0; }
+    .swatch { display: inline-block; width: 1rem; height: 1rem; border: 1px solid var(--border); border-radius: 2px; vertical-align: middle; }
+    .slideshow { margin: 1rem 0; }
+    .slideshow .slide { display: none; }
+    .slideshow .slide.active { display: block; }
+    .slideshow .slide img { max-width: 100%; height: auto; border: 1px solid var(--border); border-radius: 6px; display: block; }
+    .slideshow-caption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); min-height: 2em; }
+    .slideshow-controls { display: flex; align-items: center; gap: 0.75rem; margin-top: 0.5rem; flex-wrap: wrap; }
+    .slideshow-controls button { background: var(--border); color: var(--text); border: none; padding: 0.3rem 0.6rem; border-radius: 4px; cursor: pointer; font-size: 0.9rem; }
+    .slideshow-controls button:hover { background: var(--accent); color: #fff; }
+    .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
+    table.colour-key { width: 100%; border-collapse: collapse; font-size: 0.85rem; margin: 0.5rem 0; }
+    table.colour-key th, table.colour-key td { text-align: left; padding: 0.25rem 0.4rem; border-bottom: 1px solid var(--border); }
+    table.colour-key th { color: var(--muted); font-weight: 600; }
   </style>
 </head>
 <body>
@@ -25,8 +38,156 @@
 
   <section>
     <h2>Top-level assemblies</h2>
-    <p>Overview of all top-level assemblies by colour (CAD colour key). Add image as <code>Overview/images/top-level-assemblies.png</code> when ready.</p>
-    <p><img src="images/top-level-assemblies.png" alt="Top-level assemblies by colour" style="max-width:100%; height:auto; border:1px solid var(--border); border-radius:6px;"></p>
+    <p>CAD views of the full machine by subsystem colour. Use the colour key below to identify frame, fruit intake, collection, core ejection, disposal, drivetrain, transmission, extraction sync, and shell.</p>
+    <table class="colour-key">
+      <thead><tr><th>Colour</th><th>Subsystem</th></tr></thead>
+      <tbody>
+        <tr><td><span class="swatch" style="background:#A4E637"></span> #A4E637</td><td>Frame</td></tr>
+        <tr><td><span class="swatch" style="background:#71C32D"></span> #71C32D</td><td>Fruit intake system (feeder)</td></tr>
+        <tr><td><span class="swatch" style="background:#FCAB3B"></span> #FCAB3B</td><td>Collection</td></tr>
+        <tr><td><span class="swatch" style="background:#F4FF43"></span> <span class="swatch" style="background:#2E7BDD"></span> <span class="swatch" style="background:#9B79E6"></span> <span class="swatch" style="background:#F9A93C"></span></td><td>Core ejection</td></tr>
+        <tr><td><span class="swatch" style="background:#D822B0"></span> <span class="swatch" style="background:#2793AE"></span></td><td>Disposal system</td></tr>
+        <tr><td><span class="swatch" style="background:#FFE899"></span> <span class="swatch" style="background:#FF95DA"></span> <span class="swatch" style="background:#1E7334"></span></td><td>Drivetrain</td></tr>
+        <tr><td><span class="swatch" style="background:#C41D63"></span> <span class="swatch" style="background:#E6612E"></span></td><td>Transmission</td></tr>
+        <tr><td><span class="swatch" style="background:#317DDE"></span> #317DDE</td><td>Extraction synchronisation</td></tr>
+        <tr><td><span class="swatch" style="background:#489B27"></span> <span class="swatch" style="background:#F54646"></span> <span class="swatch" style="background:#7838DC"></span> <span class="swatch" style="background:#469925"></span> <span class="swatch" style="background:#F44545"></span></td><td>Shell</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Assembled views</h3>
+    <p class="muted">Top-level assembly in assembled state. Figures 1–10.</p>
+    <div class="slideshow" id="top-assembled-slideshow">
+      <div class="slideshow-track">
+        <div class="slide active" id="assem1" data-caption="Figure 1. Top-level assembly (assembled)."><img src="images/assembled/01.png" alt="Top-level assembly assembled 1"></div>
+        <div class="slide" id="assem2" data-caption="Figure 2. Top-level assembly (assembled)."><img src="images/assembled/02.png" alt="Top-level assembly assembled 2"></div>
+        <div class="slide" id="assem3" data-caption="Figure 3. Top-level assembly (assembled)."><img src="images/assembled/03.png" alt="Top-level assembly assembled 3"></div>
+        <div class="slide" id="assem4" data-caption="Figure 4. Top-level assembly (assembled)."><img src="images/assembled/04.png" alt="Top-level assembly assembled 4"></div>
+        <div class="slide" id="assem5" data-caption="Figure 5. Top-level assembly (assembled)."><img src="images/assembled/05.png" alt="Top-level assembly assembled 5"></div>
+        <div class="slide" id="assem6" data-caption="Figure 6. Top-level assembly (assembled)."><img src="images/assembled/06.png" alt="Top-level assembly assembled 6"></div>
+        <div class="slide" id="assem7" data-caption="Figure 7. Top-level assembly (assembled)."><img src="images/assembled/07.png" alt="Top-level assembly assembled 7"></div>
+        <div class="slide" id="assem8" data-caption="Figure 8. Top-level assembly (assembled)."><img src="images/assembled/08.png" alt="Top-level assembly assembled 8"></div>
+        <div class="slide" id="assem9" data-caption="Figure 9. Top-level assembly (assembled)."><img src="images/assembled/09.png" alt="Top-level assembly assembled 9"></div>
+        <div class="slide" id="assem10" data-caption="Figure 10. Top-level assembly (assembled)."><img src="images/assembled/10.png" alt="Top-level assembly assembled 10"></div>
+      </div>
+      <p class="slideshow-caption" id="top-assembled-caption" aria-live="polite">Figure 1. Top-level assembly (assembled).</p>
+      <div class="slideshow-controls">
+        <button type="button" id="top-assembled-prev" aria-label="Previous">← Previous</button>
+        <span class="slideshow-counter" id="top-assembled-counter">1 / 10</span>
+        <button type="button" id="top-assembled-next" aria-label="Next">Next →</button>
+      </div>
+    </div>
+
+    <h3>Exploded views</h3>
+    <p class="muted">Top-level assembly in exploded state. Figures 1–10.</p>
+    <div class="slideshow" id="top-exploded-slideshow">
+      <div class="slideshow-track">
+        <div class="slide active" id="expl1" data-caption="Figure 1. Top-level assembly (exploded)."><img src="images/exploded/01.png" alt="Top-level assembly exploded 1"></div>
+        <div class="slide" id="expl2" data-caption="Figure 2. Top-level assembly (exploded)."><img src="images/exploded/02.png" alt="Top-level assembly exploded 2"></div>
+        <div class="slide" id="expl3" data-caption="Figure 3. Top-level assembly (exploded)."><img src="images/exploded/03.png" alt="Top-level assembly exploded 3"></div>
+        <div class="slide" id="expl4" data-caption="Figure 4. Top-level assembly (exploded)."><img src="images/exploded/04.png" alt="Top-level assembly exploded 4"></div>
+        <div class="slide" id="expl5" data-caption="Figure 5. Top-level assembly (exploded)."><img src="images/exploded/05.png" alt="Top-level assembly exploded 5"></div>
+        <div class="slide" id="expl6" data-caption="Figure 6. Top-level assembly (exploded)."><img src="images/exploded/06.png" alt="Top-level assembly exploded 6"></div>
+        <div class="slide" id="expl7" data-caption="Figure 7. Top-level assembly (exploded)."><img src="images/exploded/07.png" alt="Top-level assembly exploded 7"></div>
+        <div class="slide" id="expl8" data-caption="Figure 8. Top-level assembly (exploded)."><img src="images/exploded/08.png" alt="Top-level assembly exploded 8"></div>
+        <div class="slide" id="expl9" data-caption="Figure 9. Top-level assembly (exploded)."><img src="images/exploded/09.png" alt="Top-level assembly exploded 9"></div>
+        <div class="slide" id="expl10" data-caption="Figure 10. Top-level assembly (exploded)."><img src="images/exploded/10.png" alt="Top-level assembly exploded 10"></div>
+      </div>
+      <p class="slideshow-caption" id="top-exploded-caption" aria-live="polite">Figure 1. Top-level assembly (exploded).</p>
+      <div class="slideshow-controls">
+        <button type="button" id="top-exploded-prev" aria-label="Previous">← Previous</button>
+        <span class="slideshow-counter" id="top-exploded-counter">1 / 10</span>
+        <button type="button" id="top-exploded-next" aria-label="Next">Next →</button>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Subsystem closeups</h2>
+    <p>Close-ups of how key subsystems fit together: plunger driver, collection, and plunger; yoke, drivetrain, and extraction synchronisation; shell and hinges to mount plates.</p>
+
+    <h3>Plunger driver, collection, plunger</h3>
+    <p class="muted">Core ejection and collection interface. 3 figures.</p>
+    <div class="slideshow" id="closeup-plunger-slideshow">
+      <div class="slideshow-track">
+        <div class="slide active" data-caption="Figure 1. Plunger driver, collection, plunger."><img src="images/plunger-collection-plunger/01.png" alt="Plunger driver, collection, plunger 1"></div>
+        <div class="slide" data-caption="Figure 2. Plunger driver, collection, plunger."><img src="images/plunger-collection-plunger/02.png" alt="Plunger driver, collection, plunger 2"></div>
+        <div class="slide" data-caption="Figure 3. Plunger driver, collection, plunger."><img src="images/plunger-collection-plunger/03.png" alt="Plunger driver, collection, plunger 3"></div>
+      </div>
+      <p class="slideshow-caption" id="closeup-plunger-caption" aria-live="polite">Figure 1. Plunger driver, collection, plunger.</p>
+      <div class="slideshow-controls">
+        <button type="button" id="closeup-plunger-prev" aria-label="Previous">← Previous</button>
+        <span class="slideshow-counter" id="closeup-plunger-counter">1 / 3</span>
+        <button type="button" id="closeup-plunger-next" aria-label="Next">Next →</button>
+      </div>
+    </div>
+
+    <h3>Yoke, drivetrain, extraction synchronisation</h3>
+    <p class="muted">Transmission and extraction interface. 3 figures.</p>
+    <div class="slideshow" id="closeup-yoke-slideshow">
+      <div class="slideshow-track">
+        <div class="slide active" data-caption="Figure 1. Yoke, drivetrain, extraction sync."><img src="images/yoke-drivetrain-extraction/01.png" alt="Yoke, drivetrain, extraction 1"></div>
+        <div class="slide" data-caption="Figure 2. Yoke, drivetrain, extraction sync."><img src="images/yoke-drivetrain-extraction/02.png" alt="Yoke, drivetrain, extraction 2"></div>
+        <div class="slide" data-caption="Figure 3. Yoke, drivetrain, extraction sync."><img src="images/yoke-drivetrain-extraction/03.png" alt="Yoke, drivetrain, extraction 3"></div>
+      </div>
+      <p class="slideshow-caption" id="closeup-yoke-caption" aria-live="polite">Figure 1. Yoke, drivetrain, extraction sync.</p>
+      <div class="slideshow-controls">
+        <button type="button" id="closeup-yoke-prev" aria-label="Previous">← Previous</button>
+        <span class="slideshow-counter" id="closeup-yoke-counter">1 / 3</span>
+        <button type="button" id="closeup-yoke-next" aria-label="Next">Next →</button>
+      </div>
+    </div>
+
+    <h3>Shell and hinges to mount plates</h3>
+    <p class="muted">Enclosure and hinge connections. 4 figures.</p>
+    <div class="slideshow" id="closeup-shell-slideshow">
+      <div class="slideshow-track">
+        <div class="slide active" data-caption="Figure 1. Shell and hinges to mount plates."><img src="images/shell-hinges/01.png" alt="Shell and hinges 1"></div>
+        <div class="slide" data-caption="Figure 2. Shell and hinges to mount plates."><img src="images/shell-hinges/02.png" alt="Shell and hinges 2"></div>
+        <div class="slide" data-caption="Figure 3. Shell and hinges to mount plates."><img src="images/shell-hinges/03.png" alt="Shell and hinges 3"></div>
+        <div class="slide" data-caption="Figure 4. Shell and hinges to mount plates."><img src="images/shell-hinges/04.png" alt="Shell and hinges 4"></div>
+      </div>
+      <p class="slideshow-caption" id="closeup-shell-caption" aria-live="polite">Figure 1. Shell and hinges to mount plates.</p>
+      <div class="slideshow-controls">
+        <button type="button" id="closeup-shell-prev" aria-label="Previous">← Previous</button>
+        <span class="slideshow-counter" id="closeup-shell-counter">1 / 4</span>
+        <button type="button" id="closeup-shell-next" aria-label="Next">Next →</button>
+      </div>
+    </div>
+
+    <h3>Plunger drive system placed between mount plates</h3>
+    <p class="muted">Plunger drive system being placed down between the two mount plates. 3 figures.</p>
+    <div class="slideshow" id="closeup-plunger-drive-mount-slideshow">
+      <div class="slideshow-track">
+        <div class="slide active" data-caption="Figure 1. Plunger drive system between mount plates."><img src="images/plunger-drive-mount-plates/01.png" alt="Plunger drive between mount plates 1"></div>
+        <div class="slide" data-caption="Figure 2. Plunger drive system between mount plates."><img src="images/plunger-drive-mount-plates/02.png" alt="Plunger drive between mount plates 2"></div>
+        <div class="slide" data-caption="Figure 3. Plunger drive system between mount plates."><img src="images/plunger-drive-mount-plates/03.png" alt="Plunger drive between mount plates 3"></div>
+      </div>
+      <p class="slideshow-caption" id="closeup-plunger-drive-mount-caption" aria-live="polite">Figure 1. Plunger drive system between mount plates.</p>
+      <div class="slideshow-controls">
+        <button type="button" id="closeup-plunger-drive-mount-prev" aria-label="Previous">← Previous</button>
+        <span class="slideshow-counter" id="closeup-plunger-drive-mount-counter">1 / 3</span>
+        <button type="button" id="closeup-plunger-drive-mount-next" aria-label="Next">Next →</button>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Assembly steps</h2>
+    <p>CAD sequence showing major sub-assemblies being placed onto the frame. 4 figures.</p>
+    <div class="slideshow" id="assembly-steps-slideshow">
+      <div class="slideshow-track">
+        <div class="slide active" data-caption="Figure 1. Assembly step."><img src="images/assembly-steps/01.png" alt="Assembly step 1"></div>
+        <div class="slide" data-caption="Figure 2. Assembly step."><img src="images/assembly-steps/02.png" alt="Assembly step 2"></div>
+        <div class="slide" data-caption="Figure 3. Assembly step."><img src="images/assembly-steps/03.png" alt="Assembly step 3"></div>
+        <div class="slide" data-caption="Figure 4. Assembly step."><img src="images/assembly-steps/04.png" alt="Assembly step 4"></div>
+      </div>
+      <p class="slideshow-caption" id="assembly-steps-caption" aria-live="polite">Figure 1. Assembly step.</p>
+      <div class="slideshow-controls">
+        <button type="button" id="assembly-steps-prev" aria-label="Previous">← Previous</button>
+        <span class="slideshow-counter" id="assembly-steps-counter">1 / 4</span>
+        <button type="button" id="assembly-steps-next" aria-label="Next">Next →</button>
+      </div>
+    </div>
   </section>
 
   <section>
@@ -40,7 +201,7 @@
 
   <section>
     <h2>How the machine works</h2>
-    <p><a href="Delijuice-cycle.html">Delijuice extraction cycle</a> — the four steps (fruit intake, compression, juice outflow, plug expulsion) and stroke timing.</p>
+    <p><a href="Delijuice-cycle.html">Delijuice extraction cycle</a> — the four steps (fruit intake, compression, juice outflow, core expulsion) and stroke timing.</p>
   </section>
 
   <section>
@@ -52,9 +213,9 @@
       <li><strong>3.</strong> <a href="../Transmission/">Transmission system</a> — transmission mount plate, drive shafts, yoke</li>
       <li><strong>4.</strong> <a href="../Collection/">Collection</a> — static peelers, juice collectors, filter tube, plug cutter, static deflectors</li>
       <li><strong>5.</strong> <a href="../Extraction-syncronisation/">Extraction &amp; synchronisation</a> — fruit support, driven peelers, driven bracket, chute deflectors</li>
-      <li><strong>6.</strong> <a href="../Feeder/">Intake feeder system</a> — feeding subassembly, feeder body, entry tubes, feeder hinges</li>
-      <li><strong>7.</strong> <a href="../Plug-ejection/">Plug ejection</a> — plunger drive bracket, plungers, plunger drive system in side panels</li>
-      <li><strong>8.</strong> <a href="../Outflow-disposal/">Outflow / disposal</a> — peel chute, core chutes, augers, deflectors</li>
+      <li><strong>6.</strong> <a href="../Feeder/">Fruit intake system</a> — feeding subassembly, feeder body, entry tubes, feeder hinges</li>
+      <li><strong>7.</strong> <a href="../Plug-ejection/">Core ejection</a> — plunger drive bracket, plungers, plunger drive system in side panels</li>
+      <li><strong>8.</strong> <a href="../Outflow-disposal/">Disposal system</a> — peel chute, core chutes, augers, deflectors</li>
       <li><strong>9.</strong> <a href="../Enclosure-shell/">Enclosure / shell</a> — plunger cover, drivetrain cover, overcentered hinges</li>
       <li><strong>10.</strong> <a href="../Clean-in-place/">Clean-in-place (CIP)</a> — nozzles, pipes, third-party control</li>
       <li><strong>11.</strong> <a href="../Controls-Electronics/">Controls and electronics</a> — user panel, motor starter, safety switches, yoke position (TBD)</li>
@@ -92,5 +253,38 @@
   </section>
 
   <p class="back"><a href="../index.html">← Back to P6 RFP overview</a></p>
+  <script>
+(function(){
+  function initSlideshow(id) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    var slides = el.querySelectorAll('.slide');
+    var capId = id.replace('-slideshow','-caption');
+    var counterId = id.replace('-slideshow','-counter');
+    var prevId = id.replace('-slideshow','-prev');
+    var nextId = id.replace('-slideshow','-next');
+    var cap = document.getElementById(capId);
+    var counter = document.getElementById(counterId);
+    var n = slides.length, i = 0;
+    function go(k) {
+      i = (k + n) % n;
+      slides.forEach(function(s,j){ s.classList.toggle('active', j===i); });
+      if (cap) cap.textContent = slides[i].getAttribute('data-caption') || '';
+      if (counter) counter.textContent = (i+1) + ' / ' + n;
+    }
+    var prevBtn = document.getElementById(prevId);
+    var nextBtn = document.getElementById(nextId);
+    if (prevBtn) prevBtn.addEventListener('click', function(){ go(i-1); });
+    if (nextBtn) nextBtn.addEventListener('click', function(){ go(i+1); });
+  }
+  initSlideshow('top-assembled-slideshow');
+  initSlideshow('top-exploded-slideshow');
+  initSlideshow('closeup-plunger-slideshow');
+  initSlideshow('closeup-yoke-slideshow');
+    initSlideshow('closeup-shell-slideshow');
+  initSlideshow('closeup-plunger-drive-mount-slideshow');
+  initSlideshow('assembly-steps-slideshow');
+})();
+  </script>
 </body>
 </html>

@@ -1,0 +1,27 @@
+---
+description: In the RFP repo, load Marceline's profile and memory when doing RFP work so behavior is consistent across Cursor instances and local agents. Offer to save memory after significant updates.
+alwaysApply: true
+---
+
+# Load Marceline context for RFP work (persistent memory)
+
+Ricky is training **Marceline** to hold everything he knows about this project. Memory lives in this repo so it works in **any Cursor instance** and when offloading to a **local agent**.
+
+## When to load context
+
+When the conversation involves **RFP content**, **structure**, **naming**, **project decisions**, or **how to work with Ricky** in this repo:
+
+1. **Load** (in order): `marceline.md`, `README.md`, then all `memory/*.memory.md` (oldest first by filename).
+2. Use that context to stay consistent with prior decisions, naming (e.g. Fruit intake system, Core ejection, Disposal system), and project state.
+3. You do **not** need to announce that you loaded; just use the context.
+
+## When to update memory
+
+After **significant** changes—new sections, renames, structural decisions, or anything Ricky would want the next session (or another agent) to know:
+
+- **Offer** to save: e.g. "Want me to save this to Marceline's memory so the next session has it?"
+- If the user says yes (or "remember this", "save to Marceline's memory"), create `memory/YYYY-MM-DD_short-slug.memory.md` with a concise summary (markdown, `##` headings, key facts/decisions). Keep it short so Marceline can load it quickly.
+
+## Result
+
+Any Cursor instance or local agent that has this repo can read the same profile and memories and behave consistently. No separate "main prompt" or external store is required; the repo is the source of truth.

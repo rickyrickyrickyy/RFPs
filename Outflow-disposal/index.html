@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>2.4 Outflow / disposal — P6 RFP</title>
+  <title>2.4 Disposal system — P6 RFP</title>
   <style>
     :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
     body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
@@ -32,14 +32,14 @@
 </head>
 <body>
   <p class="back"><a href="../index.html">← Back to P6 RFP overview</a></p>
-  <h1>2.4 Outflow / disposal subsystem</h1>
-  <p class="muted">Peel chute (red), core chutes (welded to it), two augers (teal). Peels and plugs/cores taken away separately.</p>
+  <h1>2.4 Disposal system</h1>
+  <p class="muted">Peel chute (red), core chutes (welded to it), two augers (teal). Peels and cores are taken away separately.</p>
 
   <h2>Function (cycle)</h2>
   <ol>
-    <li>Plug from <a href="../Plug-ejection/">plug ejection</a> <strong>falls into core chute</strong>.</li>
+    <li>Core from <a href="../Plug-ejection/">core ejection</a> <strong>falls into core chute</strong>.</li>
     <li>Peels fall to sides of peelers, avoid core chutes, two channels.</li>
-    <li>Two augers take peels and plugs/cores away separately.</li>
+    <li>Two augers take peels and cores away separately.</li>
   </ol>
 
   <h2>Colour key &amp; components</h2>
@@ -47,8 +47,8 @@
   <table>
     <tr><th>Colour(s)</th><th>Component</th></tr>
     <tr><td><span class="swatch" style="background-color:#D43C3C"></span> <span class="swatch" style="background-color:#2768BC" title="alt"></span></td><td><strong>Peel chute</strong> — folded sheet metal; peels from sides of peelers</td></tr>
-    <tr><td>— <span class="swatch" style="background-color:#D79132" title="alt"></span></td><td><strong>Core chutes</strong> — welded to peel chute; plugs/cores after plug ejection</td></tr>
-    <tr><td><span class="swatch" style="background-color:#28B399"></span> <span class="swatch" style="background-color:#FFED9E" title="alt"></span></td><td><strong>Two augers</strong> — take peels and plugs/cores away separately</td></tr>
+    <tr><td>— <span class="swatch" style="background-color:#D79132" title="alt"></span></td><td><strong>Core chutes</strong> — welded to peel chute; cores after core ejection</td></tr>
+    <tr><td><span class="swatch" style="background-color:#28B399"></span> <span class="swatch" style="background-color:#FFED9E" title="alt"></span></td><td><strong>Two augers</strong> — take peels and cores away separately</td></tr>
   </table>
 
   <h2 id="gallery">Figures</h2>
@@ -75,7 +75,7 @@
 
   <h2>Interfaces</h2>
   <ul>
-    <li><strong>Input (plugs):</strong> From <a href="../Plug-ejection/">plug ejection</a> — plug falls into core chute.</li>
+    <li><strong>Input (cores):</strong> From <a href="../Plug-ejection/">core ejection</a> — core falls into core chute.</li>
     <li><strong>Input (peels):</strong> From <a href="../Collection/">collection</a>/extraction — peels to sides of peelers, two channels.</li>
     <li><strong>Output:</strong> Two augers convey peels and plugs/cores away separately.</li>
   </ul>
@@ -85,9 +85,9 @@
   <table class="iface-table">
     <thead><tr><th>Part</th><th>Interface / tolerance</th><th>Related</th></tr></thead>
     <tbody>
-      <tr><td>Core chutes</td><td>Receive plugs from plug ejection; welded to peel chute</td><td><a href="../Plug-ejection/">Plug-ejection</a></td></tr>
+      <tr><td>Core chutes</td><td>Receive cores from core ejection; welded to peel chute</td><td><a href="../Plug-ejection/">Core ejection</a></td></tr>
       <tr><td>Peel chute</td><td>Receives peels from sides of peelers (collection/extraction); two channels</td><td><a href="../Collection/">Collection</a></td></tr>
-      <tr><td>Augers</td><td>Two augers; convey peels and plugs/cores away separately</td><td>—</td></tr>
+      <tr><td>Augers</td><td>Two augers; convey peels and cores away separately</td><td>—</td></tr>
     </tbody>
   </table>
 

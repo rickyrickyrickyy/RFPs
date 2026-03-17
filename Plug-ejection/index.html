@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>2.2 Plug ejection / juice collection — P6 RFP</title>
+  <title>2.2 Core ejection / juice collection — P6 RFP</title>
   <style>
     :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
     body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
@@ -32,26 +32,26 @@
 </head>
 <body>
   <p class="back"><a href="../index.html">← Back to P6 RFP overview</a></p>
-  <h1>2.2 Plug ejection / plunger drive / juice collection</h1>
-  <p class="muted">Plunger, filter, plug cutter interface; plug ejection into disposal core chute.</p>
+  <h1>2.2 Core ejection</h1>
+  <p class="muted">Core ejection system: plunger drive bracket, plungers, and the plunger drive system in the side panels; ejects the core from the plug cutter into the disposal core chute.</p>
 
-  <h2>Plug ejection (cycle)</h2>
+  <h2>Core ejection (cycle)</h2>
   <ol>
-    <li><strong>Pressing stroke:</strong> Juice to <a href="../Collection/">collector</a> Y-section; plug remains in plug cutter / filter.</li>
-    <li><strong>Plug ejection:</strong> Plunger pushes through filter, ejects plug from plug cutter → plug <strong>falls into core chute</strong> (<a href="../Outflow-disposal/">disposal</a>).</li>
-    <li><strong>Disposal:</strong> Peels to sides of peelers; two augers take peels and plugs/cores away separately.</li>
+    <li><strong>Pressing stroke:</strong> Juice to <a href="../Collection/">collector</a> Y-section; core remains in plug cutter / filter.</li>
+    <li><strong>Core ejection:</strong> Plunger pushes through filter, ejects core from plug cutter → core <strong>falls into core chute</strong> (<a href="../Outflow-disposal/">disposal</a>).</li>
+    <li><strong>Disposal:</strong> Peels to sides of peelers; two augers take peels and cores away separately.</li>
   </ol>
 
   <h2>Colour key &amp; components</h2>
   <p class="muted">Plunger assembly, drive bracket, juice outflow — detail pages TBD. Green housings enclose spring and guide rods; interface with filter/plug-cutter and core chute.</p>
   <table>
     <tr><th>Colour(s)</th><th>Component</th></tr>
-    <tr><td><span class="swatch" style="background-color:#5151FA"></span></td><td><strong>Plunger</strong> — pushes through filter to eject plug (four in parallel)</td></tr>
+    <tr><td><span class="swatch" style="background-color:#5151FA"></span></td><td><strong>Plunger</strong> — pushes through filter to eject core (four in parallel)</td></tr>
     <tr><td><span class="swatch" style="background-color:#D1A4FF"></span></td><td><strong>Plunger drive bracket</strong> — carries plungers; connects to drive rods</td></tr>
     <tr><td><span class="swatch" style="background-color:#B31B5B"></span></td><td><strong>Plunger drive rods</strong> — linear actuation; through LMK16 into green housings</td></tr>
     <tr><td><span class="swatch" style="background-color:#EBA13D"></span></td><td><strong>LMK16 linear bearing</strong> — guides rods at housing interfaces</td></tr>
     <tr><td><span class="swatch" style="background-color:#8CC135"></span></td><td><strong>Plunger drive spring</strong> — return force; coiled around rod in housing</td></tr>
-    <tr><td>—</td><td><strong>Filter</strong> — plunger passes through; juice to <a href="../Collection/">Collection</a>. <strong>Plug cutter</strong> — in Collection; plug ejected by this system</td></tr>
+    <tr><td>—</td><td><strong>Filter</strong> — plunger passes through; juice to <a href="../Collection/">Collection</a>. <strong>Plug cutter</strong> — in Collection; core ejected by this system</td></tr>
   </table>
 
   <h2 id="gallery">Figures</h2>
@@ -75,8 +75,8 @@
 
   <h2>Interfaces</h2>
   <ul>
-    <li><strong>Input:</strong> Plug in plug cutter/filter after pressing stroke (from <a href="../Collection/">Collection</a>).</li>
-    <li><strong>Output:</strong> Plug ejected → falls into <a href="../Outflow-disposal/">disposal</a> core chute.</li>
+    <li><strong>Input:</strong> Core in plug cutter/filter after pressing stroke (from <a href="../Collection/">Collection</a>).</li>
+    <li><strong>Output:</strong> Core ejected → falls into <a href="../Outflow-disposal/">disposal</a> core chute.</li>
     <li><strong>Drive:</strong> Plunger actuation from <a href="../Drivetrain/">drivetrain</a> / <a href="../Transmission/">transmission</a> (yoke/cam).</li>
   </ul>
 
@@ -85,12 +85,12 @@
   <table class="iface-table">
     <thead><tr><th>Part</th><th>Interface / tolerance</th><th>Related</th></tr></thead>
     <tbody>
-      <tr><td>Plunger</td><td>Passes through filter; ejects plug from plug cutter</td><td><a href="../Collection/">Collection</a></td></tr>
+      <tr><td>Plunger</td><td>Passes through filter; ejects core from plug cutter</td><td><a href="../Collection/">Collection</a></td></tr>
       <tr><td>Plunger drive bracket</td><td>Carries four plungers; connected to plunger drive rods; moves in unison</td><td>—</td></tr>
       <tr><td>Plunger drive rods</td><td>Slide through LMK16 linear bearings; pass into green housings; driven by drivetrain/transmission</td><td><a href="../Drivetrain/">Drivetrain</a>, <a href="../Transmission/">Transmission</a></td></tr>
       <tr><td>LMK16 linear bearing</td><td>At housing entry/exit; guides plunger drive rods</td><td>—</td></tr>
       <tr><td>Plunger drive spring</td><td>Coiled around rod in green housing; return force</td><td>—</td></tr>
-      <tr><td>Plug (output)</td><td>Falls into core chute after ejection</td><td><a href="../Outflow-disposal/">Outflow-disposal</a></td></tr>
+      <tr><td>Core (output)</td><td>Falls into core chute after ejection</td><td><a href="../Outflow-disposal/">Disposal system</a></td></tr>
       <tr><td>Filter / plug cutter</td><td>Housed in collection; plunger interfaces with same station</td><td><a href="../Collection/">Collection</a></td></tr>
     </tbody>
   </table>
