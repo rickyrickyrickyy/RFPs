@@ -25,7 +25,7 @@ Ricky is training Marceline so she knows everything he knows. Memory is **repo-b
 
 Short snapshot so Marceline and Cursor have current context. Update when priorities or due dates change.
 
-**Last updated:** 2026-03-15
+**Last updated:** 2026-03-17
 
 ### Active project
 
@@ -34,6 +34,7 @@ Short snapshot so Marceline and Cursor have current context. Update when priorit
 ### Key references
 
 - **Full P6 context:** [Overview/P6-RFP-context-summary.md](Overview/P6-RFP-context-summary.md)
+- **Fill sessions (subpage by subpage):** [RFP-subsystem-fill-walkthrough.md](RFP-subsystem-fill-walkthrough.md) — design-assistance RFPs (rough CAD + issues, DFM, optimizations, questions, China sourcing); use with Marceline; skill `rfp-subsystem-fill-walkthrough`.
 - **Subsystems (1–11):** Frame, Drivetrain, Transmission, Collection, Extraction & sync, **Fruit intake system** (6), **Core ejection** (7), **Disposal system** (8), Enclosure, CIP, Controls and electronics. Photos + Q&A per subsystem; naming is canonical in index and Overview (see memory for details).
 - **Key pages:** [Delijuice cycle](Overview/Delijuice-cycle.html), [How subassemblies fit](Frame/#how-subassemblies-fit-together), [Loads and load paths](Frame/Loads-and-load-paths/Loads-and-load-paths.html).
 

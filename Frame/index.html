@@ -132,9 +132,9 @@
     <div class="slideshow-track">
       <div class="slide active" data-caption="Figure 1. Plunger driver, collection, and plunger — core ejection and collection interface."><img src="subsystem-closeups/01.png" alt="Subsystem closeup 1"></div>
       <div class="slide" data-caption="Figure 2. Plunger driver, collection, and plunger — core ejection and collection interface."><img src="subsystem-closeups/02.png" alt="Subsystem closeup 2"></div>
-      <div class="slide" data-caption="Figure 3. Yoke, drivetrain, and extraction synchronisation — transmission and extraction interface."><img src="subsystem-closeups/03.png" alt="Subsystem closeup 3"></div>
-      <div class="slide" data-caption="Figure 4. Yoke, drivetrain, and extraction synchronisation — transmission and extraction interface."><img src="subsystem-closeups/04.png" alt="Subsystem closeup 4"></div>
-      <div class="slide" data-caption="Figure 5. Yoke, drivetrain, and extraction synchronisation — transmission and extraction interface."><img src="subsystem-closeups/05.png" alt="Subsystem closeup 5"></div>
+      <div class="slide" data-caption="Figure 3. Drivetrain system closeup"><img src="subsystem-closeups/03.png" alt="Subsystem closeup 3"></div>
+      <div class="slide" data-caption="Figure 4. Transmission to extraction system closeup"><img src="subsystem-closeups/04.png" alt="Subsystem closeup 4"></div>
+      <div class="slide" data-caption="Figure 5. Transmission to extractoin system closeup"><img src="subsystem-closeups/05.png" alt="Subsystem closeup 5"></div>
       <div class="slide" data-caption="Figure 6. Shell and hinges to mount plates — enclosure and hinge connections."><img src="subsystem-closeups/06.png" alt="Subsystem closeup 6"></div>
       <div class="slide" data-caption="Figure 7. Shell and hinges to mount plates — enclosure and hinge connections."><img src="subsystem-closeups/07.png" alt="Subsystem closeup 7"></div>
       <div class="slide" data-caption="Figure 8. Shell and hinges to mount plates — enclosure and hinge connections."><img src="subsystem-closeups/08.png" alt="Subsystem closeup 8"></div>
@@ -148,6 +148,10 @@
   </div>
 
   <h2>Discussion</h2>
+  <h3>Details (from RFP draft)</h3>
+  <p>Main frame: 80×80×5 GB/T square tubes as main load-bearing members; #8 C-brackets for supporting members; all fully welded. Leveling: 6111K669 M24 100 mm Swivel Leveling Mounts (McMaster) on M24 tapped endplates at bottom of frame legs (six feet). Side rails with square holes for dowels; bolts and nuts secure bodies to cross beams.</p>
+  <p class="muted">Detail and interfaces are owner-provided; final tolerancing and assembly are for contractors. See <a href="../Overview/Questions-for-RFP.html">Questions for RFP</a> to flush out parameters per subsystem and subassembly.</p>
+
   <h3>Design principles</h3>
   <p>These principles guide frame design and any changes to the current configuration.</p>
   <table style="width:100%; border-collapse: collapse; font-size: 0.95rem;">
@@ -211,31 +215,6 @@
     </tbody>
   </table>
 
-  <h3>Details (from RFP draft)</h3>
-  <p>Main frame: 80×80×5 GB/T square tubes as main load-bearing members; #8 C-brackets for supporting members; all fully welded. Leveling: 6111K669 M24 100 mm Swivel Leveling Mounts (McMaster) on M24 tapped endplates at bottom of frame legs (six feet). Side rails with square holes for dowels; bolts and nuts secure bodies to cross beams.</p>
-
-  <h3>Drive and structure</h3>
-  <ul>
-    <li><strong><a href="../Drivetrain/">Drivetrain</a></strong> — Motor and reducer drive the belt and gear train. Cam bearings (shaft extensions) connect to the <a href="../Transmission/">transmission</a>.</li>
-    <li><strong><a href="../Transmission/">Transmission</a></strong> — Yoke and two 35 mm drive shafts with LMK35UU linear bearings convert rotary motion into the linear stroke that drives extraction (driven bracket, peelers) and core ejection.</li>
-    <li><strong><a href="index.html">Frame</a></strong> — Main frame carries three interface plates: loaded mount plate (collection + static side of extraction), transmission mount plate (yoke, shafts, bearings), and drivetrain mount plate. Leveling mounts at each leg.</li>
-    <li><strong><a href="../Enclosure-shell/">Enclosure / shell</a></strong> — Plunger cover and drivetrain cover protect users; overcentered hinges hold lids open or shut. The feeder is also hinged for access and CIP.</li>
-  </ul>
-
-  <h3>Subassembly hierarchy</h3>
-  <p>On the <a href="../index.html">main index</a>, each subsystem (1–11) lists its subassemblies as indented items:</p>
-  <ul>
-    <li><strong>1. Frame</strong> — Frame construction, three interface plates, assembly process</li>
-    <li><strong>2. Drivetrain</strong> — Motor, reducer, gears and cam bearings, mount plate</li>
-    <li><strong>3. Transmission system</strong> — Transmission mount plate, drive shafts, yoke</li>
-    <li><strong>4. Extraction &amp; synchronisation</strong> — Fruit support, driven peelers, driven bracket, chute deflectors</li>
-    <li><strong>5. Collection</strong> — Static peelers, juice collectors, plug cutter, static deflectors</li>
-    <li><strong>6. Fruit intake system</strong> — Feeding subassembly, feeder body, entry tubes, feeder hinges</li>
-    <li><strong>7. Core ejection</strong> — Plunger drive bracket, plungers, plunger drive system in side panels</li>
-    <li><strong>8. Disposal system</strong> — Peel chute, core chutes, augers, deflectors</li>
-    <li><strong>9. Enclosure / shell</strong> — Covers and overcentered hinges</li>
-  </ul>
-  <p class="muted">Detail and interfaces are owner-provided; final tolerancing and assembly are for contractors. See <a href="../Overview/Questions-for-RFP.html">Questions for RFP</a> to flush out parameters per subsystem and subassembly.</p>
   <script>
 (function(){
   function initSlideshow(id) {
