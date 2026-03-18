@@ -42,10 +42,10 @@
   </ul>
 
   <h2>Introduction</h2>
-  <p>Static peelers (<span class="swatch" style="background-color:#F36F3B" title="#F36F3B"></span>), static deflectors <span class="swatch" style="background-color:#CCDF3F" title="#CCDF3F"></span>, juice collectors (Y-tubes), filter tube, plug cutter, collection mount plate. Mounts on the frame’s loaded mount plate.</p>
+  <p>Static peelers (<span class="swatch" style="background-color:#F36F3B" title="#F36F3B"></span>), juice collectors (Y-tubes), filter tube, plug cutter, collection mount plate. Mounts on the frame’s loaded mount plate.</p>
 
   <div class="reminder"><strong>Reminder:</strong> Add the supplier link/spec for the <strong>38 mm OD ribbed hose connector</strong> used to couple the collector outlet to rubber hose. (Example source: <a href="https://item.taobao.com/item.htm?id=1030645801360">Taobao item 1030645801360</a>.)</div>
-  <div class="reminder"><strong>Peel deflectors (WIP):</strong> The <strong>static deflector</strong> (this subsystem) and the <strong><a href="../Extraction-syncronisation/">chute deflector</a></strong> (extraction/synchronisation) are both work in progress. Ensure they are easily manufacturable, do not collide during motion, and are rigid and clean.</div>
+  <div class="reminder"><strong>Peel deflectors update:</strong> <strong>Static deflectors on the collection mount plate are removed</strong> in the latest concept. The <strong><a href="../Extraction-syncronisation/">chute deflector</a></strong> (under the <strong>driven</strong> peeler modules) is the deflector required to cover the core chutes during compression. <strong>Figures/photos must be refreshed</strong> in this section to remove the deprecated static deflectors.</div>
 
   <h2>Colour key &amp; components</h2>
   <p class="muted">CAD colours for this section. Static peelers, deflectors, juice collectors, filter tube, plug cutter — detail pages TBD.</p>
@@ -53,14 +53,14 @@
     <tr><th>Colour(s)</th><th>Component</th></tr>
     <tr><td><span class="swatch" style="background-color:#27C16A"></span></td><td><strong>Collection mount plate</strong> — mounts to frame loaded plate; carries static peelers, deflectors, collectors, filter tube, plug cutter.</td></tr>
     <tr><td><span class="swatch" style="background-color:#F36F3B"></span></td><td><strong>Static peelers</strong> — interlace with driven peelers to mash fruit</td></tr>
-    <tr><td><span class="swatch" style="background-color:#CCDF3F"></span></td><td><strong>Static deflectors</strong> — redirect peel to front of bin; flat plate; mounted to loaded plate</td></tr>
+    <tr><td><span class="swatch" style="background-color:#CCDF3F"></span></td><td><strong>Static deflectors (removed)</strong> — deprecated; core-chute coverage during compression is handled by driven chute deflector under the driven peeler modules (figures pending refresh)</td></tr>
     <tr><td><span class="swatch" style="background-color:#FFFF50"></span></td><td><strong>Juice collectors (Y-tubes)</strong> — collect juice from filter slots; 34 mm quick-connector outlet and ribbed hose connection.</td></tr>
     <tr><td><span class="swatch" style="background-color:#287F3F"></span></td><td><strong>Filter tube</strong> — juice flows through slots into collector</td></tr>
     <tr><td><span class="swatch" style="background-color:#4DB7F5"></span></td><td><strong>Plug cutter</strong> — cuts centre plug from oranges</td></tr>
   </table>
 
   <h2 id="gallery">Figures</h2>
-  <p class="muted">CAD views (with static deflectors). Refer to figures in the text as <a href="#fig1">Figure 1</a>, <a href="#fig2">Figure 2</a>, etc.</p>
+  <p class="muted">CAD views currently include static deflectors (deprecated). <strong>Refresh required</strong> to show the updated concept with <strong>only the driven chute deflector</strong> under the driven peelers. Refer to figures in the text as <a href="#fig1">Figure 1</a>, <a href="#fig2">Figure 2</a>, etc.</p>
   <div class="slideshow" id="coll-slideshow">
     <div class="slideshow-track">
       <div class="slide active" id="fig1" data-caption="Figure 1. Collection subassembly with static deflectors — elevated angled view."><img src="images/collection-with-deflectors-1.png" alt="Collection with deflectors 1"></div>
@@ -96,7 +96,7 @@
     <li><strong>Seal leakage at plunger/filter tube</strong> — Known issue: juice leaks past plunger-to-filter-tube interface; expected to worsen at higher industrial pressures. O-ring or alternate seal strategy may be needed.</li>
     <li><strong>Wear</strong> — Prior configuration had 304 scraper against 304 filter tube, roughening the tube ID. Current intent is hardened steel for improved wear; contractor to validate.</li>
     <li><strong>Filter tube alignment sensitivity</strong> — Filter tube is welded to a cap and then assembled (screwed) into position; stack-up can shift alignment and worsen plunger sealing and wear.</li>
-    <li><strong>Collision risk</strong> — Static vs driven peelers must not collide; static deflectors must not deform and contact chutes or peelers over time under vibration and juice exposure.</li>
+    <li><strong>Collision risk</strong> — The <strong>driven chute deflector</strong> (under driven peelers) must be stiff, collision-free, and cleanable. It must cover core chutes during compression while still allowing CIP spray to reach around/through it as designed.</li>
   </ul>
 
   <h3>DFM &amp; manufacturing (China)</h3>
@@ -130,7 +130,7 @@
 
   <h3>Function</h3>
   <ul>
-    <li><strong>Driven</strong> and <strong>static</strong> peelers (<span class="swatch" style="background-color:#F36F3B" title="#F36F3B"></span>) mesh; oranges fall between them; fingers interlace → fruit mashed, <strong>peel</strong> squeezed into extraction chamber and outflow chute. <strong>Static deflectors</strong> <span class="swatch" style="background-color:#CCDF3F" title="#CCDF3F"></span> redirect peel from the base of the peeler to the front of the bin; mounted to the static loaded plate; flat plate design (see <a href="#fig1">Figure 1</a>, <a href="#fig5">Figure 5</a>, <a href="#fig10">Figure 10</a>).</li>
+    <li><strong>Driven</strong> and <strong>static</strong> peelers mesh; oranges fall between them; fingers interlace → fruit mashed, <strong>peel</strong> squeezed into extraction chamber and outflow chute. <strong>Static deflectors are removed</strong>; core-chute coverage during compression is handled by the <strong>driven chute deflector</strong> under the driven peeler modules (figures pending refresh in this section).</li>
     <li><strong>Plug cutter</strong> (#4DB7F5) cuts a cylindrical plug from the centre of oranges during juicing.</li>
     <li><strong>Juice</strong> flows out of oranges through <strong>slots in the filter tube</strong> (#287F3F) into the <strong>yellow collector</strong> (#FFFF50), then out via the <strong>Y-branched tube</strong> to a <strong>ribbed connection</strong> for standard rubber pipes.</li>
   </ul>

@@ -32,25 +32,28 @@
 <body>
   <p class="back"><a href="../index.html">← Back to Core ejection</a> · <a href="../../index.html">P6 RFP overview</a></p>
   <h1>Plunger drive system in side panels</h1>
-  <p class="muted">Part of the <a href="../index.html">Core ejection</a> section. <em>Fill in one-line description.</em></p>
+  <p class="muted">Side-panel actuation housing: linear bearing-guided drive rods, compression spring return, and the plumbing/mechanics that push/pull plungers in a constrained alignment.</p>
 
   <h2>Introduction</h2>
-  <p><em>Fill in: purpose of this subassembly, how it fits in the subsystem, key specs or design intent.</em></p>
+  <p>This subassembly converts yoke-driven motion into controlled core-ejection plunger movement using two parallel drive rods. The rods are guided by flanged linear bearings (LMK16 family in this concept) installed inside side-panel housings. A compression spring provides return force and reduces impact noise via a rubber cushioning interface.</p>
 
   <h2>Colour key &amp; components</h2>
-  <p class="muted">CAD colours for this subpage. Add rows for each coloured component with purpose/spec.</p>
+  <p class="muted">Rods, bearings, spring return, housings, and side panels that sandwich the juice/splash zones.</p>
   <table>
     <tr><th>Colour(s)</th><th>Component</th></tr>
-    <tr><td><em>—</em></td><td><em>Add colour swatches and component names/descriptions.</em></td></tr>
+    <tr><td><em>—</em></td><td><strong>Plunger drive rods</strong> — two parallel hardened rods driven by yoke actuation.</td></tr>
+    <tr><td><em>—</em></td><td><strong>LMK16 linear bearings</strong> — guide rods through green housings to preserve alignment.</td></tr>
+    <tr><td><em>—</em></td><td><strong>Compression spring + C-clip interface</strong> — stores energy during retraction and returns the bracket during compression; the <strong>C-clip position</strong> is the primary tuning lever for how far plungers retract/clear during the compression stroke.</td></tr>
+    <tr><td><em>—</em></td><td><strong>Side panels</strong> — folded sheet metal that guides and seals the plunger assembly in the splash/juice zone.</td></tr>
   </table>
 
   <h2 id="gallery">Figures</h2>
-  <p class="muted">Add CAD views to the <code>images/</code> folder and reference them below. Refer to <a href="#fig1">Figure 1</a>, etc.</p>
+  <p class="muted">Existing core ejection CAD views (reuse from `Plug-ejection/images/`).</p>
   <div class="slideshow" id="skel-plungerdrivesystemin-slideshow">
     <div class="slideshow-track">
-      <div class="slide active" id="fig1" data-caption="Figure 1. (Add caption.)"><img src="images/fig1.png" alt="Figure 1"></div>
+      <div class="slide active" id="fig1" data-caption="Figure 1. Side-panel housings with LMK16-guided rods and spring return (existing CAD view)."><img src="images/plug-ejection-2.png" alt="Plunger drive side panel system"></div>
     </div>
-    <p class="slideshow-caption" id="skel-plungerdrivesystemin-caption" aria-live="polite">Figure 1. (Add caption.)</p>
+    <p class="slideshow-caption" id="skel-plungerdrivesystemin-caption" aria-live="polite">Figure 1. Side-panel rod guidance and spring return.</p>
     <div class="slideshow-controls">
       <button type="button" id="skel-plungerdrivesystemin-prev" aria-label="Previous">← Previous</button>
       <span class="slideshow-counter" id="skel-plungerdrivesystemin-counter">1 / 1</span>
@@ -61,22 +64,59 @@
   <h2>Discussion</h2>
   <h3>Components</h3>
   <ul>
-    <li><em>List main components and their role; expand as needed.</em></li>
+    <li><strong>Drive rods</strong> — two rods pass through linear bearing housings for parallel guidance.</li>
+    <li><strong>Linear bearing housings</strong> — house LMK16 bearings that align and guide the rods.</li>
+    <li><strong>C-clip + compression spring</strong> — during retraction stroke, the yoke pulls the drive rods, compressing the spring via a C-clip/C-bracket stack.</li>
+    <li><strong>Rubber cushion</strong> — a rubber insert on the spring travel stop to prevent C-clip impacts (noise and shock reduction).</li>
+    <li><strong>Plunger drive bracket interface</strong> — rods connect to the plunger drive bracket to push/pull plungers without introducing moments.</li>
+    <li><strong>Side panels</strong> — folded sheet metal that sandwiches the plungers in the juice/splash zone; loosely fit with sealing between surfaces.</li>
   </ul>
   <h3>Interfaces</h3>
   <ul>
-    <li><strong>Input:</strong> <em>…</em></li>
-    <li><strong>Output:</strong> <em>…</em></li>
-    <li><strong>Mount:</strong> <em>…</em></li>
+    <li><strong>Input</strong>: yoke-driven actuation (retraction/compression strokes).</li>
+    <li><strong>Output</strong>: plunger drive bracket axial motion and plunger insertion/retraction through the filter tube.</li>
+    <li><strong>Mount</strong>: side panels interface to collection/transmission plates; linear bearing housing installs must remain concentric/parallel to filter tube axis.</li>
   </ul>
   <h3>Interfaces and tolerances</h3>
-  <p class="muted">Known interfaces and tolerances. Links go to related subsystems.</p>
+  <p class="muted">Alignment is critical: rods/bearings must be concentric and parallel to the filter tube axis so plungers do not rack under load.</p>
   <table class="iface-table">
     <thead><tr><th>Part</th><th>Interface / tolerance</th><th>Related</th></tr></thead>
     <tbody>
-      <tr><td><em>—</em></td><td><em>Add rows.</em></td><td>—</td></tr>
+      <tr><td>Rod parallelism</td><td>Two rods must be parallel and guided through linear bearings so bracket motion stays axial-only</td><td><a href="../plunger-drive-bracket/">Plunger drive bracket</a></td></tr>
+      <tr><td>Bearing concentricity</td><td>Bearing axis must be concentric with filter tube/plunger axis to prevent moments and leakage/wear</td><td><a href="../../Collection/plungers-and-filter/">Plungers and filter</a></td></tr>
+      <tr><td>Side panel clearance</td><td>Side panels should be loose-fitting for assembly but sealing is required in splash/juice zones to prevent leaks</td><td><a href="../../Collection/">Collection</a></td></tr>
+      <tr><td>C-clip tuning lever</td><td>Define how far the plungers retract during the compression stroke by setting C-clip position/stop geometry (contractor to define tuning method and range)</td><td><a href="../../Collection/plungers-and-filter/">Plungers + filter</a></td></tr>
     </tbody>
   </table>
+
+  <h3>Plunger + materials (key intent)</h3>
+  <ul>
+    <li><strong>Plunger low-friction sleeve</strong> — concept uses a UHMW (food-safe) sleeve around a central rod that contacts the inside of the filter tube to minimize friction and wear.</li>
+    <li><strong>Scraper</strong> — plunger tip scraper clears pulp from the filter tube slot region during retraction, reducing stringy pulp and improving next-cycle efficiency.</li>
+    <li><strong>O-ring caution</strong> — O-rings inside the filter tube may be cut/worn by repeated scraper travel during maintenance; seal strategy is still under research.</li>
+  </ul>
+
+  <h3>Known issues &amp; risks</h3>
+  <ul>
+    <li><strong>Racking</strong> — if rods/bearings or bracket alignment introduces moment, plungers can rack and jam (critical failure mode).</li>
+    <li><strong>Leakage + sealing</strong> — juice/splash zone sealing between side panels and collection/transmission plates must be repeatable after maintenance.</li>
+  </ul>
+
+  <h3>DFM &amp; manufacturing (China)</h3>
+  <ul>
+    <li><strong>Housings + bearing alignment workflow</strong> — define an align/ream method that preserves concentricity across maintenance cycles.</li>
+    <li><strong>Side panels</strong> — folded sheet metal assembly; ensure smooth cleanable geometry and sealed interfaces.</li>
+    <li><strong>Sliding interfaces</strong> — if using Delrin/fiber-reinforced engineering plastics (e.g., for guillotine/slide plates), define food safety and wear testing.</li>
+  </ul>
+
+  <h3>Questions for contractor</h3>
+  <ol>
+    <li>Confirm the best alignment/assembly plan to keep rod/bearing axes concentric and parallel to filter tube axis.</li>
+    <li>Propose spring + C-clip interface details that avoid impact damage/noise in washdown duty.</li>
+    <li>Propose food-safe low-friction materials for plunger sleeves and define acceptable seal approach given scraper travel.</li>
+    <li>Define sealing strategy between side panels and plates (reusable rubber vs resealable sealant) consistent with maintenance cadence.</li>
+    <li>Specify a practical method to adjust/set C-clip position (and resulting retract depth) so engaged length and core separation remain within targets across orange types.</li>
+  </ol>
 
   <p class="back"><a href="../index.html">← Back to Core ejection</a></p>
   <script>

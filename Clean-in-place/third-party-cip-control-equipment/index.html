@@ -32,67 +32,77 @@
 <body>
   <p class="back"><a href="../index.html">← Back to Clean-in-place (CIP)</a> · <a href="../../index.html">P6 RFP overview</a></p>
   <h1>Third-party CIP control equipment</h1>
-  <p class="muted">Part of the <a href="../index.html">Clean-in-place (CIP)</a> section. <em>Fill in one-line description.</em></p>
+  <p class="muted">Part of the <a href="../index.html">Clean-in-place (CIP)</a> section. How P6 integrates with the plant CIP system (cycles, hookups, and acceptance testing).</p>
 
   <h2>Introduction</h2>
-  <p><em>Fill in: purpose of this subassembly, how it fits in the subsystem, key specs or design intent.</em></p>
+  <p>P6 does not provide a standalone CIP controller. The CIP solution is provided by the <strong>plant CIP system</strong>. P6 connects to the plant CIP supply for internal spray cleaning and uses the juice line for counter-flow backflush cleaning of the juice collection circuit.</p>
 
   <h2>Colour key &amp; components</h2>
-  <p class="muted">CAD colours for this subpage. Add rows for each coloured component with purpose/spec.</p>
+  <p class="muted">Key equipment responsibilities and interfaces.</p>
   <table>
     <tr><th>Colour(s)</th><th>Component</th></tr>
-    <tr><td><em>—</em></td><td><em>Add colour swatches and component names/descriptions.</em></td></tr>
+    <tr><td><em>—</em></td><td><strong>Plant CIP system</strong> — controls rinse/chemical cycles, pressure, temperature, and concentration; provides supply/return infrastructure.</td></tr>
+    <tr><td><em>—</em></td><td><strong>P6 CIP manifolds</strong> — rigid stainless piping and flexible hose connections to plant supply.</td></tr>
+    <tr><td><em>—</em></td><td><strong>Juice-line backflush integration</strong> — valves/T-junction allowing CIP solution to flow back through collectors/filter/plunger circuit.</td></tr>
   </table>
 
   <h2 id="gallery">Figures</h2>
-  <p class="muted">Add CAD views to the <code>images/</code> folder and reference them below. Refer to <a href="#fig1">Figure 1</a>, etc.</p>
-  <div class="slideshow" id="skel-thirdpartycipcontrol-slideshow">
-    <div class="slideshow-track">
-      <div class="slide active" id="fig1" data-caption="Figure 1. (Add caption.)"><img src="images/fig1.png" alt="Figure 1"></div>
-    </div>
-    <p class="slideshow-caption" id="skel-thirdpartycipcontrol-caption" aria-live="polite">Figure 1. (Add caption.)</p>
-    <div class="slideshow-controls">
-      <button type="button" id="skel-thirdpartycipcontrol-prev" aria-label="Previous">← Previous</button>
-      <span class="slideshow-counter" id="skel-thirdpartycipcontrol-counter">1 / 1</span>
-      <button type="button" id="skel-thirdpartycipcontrol-next" aria-label="Next">Next →</button>
-    </div>
-  </div>
+  <p class="muted">Add integration diagrams when available.</p>
+  <ul class="muted">
+    <li><strong>Add figure</strong>: plant CIP connection points to P6 manifolds (supply/return, hose routing, feeder open/close motion).</li>
+    <li><strong>Add figure</strong>: juice-line backflush plumbing (T-valve, check valves, drain/return path) tied to the Collection system.</li>
+    <li><strong>Add figure</strong>: acceptance test flow (indicator test points and rinse confirmation).</li>
+  </ul>
 
   <h2>Discussion</h2>
-  <h3>Components</h3>
+  <h3>Plant-controlled CIP process</h3>
+  <p>The plant CIP system typically runs the following sequence (final durations depend on plant capability and cleaning results):</p>
+  <ol>
+    <li><strong>Water rinse</strong> — remove bulk material.</li>
+    <li><strong>Lye / soap solution</strong> — chemical cleaning step.</li>
+    <li><strong>Final water rinse</strong> — remove chemical residue.</li>
+  </ol>
+  <p class="muted">After the cycle, perform chemical indicator tests to confirm the machine is free of cleaning solution. Add an additional rinse cycle if required.</p>
+
+  <h3>Operating requirement</h3>
   <ul>
-    <li><em>List main components and their role; expand as needed.</em></li>
+    <li><strong>Machine must be running</strong> during CIP for effective cleaning coverage.</li>
   </ul>
+
   <h3>Interfaces</h3>
   <ul>
-    <li><strong>Input:</strong> <em>…</em></li>
-    <li><strong>Output:</strong> <em>…</em></li>
-    <li><strong>Mount:</strong> <em>…</em></li>
+    <li><strong>Spray cleaning hookup</strong> — plant CIP supply connects to P6 spray manifolds (feeder-lid group and peel-deflector group). Flexible hoses are required to allow feeder open/close movement.</li>
+    <li><strong>Juice circuit cleaning</strong> — CIP solution is routed through the juice line as a counter-flow/backflush to clean juice collectors, filter, and plunger circuit.</li>
+    <li><strong>Tank isolation during CIP</strong> — required valve logic: during CIP, the normal “juice to tanks/outlet” path must be shut off so CIP fluid is routed into the collectors/filter/plunger circuit and <strong>does not</strong> flow into the production juice tanks.</li>
+    <li><strong>Control</strong> — all cycle sequencing and parameter control is by the plant CIP system.</li>
   </ul>
+
+  <h3>Questions for contractor</h3>
+  <ol>
+    <li>Define recommended hookup standard(s) (sanitary fitting type, hose spec, quick-disconnect strategy) suitable for CN plants and seasonal maintenance.</li>
+    <li>Specify required check valves/return routing/drain strategy and <strong>valve switching requirements</strong> so CIP fluid cannot contaminate production juice tanks (tank isolation during CIP) and production cannot contaminate CIP returns during cleaning.</li>
+    <li>Propose an acceptance test protocol: chemical indicators, rinse criteria, and minimum run time during CIP (tied to spray coverage and backflush effectiveness).</li>
+  </ol>
+
   <h3>Interfaces and tolerances</h3>
-  <p class="muted">Known interfaces and tolerances. Links go to related subsystems.</p>
+  <p class="muted">Tolerances TBD; contractor to propose connection and mounting requirements consistent with plant CIP pressure/vibration and feeder motion.</p>
   <table class="iface-table">
     <thead><tr><th>Part</th><th>Interface / tolerance</th><th>Related</th></tr></thead>
     <tbody>
-      <tr><td><em>—</em></td><td><em>Add rows.</em></td><td>—</td></tr>
+      <tr><td>Plant CIP supply</td><td>Provides water/chemical cycles; pressure/temperature/concentration plant-defined</td><td>—</td></tr>
+      <tr><td>P6 spray manifolds</td><td>Rigid stainless manifolds with flexible hose to allow feeder motion</td><td><a href="../../Feeder/">Fruit intake system</a>, <a href="../../Extraction-syncronisation/">Extraction</a></td></tr>
+      <tr><td>Juice-line backflush</td><td>Counter-flow CIP through juice line; valving/check valves TBD</td><td><a href="../../Collection/">Collection</a></td></tr>
     </tbody>
   </table>
 
+  <h3>Components</h3>
+  <ul>
+    <li>Plant CIP skid/controller (external)</li>
+    <li>Supply/return hoses and sanitary quick-disconnects</li>
+    <li>Valves/T-junctions for juice-line backflush</li>
+    <li>Indicator test materials/procedure (acceptance testing)</li>
+  </ul>
+
   <p class="back"><a href="../index.html">← Back to Clean-in-place (CIP)</a></p>
-  <script>
-(function(){
-  var el = document.getElementById('skel-thirdpartycipcontrol-slideshow');
-  if (!el) return;
-  var slides = el.querySelectorAll('.slide');
-  var cap = document.getElementById('skel-thirdpartycipcontrol-caption');
-  var counter = document.getElementById('skel-thirdpartycipcontrol-counter');
-  var n = slides.length, i = 0;
-  function go(k) { i = (k + n) % n; slides.forEach(function(s,j){ s.classList.toggle('active', j===i); }); if (cap) cap.textContent = slides[i].getAttribute('data-caption') || ''; if (counter) counter.textContent = (i+1) + ' / ' + n; }
-  el.querySelector('#skel-thirdpartycipcontrol-prev').addEventListener('click', function(){ go(i-1); });
-  el.querySelector('#skel-thirdpartycipcontrol-next').addEventListener('click', function(){ go(i+1); });
-  var hash = window.location.hash;
-  if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
-})();
-  </script>
 </body>
 </html>

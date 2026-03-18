@@ -32,25 +32,27 @@
 <body>
   <p class="back"><a href="../index.html">← Back to Disposal system</a> · <a href="../../index.html">P6 RFP overview</a></p>
   <h1>Chutes and augers</h1>
-  <p class="muted">Part of the <a href="../index.html">Disposal system</a> section. <em>Fill in one-line description.</em></p>
+  <p class="muted">Folded/welded sheet-metal peel chute + welded core chute hexagonal tubes, feeding two separate auger paths (peels vs. cores).</p>
 
   <h2>Introduction</h2>
-  <p><em>Fill in: purpose of this subassembly, how it fits in the subsystem, key specs or design intent.</em></p>
+  <p>This subassembly separates <strong>peel</strong> and <strong>cores</strong> after the pressing stroke. Cores fall into <strong>core chute tubes</strong> beneath each peeler station, while peel material flows around the core tubes into the <strong>peel chute</strong>. The two resulting streams are conveyed away separately by <strong>two augers</strong>.</p>
 
   <h2>Colour key &amp; components</h2>
-  <p class="muted">CAD colours for this subpage. Add rows for each coloured component with purpose/spec.</p>
+  <p class="muted">CAD colours for this subpage (component meanings should match the main disposal gallery).</p>
   <table>
     <tr><th>Colour(s)</th><th>Component</th></tr>
-    <tr><td><em>—</em></td><td><em>Add colour swatches and component names/descriptions.</em></td></tr>
+    <tr><td><em>—</em></td><td><strong>Peel chute (folded sheet metal)</strong> — receives peel stream; provides geometry to route peel around the core chute tubes.</td></tr>
+    <tr><td><em>—</em></td><td><strong>Core chutes (hexagonal tubes)</strong> — receive ejected cores and keep them separate from peel.</td></tr>
+    <tr><td><em>—</em></td><td><strong>Two auger paths</strong> — convey peels and cores separately for different downstream processing (e.g., secondary wash for cores).</td></tr>
   </table>
 
   <h2 id="gallery">Figures</h2>
-  <p class="muted">Add CAD views to the <code>images/</code> folder and reference them below. Refer to <a href="#fig1">Figure 1</a>, etc.</p>
+  <p class="muted">Existing disposal CAD views (reuse from `Outflow-disposal/images/`).</p>
   <div class="slideshow" id="skel-chutesandaugers-slideshow">
     <div class="slideshow-track">
-      <div class="slide active" id="fig1" data-caption="Figure 1. (Add caption.)"><img src="images/fig1.png" alt="Figure 1"></div>
+      <div class="slide active" id="fig1" data-caption="Figure 1. Peel chute + core chute tubes feeding two auger paths (existing disposal CAD view)."><img src="images/disposal-chute-augers.png" alt="Chute and augers"></div>
     </div>
-    <p class="slideshow-caption" id="skel-chutesandaugers-caption" aria-live="polite">Figure 1. (Add caption.)</p>
+    <p class="slideshow-caption" id="skel-chutesandaugers-caption" aria-live="polite">Figure 1. Peel chute + core chute tubes feeding two auger paths.</p>
     <div class="slideshow-controls">
       <button type="button" id="skel-chutesandaugers-prev" aria-label="Previous">← Previous</button>
       <span class="slideshow-counter" id="skel-chutesandaugers-counter">1 / 1</span>
@@ -61,22 +63,48 @@
   <h2>Discussion</h2>
   <h3>Components</h3>
   <ul>
-    <li><em>List main components and their role; expand as needed.</em></li>
+    <li><strong>Peel chute</strong> — welded/folded sheet metal assembly mounted to the frame; uses the chute lip geometry to prevent peel from entering core chute tubes.</li>
+    <li><strong>Core chute tubes</strong> — four hexagonal tubes beneath each peeler station; width covers the gap that allows core drop while keeping peel separated.</li>
+    <li><strong>Two augers</strong> — external auger/tube hardware to convey peel and cores away independently.</li>
   </ul>
   <h3>Interfaces</h3>
   <ul>
-    <li><strong>Input:</strong> <em>…</em></li>
-    <li><strong>Output:</strong> <em>…</em></li>
-    <li><strong>Mount:</strong> <em>…</em></li>
+    <li><strong>Input (cores)</strong>: from <a href="../../Plug-ejection/">core ejection</a>; cores fall into core chute tubes.</li>
+    <li><strong>Input (peels)</strong>: from <a href="../../Collection/">collection</a> / extraction; peel flows to peel chute and around core tubes via chute geometry.</li>
+    <li><strong>Output</strong>: two auger takeoffs — one for peel, one for cores.</li>
+    <li><strong>Mount</strong>: folded chute assembly mounts to the frame and interfaces with side panels and the peel chute lip.</li>
   </ul>
   <h3>Interfaces and tolerances</h3>
-  <p class="muted">Known interfaces and tolerances. Links go to related subsystems.</p>
+  <p class="muted">Known interfaces and tolerances (owner intent). Links go to related subsystems.</p>
   <table class="iface-table">
     <thead><tr><th>Part</th><th>Interface / tolerance</th><th>Related</th></tr></thead>
     <tbody>
-      <tr><td><em>—</em></td><td><em>Add rows.</em></td><td>—</td></tr>
+      <tr><td>Peel chute lip + side panels</td><td>NSF constraint: only negative steps allowed; no shelf that can trap fruit peel; top edges must not create positive ledges</td><td><a href="../../Collection/">Collection</a>, <a href="../../Transmission/">Transmission</a></td></tr>
+      <tr><td>Core chute tube geometry</td><td>Tube width must cover gap beneath peeler finger pattern without blocking core drop; designed to prevent peel entry into core stream</td><td><a href="../../Plug-ejection/">Core ejection</a>, <a href="../../Collection/">Collection</a></td></tr>
+      <tr><td>Auger takeoff positions</td><td>External-dependent; contractor to propose consistent auger interface and fastening scheme</td><td>—</td></tr>
     </tbody>
   </table>
+
+  <h3>Known issues &amp; risks</h3>
+  <ul>
+    <li><strong>Peel/core separation quality</strong> — if peel contacts core chute tubes, downstream processing is mixed.</li>
+    <li><strong>Low-tolerance fit</strong> — peel chute lip and mounting edges must fit inside the extraction zone without positive steps/shelves.</li>
+    <li><strong>Cleanability</strong> — folded/welded geometry must avoid crevices that trap oil/fiber; ensure washdown access.</li>
+  </ul>
+
+  <h3>DFM &amp; manufacturing (China)</h3>
+  <ul>
+    <li><strong>Fold + weld assembly</strong> — peel chute and structural bases should be made as a single folded/welded sheet-metal assembly for manufacturability.</li>
+    <li><strong>Adjustable edge concept</strong> — bendy lips/edges on the peel chute should allow fine-tuning to match collection/transmission mount plate tolerances (no creation of positive steps).</li>
+    <li><strong>Finishing</strong> — define weld finish and surface smoothing to support cleanability (sanitary requirements TBD).</li>
+  </ul>
+
+  <h3>Questions for contractor</h3>
+  <ol>
+    <li>Propose auger interface requirements (diameter, takeoff angle/clearance, fastening), and identify what can be sourced locally in China.</li>
+    <li>Confirm how to manufacture the hexagonal core tubes and weld them to the peel chute while maintaining alignment and cleanable surfaces.</li>
+    <li>Define acceptable edge geometry for NSF compliance: what minimum radii and maximum shelf/step heights are acceptable.</li>
+  </ol>
 
   <p class="back"><a href="../index.html">← Back to Disposal system</a></p>
   <script>

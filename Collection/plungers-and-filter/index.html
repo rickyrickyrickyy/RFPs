@@ -42,8 +42,8 @@
   <table>
     <tr><th>Colour(s)</th><th>Component</th></tr>
     <tr><td><em>—</em></td><td><strong>Filter tube</strong> — hardened steel tube with laser-cut vertical slots (~0.7 mm slot width concept). Longer than commercial version. ID finish target ~Ra 0.8 μm so plungers can slide and seal.</td></tr>
-    <tr><td><em>—</em></td><td><strong>Plug cutter</strong> — hardened steel tip that cuts the core; geometry based on commercial machine. Open question: integrated with filter tube vs separate removable tip.</td></tr>
-    <tr><td><em>—</em></td><td><strong>Plunger interface</strong> — plunger and scraper travel inside filter tube; scraper clears pulp from slot region each cycle.</td></tr>
+    <tr><td><em>—</em></td><td><strong>Plug cutter</strong> — hardened steel replaceable tip that cuts the core; attached separately to the filter tube so the cutting edge can be replaced quickly. Filter tube is not intended to be a frequent replaceable part.</td></tr>
+    <tr><td><em>—</em></td><td><strong>Plunger interface</strong> — plunger travel inside filter tube with a <strong>scraper</strong> that clears pulp from the slot region each cycle. Scraper is expected to be <strong>3–4 blades</strong>, using a scraper alloy selected to avoid excessive wear on the (hard) tube.</td></tr>
     <tr><td><em>—</em></td><td><strong>Cap / base</strong> — removable end cap concept that holds the filter tube (and possibly forms base for plug cutter); cap-to-collector mounting method TBD.</td></tr>
   </table>
 
@@ -64,9 +64,16 @@
     <li><strong>Material</strong> — Intent is hardened steel for filter tube and plug cutter (vs prior 304) to reduce wear from scraper action.</li>
   </ul>
 
+  <h3>Geometry targets (plug/cutter + plunger travel)</h3>
+  <ul>
+    <li><strong>Plug cutter extension:</strong> plug cutter edge should be approximately <strong>9 mm</strong> out from the <strong>central pin</strong> reference face (core-separation geometry).</li>
+    <li><strong>Plunger tip extension:</strong> the plunger tip should extend approximately <strong>15 mm</strong> out from the <strong>plug cutter</strong> (engaged length / pressure chamber volume).</li>
+    <li><strong>Retract depth:</strong> how far plungers retract during the compression step is <strong>tunable</strong> by adjusting the <strong>C-clip</strong> position on the plunger drive shafts (contractor to define the adjustment method and range).</li>
+  </ul>
+
   <h3>Known issues &amp; risks</h3>
   <ul>
-    <li><strong>Leakage</strong> — Known issue: juice leaks past plunger-to-tube interface. Current plan is surface-to-surface sealing; likely needs an O-ring or alternative seal for industrial pressures.</li>
+    <li><strong>Leakage</strong> — Known issue: juice leaks past plunger-to-tube interface. Seal strategy is still being researched: an <strong>O-ring inside the filter tube is a risk</strong> because scraper action can cut/wear it during frequent plunger in/out. Contractor should propose a <strong>non-O-ring or O-ring-safe</strong> sealing approach that survives industrial pressures and washdown.</li>
     <li><strong>Wear</strong> — Scraper action can roughen tube ID if materials are not chosen correctly; heat treat/finish must be validated.</li>
     <li><strong>Alignment</strong> — Tube is welded to a cap and then assembled; weld and assembly stack-up can misalign plungers, increasing leakage and wear.</li>
   </ul>
@@ -80,9 +87,9 @@
 
   <h3>Questions for contractor</h3>
   <ol>
-    <li>Propose a sealing solution for plunger-to-filter tube suitable for high pressure and washdown (O-ring groove, lip seal, or alternate geometry).</li>
-    <li>Recommend material/heat treat/finish for filter tube + plug cutter + scraper, with expected wear life and maintainability.</li>
-    <li>Recommend whether plug cutter should be integrated with the filter tube or remain a removable tip, considering sanitary rules and service.</li>
+    <li>Propose a <strong>non-O-ring or O-ring-safe</strong> sealing approach for plunger-to-filter tube suitable for high pressure and washdown (if any O-ring is used, place it so it is not cut/worn by scraper action during repeated in/out).</li>
+    <li>Recommend material/heat treat/finish for <strong>hardened steel filter tube</strong> + <strong>replaceable hardened plug cutter tip</strong> + <strong>3–4 scraper blades</strong> (scraper alloy may be selected softer than the tube to reduce tube wear), with expected wear life and service strategy.</li>
+    <li>Confirm that the plug cutter is a <strong>replaceable tip</strong> attached to a <strong>non-replaceable</strong> filter tube (cutting edge is wear item). Propose a hygienic attachment method and retention strategy that avoids <strong>exposed threads inside the juice chamber</strong>.</li>
     <li>Propose an inspection and acceptance plan for the tube (ID finish, straightness, slot quality) and for assembled plunger sealing performance.</li>
   </ol>
 
@@ -98,8 +105,8 @@
     <thead><tr><th>Part</th><th>Interface / tolerance</th><th>Related</th></tr></thead>
     <tbody>
       <tr><td>Filter tube</td><td>Hardened steel; laser-cut slots (~0.7 mm concept); ID finish target ~Ra 0.8 μm concept; straightness/alignment critical</td><td><a href="../index.html">Collection</a></td></tr>
-      <tr><td>Plug cutter</td><td>Hardened steel; removable vs integral with tube is TBD</td><td><a href="../../Plug-ejection/">Core ejection</a></td></tr>
-      <tr><td>Plunger</td><td>Slides in tube; must seal; scraper clears pulp from slots each cycle</td><td><a href="../../Plug-ejection/">Core ejection</a></td></tr>
+    <tr><td>Plug cutter</td><td>Hardened steel <strong>replaceable tip</strong> attached to non-replaceable tube; implement target <strong>~9 mm</strong> plug-cutter edge extension from the <strong>central pin</strong> reference face; avoid exposed threads inside the juice chamber</td><td><a href="../../Plug-ejection/">Core ejection</a></td></tr>
+    <tr><td>Plunger</td><td>Seals against tube during cycle; target <strong>~15 mm</strong> plunger-tip extension out from the plug cutter; retract depth during compression step is tunable (contractor to define via C-clip/drive geometry); scraper clears pulp from slot region each cycle</td><td><a href="../../Plug-ejection/">Core ejection</a></td></tr>
     </tbody>
   </table>
 

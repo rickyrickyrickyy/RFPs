@@ -32,67 +32,69 @@
 <body>
   <p class="back"><a href="../index.html">← Back to Controls and electronics</a> · <a href="../../index.html">P6 RFP overview</a></p>
   <h1>Yoke position sensor</h1>
-  <p class="muted">Part of the <a href="../index.html">Controls and electronics</a> section. <em>Fill in one-line description.</em></p>
+  <p class="muted">Part of the <a href="../index.html">Controls and electronics</a> section. Cycle/yoke sensing for safe stop conditions and cycle counting (implementation TBD).</p>
 
   <h2>Introduction</h2>
-  <p><em>Fill in: purpose of this subassembly, how it fits in the subsystem, key specs or design intent.</em></p>
+  <p>P6 requires a sensor to detect machine cycle state and/or yoke position. This supports:
+    (1) controlled safe stop conditions (e.g., do not stop with peelers in an unsafe open state),
+    (2) cycle counting over time for operations monitoring,
+    (3) a critical “fully open stop” behavior so operators can service/remove internal parts.</p>
+  <p>The exact sensor type (encoder, distance sensor, proximity switch, etc.) is TBD. In particular, sensor hardware implementation is expected to involve ODM/suppliers such as <strong>J-Pro</strong>.</p>
 
   <h2>Colour key &amp; components</h2>
-  <p class="muted">CAD colours for this subpage. Add rows for each coloured component with purpose/spec.</p>
+  <p class="muted">Sensing options (TBD).</p>
   <table>
     <tr><th>Colour(s)</th><th>Component</th></tr>
-    <tr><td><em>—</em></td><td><em>Add colour swatches and component names/descriptions.</em></td></tr>
+    <tr><td><em>—</em></td><td><strong>Cycle/yoke sensor</strong> — encoder, proximity switch, or other sensor to identify cycle position; may share hardware with stop-with-peelers-open logic.</td></tr>
+    <tr><td><em>—</em></td><td><strong>Coded safety switches</strong> — lid interlocks provide “open” status and inhibit running.</td></tr>
   </table>
 
   <h2 id="gallery">Figures</h2>
-  <p class="muted">Add CAD views to the <code>images/</code> folder and reference them below. Refer to <a href="#fig1">Figure 1</a>, etc.</p>
-  <div class="slideshow" id="skel-yokepositionsensor-slideshow">
-    <div class="slideshow-track">
-      <div class="slide active" id="fig1" data-caption="Figure 1. (Add caption.)"><img src="images/fig1.png" alt="Figure 1"></div>
-    </div>
-    <p class="slideshow-caption" id="skel-yokepositionsensor-caption" aria-live="polite">Figure 1. (Add caption.)</p>
-    <div class="slideshow-controls">
-      <button type="button" id="skel-yokepositionsensor-prev" aria-label="Previous">← Previous</button>
-      <span class="slideshow-counter" id="skel-yokepositionsensor-counter">1 / 1</span>
-      <button type="button" id="skel-yokepositionsensor-next" aria-label="Next">Next →</button>
-    </div>
-  </div>
+  <p class="muted">Add sensor location diagrams when mechanism is selected. (No sensor images are committed yet.)</p>
+  <ul class="muted">
+    <li><strong>Add figure</strong>: proposed sensor mounting location on yoke/cam/shaft and target features.</li>
+    <li><strong>Add figure</strong>: “safe stop” positions (peelers open/closed) tied to cycle signal.</li>
+  </ul>
 
   <h2>Discussion</h2>
-  <h3>Components</h3>
+  <h3>Rough design &amp; intent</h3>
   <ul>
-    <li><em>List main components and their role; expand as needed.</em></li>
+    <li><strong>Stop-with-peelers-open interlock</strong> — sensor/logic should prevent operation (or force stop) when peelers are open / unsafe state.</li>
+    <li><strong>Cycle counting</strong> — provide cycle count per time period for operations monitoring. May share sensor hardware with safety stop logic.</li>
+    <li><strong>Fully open stop on normal shutdown</strong> — when the machine is turned OFF / STOPPED in normal operation (not E-stop, not lid-interlock fault), the drivetrain should stop and the yoke must end in the <strong>fully open position</strong> so plungers/peeler-related parts can be removed safely.</li>
+    <li><strong>Emergency stop / interlock behavior</strong> — when E-stop is pressed or when a coded lid safety switch indicates an open lid, the machine must shut down immediately (no reposition-to-open requirement).</li>
   </ul>
+
+  <h3>Known issues &amp; risks</h3>
+  <ul>
+    <li><strong>Washdown</strong> — sensor and wiring must be water protected and robust to cleaning chemicals.</li>
+    <li><strong>Signal integrity</strong> — vibration and contamination can cause false triggers; choose sensor type and mounting accordingly.</li>
+  </ul>
+
+  <h3>Questions for contractor</h3>
+  <ol>
+    <li>Recommend a sensor approach (encoder vs proximity vs limit) and mounting that is robust in washdown/vibration.</li>
+    <li>Define how the sensor will be used for safe stop and cycle counting, including failure detection (fail-safe behavior).</li>
+    <li>Propose the mechanism for identifying the <strong>fully open</strong> yoke end position (distance sensor target vs rotary encoder reference mark) and how calibration is performed after maintenance.</li>
+    <li>Describe how sensor signals interface to the existing control boards and how/when J-Pro (ODM) is expected to supply the sensing solution.</li>
+  </ol>
+
   <h3>Interfaces</h3>
   <ul>
-    <li><strong>Input:</strong> <em>…</em></li>
-    <li><strong>Output:</strong> <em>…</em></li>
-    <li><strong>Mount:</strong> <em>…</em></li>
+    <li><strong>Input:</strong> mechanical motion (yoke/cam/shaft position) and safety switch states.</li>
+    <li><strong>Output:</strong> cycle count and/or position signal to controller; inhibits running when unsafe.</li>
+    <li><strong>Mount:</strong> near drivetrain/transmission mechanism; cable routing to control cabinet.</li>
   </ul>
   <h3>Interfaces and tolerances</h3>
-  <p class="muted">Known interfaces and tolerances. Links go to related subsystems.</p>
+  <p class="muted">Interfaces (tolerances TBD; contractor to propose).</p>
   <table class="iface-table">
     <thead><tr><th>Part</th><th>Interface / tolerance</th><th>Related</th></tr></thead>
     <tbody>
-      <tr><td><em>—</em></td><td><em>Add rows.</em></td><td>—</td></tr>
+      <tr><td>Cycle/yoke sensor</td><td>Mounting and sensing target TBD; must be washdown-safe and vibration robust</td><td><a href="../../Transmission/">Transmission</a>, <a href="../../Drivetrain/">Drivetrain</a></td></tr>
+      <tr><td>Lid safety switches</td><td>Coded safety switches; fail-safe interlock</td><td><a href="../index.html">Controls and electronics</a></td></tr>
     </tbody>
   </table>
 
   <p class="back"><a href="../index.html">← Back to Controls and electronics</a></p>
-  <script>
-(function(){
-  var el = document.getElementById('skel-yokepositionsensor-slideshow');
-  if (!el) return;
-  var slides = el.querySelectorAll('.slide');
-  var cap = document.getElementById('skel-yokepositionsensor-caption');
-  var counter = document.getElementById('skel-yokepositionsensor-counter');
-  var n = slides.length, i = 0;
-  function go(k) { i = (k + n) % n; slides.forEach(function(s,j){ s.classList.toggle('active', j===i); }); if (cap) cap.textContent = slides[i].getAttribute('data-caption') || ''; if (counter) counter.textContent = (i+1) + ' / ' + n; }
-  el.querySelector('#skel-yokepositionsensor-prev').addEventListener('click', function(){ go(i-1); });
-  el.querySelector('#skel-yokepositionsensor-next').addEventListener('click', function(){ go(i+1); });
-  var hash = window.location.hash;
-  if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
-})();
-  </script>
 </body>
 </html>

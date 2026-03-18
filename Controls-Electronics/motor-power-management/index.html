@@ -32,67 +32,92 @@
 <body>
   <p class="back"><a href="../index.html">← Back to Controls and electronics</a> · <a href="../../index.html">P6 RFP overview</a></p>
   <h1>Motor power management</h1>
-  <p class="muted">Part of the <a href="../index.html">Controls and electronics</a> section. <em>Fill in one-line description.</em></p>
+  <p class="muted">Part of the <a href="../index.html">Controls and electronics</a> section. Power distribution, protection, and sensing for the drivetrain motor in a washdown environment.</p>
 
   <h2>Introduction</h2>
-  <p><em>Fill in: purpose of this subassembly, how it fits in the subsystem, key specs or design intent.</em></p>
+  <p>This page defines the electrical power/control items needed to run and protect the drivetrain motor, and to provide current sensing for spike detection and throughput estimation. The design must be suitable for industrial cleaning (water protection) and for a 50 Hz China installation baseline.</p>
 
   <h2>Colour key &amp; components</h2>
-  <p class="muted">CAD colours for this subpage. Add rows for each coloured component with purpose/spec.</p>
+  <p class="muted">Key electrical components (implementation details TBD).</p>
   <table>
     <tr><th>Colour(s)</th><th>Component</th></tr>
-    <tr><td><em>—</em></td><td><em>Add colour swatches and component names/descriptions.</em></td></tr>
+    <tr><td><em>—</em></td><td><strong>Main disconnect / breaker</strong> — local isolation (supports stand-alone operation and LOTO).</td></tr>
+    <tr><td><em>—</em></td><td><strong>AC contactor + motor starter / soft starter</strong> — switching, controlled start/stop behavior, and overcurrent protection for the motor circuit.</td></tr>
+    <tr><td><em>—</em></td><td><strong>Internal control panel</strong> — relays, control IO/PCB/PLC as required (final architecture TBD).</td></tr>
+    <tr><td><em>—</em></td><td><strong>Motor current sensor</strong> — instantaneous current measurement for spike detection and rough throughput estimation.</td></tr>
   </table>
 
   <h2 id="gallery">Figures</h2>
-  <p class="muted">Add CAD views to the <code>images/</code> folder and reference them below. Refer to <a href="#fig1">Figure 1</a>, etc.</p>
-  <div class="slideshow" id="skel-motorpowermanagement-slideshow">
-    <div class="slideshow-track">
-      <div class="slide active" id="fig1" data-caption="Figure 1. (Add caption.)"><img src="images/fig1.png" alt="Figure 1"></div>
-    </div>
-    <p class="slideshow-caption" id="skel-motorpowermanagement-caption" aria-live="polite">Figure 1. (Add caption.)</p>
-    <div class="slideshow-controls">
-      <button type="button" id="skel-motorpowermanagement-prev" aria-label="Previous">← Previous</button>
-      <span class="slideshow-counter" id="skel-motorpowermanagement-counter">1 / 1</span>
-      <button type="button" id="skel-motorpowermanagement-next" aria-label="Next">Next →</button>
-    </div>
-  </div>
+  <p class="muted">Add wiring diagrams and cabinet layout when available. (No motor power images are committed yet.)</p>
+  <ul class="muted">
+    <li><strong>Add figure</strong>: single-line diagram (power in → disconnect → contactor/starter → motor).</li>
+    <li><strong>Add figure</strong>: cabinet layout and cable routing/glands for washdown protection.</li>
+  </ul>
 
   <h2>Discussion</h2>
-  <h3>Components</h3>
+  <h3>Motor baseline specifications (reference)</h3>
+  <p class="muted">Some prior specs were for 60 Hz markets. P6 China baseline is 50 Hz.</p>
+  <table class="iface-table">
+    <thead><tr><th>Parameter</th><th>50 Hz (China baseline)</th><th>60 Hz (reference)</th></tr></thead>
+    <tbody>
+      <tr><td>Motor</td><td>WEG W22 (or equivalent), 10 hp (≈7.5 kW), 4-pole</td><td>WEG W22 (or equivalent), 10 hp, 4-pole</td></tr>
+      <tr><td>Speed</td><td>~1470 rpm</td><td>~1760 rpm</td></tr>
+      <tr><td>Voltages</td><td>220 / 380 / 440 V 3-phase (final plant voltage TBD)</td><td>220 / 380 / 440 V 3-phase</td></tr>
+      <tr><td>Protection</td><td>IPW55 (as specified)</td><td>IPW55 (as specified)</td></tr>
+      <tr><td>Mounting</td><td>V5T (foot, vertical, shaft downwards)</td><td>V5T (foot, vertical, shaft downwards)</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Plant power interface (by country, reference)</h3>
+  <p class="muted">Use this table to drive inlet connector choice, wiring design, and starter/protection sizing. China is the baseline target. Where possible, aim for a <strong>dual-voltage, dual-frequency motor</strong> to reduce variant risk.</p>
+  <table class="iface-table">
+    <thead><tr><th>Country</th><th>Outlet type</th><th>Phase type</th><th>Voltage (V)</th><th>Current (A)</th><th>Frequency (Hz)</th></tr></thead>
+    <tbody>
+      <tr><td>Brazil</td><td>IEC 60309</td><td>Three-phase</td><td>380/415</td><td>10</td><td>60</td></tr>
+      <tr><td>China</td><td>IEC 60309</td><td>Three-phase</td><td>380/415</td><td>16+</td><td>50</td></tr>
+      <tr><td>USA</td><td>NEMA L</td><td>Three-phase</td><td>480Y/277</td><td>20+</td><td>60</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Control and protection requirements</h3>
   <ul>
-    <li><em>List main components and their role; expand as needed.</em></li>
+    <li><strong>Local operation</strong> — local ON/OFF and run/stop (stand-alone).</li>
+    <li><strong>LOTO</strong> — rear lockout/tagout isolation point.</li>
+    <li><strong>Safety interlocks</strong> — fail-safe lid switches and stop-with-peelers-open logic.</li>
+    <li><strong>Water protection</strong> — enclosures, glands, routing suitable for rigorous washdown.</li>
   </ul>
+
+  <h3>Sensing</h3>
+  <ul>
+    <li><strong>Motor current sensor</strong> — instantaneous current measurement for spike detection and rough throughput estimate (fruit processed per period).</li>
+    <li><strong>Cycle sensor</strong> — cycle count per period (may share hardware with yoke position / open-peeler stop sensor).</li>
+  </ul>
+
+  <h3>Questions for contractor</h3>
+  <ol>
+    <li>Propose a washdown-safe electrical architecture (cabinet IP rating, glands, routing) suitable for a China plant.</li>
+    <li>Specify the motor starter/contactor and whether a soft starter is required; include <strong>overcurrent protection</strong> sizing based on motor current/duty assumptions.</li>
+    <li>Specify current sensing hardware and how it will be used for spike detection and throughput estimation.</li>
+    <li>Confirm inlet connector(s) and wiring approach for 380/415 V 3-phase 50 Hz (CN baseline), and advise how to keep a single design compatible with 60 Hz markets where possible.</li>
+  </ol>
+
   <h3>Interfaces</h3>
   <ul>
-    <li><strong>Input:</strong> <em>…</em></li>
-    <li><strong>Output:</strong> <em>…</em></li>
-    <li><strong>Mount:</strong> <em>…</em></li>
+    <li><strong>Input:</strong> plant power (3-phase), operator commands, safety interlocks.</li>
+    <li><strong>Output:</strong> protected power to drivetrain motor; sensor signals to control logic/IoT export.</li>
+    <li><strong>Mount:</strong> internal control cabinet/panel.</li>
   </ul>
   <h3>Interfaces and tolerances</h3>
-  <p class="muted">Known interfaces and tolerances. Links go to related subsystems.</p>
+  <p class="muted">Interfaces (tolerances TBD; contractor to propose).</p>
   <table class="iface-table">
     <thead><tr><th>Part</th><th>Interface / tolerance</th><th>Related</th></tr></thead>
     <tbody>
-      <tr><td><em>—</em></td><td><em>Add rows.</em></td><td>—</td></tr>
+      <tr><td>Motor</td><td>WEG W22 (or equivalent); 50 Hz baseline; vertical shaft down; IPW55</td><td><a href="../../Drivetrain/">Drivetrain</a></td></tr>
+      <tr><td>Control cabinet</td><td>Washdown protection (IP rating) and gland/cable routing</td><td>—</td></tr>
+      <tr><td>Current sensor</td><td>Provides current spike detection and throughput estimate</td><td>—</td></tr>
     </tbody>
   </table>
 
   <p class="back"><a href="../index.html">← Back to Controls and electronics</a></p>
-  <script>
-(function(){
-  var el = document.getElementById('skel-motorpowermanagement-slideshow');
-  if (!el) return;
-  var slides = el.querySelectorAll('.slide');
-  var cap = document.getElementById('skel-motorpowermanagement-caption');
-  var counter = document.getElementById('skel-motorpowermanagement-counter');
-  var n = slides.length, i = 0;
-  function go(k) { i = (k + n) % n; slides.forEach(function(s,j){ s.classList.toggle('active', j===i); }); if (cap) cap.textContent = slides[i].getAttribute('data-caption') || ''; if (counter) counter.textContent = (i+1) + ' / ' + n; }
-  el.querySelector('#skel-motorpowermanagement-prev').addEventListener('click', function(){ go(i-1); });
-  el.querySelector('#skel-motorpowermanagement-next').addEventListener('click', function(){ go(i+1); });
-  var hash = window.location.hash;
-  if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
-})();
-  </script>
 </body>
 </html>

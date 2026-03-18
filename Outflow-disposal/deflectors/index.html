@@ -32,25 +32,26 @@
 <body>
   <p class="back"><a href="../index.html">← Back to Disposal system</a> · <a href="../../index.html">P6 RFP overview</a></p>
   <h1>Deflectors</h1>
-  <p class="muted">Part of the <a href="../index.html">Disposal system</a> section. <em>Fill in one-line description.</em></p>
+  <p class="muted">Required core-chute coverage during compression: deflector hardware on the <strong>moving driven peeler</strong> underside (static deflectors removed).</p>
 
   <h2>Introduction</h2>
-  <p><em>Fill in: purpose of this subassembly, how it fits in the subsystem, key specs or design intent.</em></p>
+  <p>The disposal flow requires that <strong>peels</strong> do not drop directly into the <strong>core chute</strong> stream during compression. In the latest concept, <strong>static deflectors on the collection mount plate are removed</strong>; instead, a <strong>deflector under the driven peelers</strong> covers the core chutes during the compression stroke and ensures peel is routed to the peel chute.</p>
 
   <h2>Colour key &amp; components</h2>
-  <p class="muted">CAD colours for this subpage. Add rows for each coloured component with purpose/spec.</p>
+  <p class="muted">Deflector hardware is part of the moving extraction bracket peeler stack; disposal page documents the interface and requirements.</p>
   <table>
     <tr><th>Colour(s)</th><th>Component</th></tr>
-    <tr><td><em>—</em></td><td><em>Add colour swatches and component names/descriptions.</em></td></tr>
+    <tr><td><em>—</em></td><td><strong>Driven underside deflector</strong> — stiff formed/bent plate(s) mounted under driven peeler modules to cover core chutes during compression.</td></tr>
+    <tr><td><em>—</em></td><td><strong>Core-chute interface</strong> — clearance envelope vs. core tubes and peel flow paths.</td></tr>
   </table>
 
   <h2 id="gallery">Figures</h2>
-  <p class="muted">Add CAD views to the <code>images/</code> folder and reference them below. Refer to <a href="#fig1">Figure 1</a>, etc.</p>
+  <p class="muted">Reuse disposal chute context images (deflector-specific CAD to be added when finalized).</p>
   <div class="slideshow" id="skel-deflectors-slideshow">
     <div class="slideshow-track">
-      <div class="slide active" id="fig1" data-caption="Figure 1. (Add caption.)"><img src="images/fig1.png" alt="Figure 1"></div>
+      <div class="slide active" id="fig1" data-caption="Figure 1. Core chute context (deflector CAD overlay required when finalized)."><img src="images/disposal-right-chute-core.png" alt="Core chute context"></div>
     </div>
-    <p class="slideshow-caption" id="skel-deflectors-caption" aria-live="polite">Figure 1. (Add caption.)</p>
+    <p class="slideshow-caption" id="skel-deflectors-caption" aria-live="polite">Figure 1. Core chute context (deflector CAD overlay required when finalized).</p>
     <div class="slideshow-controls">
       <button type="button" id="skel-deflectors-prev" aria-label="Previous">← Previous</button>
       <span class="slideshow-counter" id="skel-deflectors-counter">1 / 1</span>
@@ -61,22 +62,38 @@
   <h2>Discussion</h2>
   <h3>Components</h3>
   <ul>
-    <li><em>List main components and their role; expand as needed.</em></li>
+    <li><strong>Formed/bent deflector plate(s)</strong> mounted under driven peelers to cover the core chute openings during compression.</li>
+    <li><strong>Mounting interface</strong> to the driven bracket and peeler modules; must be collision-free and food-safe/cleanable.</li>
   </ul>
   <h3>Interfaces</h3>
   <ul>
-    <li><strong>Input:</strong> <em>…</em></li>
-    <li><strong>Output:</strong> <em>…</em></li>
-    <li><strong>Mount:</strong> <em>…</em></li>
+    <li><strong>Input:</strong> peel trajectory and compression-stroke position from <a href="../../Extraction-syncronisation/">extraction &amp; synchronisation</a>.</li>
+    <li><strong>Output:</strong> peel routing away from core chute stream into peel chute.</li>
+    <li><strong>Mount:</strong> driven peeler underside / driven bracket interface (moving component).</li>
   </ul>
   <h3>Interfaces and tolerances</h3>
-  <p class="muted">Known interfaces and tolerances. Links go to related subsystems.</p>
+  <p class="muted">The deflector must maintain clearance and coverage over the full compression stroke without collision. CIP spray must be able to reach around/through the deflector as designed.</p>
   <table class="iface-table">
     <thead><tr><th>Part</th><th>Interface / tolerance</th><th>Related</th></tr></thead>
     <tbody>
-      <tr><td><em>—</em></td><td><em>Add rows.</em></td><td>—</td></tr>
+      <tr><td>Deflector coverage</td><td>Must cover core chute openings during compression while allowing required peel flow path</td><td><a href="../">Disposal system</a></td></tr>
+      <tr><td>CIP spray compatibility</td><td>No blind spots: spray pattern must clean surfaces behind/under deflector</td><td><a href="../../Clean-in-place/">Clean-in-place (CIP)</a></td></tr>
+      <tr><td>Collision envelope</td><td>Define minimum clearance envelope vs. moving peeler components and core chute tubes</td><td><a href="../../Extraction-syncronisation/">Extraction &amp; synchronisation</a></td></tr>
     </tbody>
   </table>
+
+  <h3>Known issues &amp; risks</h3>
+  <ul>
+    <li><strong>Deflector flex</strong> — if deflector bends under vibration/juice impacts, peel may enter core chute and/or surfaces may collide with moving parts.</li>
+    <li><strong>CIP blind zones</strong> — deflector can block spray; must verify spray pattern can clean both front and underside surfaces.</li>
+  </ul>
+
+  <h3>Questions for contractor</h3>
+  <ol>
+    <li>Propose a stiff, manufacturable deflector design (formed/bent) that maintains clearance during motion.</li>
+    <li>Specify mounting method and fastening strategy suitable for washdown and food safety (cleanable, no crevices/pockets).</li>
+    <li>Propose a deflector + CIP spray compatibility test plan (spray reach validation + cleaning effectiveness verification).</li>
+  </ol>
 
   <p class="back"><a href="../index.html">← Back to Disposal system</a></p>
   <script>

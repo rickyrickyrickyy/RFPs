@@ -60,6 +60,7 @@
   <h3>Rough design &amp; intent</h3>
   <ul>
     <li><strong>Operating point</strong> — Reducer output target ~70 rpm. Preliminary torque at driven gear ~1023 N·m (to validate with final reducer ratio and efficiency).</li>
+    <li><strong>Gear design is currently unknown (contractor to own)</strong> — We are not yet set on gear module/profile, tooth form, material/heat treat, finishing, backlash, or backlash control strategy. We want the contractor to propose the complete gear set design based on our loading scenario and what can be reliably manufactured/inspected in China.</li>
     <li><strong>Current gear-force estimate</strong> — On the order of ~6.6 kN tangential and ~7.2 kN normal at the gear mesh (preliminary; depends on module, pitch diameter, pressure angle, and helix angle).</li>
     <li><strong>Driven gear concept</strong> — Spur gear, ~38 teeth, ~308 mm pitch diameter, module ~8 (final module/profile TBD), 20° normal pressure angle. Current face width concept ~56 mm (TBD).</li>
     <li><strong>Cam conversion</strong> — Support roller / track roller bearing (concept: <a href="https://www.skf.com/cn/products/rolling-bearings/track-rollers/support-rollers/productid-NUTR%2025%20A">SKF NUTR 25 A</a>) on a ~25 mm cam post/shaft. Two rollers may be stacked to increase yoke engagement surface area and reduce local contact stress.</li>
@@ -83,13 +84,14 @@
 
   <h3>Questions for contractor</h3>
   <ol>
-    <li>Recommend final gear module/profile (spur vs helical) and provide fatigue life rationale, with a China-manufacturable heat treat + finishing plan.</li>
+    <li>Propose the full gear design (module/profile/tooth form, material + heat treat, finishing, and backlash targets/range) based on our loading case set, with rationale for fatigue/wear life and manufacturability in China.
+      <br>Food/sanitary guardrail: if any gear/cam hardware can be wetted by juice/splash during washdown/service, specify <strong>food-safe</strong>, smoothly finished materials and avoid <strong>exposed threads inside the juice chamber</strong> (only screw heads outside the chamber).</li>
     <li>Validate the preliminary torque/force estimates and provide the full load case set (including stall/peak events and cyclic cam loading).</li>
     <li>Specify backlash targets, tooth contact acceptance checks, and runout/alignment tolerances needed to protect bearings and yoke motion quality.</li>
     <li>Propose cam-bearing/yoke interface details (material, lubrication, wear strategy) and acceptance checks to avoid binding and shock loads.</li>
     <li>Propose a cam post retention design that is robust to cyclic bending and does not loosen (and is manufacturable/inspectable in China). Compare “fixed shoulder stop” vs “adjustable locknut” approaches.</li>
     <li>Confirm whether stacking two <a href="https://www.skf.com/cn/products/rolling-bearings/track-rollers/support-rollers/productid-NUTR%2025%20A">NUTR 25 A</a> rollers is appropriate for the yoke contact geometry and load (alignment tolerance, edge loading risk). If not, propose alternatives (wider roller, crowned profile, dual-row, or guided follower).</li>
-    <li>Propose a lubrication approach for an open gear under a cover: grease type/application, maintenance interval, and how to prevent contamination while remaining serviceable.</li>
+    <li>Propose a lubrication approach for the gear train and cam/yoke contact under/within any covers: grease type/application, maintenance interval, and how to prevent contamination while remaining serviceable.</li>
   </ol>
 
   <h3>Interfaces and tolerances</h3>

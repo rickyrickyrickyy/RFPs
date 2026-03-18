@@ -21,23 +21,81 @@
 
   <h2>Subpages</h2>
   <ul>
-    <li><a href="cip-nozzles-and-feed-pipes/">CIP nozzles and feed pipes</a> <span class="muted">(skeleton)</span> — spray nozzles, piping for clean-in-place.</li>
-    <li><a href="third-party-cip-control-equipment/">Third-party CIP control equipment</a> <span class="muted">(skeleton)</span> — integration with external CIP systems.</li>
+    <li><a href="cip-nozzles-and-feed-pipes/">CIP nozzles and feed pipes</a> <span class="muted">(with content)</span> — spray nozzles, manifolds, rigid piping and flexible hose interfaces.</li>
+    <li><a href="third-party-cip-control-equipment/">Third-party CIP control equipment</a> <span class="muted">(with content)</span> — plant CIP integration, cycles, and acceptance testing.</li>
   </ul>
 
   <h2>Introduction</h2>
-  <p>This section is to be completed. Add photos, Q&A, and part/parameter details.</p>
+  <p>The P6 CIP solution is provided by the <strong>plant CIP system</strong>. The machine is connected to the plant CIP line and cleaned internally through fixed spray nozzles and (for the juice collection circuit) a counter-flow backflush through the juice line.</p>
 
   <h2>Discussion</h2>
+  <h3>Rough design &amp; intent</h3>
+  <ul>
+    <li><strong>External system</strong> — CIP cycles are controlled by the plant CIP system (pressure, temperature, chemical concentration, and durations).</li>
+    <li><strong>Machine must run</strong> — During CIP, the machine must be running to achieve effective cleaning (moving peelers/plungers expose surfaces and clear flow paths).</li>
+    <li><strong>Two cleaning paths</strong>:
+      <ul>
+        <li><strong>Spray nozzle cleaning</strong> — internal cleaning via fixed nozzles targeting feed tubes, peelers, and deflectors.</li>
+        <li><strong>Juice circuit backflush</strong> — juice collection system cleaning (collector, filter, plunger) via CIP solution coming through the <strong>juice line</strong> as a <strong>counter-flow (back flush)</strong> process.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3>Plant CIP cycle (typical)</h3>
+  <p class="muted">Actual durations depend on cleaning results and the plant’s CIP performance (pressure, temperature, concentration). Chemical indicator tests are required to confirm no cleaning solution remains.</p>
+  <ol>
+    <li><strong>First water rinse</strong> — basic material removal.</li>
+    <li><strong>Lye / soap solution</strong> — cleaning chemistry step.</li>
+    <li><strong>Final water rinse</strong> — remove chemical material; verify with indicators; add additional rinse if needed.</li>
+  </ol>
+
+  <h3>Spray nozzles (P6)</h3>
+  <ul>
+    <li><strong>Total nozzles</strong> — 21 total (current concept).</li>
+    <li><strong>Single input</strong> — nozzles connect via rigid stainless pipes/manifolds to a single input connection per manifold group, with flexible hoses to allow feeder open/close.</li>
+    <li><strong>Feeder lid nozzles (12)</strong> — 4 sets × 3 nozzles per set:
+      <ul>
+        <li>A: 1 circular-jet nozzle at the curve of the feeding tube turned backwards (one per tube).</li>
+        <li>B: 1 angled-jet nozzle behind the feeding tube pointing to the movable peeler (mid-stroke) (one per peeler).</li>
+        <li>C: 1 angled-jet nozzle at the front of the feeding tube pointing to the fixed peeler (one per peeler).</li>
+      </ul>
+    </li>
+    <li><strong>Below movable peelers (4)</strong> — D: 4 angled nozzles at the rear plate of the peel deflector pointing to the movable peeler (mid-stroke) (4 sets × 1 nozzle).</li>
+    <li><strong>Below static peelers (5)</strong> — E: 5 angled nozzles at the front plate of the peel collector between the core ducts and at both sides (one per peeler +1), avoiding the deflectors.</li>
+  </ul>
+
+  <h3>DFM &amp; integration (China)</h3>
+  <ul>
+    <li><strong>Piping</strong> — feeder nozzles are connected by rigid stainless-steel pipes and connect to the plant CIP line via a flexible hose to allow feeder to open/close.</li>
+    <li><strong>Peel deflector manifold</strong> — nozzles below peelers are also connected by rigid stainless pipes and connected to the plant CIP line through a flexible hose.</li>
+    <li><strong>Hygiene</strong> — all CIP plumbing in splash/food zones should avoid pockets, use sanitary fittings, and be serviceable for inspection/replacement.</li>
+  </ul>
+
+  <h3>Open items (requires further design)</h3>
+  <ul>
+    <li>Spray pattern and nozzle type selection (jet type, coverage, droplet size).</li>
+    <li>Spray angles and exact mounting locations (collision avoidance with moving peelers/deflectors).</li>
+    <li>Connection type/standard (sanitary fittings), flow rate, and operating pressure.</li>
+  </ul>
+
+  <h3>Questions for contractor</h3>
+  <ol>
+    <li>Propose nozzle types, spray patterns, and mounting angles to achieve full coverage without collisions across the full stroke.</li>
+    <li>Specify CIP manifold tubing sizes, fitting standards, and flexible hose requirements for feeder open/close motion.</li>
+    <li>Validate the juice-circuit counter-flow backflush approach (valving, check valves, pressure limits) and define an acceptance test plan.</li>
+    <li>Recommend validation steps using chemical indicators and define rinse criteria to ensure no chemical residue remains.</li>
+  </ol>
+
   <h3>Components</h3>
   <ul>
-    <li>Nozzles at each peeler (from below)</li>
-    <li>Nozzle down from each 90° tube at sync system</li>
-    <li>Pipes feeding CIP nozzles</li>
-    <li>Third-party equipment controlling CIP</li>
+    <li>Spray nozzles (21 total) and mounting hardware</li>
+    <li>Rigid stainless manifolds/pipes connecting nozzles</li>
+    <li>Flexible hoses to allow feeder to open/close while connected to plant CIP</li>
+    <li>Valving/connection for juice-line counter-flow backflush</li>
+    <li>Plant CIP controller/equipment (external)</li>
   </ul>
 
   <h3>Status</h3>
-  <p>Photos and Q&A TBD; parameters TBD.</p>
+  <p>System-level concept captured. Still TBD: nozzle selection, spray angles, connection standards, flow rate, and operating pressure. Add figures showing nozzle locations and manifold routing as they are defined.</p>
 </body>
 </html>

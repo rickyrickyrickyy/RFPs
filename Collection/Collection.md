@@ -1,11 +1,11 @@
 # Collection subsystem
 
-The **collection subsystem** mounts on the **collection mount plate** (loaded mount plate on the main frame). It consists of **static peelers** (#F36F3B), **static deflectors** (#CCDF3F), **juice collectors** (yellow Y-tubes #FFFF50), **filter tube** (dark green #287F3F), **plug cutter** (light blue #4DB7F5), and the **collection mount plate** (bright green #27C16A).
+The **collection subsystem** mounts on the **collection mount plate** (loaded mount plate on the main frame). It consists of **static peelers** (#F36F3B), **juice collectors** (yellow Y-tubes #FFFF50), **filter tube** (dark green #287F3F), **plug cutter** (light blue #4DB7F5), and the **collection mount plate** (bright green #27C16A).
 
 ## Function
 
 - **Driven peelers** and **static peelers** together are what oranges fall between; they mesh to juice the fruit.
-- When the two mesh, the **fingers** on the static peelers and the fingers on the driven peelers **interlace**. The **peel** of the fruit is **squeezed out** between the fingers into the **extraction chamber** surrounding it and into the **outflow chute**. **Static deflectors** (#CCDF3F) keep peels sliding towards the static plate and into the disposal channels.
+- When the two mesh, the **fingers** on the static peelers and the fingers on the driven peelers **interlace**. The **peel** of the fruit is **squeezed out** between the fingers into the **extraction chamber** surrounding it and into the **outflow chute**. **Static deflectors are removed**; core-chute coverage during compression is handled by the **driven chute deflector** under the driven peeler modules (Extraction & synchronisation).
 - During the juicing action, when the orange is mashed between the peelers, the **plug cutter** cuts a **cylindrical plug** out of the centre of the oranges.
 - **Juice** flows out of the oranges through the **slots in the filter tube** into the **yellow collector**. Juice then flows out of the collector into the **Y-branched tube**, where **standard rubber pipes** connect via a **ribbed connection**.
 
@@ -22,7 +22,7 @@ After the **pressing stroke** of the extraction cycle, when juice has left the o
 |--------------|-----------|
 | **#27C16A** | **Collection mount plate** — bright green; mounts to frame (loaded mount plate); supports all collection components |
 | **#F36F3B** | **Static peelers** — finger-like; interlace with driven peelers to mash fruit |
-| **#CCDF3F** | **Static deflectors** — yellowish-green; keep peels sliding towards the static plate (into disposal channels). Two angled surfaces increase stiffness of the plate and may allow manufacturing by forming instead of welding |
+| **#CCDF3F** | **Static deflectors (deprecated)** — removed in latest concept; figures must be refreshed to remove them |
 | **#FFFF50** | **Juice collectors (Y-tubes)** — yellow; collect juice; Y-branch with ribbed connection for standard rubber pipes |
 | **#287F3F** | **Filter tube** — dark green; juice flows through slots into yellow collector |
 | **#4DB7F5** | **Plug cutter** — light blue; cuts cylindrical plug from centre of oranges |
@@ -33,7 +33,7 @@ After the **pressing stroke** of the extraction cycle, when juice has left the o
 
 ## Overview figures
 
-All views include **static deflectors** (#CCDF3F) and **static peelers** (#F36F3B).
+Previous CAD overview figures include **static deflectors** (#CCDF3F) and **static peelers** (#F36F3B). **Refresh required** to show the updated concept with only the driven chute deflector under the driven peelers.
 
 ![Collection with deflectors 1](images/collection-with-deflectors-1.png)  
 *Figure 1. Collection subassembly with static deflectors — elevated angled view.*

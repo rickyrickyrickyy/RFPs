@@ -32,25 +32,27 @@
 <body>
   <p class="back"><a href="../index.html">← Back to Enclosure / shell</a> · <a href="../../index.html">P6 RFP overview</a></p>
   <h1>Overcentered hinges</h1>
-  <p class="muted">Part of the <a href="../index.html">Enclosure / shell</a> section. <em>Fill in one-line description.</em></p>
+  <p class="muted">Over-center hinge linkage used to keep covers closed during operation and open for service/access; designed for folded/welded sheet metal with spring assist.</p>
 
   <h2>Introduction</h2>
-  <p><em>Fill in: purpose of this subassembly, how it fits in the subsystem, key specs or design intent.</em></p>
+  <p>Overcentered hinges are used to mount feeder lid, drivetrain shell cover, and plunger-side cover. The hinge geometry provides a stable “open” position (stays open for access) and a stable “closed” position (stays shut to protect users during operation). Springs bias the linkage so it naturally stays in either open or closed over-center conditions.</p>
 
   <h2>Colour key &amp; components</h2>
-  <p class="muted">CAD colours for this subpage. Add rows for each coloured component with purpose/spec.</p>
+  <p class="muted">Hinge components: mounting bracket, pivot/pins, latch/stopper feature, and spring mounting points.</p>
   <table>
     <tr><th>Colour(s)</th><th>Component</th></tr>
-    <tr><td><em>—</em></td><td><em>Add colour swatches and component names/descriptions.</em></td></tr>
+    <tr><td><em>—</em></td><td><strong>Hinge bracket / arm</strong> — sheet metal welded plates and dowel-based pivot features.</td></tr>
+    <tr><td><em>—</em></td><td><strong>Stopper + latch</strong> — positions the linkage at open/closed over-center positions.</td></tr>
+    <tr><td><em>—</em></td><td><strong>Spring mounts</strong> — hole locations support spring placement (either side).</td></tr>
   </table>
 
   <h2 id="gallery">Figures</h2>
-  <p class="muted">Add CAD views to the <code>images/</code> folder and reference them below. Refer to <a href="#fig1">Figure 1</a>, etc.</p>
+  <p class="muted">Reuse existing enclosure hinge views (until hinge-specific CAD figures are added).</p>
   <div class="slideshow" id="skel-overcenteredhinges-slideshow">
     <div class="slideshow-track">
-      <div class="slide active" id="fig1" data-caption="Figure 1. (Add caption.)"><img src="images/fig1.png" alt="Figure 1"></div>
+      <div class="slide active" id="fig1" data-caption="Figure 1. Overcenter hinge assembly concept (existing enclosure CAD view)."><img src="images/covers-5.png" alt="Overcenter hinges"></div>
     </div>
-    <p class="slideshow-caption" id="skel-overcenteredhinges-caption" aria-live="polite">Figure 1. (Add caption.)</p>
+    <p class="slideshow-caption" id="skel-overcenteredhinges-caption" aria-live="polite">Figure 1. Overcenter hinge assembly concept.</p>
     <div class="slideshow-controls">
       <button type="button" id="skel-overcenteredhinges-prev" aria-label="Previous">← Previous</button>
       <span class="slideshow-counter" id="skel-overcenteredhinges-counter">1 / 1</span>
@@ -61,22 +63,39 @@
   <h2>Discussion</h2>
   <h3>Components</h3>
   <ul>
-    <li><em>List main components and their role; expand as needed.</em></li>
+    <li><strong>Pivot hole</strong> — the first hole closest to the mounting surface defines the pivot point.</li>
+    <li><strong>Stopper/latch hole</strong> — the next hole creates a latch engagement as the arm rotates over-center.</li>
+    <li><strong>Spring mount hole</strong> — final hole contains indents such that springs can mount on either side.</li>
+    <li><strong>Dowel + spring retention</strong> — hinge parts may be formed from welded sheet metal plates and use dowels/pins to locate features and springs.</li>
   </ul>
   <h3>Interfaces</h3>
   <ul>
-    <li><strong>Input:</strong> <em>…</em></li>
-    <li><strong>Output:</strong> <em>…</em></li>
-    <li><strong>Mount:</strong> <em>…</em></li>
+    <li><strong>Input:</strong> cover mass + user-open/close forces and spring reaction.</li>
+    <li><strong>Output:</strong> stable open and closed positions for covers; repeatable engagement for safety interlocks.</li>
+    <li><strong>Mount:</strong> hinge mounting to bracing/backing plates so thin covers remain stiff.</li>
   </ul>
   <h3>Interfaces and tolerances</h3>
-  <p class="muted">Known interfaces and tolerances. Links go to related subsystems.</p>
+  <p class="muted">Hinge hole locations, stopper geometry, and spring strength must be tuned so the cover stays shut under vibration and washdown forces, and stays open for service.</p>
   <table class="iface-table">
     <thead><tr><th>Part</th><th>Interface / tolerance</th><th>Related</th></tr></thead>
     <tbody>
-      <tr><td><em>—</em></td><td><em>Add rows.</em></td><td>—</td></tr>
+      <tr><td>Over-center geometry</td><td>Stopper/latch locations must be robust; spring must hold closed when latched</td><td><a href="../protective-covers/">Protective covers</a></td></tr>
+      <tr><td>Spring mounting</td><td>Spring placement must support open-stay-open and closed-stay-closed over-center conditions</td><td>—</td></tr>
     </tbody>
   </table>
+
+  <h3>Known issues &amp; risks</h3>
+  <ul>
+    <li><strong>Welding vs forming</strong> — owner intent is to investigate a simpler folded-sheet geometry to reduce welding and improve manufacturability; current hinge design details are WIP.</li>
+    <li><strong>Spring strength + hole location</strong> — not finalized; must be tuned by prototype testing and should be repeatable across builds.</li>
+  </ul>
+
+  <h3>Questions for contractor</h3>
+  <ol>
+    <li>Propose a manufacturable overcenter hinge design (folded/welded) that meets washdown robustness and repeatable open/close positions.</li>
+    <li>Define spring selection and how hinge geometry tolerances affect open/closed stability.</li>
+    <li>Recommend anti-corrosion materials/finish suitable for food splash and cleaning chemicals.</li>
+  </ol>
 
   <p class="back"><a href="../index.html">← Back to Enclosure / shell</a></p>
   <script>

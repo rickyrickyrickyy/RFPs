@@ -32,25 +32,27 @@
 <body>
   <p class="back"><a href="../index.html">← Back to Enclosure / shell</a> · <a href="../../index.html">P6 RFP overview</a></p>
   <h1>Protective covers (plunger, drivetrain)</h1>
-  <p class="muted">Part of the <a href="../index.html">Enclosure / shell</a> section. <em>Fill in one-line description.</em></p>
+  <p class="muted">Guards/shell panels that protect users from moving parts: drivetrain/belt cover, plunger-side cover, and any additional splash protection surfaces.</p>
 
   <h2>Introduction</h2>
-  <p><em>Fill in: purpose of this subassembly, how it fits in the subsystem, key specs or design intent.</em></p>
+  <p>Enclosure and shell panels exist to prevent accidental contact with moving parts (belt/pulleys, plunger drive, moving peeler assemblies) and to support hygiene/splash containment during washdown. Covers are designed as folded sheet metal with bracing where needed so overcentered hinges mount to stiff backing rather than directly to thin 2 mm sheet.</p>
 
   <h2>Colour key &amp; components</h2>
-  <p class="muted">CAD colours for this subpage. Add rows for each coloured component with purpose/spec.</p>
+  <p class="muted">Protective covers and mounting hinges (CAD colours vary across figures).</p>
   <table>
     <tr><th>Colour(s)</th><th>Component</th></tr>
-    <tr><td><em>—</em></td><td><em>Add colour swatches and component names/descriptions.</em></td></tr>
+    <tr><td><em>—</em></td><td><strong>Plunger cover</strong> — protects the core ejection (plungers + drive bracket). Must open to provide full internal access.</td></tr>
+    <tr><td><em>—</em></td><td><strong>Drivetrain cover</strong> — covers belt/pulley and drivetrain moving parts; cleanable and water-protected.</td></tr>
+    <tr><td><em>—</em></td><td><strong>Overcentered hinge mount</strong> — stiff bracing/backing plates so hinges are stable and repeatable.</td></tr>
   </table>
 
   <h2 id="gallery">Figures</h2>
-  <p class="muted">Add CAD views to the <code>images/</code> folder and reference them below. Refer to <a href="#fig1">Figure 1</a>, etc.</p>
+  <p class="muted">Existing enclosure CAD views (reuse from `Enclosure-shell/images/`).</p>
   <div class="slideshow" id="skel-protectivecovers-slideshow">
     <div class="slideshow-track">
-      <div class="slide active" id="fig1" data-caption="Figure 1. (Add caption.)"><img src="images/fig1.png" alt="Figure 1"></div>
+      <div class="slide active" id="fig1" data-caption="Figure 1. Enclosure covers — plunger-side access and drivetrain protection (existing CAD view)."><img src="images/covers-4.png" alt="Protective covers"></div>
     </div>
-    <p class="slideshow-caption" id="skel-protectivecovers-caption" aria-live="polite">Figure 1. (Add caption.)</p>
+    <p class="slideshow-caption" id="skel-protectivecovers-caption" aria-live="polite">Figure 1. Enclosure covers — plunger-side access and drivetrain protection.</p>
     <div class="slideshow-controls">
       <button type="button" id="skel-protectivecovers-prev" aria-label="Previous">← Previous</button>
       <span class="slideshow-counter" id="skel-protectivecovers-counter">1 / 1</span>
@@ -61,22 +63,39 @@
   <h2>Discussion</h2>
   <h3>Components</h3>
   <ul>
-    <li><em>List main components and their role; expand as needed.</em></li>
+    <li><strong>Drive belt/pulley cover</strong> — belt guard mounted to back structure; protects users from belt coming off.</li>
+    <li><strong>Plunger-side cover</strong> — protects core ejection plungers; must open <strong>downwards or flip away</strong> so operators have full interior access when opened.</li>
+    <li><strong>Drivetrain shell cover</strong> — covers the entire drivetrain/splash zone and provides splash containment.</li>
   </ul>
   <h3>Interfaces</h3>
   <ul>
-    <li><strong>Input:</strong> <em>…</em></li>
-    <li><strong>Output:</strong> <em>…</em></li>
-    <li><strong>Mount:</strong> <em>…</em></li>
+    <li><strong>Input:</strong> moving drivetrain and plunger assemblies; splash/juice environment.</li>
+    <li><strong>Output:</strong> user-safe barrier + cleanable interior access when opened.</li>
+    <li><strong>Mount:</strong> frame/side rails using overcentered hinge mounts and bracing backing plates.</li>
   </ul>
   <h3>Interfaces and tolerances</h3>
-  <p class="muted">Known interfaces and tolerances. Links go to related subsystems.</p>
+  <p class="muted">Covers must not collide with moving parts over the full machine stroke. Lid openings must preserve the operator’s line of sight into the plunger/peeler service area.</p>
   <table class="iface-table">
     <thead><tr><th>Part</th><th>Interface / tolerance</th><th>Related</th></tr></thead>
     <tbody>
-      <tr><td><em>—</em></td><td><em>Add rows.</em></td><td>—</td></tr>
+      <tr><td>Plunger cover</td><td>Overcenter hinge geometry + clearance; opening direction must provide full access (no upward obstruction)</td><td><a href="../../Plug-ejection/">Core ejection</a></td></tr>
+      <tr><td>Drivetrain cover</td><td>Belt guard clearance + washdown routing; removable for maintenance</td><td><a href="../../Drivetrain/">Drivetrain</a></td></tr>
+      <tr><td>Lid safety interlocks</td><td>Designed for coded magnet lid switches and latch state monitoring</td><td><a href="../../Controls-Electronics/">Controls and electronics</a></td></tr>
     </tbody>
   </table>
+
+  <h3>Known issues &amp; risks</h3>
+  <ul>
+    <li><strong>Access obstruction</strong> — current upward-opening plunger cover blocks operator access; must be changed to downwards/flip-away open direction.</li>
+    <li><strong>Hinge stiffness</strong> — hinges should mount to bracing/backing plates, not thin 2 mm sheet, to preserve repeatable open/closed position.</li>
+  </ul>
+
+  <h3>Questions for contractor</h3>
+  <ol>
+    <li>Propose a manufacturable cover approach (folded sheet + bracing) that maintains stiffness while meeting washdown cleanliness requirements.</li>
+    <li>Propose belt guard mounting and removal strategy that is safe, durable, and easy to inspect.</li>
+    <li>Confirm coded lid switch integration and latch geometry so lid open status is reliable.</li>
+  </ol>
 
   <p class="back"><a href="../index.html">← Back to Enclosure / shell</a></p>
   <script>

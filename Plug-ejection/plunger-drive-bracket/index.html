@@ -32,25 +32,26 @@
 <body>
   <p class="back"><a href="../index.html">← Back to Core ejection</a> · <a href="../../index.html">P6 RFP overview</a></p>
   <h1>Plunger drive bracket</h1>
-  <p class="muted">Part of the <a href="../index.html">Core ejection</a> section. <em>Fill in one-line description.</em></p>
+  <p class="muted">Actuation bracket that pushes/pulls the plunger bases only in the travel direction; designed to avoid racking moments and keep plungers concentric with the filter tube.</p>
 
   <h2>Introduction</h2>
-  <p><em>Fill in: purpose of this subassembly, how it fits in the subsystem, key specs or design intent.</em></p>
+  <p>The plunger drive bracket couples the drivetrain actuation (via plunger drive rods) to the four core ejection plungers. Its key requirement is <strong>kinematic purity</strong>: the bracket must apply <strong>only axial force</strong> (forward/back along the machine’s ejection axis) and must not introduce left/right/up/down moments to the plungers. Maintaining this avoids the critical failure mode of <strong>plunger racking</strong> and sticking.</p>
 
   <h2>Colour key &amp; components</h2>
-  <p class="muted">CAD colours for this subpage. Add rows for each coloured component with purpose/spec.</p>
+  <p class="muted">Drive bracket, actuation interfaces, and (optional) guillotine-style insertion/removal mechanism.</p>
   <table>
     <tr><th>Colour(s)</th><th>Component</th></tr>
-    <tr><td><em>—</em></td><td><em>Add colour swatches and component names/descriptions.</em></td></tr>
+    <tr><td><em>—</em></td><td><strong>Plunger drive bracket</strong> — carries four plungers and moves in the ejection travel direction.</td></tr>
+    <tr><td><em>—</em></td><td><strong>Guillotine / sliding insertion access</strong> — optional mechanism that allows the plungers to be removed for service while keeping the push/pull behavior constrained.</td></tr>
   </table>
 
   <h2 id="gallery">Figures</h2>
-  <p class="muted">Add CAD views to the <code>images/</code> folder and reference them below. Refer to <a href="#fig1">Figure 1</a>, etc.</p>
+  <p class="muted">Existing core ejection CAD views (reuse from `Plug-ejection/images/`).</p>
   <div class="slideshow" id="skel-plungerdrivebracket-slideshow">
     <div class="slideshow-track">
-      <div class="slide active" id="fig1" data-caption="Figure 1. (Add caption.)"><img src="images/fig1.png" alt="Figure 1"></div>
+      <div class="slide active" id="fig1" data-caption="Figure 1. Plunger drive bracket context within the core ejection assembly (existing CAD view)."><img src="images/plug-ejection-4.png" alt="Plunger drive bracket context"></div>
     </div>
-    <p class="slideshow-caption" id="skel-plungerdrivebracket-caption" aria-live="polite">Figure 1. (Add caption.)</p>
+    <p class="slideshow-caption" id="skel-plungerdrivebracket-caption" aria-live="polite">Figure 1. Plunger drive bracket context.</p>
     <div class="slideshow-controls">
       <button type="button" id="skel-plungerdrivebracket-prev" aria-label="Previous">← Previous</button>
       <span class="slideshow-counter" id="skel-plungerdrivebracket-counter">1 / 1</span>
@@ -61,22 +62,43 @@
   <h2>Discussion</h2>
   <h3>Components</h3>
   <ul>
-    <li><em>List main components and their role; expand as needed.</em></li>
+    <li><strong>Drive bracket</strong> — supports the plunger bases; constrained so it moves forward/back only in the ejection axis.</li>
+    <li><strong>Service access constraint</strong> — ensure the insertion/removal mechanism does not compromise axial alignment during normal operation.</li>
   </ul>
   <h3>Interfaces</h3>
   <ul>
-    <li><strong>Input:</strong> <em>…</em></li>
-    <li><strong>Output:</strong> <em>…</em></li>
-    <li><strong>Mount:</strong> <em>…</em></li>
+    <li><strong>Input</strong>: plunger drive rods actuated from the drivetrain/transmission yoke system.</li>
+    <li><strong>Output</strong>: plungers push into filter tube and retract out of the tube to eject cores.</li>
+    <li><strong>Mount</strong>: guided by the side-panel linear bearing housings to ensure parallel rod/plunger motion.</li>
   </ul>
   <h3>Interfaces and tolerances</h3>
-  <p class="muted">Known interfaces and tolerances. Links go to related subsystems.</p>
+  <p class="muted">The bracket must keep plungers concentric with filter tubes/plug cutter to prevent racking and ensure sealing performance.</p>
   <table class="iface-table">
     <thead><tr><th>Part</th><th>Interface / tolerance</th><th>Related</th></tr></thead>
     <tbody>
-      <tr><td><em>—</em></td><td><em>Add rows.</em></td><td>—</td></tr>
+      <tr><td>Axial-only load path</td><td>Bracket should not transmit lateral/up/down moments to plungers; constrained push/pull engagement</td><td><a href="../plunger-drive-system-in-side-panels/">Plunger drive system in side panels</a></td></tr>
+      <tr><td>Concentricity</td><td>Plunger axis must remain parallel to filter tube axis over full stroke (jamming must be fail-safe)</td><td><a href="../../Collection/plungers-and-filter/">Plungers and filter</a></td></tr>
     </tbody>
   </table>
+
+  <h3>Known issues &amp; risks</h3>
+  <ul>
+    <li><strong>Racking risk</strong> — if any moment is introduced, plungers can rack in the filter tube, leading to sticking and damage.</li>
+    <li><strong>Sticking/jam failure mode</strong> — a stuck plunger can propagate forces into the drive mechanism; bracket must be designed to minimize moment amplification.</li>
+  </ul>
+
+  <h3>DFM &amp; manufacturing (China)</h3>
+  <ul>
+    <li><strong>Optional guillotine approach</strong> — sliding rails + central plate “door” to allow plungers to be removed for service while preserving the constrained push/pull engagement during operation.</li>
+    <li><strong>Low-friction materials</strong> — consider engineering plastics (e.g., Delrin / fiber-reinforced polymer) where sliding interfaces are required, but ensure any food-zone contact remains safe.</li>
+  </ul>
+
+  <h3>Questions for contractor</h3>
+  <ol>
+    <li>Propose an insertion/removal mechanism for plungers (guillotine vs alternate) that preserves axial-only actuation and repeatable concentricity.</li>
+    <li>Define how to validate that the bracket applies no meaningful moments to plungers (tests/inspection/measurement approach).</li>
+    <li>Propose materials for sliding interfaces that are low friction yet compatible with washdown and food safety (including microplastic risk).</li>
+  </ol>
 
   <p class="back"><a href="../index.html">← Back to Core ejection</a></p>
   <script>
