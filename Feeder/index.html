@@ -34,8 +34,8 @@
   <h2>Subpages</h2>
   <ul>
     <li><a href="feeding-subassembly/">Feeding subassembly</a> <span class="muted">(with content)</span> — per-unit detail: mount plate, 90° entry tube, straight tube, spring guide, sync spring; 8 CAD views and colour key.</li>
-    <li><a href="feeder-body/">Feeder body</a> <span class="muted">(skeleton)</span> — base; rotates on feeder hinge for access and CIP.</li>
-    <li><a href="entry-tubes/">Entry tubes</a> <span class="muted">(skeleton)</span> — guide fruit into each feeding subassembly.</li>
+    <li><a href="feeder-body/">Feeder body</a> <span class="muted">(with content)</span> — shell/lid/bracing; rotates on hinge for access and washdown/CIP.</li>
+    <li><a href="entry-tubes/">Entry tubes</a> <span class="muted">(with content)</span> — adjustable-height, removable tubes connecting upstream lines to each feeding unit.</li>
   </ul>
 
   <h2>Introduction</h2>
@@ -74,6 +74,34 @@
   </div>
 
   <h2>Discussion</h2>
+  <h3>Rough design &amp; intent</h3>
+  <ul>
+    <li><strong>System goal</strong> — Release <strong>one orange per cycle</strong> into each extraction station.</li>
+    <li><strong>Flow sequence</strong> — Upstream sorter/lines → adjustable entry tubes → 90° tube → orange rests on sync spring while a column stacks above → pusher opens spring during compression to drop one orange onto fruit support → spring closes on return stroke to hold the next orange while the staged orange drops into the peelers.</li>
+    <li><strong>Modularity</strong> — Feeding subassembly tubes are riveted to a mount plate and the mount plate is riveted to the feeder body so modules can be swapped/iterated by drilling out rivets.</li>
+  </ul>
+
+  <h3>Known issues &amp; risks</h3>
+  <ul>
+    <li><strong>Jams / double-drop</strong> — Sync spring must reliably gate a fruit column and release only one orange at a time without wedging.</li>
+    <li><strong>Collision envelope</strong> — Fruit support and pusher must never collide with entry tubes/90° tubes; pusher lateral flex can cause catastrophic collisions with tubes/lids.</li>
+    <li><strong>Washdown</strong> — This region is in/near splash zone; edges and joints must be cleanable and safe to handle.</li>
+  </ul>
+
+  <h3>DFM &amp; manufacturing (China)</h3>
+  <ul>
+    <li><strong>Tube standards</strong> — Feeding subassembly uses 3″ NPS / DN90 Sch 5S as a baseline; contractor may choose China-available equivalents that preserve function and cleanability.</li>
+    <li><strong>Hinge/pins</strong> — Entry tube adjustability relies on pinned joints; contractor to propose robust hardware and anti-loosening.</li>
+    <li><strong>CIP nozzle integration</strong> — 90° tube includes a port/tube for a nozzle to spray down the entry/spring zone; nozzle and mounting details TBD.</li>
+  </ul>
+
+  <h3>Questions for contractor</h3>
+  <ol>
+    <li>Validate the sync spring gating concept for reliable one-at-a-time release (fruit size range, friction, jam/double-drop failure modes) and propose improvements.</li>
+    <li>Propose tube/hinge/pin designs that are adjustable, rigid when locked, and fast to disassemble for seasonal maintenance.</li>
+    <li>Propose a CIP nozzle placement and cleaning strategy for the entry tube and spring region (spray direction, drain paths, avoiding dead zones).</li>
+  </ol>
+
   <h3>Subassemblies</h3>
   <ul>
     <li><a href="feeding-subassembly/">Feeding subassembly</a> — mount plate, flanged 90° entry tube, straight tube and spring guide, sync spring (8 CAD views, colour key, parameters).</li>

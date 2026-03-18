@@ -32,67 +32,74 @@
 <body>
   <p class="back"><a href="../index.html">← Back to Fruit intake system</a> · <a href="../../index.html">P6 RFP overview</a></p>
   <h1>Entry tubes</h1>
-  <p class="muted">Part of the <a href="../index.html">Fruit intake system</a> section. <em>Fill in one-line description.</em></p>
+  <p class="muted">Part of the <a href="../index.html">Fruit intake system</a> section. Adjustable, removable entry tubes that connect upstream feed lines to each feeding subassembly.</p>
 
   <h2>Introduction</h2>
-  <p><em>Fill in: purpose of this subassembly, how it fits in the subsystem, key specs or design intent.</em></p>
+  <p>Entry tubes connect third-party/orange-sorting feed lines to the feeder’s 90° entry tubes. The primary requirement is to provide a rigid, adjustable-height interface so upstream line height variation can be accommodated, while staying easy to remove/reinstall for cleaning and seasonal maintenance.</p>
 
   <h2>Colour key &amp; components</h2>
-  <p class="muted">CAD colours for this subpage. Add rows for each coloured component with purpose/spec.</p>
+  <p class="muted">Key components and intent (colours may vary across CAD figures).</p>
   <table>
     <tr><th>Colour(s)</th><th>Component</th></tr>
-    <tr><td><em>—</em></td><td><em>Add colour swatches and component names/descriptions.</em></td></tr>
+    <tr><td><em>—</em></td><td><strong>Entry tube</strong> — straight tube segment carrying a column of oranges into the 90° entry tube and sync spring region.</td></tr>
+    <tr><td><em>—</em></td><td><strong>Hinge + pin interfaces</strong> — intent is two pinned joints (one at the upstream feed line interface, one at the 90° tube interface) so entry tube height can be adjusted like the hypotenuse of a triangle by changing effective length/position.</td></tr>
+    <tr><td><em>—</em></td><td><strong>Hinge mount plate</strong> — mount plate with four corner holes for rivets; riveted to a welded plate on the 90° entry tube assembly.</td></tr>
+    <tr><td><em>—</em></td><td><strong>Riveted attachment</strong> — concept: 90° entry tube assembly and straight tube assembly are riveted to a mount plate (modular; can drill out rivets to iterate design).</td></tr>
   </table>
 
   <h2 id="gallery">Figures</h2>
-  <p class="muted">Add CAD views to the <code>images/</code> folder and reference them below. Refer to <a href="#fig1">Figure 1</a>, etc.</p>
-  <div class="slideshow" id="skel-entrytubes-slideshow">
-    <div class="slideshow-track">
-      <div class="slide active" id="fig1" data-caption="Figure 1. (Add caption.)"><img src="images/fig1.png" alt="Figure 1"></div>
-    </div>
-    <p class="slideshow-caption" id="skel-entrytubes-caption" aria-live="polite">Figure 1. (Add caption.)</p>
-    <div class="slideshow-controls">
-      <button type="button" id="skel-entrytubes-prev" aria-label="Previous">← Previous</button>
-      <span class="slideshow-counter" id="skel-entrytubes-counter">1 / 1</span>
-      <button type="button" id="skel-entrytubes-next" aria-label="Next">Next →</button>
-    </div>
-  </div>
+  <p class="muted">Entry tube views are shown in the <a href="../index.html#gallery">Fruit intake system main gallery</a> and in the <a href="../feeding-subassembly/#gallery">Feeding subassembly</a> figures. Add dedicated closeups here later.</p>
+  <ul class="muted">
+    <li><strong>Add figure</strong>: pinned joint/hinge geometry showing adjustment range and how upstream line height is accommodated.</li>
+    <li><strong>Add figure</strong>: riveted hinge mount plate (4 rivets) welded to 90° entry tube assembly.</li>
+    <li><strong>Add figure</strong>: CIP nozzle port on the 90° tube and spray direction down through entry tube/sync-spring zone.</li>
+  </ul>
 
   <h2>Discussion</h2>
-  <h3>Components</h3>
+  <h3>Rough design &amp; intent</h3>
   <ul>
-    <li><em>List main components and their role; expand as needed.</em></li>
+    <li><strong>Goal</strong> — Deliver fruit from upstream sorters/lines into each feeding unit such that the sync spring can reliably gate fruit one-at-a-time.</li>
+    <li><strong>Adjustable height interface</strong> — Entry tubes must be adjustable so they can mate to unknown third-party feed line heights. Current intent uses pinned joints so the tube can rotate at two ends and accommodate height/position changes.</li>
+    <li><strong>Removability</strong> — Tubes and mounts should come off quickly for cleaning and seasonal teardown (pins, rivets, and modular mount plate strategy).</li>
   </ul>
+
+  <h3>Known issues &amp; risks</h3>
+  <ul>
+    <li><strong>Collision envelope</strong> — Entry tube and hinge must not interfere with fruit support/pusher, synchronization spring motion, or feeder shell cutouts.</li>
+    <li><strong>Column load</strong> — A column of oranges can create significant side loads and friction; tube ID, seams, and joint alignment should minimize snagging and jamming.</li>
+  </ul>
+
+  <h3>DFM &amp; manufacturing (China)</h3>
+  <ul>
+    <li><strong>Tube fabrication</strong> — Contractor to propose CN-available pipe/tube standard and manufacturing method (rolled + welded vs seamless) consistent with food-zone requirements.</li>
+    <li><strong>Hinge hardware</strong> — Contractor to propose pin materials, retention (clip/cotter), and anti-loosening in vibration/washdown environment.</li>
+    <li><strong>Rivet/weld interfaces</strong> — If rivets are used for modularity, contractor to propose hygienic riveting strategy (avoid crevices/pockets, sealant if needed) or alternate modular fastening.</li>
+  </ul>
+
+  <h3>Questions for contractor</h3>
+  <ol>
+    <li>Propose a robust adjustable-height interface to unknown third-party feed lines (pins/hinge geometry, adjustment range, and how to lock it rigidly).</li>
+    <li>Recommend tube standards and inner-surface requirements to reduce fruit jamming and improve cleanability.</li>
+    <li>Review collision envelopes and propose clearances/tolerances so entry tubes never interfere with pusher/spring/tube cutouts through the cycle.</li>
+  </ol>
+
   <h3>Interfaces</h3>
   <ul>
-    <li><strong>Input:</strong> <em>…</em></li>
-    <li><strong>Output:</strong> <em>…</em></li>
-    <li><strong>Mount:</strong> <em>…</em></li>
+    <li><strong>Input:</strong> Oranges from upstream sorter/lines.</li>
+    <li><strong>Output:</strong> Fruit column into 90° entry tube and onto sync spring in the <a href="../feeding-subassembly/">feeding subassembly</a>.</li>
+    <li><strong>Mount:</strong> Pinned hinge at the 90° tube assembly and pinned interface to upstream feed line; riveted mount plates used for modularity.</li>
   </ul>
+
   <h3>Interfaces and tolerances</h3>
-  <p class="muted">Known interfaces and tolerances. Links go to related subsystems.</p>
+  <p class="muted">Key interfaces (tolerances TBD; contractor to propose).</p>
   <table class="iface-table">
     <thead><tr><th>Part</th><th>Interface / tolerance</th><th>Related</th></tr></thead>
     <tbody>
-      <tr><td><em>—</em></td><td><em>Add rows.</em></td><td>—</td></tr>
+      <tr><td>Entry tube → 90° tube</td><td>Pinned hinge interface; must be rigid when locked and easy to disassemble</td><td><a href="../feeding-subassembly/">Feeding subassembly</a></td></tr>
+      <tr><td>CIP nozzle port</td><td>Vertical tube welded to 90° entry tube; nozzle sprays down through entry tube/sync spring zone (geometry TBD)</td><td><a href="../../Clean-in-place/">CIP</a></td></tr>
     </tbody>
   </table>
 
   <p class="back"><a href="../index.html">← Back to Fruit intake system</a></p>
-  <script>
-(function(){
-  var el = document.getElementById('skel-entrytubes-slideshow');
-  if (!el) return;
-  var slides = el.querySelectorAll('.slide');
-  var cap = document.getElementById('skel-entrytubes-caption');
-  var counter = document.getElementById('skel-entrytubes-counter');
-  var n = slides.length, i = 0;
-  function go(k) { i = (k + n) % n; slides.forEach(function(s,j){ s.classList.toggle('active', j===i); }); if (cap) cap.textContent = slides[i].getAttribute('data-caption') || ''; if (counter) counter.textContent = (i+1) + ' / ' + n; }
-  el.querySelector('#skel-entrytubes-prev').addEventListener('click', function(){ go(i-1); });
-  el.querySelector('#skel-entrytubes-next').addEventListener('click', function(){ go(i+1); });
-  var hash = window.location.hash;
-  if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
-})();
-  </script>
 </body>
 </html>

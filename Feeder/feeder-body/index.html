@@ -32,67 +32,74 @@
 <body>
   <p class="back"><a href="../index.html">← Back to Fruit intake system</a> · <a href="../../index.html">P6 RFP overview</a></p>
   <h1>Feeder body</h1>
-  <p class="muted">Part of the <a href="../index.html">Fruit intake system</a> section. <em>Fill in one-line description.</em></p>
+  <p class="muted">Part of the <a href="../index.html">Fruit intake system</a> section. Feeder body + lid/shell that supports modular feeding subassemblies and enables access and washdown.</p>
 
   <h2>Introduction</h2>
-  <p><em>Fill in: purpose of this subassembly, how it fits in the subsystem, key specs or design intent.</em></p>
+  <p>The feeder body is the structural “shell” that supports the per-station feeding subassemblies and entry tubes. It is designed to open on a hinge for access and cleaning. It also provides splash control so juice and cleaning spray stay inside the extraction zone and drain toward disposal.</p>
 
   <h2>Colour key &amp; components</h2>
-  <p class="muted">CAD colours for this subpage. Add rows for each coloured component with purpose/spec.</p>
+  <p class="muted">Key elements and intent (colours may vary across CAD figures).</p>
   <table>
     <tr><th>Colour(s)</th><th>Component</th></tr>
-    <tr><td><em>—</em></td><td><em>Add colour swatches and component names/descriptions.</em></td></tr>
+    <tr><td><em>—</em></td><td><strong>Feeder body / shell</strong> — sheet-metal enclosure that supports feeding subassemblies and creates splash containment.</td></tr>
+    <tr><td><em>—</em></td><td><strong>Top lid</strong> — concept: ~2 mm sheet steel lid panel; mounts to hinge and bracing; provides access for service/CIP.</td></tr>
+    <tr><td><em>—</em></td><td><strong>Brace / bracing</strong> — structural reinforcement to prevent lid buckling and distribute hinge loads; design still TBD (folded vs welded ribs/stiffeners).</td></tr>
+    <tr><td><em>—</em></td><td><strong>Feeding-subassembly cutouts</strong> — diagonal cutouts/ports where feeding subassembly mount plates sit; intended to be modular (riveted) for iteration.</td></tr>
   </table>
 
   <h2 id="gallery">Figures</h2>
-  <p class="muted">Add CAD views to the <code>images/</code> folder and reference them below. Refer to <a href="#fig1">Figure 1</a>, etc.</p>
-  <div class="slideshow" id="skel-feederbody-slideshow">
-    <div class="slideshow-track">
-      <div class="slide active" id="fig1" data-caption="Figure 1. (Add caption.)"><img src="images/fig1.png" alt="Figure 1"></div>
-    </div>
-    <p class="slideshow-caption" id="skel-feederbody-caption" aria-live="polite">Figure 1. (Add caption.)</p>
-    <div class="slideshow-controls">
-      <button type="button" id="skel-feederbody-prev" aria-label="Previous">← Previous</button>
-      <span class="slideshow-counter" id="skel-feederbody-counter">1 / 1</span>
-      <button type="button" id="skel-feederbody-next" aria-label="Next">Next →</button>
-    </div>
-  </div>
+  <p class="muted">Feeder body context is shown in the <a href="../index.html#gallery">Fruit intake system main gallery</a>. Add dedicated closeups here later.</p>
+  <ul class="muted">
+    <li><strong>Add figure</strong>: lid/shelf lip geometry showing how the lid overhangs into the extraction zone to keep spray inside.</li>
+    <li><strong>Add figure</strong>: hinge mounting area and bracing concept (to avoid hinging loads on thin 2 mm sheet).</li>
+    <li><strong>Add figure</strong>: feeding-subassembly mount plate cutouts and rivet pattern (modular swap concept).</li>
+  </ul>
 
   <h2>Discussion</h2>
-  <h3>Components</h3>
+  <h3>Rough design &amp; intent</h3>
   <ul>
-    <li><em>List main components and their role; expand as needed.</em></li>
+    <li><strong>Purpose</strong> — Provide a rigid, cleanable housing for the fruit intake mechanism while allowing rapid access for maintenance and CIP/washdown.</li>
+    <li><strong>Modularity</strong> — Feeding subassemblies (mount plate + tubes + sync spring) are designed to be built as a module, then riveted onto the feeder body. Tubes can be swapped by drilling out rivets as the design evolves.</li>
   </ul>
+
+  <h3>Known issues &amp; risks</h3>
+  <ul>
+    <li><strong>Splash containment</strong> — Lid and “shelf lip” geometry must keep juice/spray inside the extraction zone. The lid should overhang inward so upward spray drains back into the extraction/disposal region rather than escaping to outer walls.</li>
+    <li><strong>Bracing/hinge loads</strong> — The lid is thin sheet (concept ~2 mm). Hinge mounts must land on reinforced bracing, not directly on thin sheet, to avoid tear-out and buckling.</li>
+    <li><strong>Edge safety</strong> — All cut edges must be deburred/hemmed so operators are not cut during seasonal teardown/cleaning.</li>
+  </ul>
+
+  <h3>DFM &amp; manufacturing (China)</h3>
+  <ul>
+    <li><strong>Sheet metal process</strong> — Contractor to propose fold vs weld strategy for the shell and bracing. Prefer folded hems and continuous seams where possible in splash zones.</li>
+    <li><strong>Rivets vs welded studs</strong> — Riveted modular mounts are acceptable for iteration; contractor may propose better hygienic fastening (studs outside splash zone, weld studs, etc.) for production-ready design.</li>
+  </ul>
+
+  <h3>Questions for contractor</h3>
+  <ol>
+    <li>Propose the feeder shell fabrication method (folded sheet vs welded) that achieves stiffness and good hygiene (no pockets, good drainage) with China-available processes.</li>
+    <li>Propose a hinge + bracing design that distributes loads safely into the shell without local buckling/tear-out.</li>
+    <li>Review the lid lip/overhang geometry to ensure spray containment and drainage into the extraction zone.</li>
+  </ol>
+
   <h3>Interfaces</h3>
   <ul>
-    <li><strong>Input:</strong> <em>…</em></li>
-    <li><strong>Output:</strong> <em>…</em></li>
-    <li><strong>Mount:</strong> <em>…</em></li>
+    <li><strong>Input:</strong> Fruit enters via entry tubes from upstream sorter/lines.</li>
+    <li><strong>Output:</strong> One fruit per cycle dropped into <a href="../../Extraction-syncronisation/">extraction &amp; synchronisation</a> fruit support.</li>
+    <li><strong>Mount:</strong> Feeding subassemblies rivet/bolt onto feeder body. Feeder body hinges open for access.</li>
   </ul>
+
   <h3>Interfaces and tolerances</h3>
-  <p class="muted">Known interfaces and tolerances. Links go to related subsystems.</p>
+  <p class="muted">Key interfaces (tolerances TBD; contractor to propose).</p>
   <table class="iface-table">
     <thead><tr><th>Part</th><th>Interface / tolerance</th><th>Related</th></tr></thead>
     <tbody>
-      <tr><td><em>—</em></td><td><em>Add rows.</em></td><td>—</td></tr>
+      <tr><td>Feeding subassembly mount</td><td>Modular plate riveted to shell; intended to be replaceable for design iterations</td><td><a href="../feeding-subassembly/">Feeding subassembly</a></td></tr>
+      <tr><td>Feeder hinge</td><td>Hinge mounts to reinforced bracing (not thin sheet); must support repeated open/close cycles</td><td><a href="../../Enclosure-shell/">Enclosure / shell</a></td></tr>
+      <tr><td>Lid lip/overhang</td><td>Must overhang into extraction zone to keep spray/juice contained and draining inward</td><td><a href="../../Extraction-syncronisation/">Extraction &amp; synchronisation</a></td></tr>
     </tbody>
   </table>
 
   <p class="back"><a href="../index.html">← Back to Fruit intake system</a></p>
-  <script>
-(function(){
-  var el = document.getElementById('skel-feederbody-slideshow');
-  if (!el) return;
-  var slides = el.querySelectorAll('.slide');
-  var cap = document.getElementById('skel-feederbody-caption');
-  var counter = document.getElementById('skel-feederbody-counter');
-  var n = slides.length, i = 0;
-  function go(k) { i = (k + n) % n; slides.forEach(function(s,j){ s.classList.toggle('active', j===i); }); if (cap) cap.textContent = slides[i].getAttribute('data-caption') || ''; if (counter) counter.textContent = (i+1) + ' / ' + n; }
-  el.querySelector('#skel-feederbody-prev').addEventListener('click', function(){ go(i-1); });
-  el.querySelector('#skel-feederbody-next').addEventListener('click', function(){ go(i+1); });
-  var hash = window.location.hash;
-  if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
-})();
-  </script>
 </body>
 </html>
