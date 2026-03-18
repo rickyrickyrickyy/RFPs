@@ -32,67 +32,73 @@
 <body>
   <p class="back"><a href="../index.html">← Back to Drivetrain</a> · <a href="../../index.html">P6 RFP overview</a></p>
   <h1>Motor and reducer</h1>
-  <p class="muted">Part of the <a href="../index.html">Drivetrain</a> section. <em>Fill in one-line description.</em></p>
+  <p class="muted">Part of the <a href="../index.html">Drivetrain</a> section. Motor + belt drive + reducer mounting and the primary vibration/torque input to the machine.</p>
 
   <h2>Introduction</h2>
-  <p><em>Fill in: purpose of this subassembly, how it fits in the subsystem, key specs or design intent.</em></p>
+  <p>This subassembly defines the motor/reducer selection, belt drive layout, and mounting/tensioning approach. It sets the drivetrain’s radial loads (from belt tension), vibration into the frame, and the reducer output torque that drives the gear train.</p>
+
+  <h2>Catalog links</h2>
+  <ul>
+    <li><strong>WEG W22 IEC TEFC catalog (IE2)</strong> — <a href="https://www.weg.net/catalog/weg/US/en/c/MT_IEC_3PHASE_LV_TEFC_W22_IE2/list">WEG catalog listing</a></li>
+    <li><strong>Sumitomo Cyclo 6000 catalog (PDF)</strong> — <a href="https://us.sumitomodrive.com/sites/default/files/2025-03/cyclo_6000_reducer_catalog_v12_web-2.pdf">Sumitomo PDF</a></li>
+  </ul>
 
   <h2>Colour key &amp; components</h2>
-  <p class="muted">CAD colours for this subpage. Add rows for each coloured component with purpose/spec.</p>
+  <p class="muted">Key components; colours may differ between figures. Primary intent is to specify interfaces and what contractors must validate.</p>
   <table>
     <tr><th>Colour(s)</th><th>Component</th></tr>
-    <tr><td><em>—</em></td><td><em>Add colour swatches and component names/descriptions.</em></td></tr>
+    <tr><td><em>—</em></td><td><strong>Motor</strong> — WEG W21/W22 IE3 motor, product 13533507: 7.5 kW (10 hp), 50 Hz, 4-pole, rated speed 1460 rpm, rated torque ~49 N·m, 38 mm shaft.</td></tr>
+    <tr><td><em>—</em></td><td><strong>V-belt drive</strong> — SPA belts; current concept uses 1:1 pulleys (170 mm pitch dia motor and reducer). Two belts planned. Center distance and tensioning method are TBD.</td></tr>
+    <tr><td><em>—</em></td><td><strong>Reducer</strong> — Sumitomo Cyclo 6000 series; output speed target ~70 rpm (final ratio/model to be confirmed from catalog selection).</td></tr>
   </table>
 
   <h2 id="gallery">Figures</h2>
-  <p class="muted">Add CAD views to the <code>images/</code> folder and reference them below. Refer to <a href="#fig1">Figure 1</a>, etc.</p>
-  <div class="slideshow" id="skel-motorandreducer-slideshow">
-    <div class="slideshow-track">
-      <div class="slide active" id="fig1" data-caption="Figure 1. (Add caption.)"><img src="images/fig1.png" alt="Figure 1"></div>
-    </div>
-    <p class="slideshow-caption" id="skel-motorandreducer-caption" aria-live="polite">Figure 1. (Add caption.)</p>
-    <div class="slideshow-controls">
-      <button type="button" id="skel-motorandreducer-prev" aria-label="Previous">← Previous</button>
-      <span class="slideshow-counter" id="skel-motorandreducer-counter">1 / 1</span>
-      <button type="button" id="skel-motorandreducer-next" aria-label="Next">Next →</button>
-    </div>
-  </div>
+  <p class="muted">Motor/reducer figures are currently shown in the <a href="../index.html#gallery">Drivetrain main gallery</a>. Add dedicated closeups here later (pulley alignment, tensioning travel, mounting features).</p>
 
   <h2>Discussion</h2>
-  <h3>Components</h3>
+  <h3>Rough design &amp; intent</h3>
   <ul>
-    <li><em>List main components and their role; expand as needed.</em></li>
+    <li><strong>Primary goal</strong> — Deliver stable reducer output torque to the gear train while keeping belt tensioning, pulley alignment, and vibration manageable.</li>
+    <li><strong>Mounting orientation</strong> — Current concept mounts the motor with its shaft pointing vertically downward, and the reducer input shaft is also oriented vertically downward. A belt transfers power between these vertical shafts.</li>
+    <li><strong>Major unknown</strong> — Belt center distance and tensioning mechanism must be finalized because it sets bearing radial loads, vibration, and stiffness requirements on the mount plate.</li>
   </ul>
-  <h3>Interfaces</h3>
+
+  <h3>Known issues &amp; risks</h3>
   <ul>
-    <li><strong>Input:</strong> <em>…</em></li>
-    <li><strong>Output:</strong> <em>…</em></li>
-    <li><strong>Mount:</strong> <em>…</em></li>
+    <li><strong>Radial loads from belt tension</strong> — Contractor must quantify belt tension and resulting radial loads on motor and reducer shafts.</li>
+    <li><strong>Vibration</strong> — Motor/reducer vibrations transmit into the frame; mount stiffness and damping/isolation must be considered.</li>
+    <li><strong>Shaft extensions</strong> — Machine layout requires extending reducer input/output shafts; contractor to propose a safe, manufacturable extension/adaptor approach and tolerances.</li>
+    <li><strong>Belt guard not designed</strong> — A pulley/belt guard is required; mounting rails/structure on the back of the machine may be needed to support guarding.</li>
   </ul>
+
+  <h3>DFM &amp; manufacturing (China)</h3>
+  <ul>
+    <li><strong>Mounting</strong> — Recommend a motor/reducer mounting that supports easy belt tensioning and pulley alignment check.</li>
+    <li><strong>Guarding</strong> — Provide a practical pulley/belt guard that is safe yet removable for maintenance.</li>
+    <li><strong>Tensioning concept</strong> — Current owner concept is a “standoff stud adjustment” mount: motor sits on multiple through-studs/bolts with stacked nuts/washers (nut below plate, nut/washer above plate, motor foot, nut above foot) so motor position can be adjusted for belt tension. Contractor to propose a cleaner and more robust alternative if preferred.</li>
+  </ul>
+
+  <h3>Questions for contractor</h3>
+  <ol>
+    <li>Propose a belt tensioning design (center distance, adjustment travel, locking method) and provide belt tension/radial load estimates.</li>
+    <li>Confirm the exact Cyclo 6000 model/ratio required for ~70 rpm output and provide mounting/lubrication requirements.</li>
+    <li>Propose input and output shaft extension/adaptor design(s) (materials, fit classes, keying/splines, runout targets) and an assembly/inspection plan.</li>
+    <li>Evaluate an alternative architecture: mount the motor in a conventional orientation and use a right-angle/angle gearbox to drive the vertical reducer input. Would this improve vibration, service, or safety? Provide trade-offs and sourcing options.</li>
+    <li>Propose a guarding concept for the belt/pulleys that can be mounted on the back of the machine (what rails/brackets are needed and how it is removed for maintenance).</li>
+  </ol>
+
   <h3>Interfaces and tolerances</h3>
   <p class="muted">Known interfaces and tolerances. Links go to related subsystems.</p>
   <table class="iface-table">
     <thead><tr><th>Part</th><th>Interface / tolerance</th><th>Related</th></tr></thead>
     <tbody>
-      <tr><td><em>—</em></td><td><em>Add rows.</em></td><td>—</td></tr>
+      <tr><td>Motor</td><td>WEG W21/W22 IE3, 7.5 kW, 1460 rpm rated; 38 mm shaft (confirm frame/mounting form from selected model)</td><td>—</td></tr>
+      <tr><td>V-belt drive</td><td>SPA belts; 1:1 pulleys (170 mm pitch dia) concept; two belts planned; center distance and tensioning TBD</td><td>—</td></tr>
+      <tr><td>Reducer</td><td>Sumitomo Cyclo 6000 series; select ratio/model to achieve target output speed; confirm output shaft geometry and mounting</td><td>—</td></tr>
+      <tr><td>Mounting</td><td>Motor + reducer mount to drivetrain mount plate; alignment and stiffness requirements per Frame/Drivetrain</td><td><a href="../drivetrain-mount-plate/">Drivetrain mount plate</a></td></tr>
     </tbody>
   </table>
 
   <p class="back"><a href="../index.html">← Back to Drivetrain</a></p>
-  <script>
-(function(){
-  var el = document.getElementById('skel-motorandreducer-slideshow');
-  if (!el) return;
-  var slides = el.querySelectorAll('.slide');
-  var cap = document.getElementById('skel-motorandreducer-caption');
-  var counter = document.getElementById('skel-motorandreducer-counter');
-  var n = slides.length, i = 0;
-  function go(k) { i = (k + n) % n; slides.forEach(function(s,j){ s.classList.toggle('active', j===i); }); if (cap) cap.textContent = slides[i].getAttribute('data-caption') || ''; if (counter) counter.textContent = (i+1) + ' / ' + n; }
-  el.querySelector('#skel-motorandreducer-prev').addEventListener('click', function(){ go(i-1); });
-  el.querySelector('#skel-motorandreducer-next').addEventListener('click', function(){ go(i+1); });
-  var hash = window.location.hash;
-  if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
-})();
-  </script>
 </body>
 </html>

@@ -80,6 +80,51 @@
   </div>
 
   <h2>Discussion</h2>
+  <h3>Rough design &amp; intent</h3>
+  <ul>
+    <li><strong>What this subsystem does</strong> — Receive single oranges from the feeder and stage them on the fruit support, then drive the extraction event by meshing <strong>driven peelers</strong> with <strong>static peelers</strong> (collection). The <a href="../Transmission/">transmission</a> yoke/shafts push this module into the collection module during compression.</li>
+    <li><strong>Design status</strong> — Peeler core geometry is inherited from a commercial machine. The <strong>mounting flanges</strong> for both driven and static peelers (and how they are manufactured) are not finalized and are planned as machined-on flanges added to existing peelers.</li>
+    <li><strong>Hygiene/washdown</strong> — This is inside the splash zone. All surfaces should be spray-down washable with no pockets/shelves; top faces should be sloped for drainage. Fasteners should follow hygienic practice (e.g., avoid Phillips/slotted where possible; prefer hex heads).</li>
+  </ul>
+
+  <h3>Known issues &amp; risks</h3>
+  <ul>
+    <li><strong>High force path</strong> — The driven bracket carries large loads and bending moments: transmission shafts push on a short bracket while supporting four peeler modules. Stiffness and fatigue life are critical.</li>
+    <li><strong>Peeler alignment</strong> — Driven peelers must be concentric/aligned with static peelers. Current plan relies on an adjust-then-lock approach (loose fit holes for adjustment, then drill/ream and add shoulder bolts/dowels).</li>
+    <li><strong>Synchronization pusher stiffness</strong> — Only one pusher is used across four modules, pushing a diagonal spring. If the pusher or fruit support flexes laterally (X-axis), it can collide with tubes/lids and cause catastrophic damage.</li>
+    <li><strong>Deflectors are WIP</strong> — Chute deflectors must prevent peel from falling into core chutes during compression and redirect peel into peel chute; current concept is not yet constrained/stiff.</li>
+  </ul>
+
+  <h3>DFM &amp; manufacturing (China)</h3>
+  <ul>
+    <li><strong>Driven bracket</strong> — Current intent is a sand-cast driven bracket with draft angles and post-machining for critical mounting faces/holes. Contractor to confirm rib thickness, casting quality, and whether cast vs welded is best.</li>
+    <li><strong>Surface finishing</strong> — Consider post-processing for the cast bracket to improve cleanability (e.g., smoothing/flow finishing) so there are no crevices where pulp can accumulate.</li>
+    <li><strong>Peeler flange fabrication</strong> — Plan is to machine flanges (lathe) and weld a plate to existing peelers for bolt-up. Contractor to propose a robust welding + inspection approach that preserves geometry and hygiene.</li>
+    <li><strong>Fruit support</strong> — Current design uses waterjet-cut ~5 mm plates assembled with slots and welded. Stiffness must prevent sag and lateral flex, while allowing CIP spray through rails/gaps.</li>
+  </ul>
+
+  <h3>Optimizations sought</h3>
+  <ul>
+    <li><strong>Alignment repeatability</strong> — Fast alignment procedure that can be repeated seasonally (adjust → lock → dowel/shoulder-bolt).</li>
+    <li><strong>Cleanability</strong> — No pockets; sloped top faces; rail gaps that allow spray-through cleaning of peelers.</li>
+    <li><strong>Stiffness</strong> — Increase stiffness of driven bracket and fruit support to prevent collisions and preserve peeler alignment.</li>
+  </ul>
+
+  <h3>Questions for contractor</h3>
+  <ol>
+    <li>Propose the best manufacturing strategy for the driven bracket (cast vs welded) given washdown/hygiene requirements, stiffness needs, and China supply chain.</li>
+    <li>Propose a peeler alignment procedure and tolerances for concentricity/mesh so peelers do not collide and wear is controlled.</li>
+    <li>Review the fruit support + pusher stiffness requirements and propose design changes that prevent lateral flex and collisions while keeping CIP spray-through.</li>
+    <li>Propose a chute deflector design that is stiff, manufacturable (formed/bent), and does not collide during motion; ensure peel is routed to peel chute (not core chute).</li>
+  </ol>
+
+  <h3>Figures to add (clarify to contractors)</h3>
+  <ul>
+    <li><strong>Peeler alignment sketch</strong> — driven vs static peeler concentricity and where adjustment is provided vs where holes are reamed/shoulder-bolted.</li>
+    <li><strong>Pusher collision envelope</strong> — pusher travel, spring path, and clearance to tubes/lids; show catastrophic collision modes to avoid.</li>
+    <li><strong>Deflector intent</strong> — peel trajectory and “do not drop into core chute” requirement; show compression stroke position.</li>
+  </ul>
+
   <h3>Subassemblies</h3>
   <ul>
     <li><a href="fruit-support/">Fruit support</a> — rails, connecting link, pusher; direct fruit from pipe to peeler.</li>

@@ -32,67 +32,77 @@
 <body>
   <p class="back"><a href="../index.html">← Back to Collection</a> · <a href="../../index.html">P6 RFP overview</a></p>
   <h1>Plungers and filter</h1>
-  <p class="muted">Part of the <a href="../index.html">Collection</a> section. <em>Fill in one-line description.</em></p>
+  <p class="muted">Part of the <a href="../index.html">Collection</a> section. Filter tube, plug cutter, and plunger interface (wear, sealing, and CIP cleaning).</p>
 
   <h2>Introduction</h2>
-  <p><em>Fill in: purpose of this subassembly, how it fits in the subsystem, key specs or design intent.</em></p>
+  <p>The filter tube and plug cutter define the juice filtration path and the core-ejection path. Plungers pass through the filter tube during the cycle to eject the core and scrape pulp from the slot region. This subassembly is sensitive to surface finish, alignment, and sealing; current designs are based on the commercial machine but with increased length and higher industrial load/pressure expectations.</p>
 
   <h2>Colour key &amp; components</h2>
-  <p class="muted">CAD colours for this subpage. Add rows for each coloured component with purpose/spec.</p>
+  <p class="muted">Key components and intent (colours may vary across CAD figures).</p>
   <table>
     <tr><th>Colour(s)</th><th>Component</th></tr>
-    <tr><td><em>—</em></td><td><em>Add colour swatches and component names/descriptions.</em></td></tr>
+    <tr><td><em>—</em></td><td><strong>Filter tube</strong> — hardened steel tube with laser-cut vertical slots (~0.7 mm slot width concept). Longer than commercial version. ID finish target ~Ra 0.8 μm so plungers can slide and seal.</td></tr>
+    <tr><td><em>—</em></td><td><strong>Plug cutter</strong> — hardened steel tip that cuts the core; geometry based on commercial machine. Open question: integrated with filter tube vs separate removable tip.</td></tr>
+    <tr><td><em>—</em></td><td><strong>Plunger interface</strong> — plunger and scraper travel inside filter tube; scraper clears pulp from slot region each cycle.</td></tr>
+    <tr><td><em>—</em></td><td><strong>Cap / base</strong> — removable end cap concept that holds the filter tube (and possibly forms base for plug cutter); cap-to-collector mounting method TBD.</td></tr>
   </table>
 
   <h2 id="gallery">Figures</h2>
-  <p class="muted">Add CAD views to the <code>images/</code> folder and reference them below. Refer to <a href="#fig1">Figure 1</a>, etc.</p>
-  <div class="slideshow" id="skel-plungersandfilter-slideshow">
-    <div class="slideshow-track">
-      <div class="slide active" id="fig1" data-caption="Figure 1. (Add caption.)"><img src="images/fig1.png" alt="Figure 1"></div>
-    </div>
-    <p class="slideshow-caption" id="skel-plungersandfilter-caption" aria-live="polite">Figure 1. (Add caption.)</p>
-    <div class="slideshow-controls">
-      <button type="button" id="skel-plungersandfilter-prev" aria-label="Previous">← Previous</button>
-      <span class="slideshow-counter" id="skel-plungersandfilter-counter">1 / 1</span>
-      <button type="button" id="skel-plungersandfilter-next" aria-label="Next">Next →</button>
-    </div>
-  </div>
+  <p class="muted">Filter/plug-cutter context is shown in the <a href="../index.html#gallery">Collection main gallery</a>. Add dedicated closeups here later (ID finish callouts, slot geometry, seal detail, plug-cutter attachment).</p>
+  <ul class="muted">
+    <li><strong>Add figure</strong>: filter tube slot pattern and how scraper clears pulp each cycle.</li>
+    <li><strong>Add figure</strong>: plunger-to-tube sealing concept (current vs proposed O-ring/lip seal).</li>
+    <li><strong>Add figure</strong>: plug cutter attachment options (integral vs removable tip).</li>
+    <li><strong>Add figure</strong>: reverse-flow CIP path exiting plug cutter centreline.</li>
+  </ul>
 
   <h2>Discussion</h2>
-  <h3>Components</h3>
+  <h3>Rough design &amp; intent</h3>
   <ul>
-    <li><em>List main components and their role; expand as needed.</em></li>
+    <li><strong>Commercial baseline</strong> — Filter tube and plug cutter are based on the commercial machine geometry; industrial version increases length and expects higher loads and higher pressure during extraction.</li>
+    <li><strong>Finish &amp; sealing</strong> — Filter tube ID should be ground/polished (Ra ~0.8 μm concept) so plungers slide smoothly and a seal can be achieved.</li>
+    <li><strong>Material</strong> — Intent is hardened steel for filter tube and plug cutter (vs prior 304) to reduce wear from scraper action.</li>
   </ul>
+
+  <h3>Known issues &amp; risks</h3>
+  <ul>
+    <li><strong>Leakage</strong> — Known issue: juice leaks past plunger-to-tube interface. Current plan is surface-to-surface sealing; likely needs an O-ring or alternative seal for industrial pressures.</li>
+    <li><strong>Wear</strong> — Scraper action can roughen tube ID if materials are not chosen correctly; heat treat/finish must be validated.</li>
+    <li><strong>Alignment</strong> — Tube is welded to a cap and then assembled; weld and assembly stack-up can misalign plungers, increasing leakage and wear.</li>
+  </ul>
+
+  <h3>DFM &amp; manufacturing (China)</h3>
+  <ul>
+    <li><strong>Slotting</strong> — Laser cut slot pattern (0.7 mm slot width concept) in hardened steel tube; contractor to propose manufacturing route and inspection.</li>
+    <li><strong>Heat treat + finishing</strong> — Contractor to propose hardening and post-grind/polish methods that keep tube straightness and slot geometry within tolerance.</li>
+    <li><strong>Assembly</strong> — Contractor to propose how to weld cap without distorting tube, and how to control tube axis alignment through assembly.</li>
+  </ul>
+
+  <h3>Questions for contractor</h3>
+  <ol>
+    <li>Propose a sealing solution for plunger-to-filter tube suitable for high pressure and washdown (O-ring groove, lip seal, or alternate geometry).</li>
+    <li>Recommend material/heat treat/finish for filter tube + plug cutter + scraper, with expected wear life and maintainability.</li>
+    <li>Recommend whether plug cutter should be integrated with the filter tube or remain a removable tip, considering sanitary rules and service.</li>
+    <li>Propose an inspection and acceptance plan for the tube (ID finish, straightness, slot quality) and for assembled plunger sealing performance.</li>
+  </ol>
+
   <h3>Interfaces</h3>
   <ul>
-    <li><strong>Input:</strong> <em>…</em></li>
-    <li><strong>Output:</strong> <em>…</em></li>
-    <li><strong>Mount:</strong> <em>…</em></li>
+    <li><strong>Input:</strong> Juice exits fruit into filter tube slots; plunger enters tube for core ejection and scraping.</li>
+    <li><strong>Output:</strong> Juice to collector; core ejected through plug cutter to disposal; CIP reverse-flow exits plug cutter centreline.</li>
+    <li><strong>Mount:</strong> Filter tube and plug cutter mount on the collection assembly and interface to core ejection plungers.</li>
   </ul>
   <h3>Interfaces and tolerances</h3>
   <p class="muted">Known interfaces and tolerances. Links go to related subsystems.</p>
   <table class="iface-table">
     <thead><tr><th>Part</th><th>Interface / tolerance</th><th>Related</th></tr></thead>
     <tbody>
-      <tr><td><em>—</em></td><td><em>Add rows.</em></td><td>—</td></tr>
+      <tr><td>Filter tube</td><td>Hardened steel; laser-cut slots (~0.7 mm concept); ID finish target ~Ra 0.8 μm concept; straightness/alignment critical</td><td><a href="../index.html">Collection</a></td></tr>
+      <tr><td>Plug cutter</td><td>Hardened steel; removable vs integral with tube is TBD</td><td><a href="../../Plug-ejection/">Core ejection</a></td></tr>
+      <tr><td>Plunger</td><td>Slides in tube; must seal; scraper clears pulp from slots each cycle</td><td><a href="../../Plug-ejection/">Core ejection</a></td></tr>
     </tbody>
   </table>
 
   <p class="back"><a href="../index.html">← Back to Collection</a></p>
-  <script>
-(function(){
-  var el = document.getElementById('skel-plungersandfilter-slideshow');
-  if (!el) return;
-  var slides = el.querySelectorAll('.slide');
-  var cap = document.getElementById('skel-plungersandfilter-caption');
-  var counter = document.getElementById('skel-plungersandfilter-counter');
-  var n = slides.length, i = 0;
-  function go(k) { i = (k + n) % n; slides.forEach(function(s,j){ s.classList.toggle('active', j===i); }); if (cap) cap.textContent = slides[i].getAttribute('data-caption') || ''; if (counter) counter.textContent = (i+1) + ' / ' + n; }
-  el.querySelector('#skel-plungersandfilter-prev').addEventListener('click', function(){ go(i-1); });
-  el.querySelector('#skel-plungersandfilter-next').addEventListener('click', function(){ go(i+1); });
-  var hash = window.location.hash;
-  if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
-})();
-  </script>
 </body>
 </html>

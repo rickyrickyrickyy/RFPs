@@ -51,6 +51,27 @@
   </section>
 
   <section>
+    <h2>Key load cases (to validate)</h2>
+    <p class="muted">Current values below are preliminary and intended to help contractors define load cases and acceptance targets. Contractor to validate with final geometry, belt center distance, gear module/profile, and cam/yoke details.</p>
+    <ul>
+      <li><strong>Motor / belt / reducer excitation</strong> — WEG W21/W22 IE3 motor (7.5 kW / 10 hp) drives the reducer via SPA belts (ratio currently 1:1; two belts planned). Belt tensioning and motor vibration transmit radial loads and vibration into the drivetrain mount plate and frame.</li>
+      <li><strong>Reducer output / gear mesh</strong> — Target reducer output speed ~70 rpm. Preliminary drivetrain calculations indicate ~1023 N·m torque at the driven gear, with estimated gear mesh forces on the order of ~6.6 kN tangential and ~7.2 kN normal (to be validated).</li>
+      <li><strong>Cam-yoke reciprocation</strong> — Cam bearing offset ~89 mm from shaft axis drives yoke reciprocation. This introduces cyclic forces and moments into the transmission mount plate, the two drive shafts, and their supports.</li>
+      <li><strong>Peak compression event</strong> — Worst-case operating condition assumes maximum drivetrain capability drives the extraction/compression event; frame and mount plates should withstand this with an appropriate factor of safety and without losing alignment.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Moments at linear bearings and mount plates</h2>
+    <p>The transmission uses two shafts guided by two LMK35UU (35 mm) linear bearings. The bearings are located above the mount plate, so off-axis forces and any asymmetry between left/right sides generate moments into the transmission mount plate and the frame.</p>
+    <ul>
+      <li><strong>Asymmetric / jam case</strong> — If one side binds or sees higher friction than the other, the shafts can twist and impose additional moment loads on the linear bearings and plate.</li>
+      <li><strong>Overturning moments</strong> — Vertical offset between bearing reaction line and the mount plate creates an overturning moment that tends to rotate the mount plate about a horizontal axis. This is expected to be significant on the collection side during compression.</li>
+      <li><strong>Load transfer</strong> — These moments must be carried through the mount plate into the dowel/shear pins and bolted clamping into the side rails, then into the welded frame and down into the leveling mounts and floor.</li>
+    </ul>
+  </section>
+
+  <section>
     <h2>Load path principles</h2>
     <ul>
       <li><strong>Clear paths</strong> — No single member or joint should see disproportionate load; loads should spread through the welded structure and into the three plates as intended.</li>
@@ -62,7 +83,18 @@
 
   <section>
     <h2>Notes for RFP</h2>
-    <p>Contractors may be asked to verify or document load paths for the as-built configuration. Detailed reaction magnitudes and FEA (if any) can be added here or in the Frame section as the design is frozen.</p>
+    <p>Contractors are asked to verify and document load cases and load paths for the as-built configuration, and to propose practical acceptance targets for stiffness and alignment (including asymmetric/jam cases for the transmission shafts). Where appropriate, contractors should recommend whether simplified calculations are sufficient or whether FEA is warranted for the frame weldment and/or critical mount plates.</p>
+  </section>
+
+  <section>
+    <h2>Questions for contractor</h2>
+    <ol>
+      <li>Derive validated load cases (motor/belt radial loads from tensioning, gear mesh forces, cam-yoke reciprocation forces, peak compression), and provide force/moment estimates at each mount plate interface.</li>
+      <li>Validate or correct the preliminary drivetrain figures (~1023 N·m torque at driven gear; ~6.6 kN tangential and ~7.2 kN normal gear forces) and document assumptions.</li>
+      <li>Quantify moments and bearing loads for the LMK35UU-guided shafts, including an asymmetric/jam case, and recommend mount plate stiffness and joint design.</li>
+      <li>Recommend whether FEA is required (frame weldment, drivetrain plate around tapered roller bearing, transmission plate around linear bearings) and provide boundary conditions and acceptance metrics.</li>
+      <li>Propose acceptance targets for allowable deflection/misalignment that preserve peeler alignment and bearing life, and recommend inspection checks to verify them.</li>
+    </ol>
   </section>
 
   <section>

@@ -44,7 +44,7 @@
   <h2>Introduction</h2>
   <p>Static peelers (<span class="swatch" style="background-color:#F36F3B" title="#F36F3B"></span>), static deflectors <span class="swatch" style="background-color:#CCDF3F" title="#CCDF3F"></span>, juice collectors (Y-tubes), filter tube, plug cutter, collection mount plate. Mounts on the frame’s loaded mount plate.</p>
 
-  <div class="reminder"><strong>Reminder:</strong> Send the <strong>34 mm standard connector</strong> for quick connection (juice collector Y-tube outlets).</div>
+  <div class="reminder"><strong>Reminder:</strong> Add the supplier link/spec for the <strong>38 mm OD ribbed hose connector</strong> used to couple the collector outlet to rubber hose. (Example source: <a href="https://item.taobao.com/item.htm?id=1030645801360">Taobao item 1030645801360</a>.)</div>
   <div class="reminder"><strong>Peel deflectors (WIP):</strong> The <strong>static deflector</strong> (this subsystem) and the <strong><a href="../Extraction-syncronisation/">chute deflector</a></strong> (extraction/synchronisation) are both work in progress. Ensure they are easily manufacturable, do not collide during motion, and are rigid and clean.</div>
 
   <h2>Colour key &amp; components</h2>
@@ -83,6 +83,51 @@
   </div>
 
   <h2>Discussion</h2>
+  <h3>Rough design &amp; intent</h3>
+  <ul>
+    <li><strong>What this subsystem does</strong> — Provide the static extraction half (static peelers) and collect juice through the filter tube into collector Y-tubes, then route juice to third-party tanks/pumps. Also integrates the plug cutter and supports core ejection through the filter tube.</li>
+    <li><strong>Juice collector tube concept</strong> — Current concept uses standard stainless tube sizes for China availability: main collector body ~57 mm OD (chosen as a standard size; not strictly required) and a juice outlet tube sized to accept quick-connect hardware (current concept: ~38 mm OD outlet to connect to rubber hose via a ribbed connector).</li>
+    <li><strong>Filter tube</strong> — Structurally similar to the commercial machine but longer; planned as hardened steel with laser-cut vertical slots (~0.7 mm slot width concept) and a scraper/plunger interface that clears pulp each cycle.</li>
+    <li><strong>Collection mount plate</strong> — Same overall idea as the transmission mount plate: stiff, alignment-critical, cleanable. Inner surface finish target is high (Ra ~0.8 μm concept) and must support peeler and collector alignment.</li>
+  </ul>
+
+  <h3>Known issues &amp; risks</h3>
+  <ul>
+    <li><strong>Seal leakage at plunger/filter tube</strong> — Known issue: juice leaks past plunger-to-filter-tube interface; expected to worsen at higher industrial pressures. O-ring or alternate seal strategy may be needed.</li>
+    <li><strong>Wear</strong> — Prior configuration had 304 scraper against 304 filter tube, roughening the tube ID. Current intent is hardened steel for improved wear; contractor to validate.</li>
+    <li><strong>Filter tube alignment sensitivity</strong> — Filter tube is welded to a cap and then assembled (screwed) into position; stack-up can shift alignment and worsen plunger sealing and wear.</li>
+    <li><strong>Collision risk</strong> — Static vs driven peelers must not collide; static deflectors must not deform and contact chutes or peelers over time under vibration and juice exposure.</li>
+  </ul>
+
+  <h3>DFM &amp; manufacturing (China)</h3>
+  <ul>
+    <li><strong>Tube fabrication</strong> — Prefer standard tube sizes and welded assemblies using China-available sanitary/quick-connect fittings.</li>
+    <li><strong>Hardened tube processing</strong> — Contractor to propose how to manufacture, harden, and finish (ID grind) the filter tube while keeping slot geometry accurate and cleanable.</li>
+    <li><strong>Hygiene</strong> — Internal surfaces that contact juice should be cleanable, smooth, and avoid crevices (finish targets to be confirmed with contractor and sanitary rules).</li>
+  </ul>
+
+  <h3>CIP / cleaning concept</h3>
+  <ul>
+    <li><strong>T-valve mode switch</strong> — Concept: use a T-valve to switch between sending juice to tanks vs feeding CIP fluid into the collector outlet.</li>
+    <li><strong>Reverse-flow cleaning</strong> — CIP fluid enters via the outlet tube, flows into the collector/juice chamber, then up through the filter tube and out through the centre of the plug cutter to flush slots and clean internals.</li>
+  </ul>
+
+  <h3>Questions for contractor</h3>
+  <ol>
+    <li>Propose a robust sealing strategy for plunger-to-filter-tube to reduce juice leakage under higher pressures (O-ring, lip seal, tighter finish/tolerance, alternate geometry).</li>
+    <li>Recommend material + heat treat + finishing for filter tubes and plug cutters to manage wear from scraper action and maintain hygiene.</li>
+    <li>Propose an assembly and alignment method that keeps filter tube and plunger alignment stable (especially given “welded cap + screw-in” stack-up).</li>
+    <li>Validate the CIP reverse-flow concept (T-valve switching, flow path, cleaning effectiveness) and propose any required check valves/filters.</li>
+    <li>Recommend manufacturing strategy for collector tubing and quick-connect interfaces using common China sanitary components.</li>
+  </ol>
+
+  <h3>Figures to add (clarify to contractors)</h3>
+  <ul>
+    <li><strong>Juice path schematic</strong> — slot flow → collector body → outlet → third-party; plus reverse-flow CIP path.</li>
+    <li><strong>Seal detail</strong> — plunger-to-filter-tube interface (current vs proposed O-ring).</li>
+    <li><strong>Collector interfaces</strong> — tube OD/ID callouts and quick-connect/ribbed hose adapter geometry.</li>
+  </ul>
+
   <h3>Function</h3>
   <ul>
     <li><strong>Driven</strong> and <strong>static</strong> peelers (<span class="swatch" style="background-color:#F36F3B" title="#F36F3B"></span>) mesh; oranges fall between them; fingers interlace → fruit mashed, <strong>peel</strong> squeezed into extraction chamber and outflow chute. <strong>Static deflectors</strong> <span class="swatch" style="background-color:#CCDF3F" title="#CCDF3F"></span> redirect peel from the base of the peeler to the front of the bin; mounted to the static loaded plate; flat plate design (see <a href="#fig1">Figure 1</a>, <a href="#fig5">Figure 5</a>, <a href="#fig10">Figure 10</a>).</li>

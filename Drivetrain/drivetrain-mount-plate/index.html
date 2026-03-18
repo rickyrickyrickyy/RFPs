@@ -32,67 +32,68 @@
 <body>
   <p class="back"><a href="../index.html">← Back to Drivetrain</a> · <a href="../../index.html">P6 RFP overview</a></p>
   <h1>Drivetrain mount plate</h1>
-  <p class="muted">Part of the <a href="../index.html">Drivetrain</a> section. <em>Fill in one-line description.</em></p>
+  <p class="muted">Part of the <a href="../index.html">Drivetrain</a> section. Structural interface between the drivetrain (motor/reducer/gears/bearings) and the <a href="../../Frame/">frame</a>.</p>
 
   <h2>Introduction</h2>
-  <p><em>Fill in: purpose of this subassembly, how it fits in the subsystem, key specs or design intent.</em></p>
+  <p>This plate locates and supports the motor, belt drive, reducer, gears, and mounted bearing units. It must be stiff enough to maintain gear mesh alignment, manage belt tension reaction loads, and transmit concentrated bearing loads into the frame without excessive deflection.</p>
 
   <h2>Colour key &amp; components</h2>
-  <p class="muted">CAD colours for this subpage. Add rows for each coloured component with purpose/spec.</p>
+  <p class="muted">Key elements that contractors should review for stiffness and joint design.</p>
   <table>
     <tr><th>Colour(s)</th><th>Component</th></tr>
-    <tr><td><em>—</em></td><td><em>Add colour swatches and component names/descriptions.</em></td></tr>
+    <tr><td><em>—</em></td><td><strong>Mount plate</strong> — plate interface to frame side rails (dowels + bolts). Stiffness and flatness are critical.</td></tr>
+    <tr><td><em>—</em></td><td><strong>Mounted bearing units</strong> — SKF F4BRP 208-SRB-CRH (locating under passive gear) and F4BRP 208-SRB-CLE (non-locating supporting reducer output shaft side), or equivalents.</td></tr>
+    <tr><td><em>—</em></td><td><strong>Reducer + motor mounts</strong> — mounting features set pulley alignment and belt tensioning reaction forces.</td></tr>
   </table>
 
   <h2 id="gallery">Figures</h2>
-  <p class="muted">Add CAD views to the <code>images/</code> folder and reference them below. Refer to <a href="#fig1">Figure 1</a>, etc.</p>
-  <div class="slideshow" id="skel-drivetrainmountplate-slideshow">
-    <div class="slideshow-track">
-      <div class="slide active" id="fig1" data-caption="Figure 1. (Add caption.)"><img src="images/fig1.png" alt="Figure 1"></div>
-    </div>
-    <p class="slideshow-caption" id="skel-drivetrainmountplate-caption" aria-live="polite">Figure 1. (Add caption.)</p>
-    <div class="slideshow-controls">
-      <button type="button" id="skel-drivetrainmountplate-prev" aria-label="Previous">← Previous</button>
-      <span class="slideshow-counter" id="skel-drivetrainmountplate-counter">1 / 1</span>
-      <button type="button" id="skel-drivetrainmountplate-next" aria-label="Next">Next →</button>
-    </div>
-  </div>
+  <p class="muted">Mount plate context is currently shown in the <a href="../index.html#gallery">Drivetrain main gallery</a>. Add dedicated mount-plate closeups here later (dowel pattern, bolt pattern, bearing-unit pilot fits, and section views).</p>
 
   <h2>Discussion</h2>
-  <h3>Components</h3>
+  <h3>Rough design &amp; intent</h3>
   <ul>
-    <li><em>List main components and their role; expand as needed.</em></li>
+    <li><strong>Current concept</strong> — Single-piece steel plate, ~20 mm thick, planned as a “slab” for stiffness and simplicity (waterjet or similar cutting; final machining on critical surfaces as needed).</li>
+    <li><strong>Location on machine</strong> — Mounted at the back of the machine on the two main frame rails. Rear edge is supported by a rear cross-beam; front edge support is via gussets/plates tied into the nearby cross-beam where the transmission mount plate is supported.</li>
+    <li><strong>Load sources</strong> — belt tension radial loads; reducer output torque and gear mesh forces; concentrated bearing reactions; vibration/cyclic forces from cam-yoke reciprocation.</li>
+    <li><strong>Primary function</strong> — maintain alignment (gear mesh, cam-bearing/yoke interface) while transmitting loads into the <a href="../../Frame/">frame</a>.</li>
   </ul>
-  <h3>Interfaces</h3>
+
+  <h3>Known issues &amp; risks</h3>
   <ul>
-    <li><strong>Input:</strong> <em>…</em></li>
-    <li><strong>Output:</strong> <em>…</em></li>
-    <li><strong>Mount:</strong> <em>…</em></li>
+    <li><strong>Local compliance</strong> — If mount plate or its attachment to the rails is too flexible, gear mesh alignment changes under load and accelerates wear/noise.</li>
+    <li><strong>Joint slip/fretting</strong> — Dowels carry shear; bolts provide clamp. Contractor must verify that cyclic loads do not cause slip at the plate/rail interface.</li>
+    <li><strong>Machining/flatness</strong> — Flatness at bearing mounting surfaces and rail interfaces may require post-weld machining of the frame, shimming strategy, or adjustable interfaces.</li>
+    <li><strong>Repeatable shimming</strong> — Shims are expected under the plate for leveling/flatness. Shim locations and stack-up must be defined so the setup is repeatable after service.</li>
   </ul>
+
+  <h3>DFM &amp; manufacturing (China)</h3>
+  <ul>
+    <li><strong>Manufacturing route</strong> — Waterjet (or laser) cut plate + machining of critical surfaces/features (flatness, bearing pilots, key datums). Contractor to propose tolerances that are achievable and inspectable.</li>
+    <li><strong>Support features</strong> — Define gusset/plate supports and the bolt-through features on the rear cross-beam and the three forward supports (left, center, right) so load paths are stiff and inspectable.</li>
+    <li><strong>Assembly workflow</strong> — Owner intent is: (1) drop plate on from top, (2) shim to achieve required flatness/alignment, (3) bolt through existing holes to lock position, then (4) drill + ream through the plate into the side rails to create the dowel pattern for repeatable reassembly.</li>
+  </ul>
+
+  <h3>Questions for contractor</h3>
+  <ol>
+    <li>Propose a mount plate stiffness and attachment strategy (dowel size/count, bolt pattern/preload) that prevents joint slip and maintains gear alignment.</li>
+    <li>Quantify reactions from belt tensioning and gear mesh forces into the mount plate, and recommend any stiffeners/gussets or plate thickness changes.</li>
+    <li>Propose a datum scheme tying this plate to the Frame and to the Transmission (cam-bearing/yoke interface) for repeatable rebuilds.</li>
+    <li>Address the shaft/bore mismatch with the chosen SKF bearing units: propose a safe adapter/shaft extension design and tolerances, or recommend alternate bearing units.</li>
+    <li>Recommend a shim strategy: shim locations, stack form (discrete shims vs ground spacers), and how to make the shimming repeatable after disassembly.</li>
+    <li>Recommend the dowel layout on side rails (current owner intent: ~3 dowels per side in a staggered/zig-zag pattern to avoid coaxial load paths) and whether dowels or shoulder bolts are preferred in China fab practice.</li>
+  </ol>
+
   <h3>Interfaces and tolerances</h3>
   <p class="muted">Known interfaces and tolerances. Links go to related subsystems.</p>
   <table class="iface-table">
     <thead><tr><th>Part</th><th>Interface / tolerance</th><th>Related</th></tr></thead>
     <tbody>
-      <tr><td><em>—</em></td><td><em>Add rows.</em></td><td>—</td></tr>
+      <tr><td>Mount plate → frame rails</td><td>Located by dowels (planned: staggered pattern) + bolted clamping; shimmed to set flatness/alignment; ream-after-alignment workflow intended</td><td><a href="../../Frame/">Frame</a></td></tr>
+      <tr><td>SKF F4BRP 208 units</td><td>Nominal shaft diameter 63.5 mm (2.5 in); locating CRH and non-locating CLE roles per drivetrain concept</td><td><a href="https://www.skf.com/group/products/mounted-bearings/roller-bearing-units/flanged-units/productid-F4BRP%20208-SRB-CLE">SKF CLE</a></td></tr>
+      <tr><td>Cam bearings</td><td>Mounted on shaft supported by this plate; interfaces to yoke</td><td><a href="../../Transmission/">Transmission</a></td></tr>
     </tbody>
   </table>
 
   <p class="back"><a href="../index.html">← Back to Drivetrain</a></p>
-  <script>
-(function(){
-  var el = document.getElementById('skel-drivetrainmountplate-slideshow');
-  if (!el) return;
-  var slides = el.querySelectorAll('.slide');
-  var cap = document.getElementById('skel-drivetrainmountplate-caption');
-  var counter = document.getElementById('skel-drivetrainmountplate-counter');
-  var n = slides.length, i = 0;
-  function go(k) { i = (k + n) % n; slides.forEach(function(s,j){ s.classList.toggle('active', j===i); }); if (cap) cap.textContent = slides[i].getAttribute('data-caption') || ''; if (counter) counter.textContent = (i+1) + ' / ' + n; }
-  el.querySelector('#skel-drivetrainmountplate-prev').addEventListener('click', function(){ go(i-1); });
-  el.querySelector('#skel-drivetrainmountplate-next').addEventListener('click', function(){ go(i+1); });
-  var hash = window.location.hash;
-  if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
-})();
-  </script>
 </body>
 </html>

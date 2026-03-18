@@ -32,67 +32,20 @@
 <body>
   <p class="back"><a href="../index.html">← Back to Transmission system</a> · <a href="../../index.html">P6 RFP overview</a></p>
   <h1>Drive shafts</h1>
-  <p class="muted">Part of the <a href="../index.html">Transmission system</a> section. <em>Fill in one-line description.</em></p>
+  <p class="muted">This content has been merged into <a href="../yoke/">Yoke and drive shafts</a> so the force path, bearing alignment, and washdown considerations stay in one place.</p>
 
   <h2>Introduction</h2>
-  <p><em>Fill in: purpose of this subassembly, how it fits in the subsystem, key specs or design intent.</em></p>
+  <p>See <a href="../yoke/">Yoke and drive shafts</a>.</p>
 
   <h2>Colour key &amp; components</h2>
-  <p class="muted">CAD colours for this subpage. Add rows for each coloured component with purpose/spec.</p>
-  <table>
-    <tr><th>Colour(s)</th><th>Component</th></tr>
-    <tr><td><em>—</em></td><td><em>Add colour swatches and component names/descriptions.</em></td></tr>
-  </table>
+  <p class="muted">See <a href="../yoke/">Yoke and drive shafts</a>.</p>
 
   <h2 id="gallery">Figures</h2>
-  <p class="muted">Add CAD views to the <code>images/</code> folder and reference them below. Refer to <a href="#fig1">Figure 1</a>, etc.</p>
-  <div class="slideshow" id="skel-driveshafts-slideshow">
-    <div class="slideshow-track">
-      <div class="slide active" id="fig1" data-caption="Figure 1. (Add caption.)"><img src="images/fig1.png" alt="Figure 1"></div>
-    </div>
-    <p class="slideshow-caption" id="skel-driveshafts-caption" aria-live="polite">Figure 1. (Add caption.)</p>
-    <div class="slideshow-controls">
-      <button type="button" id="skel-driveshafts-prev" aria-label="Previous">← Previous</button>
-      <span class="slideshow-counter" id="skel-driveshafts-counter">1 / 1</span>
-      <button type="button" id="skel-driveshafts-next" aria-label="Next">Next →</button>
-    </div>
-  </div>
+  <p class="muted">Figures are on <a href="../index.html#gallery">Transmission main</a> and <a href="../yoke/">Yoke and drive shafts</a>.</p>
 
   <h2>Discussion</h2>
-  <h3>Components</h3>
-  <ul>
-    <li><em>List main components and their role; expand as needed.</em></li>
-  </ul>
-  <h3>Interfaces</h3>
-  <ul>
-    <li><strong>Input:</strong> <em>…</em></li>
-    <li><strong>Output:</strong> <em>…</em></li>
-    <li><strong>Mount:</strong> <em>…</em></li>
-  </ul>
-  <h3>Interfaces and tolerances</h3>
-  <p class="muted">Known interfaces and tolerances. Links go to related subsystems.</p>
-  <table class="iface-table">
-    <thead><tr><th>Part</th><th>Interface / tolerance</th><th>Related</th></tr></thead>
-    <tbody>
-      <tr><td><em>—</em></td><td><em>Add rows.</em></td><td>—</td></tr>
-    </tbody>
-  </table>
+  <p class="muted">See <a href="../yoke/">Yoke and drive shafts</a>.</p>
 
   <p class="back"><a href="../index.html">← Back to Transmission system</a></p>
-  <script>
-(function(){
-  var el = document.getElementById('skel-driveshafts-slideshow');
-  if (!el) return;
-  var slides = el.querySelectorAll('.slide');
-  var cap = document.getElementById('skel-driveshafts-caption');
-  var counter = document.getElementById('skel-driveshafts-counter');
-  var n = slides.length, i = 0;
-  function go(k) { i = (k + n) % n; slides.forEach(function(s,j){ s.classList.toggle('active', j===i); }); if (cap) cap.textContent = slides[i].getAttribute('data-caption') || ''; if (counter) counter.textContent = (i+1) + ' / ' + n; }
-  el.querySelector('#skel-driveshafts-prev').addEventListener('click', function(){ go(i-1); });
-  el.querySelector('#skel-driveshafts-next').addEventListener('click', function(){ go(i+1); });
-  var hash = window.location.hash;
-  if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
-})();
-  </script>
 </body>
 </html>

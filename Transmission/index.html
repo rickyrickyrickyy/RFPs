@@ -37,8 +37,7 @@
   <h2>Subpages</h2>
   <ul>
     <li><a href="transmission-mount-plate/">Transmission mount plate</a> <span class="muted">(skeleton)</span> — plate on frame; carries shaft mounts and bearings.</li>
-    <li><a href="drive-shafts/">Drive shafts</a> <span class="muted">(skeleton)</span> — 35 mm shafts, shaft mounts; linear guides for yoke.</li>
-    <li><a href="yoke/">Yoke</a> <span class="muted">(skeleton)</span> — interfaces with drivetrain cam bearings; converts rotation to linear stroke.</li>
+    <li><a href="yoke/">Yoke &amp; drive shafts</a> <span class="muted">(skeleton)</span> — yoke + 35 mm shafts, linear bearings, scraper/guards; converts cam motion to stroke.</li>
   </ul>
 
   <h2>Introduction</h2>
@@ -75,6 +74,49 @@
   </div>
 
   <h2>Discussion</h2>
+  <h3>Rough design &amp; intent</h3>
+  <ul>
+    <li><strong>Purpose</strong> — Convert drivetrain cam-roller motion into a controlled linear stroke while maintaining alignment between extraction and collection peelers. Transmission stiffness and repeatability are critical to prevent binding and collisions.</li>
+    <li><strong>Key elements</strong> — Yoke, two 35 mm shafts, flanged/sealed 35 mm linear bearings (LMF/LMK family), and transmission mount plate. Shaft length is driven by the distance between collection-side peelers and the required “almost-touch” gap at end of compression stroke (target ~2–3 mm gap between driven and static peeler faces at end-of-stroke).</li>
+    <li><strong>Maintenance reality</strong> — Expect full teardown/reassembly roughly seasonally (≈ yearly). Alignment strategy must support repeatable rebuild without full re-machining.</li>
+  </ul>
+
+  <h3>Known issues &amp; risks</h3>
+  <ul>
+    <li><strong>Jam / asymmetric binding case</strong> — Worst case is one linear bearing binding or fruit/junk causing asymmetric loading. Shafts can twist and impose large moments into linear bearings and the mount plate; system should survive a high factor-of-safety “rock in juicer” scenario.</li>
+    <li><strong>Moment amplification</strong> — Linear bearings are elevated off the mount plate. Vertical offset creates overturning moments that try to rotate the mount plate; the frame/dowels/bolts must carry these without shifting.</li>
+    <li><strong>Washdown exposure</strong> — Transmission mount plate front face is exposed to cleaning spray/juice; materials, seals, and scraper/guards matter.</li>
+  </ul>
+
+  <h3>DFM &amp; manufacturing (China)</h3>
+  <ul>
+    <li><strong>Alignment workflow</strong> — Expect an “align → tighten → drill/ream for dowels” workflow similar to frame/drivetrain plates. Contractor should propose the exact datum scheme and repeatable shim strategy.</li>
+    <li><strong>Two plate architectures</strong> — Transmission mount plate has two candidate designs: (a) sand-cast + post-machined, and (b) welded steel plate + stress relief + machining. Contractor to advise best cost/lead/quality path.</li>
+    <li><strong>Hygiene surfaces</strong> — Any surfaces near pulp/juice should have cleanable finishes and avoid crevices; consider scraper/cover designs for shafts and bearing faces.</li>
+  </ul>
+
+  <h3>Optimizations sought</h3>
+  <ul>
+    <li><strong>Binding robustness</strong> — Maximize tolerance to misalignment and contamination without shaft galling or bearing failure.</li>
+    <li><strong>Repeatable alignment</strong> — Fast seasonal rebuild that returns peeler alignment without extensive re-shimming.</li>
+    <li><strong>Cleanability</strong> — Reduce juice accumulation on shafts/bearings; add scrapers/covers where needed.</li>
+  </ul>
+
+  <h3>Questions for contractor</h3>
+  <ol>
+    <li>Define load cases for the transmission, including an asymmetric/jam case (one side binds) and a “hard object” worst case. Provide force/moment estimates into the mount plate and frame.</li>
+    <li>Recommend an alignment + dowelization procedure for seasonal teardown/rebuild (what is adjustable, what gets reamed for dowels, and what is shimmed).</li>
+    <li>Recommend acceptable shaft parallelism and bearing alignment tolerances to prevent binding over service life, and propose inspection checks.</li>
+    <li>Propose a shaft scraper/cover approach for washdown, including materials compatible with cleaning chemicals and expected wear/maintenance intervals.</li>
+  </ol>
+
+  <h3>Figures to add (clarify to contractors)</h3>
+  <ul>
+    <li><strong>Free-body</strong> — yoke + shafts + linear bearings showing jam/asymmetric load case and moment arms into the plate.</li>
+    <li><strong>Datums</strong> — sketch of which faces/holes define peeler alignment and which interfaces get doweled after alignment.</li>
+    <li><strong>Scraper concept</strong> — sectional sketch of the proposed formed-sheet cover + scraper lip on shaft.</li>
+  </ul>
+
   <h3>Interfaces</h3>
   <ul>
     <li><strong>Input:</strong> Force from gears (drivetrain) on drivetrain mount plate.</li>

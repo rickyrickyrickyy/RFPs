@@ -152,6 +152,59 @@
   <p>Main frame: 80×80×5 GB/T square tubes as main load-bearing members; #8 C-brackets for supporting members; all fully welded. Leveling: 6111K669 M24 100 mm Swivel Leveling Mounts (McMaster) on M24 tapped endplates at bottom of frame legs (six feet). Side rails with square holes for dowels; bolts and nuts secure bodies to cross beams.</p>
   <p class="muted">Detail and interfaces are owner-provided; final tolerancing and assembly are for contractors. See <a href="../Overview/Questions-for-RFP.html">Questions for RFP</a> to flush out parameters per subsystem and subassembly.</p>
 
+  <h3>Rough design &amp; intent</h3>
+  <ul>
+    <li><strong>Status</strong> — Preliminary CAD exists (current height). Not released for fabrication; contractors are expected to propose DFM and tolerance/assembly improvements.</li>
+    <li><strong>What the frame must do</strong> — Provide a stable, repeatable datum structure so drivetrain, transmission, extraction, and collection can be aligned and reassembled without loss of timing or bearing life.</li>
+    <li><strong>Top interfaces</strong> — Three main mount plates (loaded/collection, transmission, drivetrain) mount from the top onto the frame side rails. Current concept includes dowels (H7) + shims; contractor may propose improved adjustment/locating strategy to manage weld distortion.</li>
+  </ul>
+
+  <h3>Known issues &amp; risks</h3>
+  <ul>
+    <li><strong>Weld distortion / flatness</strong> — Risk that the as-welded top interface surfaces are not flush/flat. Adjustable leveling feet exist, but plate-to-rail interface adjustability and/or shimming is expected to compensate for local distortion.</li>
+    <li><strong>Alignment repeatability</strong> — Repeatable alignment after service is critical. The extraction module (driven peelers) must align concentrically with the collection-side peelers; misalignment risks collision and accelerated wear.</li>
+    <li><strong>Under-machine clearance (3rd-party augers)</strong> — Clearance under peel chute and between legs is constrained by a lower cross-beam. Required space depends on third-party auger height/width; this may drive frame height and lower-member layout.</li>
+    <li><strong>Collection area cover / user access</strong> — Current upward-opening plunger/collection lid blocks operator access close to the front. Alternate lid/hinge/cover approach may require changes to rail overhang and mounting features near the collection side.</li>
+  </ul>
+
+  <h3>DFM &amp; manufacturing (China)</h3>
+  <ul>
+    <li><strong>Weld + fixture plan</strong> — Provide recommended jigging and weld sequence to control distortion and achieve practical flatness/squareness at plate interfaces.</li>
+    <li><strong>Post-weld machining vs adjustable interfaces</strong> — Recommend whether to machine pads/rails after welding, or instead use adjustable/shimmable plate interfaces to meet alignment requirements.</li>
+    <li><strong>Member selection</strong> — Confirm local availability of 80×80×5 GB/T tube and GB/T #8 C-channel/C-brackets; propose equivalents if better for stiffness, distortion control, or fabrication simplicity.</li>
+    <li><strong>Surface treatment</strong> — Frame is exposed to vapors/cleaning agents but is outside the main extraction chamber. Recommend a practical corrosion-resistant finish for this environment.</li>
+  </ul>
+
+  <h3>Optimizations sought</h3>
+  <ul>
+    <li><strong>Repeatable assembly</strong> — A robust “align once, then dowel/ream” plan for mount plates and peeler datums.</li>
+    <li><strong>Serviceability</strong> — Easy removal/reinstall of subsystems without re-shimming or re-alignment where possible.</li>
+    <li><strong>Distortion tolerance</strong> — Reduce sensitivity to weld flatness via interface design and datums.</li>
+    <li><strong>Operator access</strong> — Improve collection-area cover/lid concept so operators can stand close to the machine front.</li>
+  </ul>
+
+  <h3>Questions for contractor</h3>
+  <ol>
+    <li>Propose a weld sequence + fixture/jig approach to control distortion and hit practical flatness/squareness targets at the plate interfaces.</li>
+    <li>Recommend the datum scheme and locating strategy (dowels/H7, shims, adjustable mounts, machined pads) to ensure repeatable alignment after service removal.</li>
+    <li>Should we expect post-weld machining (and where), or can we avoid it with adjustable/shimmable interfaces? Provide trade-offs.</li>
+    <li>Recommend member/cross-bracing choices (GB/T #8 C-channel or alternatives) that are common in China and improve stiffness/distortion performance.</li>
+    <li>Propose a clearance strategy for third-party peel/core augers under the peel chute (envelope definition, adjustable height, removable/relocated lower cross-member, etc.).</li>
+    <li>Propose a collection-area cover/lid mounting concept that improves operator access while maintaining safety and stiffness.</li>
+  </ol>
+
+  <h3>Supply chain &amp; alternates</h3>
+  <ul>
+    <li><strong>Leveling mounts</strong> — Current spec: McMaster 6111K669 M24. Contractor to propose China-available equivalents if acceptable.</li>
+    <li><strong>Profiles and plates</strong> — Prefer common GB/ISO profiles and stock sizes; propose equivalents where they reduce lead time or fabrication complexity.</li>
+  </ul>
+
+  <h3>Expected deliverables &amp; acceptance</h3>
+  <ul>
+    <li><strong>Deliverables</strong> — Updated weldment drawing pack (weld callouts), datum scheme, tolerance targets, recommended inspection checks, and an assembly/alignment/dowelization procedure for repeatable rebuilds.</li>
+    <li><strong>Acceptance</strong> — Three mount plates can be aligned and remain aligned under operating loads; extraction-to-collection peeler alignment is repeatable after disassembly/reassembly; joints do not slip/fret under cyclic vibration/loads.</li>
+  </ul>
+
   <h3>Design principles</h3>
   <p>These principles guide frame design and any changes to the current configuration.</p>
   <table style="width:100%; border-collapse: collapse; font-size: 0.95rem;">

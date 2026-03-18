@@ -32,67 +32,72 @@
 <body>
   <p class="back"><a href="../index.html">← Back to Collection</a> · <a href="../../index.html">P6 RFP overview</a></p>
   <h1>Juice collection</h1>
-  <p class="muted">Part of the <a href="../index.html">Collection</a> section. <em>Fill in one-line description.</em></p>
+  <p class="muted">Part of the <a href="../index.html">Collection</a> section. Collector bodies and outlet tubing that route juice to third-party tanks/pumps, and provide a reverse-flow CIP path.</p>
 
   <h2>Introduction</h2>
-  <p><em>Fill in: purpose of this subassembly, how it fits in the subsystem, key specs or design intent.</em></p>
+  <p>The juice collectors capture juice exiting the filter tube slots and route it out of the machine through sanitary tubing and quick-connect interfaces. The collectors are also intended to support a reverse-flow CIP mode that flushes cleaning fluid back through the filter tubes and out the plug cutters.</p>
 
   <h2>Colour key &amp; components</h2>
-  <p class="muted">CAD colours for this subpage. Add rows for each coloured component with purpose/spec.</p>
+  <p class="muted">Key components and intent (colours may vary across CAD figures).</p>
   <table>
     <tr><th>Colour(s)</th><th>Component</th></tr>
-    <tr><td><em>—</em></td><td><em>Add colour swatches and component names/descriptions.</em></td></tr>
+    <tr><td><em>—</em></td><td><strong>Collector body</strong> — stainless tube assembly (concept: standard tube sizes; main body ~57 mm OD chosen for availability, not a hard requirement).</td></tr>
+    <tr><td><em>—</em></td><td><strong>Outlet tube</strong> — concept sized for common quick-connects; current intent is ~38 mm OD outlet to rubber hose via ribbed adapter.</td></tr>
+    <tr><td><em>—</em></td><td><strong>Quick-connect interface</strong> — weld-on sanitary ferrule/flange for fast disconnect to downstream rubber hose and third-party plumbing.</td></tr>
+    <tr><td><em>—</em></td><td><strong>T-valve / switching</strong> — concept to switch between “juice to tank” vs “CIP fluid into collector”.</td></tr>
   </table>
 
   <h2 id="gallery">Figures</h2>
-  <p class="muted">Add CAD views to the <code>images/</code> folder and reference them below. Refer to <a href="#fig1">Figure 1</a>, etc.</p>
-  <div class="slideshow" id="skel-juicecollection-slideshow">
-    <div class="slideshow-track">
-      <div class="slide active" id="fig1" data-caption="Figure 1. (Add caption.)"><img src="images/fig1.png" alt="Figure 1"></div>
-    </div>
-    <p class="slideshow-caption" id="skel-juicecollection-caption" aria-live="polite">Figure 1. (Add caption.)</p>
-    <div class="slideshow-controls">
-      <button type="button" id="skel-juicecollection-prev" aria-label="Previous">← Previous</button>
-      <span class="slideshow-counter" id="skel-juicecollection-counter">1 / 1</span>
-      <button type="button" id="skel-juicecollection-next" aria-label="Next">Next →</button>
-    </div>
-  </div>
+  <p class="muted">Collector figures are currently shown in the <a href="../index.html#gallery">Collection main gallery</a>. Add dedicated closeups here later (tube callouts, quick-connect fittings, and T-valve plumbing).</p>
+  <ul class="muted">
+    <li><strong>Add figure</strong>: tube size callouts (main body OD, outlet OD/ID) and welded fitting types.</li>
+    <li><strong>Add figure</strong>: downstream quick-connect + ribbed hose adapter example part and how it mates to rubber hose.</li>
+    <li><strong>Add figure</strong>: CIP plumbing schematic (T-valve, check valves, flow direction).</li>
+  </ul>
 
   <h2>Discussion</h2>
-  <h3>Components</h3>
+  <h3>Rough design &amp; intent</h3>
   <ul>
-    <li><em>List main components and their role; expand as needed.</em></li>
+    <li><strong>Forward flow</strong> — Juice exits through filter tube slots into the collector body and then out through the outlet tube to third-party tanks/pumps.</li>
+    <li><strong>Standard tube sizes</strong> — Current concept uses 304 stainless tube sizes selected for availability (main body ~57 mm OD; outlet sized for common quick-connect and hose hardware).</li>
   </ul>
+
+  <h3>CIP concept (reverse flow)</h3>
+  <ul>
+    <li><strong>Switching</strong> — A T-valve is used to select between “juice out” vs “CIP fluid in”.</li>
+    <li><strong>Flow direction</strong> — CIP fluid enters via the outlet tube and floods the collector chamber, then flows through the filter tube and exits out the plug cutter centreline to flush the slots and internal passages.</li>
+  </ul>
+
+  <h3>Known issues &amp; risks</h3>
+  <ul>
+    <li><strong>Cleaning dead zones</strong> — Contractor to identify any stagnant regions in collector geometry where pulp could accumulate and propose drain/flush improvements.</li>
+    <li><strong>Connection standards</strong> — Need to pick a consistent CN-available quick-connect standard (Tri-Clamp or equivalent) and seal materials compatible with CIP chemicals.</li>
+  </ul>
+
+  <h3>Questions for contractor</h3>
+  <ol>
+    <li>Recommend CN-available sanitary/quick-connect standard(s) and specific tube sizes (OD/ID) to meet flow and cleanability requirements.</li>
+    <li>Validate the reverse-flow CIP concept and propose required valves/check valves, pressure limits, and maintenance/cleaning protocol.</li>
+    <li>Propose a robust, serviceable ribbed hose adapter and quick-connection strategy for the outlet tube (include sourcing options in China).</li>
+  </ol>
+
   <h3>Interfaces</h3>
   <ul>
-    <li><strong>Input:</strong> <em>…</em></li>
-    <li><strong>Output:</strong> <em>…</em></li>
-    <li><strong>Mount:</strong> <em>…</em></li>
+    <li><strong>Input:</strong> Juice from filter tube slots.</li>
+    <li><strong>Output:</strong> Outlet tube to third-party plumbing; CIP inlet path in reverse-flow mode.</li>
+    <li><strong>Mount:</strong> Collectors mount on the collection mount plate and interface with static peeler/collector geometry.</li>
   </ul>
   <h3>Interfaces and tolerances</h3>
   <p class="muted">Known interfaces and tolerances. Links go to related subsystems.</p>
   <table class="iface-table">
     <thead><tr><th>Part</th><th>Interface / tolerance</th><th>Related</th></tr></thead>
     <tbody>
-      <tr><td><em>—</em></td><td><em>Add rows.</em></td><td>—</td></tr>
+      <tr><td>Collector body</td><td>Standard 304 stainless tube assembly; main body ~57 mm OD concept (availability-driven; may change)</td><td><a href="../index.html">Collection</a></td></tr>
+      <tr><td>Outlet tube</td><td>Concept: ~38 mm OD outlet sized for quick-connect + ribbed hose adapter</td><td>—</td></tr>
+      <tr><td>T-valve</td><td>Switch between juice outflow and CIP inflow (concept)</td><td>—</td></tr>
     </tbody>
   </table>
 
   <p class="back"><a href="../index.html">← Back to Collection</a></p>
-  <script>
-(function(){
-  var el = document.getElementById('skel-juicecollection-slideshow');
-  if (!el) return;
-  var slides = el.querySelectorAll('.slide');
-  var cap = document.getElementById('skel-juicecollection-caption');
-  var counter = document.getElementById('skel-juicecollection-counter');
-  var n = slides.length, i = 0;
-  function go(k) { i = (k + n) % n; slides.forEach(function(s,j){ s.classList.toggle('active', j===i); }); if (cap) cap.textContent = slides[i].getAttribute('data-caption') || ''; if (counter) counter.textContent = (i+1) + ' / ' + n; }
-  el.querySelector('#skel-juicecollection-prev').addEventListener('click', function(){ go(i-1); });
-  el.querySelector('#skel-juicecollection-next').addEventListener('click', function(){ go(i+1); });
-  var hash = window.location.hash;
-  if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
-})();
-  </script>
 </body>
 </html>

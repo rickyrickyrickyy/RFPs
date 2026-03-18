@@ -32,67 +32,79 @@
 <body>
   <p class="back"><a href="../index.html">← Back to Extraction & synchronisation</a> · <a href="../../index.html">P6 RFP overview</a></p>
   <h1>Peelers</h1>
-  <p class="muted">Part of the <a href="../index.html">Extraction & synchronisation</a> section. <em>Fill in one-line description.</em></p>
+  <p class="muted">Part of the <a href="../index.html">Extraction & synchronisation</a> section. Driven peelers and their mounting/alignment strategy to mesh with collection-side static peelers.</p>
 
   <h2>Introduction</h2>
-  <p><em>Fill in: purpose of this subassembly, how it fits in the subsystem, key specs or design intent.</em></p>
+  <p>Driven peelers mesh with static peelers (collection) during compression to perform extraction. The peeler core geometry is inherited from the commercial machine; the main open work is defining the mounting flange/plate fabrication and an alignment procedure that preserves concentricity and avoids collisions.</p>
 
   <h2>Colour key &amp; components</h2>
-  <p class="muted">CAD colours for this subpage. Add rows for each coloured component with purpose/spec.</p>
+  <p class="muted">Key components and intent (colours may vary across CAD figures).</p>
   <table>
     <tr><th>Colour(s)</th><th>Component</th></tr>
-    <tr><td><em>—</em></td><td><em>Add colour swatches and component names/descriptions.</em></td></tr>
+    <tr><td><em>—</em></td><td><strong>Driven peeler body</strong> — geometry inherited from commercial machine; interfaces to driven bracket via a fabricated/machined mounting flange (TBD).</td></tr>
+    <tr><td><em>—</em></td><td><strong>Driven peeler mounting flange/plate (TBD)</strong> — planned approach: lathe-machine a flange and weld a plate to the peeler so it can be bolted to the driven bracket.</td></tr>
+    <tr><td><em>—</em></td><td><strong>Static peeler interface (collection)</strong> — static peeler also receives a mounting flange. Inner surface is used as part of the juice vessel/collector interface, so surface finish and sealing are important (see Collection).</td></tr>
   </table>
 
   <h2 id="gallery">Figures</h2>
-  <p class="muted">Add CAD views to the <code>images/</code> folder and reference them below. Refer to <a href="#fig1">Figure 1</a>, etc.</p>
-  <div class="slideshow" id="skel-peelers-slideshow">
-    <div class="slideshow-track">
-      <div class="slide active" id="fig1" data-caption="Figure 1. (Add caption.)"><img src="images/fig1.png" alt="Figure 1"></div>
-    </div>
-    <p class="slideshow-caption" id="skel-peelers-caption" aria-live="polite">Figure 1. (Add caption.)</p>
-    <div class="slideshow-controls">
-      <button type="button" id="skel-peelers-prev" aria-label="Previous">← Previous</button>
-      <span class="slideshow-counter" id="skel-peelers-counter">1 / 1</span>
-      <button type="button" id="skel-peelers-next" aria-label="Next">Next →</button>
-    </div>
-  </div>
+  <p class="muted">Peeler context is shown in the <a href="../index.html#gallery">Extraction main gallery</a>. Add dedicated closeups here later.</p>
+  <ul class="muted">
+    <li><strong>Add figure</strong>: driven peeler + fabricated flange/plate concept (lathe-machined flange + welded plate) with bolt pattern.</li>
+    <li><strong>Add figure</strong>: adjustment → ream workflow for concentricity (which holes are loose-fit vs which are reamed/shoulder-bolted).</li>
+    <li><strong>Add figure</strong>: clearance at end-of-stroke showing “no collision” requirement and acceptable gap.</li>
+  </ul>
 
   <h2>Discussion</h2>
-  <h3>Components</h3>
+  <h3>Rough design &amp; intent</h3>
   <ul>
-    <li><em>List main components and their role; expand as needed.</em></li>
+    <li><strong>Core geometry</strong> — Peelers are inherited from an existing commercial machine; the intent is to reuse the peeler geometry and build new mounting/adaptation hardware.</li>
+    <li><strong>Mounting strategy (open)</strong> — Fabricate a mount flange/plate for each peeler by machining a flange (lathe) and welding a plate so the peeler can be bolted to the driven bracket (driven side) or collection mount plate (static side).</li>
   </ul>
+
+  <h3>Known issues &amp; risks</h3>
+  <ul>
+    <li><strong>Concentricity &amp; collision</strong> — Driven and static peelers must be aligned concentrically. Misalignment can cause collision at end-of-stroke and rapid wear.</li>
+    <li><strong>Weld distortion</strong> — Welding a plate to a peeler risks warping or shifting the peeler axis; fixturing and inspection are required.</li>
+    <li><strong>Washdown</strong> — This is in the splash zone. Mounting features and fasteners must be hygienic and cleanable.</li>
+  </ul>
+
+  <h3>DFM &amp; manufacturing (China)</h3>
+  <ul>
+    <li><strong>Fixture and inspection</strong> — Contractor to propose fixtures for welding/machining the flange/plate and checks for axis runout/concentricity.</li>
+    <li><strong>Fasteners</strong> — Prefer hygienic fasteners (hex head) and avoid pockets that trap pulp.</li>
+  </ul>
+
+  <h3>Alignment workflow (owner intent)</h3>
+  <ol>
+    <li>Provide <strong>two loose-fit fastener holes</strong> (e.g., top-left and bottom-right corners) on each peeler mount for adjustment.</li>
+    <li>Adjust driven and static peelers relative to each other until concentric/aligned.</li>
+    <li>Tighten fasteners to lock, then <strong>drill + ream</strong> the other two corners through the peeler mount into the bracket/plate.</li>
+    <li>Install <strong>shoulder bolts</strong> (or dowels) in the reamed locations for repeatable alignment on reassembly.</li>
+  </ol>
+
+  <h3>Questions for contractor</h3>
+  <ol>
+    <li>Propose practical tolerances and an inspection method for peeler concentricity/alignment that prevents collision and controls wear.</li>
+    <li>Propose the best flange/plate fabrication method (machining route, weld method, fixturing) that preserves peeler axis accuracy.</li>
+    <li>Recommend whether shoulder bolts, dowel pins, or another locating scheme is best for repeatable reassembly in China fab practice.</li>
+  </ol>
+
   <h3>Interfaces</h3>
   <ul>
-    <li><strong>Input:</strong> <em>…</em></li>
-    <li><strong>Output:</strong> <em>…</em></li>
-    <li><strong>Mount:</strong> <em>…</em></li>
+    <li><strong>Input:</strong> Compression stroke from <a href="../../Transmission/">Transmission</a> pushes extraction module into <a href="../../Collection/">Collection</a>.</li>
+    <li><strong>Output:</strong> Fruit extraction via driven-static peeler mesh; peel routed to disposal via deflectors/chutes.</li>
+    <li><strong>Mount:</strong> Driven peelers bolt to <a href="../driven-bracket/">Driven bracket</a>. Static peelers bolt to collection mount plate (see Collection).</li>
   </ul>
   <h3>Interfaces and tolerances</h3>
   <p class="muted">Known interfaces and tolerances. Links go to related subsystems.</p>
   <table class="iface-table">
     <thead><tr><th>Part</th><th>Interface / tolerance</th><th>Related</th></tr></thead>
     <tbody>
-      <tr><td><em>—</em></td><td><em>Add rows.</em></td><td>—</td></tr>
+      <tr><td>Driven peelers</td><td>Mount flange/plate fabricated (TBD); align to static peelers using adjust → ream/shoulder-bolt workflow</td><td><a href="../driven-bracket/">Driven bracket</a>, <a href="../../Collection/">Collection</a></td></tr>
+      <tr><td>Static peelers</td><td>Mount flange/plate fabricated (TBD); inner surface is part of juice vessel/collector interface; sealing via O-rings likely</td><td><a href="../../Collection/">Collection</a></td></tr>
     </tbody>
   </table>
 
   <p class="back"><a href="../index.html">← Back to Extraction & synchronisation</a></p>
-  <script>
-(function(){
-  var el = document.getElementById('skel-peelers-slideshow');
-  if (!el) return;
-  var slides = el.querySelectorAll('.slide');
-  var cap = document.getElementById('skel-peelers-caption');
-  var counter = document.getElementById('skel-peelers-counter');
-  var n = slides.length, i = 0;
-  function go(k) { i = (k + n) % n; slides.forEach(function(s,j){ s.classList.toggle('active', j===i); }); if (cap) cap.textContent = slides[i].getAttribute('data-caption') || ''; if (counter) counter.textContent = (i+1) + ' / ' + n; }
-  el.querySelector('#skel-peelers-prev').addEventListener('click', function(){ go(i-1); });
-  el.querySelector('#skel-peelers-next').addEventListener('click', function(){ go(i+1); });
-  var hash = window.location.hash;
-  if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
-})();
-  </script>
 </body>
 </html>

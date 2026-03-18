@@ -32,67 +32,78 @@
 <body>
   <p class="back"><a href="../index.html">← Back to Drivetrain</a> · <a href="../../index.html">P6 RFP overview</a></p>
   <h1>Gears and cam bearings</h1>
-  <p class="muted">Part of the <a href="../index.html">Drivetrain</a> section. <em>Fill in one-line description.</em></p>
+  <p class="muted">Part of the <a href="../index.html">Drivetrain</a> section. Gear train and cam-bearing interface that converts reducer torque into reciprocating motion for the yoke.</p>
 
   <h2>Introduction</h2>
-  <p><em>Fill in: purpose of this subassembly, how it fits in the subsystem, key specs or design intent.</em></p>
+  <p>This subassembly transmits reducer output torque through a driven gear and passive gear to one or more cam bearings. The cam bearings contact the yoke to generate the reciprocating stroke used by the transmission and extraction cycle. Gear design choices (module, spur/helical, heat treat, backlash) and shaft/bearing stiffness drive fatigue life, noise, and alignment stability.</p>
 
   <h2>Colour key &amp; components</h2>
-  <p class="muted">CAD colours for this subpage. Add rows for each coloured component with purpose/spec.</p>
+  <p class="muted">Key components and what contractors should validate.</p>
   <table>
     <tr><th>Colour(s)</th><th>Component</th></tr>
-    <tr><td><em>—</em></td><td><em>Add colour swatches and component names/descriptions.</em></td></tr>
+    <tr><td><em>—</em></td><td><strong>Driven gear</strong> — receives reducer output torque. Weight reduction is desired if it preserves stiffness and tooth strength.</td></tr>
+    <tr><td><em>—</em></td><td><strong>Passive gear + shaft</strong> — transmits torque to the cam-bearing shaft. Stiffness and runout control yoke smoothness and bearing life.</td></tr>
+    <tr><td><em>—</em></td><td><strong>Cam bearings</strong> — current concept uses a support roller / track roller bearing <a href="https://www.skf.com/cn/products/rolling-bearings/track-rollers/support-rollers/productid-NUTR%2025%20A">SKF NUTR 25 A</a> (or equivalent) mounted on an offset radius (concept ~89 mm) and interfacing with the <a href="../../Transmission/">transmission</a> yoke to create reciprocation. Two rollers may be stacked to increase engagement area with the yoke.</td></tr>
+    <tr><td><em>—</em></td><td><strong>Mounted bearing units</strong> — SKF F4BRP 208-SRB-CRH (locating) and F4BRP 208-SRB-CLE (non-locating) are used in the current concept; contractor to confirm suitability and propose equivalents if needed.</td></tr>
   </table>
 
   <h2 id="gallery">Figures</h2>
-  <p class="muted">Add CAD views to the <code>images/</code> folder and reference them below. Refer to <a href="#fig1">Figure 1</a>, etc.</p>
-  <div class="slideshow" id="skel-gearsandcambearings-slideshow">
-    <div class="slideshow-track">
-      <div class="slide active" id="fig1" data-caption="Figure 1. (Add caption.)"><img src="images/fig1.png" alt="Figure 1"></div>
-    </div>
-    <p class="slideshow-caption" id="skel-gearsandcambearings-caption" aria-live="polite">Figure 1. (Add caption.)</p>
-    <div class="slideshow-controls">
-      <button type="button" id="skel-gearsandcambearings-prev" aria-label="Previous">← Previous</button>
-      <span class="slideshow-counter" id="skel-gearsandcambearings-counter">1 / 1</span>
-      <button type="button" id="skel-gearsandcambearings-next" aria-label="Next">Next →</button>
-    </div>
-  </div>
+  <p class="muted">Gear/cam figures are currently shown in the <a href="../index.html#gallery">Drivetrain main gallery</a>. Add dedicated closeups here later (tooth contact, cam-bearing offset dimensioning, bearing units, and shaft details).</p>
+  <ul class="muted">
+    <li><strong>Add figure</strong>: cam roller stack on post (single vs two stacked rollers) with key dimensions (post diameter, spacer(s), locknut/retainer).</li>
+    <li><strong>Add figure</strong>: yoke contact patch and engagement length (show why stacking rollers helps).</li>
+    <li><strong>Add figure</strong>: section view through driven gear showing post retention concept (threaded in gear face, shoulder stop, locknut option).</li>
+    <li><strong>Add figure</strong>: open-gear cover concept and lubrication access points.</li>
+  </ul>
 
   <h2>Discussion</h2>
-  <h3>Components</h3>
+  <h3>Rough design &amp; intent</h3>
   <ul>
-    <li><em>List main components and their role; expand as needed.</em></li>
+    <li><strong>Operating point</strong> — Reducer output target ~70 rpm. Preliminary torque at driven gear ~1023 N·m (to validate with final reducer ratio and efficiency).</li>
+    <li><strong>Current gear-force estimate</strong> — On the order of ~6.6 kN tangential and ~7.2 kN normal at the gear mesh (preliminary; depends on module, pitch diameter, pressure angle, and helix angle).</li>
+    <li><strong>Driven gear concept</strong> — Spur gear, ~38 teeth, ~308 mm pitch diameter, module ~8 (final module/profile TBD), 20° normal pressure angle. Current face width concept ~56 mm (TBD).</li>
+    <li><strong>Cam conversion</strong> — Support roller / track roller bearing (concept: <a href="https://www.skf.com/cn/products/rolling-bearings/track-rollers/support-rollers/productid-NUTR%2025%20A">SKF NUTR 25 A</a>) on a ~25 mm cam post/shaft. Two rollers may be stacked to increase yoke engagement surface area and reduce local contact stress.</li>
   </ul>
-  <h3>Interfaces</h3>
+
+  <h3>Known issues &amp; risks</h3>
   <ul>
-    <li><strong>Input:</strong> <em>…</em></li>
-    <li><strong>Output:</strong> <em>…</em></li>
-    <li><strong>Mount:</strong> <em>…</em></li>
+    <li><strong>Gear geometry not finalized</strong> — Module choice (6 vs 8), spur vs helical, and contact ratio must be finalized to ensure fatigue life and acceptable noise.</li>
+    <li><strong>Heat treatment + finishing</strong> — Tooth hardness and finishing (hob + grind/shave/roll) strongly affect wear, efficiency, and life.</li>
+    <li><strong>Alignment sensitivity</strong> — Gear mesh and cam-bearing/yoke interface are sensitive to shaft parallelism and bearing stiffness. Misalignment increases noise and reduces life.</li>
+    <li><strong>Cam post retention</strong> — Current concept considers a threaded hole in the gear face with a screwed-in 25 mm post/shaft (step shoulder stop vs adjustable locknut). Retention strategy must resist cyclic bending and loosening.</li>
+    <li><strong>Lubrication uncertainty</strong> — Current concept is effectively an open gear under a non-sealed cover. Lubrication method for gear teeth and cam/yoke contact is not defined yet.</li>
   </ul>
+
+  <h3>DFM &amp; manufacturing (China)</h3>
+  <ul>
+    <li><strong>Manufacturing route</strong> — Contractor to propose gear material, heat treat, tooth finishing, achievable tolerances, and inspection plan using China-available vendors.</li>
+    <li><strong>Backlash/contact targets</strong> — Contractor to propose backlash range and contact pattern acceptance that is robust to assembly tolerance stack.</li>
+    <li><strong>Cam post + bearing stack</strong> — Contractor to recommend the best way to mount the cam post to the gear (threaded + shoulder, press-fit, keyed, flange, etc.) and how to retain two stacked cam bearings (spacer, locknut, threadlock, etc.) for fatigue life.</li>
+  </ul>
+
+  <h3>Questions for contractor</h3>
+  <ol>
+    <li>Recommend final gear module/profile (spur vs helical) and provide fatigue life rationale, with a China-manufacturable heat treat + finishing plan.</li>
+    <li>Validate the preliminary torque/force estimates and provide the full load case set (including stall/peak events and cyclic cam loading).</li>
+    <li>Specify backlash targets, tooth contact acceptance checks, and runout/alignment tolerances needed to protect bearings and yoke motion quality.</li>
+    <li>Propose cam-bearing/yoke interface details (material, lubrication, wear strategy) and acceptance checks to avoid binding and shock loads.</li>
+    <li>Propose a cam post retention design that is robust to cyclic bending and does not loosen (and is manufacturable/inspectable in China). Compare “fixed shoulder stop” vs “adjustable locknut” approaches.</li>
+    <li>Confirm whether stacking two <a href="https://www.skf.com/cn/products/rolling-bearings/track-rollers/support-rollers/productid-NUTR%2025%20A">NUTR 25 A</a> rollers is appropriate for the yoke contact geometry and load (alignment tolerance, edge loading risk). If not, propose alternatives (wider roller, crowned profile, dual-row, or guided follower).</li>
+    <li>Propose a lubrication approach for an open gear under a cover: grease type/application, maintenance interval, and how to prevent contamination while remaining serviceable.</li>
+  </ol>
+
   <h3>Interfaces and tolerances</h3>
   <p class="muted">Known interfaces and tolerances. Links go to related subsystems.</p>
   <table class="iface-table">
     <thead><tr><th>Part</th><th>Interface / tolerance</th><th>Related</th></tr></thead>
     <tbody>
-      <tr><td><em>—</em></td><td><em>Add rows.</em></td><td>—</td></tr>
+      <tr><td>Reducer output → driven gear</td><td>Torque transmission; shafting/keys/splines and runout targets TBD</td><td><a href="../motor-and-reducer/">Motor and reducer</a></td></tr>
+      <tr><td>Driven gear ↔ passive gear</td><td>Backlash/contact targets TBD; alignment-sensitive mesh</td><td>—</td></tr>
+      <tr><td>Cam rollers → yoke</td><td>Interfaces with <a href="../../Transmission/">Transmission</a> yoke; offset radius ~89 mm concept; support roller bearing concept: <a href="https://www.skf.com/cn/products/rolling-bearings/track-rollers/support-rollers/productid-NUTR%2025%20A">SKF NUTR 25 A</a>; two stacked rollers may be used; wear/lube strategy TBD</td><td><a href="../../Transmission/">Transmission</a></td></tr>
+      <tr><td>Mounted bearing units</td><td>SKF F4BRP 208-SRB-CRH (locating) and F4BRP 208-SRB-CLE (non-locating); nominal shaft diameter 63.5 mm (2.5 in)</td><td><a href="https://www.skf.com/group/products/mounted-bearings/roller-bearing-units/flanged-units/productid-F4BRP%20208-SRB-CLE">SKF CLE</a></td></tr>
     </tbody>
   </table>
 
   <p class="back"><a href="../index.html">← Back to Drivetrain</a></p>
-  <script>
-(function(){
-  var el = document.getElementById('skel-gearsandcambearings-slideshow');
-  if (!el) return;
-  var slides = el.querySelectorAll('.slide');
-  var cap = document.getElementById('skel-gearsandcambearings-caption');
-  var counter = document.getElementById('skel-gearsandcambearings-counter');
-  var n = slides.length, i = 0;
-  function go(k) { i = (k + n) % n; slides.forEach(function(s,j){ s.classList.toggle('active', j===i); }); if (cap) cap.textContent = slides[i].getAttribute('data-caption') || ''; if (counter) counter.textContent = (i+1) + ' / ' + n; }
-  el.querySelector('#skel-gearsandcambearings-prev').addEventListener('click', function(){ go(i-1); });
-  el.querySelector('#skel-gearsandcambearings-next').addEventListener('click', function(){ go(i+1); });
-  var hash = window.location.hash;
-  if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
-})();
-  </script>
 </body>
 </html>
