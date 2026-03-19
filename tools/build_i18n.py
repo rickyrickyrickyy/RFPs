@@ -17,10 +17,12 @@ EXCLUDE_TOP = {"zh", "pt", "assets", "tools", ".git", "node_modules", ".cursor"}
 
 # Import translations (tools/ is script dir when run as python tools/build_i18n.py)
 sys.path.insert(0, str(ROOT))
-from tools.translations import get_ui_zh, get_ui_pt
+from tools.translations import get_ui_zh, get_ui_pt, get_content_with_hrefs_zh, get_content_with_hrefs_pt
 
 UI_ZH = get_ui_zh()
 UI_PT = get_ui_pt()
+CONTENT_WITH_HREFS_ZH = get_content_with_hrefs_zh()
+CONTENT_WITH_HREFS_PT = get_content_with_hrefs_pt()
 
 
 def list_english_html() -> list[Path]:
@@ -87,6 +89,16 @@ def fix_plug_images(html: str, relpath: str) -> str:
     return html.replace('src="../../images/plug-ejection-', 'src="../images/plug-ejection-')
 
 
+def normalize_quotes(html: str) -> str:
+    """Normalize curly/smart quotes to straight quotes so translations match."""
+    return (
+        html.replace("\u201c", '"')  # "
+        .replace("\u201d", '"')  # "
+        .replace("\u2018", "'")  # '
+        .replace("\u2019", "'")  # '
+    )
+
+
 def strip_inject(html: str) -> str:
     html = re.sub(r'<link[^>]*assets/site\.css[^>]*>\s*', "", html)
     html = re.sub(r'<nav class="site-lang-bar"[^>]*>[\s\S]*?</nav>\s*', "", html)
@@ -148,10 +160,21 @@ def restore_url_attributes(html: str, urls: list[str]) -> str:
     return html
 
 
-def apply_ui_dict(html: str, pairs: list[tuple[str, str]]) -> str:
+def apply_ui_dict(
+    html: str,
+    pairs: list[tuple[str, str]],
+    content_with_hrefs: list[tuple[str, str]] | None = None,
+) -> str:
+    """Apply translations. Content with hrefs is applied first (before URL protection)."""
+    content_en = set()
+    if content_with_hrefs:
+        for en, loc in content_with_hrefs:
+            html = html.replace(en, loc)
+            content_en.add(en)
     html, urls = protect_url_attributes(html)
     for en, loc in pairs:
-        html = html.replace(en, loc)
+        if en not in content_en:
+            html = html.replace(en, loc)
     return restore_url_attributes(html, urls)
 
 
@@ -232,6 +255,7 @@ def finish_page(
     bar_relpath: str,
     lang: str,
     ui_pairs: list[tuple[str, str]] | None,
+    content_with_hrefs: list[tuple[str, str]] | None = None,
 ) -> str:
     c = strip_inject(content)
     c = ensure_viewport(c)
@@ -239,7 +263,7 @@ def finish_page(
     c = inject_head(c, assets_prefix(bar_relpath))
     c = inject_body(c, lang_bar(bar_relpath, lang))
     if ui_pairs:
-        c = apply_ui_dict(c, ui_pairs)
+        c = apply_ui_dict(c, ui_pairs, content_with_hrefs)
     return c
 
 
@@ -250,6 +274,7 @@ def main() -> int:
         raw = src.read_text(encoding="utf-8")
         raw = strip_inject(raw)
         raw = fix_plug_images(raw, rel)
+        raw = normalize_quotes(raw)
 
         en_out = finish_page(raw, rel, "en", None)
         src.write_text(en_out, encoding="utf-8")
@@ -263,8 +288,8 @@ def main() -> int:
         pt_dest = ROOT / pt_rel
         zh_dest.parent.mkdir(parents=True, exist_ok=True)
         pt_dest.parent.mkdir(parents=True, exist_ok=True)
-        zh_dest.write_text(finish_page(zh_body, zh_rel, "zh", UI_ZH), encoding="utf-8")
-        pt_dest.write_text(finish_page(pt_body, pt_rel, "pt", UI_PT), encoding="utf-8")
+        zh_dest.write_text(finish_page(zh_body, zh_rel, "zh", UI_ZH, CONTENT_WITH_HREFS_ZH), encoding="utf-8")
+        pt_dest.write_text(finish_page(pt_body, pt_rel, "pt", UI_PT, CONTENT_WITH_HREFS_PT), encoding="utf-8")
 
     print(f"OK: {len(files)} pages -> en + zh/ + pt/")
     return 0

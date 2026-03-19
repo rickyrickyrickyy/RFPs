@@ -15,7 +15,7 @@
     .muted { color: var(--muted); font-size: 0.9rem; }
     .tbd { color: var(--muted); font-style: italic; }
   </style>
-                <link rel="stylesheet" href="../assets/site.css">
+                        <link rel="stylesheet" href="../assets/site.css">
 </head>
 <body>
 <nav class="site-lang-bar" aria-label="Language">
@@ -65,7 +65,7 @@
   <p>Safety switches on <strong>3 lids</strong> (e.g. plunger cover, drivetrain cover, feeder). Interlock logic must be fail-safe: when any lid is open, the machine shuts off and cannot run.</p>
   <ul>
     <li><strong>Coded safety switches</strong> — coded interlocks preferred for robustness.</li>
-    <li><strong>Coded lid switches (magnet code)</strong> — only the specified magnet/operator handle may actuate the lid safety switch (anti-misuse). Include fail-safe behavior and clear “machine open” indicator.</li>
+    <li><strong>Coded lid switches (magnet code)</strong> — only the specified magnet/operator handle may actuate the lid safety switch (anti-misuse). Include fail-safe behavior and clear "machine open" indicator.</li>
     <li><strong>Control-board integration</strong> — lid safety switch inputs must be integrated using the same breakout board + main board architecture as the commercial machine controls, so safety behavior matches existing systems.</li>
     <li><strong>Stop with peelers/open condition</strong> — include a sensor/logic path that prevents operation (or triggers stop) if peelers/lids are in an unsafe state.</li>
   </ul>
@@ -84,7 +84,7 @@
   <h3>Yoke position sensor</h3>
   <p>P6 requires a <a href="../Transmission/">yoke</a> position/cycle sensor to support controlled safe stop conditions and a critical <strong>fully open stop</strong> behavior so internal parts can be serviced/removed. The exact sensor type and signal interface are TBD.</p>
   <ul>
-    <li><strong>Cycle sensor</strong> — provide cycle counting (cycles per time period). This may be the same sensor as “open peelers stop” depending on final mechanism.</li>
+    <li><strong>Cycle sensor</strong> — provide cycle counting (cycles per time period). This may be the same sensor as "open peelers stop" depending on final mechanism.</li>
     <li><strong>Fully open stop position</strong> — when the machine is turned OFF / STOPPED in normal operation, the system must stop with the yoke at the <strong>fully open position</strong> (operator access/removal).</li>
     <li><strong>Emergency/interlock shutdown</strong> — when E-stop is pressed or a coded lid safety switch indicates an open lid/interlock fault, the machine must shut down immediately (no reposition-to-open).</li>
   </ul>

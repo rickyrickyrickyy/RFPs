@@ -18,7 +18,7 @@
     li { margin: 0.35rem 0; }
     .stroke-box { background: rgba(88, 166, 255, 0.08); border: 1px solid var(--border); border-radius: 8px; padding: 0.75rem 1rem; margin: 0.75rem 0; }
   </style>
-                <link rel="stylesheet" href="../../assets/site.css">
+                        <link rel="stylesheet" href="../../assets/site.css">
 </head>
 <body>
 <nav class="site-lang-bar" aria-label="Language">
@@ -32,50 +32,50 @@
 
 <p class="back"><a href="../index.html">← 返回 P6 RFP 总览</a> · <a href="index.html">项目概览</a></p>
   <h1>Delijuice 压榨循环</h1>
-  <p class="muted">Stroke-by-stroke detail for the four-step juicing cycle. The high-level machine/function summary and end-to-end product flow are in <a href="index.html">项目概览</a>.</p>
+  <p class="muted">四步榨汁循环的逐行程详细说明。机器/功能概览和端到端产品流程见 <a href="index.html">项目概览</a>。</p>
 
   <section>
     <h2>简介</h2>
-    <p>The <strong>Delijuice cycle</strong> is the P6 extraction stroke sequence that produces juice while keeping cores and peel as separate waste streams. It is driven by the P6 <strong>scotch-yoke drivetrain</strong> and is designed to run repeatably in an industrial duty cycle.</p>
-    <p>The cycle has <strong>four steps</strong>, paired by stroke:</p>
+    <p><strong>Delijuice 循环</strong> 是 P6 的压榨行程序列，在产果汁的同时将果芯与果皮作为独立废料流。由 P6 <strong>苏格兰轭架传动</strong> 驱动，设计为在工业工况下可重复运行。</p>
+    <p>循环分为 <strong>四个步骤</strong>，按行程配对：</p>
     <div class="stroke-box">
-      <strong>Reverse stroke:</strong> 水果进料 + Core expulsion (happen together)<br>
-      <strong>Forward stroke:</strong> Compression + Juice outflow (happen together)
+      <strong>回程：</strong> 水果进料 + 果芯排出（同时进行）<br>
+      <strong>正程：</strong> 压缩 + 果汁流出（同时进行）
     </div>
   </section>
 
   <section>
     <h2>1. 水果进料</h2>
-    <p>Citrus is fed into the <a href="../Feeder/index.html">fruit intake system</a> and rolls down until it rests on the <strong>feed synchronization spring</strong> in the vertical feeder duct.</p>
+    <p>柑橘进入 <a href="../Feeder/index.html">水果进料系统</a> 后滚落，直至停在垂直进料管内的 <strong>进料同步弹簧</strong> 上。</p>
     <ul>
-      <li><strong>Forward stroke:</strong> Rollers on the <a href="../Extraction-syncronisation/index.html">水果托架 assembly</a> pull the feed sync spring open. One fruit drops onto the 水果托架 plate; the next fruit sits on top of it.</li>
-      <li><strong>Reverse stroke:</strong> The spring closes and holds the top fruit. The 水果托架 plate is pulled from under the bottom fruit so it drops into the <a href="../Collection/index.html">削皮器</a>. The peeler bottom fingers are long enough to catch and stage the fruit for compression.</li>
+      <li><strong>正程：</strong> <a href="../Extraction-syncronisation/index.html">水果托架组件</a> 上的滚轮拉开进料同步弹簧。一个水果落到水果托板上；下一个水果叠在其上。</li>
+      <li><strong>回程：</strong> 弹簧闭合并托住上方水果。水果托板从下方水果下抽出，水果落入 <a href="../Collection/index.html">削皮器</a>。削皮器底部指足够长，可接住并定位水果以便压缩。</li>
     </ul>
   </section>
 
   <section>
-    <h2>2. Compression</h2>
-    <p>The fruit is peeled and a <strong>cylindrical core</strong> is cut from its centre. The <strong>driven peeler</strong> moves forward and interlaces with the <strong>static peeler cup</strong> during the forward stroke. The fruit is compressed into the double-conical cavity between the two 削皮器. A <strong>plug cutter</strong> extending from the centre of the static peeler cup cuts the core. Mature seeds (bitter oils and enzymes) are mostly in the centre; removing this core keeps them out of the juice and opens a path for juice outflow.</p>
-    <p>As cavity volume becomes less than fruit volume, pressure rises and peeling starts. The wedge shape of each finger cuts longitudinal seams, creating <strong>“peel chips”</strong>. These are forced out through the gaps between peeler fingers into the peel bin. The chips also seal the gaps so pressure can build for juicing. The cylindrical core is pushed into the <strong>slit sieve filter tube</strong>. At the end of compression, the central pin in the driven peeler passes the tip of the plug cutter so the core is fully separated from the peel.</p>
+    <h2>2. 压缩</h2>
+    <p>水果被削皮，从其中心切出 <strong>圆柱形果芯</strong>。<strong>从动削皮器</strong> 在正程中前移并与 <strong>固定削皮杯</strong> 交错。水果被压入两削皮器间的双锥腔。从固定削皮杯中心伸出的 <strong>芯柱切割器</strong> 切出果芯。成熟种子（苦油和酶）多在中心；去除果芯可避免进入果汁并打开果汁流出通道。</p>
+    <p>随着腔体容积小于水果体积，压力上升并开始削皮。各指的楔形切出纵向接缝，形成 <strong>「果皮片」</strong>。果皮片被挤出削皮器指间缝隙进入果皮仓。果皮片也密封缝隙以便建立榨汁压力。圆柱形果芯被推入 <strong>缝筛过滤管</strong>。压缩结束时，从动削皮器中的中心销越过芯柱切割器尖端，果芯与果皮完全分离。</p>
   </section>
 
   <section>
-    <h2>3. Juice outflow</h2>
-    <p>Juice is squeezed from the fruit, collected, and sent to the spout. The two 削皮器 squeeze the fruit and build pressure; with the spout at ambient pressure, juice flows out through the hole left by the plug cutter, through the slit sieve, into the <strong>juice collector</strong>, and out of the spout. The collector is <strong>diffuser-shaped</strong> (larger at the spout than at the entrance), which helps draw juice toward the exit.</p>
-    <p>Two <strong>compression springs</strong> move the <a href="../Plug-ejection/index.html">plunger</a> forward with the yoke. The plunger stops when the <strong>stroke limiters</strong> reach their end position. Inside the filter tube the core is held between the plunger tip and the central pin. The gap is kept small to squeeze juice from the core but never smaller than the seeds, so they stay intact.</p>
+    <h2>3. 果汁流出</h2>
+    <p>果汁从水果中挤出、收集并送至出口。两削皮器挤压水果并建立压力；出口处于环境压力，果汁经芯柱切割器留下的孔、缝筛流入 <strong>果汁收集器</strong> 并从出口流出。收集器呈 <strong>扩散器形</strong>（出口大于入口），有助于将果汁引向出口。</p>
+    <p>两根 <strong>压缩弹簧</strong> 随轭架推动 <a href="../Plug-ejection/index.html">柱塞</a> 前移。当 <strong>行程限位器</strong> 到达末端时柱塞停止。过滤管内果芯被夹在柱塞尖端与中心销之间。间隙保持较小以从果芯挤出果汁，但从不小于种子尺寸，以保持种子完整。</p>
   </section>
 
   <section>
-    <h2>4. Core expulsion</h2>
-    <p>On the <strong>reverse stroke</strong>, the yoke pulls the <strong>plunger drive rods</strong> back against the compression springs. The plunger retracts toward the plug cutter and <strong>ejects the core</strong> from the filter into the peel bin. The bottom fingers of both 削皮器 are cut short so the core can fall through. Once the core has dropped, the next fruit drops from the 水果托架 plate into the 削皮器 and the cycle repeats.</p>
+    <h2>4. 果芯排出</h2>
+    <p>在 <strong>回程</strong> 中，轭架将 <strong>柱塞驱动杆</strong> 拉回对抗压缩弹簧。柱塞向芯柱切割器缩回并从过滤管 <strong>弹出果芯</strong> 至果皮仓。两削皮器底部指较短以便果芯落下。果芯落下后，下一只水果从水果托板落入削皮器，循环重复。</p>
   </section>
 
   <section>
     <h2>建议补充图示（便于承包商理解）</h2>
     <ul class="muted">
-      <li><strong>补充图示</strong>: <strong>单一时间线图</strong> — yoke position vs the four steps (intake, compression, juice, eject) on one axis.</li>
-      <li><strong>补充图示</strong>: <strong>各步骤截面</strong> — fruit, plug cutter, plunger, and core position (four small panels).</li>
-      <li><strong>补充图示</strong>: <strong>同步弹簧 + 推杆</strong> — link to <a href="../../Feeder/feeding-subassembly/#gallery">进料子组件</a> gallery for photo-backed clarity.</li>
+      <li><strong>补充图示</strong>：<strong>单一时间线图</strong> — 轭架位置与四步（进料、压缩、果汁、弹出）在同一坐标轴。</li>
+      <li><strong>补充图示</strong>：<strong>各步骤截面</strong> — 水果、芯柱切割器、柱塞与果芯位置（四个小图）。</li>
+      <li><strong>补充图示</strong>: <strong>同步弹簧 + 推杆</strong> — 链接至 <a href="../../Feeder/feeding-subassembly/#gallery">进料子组件</a> 图示以配合照片说明。</li>
     </ul>
   </section>
 
