@@ -27,6 +27,9 @@
     .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
     .param-block { margin: 1rem 0; padding: 0.75rem 1rem; background: rgba(88, 166, 255, 0.08); border: 1px solid var(--border); border-radius: 6px; font-size: 0.95rem; }
     .param-block h3 { margin: 0 0 0.5rem 0; font-size: 1rem; }
+    .figure-standalone { margin: 1.25rem 0; }
+    .figure-standalone img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
+    .figure-standalone figcaption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); }
   </style>
 </head>
 <body>
@@ -73,25 +76,39 @@
   </table>
 
   <h2 id="gallery">Figures</h2>
-  <p class="muted">CAD views of the feeding subassembly. Refer to <a href="#fig1">Figure 1</a>, <a href="#fig2">Figure 2</a>, etc.</p>
+  <p class="muted">The <strong>exploded labeled</strong> view below is a <strong>static reference</strong> and is <strong>not</strong> part of the rotating gallery. The numbered carousel shows the current set: assembly with <strong>CIP nozzle</strong> installed, standard orthographic views, sync-spring detail, and <strong>pusher / roller vs sync-spring</strong> interaction.</p>
+
+  <h3>Exploded / labeled assembly (static)</h3>
+  <figure class="figure-standalone" id="fig-exploded">
+    <img src="exploded.png" alt="Exploded labeled feeding subassembly">
+    <figcaption>Exploded, labeled view of major components (reference only — excluded from the gallery below).</figcaption>
+  </figure>
+
+  <h3>Assembly &amp; interaction gallery</h3>
+  <p class="muted">Refer to <a href="#fig1">Figure 1</a> through <a href="#fig6">Figure 6</a> in the carousel.</p>
   <div class="slideshow" id="feedsub-slideshow">
     <div class="slideshow-track">
-      <div class="slide active" id="fig1" data-caption="Figure 1. Isometric — mount plate, flanged 90° entry tube, straight tube and spring guide, sync springs."><img src="images/feeding-sub-1.png" alt="Feeding subassembly isometric"></div>
-      <div class="slide" id="fig2" data-caption="Figure 2. Right — 90° entry tube, straight tube, spring guide, yellow sync springs, dark green mounts, pink rollers."><img src="images/feeding-sub-2.png" alt="Feeding subassembly right"></div>
-      <div class="slide" id="fig3" data-caption="Figure 3. Side isometric — entry tube, flange, straight tube, spring guide, sync spring."><img src="images/feeding-sub-3.png" alt="Feeding subassembly side"></div>
-      <div class="slide" id="fig4" data-caption="Figure 4. Left — 90° tube, mount plate, straight tube, spring guide, sync spring mounts and rollers."><img src="images/feeding-sub-4.png" alt="Feeding subassembly left"></div>
-      <div class="slide" id="fig5" data-caption="Figure 5. Front — entry tube, flange, mount plate, straight tube, spring guides, sync springs."><img src="images/feeding-sub-5.png" alt="Feeding subassembly front"></div>
-      <div class="slide" id="fig6" data-caption="Figure 6. Bottom — mount plate, entry tube, straight tube, spring guide, sync springs and mounts."><img src="images/feeding-sub-6.png" alt="Feeding subassembly bottom"></div>
-      <div class="slide" id="fig7" data-caption="Figure 7. Isometric — mount plate, 90° tube, straight tube, spring guide, yellow springs, dark green mounts, pink rollers."><img src="images/feeding-sub-7.png" alt="Feeding subassembly isometric 2"></div>
-      <div class="slide" id="fig8" data-caption="Figure 8. Isometric — full subassembly; sync springs at 45° to tube."><img src="images/feeding-sub-8.png" alt="Feeding subassembly isometric 3"></div>
+      <div class="slide active" id="fig1" data-caption="Figure 1. Isometric — full subassembly with CIP nozzle/feed visible; mount plate, 90° entry tube, straight tube, spring guide, sync spring."><img src="images/isoview.png" alt="Feeding subassembly isometric with CIP nozzle"></div>
+      <div class="slide" id="fig2" data-caption="Figure 2. Side — CIP path, tubes, and sync-spring region."><img src="images/sideview.png" alt="Feeding subassembly side view"></div>
+      <div class="slide" id="fig3" data-caption="Figure 3. Bottom — mount plate, tubes, spring guide, and hardware from below."><img src="images/bottomview.png" alt="Feeding subassembly bottom view"></div>
+      <div class="slide" id="fig4" data-caption="Figure 4. Sync spring close-up — spring guide, spring, and roller / contact zone."><img src="images/springclosup.png" alt="Sync spring close-up"></div>
+      <div class="slide" id="fig5" data-caption="Figure 5. Pusher / extraction roller interaction — how the roller opens the sync spring."><img src="images/pusherinteraction.png" alt="Pusher and sync spring interaction"></div>
+      <div class="slide" id="fig6" data-caption="Figure 6. Alternate interaction view — roller vs spring through stroke."><img src="images/interaction2.png" alt="Second view of pusher and sync spring"></div>
     </div>
-    <p class="slideshow-caption" id="feedsub-caption" aria-live="polite">Figure 1. Isometric — mount plate, flanged 90° entry tube, straight tube and spring guide, sync springs.</p>
+    <p class="slideshow-caption" id="feedsub-caption" aria-live="polite">Figure 1. Isometric — full subassembly with CIP nozzle/feed visible; mount plate, 90° entry tube, straight tube, spring guide, sync spring.</p>
     <div class="slideshow-controls">
       <button type="button" id="feedsub-prev" aria-label="Previous">← Previous</button>
-      <span class="slideshow-counter" id="feedsub-counter">1 / 8</span>
+      <span class="slideshow-counter" id="feedsub-counter">1 / 6</span>
       <button type="button" id="feedsub-next" aria-label="Next">Next →</button>
     </div>
   </div>
+
+  <h3>Recommended figures (contractor clarity)</h3>
+  <ul class="muted">
+    <li><strong>Add figure</strong>: dimensioned <strong>CIP nozzle pocket / cut-out</strong> on the 90° tube if contractors need tighter fab tolerances than the photos imply.</li>
+    <li><strong>Add figure</strong>: <strong>rivet / modular mount pattern</strong> on the tan mount plate (drill-out swap concept) with callouts.</li>
+    <li><strong>Add figure</strong>: short <strong>sequence</strong> (3–4 stills or clip) of roller stroke vs sync spring from “closed” to “fully open” for timing review.</li>
+  </ul>
 
   <h2>Spring sizing design parameters</h2>
   <ul>

@@ -1,6 +1,8 @@
 # Feeding subassembly — images
 
-Eight CAD views of the feeding subassembly: mount plate, flanged 90° entry tube, entry tube flange, entry tube mount plate, flanged straight tube and spring guide, sync spring, sync spring mounts, pink rollers.
+CAD/photo set for the feeding subassembly: mount plate, 90° entry tube, straight tube + spring guide, sync spring, CIP nozzle in assembly, and pusher/roller interaction with the sync spring.
+
+**Also:** static exploded labeled view lives next to this folder as [`../exploded.png`](../exploded.png) (referenced from the subassembly page; not part of the rotating gallery).
 
 ## CAD colour key (this subassembly’s figures only)
 
@@ -16,15 +18,17 @@ Eight CAD views of the feeding subassembly: mount plate, flanged 90° entry tube
 | **#F1E33D** | Sync spring (yellow) |
 | **#4A813C** | Sync spring mounts (dark green, 2×) |
 
-## Files
+## Files (gallery carousel)
 
 | Filename | Description |
 |----------|-------------|
-| feeding-sub-1.png | Isometric — mount plate, 90° entry tube, straight tube, spring guide, sync springs |
-| feeding-sub-2.png | Right — entry tube, straight tube, spring guide, sync springs, mounts, rollers |
-| feeding-sub-3.png | Side isometric — entry tube, flange, straight tube, spring guide, sync spring |
-| feeding-sub-4.png | Left — 90° tube, mount plate, straight tube, sync spring mounts and rollers |
-| feeding-sub-5.png | Front — entry tube, flange, mount plate, straight tube, spring guides, sync springs |
-| feeding-sub-6.png | Bottom — mount plate, entry tube, straight tube, spring guide, sync springs and mounts |
-| feeding-sub-7.png | Isometric — full subassembly; yellow springs, dark green mounts, pink rollers |
-| feeding-sub-8.png | Isometric — sync springs at 45° to tube |
+| isoview.png | Isometric — full subassembly with **CIP nozzle/feed** visible |
+| sideview.png | Side — CIP path, tubes, sync-spring region |
+| bottomview.png | Bottom — mount plate, tubes, spring guide, hardware from below |
+| springclosup.png | Sync spring close-up — guide, spring, roller contact zone |
+| pusherinteraction.png | Pusher / extraction roller vs sync spring (interaction) |
+| interaction2.png | Alternate interaction view through stroke |
+
+## Legacy filenames (removed from HTML)
+
+Older eight-view set `feeding-sub-1.png` … `feeding-sub-8.png` may still exist locally; the live RFP page uses the filenames above.

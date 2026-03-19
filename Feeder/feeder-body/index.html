@@ -27,6 +27,9 @@
     .slideshow-controls button { background: var(--border); color: var(--text); border: none; padding: 0.35rem 0.75rem; border-radius: 4px; cursor: pointer; font-size: 0.9rem; }
     .slideshow-controls button:hover { background: var(--accent); color: #fff; }
     .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
+    .figure-standalone { margin: 1.25rem 0; }
+    .figure-standalone img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
+    .figure-standalone figcaption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); }
   </style>
 </head>
 <body>
@@ -48,11 +51,22 @@
   </table>
 
   <h2 id="gallery">Figures</h2>
-  <p class="muted">Feeder body context is shown in the <a href="../index.html#gallery">Fruit intake system main gallery</a>. Add dedicated closeups here later.</p>
+  <p class="muted">Context for the full machine is still in the <a href="../index.html#gallery">Fruit intake system main gallery</a>. Below: <strong>isometric</strong> and <strong>top</strong> views of the feeder body with <strong>hinge</strong> visible. <a href="#fig-body-iso">Figure 1</a>; <a href="#fig-body-top">Figure 2</a>.</p>
+
+  <figure class="figure-standalone" id="fig-body-iso">
+    <img src="images/isoview.png" alt="Feeder body isometric with hinge">
+    <figcaption><strong>Figure 1.</strong> Isometric — feeder body / shell with hinge in context.</figcaption>
+  </figure>
+  <figure class="figure-standalone" id="fig-body-top">
+    <img src="images/topview.png" alt="Feeder body top view with hinge">
+    <figcaption><strong>Figure 2.</strong> Top — feeder body with hinge and feeding-subassembly openings.</figcaption>
+  </figure>
+
+  <h3>Recommended figures (contractor clarity)</h3>
   <ul class="muted">
-    <li><strong>Add figure</strong>: lid/shelf lip geometry showing how the lid overhangs into the extraction zone to keep spray inside.</li>
-    <li><strong>Add figure</strong>: hinge mounting area and bracing concept (to avoid hinging loads on thin 2 mm sheet).</li>
-    <li><strong>Add figure</strong>: feeding-subassembly mount plate cutouts and rivet pattern (modular swap concept).</li>
+    <li><strong>Add figure</strong>: <strong>lid / shelf lip</strong> geometry showing how the lid overhangs into the extraction zone to keep spray inside (splash containment intent).</li>
+    <li><strong>Add figure</strong>: <strong>hinge load path</strong> — bracing / reinforcement concept so hinge reactions do not load thin ~2 mm sheet alone (Figures 1–2 show hinge placement; detail still useful).</li>
+    <li><strong>Add figure</strong>: <strong>feeding-subassembly mount cutouts</strong> and <strong>rivet pattern</strong> on the shell (modular swap) with callouts.</li>
   </ul>
 
   <h2>Discussion</h2>
