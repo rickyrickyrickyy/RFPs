@@ -1,6 +1,7 @@
 .venv/
 .venv-colors/
 screenshots/
+__pycache__/
 
 # Cursor / workspace artifacts
 .cursor/skills/
