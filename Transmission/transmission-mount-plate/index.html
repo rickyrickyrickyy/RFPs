@@ -47,11 +47,28 @@
   </table>
 
   <h2 id="gallery">Figures</h2>
-  <p class="muted">Transmission plate context is shown in the <a href="../index.html#gallery">Transmission main gallery</a>. Add dedicated cast vs welded comparison images here later (rib draft, parting line, machined pads, welded gussets).</p>
-  <ul class="muted">
-    <li><strong>Add figure</strong>: cast version with rib draft angles and parting surface highlighted.</li>
-    <li><strong>Add figure</strong>: welded version (two waterjet plates + gussets) with weld callouts and stress-relief note.</li>
-    <li><strong>Add figure</strong>: machined faces/pads called out (top/bottom mounting faces, hygiene-facing inner surfaces, bearing mount pads).</li>
+  <p class="muted">Cast bearing-mount plate: pre-machining vs post-machining states, parting line / split surface, and machined bearing pad context. See also <a href="../index.html#gallery">Transmission main gallery</a>.</p>
+  <div class="slideshow" id="tx-mount-slideshow">
+    <div class="slideshow-track">
+      <div class="slide active" id="fig1" data-caption="Figure 1. Bearing mount plate (cast) — pre-machining state 1."><img src="images/premachining1.png" alt="Pre-machining 1"></div>
+      <div class="slide" id="fig2" data-caption="Figure 2. Bearing mount plate (cast) — post-machining state 1."><img src="images/postmachining1.png" alt="Post-machining 1"></div>
+      <div class="slide" id="fig3" data-caption="Figure 3. Bearing mount plate (cast) — pre-machining state 2."><img src="images/premachining2.png" alt="Pre-machining 2"></div>
+      <div class="slide" id="fig4" data-caption="Figure 4. Bearing mount plate (cast) — post-machining state 2."><img src="images/postmachining2.png" alt="Post-machining 2"></div>
+      <div class="slide" id="fig5" data-caption="Figure 5. Casting — parting line / mould split (reference for DFM)."><img src="images/partingline.png" alt="Parting line"></div>
+      <div class="slide" id="fig6" data-caption="Figure 6. Casting — parting / joint surface detail."><img src="images/partingsurface.png" alt="Parting surface"></div>
+    </div>
+    <p class="slideshow-caption" id="tx-mount-caption" aria-live="polite">Figure 1. Pre-machining (cast bearing mount plate).</p>
+    <div class="slideshow-controls">
+      <button type="button" id="tx-mount-prev" aria-label="Previous">← Previous</button>
+      <span class="slideshow-counter" id="tx-mount-counter">1 / 6</span>
+      <button type="button" id="tx-mount-next" aria-label="Next">Next →</button>
+    </div>
+  </div>
+
+  <h3>CAD downloads (STEP)</h3>
+  <ul>
+    <li><a href="BearingMountPlate_Cast.stp" download>BearingMountPlate_Cast.stp</a> — cast bearing mount plate (as-designed)</li>
+    <li><a href="Machined-BearingMountPlate_Cast.stp" download>Machined-BearingMountPlate_Cast.stp</a> — machined bearing mount plate (post-op CAD)</li>
   </ul>
 
   <h2>Discussion</h2>
@@ -102,5 +119,20 @@
   </table>
 
   <p class="back"><a href="../index.html">← Back to Transmission system</a></p>
+  <script>
+(function(){
+  var el = document.getElementById('tx-mount-slideshow');
+  if (!el) return;
+  var slides = el.querySelectorAll('.slide');
+  var cap = document.getElementById('tx-mount-caption');
+  var counter = document.getElementById('tx-mount-counter');
+  var n = slides.length, i = 0;
+  function go(k) { i = (k + n) % n; slides.forEach(function(s,j){ s.classList.toggle('active', j===i); }); if (cap) cap.textContent = slides[i].getAttribute('data-caption') || ''; if (counter) counter.textContent = (i+1) + ' / ' + n; }
+  document.getElementById('tx-mount-prev').addEventListener('click', function(){ go(i-1); });
+  document.getElementById('tx-mount-next').addEventListener('click', function(){ go(i+1); });
+  var hash = window.location.hash;
+  if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
+})();
+  </script>
 </body>
 </html>

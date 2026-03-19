@@ -48,13 +48,18 @@
   </table>
 
   <h2 id="gallery">Figures</h2>
-  <p class="muted">Filter/plug-cutter context is shown in the <a href="../index.html#gallery">Collection main gallery</a>. Add dedicated closeups here later (ID finish callouts, slot geometry, seal detail, plug-cutter attachment).</p>
-  <ul class="muted">
-    <li><strong>Add figure</strong>: filter tube slot pattern and how scraper clears pulp each cycle.</li>
-    <li><strong>Add figure</strong>: plunger-to-tube sealing concept (current vs proposed O-ring/lip seal).</li>
-    <li><strong>Add figure</strong>: plug cutter attachment options (integral vs removable tip).</li>
-    <li><strong>Add figure</strong>: reverse-flow CIP path exiting plug cutter centreline.</li>
-  </ul>
+  <p class="muted">Plungers seated in filter tubes / collector context. Additional collection views: <a href="../index.html#gallery">Collection main gallery</a>.</p>
+  <div class="slideshow" id="plunger-filter-slideshow">
+    <div class="slideshow-track">
+      <div class="slide active" id="fig1" data-caption="Figure 1. Plungers inside filter tubes — collector assembly context (CAD)."><img src="images/plungers-in-filter.png" alt="Plungers inside filter tubes"></div>
+    </div>
+    <p class="slideshow-caption" id="plunger-filter-caption" aria-live="polite">Figure 1. Plungers inside filter tubes.</p>
+    <div class="slideshow-controls">
+      <button type="button" id="plunger-filter-prev" aria-label="Previous">← Previous</button>
+      <span class="slideshow-counter" id="plunger-filter-counter">1 / 1</span>
+      <button type="button" id="plunger-filter-next" aria-label="Next">Next →</button>
+    </div>
+  </div>
 
   <h2>Discussion</h2>
   <h3>Rough design &amp; intent</h3>
@@ -111,5 +116,20 @@
   </table>
 
   <p class="back"><a href="../index.html">← Back to Collection</a></p>
+  <script>
+(function(){
+  var el = document.getElementById('plunger-filter-slideshow');
+  if (!el) return;
+  var slides = el.querySelectorAll('.slide');
+  var cap = document.getElementById('plunger-filter-caption');
+  var counter = document.getElementById('plunger-filter-counter');
+  var n = slides.length, i = 0;
+  function go(k) { i = (k + n) % n; slides.forEach(function(s,j){ s.classList.toggle('active', j===i); }); if (cap) cap.textContent = slides[i].getAttribute('data-caption') || ''; if (counter) counter.textContent = (i+1) + ' / ' + n; }
+  var prev = document.getElementById('plunger-filter-prev');
+  var next = document.getElementById('plunger-filter-next');
+  if (prev) prev.addEventListener('click', function(){ go(i-1); });
+  if (next) next.addEventListener('click', function(){ go(i+1); });
+})();
+  </script>
 </body>
 </html>

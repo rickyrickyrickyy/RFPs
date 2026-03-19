@@ -53,7 +53,21 @@
   </table>
 
   <h2 id="gallery">Figures</h2>
-  <p class="muted">Motor/reducer figures are currently shown in the <a href="../index.html#gallery">Drivetrain main gallery</a>. Add dedicated closeups here later (pulley alignment, tensioning travel, mounting features).</p>
+  <p class="muted">P6 motor/reducer CAD (Figures 1–2). Figure 3 is a <strong>reference photo from another machine</strong> showing a nut/standoff-style motor mount concept for inspiration only — not the P6 design.</p>
+  <div class="slideshow" id="motor-reducer-slideshow">
+    <div class="slideshow-track">
+      <div class="slide active" id="fig1" data-caption="Figure 1. Motor and reducer — P6 CAD (layout / belt path context)."><img src="images/01.png" alt="Motor and reducer CAD 1"></div>
+      <div class="slide" id="fig2" data-caption="Figure 2. Motor and reducer — P6 CAD (detail / mounting context)."><img src="images/02.png" alt="Motor and reducer CAD 2"></div>
+      <div class="slide" id="fig3" data-caption="Figure 3. Reference — motor mount plate on another machine (inspiration for standoff/nut tensioning concept; not P6)."><img src="images/03.png" alt="Reference motor mount inspiration"></div>
+    </div>
+    <p class="slideshow-caption" id="motor-reducer-caption" aria-live="polite">Figure 1. Motor and reducer — P6 CAD.</p>
+    <div class="slideshow-controls">
+      <button type="button" id="motor-reducer-prev" aria-label="Previous">← Previous</button>
+      <span class="slideshow-counter" id="motor-reducer-counter">1 / 3</span>
+      <button type="button" id="motor-reducer-next" aria-label="Next">Next →</button>
+    </div>
+  </div>
+  <p class="muted">Additional context: <a href="../index.html#gallery">Drivetrain main gallery</a>.</p>
 
   <h2>Discussion</h2>
   <h3>Rough design &amp; intent</h3>
@@ -152,5 +166,20 @@
   </table>
 
   <p class="back"><a href="../index.html">← Back to Drivetrain</a></p>
+  <script>
+(function(){
+  var el = document.getElementById('motor-reducer-slideshow');
+  if (!el) return;
+  var slides = el.querySelectorAll('.slide');
+  var cap = document.getElementById('motor-reducer-caption');
+  var counter = document.getElementById('motor-reducer-counter');
+  var n = slides.length, i = 0;
+  function go(k) { i = (k + n) % n; slides.forEach(function(s,j){ s.classList.toggle('active', j===i); }); if (cap) cap.textContent = slides[i].getAttribute('data-caption') || ''; if (counter) counter.textContent = (i+1) + ' / ' + n; }
+  document.getElementById('motor-reducer-prev').addEventListener('click', function(){ go(i-1); });
+  document.getElementById('motor-reducer-next').addEventListener('click', function(){ go(i+1); });
+  var hash = window.location.hash;
+  if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
+})();
+  </script>
 </body>
 </html>

@@ -47,12 +47,29 @@
   </table>
 
   <h2 id="gallery">Figures</h2>
-  <p class="muted">Peeler context is shown in the <a href="../index.html#gallery">Extraction main gallery</a>. Add dedicated closeups here later.</p>
-  <ul class="muted">
-    <li><strong>Add figure</strong>: driven peeler + fabricated flange/plate concept (lathe-machined flange + welded plate) with bolt pattern.</li>
-    <li><strong>Add figure</strong>: adjustment → ream workflow for concentricity (which holes are loose-fit vs which are reamed/shoulder-bolted).</li>
-    <li><strong>Add figure</strong>: clearance at end-of-stroke showing “no collision” requirement and acceptable gap.</li>
-  </ul>
+  <p class="muted">Driven/static peeler CAD, clearance at engagement, and collection mount plate with <strong>post-alignment reamed</strong> holes highlighted. See also <a href="../index.html#gallery">Extraction main gallery</a>.</p>
+  <div class="slideshow" id="peelers-slideshow">
+    <div class="slideshow-track">
+      <div class="slide active" id="fig1" data-caption="Figure 1. Clearance — driven and static peelers when engaged (no collision / minimum gap)."><img src="images/clearance.png" alt="Peeler clearance when engaged"></div>
+      <div class="slide" id="fig2" data-caption="Figure 2. Driven peeler — body / finger geometry (CAD)."><img src="images/drivenPeeler.png" alt="Driven peeler"></div>
+      <div class="slide" id="fig3" data-caption="Figure 3. Driven peeler — mounted on driven bracket (context)."><img src="images/drivenmounted.png" alt="Driven peeler mounted"></div>
+      <div class="slide" id="fig4" data-caption="Figure 4. Static peeler (collection side) — mount and juice-interface context."><img src="images/staticpeeler.png" alt="Static peeler"></div>
+      <div class="slide" id="fig5" data-caption="Figure 5. Collection mount plate — two holes highlighted for drill+ream after initial peeler alignment (repeatable dowel/shoulder-bolt locations)."><img src="images/highlightedDowels.png" alt="Reamed holes highlighted on collection plate"></div>
+    </div>
+    <p class="slideshow-caption" id="peelers-caption" aria-live="polite">Figure 1. Peeler clearance when engaged.</p>
+    <div class="slideshow-controls">
+      <button type="button" id="peelers-prev" aria-label="Previous">← Previous</button>
+      <span class="slideshow-counter" id="peelers-counter">1 / 5</span>
+      <button type="button" id="peelers-next" aria-label="Next">Next →</button>
+    </div>
+  </div>
+
+  <h3>P6-870 vs P6-970 peeler scale</h3>
+  <p class="muted">Separate reference figure for module size comparison (not part of the slideshow above).</p>
+  <figure style="margin: 1rem 0;">
+    <img src="images/870vs970peelers.png" alt="P6-870 vs P6-970 peeler size comparison" style="max-width:100%; height:auto; border:1px solid var(--border); display:block;">
+    <figcaption class="muted" style="margin-top:0.5rem; font-size:0.9rem;">Figure 6. P6-870 vs P6-970 — peeler / module scale comparison (reference).</figcaption>
+  </figure>
 
   <h2>Discussion</h2>
   <h3>Rough design &amp; intent</h3>
@@ -106,5 +123,20 @@
   </table>
 
   <p class="back"><a href="../index.html">← Back to Extraction & synchronisation</a></p>
+  <script>
+(function(){
+  var el = document.getElementById('peelers-slideshow');
+  if (!el) return;
+  var slides = el.querySelectorAll('.slide');
+  var cap = document.getElementById('peelers-caption');
+  var counter = document.getElementById('peelers-counter');
+  var n = slides.length, i = 0;
+  function go(k) { i = (k + n) % n; slides.forEach(function(s,j){ s.classList.toggle('active', j===i); }); if (cap) cap.textContent = slides[i].getAttribute('data-caption') || ''; if (counter) counter.textContent = (i+1) + ' / ' + n; }
+  document.getElementById('peelers-prev').addEventListener('click', function(){ go(i-1); });
+  document.getElementById('peelers-next').addEventListener('click', function(){ go(i+1); });
+  var hash = window.location.hash;
+  if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
+})();
+  </script>
 </body>
 </html>

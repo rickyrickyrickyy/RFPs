@@ -48,13 +48,22 @@
   </table>
 
   <h2 id="gallery">Figures</h2>
-  <p class="muted">Gear/cam figures are currently shown in the <a href="../index.html#gallery">Drivetrain main gallery</a>. Add dedicated closeups here later (tooth contact, cam-bearing offset dimensioning, bearing units, and shaft details).</p>
-  <ul class="muted">
-    <li><strong>Add figure</strong>: cam roller stack on post (single vs two stacked rollers) with key dimensions (post diameter, spacer(s), locknut/retainer).</li>
-    <li><strong>Add figure</strong>: yoke contact patch and engagement length (show why stacking rollers helps).</li>
-    <li><strong>Add figure</strong>: section view through driven gear showing post retention concept (threaded in gear face, shoulder stop, locknut option).</li>
-    <li><strong>Add figure</strong>: open-gear cover concept and lubrication access points.</li>
-  </ul>
+  <p class="muted">Mounted bearing units, cam bearing cross-section, yoke roller contact, and gear pair CAD. See also <a href="../index.html#gallery">Drivetrain main gallery</a>.</p>
+  <div class="slideshow" id="gears-cam-slideshow">
+    <div class="slideshow-track">
+      <div class="slide active" id="fig1" data-caption="Figure 1. SKF F4BRP mounted bearing units (locating CRH + non-locating CLE concept) on drivetrain plate."><img src="images/bearingUnits.png" alt="Mounted bearing units"></div>
+      <div class="slide" id="fig2" data-caption="Figure 2. Cam / track roller bearing — cross-section (NUTR-style follower concept)."><img src="images/cambearing-crosssection.png" alt="Cam bearing cross-section"></div>
+      <div class="slide" id="fig3" data-caption="Figure 3. Yoke track — cam roller contact patch / engagement length."><img src="images/yokeContactPatch.png" alt="Yoke contact patch of cam bearings"></div>
+      <div class="slide" id="fig4" data-caption="Figure 4. Passive gear (idler side) — mesh and shaft context."><img src="images/passivegear.png" alt="Passive gear"></div>
+      <div class="slide" id="fig5" data-caption="Figure 5. Driven gear — reducer input / cam post side."><img src="images/drivenGear.png" alt="Driven gear"></div>
+    </div>
+    <p class="slideshow-caption" id="gears-cam-caption" aria-live="polite">Figure 1. Mounted bearing units.</p>
+    <div class="slideshow-controls">
+      <button type="button" id="gears-cam-prev" aria-label="Previous">← Previous</button>
+      <span class="slideshow-counter" id="gears-cam-counter">1 / 5</span>
+      <button type="button" id="gears-cam-next" aria-label="Next">Next →</button>
+    </div>
+  </div>
 
   <h2>Discussion</h2>
   <h3>Rough design &amp; intent</h3>
@@ -107,5 +116,20 @@
   </table>
 
   <p class="back"><a href="../index.html">← Back to Drivetrain</a></p>
+  <script>
+(function(){
+  var el = document.getElementById('gears-cam-slideshow');
+  if (!el) return;
+  var slides = el.querySelectorAll('.slide');
+  var cap = document.getElementById('gears-cam-caption');
+  var counter = document.getElementById('gears-cam-counter');
+  var n = slides.length, i = 0;
+  function go(k) { i = (k + n) % n; slides.forEach(function(s,j){ s.classList.toggle('active', j===i); }); if (cap) cap.textContent = slides[i].getAttribute('data-caption') || ''; if (counter) counter.textContent = (i+1) + ' / ' + n; }
+  document.getElementById('gears-cam-prev').addEventListener('click', function(){ go(i-1); });
+  document.getElementById('gears-cam-next').addEventListener('click', function(){ go(i+1); });
+  var hash = window.location.hash;
+  if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
+})();
+  </script>
 </body>
 </html>

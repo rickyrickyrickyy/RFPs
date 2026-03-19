@@ -118,6 +118,27 @@ Pre-sorted, pre-washed citrus
       </tbody>
     </table>
 
+    <h3 id="exploded-top-assembly">Exploded view (top-level assembly)</h3>
+    <p class="muted">Exploded CAD sequence for the full machine. Assembly-step and subsystem close-up figures remain on the <a href="../Frame/index.html">Frame</a> page.</p>
+    <div class="slideshow" id="top-exploded-slideshow">
+      <div class="slideshow-track">
+        <div class="slide active" data-caption="Figure E1. Top-level assembly — exploded (step 1 of 8)."><img src="exploded/01.png" alt="Exploded assembly 1"></div>
+        <div class="slide" data-caption="Figure E2. Top-level assembly — exploded (step 2 of 8)."><img src="exploded/02.png" alt="Exploded assembly 2"></div>
+        <div class="slide" data-caption="Figure E3. Top-level assembly — exploded (step 3 of 8)."><img src="exploded/03.png" alt="Exploded assembly 3"></div>
+        <div class="slide" data-caption="Figure E4. Top-level assembly — exploded (step 4 of 8)."><img src="exploded/04.png" alt="Exploded assembly 4"></div>
+        <div class="slide" data-caption="Figure E5. Top-level assembly — exploded (step 5 of 8)."><img src="exploded/05.png" alt="Exploded assembly 5"></div>
+        <div class="slide" data-caption="Figure E6. Top-level assembly — exploded (step 6 of 8)."><img src="exploded/06.png" alt="Exploded assembly 6"></div>
+        <div class="slide" data-caption="Figure E7. Top-level assembly — exploded (step 7 of 8)."><img src="exploded/07.png" alt="Exploded assembly 7"></div>
+        <div class="slide" data-caption="Figure E8. Top-level assembly — exploded (step 8 of 8)."><img src="exploded/08.png" alt="Exploded assembly 8"></div>
+      </div>
+      <p class="slideshow-caption" id="top-exploded-caption" aria-live="polite">Figure E1. Top-level assembly — exploded (step 1 of 8).</p>
+      <div class="slideshow-controls">
+        <button type="button" id="top-exploded-prev" aria-label="Previous">← Previous</button>
+        <span class="slideshow-counter" id="top-exploded-counter">1 / 8</span>
+        <button type="button" id="top-exploded-next" aria-label="Next">Next →</button>
+      </div>
+    </div>
+
     <h3>Assembled views</h3>
     <p class="muted">Top-level assembly in assembled state. Figures 1–10.</p>
     <div class="slideshow" id="top-assembled-slideshow">
@@ -193,6 +214,7 @@ Pre-sorted, pre-washed citrus
     if (prevBtn) prevBtn.addEventListener('click', function(){ go(i-1); });
     if (nextBtn) nextBtn.addEventListener('click', function(){ go(i+1); });
   }
+  initSlideshow('top-exploded-slideshow');
   initSlideshow('top-assembled-slideshow');
 })();
   </script>
