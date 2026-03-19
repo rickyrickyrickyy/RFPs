@@ -25,7 +25,7 @@ Ricky is training Marceline so she knows everything he knows. Memory is **repo-b
 
 Short snapshot so Marceline and Cursor have current context. Update when priorities or due dates change.
 
-**Last updated:** 2026-03-17
+**Last updated:** 2026-03-20
 
 ### Active project
 
@@ -43,7 +43,7 @@ Short snapshot so Marceline and Cursor have current context. Update when priorit
 | Item | Due |
 |------|-----|
 | RFP work | Friday night |
-| P6 drawings (Sean/YES) | April 1st |
+| P6 drawings / YES fabrication | 15 May |
 | JX operations (LTA) | October (pressure) |
 
 ### Where Marceline lives
@@ -58,11 +58,10 @@ Short snapshot so Marceline and Cursor have current context. Update when priorit
 - **Entry point:** **index.html** at the repo root. No build step.
 - **Later (Cloudflare):** When ready, connect the same repo to Cloudflare Pages (or Workers) and point your domain there.
 
-### Languages (English / 中文 / Português)
+### Site languages (paused)
 
-- **English** pages live at their normal paths (e.g. `index.html`, `Feeder/index.html`).
-- **Chinese** mirrors are under **`zh/`**, **Portuguese** under **`pt/`**, with the same relative structure. Use the sticky **language bar** on each page to switch.
-- **Regenerate** mirrored pages and the language bar after editing English HTML: from the repo root run `python tools/build_i18n.py`. Shared styles and mobile tweaks are in **`assets/site.css`**. (Body text in zh/pt is still mostly English except common UI strings replaced by the script; extend `tools/build_i18n.py` if you need fuller translation.)
+- **English only** for now: `zh/` and `pt/` mirrors were removed from `main` until a proper translation workflow exists.
+- Shared **mobile / layout** styles may still live in **`assets/site.css`**; any future i18n should regenerate mirrors from English sources of truth.
 
 ## Layout
 
@@ -73,9 +72,8 @@ Short snapshot so Marceline and Cursor have current context. Update when priorit
 | **memory/** | Marceline’s session summaries and project state (`*.memory.md`). |
 | **Overview/** | P6 context summary, subsystem lists, session summaries. |
 | **index.html** | RFP-only entry: overview, nav (with content / to be completed). Marceline and hosting info stay in this README. |
-| **zh/**, **pt/** | Chinese and Portuguese HTML mirrors (run `python tools/build_i18n.py` after editing English). |
-| **assets/site.css** | Shared layout: language bar, mobile-friendly rules. |
-| **tools/build_i18n.py** | Builds `zh/` + `pt/` from English `.html` and injects the language switcher. |
+| **assets/site.css** | Shared layout (e.g. mobile-friendly rules). |
+| **tools/build_i18n.py** | Optional / future: regenerate language mirrors when i18n is re-enabled. |
 | **Frame/** | Frame subsystem RFP draft. |
 | **Enclosure-shell/** | Enclosure / shell (related to Frame). |
 | **Feeder/**, **Plug-ejection/**, **Drivetrain/**, etc. | Subsystem RFP sections (each with index.html + README.md). |

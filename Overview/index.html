@@ -35,27 +35,30 @@
     table.colour-key td.sw .na { color: var(--muted); font-size: 0.9em; }
     .flow { background: rgba(88, 166, 255, 0.08); border: 1px solid var(--border); border-radius: 8px; padding: 1rem 1.25rem; margin: 1rem 0; }
     .flow ol { margin: 0.5rem 0 0 1rem; }
+    .mermaid-wrap { margin: 1rem 0; overflow-x: auto; background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+    .mermaid-wrap .mermaid { display: flex; justify-content: center; }
+    footer.site { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; }
   </style>
-                          <link rel="stylesheet" href="../assets/site.css">
+  <link rel="stylesheet" href="../assets/site.css">
 </head>
 <body>
 <p class="back"><a href="../index.html">← Back to P6 RFP overview</a></p>
   <h1>Project overview</h1>
-  <p class="muted">Single reference for the P6 industrial prototype and RFP structure.</p>
+  <p class="muted">Single reference for the P6 industrial prototype and RFP structure. <strong>Last updated:</strong> 2026-03-20.</p>
   <p>
     The P6 is the newest generation citrus juicer in the Delijuice line. It is designed to handle a wide range of citrus varieties (including lemons) with a repeatable, industrial extraction cycle that separates juice from waste streams.
     The program is setting up a pilot production environment in <strong>Jiangxi (China)</strong> with target setup in <strong>October</strong>. The first machine to prototype and validate is the <strong>P6-870</strong>; the <strong>P6-970</strong> with 3x larger extraction modules is planned later.
     <strong>P6-870 throughput:</strong> ~280 fruits/min, producing an estimated <strong>1360 L/hr</strong> of juice. A pilot line is envisioned with <strong>6 extractors in series</strong> to reach ~<strong>8160 L/hr</strong>, so all downstream third-party equipment must be sized to that total capacity.
-    The P6-870 is designed to integrate with existing industrial orange juicing lines and can be substituted for <strong>JBt Marel-style</strong> machines built by Kaiyi or similar line providers.
+    The P6-870 is designed to integrate with existing industrial orange juicing lines and can be substituted for <strong>JBT Marel–style</strong> machines built by Kaiyi or similar line providers.
   </p>
 
   
   <section>
     <h2>What P6 is</h2>
-    <p><strong>P6</strong> is the current industrial prototype (Delijuice 870/970). Newest version; prototyping in China with design work via Jamieson. Extractors, deflectors, screw conveyors. Machine lineage: P3 → P4 → P5 (Brazil 2002, Sumitomo cyclo refs) → <strong>P6</strong> (current). 323 = commercial/countertop (separate).</p>
+    <p><strong>P6</strong> is the current <strong>industrial prototype</strong> citrus machine built around the <strong>Delijuice extraction cycle</strong> (same functional sequence as prior Delijuice industrial extractors). <strong>Machine lineage:</strong> P3 → P4 → P5 → <strong>P6</strong> (today’s development focus). The P6 program is being prototyped in collaboration between <strong>Delijuice</strong> and <strong>YES Machining</strong> (fabrication). The smaller <strong>323</strong> / countertop line is a separate product family—not the subject of this RFP.</p>
     <ul>
-      <li><strong>Jiangxi (JX):</strong> Factory with <strong>LTA (Long Tai An)</strong>. Miniplant: 8,160 L/h, 6 extractors, turbo-filter, pasteurizer. <strong>LTA pressure for operations by October.</strong></li>
-      <li><strong>Drawings target:</strong> April 1st for Sean/YES fabrication (China, Shenzhen area).</li>
+      <li><strong>Jiangxi (JX):</strong> Factory with <strong>LTA (Long Tai An)</strong>. Miniplant target: 8,160 L/h, 6 extractors, turbo-filter, pasteurizer. <strong>Operations pressure: October.</strong></li>
+      <li><strong>Drawings / fab target:</strong> <strong>15 May</strong> for YES to fabricate (Shenzhen area).</li>
     </ul>
   </section>
 
@@ -70,32 +73,34 @@
         <li><strong>Core expulsion</strong> — a plug/core is ejected and routed to the core waste chute/auger.</li>
       </ol>
     </div>
-    <p class="muted">For stroke timing details, see <a href="Delijuice-cycle.html">Delijuice extraction cycle</a>.</p>
+    <p>For stroke timing, yoke motion, and how intake vs compression interact, see <a href="Delijuice-cycle.html">Delijuice extraction cycle</a>.</p>
   </section>
 
   <section>
     <h2>Factory product flow (citrus → juice → pasteurisation → filling)</h2>
     <div class="flow">
-      <strong>High-level process flow diagram (end-to-end)</strong>
-      <div style="white-space: pre-wrap; margin-top: 0.75rem; color: var(--muted); font-size: 0.95rem;">
-Pre-sorted, pre-washed citrus
-        -> Size sorting
-        -> Feed line to P6-870 entry tubes
-        -> Extraction in P6-870
-             - ~1360 L/hr per extractor
-             - planned line: 6 extractors in series (~8160 L/hr)
-        -> Juice collectors -> juice tanks
-        -> Paddle finisher -> holding tank (agitator)
-        -> Tube-in-tube pasteuriser -> cooling tank
-        -> Filling -> 4× drum/tank set
-        -> Refrigeration
-      </div>
+      <p><strong>Upstream → P6 → tanking → downstream.</strong> Third-party sorting and feed bring fruit to the P6 entry tubes; P6 outputs juice to plant tankage; peel and cores go to separate auger lines.</p>
       <ol>
-        <li><strong>Third-party sorting + feed</strong> — pre-sorted, pre-washed citrus goes through a size sorter and then into the P6 feed lines and entry tubes.</li>
-        <li><strong>P6 extraction</strong> — staged fruit is compressed/peeled; juice is routed through filtration/collection and leaves the machine as juice; peel/core waste streams are routed to their respective augers.</li>
-        <li><strong>Juice tanking</strong> — juice flows from collectors into <strong>juice tanks</strong> sized to the total line rate (~8160 L/hr).</li>
-        <li><strong>Downstream processing</strong> — paddle finisher, holding tank with agitator, tube-in-tube pasteuriser, cooling tank, then filling and refrigeration.</li>
+        <li><strong>Third-party sorting + feed</strong> — Pre-sorted, pre-washed citrus through a size sorter into P6 feed lines and entry tubes.</li>
+        <li><strong>P6 extraction</strong> — Staged fruit is peeled/compressed; juice through filtration/collection; peel and core to separate waste chutes/augers. ~1360 L/h per extractor; planned 6× line ~8160 L/h.</li>
+        <li><strong>Juice tanking</strong> — Juice from collectors into <strong>juice tanks</strong> sized for total line rate.</li>
+        <li><strong>Downstream processing</strong> — See flow diagram below (paddle finisher → pasteurisation → cold chain).</li>
       </ol>
+      <p class="muted" style="margin-top:0.75rem"><em>If the diagram does not render, enable JavaScript; the sequence is also listed in order under the chart.</em></p>
+      <div class="mermaid-wrap"><pre class="mermaid">
+flowchart LR
+  A[Size sort + feed] --> B[P6 extraction]
+  B --> C[Juice collectors]
+  B --> W[Peel + core augers]
+  C --> D[Juice tanks]
+  D --> E[Paddle finisher]
+  E --> F[Holding tank + agitator]
+  F --> G[Tube-in-tube pasteuriser]
+  G --> H[Cooling tank]
+  H --> I[Filling]
+  I --> J[Refrigeration]
+      </pre></div>
+      <p><strong>Downstream sequence (same as diagram):</strong> paddle finisher → holding tank (agitator) → tube-in-tube pasteuriser → cooling tank → filling → refrigeration.</p>
     </div>
   </section>
   
@@ -107,10 +112,10 @@ Pre-sorted, pre-washed citrus
       <tbody>
         <tr><td class="n">1</td><td class="sw"><span class="swatch" style="background:#A4E637"></span></td><td><a href="../Frame/">Frame</a></td><td class="desc">Primary welded structure and datum for alignment; supports drivetrain/transmission/loaded plates and carries operating loads to the floor.</td></tr>
         <tr><td class="n">2</td><td class="sw"><span class="swatch" style="background:#FFE899"></span> <span class="swatch" style="background:#FF95DA"></span> <span class="swatch" style="background:#1E7334"></span></td><td><a href="../Drivetrain/">Drivetrain</a></td><td class="desc">Powertrain (WEG motor → V-belts → Sumitomo reducer → gear train) that drives cam bearings for the extraction stroke.</td></tr>
-        <tr><td class="n">3</td><td class="sw"><span class="swatch" style="background:#C41D63"></span> <span class="swatch" style="background:#E6612E"></span></td><td><a href="../Transmission/">Transmission system</a></td><td class="desc">Yoke + 35 mm shafts + flanged sealed linear bearings (LMK/LMF family) on a mount plate; converts drivetrain cam rotation into the linear motion used by extraction.</td></tr>
-        <tr><td class="n">4</td><td class="sw"><span class="swatch" style="background:#317DDE"></span></td><td><a href="../Extraction-syncronisation/">Extraction &amp; synchronisation</a></td><td class="desc">Driven peelers, driven bracket, fruit support and deflectors; stages fruit and synchronizes peeler motion during the pressing stroke.</td></tr>
-        <tr><td class="n">5</td><td class="sw"><span class="swatch" style="background:#FCAB3B"></span></td><td><a href="../Collection/">Collection</a></td><td class="desc">Static peelers + filter tube + plug cutter + juice collectors (Y-tubes); separates juice from pulp while retaining the core for ejection.</td></tr>
-        <tr><td class="n">6</td><td class="sw"><span class="swatch" style="background:#71C32D"></span></td><td><a href="../Feeder/">Fruit intake system</a></td><td class="desc">Feeder body and per-station feeding subassemblies (sync springs, entry tubes) that release one orange at a time onto fruit support.</td></tr>
+        <tr><td class="n">3</td><td class="sw"><span class="swatch" style="background:#C41D63"></span> <span class="swatch" style="background:#E6612E"></span></td><td><a href="../Transmission/">Transmission system</a></td><td class="desc">Converts drivetrain cam rotation into the linear motion for the extraction stroke (yoke, shafts, linear bearings on the transmission mount plate).</td></tr>
+        <tr><td class="n">4</td><td class="sw"><span class="swatch" style="background:#317DDE"></span></td><td><a href="../Extraction-syncronisation/">Extraction &amp; synchronisation</a></td><td class="desc">Driven assembly that works with the fruit intake line: stages fruit, drives peelers/sync motion, and <strong>drops one fruit at a time</strong> into the juicing chamber (collection side).</td></tr>
+        <tr><td class="n">5</td><td class="sw"><span class="swatch" style="background:#FCAB3B"></span></td><td><a href="../Collection/">Collection</a></td><td class="desc">Static peelers, filter tube, plug cutter, juice collectors: separates <strong>juice from peel and seeds</strong> and holds the core for <a href="../Plug-ejection/">core ejection</a>.</td></tr>
+        <tr><td class="n">6</td><td class="sw"><span class="swatch" style="background:#71C32D"></span></td><td><a href="../Feeder/">Fruit intake system</a></td><td class="desc">Intake line and feeder body: brings fruit in and <strong>releases one orange at a time</strong> to the extraction/sync staging path (upstream of the drop into the chamber).</td></tr>
         <tr><td class="n">7</td><td class="sw"><span class="swatch" style="background:#F4FF43"></span> <span class="swatch" style="background:#2E7BDD"></span> <span class="swatch" style="background:#9B79E6"></span> <span class="swatch" style="background:#F9A93C"></span></td><td><a href="../Plug-ejection/">Core ejection</a></td><td class="desc">Plungers + drive bracket/rods/springs that push through the filter and eject the core from the plug cutter into the core chute.</td></tr>
         <tr><td class="n">8</td><td class="sw"><span class="swatch" style="background:#D822B0"></span> <span class="swatch" style="background:#2793AE"></span></td><td><a href="../Outflow-disposal/">Disposal system</a></td><td class="desc">Peel chute + core chutes + two augers that keep peel and cores separate and convey both waste streams out of the machine.</td></tr>
         <tr><td class="n">9</td><td class="sw"><span class="swatch" style="background:#489B27"></span> <span class="swatch" style="background:#F54646"></span> <span class="swatch" style="background:#7838DC"></span> <span class="swatch" style="background:#469925"></span> <span class="swatch" style="background:#F44545"></span></td><td><a href="../Enclosure-shell/">Enclosure / shell</a></td><td class="desc">Protective covers and overcentered hinges; guards operators from moving parts (drivetrain/plungers) while allowing fast access for cleaning/service.</td></tr>
@@ -123,19 +128,18 @@ Pre-sorted, pre-washed citrus
     <p class="muted">Exploded CAD sequence for the full machine. Assembly-step and subsystem close-up figures remain on the <a href="../Frame/index.html">Frame</a> page.</p>
     <div class="slideshow" id="top-exploded-slideshow">
       <div class="slideshow-track">
-        <div class="slide active" data-caption="Figure E1. Top-level assembly — exploded (step 1 of 8)."><img src="exploded/01.png" alt="Exploded assembly 1"></div>
-        <div class="slide" data-caption="Figure E2. Top-level assembly — exploded (step 2 of 8)."><img src="exploded/02.png" alt="Exploded assembly 2"></div>
-        <div class="slide" data-caption="Figure E3. Top-level assembly — exploded (step 3 of 8)."><img src="exploded/03.png" alt="Exploded assembly 3"></div>
-        <div class="slide" data-caption="Figure E4. Top-level assembly — exploded (step 4 of 8)."><img src="exploded/04.png" alt="Exploded assembly 4"></div>
-        <div class="slide" data-caption="Figure E5. Top-level assembly — exploded (step 5 of 8)."><img src="exploded/05.png" alt="Exploded assembly 5"></div>
-        <div class="slide" data-caption="Figure E6. Top-level assembly — exploded (step 6 of 8)."><img src="exploded/06.png" alt="Exploded assembly 6"></div>
-        <div class="slide" data-caption="Figure E7. Top-level assembly — exploded (step 7 of 8)."><img src="exploded/07.png" alt="Exploded assembly 7"></div>
-        <div class="slide" data-caption="Figure E8. Top-level assembly — exploded (step 8 of 8)."><img src="exploded/08.png" alt="Exploded assembly 8"></div>
+        <div class="slide active" data-caption="Figure E1. Top-level assembly — exploded (step 1 of 7)."><img src="exploded/01.png" alt="Exploded assembly 1"></div>
+        <div class="slide" data-caption="Figure E2. Top-level assembly — exploded (step 2 of 7)."><img src="exploded/02.png" alt="Exploded assembly 2"></div>
+        <div class="slide" data-caption="Figure E3. Top-level assembly — exploded (step 3 of 7)."><img src="exploded/03.png" alt="Exploded assembly 3"></div>
+        <div class="slide" data-caption="Figure E4. Top-level assembly — exploded (step 4 of 7)."><img src="exploded/04.png" alt="Exploded assembly 4"></div>
+        <div class="slide" data-caption="Figure E5. Top-level assembly — exploded (step 5 of 7)."><img src="exploded/05.png" alt="Exploded assembly 5"></div>
+        <div class="slide" data-caption="Figure E6. Top-level assembly — exploded (step 6 of 7)."><img src="exploded/06.png" alt="Exploded assembly 6"></div>
+        <div class="slide" data-caption="Figure E7. Top-level assembly — exploded (step 7 of 7)."><img src="exploded/07.png" alt="Exploded assembly 7"></div>
       </div>
-      <p class="slideshow-caption" id="top-exploded-caption" aria-live="polite">Figure E1. Top-level assembly — exploded (step 1 of 8).</p>
+      <p class="slideshow-caption" id="top-exploded-caption" aria-live="polite">Figure E1. Top-level assembly — exploded (step 1 of 7).</p>
       <div class="slideshow-controls">
         <button type="button" id="top-exploded-prev" aria-label="Previous">← Previous</button>
-        <span class="slideshow-counter" id="top-exploded-counter">1 / 8</span>
+        <span class="slideshow-counter" id="top-exploded-counter">1 / 7</span>
         <button type="button" id="top-exploded-next" aria-label="Next">Next →</button>
       </div>
     </div>
@@ -185,7 +189,7 @@ Pre-sorted, pre-washed citrus
     <h3>Fasteners and joints</h3>
     <ul>
       <li>Minimise the number of different fastener sizes; where practical restrict to M3, M5, M10, and M16 for increasing strength levels.</li>
-      <li>Avoid exposed threads in food and splash zones; use standoffs, weld studs, or through-holes with nuts outside the zone.</li>
+      <li>In food-contact areas: <strong>no exposed threads</strong>; use standoffs, weld studs, or through-bolts with nuts outside the zone. Where machine screws are required for service, <strong>hex head, Phillips, and slotted</strong> drives are acceptable; avoid other drive types in or above food zones unless agreed.</li>
       <li>Prefer dowel pins for locating parts in shear; use shoulder bolts for joints that carry shear and rotation.</li>
       <li>Minimise total fastener count with shared brackets and clear load paths; design for easy disassembly and reassembly for cleaning.</li>
     </ul>
@@ -226,5 +230,15 @@ Pre-sorted, pre-washed citrus
   initSlideshow('top-assembled-slideshow');
 })();
   </script>
+  <script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: 'dark',
+    securityLevel: 'loose',
+    themeVariables: { primaryTextColor: '#e6edf3', lineColor: '#8b949e', primaryColor: '#30363d' }
+  });
+  </script>
+  <footer class="site">Last updated: 2026-03-20.</footer>
 </body>
 </html>

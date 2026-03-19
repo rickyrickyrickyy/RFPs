@@ -34,7 +34,7 @@
     table.colour-key td.sw { width: 6rem; }
     table.colour-key td.sw .na { color: var(--muted); font-size: 0.9em; }
   </style>
-                          <link rel="stylesheet" href="../assets/site.css">
+  <link rel="stylesheet" href="../assets/site.css">
 </head>
 <body>
 <p class="back"><a href="../index.html">← Back to P6 RFP overview</a></p>
@@ -42,11 +42,11 @@
 
   <h2>Subpages</h2>
   <ul>
-    <li><a href="Loads-and-load-paths/Loads-and-load-paths.html">Loads and load paths</a> <span class="muted">(with content)</span> — reaction loads, load paths to floor, frame CAD figures gallery.</li>
+    <li><a href="Loads-and-load-paths/Loads-and-load-paths.html">Loads and load paths</a> <span class="muted">(updated 2026-03-20)</span> — reaction loads, load paths to floor, frame CAD figures gallery.</li>
   </ul>
 
   <h2>Introduction</h2>
-  <p>Primary structure; design focus: stability, alignment, force transmission, smooth linear bearing operation, secure peeler mounting. All subsystems mount to it. Three plates (loaded, transmission, drivetrain) mount from top onto frame and side rails; alignment via dowels and H7. Leveling: 6111K669 M24 100 mm Swivel Leveling Mount (McMaster) on M24 endplates at legs.</p>
+  <p>The <strong>frame</strong> is the primary welded structure and <strong>datum for alignment</strong>. <strong>All subsystems mount to it.</strong> Design focus: <strong>stability</strong>, <strong>alignment</strong>, <strong>force transmission</strong>, and <strong>repeatable, easy assembly</strong>. The three main <strong>loaded plates</strong> are the <strong>collection (loaded) mount plate</strong>, <strong>transmission mount plate</strong>, and <strong>drivetrain mount plate</strong>—everything else hangs from a <strong>top-down assembly</strong> sequence onto those interfaces. Detail below expands assembly order, construction, and contractor questions.</p>
 
   <h2 id="how-subassemblies-fit-together">Colour key &amp; figures (how subassemblies fit together)</h2>
   <p class="muted">Assembly steps and subsystem closeups. The <strong>exploded top-level assembly</strong> slideshow is on <a href="../Overview/index.html#exploded-top-assembly">Project overview</a>. One colour key below applies to all figures in this section.</p>
@@ -89,22 +89,23 @@
   </table>
 
   <h3>Assembly steps</h3>
-  <p class="muted">
-    This is a top-down assembly workflow that is intended to be <strong>repeatable</strong> after service/seasonal teardown.
-    Start by setting the frame height using the leveling mounts, then shim and locate the three main interfacing mount plates on the frame rails (loaded/collection mount plate, transmission mount plate, and drivetrain mount plate) using <strong>dowels/locating pins</strong> (H7 concept) and <strong>shims</strong> for flatness; then fasten with <strong>bolts</strong> (Figure 1).
-    Next, mount the yoke and the extraction/synchronisation system onto the drivetrain/transmission shafts (Figure 2), then lower the <strong>plunger drive system</strong> between the two plates and connect it to the yoke and plunger drive bracket/rods (Figures 3 and 4).
-    Finally, mount the overcentered hinge-based covers/shelves and attach the feeder from the top (Figure 5), ensuring latch/interlock alignment and collision-free clearances.
-    For re-assembly repeatability, peeler and shaft alignment should be established once (adjust → lock), then maintained via an <strong>align-then-drill/ream</strong> + dowel/shoulder-bolt indexing strategy so the system can be rebuilt without losing concentricity.
-  </p>
+  <p>Top-down workflow intended to stay <strong>repeatable</strong> after service teardown. Figures A1–A5 illustrate the sequence; captions stay short—use this list for the full intent.</p>
+  <ol>
+    <li><strong>Level and plate the interfaces.</strong> Set frame height on the six leveling mounts. Locate the three main mount plates (collection/loaded, transmission, drivetrain) on the side rails and cross beams using <strong>bolt holes</strong>, <strong>shims</strong>, and flatness checks. Align, clamp, then <strong>drill and ream</strong> for <strong>H7 dowels</strong> where the datum scheme requires it (see Construction). <em>Figure A1.</em></li>
+    <li><strong>Yoke and extraction/sync.</strong> Install the yoke and extraction/synchronisation module on the transmission/drivetrain shafts. <em>Figure A2.</em></li>
+    <li><strong>Plunger drive.</strong> Lower the plunger drive system between the plates; connect yoke to plunger rods/bracket. <em>Figures A3–A4.</em></li>
+    <li><strong>Enclosure and feeder.</strong> Mount overcenter hinge covers/shelves and attach the feeder from the top; verify latch/interlock and clearances. <em>Figure A5.</em></li>
+  </ol>
+  <p>Peeler and shaft alignment should be established once (adjust → lock), then held with <strong>align-then-drill/ream</strong> doweling / shoulder-bolt indexing so rebuilds do not lose concentricity.</p>
   <div class="slideshow" id="frame-assembly-steps-slideshow">
     <div class="slideshow-track">
-      <div class="slide active" data-caption="Figure A1. Step 1 — Locate and fasten the three main interface plates (collection/loaded, transmission, drivetrain) on the frame; shim and dowel as required."><img src="assembly-steps/1.png" alt="Assembly step 1 — three interface plates"></div>
-      <div class="slide" data-caption="Figure A2. Step 2 — Install yoke and extraction/synchronisation module on the transmission/drivetrain shafts."><img src="assembly-steps/2.png" alt="Assembly step 2 — yoke and extraction"></div>
-      <div class="slide" data-caption="Figure A3. Step 3a — Lower plunger drive between the two plates; connect yoke to plunger drive rods/bracket."><img src="assembly-steps/3.png" alt="Assembly step 3a — plunger drive install"></div>
-      <div class="slide" data-caption="Figure A4. Step 3b — Plunger drive system fully seated and connected."><img src="assembly-steps/4.png" alt="Assembly step 3b — plunger drive in place"></div>
-      <div class="slide" data-caption="Figure A5. Step 4 — Mount hinges/shelves and attach feeder body and enclosure shells from the top."><img src="assembly-steps/5.png" alt="Assembly step 4 — feeder and shells"></div>
+      <div class="slide active" data-caption="Figure A1 — Level frame; locate and fasten the three main interface plates."><img src="assembly-steps/1.png" alt="Assembly step 1 — three interface plates"></div>
+      <div class="slide" data-caption="Figure A2 — Yoke and extraction/sync on drivetrain/transmission shafts."><img src="assembly-steps/2.png" alt="Assembly step 2 — yoke and extraction"></div>
+      <div class="slide" data-caption="Figure A3 — Lower plunger drive; connect to yoke and rods."><img src="assembly-steps/3.png" alt="Assembly step 3a — plunger drive install"></div>
+      <div class="slide" data-caption="Figure A4 — Plunger drive seated and connected."><img src="assembly-steps/4.png" alt="Assembly step 3b — plunger drive in place"></div>
+      <div class="slide" data-caption="Figure A5 — Hinges/covers and feeder from the top."><img src="assembly-steps/5.png" alt="Assembly step 4 — feeder and shells"></div>
     </div>
-    <p class="slideshow-caption" id="frame-assembly-steps-caption" aria-live="polite">Figure A1. Step 1 — three main interface plates on the frame.</p>
+    <p class="slideshow-caption" id="frame-assembly-steps-caption" aria-live="polite">Figure A1 — Level frame; locate and fasten the three main interface plates.</p>
     <div class="slideshow-controls">
       <button type="button" id="frame-assembly-steps-prev" aria-label="Previous">← Previous</button>
       <span class="slideshow-counter" id="frame-assembly-steps-counter">1 / 5</span>
@@ -113,7 +114,7 @@
   </div>
 
   <h3>Subsystem closeups</h3>
-  <p class="muted">Close-ups of interfaces between core subsystems. Figures C1–C8.</p>
+  <p class="muted">Close-ups of interfaces between core subsystems. Figures C1–C8 (C8 is an alternate drivetrain-enclosure view).</p>
   <div class="slideshow" id="frame-subsystem-closeups-slideshow">
     <div class="slideshow-track">
       <div class="slide active" data-caption="Figure C1. Core ejection / collection interface — plunger drive, collectors, and plunger region."><img src="subsystem-closeups/1.png" alt="Closeup — core ejection and collection 1"></div>
@@ -134,8 +135,9 @@
   </div>
 
   <h2>Discussion</h2>
-  <h3>Details (from RFP draft)</h3>
-  <p>Main frame: 80×80×5 GB/T square tubes as main load-bearing members; #8 C-brackets for supporting members; all fully welded. Leveling: 6111K669 M24 100 mm Swivel Leveling Mounts (McMaster) on M24 tapped endplates at bottom of frame legs (six feet). Side rails with square holes for dowels; bolts and nuts secure bodies to cross beams.</p>
+  <h3>Construction</h3>
+  <p><strong>Main frame:</strong> 80×80×5 GB/T square tubes as primary load members; <strong>#8 C-brackets</strong> for secondary/supporting members; <strong>gussets</strong> between members as shown in CAD; fully welded weldment. <strong>Leveling:</strong> McMaster <strong>6111K669</strong> M24 × 100 mm swivel leveling mounts on <strong>M24 tapped endplates</strong> at the six legs.</p>
+  <p><strong>Mounting and dowels:</strong> Side rails and cross beams provide <strong>bolted interfaces</strong> (through-holes) for the three main plates. Plates are shimmed and aligned on those bolts first; <strong>dowel holes are created after alignment</strong> by <strong>drill + ream to H7</strong> for repeatable rebuild—not by relying on pre-cut “dowel squares” in the rails as the primary locating scheme.</p>
   <p class="muted">Detail and interfaces are owner-provided; final tolerancing and assembly are for contractors. See <a href="../Overview/Questions-for-RFP.html">Questions for RFP</a> to flush out parameters per subsystem and subassembly.</p>
 
   <h3>Rough design &amp; intent</h3>
@@ -253,7 +255,7 @@
   <table class="iface-table">
     <thead><tr><th>Part</th><th>Interface / tolerance</th><th>Related</th></tr></thead>
     <tbody>
-      <tr><td>Main frame</td><td>80×80×5 GB/T square tubes; #8 C-brackets; side rails with dowel holes (H7 drill/ream for repeatable alignment)</td><td>—</td></tr>
+      <tr><td>Main frame</td><td>80×80×5 GB/T square tubes; #8 C-brackets; gussets; bolted plate interfaces on rails/beams; H7 dowels via align-then-drill/ream after fit-up</td><td>—</td></tr>
       <tr><td>Leveling mounts</td><td>6111K669 M24 100 mm (McMaster); M24 tapped endplates on six legs</td><td>—</td></tr>
       <tr><td>Loaded mount plate</td><td>Mounts from top onto frame; H7 holes for dowels; shims for fit-up</td><td><a href="../Collection/">Collection</a></td></tr>
       <tr><td>Transmission mount plate</td><td>Mounts from top onto frame; H7 holes for dowels</td><td><a href="../Transmission/">Transmission</a></td></tr>
