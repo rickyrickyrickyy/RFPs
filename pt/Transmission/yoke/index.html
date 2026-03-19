@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yoke and drive shafts — Transmission — P6 RFP</title>
+  <style>
+    :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
+    a { color: var(--accent); }
+    h1 { font-size: 1.35rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.25rem; }
+    h3 { font-size: 1rem; margin-top: 1rem; color: var(--muted); }
+    ul, ol { padding-left: 1.25rem; }
+    .back { margin-bottom: 1rem; font-size: 0.9rem; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    .swatch { display: inline-block; width: 1.25rem; height: 1.25rem; border: 1px solid var(--border); border-radius: 3px; vertical-align: middle; }
+    table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+    th, td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
+    .iface-table th { color: var(--muted); font-weight: 600; }
+    .slideshow { margin: 1.5rem 0; }
+    .slideshow .slide { display: none; }
+    .slideshow .slide.active { display: block; }
+    .slideshow .slide img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
+    .slideshow-caption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); min-height: 2.5em; }
+    .slideshow-controls { display: flex; align-items: center; gap: 1rem; margin-top: 0.75rem; flex-wrap: wrap; }
+    .slideshow-controls button { background: var(--border); color: var(--text); border: none; padding: 0.35rem 0.75rem; border-radius: 4px; cursor: pointer; font-size: 0.9rem; }
+    .slideshow-controls button:hover { background: var(--accent); color: #fff; }
+    .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
+  </style>
+      <link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+<nav class="site-lang-bar" aria-label="Language">
+  <span class="lang-label">Idioma:</span>
+  <a href="../../../Transmission/yoke/index.html">English</a>
+  <span aria-hidden="true">·</span>
+  <a href="../../../zh/Transmission/yoke/index.html">中文</a>
+  <span aria-hidden="true">·</span>
+  <a href="index.html" aria-current="page">Português</a>
+</nav>
+
+<p class="back"><a href="../index.html">← Voltar a Transmission system</a> · <a href="../../index.html">Visão geral do RFP P6</a></p>
+  <h1>Yoke and drive shafts</h1>
+  <p class="muted">Part of the <a href="../index.html">Transmission</a> section. Scotch-yoke style conversion of cam-roller motion into linear stroke, guided on two 35 mm shafts.</p>
+
+  <h2>Introdução</h2>
+  <p>The yoke rides on two 35 mm drive shafts via flanged, sealed linear bearings and interfaces with the drivetrain cam rollers. It converts the cam motion into the reciprocating stroke that presses the extraction module against the collection module. This page also covers the drive shafts, linear bearings, shaft mounts, pull brackets, and proposed shaft scraper/cover concept.</p>
+
+  <h2>Legenda de cores &amp; components</h2>
+  <p class="muted">Key components and intent (colours may vary across CAD figures).</p>
+  <table>
+    <tr><th>Colour(s)</th><th>Component</th></tr>
+    <tr><td><em>—</em></td><td><strong>Yoke body</strong> — concept: three primary 25 mm steel blocks (left/center/right) bolted together between two yoke faces. Overall width ~660 mm (left–right). Designed for high compressive stroke loads and “jam” survivability.</td></tr>
+    <tr><td><em>—</em></td><td><strong>Yoke track faces</strong> — front and back faces form the cam roller track. Flatness and parallelism between faces are critical for smooth roller motion and low wear.</td></tr>
+    <tr><td><em>—</em></td><td><strong>Top cap plate</strong> — concept: ~5 mm plate fastened on the entire top face after lowering the yoke onto cam rollers; adds stiffness and retains the yoke onto rollers (span should cover the full left-to-right top track region, not just an end segment).</td></tr>
+    <tr><td><em>—</em></td><td><strong>Drive shafts</strong> — 35 mm hardened stainless shafts (prior art: 440C). Length driven by peeler spacing and required end-of-stroke compression gap (~2–3 mm target between driven/static peeler faces).</td></tr>
+    <tr><td><em>—</em></td><td><strong>Linear bearings</strong> — flanged, double-sealed 35 mm linear bearings (LMFCL35UU / similar family) guiding yoke travel on the two shafts.</td></tr>
+    <tr><td><em>—</em></td><td><strong>Shaft mounts</strong> — SSTHSL-35 square flange mounts with four set screws for 35 mm shaft (used to mount shafts to adjacent structures).</td></tr>
+    <tr><td><em>—</em></td><td><strong>Pull brackets</strong> — left/right brackets on the yoke that engage the long ~16 mm plunger drive rods via a stopper on return stroke (hole or slot geometry acceptable; low precision required).</td></tr>
+  </table>
+
+  <h2 id="gallery">Figuras</h2>
+  <p class="muted">Yoke track views, pull-bracket / rod-stopper engagement, and top-cap concept are on <a href="../drive-shafts/index.html">Drive shafts</a> (figures gallery). General transmission views remain in the <a href="../../../Transmission/index.html#gallery">Transmission main gallery</a>.</p>
+
+  <h3>Figuras recomendadas (clareza para o contratado)</h3>
+  <ul class="muted">
+    <li><strong>Add figure</strong>: <strong>Yoke assembly sequence</strong> — bolted block joints, dowels, and torque sequence for track spacing.</li>
+    <li><strong>Add figure</strong>: <strong>Shaft wetting / scraper concept</strong> — how juice is kept off linear bearing races (tie to <a href="../../../Transmission/drive-shafts/#gallery">Drive shafts</a> gallery).</li>
+  </ul>
+
+  <h2>Discussão</h2>
+  <h3>Rough design &amp; intent</h3>
+  <ul>
+    <li><strong>Loading direction</strong> — On compression/forward stroke the cam rollers push on the front (positive-Z) track face; on return stroke they pull on the back face. Forward stroke is expected to be the higher-stress direction, but the assembly should tolerate stopping or jamming at any point in the cycle.</li>
+    <li><strong>Track geometry</strong> — The roller runs between two track faces; flatness and parallel spacing between faces is required to prevent binding and edge loading.</li>
+    <li><strong>Variant note</strong> — A larger-peeler configuration (P6 970) may use a larger cam radius (~109 mm vs ~89 mm) which can change stroke and required shaft length; contractor should keep this in mind when defining margins.</li>
+  </ul>
+
+  <h3>Known issues &amp; risks</h3>
+  <ul>
+    <li><strong>Jam survival</strong> — Binding in one linear bearing or a fruit/hard-object jam can impose asymmetric loads that twist shafts and concentrate load on a single bearing/track edge.</li>
+    <li><strong>Fastener integrity</strong> — The yoke is bolted from multiple blocks; bolt strength/preload and anti-loosening strategy must tolerate cyclic loads and washdown.</li>
+    <li><strong>Juice on shafts</strong> — Shaft wetting can cause buildup and accelerated wear; scraper/cover concept should be refined and validated.</li>
+    <li><strong>Mass/balance sensitivity</strong> — the extraction/driven assembly weight should be roughly balanced to the yoke weight so the drive shafts are not stressed in a persistent left/right/up/down direction (reduce steady asymmetric bending loads).</li>
+  </ul>
+
+  <h3>DFM &amp; manufacturing (China)</h3>
+  <ul>
+    <li><strong>Machining</strong> — Contractor to propose how to machine and inspect track-face flatness/parallelism (and how to hold that through assembly).</li>
+    <li><strong>Materials</strong> — Recommend yoke steel grade, fastener spec, shaft material/finish (hardened stainless), and compatibility with cleaning chemicals.</li>
+    <li><strong>Assembly</strong> — Propose an assembly procedure that ensures track spacing consistency (dowels, ground spacers, controlled torque sequence, etc.).</li>
+  </ul>
+
+  <h3>Questions for contractor</h3>
+  <ol>
+    <li>Propose track-face tolerances (flatness, parallelism, surface finish) needed for smooth cam roller motion and long wear life.</li>
+    <li>Recommend the yoke block/bolt architecture (bolt sizes/count, dowels/spacers, anti-loosening) to survive cyclic loading and seasonal tear-down.</li>
+    <li>Recommend shaft material/finish for 35 mm shafts with flanged sealed bearings in washdown; advise on 440C (or alternatives) and expected wear life.</li>
+    <li>Propose a shaft scraper/cover solution for the extraction-side bearings that is hygienic and serviceable.</li>
+  </ol>
+
+  <h3>Interfaces</h3>
+  <ul>
+    <li><strong>Input:</strong> Cam rollers from <a href="../../Drivetrain/gears-and-cam-bearings/index.html">drivetrain</a> act on yoke track faces to generate stroke.</li>
+    <li><strong>Output:</strong> Yoke translation on two shafts drives extraction/compression and pulls plunger drive rods on return stroke.</li>
+    <li><strong>Mount:</strong> Guided by flanged/sealed linear bearings on 35 mm shafts; shafts mount into the transmission/extraction structures via flange shaft mounts.</li>
+  </ul>
+  <h3>Interfaces e tolerâncias</h3>
+  <p class="muted">Known interfaces and tolerances. Links go to related subsystems.</p>
+  <table class="iface-table">
+    <thead><tr><th>Part</th><th>Interface / tolerance</th><th>Related</th></tr></thead>
+    <tbody>
+      <tr><td>Yoke track faces</td><td>Flatness/parallelism and track spacing to suit cam roller diameter; values TBD (contractor to propose)</td><td><a href="../../Drivetrain/gears-and-cam-bearings/index.html">Drivetrain cams</a></td></tr>
+      <tr><td>Drive shafts</td><td>35 mm hardened stainless shafts; length driven by peeler spacing and end-of-stroke gap target</td><td><a href="../drive-shafts/index.html">Drive shafts (figures)</a>, <a href="../index.html">Transmission</a></td></tr>
+      <tr><td>Linear bearings</td><td>Flanged, double-sealed 35 mm linear bearings (LMFCL35UU / similar); alignment critical to prevent binding</td><td><a href="../index.html">Transmission</a></td></tr>
+      <tr><td>Shaft mounts</td><td>SSTHSL-35 flange mounts (4 set screws) for 35 mm shafts; mounting scheme TBD</td><td>—</td></tr>
+      <tr><td>Pull brackets</td><td>Engage 16 mm plunger drive rods via stopper on return; slot/hole acceptable; low precision</td><td><a href="../../Plug-ejection/index.html">Core ejection</a></td></tr>
+    </tbody>
+  </table>
+
+  <p class="back"><a href="../index.html">← Voltar a Transmission system</a></p>
+</body>
+</html>

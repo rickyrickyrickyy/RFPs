@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ciclo de extração Delijuice — P6 RFP</title>
+  <style>
+    :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
+    a { color: var(--accent); }
+    h1 { font-size: 1.35rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.5rem; }
+    h3 { font-size: 1rem; margin-top: 1rem; color: var(--muted); }
+    ul, ol { padding-left: 1.25rem; }
+    .back { margin-bottom: 1rem; font-size: 0.9rem; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    section { margin: 1.25rem 0; }
+    li { margin: 0.35rem 0; }
+    .stroke-box { background: rgba(88, 166, 255, 0.08); border: 1px solid var(--border); border-radius: 8px; padding: 0.75rem 1rem; margin: 0.75rem 0; }
+  </style>
+      <link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<nav class="site-lang-bar" aria-label="Language">
+  <span class="lang-label">Idioma:</span>
+  <a href="../../Overview/Delijuice-cycle.html">English</a>
+  <span aria-hidden="true">·</span>
+  <a href="../../zh/Overview/Delijuice-cycle.html">中文</a>
+  <span aria-hidden="true">·</span>
+  <a href="Delijuice-cycle.html" aria-current="page">Português</a>
+</nav>
+
+<p class="back"><a href="../index.html">← Voltar a Visão geral do RFP P6</a> · <a href="index.html">Visão geral do projeto</a></p>
+  <h1>Ciclo de extração Delijuice</h1>
+  <p class="muted">Stroke-by-stroke detail for the four-step juicing cycle. The high-level machine/function summary and end-to-end product flow are in <a href="index.html">Visão geral do projeto</a>.</p>
+
+  <section>
+    <h2>Introdução</h2>
+    <p>The <strong>Delijuice cycle</strong> is the P6 extraction stroke sequence that produces juice while keeping cores and peel as separate waste streams. It is driven by the P6 <strong>scotch-yoke drivetrain</strong> and is designed to run repeatably in an industrial duty cycle.</p>
+    <p>The cycle has <strong>four steps</strong>, paired by stroke:</p>
+    <div class="stroke-box">
+      <strong>Reverse stroke:</strong> Fruit intake + Core expulsion (happen together)<br>
+      <strong>Forward stroke:</strong> Compression + Juice outflow (happen together)
+    </div>
+  </section>
+
+  <section>
+    <h2>1. Fruit intake</h2>
+    <p>Citrus is fed into the <a href="../Feeder/index.html">fruit intake system</a> and rolls down until it rests on the <strong>feed synchronization spring</strong> in the vertical feeder duct.</p>
+    <ul>
+      <li><strong>Forward stroke:</strong> Rollers on the <a href="../Extraction-syncronisation/index.html">fruit support assembly</a> pull the feed sync spring open. One fruit drops onto the fruit support plate; the next fruit sits on top of it.</li>
+      <li><strong>Reverse stroke:</strong> The spring closes and holds the top fruit. The fruit support plate is pulled from under the bottom fruit so it drops into the <a href="../Collection/index.html">peelers</a>. The peeler bottom fingers are long enough to catch and stage the fruit for compression.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>2. Compression</h2>
+    <p>The fruit is peeled and a <strong>cylindrical core</strong> is cut from its centre. The <strong>driven peeler</strong> moves forward and interlaces with the <strong>static peeler cup</strong> during the forward stroke. The fruit is compressed into the double-conical cavity between the two peelers. A <strong>plug cutter</strong> extending from the centre of the static peeler cup cuts the core. Mature seeds (bitter oils and enzymes) are mostly in the centre; removing this core keeps them out of the juice and opens a path for juice outflow.</p>
+    <p>As cavity volume becomes less than fruit volume, pressure rises and peeling starts. The wedge shape of each finger cuts longitudinal seams, creating <strong>“peel chips”</strong>. These are forced out through the gaps between peeler fingers into the peel bin. The chips also seal the gaps so pressure can build for juicing. The cylindrical core is pushed into the <strong>slit sieve filter tube</strong>. At the end of compression, the central pin in the driven peeler passes the tip of the plug cutter so the core is fully separated from the peel.</p>
+  </section>
+
+  <section>
+    <h2>3. Juice outflow</h2>
+    <p>Juice is squeezed from the fruit, collected, and sent to the spout. The two peelers squeeze the fruit and build pressure; with the spout at ambient pressure, juice flows out through the hole left by the plug cutter, through the slit sieve, into the <strong>juice collector</strong>, and out of the spout. The collector is <strong>diffuser-shaped</strong> (larger at the spout than at the entrance), which helps draw juice toward the exit.</p>
+    <p>Two <strong>compression springs</strong> move the <a href="../Plug-ejection/index.html">plunger</a> forward with the yoke. The plunger stops when the <strong>stroke limiters</strong> reach their end position. Inside the filter tube the core is held between the plunger tip and the central pin. The gap is kept small to squeeze juice from the core but never smaller than the seeds, so they stay intact.</p>
+  </section>
+
+  <section>
+    <h2>4. Core expulsion</h2>
+    <p>On the <strong>reverse stroke</strong>, the yoke pulls the <strong>plunger drive rods</strong> back against the compression springs. The plunger retracts toward the plug cutter and <strong>ejects the core</strong> from the filter into the peel bin. The bottom fingers of both peelers are cut short so the core can fall through. Once the core has dropped, the next fruit drops from the fruit support plate into the peelers and the cycle repeats.</p>
+  </section>
+
+  <section>
+    <h2>Figuras recomendadas (clareza para o contratado)</h2>
+    <ul class="muted">
+      <li><strong>Add figure</strong>: <strong>Single timeline graphic</strong> — yoke position vs the four steps (intake, compression, juice, eject) on one axis.</li>
+      <li><strong>Add figure</strong>: <strong>Cross-section at each step</strong> — fruit, plug cutter, plunger, and core position (four small panels).</li>
+      <li><strong>Add figure</strong>: <strong>Sync spring + pusher</strong> — link to <a href="../../Feeder/feeding-subassembly/#gallery">Feeding subassembly</a> gallery for photo-backed clarity.</li>
+    </ul>
+  </section>
+
+  <p class="back"><a href="../index.html">← Voltar a Visão geral do RFP P6</a> · <a href="index.html">Visão geral do projeto</a></p>
+</body>
+</html>

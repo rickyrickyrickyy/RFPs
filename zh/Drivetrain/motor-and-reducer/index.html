@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Motor and reducer — Drivetrain — P6 RFP</title>
+  <style>
+    :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
+    a { color: var(--accent); }
+    h1 { font-size: 1.35rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.25rem; }
+    h3 { font-size: 1rem; margin-top: 1rem; color: var(--muted); }
+    ul, ol { padding-left: 1.25rem; }
+    .back { margin-bottom: 1rem; font-size: 0.9rem; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    .swatch { display: inline-block; width: 1.25rem; height: 1.25rem; border: 1px solid var(--border); border-radius: 3px; vertical-align: middle; }
+    table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+    th, td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
+    .iface-table th { color: var(--muted); font-weight: 600; }
+    .slideshow { margin: 1.5rem 0; }
+    .slideshow .slide { display: none; }
+    .slideshow .slide.active { display: block; }
+    .slideshow .slide img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
+    .slideshow-caption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); min-height: 2.5em; }
+    .slideshow-controls { display: flex; align-items: center; gap: 1rem; margin-top: 0.75rem; flex-wrap: wrap; }
+    .slideshow-controls button { background: var(--border); color: var(--text); border: none; padding: 0.35rem 0.75rem; border-radius: 4px; cursor: pointer; font-size: 0.9rem; }
+    .slideshow-controls button:hover { background: var(--accent); color: #fff; }
+    .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
+  </style>
+      <link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+<nav class="site-lang-bar" aria-label="Language">
+  <span class="lang-label">语言：</span>
+  <a href="../../../Drivetrain/motor-and-reducer/index.html">English</a>
+  <span aria-hidden="true">·</span>
+  <a href="index.html" aria-current="page">中文</a>
+  <span aria-hidden="true">·</span>
+  <a href="../../../pt/Drivetrain/motor-and-reducer/index.html">Português</a>
+</nav>
+
+<p class="back"><a href="../index.html">← 返回 Drivetrain</a> · <a href="../../index.html">P6 RFP 总览</a></p>
+  <h1>Motor and reducer</h1>
+  <p class="muted">Part of the <a href="../index.html">Drivetrain</a> section. Motor + belt drive + reducer mounting and the primary vibration/torque input to the machine.</p>
+
+  <h2>简介</h2>
+  <p>This subassembly defines the motor/reducer selection, belt drive layout, and mounting/tensioning approach. It sets the drivetrain’s radial loads (from belt tension), vibration into the frame, and the reducer output torque that drives the gear train.</p>
+
+  <h2>Catalog links</h2>
+  <ul>
+    <li><strong>WEG W22 IEC TEFC catalog (IE2)</strong> — <a href="https://www.weg.net/catalog/weg/US/en/c/MT_IEC_3PHASE_LV_TEFC_W22_IE2/list">WEG catalog listing</a></li>
+    <li><strong>Sumitomo Cyclo 6000 catalog (PDF)</strong> — <a href="https://us.sumitomodrive.com/sites/default/files/2025-03/cyclo_6000_reducer_catalog_v12_web-2.pdf">Sumitomo PDF</a></li>
+  </ul>
+
+  <h2>颜色说明 &amp; components</h2>
+  <p class="muted">Key components; colours may differ between figures. Primary intent is to specify interfaces and what contractors must validate.</p>
+  <table>
+    <tr><th>Colour(s)</th><th>Component</th></tr>
+    <tr><td><em>—</em></td><td><strong>Motor</strong> — WEG W21/W22 IE3 motor, product 13533507: 7.5 kW (10 hp), 50 Hz, 4-pole, rated speed 1460 rpm, rated torque ~49 N·m, 38 mm shaft.</td></tr>
+    <tr><td><em>—</em></td><td><strong>V-belt drive</strong> — SPA belts; current concept uses 1:1 pulleys (170 mm pitch dia motor and reducer). Two belts planned. Center distance and tensioning method are TBD.</td></tr>
+    <tr><td><em>—</em></td><td><strong>Reducer</strong> — Sumitomo Cyclo 6000 series; output speed target ~70 rpm (final ratio/model to be confirmed from catalog selection).</td></tr>
+  </table>
+
+  <h2 id="gallery">图示</h2>
+  <p class="muted">P6 motor/reducer CAD (图示 1–2). Figure 3 is a <strong>reference photo from another machine</strong> showing a nut/standoff-style motor mount concept for inspiration only — not the P6 design.</p>
+  <div class="slideshow" id="motor-reducer-slideshow">
+    <div class="slideshow-track">
+      <div class="slide active" id="fig1" data-caption="Figure 1. Motor and reducer — P6 CAD (layout / belt path context)."><img src="../../../Drivetrain/motor-and-reducer/images/01.png" alt="Motor and reducer CAD 1"></div>
+      <div class="slide" id="fig2" data-caption="Figure 2. Motor and reducer — P6 CAD (detail / mounting context)."><img src="../../../Drivetrain/motor-and-reducer/images/02.png" alt="Motor and reducer CAD 2"></div>
+      <div class="slide" id="fig3" data-caption="Figure 3. 参考 — motor mount plate on another machine (inspiration for standoff/nut tensioning concept; not P6)."><img src="../../../Drivetrain/motor-and-reducer/images/03.png" alt="参考 motor mount inspiration"></div>
+    </div>
+    <p class="slideshow-caption" id="motor-reducer-caption" aria-live="polite">Figure 1. Motor and reducer — P6 CAD.</p>
+    <div class="slideshow-controls">
+      <button type="button" id="motor-reducer-prev" aria-label="Previous">← Previous</button>
+      <span class="slideshow-counter" id="motor-reducer-counter">1 / 3</span>
+      <button type="button" id="motor-reducer-next" aria-label="Next">Next →</button>
+    </div>
+  </div>
+  <p class="muted">Additional context: <a href="../../../Drivetrain/index.html#gallery">Drivetrain main gallery</a>.</p>
+
+  <h3>建议补充图示（便于承包商理解）</h3>
+  <ul class="muted">
+    <li><strong>Add figure</strong>: <strong>Belt tensioning mechanism</strong> — shims, jack screw, or slide detail with center distance dimensions.</li>
+    <li><strong>Add figure</strong>: <strong>Motor mount plate</strong> — final material (vs wooden concept) and bolt pattern to drivetrain plate.</li>
+    <li><strong>Add figure</strong>: <strong>Pulley alignment check</strong> — edge/line-of-sight method for SPA belt runout.</li>
+  </ul>
+
+  <h2>讨论</h2>
+  <h3>Rough design &amp; intent</h3>
+  <ul>
+    <li><strong>Primary goal</strong> — Deliver stable reducer output torque to the gear train while keeping belt tensioning, pulley alignment, and vibration manageable.</li>
+    <li><strong>Mounting orientation</strong> — Current concept mounts the motor with its shaft pointing vertically downward, and the reducer input shaft is also oriented vertically downward. A belt transfers power between these vertical shafts.</li>
+    <li><strong>Major unknown</strong> — Belt center distance and tensioning mechanism must be finalized because it sets bearing radial loads, vibration, and stiffness requirements on the mount plate.</li>
+  </ul>
+
+  <h3>参考 motor + reducer specs (50 Hz vs 60 Hz)</h3>
+  <p class="muted">Some legacy specs were for 60 Hz markets. China baseline is 50 Hz. Reducer model numbers below are from a prior cost list and should be confirmed (some notes suggest 6145 vs 6165).</p>
+  <table class="iface-table">
+    <thead><tr><th>Item</th><th>50 Hz (China baseline)</th><th>60 Hz (reference)</th></tr></thead>
+    <tbody>
+      <tr><td>Motor</td><td>WEG W22, 10 hp, 4-pole, ~1470 rpm; 220/380/440 V 3-phase; IPW55; V5T vertical shaft down</td><td>WEG W22, 10 hp, 4-pole, ~1760 rpm; 220/380/440 V 3-phase; IPW55; V5T vertical shaft down</td></tr>
+      <tr><td>Reducer</td><td>Sumitomo Cyclo Drive CWVJ-6165-21 (i≈21) targeting ~70 rpm; flanged, vertical, output shaft upwards (TBD)</td><td>Sumitomo Cyclo Drive CWVJ-6165-25 (i≈25) targeting ~70 rpm; flanged, vertical, output shaft upwards (TBD)</td></tr>
+    </tbody>
+  </table>
+
+  <h3>参考 belt-drive calculation (from prior internal worksheet — must be validated)</h3>
+  <p class="muted">The following values are copied from a prior internal calculation/worksheet for P6 870 (China, 50 Hz). They are provided as a starting point for contractors — <strong>do not assume they are correct</strong>. Contractor must re-check belt selection, power rating, wrap angle assumptions, tensioning method, and the resulting shaft/bearing radial loads.</p>
+  <ul>
+    <li><strong>Service factor</strong>: 1.3 (worksheet input)</li>
+    <li><strong>Motor</strong>: WEG W21 Multimounting IE3, PN 13533507, 7.5 kW, 50 Hz, 4-pole, 1500 rpm synchronous, 1460 rpm rated, 380/660 V, 14.6/8.41 A, 49.03 N·m rated torque, 38 mm shaft</li>
+    <li><strong>Belt</strong>: SPA profile, wrapped; 1:1 ratio; pitch diameters 170 mm / 170 mm; target belt speed ~13 m/s</li>
+    <li><strong>Center distance</strong>: tentative ~340 mm (worksheet)</li>
+    <li><strong>Belts required</strong>: 2 (worksheet result; note: an older manual calc assumed 3 banded belts)</li>
+  </ul>
+
+  <h4 class="muted">Key worksheet outputs (Gates/ISO 4184 method reference)</h4>
+  <table class="iface-table">
+    <thead><tr><th>Parameter</th><th>Worksheet value</th><th>Notes / validation needed</th></tr></thead>
+    <tbody>
+      <tr><td>Standard belt length</td><td>1250 mm</td><td>Chosen closest to tentative length (~1214 mm). Confirm availability and pulley center distance tolerances.</td></tr>
+      <tr><td>Net kW per belt</td><td>6.78 kW</td><td>Depends on tables, life target, wrap angle, and corrections (arc/contact, length). Recompute for final geometry.</td></tr>
+      <tr><td># belts required</td><td>2</td><td>Validate against duty cycle, service factor, life hours, and wrap angle; consider banded belts for shock/vibration.</td></tr>
+      <tr><td>Installation allowance</td><td>25 mm</td><td>Minimum center-distance decrease for install; if not possible, worksheet suggests idler/tensioner.</td></tr>
+      <tr><td>Static tension per belt</td><td>~226 N</td><td>Strongly dependent on wrap angle and tensioning method. Drives shaft/bearing radial loads.</td></tr>
+      <tr><td>Recommended deflection force (total)</td><td>~18.5–27.5 N</td><td>As reported; confirm method and whether multiplied by belt count correctly.</td></tr>
+    </tbody>
+  </table>
+
+  <h4 class="muted">Older manual calculation notes (even more tentative)</h4>
+  <p class="muted">An older manual calc (notes only) assumed 3 banded belts, center distance ~344 mm, tangential belt force ~577 N, and a reported radial load on motor ~961 N. Treat these as rough placeholders; validate with final wrap angle, friction coefficient, tension ratio, and whether an idler is used.</p>
+
+  <h3>Known issues &amp; risks</h3>
+  <ul>
+    <li><strong>Radial loads from belt tension</strong> — Contractor must quantify belt tension and resulting radial loads on motor and reducer shafts.</li>
+    <li><strong>Vibration</strong> — Motor/reducer vibrations transmit into the frame; mount stiffness and damping/isolation must be considered.</li>
+    <li><strong>Shaft extensions</strong> — Machine layout requires extending reducer input/output shafts; contractor to propose a safe, manufacturable extension/adaptor approach and tolerances.</li>
+    <li><strong>Belt guard not designed</strong> — A pulley/belt guard is required; mounting rails/structure on the back of the machine may be needed to support guarding.</li>
+    <li><strong>Downstream protection (torque limiter)</strong> — We are not sure whether the Sumitomo Cyclo reducer should include/receive a torque limiting/overload protection strategy to protect downstream components (gear train, cam bearings) during stalls or jam events; contractor to recommend.</li>
+  </ul>
+
+  <h3>DFM &amp; manufacturing (China)</h3>
+  <ul>
+    <li><strong>Mounting</strong> — Recommend a motor/reducer mounting that supports easy belt tensioning and pulley alignment check.</li>
+    <li><strong>Guarding</strong> — Provide a practical pulley/belt guard that is safe yet removable for maintenance.</li>
+    <li><strong>Tensioning concept</strong> — Current owner concept is a “standoff stud adjustment” mount: motor sits on multiple through-studs/bolts with stacked nuts/washers (nut below plate, nut/washer above plate, motor foot, nut above foot) so motor position can be adjusted for belt tension. This approach must include a locking strategy so tension does not drift under vibration.</li>
+  </ul>
+
+  <h3>Belt specification — contractor support required</h3>
+  <p class="muted">We want the contractor to lead belt selection and validation. Prior internal calculations exist but are not treated as correct; use them only as a starting point.</p>
+  <ul>
+    <li><strong>Current CAD constraint</strong> — center distance between motor output shaft and reducer input shaft is <strong>at most 340.311 mm when tensioned</strong>, and smaller when untensioned (installation position).</li>
+    <li><strong>No idler</strong> — current concept uses <strong>no idler/tensioner pulley</strong>; belt tension is set by motor position (nut/standoff adjustment).</li>
+    <li><strong>Ratio</strong> — 1:1 pulleys (concept) and a 50 Hz motor baseline; contractor may propose alternatives if it improves reliability/serviceability.</li>
+  </ul>
+
+  <h3>Questions for contractor</h3>
+  <ol>
+    <li><strong>Belt selection</strong>: Select the belt profile and belt count for the final pulley sizes and speed, using a defined service factor and life target. Provide the calculation basis (tables/standard) and show margins.</li>
+    <li><strong>Length and center distance</strong>: Select a <em>standard belt length</em> that is compatible with center distance ≤ 340.311 mm (tensioned) and provides enough slack/travel for installation without an idler. Specify required adjustment travel.</li>
+    <li><strong>Tension targets + procedure</strong>: Provide recommended static/installation tension (and a field procedure) compatible with our nut/standoff tensioning method (e.g., deflection force method, frequency method, etc.).</li>
+    <li><strong>Radial loads</strong>: Compute radial loads on motor and reducer shafts/bearings from belt tension across min/max tension, and confirm acceptability vs motor/reducer bearing ratings and expected misalignment.</li>
+    <li><strong>Locking + drift</strong>: Propose a locking strategy for the nut/standoff adjustment so belt tension and alignment do not drift under vibration (and define inspection/retension intervals).</li>
+    <li><strong>China sourcing</strong>: Provide belt and pulley sourcing options available in China (and acceptable substitutes), with lead times and recommended spares.</li>
+    <li>Confirm the exact Cyclo 6000 model/ratio required for ~70 rpm output and provide mounting/lubrication requirements.</li>
+    <li>Evaluate whether to specify a <strong>torque limiter / overload protection</strong> on the Cyclo (or an equivalent protection scheme) to protect downstream components. Provide recommended settings and trade-offs.</li>
+    <li>Propose a practical lubrication/maintenance plan for the motor/belt/reducer: what is lubricated, recommended lubricant type, inspection interval, and how maintenance is performed safely in the pilot factory.</li>
+    <li>Propose input and output shaft extension/adaptor design(s) (materials, fit classes, keying/splines, runout targets) and an assembly/inspection plan.</li>
+    <li>Evaluate an alternative architecture: mount the motor in a conventional orientation and use a right-angle/angle gearbox to drive the vertical reducer input. Would this improve vibration, service, or safety? Provide trade-offs and sourcing options.</li>
+    <li>Propose a guarding concept for the belt/pulleys that can be mounted on the back of the machine (what rails/brackets are needed and how it is removed for maintenance).</li>
+  </ol>
+
+  <h3>接口与公差</h3>
+  <p class="muted">Known interfaces and tolerances. Links go to related subsystems.</p>
+  <table class="iface-table">
+    <thead><tr><th>Part</th><th>Interface / tolerance</th><th>Related</th></tr></thead>
+    <tbody>
+      <tr><td>Motor</td><td>WEG W21/W22 IE3, 7.5 kW, 1460 rpm rated; 38 mm shaft (confirm frame/mounting form from selected model)</td><td>—</td></tr>
+      <tr><td>V-belt drive</td><td>SPA belts; 1:1 pulleys (170 mm pitch dia) concept; two belts planned; center distance and tensioning TBD</td><td>—</td></tr>
+      <tr><td>Reducer</td><td>Sumitomo Cyclo 6000 series; select ratio/model to achieve target output speed; confirm output shaft geometry and mounting</td><td>—</td></tr>
+      <tr><td>Mounting</td><td>Motor + reducer mount to drivetrain mount plate; alignment and stiffness requirements per Frame/Drivetrain</td><td><a href="../drivetrain-mount-plate/index.html">Drivetrain mount plate</a></td></tr>
+    </tbody>
+  </table>
+
+  <p class="back"><a href="../index.html">← 返回 Drivetrain</a></p>
+  <script>
+(function(){
+  var el = document.getElementById('motor-reducer-slideshow');
+  if (!el) return;
+  var slides = el.querySelectorAll('.slide');
+  var cap = document.getElementById('motor-reducer-caption');
+  var counter = document.getElementById('motor-reducer-counter');
+  var n = slides.length, i = 0;
+  function go(k) { i = (k + n) % n; slides.forEach(function(s,j){ s.classList.toggle('active', j===i); }); if (cap) cap.textContent = slides[i].getAttribute('data-caption') || ''; if (counter) counter.textContent = (i+1) + ' / ' + n; }
+  document.getElementById('motor-reducer-prev').addEventListener('click', function(){ go(i-1); });
+  document.getElementById('motor-reducer-next').addEventListener('click', function(){ go(i+1); });
+  var hash = window.location.hash;
+  if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
+})();
+  </script>
+</body>
+</html>

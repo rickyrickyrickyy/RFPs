@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Plunger drive bracket — Core ejection — P6 RFP</title>
+  <style>
+    :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
+    a { color: var(--accent); }
+    h1 { font-size: 1.35rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.25rem; }
+    h3 { font-size: 1rem; margin-top: 1rem; color: var(--muted); }
+    ul, ol { padding-left: 1.25rem; }
+    .back { margin-bottom: 1rem; font-size: 0.9rem; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    .swatch { display: inline-block; width: 1.25rem; height: 1.25rem; border: 1px solid var(--border); border-radius: 3px; vertical-align: middle; }
+    table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+    th, td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
+    .iface-table th { color: var(--muted); font-weight: 600; }
+    .slideshow { margin: 1.5rem 0; }
+    .slideshow .slide { display: none; }
+    .slideshow .slide.active { display: block; }
+    .slideshow .slide img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
+    .slideshow-caption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); min-height: 2.5em; }
+    .slideshow-controls { display: flex; align-items: center; gap: 1rem; margin-top: 0.75rem; flex-wrap: wrap; }
+    .slideshow-controls button { background: var(--border); color: var(--text); border: none; padding: 0.35rem 0.75rem; border-radius: 4px; cursor: pointer; font-size: 0.9rem; }
+    .slideshow-controls button:hover { background: var(--accent); color: #fff; }
+    .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
+  </style>
+      <link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+<nav class="site-lang-bar" aria-label="Language">
+  <span class="lang-label">Idioma:</span>
+  <a href="../../../Plug-ejection/plunger-drive-bracket/index.html">English</a>
+  <span aria-hidden="true">·</span>
+  <a href="../../../zh/Plug-ejection/plunger-drive-bracket/index.html">中文</a>
+  <span aria-hidden="true">·</span>
+  <a href="index.html" aria-current="page">Português</a>
+</nav>
+
+<p class="back"><a href="../index.html">← Voltar a Core ejection</a> · <a href="../../index.html">Visão geral do RFP P6</a></p>
+  <h1>Plunger drive bracket</h1>
+  <p class="muted">Actuation bracket that pushes/pulls the plunger bases only in the travel direction; designed to avoid racking moments and keep plungers concentric with the filter tube.</p>
+
+  <h2>Introdução</h2>
+  <p>The plunger drive bracket couples the drivetrain actuation (via plunger drive rods) to the four core ejection plungers. Its key requirement is <strong>kinematic purity</strong>: the bracket must apply <strong>only axial force</strong> (forward/back along the machine’s ejection axis) and must not introduce left/right/up/down moments to the plungers. Maintaining this avoids the critical failure mode of <strong>plunger racking</strong> and sticking.</p>
+
+  <h2>Legenda de cores &amp; components</h2>
+  <p class="muted">Drive bracket, actuation interfaces, and (optional) guillotine-style insertion/removal mechanism.</p>
+  <table>
+    <tr><th>Colour(s)</th><th>Component</th></tr>
+    <tr><td><em>—</em></td><td><strong>Plunger drive bracket</strong> — carries four plungers and moves in the ejection travel direction.</td></tr>
+    <tr><td><em>—</em></td><td><strong>Guillotine / sliding insertion access</strong> — optional mechanism that allows the plungers to be removed for service while keeping the push/pull behavior constrained.</td></tr>
+  </table>
+
+  <h2 id="gallery">Figuras</h2>
+  <p class="muted">Assembly CAD from <code>Plug-ejection/images/</code> plus bracket-focused <strong>iso / top / front</strong> views on this page. Refer to <a href="#fig1">Figure 1</a>–<a href="#fig4">Figure 4</a>.</p>
+  <div class="slideshow" id="skel-plungerdrivebracket-slideshow">
+    <div class="slideshow-track">
+      <div class="slide active" id="fig1" data-caption="Figure 1. Plunger drive bracket in full core ejection assembly context (shared CAD)."><img src="../../../Plug-ejection/images/plug-ejection-4.png" alt="Plunger drive bracket assembly context"></div>
+      <div class="slide" id="fig2" data-caption="Figure 2. Plunger drive bracket — isometric."><img src="../../../Plug-ejection/plunger-drive-bracket/images/isoview.png" alt="Plunger drive bracket isometric"></div>
+      <div class="slide" id="fig3" data-caption="Figure 3. Plunger drive bracket — top view."><img src="../../../Plug-ejection/plunger-drive-bracket/images/topview.png" alt="Plunger drive bracket top view"></div>
+      <div class="slide" id="fig4" data-caption="Figure 4. Plunger drive bracket — front view."><img src="../../../Plug-ejection/plunger-drive-bracket/images/frontview.png" alt="Plunger drive bracket front view"></div>
+    </div>
+    <p class="slideshow-caption" id="skel-plungerdrivebracket-caption" aria-live="polite">Figure 1. Plunger drive bracket in full core ejection assembly context (shared CAD).</p>
+    <div class="slideshow-controls">
+      <button type="button" id="skel-plungerdrivebracket-prev" aria-label="Previous">← Previous</button>
+      <span class="slideshow-counter" id="skel-plungerdrivebracket-counter">1 / 4</span>
+      <button type="button" id="skel-plungerdrivebracket-next" aria-label="Next">Next →</button>
+    </div>
+  </div>
+
+  <h3>Figuras recomendadas (clareza para o contratado)</h3>
+  <ul class="muted">
+    <li><strong>Add figure</strong>: <strong>Guillotine / service access</strong> — open vs closed states for plunger removal.</li>
+    <li><strong>Add figure</strong>: <strong>Four-plunger alignment</strong> — concentricity to filter tubes with dimensions (supplement <a href="#fig2">Figuras 2–4</a>).</li>
+    <li><strong>Add figure</strong>: <strong>Rod-to-bracket joint</strong> — low-moment attachment detail.</li>
+  </ul>
+
+  <h2>Discussão</h2>
+  <h3>Componentes</h3>
+  <ul>
+    <li><strong>Drive bracket</strong> — supports the plunger bases; constrained so it moves forward/back only in the ejection axis.</li>
+    <li><strong>Service access constraint</strong> — ensure the insertion/removal mechanism does not compromise axial alignment during normal operation.</li>
+  </ul>
+  <h3>Interfaces</h3>
+  <ul>
+    <li><strong>Input</strong>: plunger drive rods actuated from the drivetrain/transmission yoke system.</li>
+    <li><strong>Output</strong>: plungers push into filter tube and retract out of the tube to eject cores.</li>
+    <li><strong>Mount</strong>: guided by the side-panel linear bearing housings to ensure parallel rod/plunger motion.</li>
+  </ul>
+  <h3>Interfaces e tolerâncias</h3>
+  <p class="muted">The bracket must keep plungers concentric with filter tubes/plug cutter to prevent racking and ensure sealing performance.</p>
+  <table class="iface-table">
+    <thead><tr><th>Part</th><th>Interface / tolerance</th><th>Related</th></tr></thead>
+    <tbody>
+      <tr><td>Axial-only load path</td><td>Bracket should not transmit lateral/up/down moments to plungers; constrained push/pull engagement</td><td><a href="../plunger-drive-system-in-side-panels/index.html">Plunger drive system in side panels</a></td></tr>
+      <tr><td>Concentricity</td><td>Plunger axis must remain parallel to filter tube axis over full stroke (jamming must be fail-safe)</td><td><a href="../../Collection/plungers-and-filter/index.html">Plungers and filter</a></td></tr>
+    </tbody>
+  </table>
+
+  <h3>Known issues &amp; risks</h3>
+  <ul>
+    <li><strong>Racking risk</strong> — if any moment is introduced, plungers can rack in the filter tube, leading to sticking and damage.</li>
+    <li><strong>Sticking/jam failure mode</strong> — a stuck plunger can propagate forces into the drive mechanism; bracket must be designed to minimize moment amplification.</li>
+  </ul>
+
+  <h3>DFM &amp; manufacturing (China)</h3>
+  <ul>
+    <li><strong>Optional guillotine approach</strong> — sliding rails + central plate “door” to allow plungers to be removed for service while preserving the constrained push/pull engagement during operation.</li>
+    <li><strong>Low-friction materials</strong> — consider engineering plastics (e.g., Delrin / fiber-reinforced polymer) where sliding interfaces are required, but ensure any food-zone contact remains safe.</li>
+  </ul>
+
+  <h3>Questions for contractor</h3>
+  <ol>
+    <li>Propose an insertion/removal mechanism for plungers (guillotine vs alternate) that preserves axial-only actuation and repeatable concentricity.</li>
+    <li>Define how to validate that the bracket applies no meaningful moments to plungers (tests/inspection/measurement approach).</li>
+    <li>Propose materials for sliding interfaces that are low friction yet compatible with washdown and food safety (including microplastic risk).</li>
+  </ol>
+
+  <p class="back"><a href="../index.html">← Voltar a Core ejection</a></p>
+  <script>
+(function(){
+  var el = document.getElementById('skel-plungerdrivebracket-slideshow');
+  if (!el) return;
+  var slides = el.querySelectorAll('.slide');
+  var cap = document.getElementById('skel-plungerdrivebracket-caption');
+  var counter = document.getElementById('skel-plungerdrivebracket-counter');
+  var n = slides.length, i = 0;
+  function go(k) { i = (k + n) % n; slides.forEach(function(s,j){ s.classList.toggle('active', j===i); }); if (cap) cap.textContent = slides[i].getAttribute('data-caption') || ''; if (counter) counter.textContent = (i+1) + ' / ' + n; }
+  el.querySelector('#skel-plungerdrivebracket-prev').addEventListener('click', function(){ go(i-1); });
+  el.querySelector('#skel-plungerdrivebracket-next').addEventListener('click', function(){ go(i+1); });
+  var hash = window.location.hash;
+  if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
+})();
+  </script>
+</body>
+</html>

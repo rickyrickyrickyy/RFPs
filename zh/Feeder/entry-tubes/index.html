@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Entry tubes — Feeder — P6 RFP</title>
+  <style>
+    :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
+    a { color: var(--accent); }
+    h1 { font-size: 1.35rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.25rem; }
+    h3 { font-size: 1rem; margin-top: 1rem; color: var(--muted); }
+    ul, ol { padding-left: 1.25rem; }
+    .back { margin-bottom: 1rem; font-size: 0.9rem; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    .swatch { display: inline-block; width: 1.25rem; height: 1.25rem; border: 1px solid var(--border); border-radius: 3px; vertical-align: middle; }
+    table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+    th, td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
+    .iface-table th { color: var(--muted); font-weight: 600; }
+    .slideshow { margin: 1.5rem 0; }
+    .slideshow .slide { display: none; }
+    .slideshow .slide.active { display: block; }
+    .slideshow .slide img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
+    .slideshow-caption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); min-height: 2.5em; }
+    .slideshow-controls { display: flex; align-items: center; gap: 1rem; margin-top: 0.75rem; flex-wrap: wrap; }
+    .slideshow-controls button { background: var(--border); color: var(--text); border: none; padding: 0.35rem 0.75rem; border-radius: 4px; cursor: pointer; font-size: 0.9rem; }
+    .slideshow-controls button:hover { background: var(--accent); color: #fff; }
+    .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
+    .figure-standalone { margin: 1.25rem 0; }
+    .figure-standalone img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
+    .figure-standalone figcaption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); }
+  </style>
+      <link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+<nav class="site-lang-bar" aria-label="Language">
+  <span class="lang-label">语言：</span>
+  <a href="../../../Feeder/entry-tubes/index.html">English</a>
+  <span aria-hidden="true">·</span>
+  <a href="index.html" aria-current="page">中文</a>
+  <span aria-hidden="true">·</span>
+  <a href="../../../pt/Feeder/entry-tubes/index.html">Português</a>
+</nav>
+
+<p class="back"><a href="../index.html">← 返回 Fruit intake system</a> · <a href="../../index.html">P6 RFP 总览</a></p>
+  <h1>Entry tubes</h1>
+  <p class="muted">Part of the <a href="../index.html">Fruit intake system</a> section. Adjustable, removable entry tubes that connect upstream feed lines to each feeding subassembly.</p>
+
+  <h2>简介</h2>
+  <p>Entry tubes connect third-party/orange-sorting feed lines to the feeder’s 90° entry tubes. The primary requirement is to provide a rigid, adjustable-height interface so upstream line height variation can be accommodated, while staying easy to remove/reinstall for cleaning and seasonal maintenance.</p>
+
+  <h2>颜色说明 &amp; components</h2>
+  <p class="muted">Key components and intent (colours may vary across CAD figures).</p>
+  <table>
+    <tr><th>Colour(s)</th><th>Component</th></tr>
+    <tr><td><em>—</em></td><td><strong>Entry tube</strong> — straight tube segment carrying a column of oranges into the 90° entry tube and sync spring region.</td></tr>
+    <tr><td><em>—</em></td><td><strong>Hinge + pin interfaces</strong> — intent is two pinned joints (one at the upstream feed line interface, one at the 90° tube interface) so entry tube height can be adjusted like the hypotenuse of a triangle by changing effective length/position.</td></tr>
+    <tr><td><em>—</em></td><td><strong>Hinge mount plate</strong> — mount plate with four corner holes for rivets; riveted to a welded plate on the 90° entry tube assembly.</td></tr>
+    <tr><td><em>—</em></td><td><strong>Riveted attachment</strong> — concept: 90° entry tube assembly and straight tube assembly are riveted to a mount plate (modular; can drill out rivets to iterate design).</td></tr>
+  </table>
+
+  <h2 id="gallery">图示</h2>
+  <p class="muted">Dedicated entry-tube photos below supplement the <a href="../../../Feeder/index.html#gallery">Fruit intake system main gallery</a> and <a href="../../../Feeder/feeding-subassembly/#gallery">Feeding subassembly</a> figures. <a href="#fig-entry-side">Figure 1</a> — side view with hinge; <a href="#fig-entry-hinge">Figure 2</a> — hinge close-up; <a href="#fig-entry-tube">Figure 3</a> — straight tube segment only.</p>
+
+  <figure class="figure-standalone" id="fig-entry-side">
+    <img src="../../../Feeder/entry-tubes/images/hingesideview.png" alt="Side view of entry tube and hinge">
+    <figcaption><strong>Figure 1.</strong> Side view — entry tube with hinge geometry (upstream height adjustment intent).</figcaption>
+  </figure>
+  <figure class="figure-standalone" id="fig-entry-hinge">
+    <img src="../../../Feeder/entry-tubes/images/hingecloseup.png" alt="Close-up of entry tube hinge">
+    <figcaption><strong>Figure 2.</strong> Hinge close-up — pin joint and bracket detail.</figcaption>
+  </figure>
+  <figure class="figure-standalone" id="fig-entry-tube">
+    <img src="../../../Feeder/entry-tubes/images/tubeonly.png" alt="Straight entry tube segment only">
+    <figcaption><strong>Figure 3.</strong> Straight tube segment (column path) without surrounding assembly.</figcaption>
+  </figure>
+
+  <h3>建议补充图示（便于承包商理解）</h3>
+  <ul class="muted">
+    <li><strong>Add figure</strong>: <strong>riveted hinge mount plate</strong> (4 rivets) welded to the 90° entry tube assembly — top/near view with callouts (not fully covered above).</li>
+    <li><strong>Add figure</strong>: <strong>CIP nozzle port</strong> on the 90° tube and <strong>spray direction</strong> down through entry tube / sync-spring zone (assembly-with-nozzle views live on <a href="../../../Feeder/feeding-subassembly/#gallery">Feeding subassembly</a>; add here if you want entry-tube–only context).</li>
+    <li><strong>Add figure</strong>: <strong>adjustment range diagram</strong> — pinned joint geometry at both ends showing min/max effective height vs upstream line (supplement to Figure 1).</li>
+  </ul>
+
+  <h2>讨论</h2>
+  <h3>Rough design &amp; intent</h3>
+  <ul>
+    <li><strong>Goal</strong> — Deliver fruit from upstream sorters/lines into each feeding unit such that the sync spring can reliably gate fruit one-at-a-time.</li>
+    <li><strong>Adjustable height interface</strong> — Entry tubes must be adjustable so they can mate to unknown third-party feed line heights. Current intent uses pinned joints so the tube can rotate at two ends and accommodate height/position changes.</li>
+    <li><strong>Removability</strong> — Tubes and mounts should come off quickly for cleaning and seasonal teardown (pins, rivets, and modular mount plate strategy).</li>
+  </ul>
+
+  <h3>Known issues &amp; risks</h3>
+  <ul>
+    <li><strong>Collision envelope</strong> — Entry tube and hinge must not interfere with fruit support/pusher, synchronization spring motion, or feeder shell cutouts.</li>
+    <li><strong>Column load</strong> — A column of oranges can create significant side loads and friction; tube ID, seams, and joint alignment should minimize snagging and jamming.</li>
+  </ul>
+
+  <h3>DFM &amp; manufacturing (China)</h3>
+  <ul>
+    <li><strong>Tube fabrication</strong> — Contractor to propose CN-available pipe/tube standard and manufacturing method (rolled + welded vs seamless) consistent with food-zone requirements.</li>
+    <li><strong>Hinge hardware</strong> — Contractor to propose pin materials, retention (clip/cotter), and anti-loosening in vibration/washdown environment.</li>
+    <li><strong>Rivet/weld interfaces</strong> — If rivets are used for modularity, contractor to propose hygienic riveting strategy (avoid crevices/pockets, sealant if needed) or alternate modular fastening.</li>
+  </ul>
+
+  <h3>Questions for contractor</h3>
+  <ol>
+    <li>Propose a robust adjustable-height interface to unknown third-party feed lines (pins/hinge geometry, adjustment range, and how to lock it rigidly).</li>
+    <li>Recommend tube standards and inner-surface requirements to reduce fruit jamming and improve cleanability.</li>
+    <li>Review collision envelopes and propose clearances/tolerances so entry tubes never interfere with pusher/spring/tube cutouts through the cycle.</li>
+  </ol>
+
+  <h3>Interfaces</h3>
+  <ul>
+    <li><strong>Input:</strong> Oranges from upstream sorter/lines.</li>
+    <li><strong>Output:</strong> Fruit column into 90° entry tube and onto sync spring in the <a href="../feeding-subassembly/index.html">feeding subassembly</a>.</li>
+    <li><strong>Mount:</strong> Pinned hinge at the 90° tube assembly and pinned interface to upstream feed line; riveted mount plates used for modularity.</li>
+  </ul>
+
+  <h3>接口与公差</h3>
+  <p class="muted">Key interfaces (tolerances TBD; contractor to propose).</p>
+  <table class="iface-table">
+    <thead><tr><th>Part</th><th>Interface / tolerance</th><th>Related</th></tr></thead>
+    <tbody>
+      <tr><td>Entry tube → 90° tube</td><td>Pinned hinge interface; must be rigid when locked and easy to disassemble</td><td><a href="../feeding-subassembly/index.html">Feeding subassembly</a></td></tr>
+      <tr><td>CIP nozzle port</td><td>Vertical tube welded to 90° entry tube; nozzle sprays down through entry tube/sync spring zone (geometry TBD)</td><td><a href="../../Clean-in-place/index.html">CIP</a></td></tr>
+    </tbody>
+  </table>
+
+  <p class="back"><a href="../index.html">← 返回 Fruit intake system</a></p>
+</body>
+</html>

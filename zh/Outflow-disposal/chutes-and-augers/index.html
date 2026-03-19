@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chutes and augers — Disposal — P6 RFP</title>
+  <style>
+    :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
+    a { color: var(--accent); }
+    h1 { font-size: 1.35rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.25rem; }
+    h3 { font-size: 1rem; margin-top: 1rem; color: var(--muted); }
+    ul, ol { padding-left: 1.25rem; }
+    .back { margin-bottom: 1rem; font-size: 0.9rem; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    .swatch { display: inline-block; width: 1.25rem; height: 1.25rem; border: 1px solid var(--border); border-radius: 3px; vertical-align: middle; }
+    table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+    th, td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
+    .iface-table th { color: var(--muted); font-weight: 600; }
+    .slideshow { margin: 1.5rem 0; }
+    .slideshow .slide { display: none; }
+    .slideshow .slide.active { display: block; }
+    .slideshow .slide img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
+    .slideshow-caption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); min-height: 2.5em; }
+    .slideshow-controls { display: flex; align-items: center; gap: 1rem; margin-top: 0.75rem; flex-wrap: wrap; }
+    .slideshow-controls button { background: var(--border); color: var(--text); border: none; padding: 0.35rem 0.75rem; border-radius: 4px; cursor: pointer; font-size: 0.9rem; }
+    .slideshow-controls button:hover { background: var(--accent); color: #fff; }
+    .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
+  </style>
+      <link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+<nav class="site-lang-bar" aria-label="Language">
+  <span class="lang-label">语言：</span>
+  <a href="../../../Outflow-disposal/chutes-and-augers/index.html">English</a>
+  <span aria-hidden="true">·</span>
+  <a href="index.html" aria-current="page">中文</a>
+  <span aria-hidden="true">·</span>
+  <a href="../../../pt/Outflow-disposal/chutes-and-augers/index.html">Português</a>
+</nav>
+
+<p class="back"><a href="../index.html">← 返回 Disposal system</a> · <a href="../../index.html">P6 RFP 总览</a></p>
+  <h1>Chutes and augers</h1>
+  <p class="muted">Folded/welded sheet-metal peel chute + welded core chute hexagonal tubes, feeding two separate auger paths (peels vs. cores).</p>
+
+  <h2>简介</h2>
+  <p>This subassembly separates <strong>peel</strong> and <strong>cores</strong> after the pressing stroke. Cores fall into <strong>core chute tubes</strong> beneath each peeler station, while peel material flows around the core tubes into the <strong>peel chute</strong>. The two resulting streams are conveyed away separately by <strong>two augers</strong>.</p>
+
+  <h2>颜色说明 &amp; components</h2>
+  <p class="muted">CAD colours for this subpage (component meanings should match the main disposal gallery).</p>
+  <table>
+    <tr><th>Colour(s)</th><th>Component</th></tr>
+    <tr><td><em>—</em></td><td><strong>Peel chute (folded sheet metal)</strong> — receives peel stream; provides geometry to route peel around the core chute tubes.</td></tr>
+    <tr><td><em>—</em></td><td><strong>Core chutes (hexagonal tubes)</strong> — receive ejected cores and keep them separate from peel.</td></tr>
+    <tr><td><em>—</em></td><td><strong>Two auger paths</strong> — convey peels and cores separately for different downstream processing (e.g., secondary wash for cores).</td></tr>
+  </table>
+
+  <h2 id="gallery">图示</h2>
+  <p class="muted">CAD (parent gallery), <strong>photo of the chute assembly</strong>, and a <strong>supplier auger reference diagram</strong>. Refer to <a href="#fig1">Figure 1</a>–<a href="#fig3">Figure 3</a>.</p>
+  <div class="slideshow" id="skel-chutesandaugers-slideshow">
+    <div class="slideshow-track">
+      <div class="slide active" id="fig1" data-caption="Figure 1. Peel chute + core chute tubes feeding two auger paths (CAD — same asset as disposal main gallery)."><img src="../../../Outflow-disposal/images/disposal-chute-augers.png" alt="Chute and augers CAD"></div>
+      <div class="slide" id="fig2" data-caption="Figure 2. Chute assembly — photograph (fabricated / installed context)."><img src="../../../Outflow-disposal/chutes-and-augers/images/Chutephoto.png" alt="Chute assembly photo"></div>
+      <div class="slide" id="fig3" data-caption="Figure 3. Auger — supplier-provided diagram (reference for routing, interface, and quoting; not P6-owned CAD)."><img src="../../../Outflow-disposal/chutes-and-augers/images/augerDiagram.png" alt="Supplier auger diagram"></div>
+    </div>
+    <p class="slideshow-caption" id="skel-chutesandaugers-caption" aria-live="polite">Figure 1. Peel chute + core chute tubes feeding two auger paths (CAD — same asset as disposal main gallery).</p>
+    <div class="slideshow-controls">
+      <button type="button" id="skel-chutesandaugers-prev" aria-label="Previous">← Previous</button>
+      <span class="slideshow-counter" id="skel-chutesandaugers-counter">1 / 3</span>
+      <button type="button" id="skel-chutesandaugers-next" aria-label="Next">Next →</button>
+    </div>
+  </div>
+
+  <h3>建议补充图示（便于承包商理解）</h3>
+  <ul class="muted">
+    <li><strong>Add figure</strong>: <strong>Peel chute lip</strong> — hex tube leading/trailing face geometry vs peel flow (dimensioned section).</li>
+    <li><strong>Add figure</strong>: <strong>Auger interface detail</strong> — P6-specific transition from <strong>this machine’s</strong> chute outlets to peel vs core augers (bolt pattern, seal, and diameters) — supplement <a href="#fig3">Figure 3</a> supplier reference.</li>
+    <li><strong>Add figure</strong>: <strong>Washdown drainage</strong> — slopes and drain holes in folded chute assembly.</li>
+  </ul>
+
+  <h2>讨论</h2>
+  <h3>部件</h3>
+  <ul>
+    <li><strong>Peel chute</strong> — welded/folded sheet metal assembly mounted to the frame; uses the chute lip geometry to prevent peel from entering core chute tubes.</li>
+    <li><strong>Core chute tubes</strong> — four hexagonal tubes beneath each peeler station; width covers the gap that allows core drop while keeping peel separated.</li>
+    <li><strong>Two augers</strong> — external auger/tube hardware to convey peel and cores away independently.</li>
+  </ul>
+  <h3>Interfaces</h3>
+  <ul>
+    <li><strong>Input (cores)</strong>: from <a href="../../Plug-ejection/index.html">core ejection</a>; cores fall into core chute tubes.</li>
+    <li><strong>Input (peels)</strong>: from <a href="../../Collection/index.html">collection</a> / extraction; peel flows to peel chute and around core tubes via chute geometry.</li>
+    <li><strong>Output</strong>: two auger takeoffs — one for peel, one for cores.</li>
+    <li><strong>Mount</strong>: folded chute assembly mounts to the frame and interfaces with side panels and the peel chute lip.</li>
+  </ul>
+  <h3>接口与公差</h3>
+  <p class="muted">Known interfaces and tolerances (owner intent). Links go to related subsystems.</p>
+  <table class="iface-table">
+    <thead><tr><th>Part</th><th>Interface / tolerance</th><th>Related</th></tr></thead>
+    <tbody>
+      <tr><td>Peel chute lip + side panels</td><td>NSF constraint: only negative steps allowed; no shelf that can trap fruit peel; top edges must not create positive ledges</td><td><a href="../../Collection/index.html">Collection</a>, <a href="../../Transmission/index.html">Transmission</a></td></tr>
+      <tr><td>Core chute tube geometry</td><td>Tube width must cover gap beneath peeler finger pattern without blocking core drop; designed to prevent peel entry into core stream</td><td><a href="../../Plug-ejection/index.html">Core ejection</a>, <a href="../../Collection/index.html">Collection</a></td></tr>
+      <tr><td>Auger takeoff positions</td><td>External-dependent; contractor to propose consistent auger interface and fastening scheme</td><td>—</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Known issues &amp; risks</h3>
+  <ul>
+    <li><strong>Peel/core separation quality</strong> — if peel contacts core chute tubes, downstream processing is mixed.</li>
+    <li><strong>Low-tolerance fit</strong> — peel chute lip and mounting edges must fit inside the extraction zone without positive steps/shelves.</li>
+    <li><strong>Cleanability</strong> — folded/welded geometry must avoid crevices that trap oil/fiber; ensure washdown access.</li>
+  </ul>
+
+  <h3>DFM &amp; manufacturing (China)</h3>
+  <ul>
+    <li><strong>Fold + weld assembly</strong> — peel chute and structural bases should be made as a single folded/welded sheet-metal assembly for manufacturability.</li>
+    <li><strong>Adjustable edge concept</strong> — bendy lips/edges on the peel chute should allow fine-tuning to match collection/transmission mount plate tolerances (no creation of positive steps).</li>
+    <li><strong>Finishing</strong> — define weld finish and surface smoothing to support cleanability (sanitary requirements TBD).</li>
+  </ul>
+
+  <h3>Questions for contractor</h3>
+  <ol>
+    <li>Propose auger interface requirements (diameter, takeoff angle/clearance, fastening), and identify what can be sourced locally in China.</li>
+    <li>Confirm how to manufacture the hexagonal core tubes and weld them to the peel chute while maintaining alignment and cleanable surfaces.</li>
+    <li>Define acceptable edge geometry for NSF compliance: what minimum radii and maximum shelf/step heights are acceptable.</li>
+  </ol>
+
+  <p class="back"><a href="../index.html">← 返回 Disposal system</a></p>
+  <script>
+(function(){
+  var el = document.getElementById('skel-chutesandaugers-slideshow');
+  if (!el) return;
+  var slides = el.querySelectorAll('.slide');
+  var cap = document.getElementById('skel-chutesandaugers-caption');
+  var counter = document.getElementById('skel-chutesandaugers-counter');
+  var n = slides.length, i = 0;
+  function go(k) { i = (k + n) % n; slides.forEach(function(s,j){ s.classList.toggle('active', j===i); }); if (cap) cap.textContent = slides[i].getAttribute('data-caption') || ''; if (counter) counter.textContent = (i+1) + ' / ' + n; }
+  el.querySelector('#skel-chutesandaugers-prev').addEventListener('click', function(){ go(i-1); });
+  el.querySelector('#skel-chutesandaugers-next').addEventListener('click', function(){ go(i+1); });
+  var hash = window.location.hash;
+  if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
+})();
+  </script>
+</body>
+</html>

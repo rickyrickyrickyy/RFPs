@@ -1,0 +1,88 @@
+/* P6 RFP — global mobile + language bar (all locales) */
+
+/* Language switcher */
+.site-lang-bar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem 0.75rem;
+  padding: 0.5rem 0.75rem;
+  margin: 0 0 1rem 0;
+  font-size: 0.875rem;
+  background: var(--card, #24282e);
+  border: 1px solid var(--border, #30363d);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+.site-lang-bar .lang-label {
+  color: var(--muted, #8b949e);
+  margin-right: 0.25rem;
+}
+.site-lang-bar a {
+  color: var(--accent, #58a6ff);
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.site-lang-bar a:hover {
+  text-decoration: underline;
+  background: rgba(88, 166, 255, 0.12);
+}
+.site-lang-bar a[aria-current="page"] {
+  font-weight: 600;
+  background: rgba(88, 166, 255, 0.2);
+  border: 1px solid var(--accent, #58a6ff);
+}
+
+/* Mobile layout */
+@media (max-width: 640px) {
+  body {
+    padding-left: max(0.75rem, env(safe-area-inset-left)) !important;
+    padding-right: max(0.75rem, env(safe-area-inset-right)) !important;
+    padding-top: max(0.5rem, env(safe-area-inset-top)) !important;
+    padding-bottom: max(1rem, env(safe-area-inset-bottom)) !important;
+  }
+  .wrap {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+  }
+  h1 { font-size: clamp(1.15rem, 5vw, 1.5rem) !important; word-break: break-word; }
+  h2 { font-size: clamp(1rem, 4vw, 1.1rem) !important; }
+  table {
+    display: block;
+    width: 100% !important;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    font-size: 0.82rem;
+  }
+  .slideshow-controls {
+    justify-content: center;
+  }
+  .slideshow-controls button {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 0.5rem 0.85rem;
+  }
+  nav li {
+    flex-wrap: wrap;
+  }
+}
+
+/* zh / pt readability */
+html[lang="zh-Hans"] body,
+html[lang="zh-Hans"] body * {
+  font-family: system-ui, "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+}
+html[lang="pt"] body,
+html[lang="pt"] body * {
+  font-family: system-ui, "Segoe UI", "Noto Sans", sans-serif;
+}

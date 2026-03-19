@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>11. Controls and electronics — P6 RFP</title>
+  <style>
+    :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
+    a { color: var(--accent); }
+    h1 { font-size: 1.35rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.25rem; }
+    ul { padding-left: 1.25rem; }
+    .back { margin-bottom: 1rem; font-size: 0.9rem; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    .tbd { color: var(--muted); font-style: italic; }
+  </style>
+      <link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<nav class="site-lang-bar" aria-label="Language">
+  <span class="lang-label">Idioma:</span>
+  <a href="../../Controls-Electronics/index.html">English</a>
+  <span aria-hidden="true">·</span>
+  <a href="../../zh/Controls-Electronics/index.html">中文</a>
+  <span aria-hidden="true">·</span>
+  <a href="index.html" aria-current="page">Português</a>
+</nav>
+
+<p class="back"><a href="../index.html">← Voltar a Visão geral do RFP P6</a></p>
+  <h1>11. Controls and electronics</h1>
+
+  <h2>Subpáginas</h2>
+  <ul>
+    <li><a href="machine-control-definition-and-ui/index.html">Machine control definition and UI</a> <span class="muted">(com conteúdo)</span> — stand-alone local control, buttons/indicators, LOTO.</li>
+    <li><a href="motor-power-management/index.html">Motor power management</a> <span class="muted">(com conteúdo)</span> — power protection, contactor/starter, waterproofing, current sensing.</li>
+    <li><a href="yoke-position-sensor/index.html">Yoke position sensor</a> <span class="muted">(com conteúdo)</span> — cycle sensing for stop-with-peelers-open and cycle counting (TBD implementation).</li>
+  </ul>
+
+  <h2>Introdução</h2>
+  <p>User interface, safety, motor power, and yoke position. The subsystem consists of the control panel, safety switches, motor power electronics, and the yoke position sensor (under development).</p>
+
+  <h2>Discussão</h2>
+  <h3>Rough design &amp; intent</h3>
+  <ul>
+    <li><strong>Stand-alone operation</strong> — Machine must be operable as a stand-alone unit (local ON/OFF) for independent operation, inspection, component replacement, and simple cleaning.</li>
+    <li><strong>Water protection</strong> — All electrical systems must be protected for rigorous industrial cleaning (enclosure/IP, glands, cable routing, and washdown practices).</li>
+    <li><strong>Data readiness</strong> — Control system should be prepared for data exchange (IoT / plant integration), even if not implemented on the first prototype.</li>
+  </ul>
+  <h3>User control panel</h3>
+  <p>Operator interface for power, run control, and status.</p>
+  <ul>
+    <li><strong>ON / START</strong> button — start machine operation.</li>
+    <li><strong>OFF / STOP</strong> button — stop machine operation.</li>
+    <li><strong>Emergency stop</strong> — hard stop; machine cannot run until reset.</li>
+    <li><strong>RUNNING</strong> indicator — shows machine running state.</li>
+    <li><strong>STOPPED</strong> indicator — shows machine stopped state.</li>
+    <li><strong>Machine open</strong> indicator — indicates any safety lid is open (interlock active).</li>
+  </ul>
+
+  <h3>Lockout / tagout (LOTO)</h3>
+  <p>Provide an easy-access rear LOTO unit to isolate power for service and seasonal teardown.</p>
+
+  <h3>Safety switches</h3>
+  <p>Safety switches on <strong>3 lids</strong> (e.g. plunger cover, drivetrain cover, feeder). Interlock logic must be fail-safe: when any lid is open, the machine shuts off and cannot run.</p>
+  <ul>
+    <li><strong>Coded safety switches</strong> — coded interlocks preferred for robustness.</li>
+    <li><strong>Coded lid switches (magnet code)</strong> — only the specified magnet/operator handle may actuate the lid safety switch (anti-misuse). Include fail-safe behavior and clear “machine open” indicator.</li>
+    <li><strong>Control-board integration</strong> — lid safety switch inputs must be integrated using the same breakout board + main board architecture as the commercial machine controls, so safety behavior matches existing systems.</li>
+    <li><strong>Stop with peelers/open condition</strong> — include a sensor/logic path that prevents operation (or triggers stop) if peelers/lids are in an unsafe state.</li>
+  </ul>
+
+  <h3>Motor control and power management</h3>
+  <p>AC power distribution and motor drive for the <a href="../Drivetrain/index.html">drivetrain</a> motor.</p>
+  <ul>
+    <li><strong>AC contactor</strong> — main power switching for the motor circuit.</li>
+    <li><strong>Motor starter / soft starter</strong> — controlled start/stop and protection for the main drive motor, including overcurrent protection.</li>
+    <li><strong>Internal control panel</strong> — breakers, relays, PCB/IO as needed (final architecture TBD).</li>
+    <li><strong>Wires and cable management</strong> — routing, glands, and management as needed for control panel, motor, and safety circuits.</li>
+    <li><strong>Motor:</strong> <strong>WEG W22</strong> — 50 Hz baseline for China (see <a href="motor-power-management/index.html">Motor power management</a> for details); vertical mount, shaft down (V5T style).</li>
+    <li><strong>Motor current sensing</strong> — instantaneous current measurement for spike detection and estimating throughput (fruit processed in a time period).</li>
+  </ul>
+
+  <h3>Yoke position sensor</h3>
+  <p>P6 requires a <a href="../Transmission/index.html">yoke</a> position/cycle sensor to support controlled safe stop conditions and a critical <strong>fully open stop</strong> behavior so internal parts can be serviced/removed. The exact sensor type and signal interface are TBD.</p>
+  <ul>
+    <li><strong>Cycle sensor</strong> — provide cycle counting (cycles per time period). This may be the same sensor as “open peelers stop” depending on final mechanism.</li>
+    <li><strong>Fully open stop position</strong> — when the machine is turned OFF / STOPPED in normal operation, the system must stop with the yoke at the <strong>fully open position</strong> (operator access/removal).</li>
+    <li><strong>Emergency/interlock shutdown</strong> — when E-stop is pressed or a coded lid safety switch indicates an open lid/interlock fault, the machine must shut down immediately (no reposition-to-open).</li>
+  </ul>
+
+  <h3>Estado</h3>
+  <p>System requirements captured. Still TBD: detailed electrical architecture (PLC/PCB choice), enclosure IP rating, wiring standards, and final sensor selection. Add photos and wiring diagrams as they are developed.</p>
+
+  <h2>Figuras recomendadas (clareza para o contratado)</h2>
+  <ul class="muted">
+    <li><strong>Add figure</strong>: <strong>System block diagram</strong> — E-stop, lid interlocks, motor contactor, sensor inputs (single page).</li>
+    <li><strong>Add figure</strong>: <strong>Enclosure IP concept</strong> — cabinet/gland layout for washdown (see <a href="motor-power-management/index.html">Motor power management</a>).</li>
+    <li><strong>Add figure</strong>: <strong>Sensor + safe states</strong> — see <a href="yoke-position-sensor/index.html">Yoke position sensor</a> callouts.</li>
+  </ul>
+</body>
+</html>

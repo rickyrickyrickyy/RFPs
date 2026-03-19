@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>P6 RFP — Delijuice 870/970 Industrial Prototype</title>
+  <style>
+    :root { --bg: #1a1d21; --card: #24282e; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; --draft: #8b949e; }
+    * { box-sizing: border-box; }
+    body { font-family: system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 0; }
+    .wrap { max-width: 56rem; margin: 0 auto; padding: 1.5rem; }
+    header { border-bottom: 1px solid var(--border); padding-bottom: 1rem; margin-bottom: 1.5rem; }
+    h1 { font-size: 1.5rem; font-weight: 600; margin: 0 0 0.25rem 0; }
+    .subtitle { color: var(--muted); font-size: 0.95rem; margin: 0; }
+    .intro { margin: 1rem 0 1.5rem 0; color: var(--text); font-size: 0.98rem; }
+    nav { margin: 1.5rem 0; }
+    nav h2 { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 0 0 0.6rem 0; }
+    nav ul { list-style: none; padding: 0; margin: 0; }
+    nav ul.nav-sub { margin-left: 1.25rem; margin-top: 0.2rem; margin-bottom: 0.35rem; padding-left: 0.75rem; border-left: 2px solid var(--border); }
+    nav li { margin: 0.35rem 0; display: flex; align-items: center; gap: 0.5rem; }
+    nav li.sub { margin: 0.2rem 0; font-size: 0.95rem; }
+    nav a { color: var(--accent); text-decoration: none; }
+    nav a:hover { text-decoration: underline; }
+    .badge { font-size: 0.7rem; padding: 0.15rem 0.45rem; border-radius: 4px; background: var(--card); color: var(--draft); border: 1px solid var(--border); }
+    .badge.ready { color: #7ee787; border-color: #238636; background: rgba(35,134,54,0.15); }
+    section { margin: 2rem 0; padding: 1rem 0; border-top: 1px solid var(--border); }
+    section.preamble { border-top: none; margin-top: 0; padding-top: 0; }
+    section h2 { font-size: 1.2rem; margin: 0 0 0.75rem 0; }
+    section h3 { font-size: 1rem; margin: 1rem 0 0.5rem 0; }
+    section ul { margin: 0.5rem 0; padding-left: 1.25rem; }
+    section li { margin: 0.25rem 0; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    .highlights { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem 1.25rem; margin: 1rem 0 0 0; font-size: 0.92rem; }
+    .highlights h2 { font-size: 1rem; margin: 0 0 0.5rem 0; color: var(--text); }
+    .highlights ul { margin: 0.35rem 0 0 0; padding-left: 1.2rem; }
+    .highlights li { margin: 0.3rem 0; }
+    footer { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; }
+  </style>
+      <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<nav class="site-lang-bar" aria-label="Language">
+  <span class="lang-label">语言：</span>
+  <a href="../index.html">English</a>
+  <span aria-hidden="true">·</span>
+  <a href="index.html" aria-current="page">中文</a>
+  <span aria-hidden="true">·</span>
+  <a href="../pt/index.html">Português</a>
+</nav>
+
+<div class="wrap">
+    <header>
+      <h1>P6 RFP — Delijuice 870/970</h1>
+      <p class="subtitle">Industrial prototype subsystem RFPs. Drawings target: April 1st (Sean/YES). JX operations: October.</p>
+    </header>
+
+    <section class="preamble">
+      <h2>简介</h2>
+      <p>P6 is the current industrial prototype (Delijuice 870/970). Jiangxi (JX) factory with LTA; miniplant 8,160 L/h, 6 extractors. Each subsystem section includes a gallery of figures and, where filled in, component lists, interfaces, and design notes. Refer to <a href="Overview/index.html">项目概览</a> for the full subsystem list and context.</p>
+      <p class="muted"><strong>CAD colours:</strong> 颜色说明s are <strong>per subsystem</strong>. Each section has its own legend for the figures in that section. Use the legend on the relevant subsystem page when reading its CAD views.</p>
+      <p class="intro">Use the links below to navigate. Sections <span class="badge ready">有内容</span> include CAD views and descriptions; <span class="badge">骨架页</span> pages have thinner structure (may still include figures); <span class="badge">待完成</span> are placeholders for future detail.</p>
+
+      <div class="highlights">
+        <h2>What’s filled in (highlights)</h2>
+        <ul class="muted" style="margin-top:0">
+          <li><strong>Frame → Loads and load paths</strong> — gallery + load discussion.</li>
+          <li><strong>Drivetrain &amp; transmission</strong> — full galleries, motor/reducer, gears/cam, both mount plates, yoke + drive-shaft figures.</li>
+          <li><strong>Extraction &amp; sync</strong> — main gallery; <strong>fruit support</strong>, <strong>peelers</strong>, <strong>driven bracket</strong> subpages with figures + contractor notes.</li>
+          <li><strong>Collection</strong> — main gallery; <strong>juice collection</strong> (collector/filter + side photos) and <strong>plungers &amp; filter</strong>.</li>
+          <li><strong>Fruit intake</strong> — main gallery; <strong>feeding subassembly</strong> (exploded + CIP/pusher/spring carousel), <strong>feeder body</strong> (iso + top), <strong>entry tubes</strong> (hinge + tube photos).</li>
+          <li><strong>Core ejection</strong> — main gallery; <strong>plunger drive bracket</strong> (assembly CAD + iso/top/front) + <strong>side-panel drive</strong> (CAD + photos).</li>
+          <li><strong>Disposal</strong> — main gallery; <strong>chutes &amp; augers</strong> (CAD + chute photo + supplier auger diagram); <strong>deflectors</strong> (CAD + deflector covering core/auger opening).</li>
+          <li><strong>Enclosure</strong> — main cover gallery; hinge/cover subpages reference shared CAD.</li>
+          <li><strong>CIP</strong> — nozzle gallery + third-party integration page.</li>
+          <li><strong>Controls</strong> — UI photo, motor power, yoke sensor requirements.</li>
+        </ul>
+        <p class="muted" style="margin:0.75rem 0 0 0; font-size:0.85rem;">Every subsystem page includes a <strong>建议补充图示</strong> list where more photos/diagrams would help contractors.</p>
+      </div>
+    </section>
+
+    <nav>
+      <h2>参考</h2>
+      <ul>
+        <li><a href="Overview/index.html">项目概览</a> — what P6 is, subsystems, scope</li>
+        <li><a href="Overview/Delijuice-cycle.html">Delijuice 压榨循环</a> — how the machine works (four steps, stroke timing)</li>
+        <li><a href="Overview/Questions-for-RFP.html">RFP 问题清单</a> — questions to answer per subsystem and subassembly</li>
+        <li><a href="Overview/BOM.html">物料清单（BOM）</a> — component names (EN / 中文 / PT) for translation</li>
+      </ul>
+      <h2>子系统 (1–11)</h2>
+      <p class="muted" style="margin: 0.25rem 0 0.5rem 0; font-size: 0.85rem;">Subassemblies are listed under each subsystem. Detail and interfaces are owner-provided; final tolerancing and assembly are for contractors.</p>
+      <ul>
+        <li><strong>1.</strong> <a href="Frame/index.html">Frame</a> <span class="badge ready">有内容</span>
+          <ul class="nav-sub">
+            <li class="sub"><a href="Frame/Loads-and-load-paths/Loads-and-load-paths.html">Loads and load paths</a> <span class="badge ready">有内容</span></li>
+          </ul>
+        </li>
+        <li><strong>2.</strong> <a href="Drivetrain/index.html">Drivetrain</a> <span class="badge ready">有内容</span>
+          <ul class="nav-sub">
+            <li class="sub"><a href="Drivetrain/motor-and-reducer/index.html">Motor and reducer</a> <span class="badge ready">有内容</span></li>
+            <li class="sub"><a href="Drivetrain/gears-and-cam-bearings/index.html">Gears and cam bearings</a> <span class="badge ready">有内容</span></li>
+            <li class="sub"><a href="Drivetrain/drivetrain-mount-plate/index.html">Drivetrain mount plate</a> <span class="badge ready">有内容</span></li>
+          </ul>
+        </li>
+        <li><strong>3.</strong> <a href="Transmission/index.html">Transmission system</a> <span class="badge ready">有内容</span>
+          <ul class="nav-sub">
+            <li class="sub"><a href="Transmission/transmission-mount-plate/index.html">Transmission mount plate</a> <span class="badge ready">有内容</span></li>
+            <li class="sub"><a href="Transmission/yoke/index.html">Yoke and drive shafts</a> <span class="badge ready">有内容</span></li>
+          </ul>
+        </li>
+        <li><strong>4.</strong> <a href="Extraction-syncronisation/index.html">Extraction &amp; synchronisation</a> <span class="badge ready">有内容</span>
+          <ul class="nav-sub">
+            <li class="sub"><a href="Extraction-syncronisation/fruit-support/index.html">Fruit support</a> <span class="badge ready">有内容</span></li>
+            <li class="sub"><a href="Extraction-syncronisation/peelers/index.html">Peelers</a> <span class="badge ready">有内容</span></li>
+            <li class="sub"><a href="Extraction-syncronisation/driven-bracket/index.html">Driven bracket</a> <span class="badge ready">有内容</span></li>
+          </ul>
+        </li>
+        <li><strong>5.</strong> <a href="Collection/index.html">Collection</a> <span class="badge ready">有内容</span>
+          <ul class="nav-sub">
+            <li class="sub"><a href="Collection/juice-collection/index.html">Juice collection</a> <span class="badge ready">有内容</span></li>
+            <li class="sub"><a href="Collection/plungers-and-filter/index.html">Plungers and filter</a> <span class="badge ready">有内容</span></li>
+          </ul>
+        </li>
+        <li><strong>6.</strong> <a href="Feeder/index.html">Fruit intake system</a> <span class="badge ready">有内容</span>
+          <ul class="nav-sub">
+            <li class="sub"><a href="Feeder/feeding-subassembly/index.html">Feeding subassembly</a> <span class="badge ready">有内容</span></li>
+            <li class="sub"><a href="Feeder/feeder-body/index.html">Feeder body</a> <span class="badge ready">有内容</span></li>
+            <li class="sub"><a href="Feeder/entry-tubes/index.html">Entry tubes</a> <span class="badge ready">有内容</span></li>
+          </ul>
+        </li>
+        <li><strong>7.</strong> <a href="Plug-ejection/index.html">Core ejection</a> <span class="badge ready">有内容</span>
+          <ul class="nav-sub">
+            <li class="sub"><a href="Plug-ejection/plunger-drive-bracket/index.html">Plunger drive bracket</a> <span class="badge ready">有内容</span></li>
+            <li class="sub"><a href="Plug-ejection/plunger-drive-system-in-side-panels/index.html">Plunger drive system in side panels</a> <span class="badge ready">有内容</span></li>
+          </ul>
+        </li>
+        <li><strong>8.</strong> <a href="Outflow-disposal/index.html">Disposal system</a> <span class="badge ready">有内容</span>
+          <ul class="nav-sub">
+            <li class="sub"><a href="Outflow-disposal/chutes-and-augers/index.html">Chutes and augers</a> <span class="badge ready">有内容</span></li>
+            <li class="sub"><a href="Outflow-disposal/deflectors/index.html">Deflectors</a> <span class="badge ready">有内容</span></li>
+          </ul>
+        </li>
+        <li><strong>9.</strong> <a href="Enclosure-shell/index.html">Enclosure / shell</a> <span class="badge ready">有内容</span>
+          <ul class="nav-sub">
+            <li class="sub"><a href="Enclosure-shell/protective-covers/index.html">Protective covers (plunger, drivetrain)</a> <span class="badge ready">有内容</span></li>
+            <li class="sub"><a href="Enclosure-shell/overcentered-hinges/index.html">Overcentered hinges</a> <span class="badge ready">有内容</span></li>
+          </ul>
+        </li>
+        <li><strong>10.</strong> <a href="Clean-in-place/index.html">Clean-in-place (CIP)</a> <span class="badge ready">有内容</span>
+          <ul class="nav-sub">
+            <li class="sub"><a href="Clean-in-place/cip-nozzles-and-feed-pipes/index.html">CIP Nozzles and feed pipes</a> <span class="badge ready">有内容</span></li>
+            <li class="sub"><a href="Clean-in-place/third-party-cip-control-equipment/index.html">Third-party CIP control equipment</a> <span class="badge ready">有内容</span></li>
+          </ul>
+        </li>
+        <li><strong>11.</strong> <a href="Controls-Electronics/index.html">Controls and electronics</a> <span class="badge ready">有内容</span>
+          <ul class="nav-sub">
+            <li class="sub"><a href="Controls-Electronics/machine-control-definition-and-ui/index.html">Machine control definition and UI</a> <span class="badge ready">有内容</span></li>
+            <li class="sub"><a href="Controls-Electronics/motor-power-management/index.html">Motor power management</a> <span class="badge ready">有内容</span></li>
+            <li class="sub"><a href="Controls-Electronics/yoke-position-sensor/index.html">Yoke position sensor</a> <span class="badge ready">有内容</span></li>
+          </ul>
+        </li>
+      </ul>
+      <h2>更多</h2>
+      <ul>
+        <li><a href="3rd-party/index.html">Third-party and site integration</a> <span class="badge">待完成</span></li>
+        <li><span class="muted">后续开发</span> <span class="badge">待完成</span></li>
+      </ul>
+    </nav>
+    
+    <footer>
+      最后更新： 2026-03-20.
+    </footer>
+  </div>
+</body>
+</html>

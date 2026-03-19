@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Feeding subassembly — P6 RFP</title>
+  <style>
+    :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
+    a { color: var(--accent); }
+    h1 { font-size: 1.35rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.25rem; }
+    ul, ol { padding-left: 1.25rem; }
+    .back { margin-bottom: 1rem; font-size: 0.9rem; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    .swatch { display: inline-block; width: 1.25rem; height: 1.25rem; border: 1px solid var(--border); border-radius: 3px; vertical-align: middle; }
+    table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+    th, td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
+    .slideshow { margin: 1.5rem 0; }
+    .slideshow .slide { display: none; }
+    .slideshow .slide.active { display: block; }
+    .slideshow .slide img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
+    .slideshow-caption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); min-height: 2.5em; }
+    .slideshow-controls { display: flex; align-items: center; gap: 1rem; margin-top: 0.75rem; flex-wrap: wrap; }
+    .slideshow-controls button { background: var(--border); color: var(--text); border: none; padding: 0.35rem 0.75rem; border-radius: 4px; cursor: pointer; font-size: 0.9rem; }
+    .slideshow-controls button:hover { background: var(--accent); color: #fff; }
+    .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
+    .param-block { margin: 1rem 0; padding: 0.75rem 1rem; background: rgba(88, 166, 255, 0.08); border: 1px solid var(--border); border-radius: 6px; font-size: 0.95rem; }
+    .param-block h3 { margin: 0 0 0.5rem 0; font-size: 1rem; }
+    .figure-standalone { margin: 1.25rem 0; }
+    .figure-standalone img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
+    .figure-standalone figcaption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); }
+  </style>
+      <link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+<nav class="site-lang-bar" aria-label="Language">
+  <span class="lang-label">语言：</span>
+  <a href="../../../Feeder/feeding-subassembly/index.html">English</a>
+  <span aria-hidden="true">·</span>
+  <a href="index.html" aria-current="page">中文</a>
+  <span aria-hidden="true">·</span>
+  <a href="../../../pt/Feeder/feeding-subassembly/index.html">Português</a>
+</nav>
+
+<p class="back"><a href="../index.html">← 返回 Feeder</a></p>
+  <h1>Feeding subassembly</h1>
+  <p class="muted">Part of the <a href="../index.html">Fruit intake system</a>. Feeds oranges one at a time to the <a href="../../Extraction-syncronisation/index.html">extraction/synchronisation</a> mechanism.</p>
+
+  <h2>Description</h2>
+  <p>The feeding subassembly regulates the flow of oranges from the entry tubes and releases them one at a time onto the fruit support. Rollers on the extraction/synchronisation system push open the yellow sync spring to allow a single orange to drop. The whole subassembly is mounted to a tan mount plate <span class="swatch" style="background-color:#AF782E" title="#AF782E"></span>, which is then mounted onto the feeder body.</p>
+
+  <h2>Assembly structure</h2>
+  <ul>
+    <li><strong>Mount plate</strong> <span class="swatch" style="background-color:#AF782E" title="#AF782E"></span> — tan; base of subassembly; mounts to feeder body.</li>
+    <li><strong>Entry tube assembly</strong> (welded unit, riveted to mount plate):
+      <ul>
+        <li><strong>Flanged 90° entry tube</strong> <span class="swatch" style="background-color:#8DC62E" title="#8DC62E"></span> — green; curved tube where oranges roll down to the feed.</li>
+        <li><strong>Entry tube flange</strong> <span class="swatch" style="background-color:#D83177" title="#D83177"></span> — pink.</li>
+        <li><strong>Entry tube mount plate</strong> <span class="swatch" style="background-color:#7DF47C" title="#7DF47C"></span> — light green.</li>
+      </ul>
+    </li>
+    <li><strong>Flanged straight tube and spring guide</strong> (welded unit, riveted to mount plate):
+      <ul>
+        <li><strong>Flange</strong> <span class="swatch" style="background-color:#EBC17E" title="#EBC17E"></span> — beige.</li>
+        <li><strong>Straight tube</strong> <span class="swatch" style="background-color:#8164C3" title="#8164C3"></span> — purple.</li>
+        <li><strong>Spring guide</strong> <span class="swatch" style="background-color:#2B719A" title="#2B719A"></span> — dark blue/teal.</li>
+      </ul>
+    </li>
+    <li><strong>Sync spring mechanism</strong> — yellow sync spring; pushed open by rollers on the extraction/sync system to drop an orange onto the fruit support. The sync spring is mounted to 2× dark green sync spring mounts on two pink rollers.</li>
+  </ul>
+
+  <h2>颜色说明 (this subassembly’s figures)</h2>
+  <p class="muted">Applies only to the CAD views in this section. Other subsystems use their own colour sets.</p>
+  <table>
+    <tr><th>Colour</th><th>Component</th></tr>
+    <tr><td><span class="swatch" style="background-color:#AF782E" title="#AF782E"></span></td><td><strong>Mount plate</strong> — tan; subassembly base; mounts to feeder body</td></tr>
+    <tr><td><span class="swatch" style="background-color:#8DC62E" title="#8DC62E"></span></td><td><strong>Flanged 90° entry tube</strong> — green; curved tube for orange flow</td></tr>
+    <tr><td><span class="swatch" style="background-color:#D83177" title="#D83177"></span></td><td><strong>Entry tube flange</strong> — pink; and <strong>pink rollers</strong> (sync spring mounts)</td></tr>
+    <tr><td><span class="swatch" style="background-color:#7DF47C" title="#7DF47C"></span></td><td><strong>Entry tube mount plate</strong> — light green; rivets/welds the 90° tube assembly to the mount plate and sets tube position.</td></tr>
+    <tr><td><span class="swatch" style="background-color:#EBC17E" title="#EBC17E"></span></td><td><strong>Flange</strong> (straight tube assembly) — beige; bolted interface for the straight tube/spring-guide unit.</td></tr>
+    <tr><td><span class="swatch" style="background-color:#8164C3" title="#8164C3"></span></td><td><strong>Straight tube</strong> — purple; guides fruit to the sync spring opening and sets the release location above fruit support.</td></tr>
+    <tr><td><span class="swatch" style="background-color:#2B719A" title="#2B719A"></span></td><td><strong>Spring guide</strong> — dark blue/teal; locates the sync spring path and prevents snagging/misalignment.</td></tr>
+    <tr><td><span class="swatch" style="background-color:#F1E33D" title="#F1E33D"></span></td><td><strong>Sync spring</strong> — yellow; pushed open by extraction/sync rollers</td></tr>
+    <tr><td><span class="swatch" style="background-color:#4A813C" title="#4A813C"></span></td><td><strong>Sync spring mounts</strong> — dark green (2×); clamp/locate the spring and transfer roller force into spring deflection.</td></tr>
+  </table>
+
+  <h2 id="gallery">图示</h2>
+  <p class="muted">The <strong>exploded labeled</strong> view below is a <strong>static reference</strong> and is <strong>not</strong> part of the rotating gallery. The numbered carousel shows the current set: assembly with <strong>CIP nozzle</strong> installed, standard orthographic views, sync-spring detail, and <strong>pusher / roller vs sync-spring</strong> interaction.</p>
+
+  <h3>Exploded / labeled assembly (static)</h3>
+  <figure class="figure-standalone" id="fig-exploded">
+    <img src="../../../Feeder/feeding-subassembly/exploded.png" alt="Exploded labeled feeding subassembly">
+    <figcaption>Exploded, labeled view of major components (reference only — excluded from the gallery below).</figcaption>
+  </figure>
+
+  <h3>Assembly &amp; interaction gallery</h3>
+  <p class="muted">Refer to <a href="#fig1">Figure 1</a> through <a href="#fig6">Figure 6</a> in the carousel.</p>
+  <div class="slideshow" id="feedsub-slideshow">
+    <div class="slideshow-track">
+      <div class="slide active" id="fig1" data-caption="Figure 1. Isometric — full subassembly with CIP nozzle/feed visible; mount plate, 90° entry tube, straight tube, spring guide, sync spring."><img src="../../../Feeder/feeding-subassembly/images/isoview.png" alt="Feeding subassembly isometric with CIP nozzle"></div>
+      <div class="slide" id="fig2" data-caption="Figure 2. Side — CIP path, tubes, and sync-spring region."><img src="../../../Feeder/feeding-subassembly/images/sideview.png" alt="Feeding subassembly side view"></div>
+      <div class="slide" id="fig3" data-caption="Figure 3. Bottom — mount plate, tubes, spring guide, and hardware from below."><img src="../../../Feeder/feeding-subassembly/images/bottomview.png" alt="Feeding subassembly bottom view"></div>
+      <div class="slide" id="fig4" data-caption="Figure 4. Sync spring close-up — spring guide, spring, and roller / contact zone."><img src="../../../Feeder/feeding-subassembly/images/springclosup.png" alt="Sync spring close-up"></div>
+      <div class="slide" id="fig5" data-caption="Figure 5. Pusher / extraction roller interaction — how the roller opens the sync spring."><img src="../../../Feeder/feeding-subassembly/images/pusherinteraction.png" alt="Pusher and sync spring interaction"></div>
+      <div class="slide" id="fig6" data-caption="Figure 6. Alternate interaction view — roller vs spring through stroke."><img src="../../../Feeder/feeding-subassembly/images/interaction2.png" alt="Second view of pusher and sync spring"></div>
+    </div>
+    <p class="slideshow-caption" id="feedsub-caption" aria-live="polite">Figure 1. Isometric — full subassembly with CIP nozzle/feed visible; mount plate, 90° entry tube, straight tube, spring guide, sync spring.</p>
+    <div class="slideshow-controls">
+      <button type="button" id="feedsub-prev" aria-label="Previous">← Previous</button>
+      <span class="slideshow-counter" id="feedsub-counter">1 / 6</span>
+      <button type="button" id="feedsub-next" aria-label="Next">Next →</button>
+    </div>
+  </div>
+
+  <h3>建议补充图示（便于承包商理解）</h3>
+  <ul class="muted">
+    <li><strong>Add figure</strong>: dimensioned <strong>CIP nozzle pocket / cut-out</strong> on the 90° tube if contractors need tighter fab tolerances than the photos imply.</li>
+    <li><strong>Add figure</strong>: <strong>rivet / modular mount pattern</strong> on the tan mount plate (drill-out swap concept) with callouts.</li>
+    <li><strong>Add figure</strong>: short <strong>sequence</strong> (3–4 stills or clip) of roller stroke vs sync spring from “closed” to “fully open” for timing review.</li>
+  </ul>
+
+  <h2>Spring sizing design parameters</h2>
+  <ul>
+    <li>Spring placed at 45° angle to tube (110 mm forward of tube center, 250 mm behind).</li>
+    <li>Fruit support pusher is placed 5 mm away from tube at closest point to prevent collision.</li>
+    <li>Pusher extends the spring 5 mm past the outside of the tube.</li>
+    <li>Pusher range 178 mm as determined by 870 drivetrain.</li>
+  </ul>
+  <div class="param-block">
+    <h3>Spring specification</h3>
+    <ul style="margin: 0;">
+      <li>Static length = 250 mm</li>
+      <li>Wire diameter = 2 mm</li>
+      <li>Outer diameter = 22 mm</li>
+      <li>In the static position, the spring is 250 mm in length; in the stretched position, 306 mm.</li>
+    </ul>
+  </div>
+
+  <h2>90° pipe parameters</h2>
+  <p>Refers to the flanged 90° entry tube <span class="swatch" style="background-color:#8DC62E" title="#8DC62E"></span>.</p>
+  <ul>
+    <li><strong>Standard:</strong> 3″ NPS / 90 DN Pipe, Schedule 5S — manufacturers should choose whatever is available to them in China with similar specs.</li>
+    <li><strong>Food-zone flow constraint:</strong> target <strong>inner diameter</strong> is ~<strong>90 mm</strong> (choose the closest China-available pipe meeting the internal flow diameter requirement).</li>
+    <li><strong>Dimensions:</strong> 88.9 mm OD, 2.11 mm wall thickness.</li>
+    <li>Slotted index for welded flanges.</li>
+    <li>Curved tube cut at 62°.</li>
+    <li><strong>Vertical cut-out for CIP spray nozzle</strong> — included in the latest CAD; photos/figures should be refreshed to show the final nozzle position.</li>
+  </ul>
+
+  <h2>Interfaces</h2>
+  <ul>
+    <li><strong>Input:</strong> Oranges from beige entry tubes (feeder top-level) roll into the 90° entry tube.</li>
+    <li><strong>Output:</strong> Rollers on the <a href="../../Extraction-syncronisation/index.html">extraction/synchronisation</a> system push open the yellow sync spring; one orange drops onto the fruit support.</li>
+    <li><strong>Mount:</strong> Subassembly mount plate attaches to the feeder body.</li>
+  </ul>
+
+  <div class="param-block">
+    <h3>Fruit placement guardrail (left/right tube alignment)</h3>
+    <ul style="margin: 0;">
+      <li>Verify that the left/right tube positions release fruit directly onto the correct rails/landing zones on the <a href="../../Extraction-syncronisation/fruit-support/index.html">fruit support</a>.</li>
+      <li>Treat tube lateral placement as a functional tolerance because misplacement increases jam/collision risk.</li>
+    </ul>
+  </div>
+
+  <p class="back"><a href="../index.html">← 返回 Feeder</a></p>
+  <script>
+(function(){
+  var el = document.getElementById('feedsub-slideshow');
+  if (!el) return;
+  var slides = el.querySelectorAll('.slide');
+  var cap = document.getElementById('feedsub-caption');
+  var counter = document.getElementById('feedsub-counter');
+  var n = slides.length;
+  var i = 0;
+  function go(k) { i = (k + n) % n; slides.forEach(function(s,j){ s.classList.toggle('active', j===i); }); if (cap) cap.textContent = slides[i].getAttribute('data-caption') || ''; if (counter) counter.textContent = (i+1) + ' / ' + n; }
+  el.querySelector('#feedsub-prev').addEventListener('click', function(){ go(i-1); });
+  el.querySelector('#feedsub-next').addEventListener('click', function(){ go(i+1); });
+  var hash = window.location.hash;
+  if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
+})();
+  </script>
+</body>
+</html>

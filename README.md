@@ -58,6 +58,12 @@ Short snapshot so Marceline and Cursor have current context. Update when priorit
 - **Entry point:** **index.html** at the repo root. No build step.
 - **Later (Cloudflare):** When ready, connect the same repo to Cloudflare Pages (or Workers) and point your domain there.
 
+### Languages (English / 中文 / Português)
+
+- **English** pages live at their normal paths (e.g. `index.html`, `Feeder/index.html`).
+- **Chinese** mirrors are under **`zh/`**, **Portuguese** under **`pt/`**, with the same relative structure. Use the sticky **language bar** on each page to switch.
+- **Regenerate** mirrored pages and the language bar after editing English HTML: from the repo root run `python tools/build_i18n.py`. Shared styles and mobile tweaks are in **`assets/site.css`**. (Body text in zh/pt is still mostly English except common UI strings replaced by the script; extend `tools/build_i18n.py` if you need fuller translation.)
+
 ## Layout
 
 | Folder / file | Purpose |
@@ -67,6 +73,9 @@ Short snapshot so Marceline and Cursor have current context. Update when priorit
 | **memory/** | Marceline’s session summaries and project state (`*.memory.md`). |
 | **Overview/** | P6 context summary, subsystem lists, session summaries. |
 | **index.html** | RFP-only entry: overview, nav (with content / to be completed). Marceline and hosting info stay in this README. |
+| **zh/**, **pt/** | Chinese and Portuguese HTML mirrors (run `python tools/build_i18n.py` after editing English). |
+| **assets/site.css** | Shared layout: language bar, mobile-friendly rules. |
+| **tools/build_i18n.py** | Builds `zh/` + `pt/` from English `.html` and injects the language switcher. |
 | **Frame/** | Frame subsystem RFP draft. |
 | **Enclosure-shell/** | Enclosure / shell (related to Frame). |
 | **Feeder/**, **Plug-ejection/**, **Drivetrain/**, etc. | Subsystem RFP sections (each with index.html + README.md). |

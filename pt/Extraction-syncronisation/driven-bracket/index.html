@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Driven bracket — Extraction & synchronisation — P6 RFP</title>
+  <style>
+    :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
+    a { color: var(--accent); }
+    h1 { font-size: 1.35rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.25rem; }
+    h3 { font-size: 1rem; margin-top: 1rem; color: var(--muted); }
+    ul, ol { padding-left: 1.25rem; }
+    .back { margin-bottom: 1rem; font-size: 0.9rem; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    .swatch { display: inline-block; width: 1.25rem; height: 1.25rem; border: 1px solid var(--border); border-radius: 3px; vertical-align: middle; }
+    table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+    th, td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
+    .iface-table th { color: var(--muted); font-weight: 600; }
+    .slideshow { margin: 1.5rem 0; }
+    .slideshow .slide { display: none; }
+    .slideshow .slide.active { display: block; }
+    .slideshow .slide img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
+    .slideshow-caption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); min-height: 2.5em; }
+    .slideshow-controls { display: flex; align-items: center; gap: 1rem; margin-top: 0.75rem; flex-wrap: wrap; }
+    .slideshow-controls button { background: var(--border); color: var(--text); border: none; padding: 0.35rem 0.75rem; border-radius: 4px; cursor: pointer; font-size: 0.9rem; }
+    .slideshow-controls button:hover { background: var(--accent); color: #fff; }
+    .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
+  </style>
+      <link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+<nav class="site-lang-bar" aria-label="Language">
+  <span class="lang-label">Idioma:</span>
+  <a href="../../../Extraction-syncronisation/driven-bracket/index.html">English</a>
+  <span aria-hidden="true">·</span>
+  <a href="../../../zh/Extraction-syncronisation/driven-bracket/index.html">中文</a>
+  <span aria-hidden="true">·</span>
+  <a href="index.html" aria-current="page">Português</a>
+</nav>
+
+<p class="back"><a href="../index.html">← Voltar a Extraction & synchronisation</a> · <a href="../../index.html">Visão geral do RFP P6</a></p>
+  <h1>Driven bracket</h1>
+  <p class="muted">Part of the <a href="../index.html">Extraction & synchronisation</a> section. Primary structural bracket that carries transmission loads and mounts four driven peeler modules, fruit support, and chute deflectors.</p>
+
+  <h2>Introdução</h2>
+  <p>The driven bracket is one of the highest-load components in the machine: the transmission shafts push the extraction module through this bracket, while four driven peeler stations mount to it. It also supports the fruit support assembly and provides mounting for peel chute deflectors. It must be stiff, food-safe/cleanable, and tolerant of washdown.</p>
+
+  <h2>Legenda de cores &amp; components</h2>
+  <p class="muted">Key components and intent (colours may vary across CAD figures).</p>
+  <table>
+    <tr><th>Colour(s)</th><th>Component</th></tr>
+    <tr><td><em>—</em></td><td><strong>Driven bracket</strong> — sand-cast concept with post-machining; sloped top faces for drainage; no pockets/shelves.</td></tr>
+    <tr><td><em>—</em></td><td><strong>Peeler mounting pads</strong> — four stations; adjustable mount holes + reamed/shoulder-bolt holes to lock alignment.</td></tr>
+    <tr><td><em>—</em></td><td><strong>Shaft mounting bores</strong> — 35 mm shaft interfaces; concept includes machined bores (potentially H7) for alignment.</td></tr>
+    <tr><td><em>—</em></td><td><strong>Fruit support mounts</strong> — bolting interface to attach fruit support flush with no crevices; supports 3° forward slope requirement.</td></tr>
+    <tr><td><em>—</em></td><td><strong>Chute deflector mounts (WIP)</strong> — mounting surfaces for formed/bent deflectors to route peel into peel chute and keep peel out of core chute during compression.</td></tr>
+  </table>
+
+  <h2 id="gallery">Figuras</h2>
+  <p class="muted">Driven bracket context is shown in the <a href="../../../Extraction-syncronisation/index.html#gallery">Extraction main gallery</a>. Add dedicated bracket closeups here later.</p>
+  <h3>Figuras recomendadas (clareza para o contratado)</h3>
+  <ul class="muted">
+    <li><strong>Add figure</strong>: cast bracket pre-machining vs post-machining (highlight machined pads/bores and drainage slopes).</li>
+    <li><strong>Add figure</strong>: shaft bores and peeler mount hole pattern (which holes are adjustment vs which are reamed/shoulder-bolted).</li>
+    <li><strong>Add figure</strong>: fruit support interface showing 3° forward slope requirement and flush mounting (no crevice).</li>
+    <li><strong>Add figure</strong>: chute deflector intent: cover core chutes during compression and route peel into peel chute.</li>
+  </ul>
+
+  <h2>Discussão</h2>
+  <h3>Rough design &amp; intent</h3>
+  <ul>
+    <li><strong>Estado</strong> — Cast version designed (pre-machining and post-machining). No welded version defined yet, but contractor may propose a welded alternative if better.</li>
+    <li><strong>Stiffness</strong> — Bracket carries large bending moments from transmission push + four peeler stations; ribs and section thickness must be sized for worst-case jam/hard-object events.</li>
+    <li><strong>Washdown</strong> — Must be spray-down cleanable: sloped top faces, no pockets/shelves, smooth surfaces; consider finishing processes for cast part to eliminate crevices.</li>
+  </ul>
+
+  <h3>Known issues &amp; risks</h3>
+  <ul>
+    <li><strong>Rib thickness TBD</strong> — Rib thickness and overall section sizing are indeterminate until load cases are validated.</li>
+    <li><strong>Shaft alignment</strong> — 35 mm shafts must mount flat and aligned; concept uses bores that shafts can slot into and be machined/reamed for alignment (potential H7 concept).</li>
+    <li><strong>Deflectors WIP</strong> — Current deflector mounting is flimsy; needs a stiff, collision-free formed design.</li>
+    <li><strong>Fastener hygiene</strong> — Inside splash zone: avoid Phillips/slotted; prefer hex heads and avoid fastener pockets that trap pulp.</li>
+  </ul>
+
+  <h3>DFM &amp; manufacturing (China)</h3>
+  <ul>
+    <li><strong>Casting + post-machining</strong> — Contractor to coordinate with casting vendor on rib thickness, draft, parting, and surface quality; then define machining plan for critical pads/bores and hygiene-facing surfaces.</li>
+    <li><strong>Surface finishing</strong> — Recommend finishing method(s) to make cast surfaces cleanable (reduce roughness and remove crevice-like texture).</li>
+    <li><strong>Hole strategy for peelers</strong> — Owner intent: 2 holes for loose-fit adjustment, then drill/ream the other 2 holes for shoulder bolts to lock peeler position repeatably.</li>
+  </ul>
+
+  <h3>Questions for contractor</h3>
+  <ol>
+    <li>Validate load cases for the driven bracket (including jam/hard-object case) and propose rib thickness/section sizing with an appropriate factor of safety.</li>
+    <li>Recommend the best manufacturing route (cast vs welded) for stiffness + hygiene + China supply chain, including post-processing and inspection.</li>
+    <li>Propose the shaft mounting and alignment method (machined bores/pilots, H7 where appropriate) and inspection checks.</li>
+    <li>Propose a deflector design + mounting method that is stiff, formed/bent, and collision-free, and that reliably routes peel into peel chute and keeps peel out of core chute.</li>
+  </ol>
+
+  <h3>Interfaces</h3>
+  <ul>
+    <li><strong>Input:</strong> Transmission push via shafts/yoke drives this bracket into compression against collection.</li>
+    <li><strong>Output:</strong> Carries driven peelers and fruit support; defines extraction geometry; supports peel routing via deflectors.</li>
+    <li><strong>Mount:</strong> Interfaces with transmission/drive shafts, fruit support, peelers, and disposal/collection via chutes/deflectors.</li>
+  </ul>
+  <h3>Interfaces e tolerâncias</h3>
+  <p class="muted">Known interfaces and tolerances. Links go to related subsystems.</p>
+  <table class="iface-table">
+    <thead><tr><th>Part</th><th>Interface / tolerance</th><th>Related</th></tr></thead>
+    <tbody>
+      <tr><td>Peeler mounts</td><td>Adjust-then-lock workflow: 2 loose-fit holes for adjustment, then drill/ream other 2 corners for shoulder bolts/dowels</td><td><a href="../peelers/index.html">Peelers</a>, <a href="../../Collection/index.html">Collection</a></td></tr>
+      <tr><td>35 mm shaft interfaces</td><td>Machined bores/pilots for alignment (H7 concept possible); exact scheme TBD</td><td><a href="../../Transmission/index.html">Transmission</a></td></tr>
+      <tr><td>Fruit support</td><td>Mount flush, no crevice; maintain 3° forward slope and bowl shape (side rails shorter than center rails)</td><td><a href="../fruit-support/index.html">Fruit support</a>, <a href="../../Feeder/index.html">Fruit intake system</a></td></tr>
+      <tr><td>Chute deflectors</td><td>Cover core chutes during compression and route peel into peel chute; WIP</td><td><a href="../../Outflow-disposal/index.html">Disposal system</a></td></tr>
+    </tbody>
+  </table>
+
+  <p class="back"><a href="../index.html">← Voltar a Extraction & synchronisation</a></p>
+</body>
+</html>

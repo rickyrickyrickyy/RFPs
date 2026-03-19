@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Transmission mount plate — Transmission — P6 RFP</title>
+  <style>
+    :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
+    a { color: var(--accent); }
+    h1 { font-size: 1.35rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.25rem; }
+    h3 { font-size: 1rem; margin-top: 1rem; color: var(--muted); }
+    ul, ol { padding-left: 1.25rem; }
+    .back { margin-bottom: 1rem; font-size: 0.9rem; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    .swatch { display: inline-block; width: 1.25rem; height: 1.25rem; border: 1px solid var(--border); border-radius: 3px; vertical-align: middle; }
+    table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+    th, td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
+    .iface-table th { color: var(--muted); font-weight: 600; }
+    .slideshow { margin: 1.5rem 0; }
+    .slideshow .slide { display: none; }
+    .slideshow .slide.active { display: block; }
+    .slideshow .slide img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
+    .slideshow-caption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); min-height: 2.5em; }
+    .slideshow-controls { display: flex; align-items: center; gap: 1rem; margin-top: 0.75rem; flex-wrap: wrap; }
+    .slideshow-controls button { background: var(--border); color: var(--text); border: none; padding: 0.35rem 0.75rem; border-radius: 4px; cursor: pointer; font-size: 0.9rem; }
+    .slideshow-controls button:hover { background: var(--accent); color: #fff; }
+    .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
+  </style>
+      <link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+<nav class="site-lang-bar" aria-label="Language">
+  <span class="lang-label">语言：</span>
+  <a href="../../../Transmission/transmission-mount-plate/index.html">English</a>
+  <span aria-hidden="true">·</span>
+  <a href="index.html" aria-current="page">中文</a>
+  <span aria-hidden="true">·</span>
+  <a href="../../../pt/Transmission/transmission-mount-plate/index.html">Português</a>
+</nav>
+
+<p class="back"><a href="../index.html">← 返回 Transmission system</a> · <a href="../../index.html">P6 RFP 总览</a></p>
+  <h1>Transmission mount plate</h1>
+  <p class="muted">Part of the <a href="../index.html">Transmission</a> section. Main structural plate that supports shaft mounts and linear bearings and preserves alignment under compression loads and jam cases.</p>
+
+  <h2>简介</h2>
+  <p>This plate mounts onto the frame rails and supports the 35 mm shaft guidance and linear bearing mounts for the yoke. It strongly influences shaft parallelism, binding risk, and alignment between extraction and collection peelers. Two candidate architectures exist: a sand-cast + post-machined plate and a welded + stress-relieved + machined plate.</p>
+
+  <h2>颜色说明 &amp; components</h2>
+  <p class="muted">Key components and intent (colours may vary across figures).</p>
+  <table>
+    <tr><th>Colour(s)</th><th>Component</th></tr>
+    <tr><td><em>—</em></td><td><strong>Transmission mount plate</strong> — supports shaft mounts and linear bearing mounts; must be stiff and alignment-repeatable.</td></tr>
+    <tr><td><em>—</em></td><td><strong>Bearing mount pads</strong> — machined regions on the back face (negative-Z) where linear bearing mounts attach; flatness required.</td></tr>
+    <tr><td><em>—</em></td><td><strong>Bottom flange</strong> — L-bracket style flange used for bolting to rails/cross-members; locating via dowels is TBD.</td></tr>
+  </table>
+
+  <h2 id="gallery">图示</h2>
+  <p class="muted">Cast bearing-mount plate: pre-machining vs post-machining states, parting line / split surface, and machined bearing pad context. See also <a href="../../../Transmission/index.html#gallery">Transmission main gallery</a>.</p>
+  <div class="slideshow" id="tx-mount-slideshow">
+    <div class="slideshow-track">
+      <div class="slide active" id="fig1" data-caption="Figure 1. Bearing mount plate (cast) — pre-machining state 1."><img src="../../../Transmission/transmission-mount-plate/images/premachining1.png" alt="Pre-machining 1"></div>
+      <div class="slide" id="fig2" data-caption="Figure 2. Bearing mount plate (cast) — post-machining state 1."><img src="../../../Transmission/transmission-mount-plate/images/postmachining1.png" alt="Post-machining 1"></div>
+      <div class="slide" id="fig3" data-caption="Figure 3. Bearing mount plate (cast) — pre-machining state 2."><img src="../../../Transmission/transmission-mount-plate/images/premachining2.png" alt="Pre-machining 2"></div>
+      <div class="slide" id="fig4" data-caption="Figure 4. Bearing mount plate (cast) — post-machining state 2."><img src="../../../Transmission/transmission-mount-plate/images/postmachining2.png" alt="Post-machining 2"></div>
+      <div class="slide" id="fig5" data-caption="Figure 5. Casting — parting line / mould split (reference for DFM)."><img src="../../../Transmission/transmission-mount-plate/images/partingline.png" alt="Parting line"></div>
+      <div class="slide" id="fig6" data-caption="Figure 6. Casting — parting / joint surface detail."><img src="../../../Transmission/transmission-mount-plate/images/partingsurface.png" alt="Parting surface"></div>
+    </div>
+    <p class="slideshow-caption" id="tx-mount-caption" aria-live="polite">Figure 1. Pre-machining (cast bearing mount plate).</p>
+    <div class="slideshow-controls">
+      <button type="button" id="tx-mount-prev" aria-label="Previous">← Previous</button>
+      <span class="slideshow-counter" id="tx-mount-counter">1 / 6</span>
+      <button type="button" id="tx-mount-next" aria-label="Next">Next →</button>
+    </div>
+  </div>
+
+  <h3>建议补充图示（便于承包商理解）</h3>
+  <ul class="muted">
+    <li><strong>Add figure</strong>: <strong>Welded L-plate alternative</strong> — vs cast route; gusset layout and weld sequence.</li>
+    <li><strong>Add figure</strong>: <strong>Linear bearing pad flatness</strong> — tolerance callouts and inspection fixture concept.</li>
+    <li><strong>Add figure</strong>: <strong>Bottom flange to frame</strong> — bolt/dowel scheme at rail/cross-member junction.</li>
+  </ul>
+
+  <h3>CAD downloads (STEP)</h3>
+  <ul>
+    <li><a href="../../../Transmission/transmission-mount-plate/BearingMountPlate_Cast.stp" download>BearingMountPlate_Cast.stp</a> — cast bearing mount plate (as-designed)</li>
+    <li><a href="../../../Transmission/transmission-mount-plate/Machined-BearingMountPlate_Cast.stp" download>Machined-BearingMountPlate_Cast.stp</a> — machined bearing mount plate (post-op CAD)</li>
+  </ul>
+
+  <h2>讨论</h2>
+  <h3>Rough design &amp; intent</h3>
+  <ul>
+    <li><strong>Primary requirement</strong> — Maintain shaft parallelism and bearing alignment so the yoke does not bind, even under washdown contamination and asymmetric/jam loading.</li>
+    <li><strong>Two architectures</strong> — (A) <strong>Sand-cast + post-machined</strong> for stiffness/robustness, and (B) <strong>welded steel</strong> (two waterjet-cut plates welded into an L + triangular gussets) followed by stress relief and machining.</li>
+    <li><strong>Hygiene surfaces</strong> — The plate front face is exposed to cleaning spray/juice; surfaces near pulp/juice should be cleanable (target roughness concept: ~Ra 0.8 μm on key surfaces).</li>
+  </ul>
+
+  <h3>Known issues &amp; risks</h3>
+  <ul>
+    <li><strong>Distortion</strong> — Welded option may require stress relief (oven) and machining to avoid warping and loss of alignment.</li>
+    <li><strong>Casting quality</strong> — Cast option must consider surface quality, rib thickness, and shrink/porosity risk; requires coordination with casting vendor.</li>
+    <li><strong>All locating/fastener features TBD</strong> — Dowel scheme, bolt pattern, and shim strategy are not finalized and must be proposed for repeatable rebuilds.</li>
+  </ul>
+
+  <h3>DFM &amp; manufacturing (China)</h3>
+  <ul>
+    <li><strong>Cast design notes (current intent)</strong> — Minimum wall thickness ~8 mm; draft angles ~3° on ribs; drill dimples/features included for post-cast machining setups; parting surface is on the back (negative-Z) face with ribs.</li>
+    <li><strong>Machining operations</strong> — Post-machine top and bottom mounting faces flat; machine hygiene-facing inner surfaces; machine bearing mount pads on back face; machine bottom flange interfaces for bolt-up.</li>
+    <li><strong>Welded design notes (current intent)</strong> — Two waterjet plates welded into L; add triangular gussets; stress relieve then machine critical faces/pads.</li>
+  </ul>
+
+  <h3>Questions for contractor</h3>
+  <ol>
+    <li>Recommend whether cast+machined or welded+stress-relieved is the best path in China for stiffness, repeatability, surface quality, and lead time. Provide trade-offs.</li>
+    <li>Propose the dowel/bolt/shim scheme to mount this plate to the frame rails for repeatable seasonal rebuilds (align → bolt → drill/ream → dowel workflow acceptable).</li>
+    <li>Define the machining/inspection plan to guarantee shaft/bearing alignment (datums, flatness/parallelism targets, and practical checks).</li>
+    <li>Recommend materials/finishes for washdown exposure and hygiene surfaces.</li>
+  </ol>
+
+  <h3>Interfaces</h3>
+  <ul>
+    <li><strong>Input:</strong> Forces/moments from yoke/shafts and jam cases react into this plate through shaft mounts and bearing mounts.</li>
+    <li><strong>Output:</strong> Reactions into the frame rails and cross-members; maintains alignment for extraction/collection peeler engagement.</li>
+    <li><strong>Mount:</strong> Bolts (and planned dowels) into frame rails; adjustable/shimmable as needed to achieve alignment.</li>
+  </ul>
+  <h3>接口与公差</h3>
+  <p class="muted">Known interfaces and tolerances. Links go to related subsystems.</p>
+  <table class="iface-table">
+    <thead><tr><th>Part</th><th>Interface / tolerance</th><th>Related</th></tr></thead>
+    <tbody>
+      <tr><td>Transmission mount plate</td><td>Mounts to frame rails; dowel/bolt/shim strategy TBD; alignment-critical</td><td><a href="../../Frame/index.html">Frame</a></td></tr>
+      <tr><td>Linear bearing mounts</td><td>Mount to machined pads on back face; require flatness for alignment</td><td><a href="../yoke/index.html">Yoke and drive shafts</a></td></tr>
+      <tr><td>Hygiene surfaces</td><td>Exposed to washdown; smooth finish desired on relevant faces (target Ra ~0.8 μm concept)</td><td>—</td></tr>
+    </tbody>
+  </table>
+
+  <p class="back"><a href="../index.html">← 返回 Transmission system</a></p>
+  <script>
+(function(){
+  var el = document.getElementById('tx-mount-slideshow');
+  if (!el) return;
+  var slides = el.querySelectorAll('.slide');
+  var cap = document.getElementById('tx-mount-caption');
+  var counter = document.getElementById('tx-mount-counter');
+  var n = slides.length, i = 0;
+  function go(k) { i = (k + n) % n; slides.forEach(function(s,j){ s.classList.toggle('active', j===i); }); if (cap) cap.textContent = slides[i].getAttribute('data-caption') || ''; if (counter) counter.textContent = (i+1) + ' / ' + n; }
+  document.getElementById('tx-mount-prev').addEventListener('click', function(){ go(i-1); });
+  document.getElementById('tx-mount-next').addEventListener('click', function(){ go(i+1); });
+  var hash = window.location.hash;
+  if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
+})();
+  </script>
+</body>
+</html>

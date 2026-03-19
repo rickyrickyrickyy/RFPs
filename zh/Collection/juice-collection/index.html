@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Juice collection — Collection — P6 RFP</title>
+  <style>
+    :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
+    a { color: var(--accent); }
+    h1 { font-size: 1.35rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.25rem; }
+    h3 { font-size: 1rem; margin-top: 1rem; color: var(--muted); }
+    ul, ol { padding-left: 1.25rem; }
+    .back { margin-bottom: 1rem; font-size: 0.9rem; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    .swatch { display: inline-block; width: 1.25rem; height: 1.25rem; border: 1px solid var(--border); border-radius: 3px; vertical-align: middle; }
+    table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+    th, td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
+    .iface-table th { color: var(--muted); font-weight: 600; }
+    .slideshow { margin: 1.5rem 0; }
+    .slideshow .slide { display: none; }
+    .slideshow .slide.active { display: block; }
+    .slideshow .slide img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
+    .slideshow-caption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); min-height: 2.5em; }
+    .slideshow-controls { display: flex; align-items: center; gap: 1rem; margin-top: 0.75rem; flex-wrap: wrap; }
+    .slideshow-controls button { background: var(--border); color: var(--text); border: none; padding: 0.35rem 0.75rem; border-radius: 4px; cursor: pointer; font-size: 0.9rem; }
+    .slideshow-controls button:hover { background: var(--accent); color: #fff; }
+    .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
+    .figure-standalone { margin: 1.25rem 0; }
+    .figure-standalone img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
+    .figure-standalone figcaption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); }
+  </style>
+      <link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+<nav class="site-lang-bar" aria-label="Language">
+  <span class="lang-label">语言：</span>
+  <a href="../../../Collection/juice-collection/index.html">English</a>
+  <span aria-hidden="true">·</span>
+  <a href="index.html" aria-current="page">中文</a>
+  <span aria-hidden="true">·</span>
+  <a href="../../../pt/Collection/juice-collection/index.html">Português</a>
+</nav>
+
+<p class="back"><a href="../index.html">← 返回 Collection</a> · <a href="../../index.html">P6 RFP 总览</a></p>
+  <h1>Juice collection</h1>
+  <p class="muted">Part of the <a href="../index.html">Collection</a> section. Collector bodies and outlet tubing that route juice to third-party tanks/pumps, and provide a reverse-flow CIP path.</p>
+
+  <h2>简介</h2>
+  <p>The juice collectors capture juice exiting the filter tube slots and route it out of the machine through sanitary tubing and quick-connect interfaces. The collectors are also intended to support a reverse-flow CIP mode that flushes cleaning fluid back through the filter tubes and out the plug cutters.</p>
+
+  <h2>颜色说明 &amp; components</h2>
+  <p class="muted">Key components and intent (colours may vary across CAD figures).</p>
+  <table>
+    <tr><th>Colour(s)</th><th>Component</th></tr>
+    <tr><td><em>—</em></td><td><strong>Collector body</strong> — <strong>304 stainless</strong> tube assembly (concept: standard tube sizes; main body ~57 mm OD chosen for availability, not a hard requirement); <strong>food-zone interior surface roughness target Ra ~0.8 μm</strong>.</td></tr>
+    <tr><td><em>—</em></td><td><strong>Outlet tube</strong> — concept sized for common quick-connects; current intent is ~38 mm OD outlet to rubber hose via ribbed adapter.</td></tr>
+    <tr><td><em>—</em></td><td><strong>Quick-connect interface</strong> — <strong>standard</strong> sanitary ferrule/flange that mates to the downstream <strong>ribbed rubber connection</strong> (choose a common China-available quick-connector spec where possible) for fast disconnect.</td></tr>
+    <tr><td><em>—</em></td><td><strong>T-valve / switching</strong> — concept to switch between “juice to tank” vs “CIP fluid into collector”.</td></tr>
+  </table>
+
+  <h2 id="gallery">图示</h2>
+  <p class="muted">System context remains in the <a href="../../../Collection/index.html#gallery">Collection main gallery</a>. Below: collector + filter relationship and a side view of the juice-collection subassembly. <a href="#fig-juice-collector">Figure 1</a>; <a href="#fig-juice-side">Figure 2</a>.</p>
+
+  <figure class="figure-standalone" id="fig-juice-collector">
+    <img src="../../../Collection/juice-collection/images/collectorandfilter.png" alt="Juice collector and filter assembly">
+    <figcaption><strong>Figure 1.</strong> Collector and filter — assembly relationship (photo).</figcaption>
+  </figure>
+  <figure class="figure-standalone" id="fig-juice-side">
+    <img src="../../../Collection/juice-collection/images/sideview.png" alt="Side view of juice collection subassembly">
+    <figcaption><strong>Figure 2.</strong> Side view — juice collection subassembly profile.</figcaption>
+  </figure>
+
+  <h3>建议补充图示（便于承包商理解）</h3>
+  <ul class="muted">
+    <li><strong>Add figure</strong>: <strong>tube size callouts</strong> (main body OD, outlet OD/ID) and welded fitting types.</li>
+    <li><strong>Add figure</strong>: downstream <strong>quick-connect + ribbed hose adapter</strong> example part and how it mates to rubber hose.</li>
+    <li><strong>Add figure</strong>: <strong>CIP plumbing schematic</strong> (T-valve, check valves, flow direction).</li>
+  </ul>
+
+  <h2>讨论</h2>
+  <h3>Rough design &amp; intent</h3>
+  <ul>
+    <li><strong>Forward flow</strong> — Juice exits through filter tube slots into the collector body and then out through the outlet tube to third-party tanks/pumps.</li>
+    <li><strong>Standard tube sizes</strong> — Current concept uses 304 stainless tube sizes selected for availability (main body ~57 mm OD; outlet sized for common quick-connect and hose hardware).</li>
+    <li><strong>Surface finish requirement</strong> — Interior food-zone surfaces must be fabricated/finished to remain cleanable (target <strong>Ra ~0.8 μm</strong> unless contractor proposes an alternate hygiene-validated surface finish).</li>
+  </ul>
+
+  <h3>CIP concept (reverse flow)</h3>
+  <ul>
+    <li><strong>Switching</strong> — A T-valve is used to select between “juice out” vs “CIP fluid in”.</li>
+    <li><strong>Flow direction</strong> — CIP fluid enters via the outlet tube and floods the collector chamber, then flows through the filter tube and exits out the plug cutter centreline to flush the slots and internal passages.</li>
+  </ul>
+
+  <h3>Known issues &amp; risks</h3>
+  <ul>
+    <li><strong>Cleaning dead zones</strong> — Contractor to identify any stagnant regions in collector geometry where pulp could accumulate and propose drain/flush improvements.</li>
+    <li><strong>Connection standards</strong> — Need to pick a consistent CN-available quick-connect standard (Tri-Clamp or equivalent) and seal materials compatible with CIP chemicals.</li>
+  </ul>
+
+  <h3>Questions for contractor</h3>
+  <ol>
+    <li>Recommend CN-available sanitary/quick-connect standard(s) and specific tube sizes (OD/ID) to meet flow and cleanability requirements.</li>
+    <li>Validate the reverse-flow CIP concept and propose required valves/check valves, pressure limits, and maintenance/cleaning protocol.</li>
+    <li>Propose a robust, serviceable ribbed hose adapter and quick-connection strategy for the outlet tube (include sourcing options in China).</li>
+  </ol>
+
+  <h3>Interfaces</h3>
+  <ul>
+    <li><strong>Input:</strong> Juice from filter tube slots.</li>
+    <li><strong>Output:</strong> Outlet tube to third-party plumbing; CIP inlet path in reverse-flow mode.</li>
+    <li><strong>Mount:</strong> Collectors mount on the collection mount plate and interface with static peeler/collector geometry.</li>
+  </ul>
+  <h3>接口与公差</h3>
+  <p class="muted">Known interfaces and tolerances. Links go to related subsystems.</p>
+  <table class="iface-table">
+    <thead><tr><th>Part</th><th>Interface / tolerance</th><th>Related</th></tr></thead>
+    <tbody>
+      <tr><td>Collector body</td><td>Standard 304 stainless tube assembly; interior food-zone target <strong>Ra ~0.8 μm</strong> (cleanability requirement). Main body ~57 mm OD concept (availability-driven; may change)</td><td><a href="../index.html">Collection</a></td></tr>
+      <tr><td>Outlet tube</td><td>Concept: ~38 mm OD outlet sized for quick-connect + ribbed hose adapter</td><td>—</td></tr>
+      <tr><td>T-valve</td><td>Switch between juice outflow and CIP inflow (concept)</td><td>—</td></tr>
+    </tbody>
+  </table>
+
+  <p class="back"><a href="../index.html">← 返回 Collection</a></p>
+</body>
+</html>
