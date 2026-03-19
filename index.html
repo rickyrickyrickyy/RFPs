@@ -30,6 +30,10 @@
     section ul { margin: 0.5rem 0; padding-left: 1.25rem; }
     section li { margin: 0.25rem 0; }
     .muted { color: var(--muted); font-size: 0.9rem; }
+    .highlights { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem 1.25rem; margin: 1rem 0 0 0; font-size: 0.92rem; }
+    .highlights h2 { font-size: 1rem; margin: 0 0 0.5rem 0; color: var(--text); }
+    .highlights ul { margin: 0.35rem 0 0 0; padding-left: 1.2rem; }
+    .highlights li { margin: 0.3rem 0; }
     footer { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; }
   </style>
 </head>
@@ -44,7 +48,24 @@
       <h2>Introduction</h2>
       <p>P6 is the current industrial prototype (Delijuice 870/970). Jiangxi (JX) factory with LTA; miniplant 8,160 L/h, 6 extractors. Each subsystem section includes a gallery of figures and, where filled in, component lists, interfaces, and design notes. Refer to <a href="Overview/">Project overview</a> for the full subsystem list and context.</p>
       <p class="muted"><strong>CAD colours:</strong> Colour keys are <strong>per subsystem</strong>. Each section has its own legend for the figures in that section. Use the legend on the relevant subsystem page when reading its CAD views.</p>
-      <p class="intro">Use the links below to navigate. Sections <span class="badge ready">with content</span> include CAD views and descriptions; <span class="badge">to be completed</span> are placeholders for future detail.</p>
+      <p class="intro">Use the links below to navigate. Sections <span class="badge ready">with content</span> include CAD views and descriptions; <span class="badge">skeleton</span> pages have thinner structure (may still include figures); <span class="badge">to be completed</span> are placeholders for future detail.</p>
+
+      <div class="highlights">
+        <h2>What’s filled in (highlights)</h2>
+        <ul class="muted" style="margin-top:0">
+          <li><strong>Frame → Loads and load paths</strong> — gallery + load discussion.</li>
+          <li><strong>Drivetrain &amp; transmission</strong> — full galleries, motor/reducer, gears/cam, both mount plates, yoke + drive-shaft figures.</li>
+          <li><strong>Extraction &amp; sync</strong> — main gallery; <strong>fruit support</strong>, <strong>peelers</strong>, <strong>driven bracket</strong> subpages with figures + contractor notes.</li>
+          <li><strong>Collection</strong> — main gallery; <strong>juice collection</strong> (collector/filter + side photos) and <strong>plungers &amp; filter</strong>.</li>
+          <li><strong>Fruit intake</strong> — main gallery; <strong>feeding subassembly</strong> (exploded + CIP/pusher/spring carousel), <strong>feeder body</strong> (iso + top), <strong>entry tubes</strong> (hinge + tube photos).</li>
+          <li><strong>Core ejection</strong> — main gallery; <strong>plunger drive bracket</strong> (assembly CAD + iso/top/front) + <strong>side-panel drive</strong> (CAD + photos).</li>
+          <li><strong>Disposal</strong> — main gallery; <strong>chutes &amp; augers</strong> (CAD + chute photo + supplier auger diagram); <strong>deflectors</strong> (CAD + deflector covering core/auger opening).</li>
+          <li><strong>Enclosure</strong> — main cover gallery; hinge/cover subpages reference shared CAD.</li>
+          <li><strong>CIP</strong> — nozzle gallery + third-party integration page.</li>
+          <li><strong>Controls</strong> — UI photo, motor power, yoke sensor requirements.</li>
+        </ul>
+        <p class="muted" style="margin:0.75rem 0 0 0; font-size:0.85rem;">Every subsystem page includes a <strong>Recommended figures</strong> list where more photos/diagrams would help contractors.</p>
+      </div>
     </section>
 
     <nav>
@@ -98,20 +119,20 @@
         </li>
         <li><strong>7.</strong> <a href="Plug-ejection/">Core ejection</a> <span class="badge ready">with content</span>
           <ul class="nav-sub">
-            <li class="sub"><a href="Plug-ejection/plunger-drive-bracket/">Plunger drive bracket</a> <span class="badge">skeleton</span></li>
-            <li class="sub"><a href="Plug-ejection/plunger-drive-system-in-side-panels/">Plunger drive system in side panels</a> <span class="badge">skeleton</span></li>
+            <li class="sub"><a href="Plug-ejection/plunger-drive-bracket/">Plunger drive bracket</a> <span class="badge ready">with content</span></li>
+            <li class="sub"><a href="Plug-ejection/plunger-drive-system-in-side-panels/">Plunger drive system in side panels</a> <span class="badge ready">with content</span></li>
           </ul>
         </li>
         <li><strong>8.</strong> <a href="Outflow-disposal/">Disposal system</a> <span class="badge ready">with content</span>
           <ul class="nav-sub">
-            <li class="sub"><a href="Outflow-disposal/chutes-and-augers/">Chutes and augers</a> <span class="badge">skeleton</span></li>
-            <li class="sub"><a href="Outflow-disposal/deflectors/">Deflectors</a> <span class="badge">skeleton</span></li>
+            <li class="sub"><a href="Outflow-disposal/chutes-and-augers/">Chutes and augers</a> <span class="badge ready">with content</span></li>
+            <li class="sub"><a href="Outflow-disposal/deflectors/">Deflectors</a> <span class="badge ready">with content</span></li>
           </ul>
         </li>
         <li><strong>9.</strong> <a href="Enclosure-shell/">Enclosure / shell</a> <span class="badge ready">with content</span>
           <ul class="nav-sub">
-            <li class="sub"><a href="Enclosure-shell/protective-covers/">Protective covers (plunger, drivetrain)</a> <span class="badge">skeleton</span></li>
-            <li class="sub"><a href="Enclosure-shell/overcentered-hinges/">Overcentered hinges</a> <span class="badge">skeleton</span></li>
+            <li class="sub"><a href="Enclosure-shell/protective-covers/">Protective covers (plunger, drivetrain)</a> <span class="badge ready">with content</span></li>
+            <li class="sub"><a href="Enclosure-shell/overcentered-hinges/">Overcentered hinges</a> <span class="badge ready">with content</span></li>
           </ul>
         </li>
         <li><strong>10.</strong> <a href="Clean-in-place/">Clean-in-place (CIP)</a> <span class="badge ready">with content</span>
@@ -131,12 +152,12 @@
       <h2>More</h2>
       <ul>
         <li><a href="3rd-party/">Third-party and site integration</a> <span class="badge">to be completed</span></li>
-        <li>Future developments</a> <span class="badge">to be completed</span></li>
+        <li><span class="muted">Future developments</span> <span class="badge">to be completed</span></li>
       </ul>
     </nav>
     
     <footer>
-      Last updated: 2026-03-19.
+      Last updated: 2026-03-20.
     </footer>
   </div>
 </body>
