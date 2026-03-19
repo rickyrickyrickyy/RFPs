@@ -5,9 +5,12 @@ Used by build_i18n.py. Pairs are applied in order of longest-first to avoid part
 """
 from __future__ import annotations
 
+from .translations_content import TRANSLATIONS_CONTENT, get_content_with_hrefs
+
 # All translations: (English, (Chinese, Portuguese))
 # Order: longest strings first for correct replacement
-TRANSLATIONS: list[tuple[str, tuple[str, str]]] = [
+# Content translations (full paragraphs) are merged from translations_content.py
+TRANSLATIONS_BASE: list[tuple[str, tuple[str, str]]] = [
     # --- Navigation & UI (longest first) ---
     ("← Back to P6 RFP overview", ("← 返回 P6 RFP 总览", "← Voltar à visão geral do RFP P6")),
     ("← Back to Frame", ("← 返回机架", "← Voltar à estrutura")),
@@ -362,6 +365,9 @@ TRANSLATIONS: list[tuple[str, tuple[str, str]]] = [
     ("for the full subsystem list and context.", ("获取完整子系统列表和背景。", "para a lista completa de subsistemas e contexto.")),
 ]
 
+# Merge content translations (full paragraphs, body text)
+TRANSLATIONS: list[tuple[str, tuple[str, str]]] = TRANSLATIONS_CONTENT + TRANSLATIONS_BASE
+
 
 def build_ui_pairs(lang: str) -> list[tuple[str, str]]:
     """Build UI_ZH or UI_PT list from TRANSLATIONS, sorted by length (longest first)."""
@@ -378,3 +384,11 @@ def get_ui_zh() -> list[tuple[str, str]]:
 
 def get_ui_pt() -> list[tuple[str, str]]:
     return build_ui_pairs("pt")
+
+
+def get_content_with_hrefs_zh() -> list[tuple[str, str]]:
+    return get_content_with_hrefs("zh")
+
+
+def get_content_with_hrefs_pt() -> list[tuple[str, str]]:
+    return get_content_with_hrefs("pt")
