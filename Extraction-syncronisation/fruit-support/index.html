@@ -26,12 +26,12 @@
     .slideshow-controls button:hover { background: var(--accent); color: #fff; }
     .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
   </style>
-                          <link rel="stylesheet" href="../../assets/site.css">
+  <link rel="stylesheet" href="../../assets/site.css">
 </head>
 <body>
-<p class="back"><a href="../index.html">← Back to Extraction &amp; synchronisation</a></p>
+<p class="back"><a href="../index.html">← Back to Extraction &amp; synchronisation</a> · <a href="../../index.html">P6 RFP overview</a></p>
   <h1>Fruit support (subassembly)</h1>
-  <p class="muted">Subassembly of <a href="../index.html">4. Extraction &amp; synchronisation</a>. Directs fruit from the pipe to the peeler; oranges stage here then drop into the peelers' jaws.</p>
+  <p>The fruit support is a subassembly of the <a href="../index.html">extraction &amp; synchronisation</a> module. It receives oranges from the <a href="../../Feeder/">fruit intake system</a> pipe and stages them on three pairs of angled rails that guide each fruit to centre before it drops into the driven peelers' jaws below. The assembly bolts to the driven bracket for easy removal during service.</p>
 
   <h2>Colour key &amp; components</h2>
   <p class="muted">Applies to the CAD views in this section. In the main extraction assembly this subassembly appears as one colour (<span class="swatch" style="background-color:#2ECC71"></span> bright green); detail views use the colours below.</p>
@@ -53,7 +53,7 @@
     <li><strong>Rail angle:</strong> Downwards so oranges roll forward. Current 3°; target <strong>8°</strong> (5° slope added to driven bracket). From front, rails higher on sides than center.</li>
     <li><strong>Pusher:</strong> Designed as cut/welded sheet; could be a formed component.</li>
   </ul>
-  <p class="muted">
+  <p>
     Improvement targets: 8° rail angle, formed pusher.
     <strong>Manufacturing note:</strong> the fruit support can be manufactured in any practical way as long as the <strong>rail geometry</strong>, <strong>3–8° slope/bowl shape</strong>, and <strong>cleanability (no pockets, smooth drainage)</strong> are met.
     Forming is a candidate method, but the exact formed-part design is left to the contractor/ODM to propose.
@@ -85,12 +85,12 @@
   <h2>Interfaces</h2>
   <ul>
     <li><strong>Mount:</strong> Base bolted to driven bracket (<a href="../index.html">extraction/sync</a>).</li>
-    <li><strong>Input:</strong> Fruit from <a href="../../Feeder/">feeder</a> (drops onto fruit support).</li>
+    <li><strong>Input:</strong> Fruit from <a href="../../Feeder/">fruit intake system</a> (drops onto fruit support).</li>
     <li><strong>Output:</strong> Fruit rolls to center rails and drops into peelers' jaws.</li>
     <li><strong>Pusher/roller:</strong> Roller (extraction/sync) attached with bolt; interfaces with <a href="../../Feeder/feeding-subassembly/">feeder sync spring</a>.</li>
   </ul>
 
-  <p class="back"><a href="../index.html">← Back to Extraction &amp; synchronisation</a></p>
+  <p class="back"><a href="../index.html">← Back to Extraction &amp; synchronisation</a> · <a href="../../index.html">P6 RFP overview</a></p>
   <script>
 (function(){
   var el = document.getElementById('fs-slideshow');
@@ -107,5 +107,6 @@
   if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
 })();
   </script>
+  <footer style="margin-top:2rem; padding-top:1rem; border-top:1px solid var(--border); color:var(--muted); font-size:0.85rem;">Last updated: 2026-03-20.</footer>
 </body>
 </html>

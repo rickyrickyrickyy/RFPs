@@ -30,7 +30,7 @@
     .iface-table th { color: var(--muted); font-weight: 600; }
     .reminder { background: rgba(88, 166, 255, 0.12); border: 1px solid var(--accent); border-radius: 6px; padding: 0.75rem 1rem; margin: 1rem 0; font-size: 0.95rem; }
   </style>
-                          <link rel="stylesheet" href="../assets/site.css">
+  <link rel="stylesheet" href="../assets/site.css">
 </head>
 <body>
 <p class="back"><a href="../index.html">← Back to P6 RFP overview</a></p>
@@ -38,12 +38,12 @@
 
   <h2>Subpages</h2>
   <ul>
-    <li><a href="juice-collection/">Juice collection</a> <span class="muted">(with content)</span> — collector bodies/outlet tubing; reverse-flow CIP concept; quick-connect sourcing.</li>
-    <li><a href="plungers-and-filter/">Plungers and filter</a> <span class="muted">(with content)</span> — filter tube/plug cutter/plunger interface; wear + sealing issues; hardening/finish questions.</li>
+    <li><a href="juice-collection/">Juice collection</a> <span class="muted">(updated 2026-03-20)</span> — collector bodies/outlet tubing; reverse-flow CIP concept; quick-connect sourcing.</li>
+    <li><a href="plungers-and-filter/">Plungers and filter</a> <span class="muted">(updated 2026-03-20)</span> — filter tube/plug cutter/plunger interface; wear + sealing issues; hardening/finish questions.</li>
   </ul>
 
   <h2>Introduction</h2>
-  <p>Static peelers (<span class="swatch" style="background-color:#F36F3B" title="#F36F3B"></span>), juice collectors (Y-tubes), filter tube, plug cutter, collection mount plate. Mounts on the frame's loaded mount plate.</p>
+  <p>The collection subsystem is the static half of the extraction assembly. It carries the static peelers, filter tubes, plug cutters, and juice collectors (Y-tubes), all mounted on the collection mount plate which bolts to the frame's loaded mount plate. During extraction, the <a href="../Extraction-syncronisation/">extraction &amp; synchronisation</a> module drives its peelers into the static peelers here, compressing the fruit and separating juice from peel and seeds. Juice flows through slots in the filter tube into the collectors and out to third-party tanks via sanitary quick-connect tubing; the core is retained in the filter tube for ejection by the <a href="../Plug-ejection/">core ejection system</a>.</p>
 
   <div class="reminder"><strong>Reminder:</strong> Add the supplier link/spec for the <strong>38 mm OD ribbed hose connector</strong> used to couple the collector outlet to rubber hose. (Example source: <a href="https://item.taobao.com/item.htm?id=1030645801360">Taobao item 1030645801360</a>.)</div>
   <div class="reminder"><strong>Peel deflectors update:</strong> <strong>Static deflectors on the collection mount plate are removed</strong> in the latest concept. The <strong><a href="../Extraction-syncronisation/">chute deflector</a></strong> (under the <strong>driven</strong> peeler modules) is the deflector required to cover the core chutes during compression. <strong>Figures/photos must be refreshed</strong> in this section to remove the deprecated static deflectors.</div>
@@ -141,7 +141,7 @@
   <h3>Interfaces</h3>
   <ul>
     <li><strong>Mount:</strong> Collection mount plate <span class="swatch" style="background-color:#27C16A" title="#27C16A"></span> on <a href="../Frame/">loaded mount plate</a> (frame).</li>
-    <li><strong>Input:</strong> Fruit from extraction/synchronisation; driven peelers mesh with static peelers.</li>
+    <li><strong>Input:</strong> Fruit from <a href="../Extraction-syncronisation/">extraction &amp; synchronisation</a>; driven peelers mesh with static peelers.</li>
     <li><strong>Output:</strong> Peel → extraction chamber / outflow chute; juice → filter → yellow collector → Y-tube → ribbed connection (34 mm standard connector for quick connection).</li>
   </ul>
 
@@ -173,5 +173,6 @@
   if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
 })();
   </script>
+  <footer style="margin-top:2rem; padding-top:1rem; border-top:1px solid var(--border); color:var(--muted); font-size:0.85rem;">Last updated: 2026-03-20.</footer>
 </body>
 </html>

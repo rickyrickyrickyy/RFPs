@@ -15,7 +15,7 @@
     .muted { color: var(--muted); font-size: 0.9rem; }
     .tbd { color: var(--muted); font-style: italic; }
   </style>
-                          <link rel="stylesheet" href="../assets/site.css">
+  <link rel="stylesheet" href="../assets/site.css">
 </head>
 <body>
 <p class="back"><a href="../index.html">← Back to P6 RFP overview</a></p>
@@ -23,13 +23,13 @@
 
   <h2>Subpages</h2>
   <ul>
-    <li><a href="machine-control-definition-and-ui/">Machine control definition and UI</a> <span class="muted">(with content)</span> — stand-alone local control, buttons/indicators, LOTO.</li>
-    <li><a href="motor-power-management/">Motor power management</a> <span class="muted">(with content)</span> — power protection, contactor/starter, waterproofing, current sensing.</li>
-    <li><a href="yoke-position-sensor/">Yoke position sensor</a> <span class="muted">(with content)</span> — cycle sensing for stop-with-peelers-open and cycle counting (TBD implementation).</li>
+    <li><a href="machine-control-definition-and-ui/">Machine control definition and UI</a> <span class="muted">(updated 2026-03-20)</span> — stand-alone local control, buttons/indicators, LOTO.</li>
+    <li><a href="motor-power-management/">Motor power management</a> <span class="muted">(updated 2026-03-20)</span> — power protection, contactor/starter, waterproofing, current sensing.</li>
+    <li><a href="yoke-position-sensor/">Yoke position sensor</a> <span class="muted">(updated 2026-03-20)</span> — cycle sensing for stop-with-peelers-open and cycle counting (TBD implementation).</li>
   </ul>
 
   <h2>Introduction</h2>
-  <p>User interface, safety, motor power, and yoke position. The subsystem consists of the control panel, safety switches, motor power electronics, and the yoke position sensor (under development).</p>
+  <p><strong>Controls and electronics</strong> (Subsystem 11) covers everything electrical on P6: the operator control panel (E-stop, on/off, start/stop, indicators), three coded lid safety interlocks fed from the <a href="../Enclosure-shell/">Enclosure / shell</a>, AC motor power management for the <a href="../Drivetrain/">drivetrain</a> motor (WEG W22), and a yoke position sensor on the <a href="../Transmission/">transmission</a> for cycle timing and safe-stop logic. The subsystem must be stand-alone operable, washdown-protected, and ready for future IoT/data integration.</p>
 
   <h2>Discussion</h2>
   <h3>Rough design &amp; intent</h3>
@@ -53,7 +53,7 @@
   <p>Provide an easy-access rear LOTO unit to isolate power for service and seasonal teardown.</p>
 
   <h3>Safety switches</h3>
-  <p>Safety switches on <strong>3 lids</strong> (e.g. plunger cover, drivetrain cover, feeder). Interlock logic must be fail-safe: when any lid is open, the machine shuts off and cannot run.</p>
+  <p>Safety switches on <strong>3 lids</strong> (plunger cover, drivetrain cover, feeder — see <a href="../Enclosure-shell/">Enclosure / shell</a>). Interlock logic must be fail-safe: when any lid is open, the machine shuts off and cannot run.</p>
   <ul>
     <li><strong>Coded safety switches</strong> — coded interlocks preferred for robustness.</li>
     <li><strong>Coded lid switches (magnet code)</strong> — only the specified magnet/operator handle may actuate the lid safety switch (anti-misuse). Include fail-safe behavior and clear "machine open" indicator.</li>
@@ -73,7 +73,7 @@
   </ul>
 
   <h3>Yoke position sensor</h3>
-  <p>P6 requires a <a href="../Transmission/">yoke</a> position/cycle sensor to support controlled safe stop conditions and a critical <strong>fully open stop</strong> behavior so internal parts can be serviced/removed. The exact sensor type and signal interface are TBD.</p>
+  <p>P6 requires a <a href="../Transmission/">yoke</a> position/cycle sensor (mounted on the <a href="../Transmission/">transmission</a>) to support controlled safe stop conditions and a critical <strong>fully open stop</strong> behavior so internal parts can be serviced/removed. The exact sensor type and signal interface are TBD.</p>
   <ul>
     <li><strong>Cycle sensor</strong> — provide cycle counting (cycles per time period). This may be the same sensor as "open peelers stop" depending on final mechanism.</li>
     <li><strong>Fully open stop position</strong> — when the machine is turned OFF / STOPPED in normal operation, the system must stop with the yoke at the <strong>fully open position</strong> (operator access/removal).</li>
@@ -89,5 +89,6 @@
     <li><strong>Add figure</strong>: <strong>Enclosure IP concept</strong> — cabinet/gland layout for washdown (see <a href="motor-power-management/">Motor power management</a>).</li>
     <li><strong>Add figure</strong>: <strong>Sensor + safe states</strong> — see <a href="yoke-position-sensor/">Yoke position sensor</a> callouts.</li>
   </ul>
+  <footer style="margin-top:2rem; padding-top:1rem; border-top:1px solid var(--border); color:var(--muted); font-size:0.85rem;">Last updated: 2026-03-20.</footer>
 </body>
 </html>

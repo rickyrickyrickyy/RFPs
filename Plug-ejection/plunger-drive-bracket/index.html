@@ -28,12 +28,12 @@
     .slideshow-controls button:hover { background: var(--accent); color: #fff; }
     .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
   </style>
-                          <link rel="stylesheet" href="../../assets/site.css">
+  <link rel="stylesheet" href="../../assets/site.css">
 </head>
 <body>
 <p class="back"><a href="../index.html">← Back to Core ejection</a> · <a href="../../index.html">P6 RFP overview</a></p>
   <h1>Plunger drive bracket</h1>
-  <p class="muted">Actuation bracket that pushes/pulls the plunger bases only in the travel direction; designed to avoid racking moments and keep plungers concentric with the filter tube.</p>
+  <p>The plunger drive bracket is the actuation bracket within the <a href="../index.html">core ejection</a> system that carries four plungers and transmits axial force from the drive rods. It pushes and pulls plunger bases strictly in the ejection-axis direction, avoiding racking moments and keeping plungers concentric with the <a href="../../Collection/plungers-and-filter/">filter tube</a>.</p>
 
   <h2>Introduction</h2>
   <p>The plunger drive bracket couples the drivetrain actuation (via plunger drive rods) to the four core ejection plungers. Its key requirement is <strong>kinematic purity</strong>: the bracket must apply <strong>only axial force</strong> (forward/back along the machine's ejection axis) and must not introduce left/right/up/down moments to the plungers. Maintaining this avoids the critical failure mode of <strong>plunger racking</strong> and sticking.</p>
@@ -78,8 +78,8 @@
   </ul>
   <h3>Interfaces</h3>
   <ul>
-    <li><strong>Input</strong>: plunger drive rods actuated from the drivetrain/transmission yoke system.</li>
-    <li><strong>Output</strong>: plungers push into filter tube and retract out of the tube to eject cores.</li>
+    <li><strong>Input</strong>: plunger drive rods actuated by the <a href="../../Transmission/">transmission</a> yoke system.</li>
+    <li><strong>Output</strong>: plungers push into the <a href="../../Collection/plungers-and-filter/">filter tube</a> and retract to eject cores into the <a href="../../Outflow-disposal/">disposal system</a>'s core chute.</li>
     <li><strong>Mount</strong>: guided by the side-panel linear bearing housings to ensure parallel rod/plunger motion.</li>
   </ul>
   <h3>Interfaces and tolerances</h3>
@@ -111,7 +111,7 @@
     <li>Propose materials for sliding interfaces that are low friction yet compatible with washdown and food safety (including microplastic risk).</li>
   </ol>
 
-  <p class="back"><a href="../index.html">← Back to Core ejection</a></p>
+  <p class="back"><a href="../index.html">← Back to Core ejection</a> · <a href="../../index.html">P6 RFP overview</a></p>
   <script>
 (function(){
   var el = document.getElementById('skel-plungerdrivebracket-slideshow');
@@ -127,5 +127,6 @@
   if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
 })();
   </script>
+  <footer style="margin-top:2rem; padding-top:1rem; border-top:1px solid var(--border); color:var(--muted); font-size:0.85rem;">Last updated: 2026-03-20.</footer>
 </body>
 </html>

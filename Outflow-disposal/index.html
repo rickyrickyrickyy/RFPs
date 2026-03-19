@@ -29,7 +29,7 @@
     .iface-table th, .iface-table td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
     .iface-table th { color: var(--muted); font-weight: 600; }
   </style>
-                          <link rel="stylesheet" href="../assets/site.css">
+  <link rel="stylesheet" href="../assets/site.css">
 </head>
 <body>
 <p class="back"><a href="../index.html">← Back to P6 RFP overview</a></p>
@@ -37,12 +37,12 @@
 
   <h2>Subpages</h2>
   <ul>
-    <li><a href="chutes-and-augers/">Chutes and augers</a> <span class="muted">(with content)</span> — CAD, chute assembly photo, supplier auger diagram; peel vs core paths.</li>
-    <li><a href="deflectors/">Deflectors</a> <span class="muted">(with content)</span> — driven deflector CAD context + photo covering core chute / auger opening.</li>
+    <li><a href="chutes-and-augers/">Chutes and augers</a> <span class="muted">(updated 2026-03-20)</span> — CAD, chute assembly photo, supplier auger diagram; peel vs core paths.</li>
+    <li><a href="deflectors/">Deflectors</a> <span class="muted">(updated 2026-03-20)</span> — driven deflector CAD context + photo covering core chute / auger opening.</li>
   </ul>
 
   <h2>Introduction</h2>
-  <p>Disposal routes <strong>peels</strong> and <strong>cores</strong> into separate conveyance paths. After core ejection, cores fall into <strong>core chutes</strong> (hexagonal-tube concept beneath each peeler station) while peel material flows around the core chutes into the <strong>peel chute</strong>. Two augers convey peels vs. cores separately to support different downstream handling (e.g., secondary wash/juice extraction for cores).</p>
+  <p>The <strong>Disposal system</strong> (Subsystem 8) routes <strong>peels</strong> and <strong>cores</strong> into separate conveyance paths so each waste stream can be handled independently downstream. After <a href="../Plug-ejection/">core ejection</a>, cores fall into <strong>core chutes</strong> (hexagonal-tube concept beneath each peeler station) while peel material flows around the core chutes into the <strong>peel chute</strong>. Two augers then convey peels and cores separately out of the machine — for example, cores may go to secondary wash or juice extraction while peels go to disposal.</p>
 
   <h2>Colour key &amp; components</h2>
   <p class="muted">Peel chute, core chutes, augers — detail pages TBD. Some CAD views use alternative colours (second row).</p>
@@ -94,7 +94,7 @@
   <ul>
     <li><strong>Input (cores):</strong> From <a href="../Plug-ejection/">core ejection</a> — core falls into core chute.</li>
     <li><strong>Input (peels):</strong> From <a href="../Collection/">collection</a>/extraction — peels to sides of peelers, two channels.</li>
-    <li><strong>Output:</strong> Two augers convey peels and plugs/cores away separately.</li>
+    <li><strong>Output:</strong> Two augers convey peels and cores away separately.</li>
   </ul>
 
   <h2>Interfaces and tolerances</h2>
@@ -104,7 +104,7 @@
     <tbody>
       <tr><td>Core chutes</td><td>Receive cores from core ejection; welded to peel chute</td><td><a href="../Plug-ejection/">Core ejection</a></td></tr>
       <tr><td>Peel chute</td><td>Receives peels from sides of peelers (collection/extraction); two channels</td><td><a href="../Collection/">Collection</a></td></tr>
-      <tr><td>Augers</td><td>Two augers; convey peels and cores away separately</td><td>—</td></tr>
+      <tr><td>Augers</td><td>Two augers; convey peels and cores away separately; under-machine clearance required</td><td><a href="../Frame/">Frame</a></td></tr>
     </tbody>
   </table>
   <script>
@@ -123,5 +123,6 @@
   if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
 })();
   </script>
+  <footer style="margin-top:2rem; padding-top:1rem; border-top:1px solid var(--border); color:var(--muted); font-size:0.85rem;">Last updated: 2026-03-20.</footer>
 </body>
 </html>

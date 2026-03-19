@@ -14,7 +14,7 @@
     .back { margin-bottom: 1rem; font-size: 0.9rem; }
     .muted { color: var(--muted); font-size: 0.9rem; }
   </style>
-                          <link rel="stylesheet" href="../assets/site.css">
+  <link rel="stylesheet" href="../assets/site.css">
 </head>
 <body>
 <p class="back"><a href="../index.html">← Back to P6 RFP overview</a></p>
@@ -22,12 +22,12 @@
 
   <h2>Subpages</h2>
   <ul>
-    <li><a href="cip-nozzles-and-feed-pipes/">CIP nozzles and feed pipes</a> <span class="muted">(with content)</span> — spray nozzles, manifolds, rigid piping and flexible hose interfaces.</li>
-    <li><a href="third-party-cip-control-equipment/">Third-party CIP control equipment</a> <span class="muted">(with content)</span> — plant CIP integration, cycles, and acceptance testing.</li>
+    <li><a href="cip-nozzles-and-feed-pipes/">CIP nozzles and feed pipes</a> <span class="muted">(updated 2026-03-20)</span> — spray nozzles, manifolds, rigid piping and flexible hose interfaces.</li>
+    <li><a href="third-party-cip-control-equipment/">Third-party CIP control equipment</a> <span class="muted">(updated 2026-03-20)</span> — plant CIP integration, cycles, and acceptance testing.</li>
   </ul>
 
   <h2>Introduction</h2>
-  <p>The P6 CIP solution is provided by the <strong>plant CIP system</strong>. The machine is connected to the plant CIP line and cleaned internally through fixed spray nozzles and (for the juice collection circuit) a counter-flow backflush through the juice line.</p>
+  <p><strong>Clean-in-place</strong> (Subsystem 10) enables internal cleaning of P6 without full disassembly — a key requirement for <a href="../index.html">food safety and regulatory compliance</a>. The CIP solution is provided by the <strong>plant CIP system</strong>; P6 connects to the plant supply and is cleaned internally through fixed spray nozzles targeting food-contact and splash zones, plus a counter-flow backflush of the <a href="../Collection/">juice collection</a> circuit. During CIP, tank isolation valving ensures CIP fluid is routed into the collectors/filter/plunger circuit and <strong>not</strong> into production juice tanks.</p>
 
   <h2>Discussion</h2>
   <h3>Rough design &amp; intent</h3>
@@ -43,7 +43,7 @@
   </ul>
 
   <h3>Plant CIP cycle (typical)</h3>
-  <p class="muted">Actual durations depend on cleaning results and the plant's CIP performance (pressure, temperature, concentration). Chemical indicator tests are required to confirm no cleaning solution remains.</p>
+  <p>Actual durations depend on cleaning results and the plant's CIP performance (pressure, temperature, concentration). Chemical indicator tests are required to confirm no cleaning solution remains.</p>
   <ol>
     <li><strong>First water rinse</strong> — basic material removal.</li>
     <li><strong>Lye / soap solution</strong> — cleaning chemistry step.</li>
@@ -54,7 +54,7 @@
   <ul>
     <li><strong>Total nozzles</strong> — 21 total (current concept).</li>
     <li><strong>Single input</strong> — nozzles connect via rigid stainless pipes/manifolds to a single input connection per manifold group, with flexible hoses to allow feeder open/close.</li>
-    <li><strong>Feeder lid nozzles (12)</strong> — 4 sets × 3 nozzles per set:
+    <li><strong><a href="../Feeder/">Fruit intake system</a> lid nozzles (12)</strong> — 4 sets × 3 nozzles per set (one CIP nozzle port is in the 90° feeding tube):
       <ul>
         <li>A: 1 circular-jet nozzle at the curve of the feeding tube turned backwards (one per tube).</li>
         <li>B: 1 angled-jet nozzle behind the feeding tube pointing to the movable peeler (mid-stroke) (one per peeler).</li>
@@ -105,5 +105,6 @@
     <li><strong>Add figure</strong>: <strong>Machine photo set</strong> — all nozzle groups labeled (see <a href="cip-nozzles-and-feed-pipes/">Nozzles and feed pipes</a>).</li>
     <li><strong>Add figure</strong>: <strong>Acceptance test points</strong> — where plant CIP confirms coverage (tie to <a href="third-party-cip-control-equipment/">Third-party CIP control</a>).</li>
   </ul>
+  <footer style="margin-top:2rem; padding-top:1rem; border-top:1px solid var(--border); color:var(--muted); font-size:0.85rem;">Last updated: 2026-03-20.</footer>
 </body>
 </html>

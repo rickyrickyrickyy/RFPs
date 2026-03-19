@@ -28,12 +28,12 @@
     .slideshow-controls button:hover { background: var(--accent); color: #fff; }
     .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
   </style>
-                          <link rel="stylesheet" href="../../assets/site.css">
+  <link rel="stylesheet" href="../../assets/site.css">
 </head>
 <body>
 <p class="back"><a href="../index.html">← Back to Core ejection</a> · <a href="../../index.html">P6 RFP overview</a></p>
   <h1>Plunger drive system in side panels</h1>
-  <p class="muted">Side-panel actuation housing: linear bearing-guided drive rods, compression spring return, and the plumbing/mechanics that push/pull plungers in a constrained alignment.</p>
+  <p>The plunger drive system in side panels is the actuation housing within the <a href="../index.html">core ejection</a> system that converts <a href="../../Transmission/">transmission</a> yoke motion into controlled plunger movement. It houses two parallel drive rods guided by LMK16 flanged linear bearings, with a compression spring providing return force and a C-clip interface for tuning plunger retract depth.</p>
 
   <h2>Introduction</h2>
   <p>This subassembly converts yoke-driven motion into controlled core-ejection plunger movement using two parallel drive rods. The rods are guided by flanged linear bearings (LMK16 family in this concept) installed inside side-panel housings. A compression spring provides return force and reduces impact noise via a rubber cushioning interface.</p>
@@ -83,8 +83,8 @@
   </ul>
   <h3>Interfaces</h3>
   <ul>
-    <li><strong>Input</strong>: yoke-driven actuation (retraction/compression strokes).</li>
-    <li><strong>Output</strong>: plunger drive bracket axial motion and plunger insertion/retraction through the filter tube.</li>
+    <li><strong>Input</strong>: <a href="../../Transmission/">transmission</a> yoke-driven actuation (retraction/compression strokes).</li>
+    <li><strong>Output</strong>: plunger drive bracket axial motion; plunger insertion/retraction through the filter tube; ejected cores fall into the <a href="../../Outflow-disposal/">disposal system</a>'s core chute.</li>
     <li><strong>Mount</strong>: side panels interface to collection/transmission plates; linear bearing housing installs must remain concentric/parallel to filter tube axis.</li>
   </ul>
   <h3>Interfaces and tolerances</h3>
@@ -128,7 +128,7 @@
     <li>Specify a practical method to adjust/set C-clip position (and resulting retract depth) so engaged length and core separation remain within targets across orange types.</li>
   </ol>
 
-  <p class="back"><a href="../index.html">← Back to Core ejection</a></p>
+  <p class="back"><a href="../index.html">← Back to Core ejection</a> · <a href="../../index.html">P6 RFP overview</a></p>
   <script>
 (function(){
   var el = document.getElementById('skel-plungerdrivesystemin-slideshow');
@@ -144,5 +144,6 @@
   if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
 })();
   </script>
+  <footer style="margin-top:2rem; padding-top:1rem; border-top:1px solid var(--border); color:var(--muted); font-size:0.85rem;">Last updated: 2026-03-20.</footer>
 </body>
 </html>

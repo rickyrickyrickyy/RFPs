@@ -28,7 +28,7 @@
     .slideshow-controls button:hover { background: var(--accent); color: #fff; }
     .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
   </style>
-                          <link rel="stylesheet" href="../../assets/site.css">
+  <link rel="stylesheet" href="../../assets/site.css">
 </head>
 <body>
 <p class="back"><a href="../index.html">← Back to Extraction & synchronisation</a> · <a href="../../index.html">P6 RFP overview</a></p>
@@ -36,7 +36,7 @@
   <p class="muted">Part of the <a href="../index.html">Extraction & synchronisation</a> section. Driven peelers and their mounting/alignment strategy to mesh with collection-side static peelers.</p>
 
   <h2>Introduction</h2>
-  <p>Driven peelers mesh with static peelers (collection) during compression to perform extraction. The peeler core geometry is inherited from the commercial machine; the main open work is defining the mounting flange/plate fabrication and an alignment procedure that preserves concentricity and avoids collisions.</p>
+  <p>The driven peelers are the moving extraction fingers that interlace with the static peelers on the <a href="../../Collection/">collection</a> module to compress and juice fruit. Core geometry is inherited from the commercial machine. The main open work is defining the mounting flange/plate fabrication strategy and an alignment procedure that preserves concentricity and avoids collisions; at end-of-stroke the target gap between driven and static peeler faces is approximately 2–3 mm.</p>
 
   <h2>Colour key &amp; components</h2>
   <p class="muted">Key components and intent (colours may vary across CAD figures).</p>
@@ -117,7 +117,7 @@
   <h3>Interfaces</h3>
   <ul>
     <li><strong>Input:</strong> Compression stroke from <a href="../../Transmission/">Transmission</a> pushes extraction module into <a href="../../Collection/">Collection</a>.</li>
-    <li><strong>Output:</strong> Fruit extraction via driven-static peeler mesh; peel routed to disposal via deflectors/chutes.</li>
+    <li><strong>Output:</strong> Fruit extraction via driven-static peeler mesh; peel routed to <a href="../../Outflow-disposal/">disposal system</a> via deflectors/chutes.</li>
     <li><strong>Mount:</strong> Driven peelers bolt to <a href="../driven-bracket/">Driven bracket</a>. Static peelers bolt to collection mount plate (see Collection).</li>
   </ul>
   <h3>Interfaces and tolerances</h3>
@@ -130,7 +130,7 @@
     </tbody>
   </table>
 
-  <p class="back"><a href="../index.html">← Back to Extraction & synchronisation</a></p>
+  <p class="back"><a href="../index.html">← Back to Extraction &amp; synchronisation</a> · <a href="../../index.html">P6 RFP overview</a></p>
   <script>
 (function(){
   var el = document.getElementById('peelers-slideshow');
@@ -146,5 +146,6 @@
   if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
 })();
   </script>
+  <footer style="margin-top:2rem; padding-top:1rem; border-top:1px solid var(--border); color:var(--muted); font-size:0.85rem;">Last updated: 2026-03-20.</footer>
 </body>
 </html>

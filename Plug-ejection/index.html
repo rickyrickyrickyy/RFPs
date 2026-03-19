@@ -29,7 +29,7 @@
     .iface-table th, .iface-table td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
     .iface-table th { color: var(--muted); font-weight: 600; }
   </style>
-                          <link rel="stylesheet" href="../assets/site.css">
+  <link rel="stylesheet" href="../assets/site.css">
 </head>
 <body>
 <p class="back"><a href="../index.html">← Back to P6 RFP overview</a></p>
@@ -37,12 +37,12 @@
 
   <h2>Subpages</h2>
   <ul>
-    <li><a href="plunger-drive-bracket/">Plunger drive bracket</a> <span class="muted">(with content)</span> — assembly CAD + iso/top/front views; carries four plungers.</li>
-    <li><a href="plunger-drive-system-in-side-panels/">Plunger drive system in side panels</a> <span class="muted">(with content)</span> — CAD + side-panel photos; rods, LMK16 bearings, springs, housings.</li>
+    <li><a href="plunger-drive-bracket/">Plunger drive bracket</a> <span class="muted">(updated 2026-03-20)</span> — assembly CAD + iso/top/front views; carries four plungers.</li>
+    <li><a href="plunger-drive-system-in-side-panels/">Plunger drive system in side panels</a> <span class="muted">(updated 2026-03-20)</span> — CAD + side-panel photos; rods, LMK16 bearings, springs, housings.</li>
   </ul>
 
   <h2>Introduction</h2>
-  <p>Core ejection system: plunger drive bracket, plungers, and the plunger drive system in the side panels; ejects the core from the plug cutter into the disposal core chute.</p>
+  <p>The core ejection system (subsystem 7) removes the pressed orange core from the plug cutter and drops it into the <a href="../Outflow-disposal/">disposal system</a>'s core chute. It uses compression-spring-driven plungers mounted on a drive bracket, actuated through linear-bearing-guided drive rods housed in the side panels. The <a href="../Transmission/">transmission</a> yoke pulls the drive rods back against the springs during the return stroke; on release, the springs push the plungers forward through the filter tube to eject the core.</p>
 
   <h2>Colour key &amp; components</h2>
   <p class="muted">Plunger assembly, drive bracket, juice outflow — detail pages TBD. Green housings enclose spring and guide rods; interface with filter/plug-cutter and core chute.</p>
@@ -60,12 +60,12 @@
   <p class="muted">CAD views. Refer to figures in the text as <a href="#fig1">Figure 1</a>, <a href="#fig2">Figure 2</a>, etc.</p>
   <div class="slideshow" id="plug-slideshow">
     <div class="slideshow-track">
-      <div class="slide active" id="fig1" data-caption="Figure 1. Exploded — plunger drive bracket, plungers, plunger drive rods, LMK16 linear bearing, plunger drive spring, green housings."><img src="images/plug-ejection-1.png" alt="Plug ejection exploded"></div>
-      <div class="slide" id="fig2" data-caption="Figure 2. Right — green housing, plunger drive rod, plunger drive spring, plunger drive bracket, plunger, LMK16 bearings."><img src="images/plug-ejection-2.png" alt="Plug ejection right"></div>
-      <div class="slide" id="fig3" data-caption="Figure 3. Orthogonal — central housing, plunger drive bracket, plunger, spring, plunger drive rods, LMK16 bearings (left and right)."><img src="images/plug-ejection-3.png" alt="Plug ejection orthogonal"></div>
-      <div class="slide" id="fig4" data-caption="Figure 4. Top — two green housings, plunger drive bracket with clamps, plunger drive rod through system, plunger, LMK16, plunger drive spring in right housing."><img src="images/plug-ejection-4.png" alt="Plug ejection top"></div>
-      <div class="slide" id="fig5" data-caption="Figure 5. Front — plunger drive bracket, four sub-assemblies (V-bracket, plunger, rods, springs), green end blocks."><img src="images/plug-ejection-5.png" alt="Plug ejection front"></div>
-      <div class="slide" id="fig6" data-caption="Figure 6. Front elevated — plunger drive bracket, four plungers, LMK16 at left/right, green housings, plunger drive rods."><img src="images/plug-ejection-6.png" alt="Plug ejection front elevated"></div>
+      <div class="slide active" id="fig1" data-caption="Figure 1. Exploded — plunger drive bracket, plungers, plunger drive rods, LMK16 linear bearing, plunger drive spring, green housings."><img src="images/plug-ejection-1.png" alt="Core ejection exploded"></div>
+      <div class="slide" id="fig2" data-caption="Figure 2. Right — green housing, plunger drive rod, plunger drive spring, plunger drive bracket, plunger, LMK16 bearings."><img src="images/plug-ejection-2.png" alt="Core ejection right"></div>
+      <div class="slide" id="fig3" data-caption="Figure 3. Orthogonal — central housing, plunger drive bracket, plunger, spring, plunger drive rods, LMK16 bearings (left and right)."><img src="images/plug-ejection-3.png" alt="Core ejection orthogonal"></div>
+      <div class="slide" id="fig4" data-caption="Figure 4. Top — two green housings, plunger drive bracket with clamps, plunger drive rod through system, plunger, LMK16, plunger drive spring in right housing."><img src="images/plug-ejection-4.png" alt="Core ejection top"></div>
+      <div class="slide" id="fig5" data-caption="Figure 5. Front — plunger drive bracket, four sub-assemblies (V-bracket, plunger, rods, springs), green end blocks."><img src="images/plug-ejection-5.png" alt="Core ejection front"></div>
+      <div class="slide" id="fig6" data-caption="Figure 6. Front elevated — plunger drive bracket, four plungers, LMK16 at left/right, green housings, plunger drive rods."><img src="images/plug-ejection-6.png" alt="Core ejection front elevated"></div>
     </div>
     <p class="slideshow-caption" id="plug-caption" aria-live="polite">Figure 1. Exploded — plunger drive bracket, plungers, plunger drive rods, LMK16 linear bearing, plunger drive spring, green housings.</p>
     <div class="slideshow-controls">
@@ -127,5 +127,7 @@
   if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
 })();
   </script>
+  <p class="back"><a href="../index.html">← Back to P6 RFP overview</a></p>
+  <footer style="margin-top:2rem; padding-top:1rem; border-top:1px solid var(--border); color:var(--muted); font-size:0.85rem;">Last updated: 2026-03-20.</footer>
 </body>
 </html>

@@ -28,7 +28,7 @@
     .slideshow-controls button:hover { background: var(--accent); color: #fff; }
     .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
   </style>
-                          <link rel="stylesheet" href="../../assets/site.css">
+  <link rel="stylesheet" href="../../assets/site.css">
 </head>
 <body>
 <p class="back"><a href="../index.html">← Back to Controls and electronics</a> · <a href="../../index.html">P6 RFP overview</a></p>
@@ -36,11 +36,8 @@
   <p class="muted">Part of the <a href="../index.html">Controls and electronics</a> section. Cycle/yoke sensing for safe stop conditions and cycle counting (implementation TBD).</p>
 
   <h2>Introduction</h2>
-  <p>P6 requires a sensor to detect machine cycle state and/or yoke position. This supports:
-    (1) controlled safe stop conditions (e.g., do not stop with peelers in an unsafe open state),
-    (2) cycle counting over time for operations monitoring,
-    (3) a critical "fully open stop" behavior so operators can service/remove internal parts.</p>
-  <p>The exact sensor type (encoder, distance sensor, proximity switch, etc.) is TBD. In particular, sensor hardware implementation is expected to involve ODM/suppliers such as <strong>J-Pro</strong>.</p>
+  <p>The yoke position sensor — part of the <a href="../index.html">Controls and electronics</a> subsystem — detects machine cycle state by sensing yoke position on the <a href="../../Transmission/">transmission</a>. This supports three functions: (1) controlled safe-stop conditions (do not stop with peelers in an unsafe state), (2) cycle counting for operations monitoring, and (3) a critical "fully open stop" behavior so operators can service or remove internal parts when the machine is switched off normally.</p>
+  <p>The exact sensor type (encoder, distance sensor, proximity switch, etc.) is TBD. Sensor hardware implementation is expected to involve ODM/suppliers such as <strong>J-Pro</strong>.</p>
 
   <h2>Colour key &amp; components</h2>
   <p class="muted">Sensing options (TBD).</p>
@@ -97,6 +94,7 @@
     </tbody>
   </table>
 
-  <p class="back"><a href="../index.html">← Back to Controls and electronics</a></p>
+  <p class="back"><a href="../index.html">← Back to Controls and electronics</a> · <a href="../../index.html">P6 RFP overview</a></p>
+  <footer style="margin-top:2rem; padding-top:1rem; border-top:1px solid var(--border); color:var(--muted); font-size:0.85rem;">Last updated: 2026-03-20.</footer>
 </body>
 </html>

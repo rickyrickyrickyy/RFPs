@@ -28,7 +28,7 @@
     .slideshow-controls button:hover { background: var(--accent); color: #fff; }
     .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
   </style>
-                          <link rel="stylesheet" href="../../assets/site.css">
+  <link rel="stylesheet" href="../../assets/site.css">
 </head>
 <body>
 <p class="back"><a href="../index.html">← Back to Enclosure / shell</a> · <a href="../../index.html">P6 RFP overview</a></p>
@@ -36,7 +36,7 @@
   <p class="muted">Guards/shell panels that protect users from moving parts: drivetrain/belt cover, plunger-side cover, and any additional splash protection surfaces.</p>
 
   <h2>Introduction</h2>
-  <p>Enclosure and shell panels exist to prevent accidental contact with moving parts (belt/pulleys, plunger drive, moving peeler assemblies) and to support hygiene/splash containment during washdown. Covers are designed as folded sheet metal with bracing where needed so overcentered hinges mount to stiff backing rather than directly to thin 2 mm sheet.</p>
+  <p>The protective covers are the main shell panels within the <a href="../index.html">Enclosure / shell</a> subsystem. They prevent accidental contact with moving parts (belt/pulleys, plunger drive, moving peeler assemblies) and provide hygiene/splash containment during washdown. Covers are folded sheet metal with bracing so that <a href="../overcentered-hinges/">overcentered hinges</a> mount to stiff backing rather than directly to thin 2 mm sheet. Three coded lid safety switches integrate with the <a href="../../Controls-Electronics/">controls and electronics</a> to interlock the machine when any cover is open.</p>
 
   <h2>Colour key &amp; components</h2>
   <p class="muted">Protective covers and mounting hinges (CAD colours vary across figures).</p>
@@ -105,7 +105,7 @@
     <li>Confirm coded lid switch integration and latch geometry so lid open status is reliable.</li>
   </ol>
 
-  <p class="back"><a href="../index.html">← Back to Enclosure / shell</a></p>
+  <p class="back"><a href="../index.html">← Back to Enclosure / shell</a> · <a href="../../index.html">P6 RFP overview</a></p>
   <script>
 (function(){
   var el = document.getElementById('skel-protectivecovers-slideshow');
@@ -121,5 +121,6 @@
   if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
 })();
   </script>
+  <footer style="margin-top:2rem; padding-top:1rem; border-top:1px solid var(--border); color:var(--muted); font-size:0.85rem;">Last updated: 2026-03-20.</footer>
 </body>
 </html>

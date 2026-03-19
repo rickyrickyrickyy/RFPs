@@ -29,7 +29,7 @@
     .iface-table th, .iface-table td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
     .iface-table th { color: var(--muted); font-weight: 600; }
   </style>
-                          <link rel="stylesheet" href="../assets/site.css">
+  <link rel="stylesheet" href="../assets/site.css">
 </head>
 <body>
 <p class="back"><a href="../index.html">← Back to P6 RFP overview</a></p>
@@ -37,13 +37,13 @@
 
   <h2>Subpages</h2>
   <ul>
-    <li><a href="transmission-mount-plate/">Transmission mount plate</a> <span class="muted">(with content)</span> — cast bearing plate pre/post machining, parting lines; STEP downloads.</li>
-    <li><a href="yoke/">Yoke &amp; drive shafts</a> <span class="muted">(with content)</span> — yoke track faces, shafts/bearings, scrapers/covers, jam-case concerns.</li>
-    <li><a href="drive-shafts/">Drive shafts</a> <span class="muted">(with content)</span> — yoke track side/top views, pull bracket + rod stopper, top cap concept (figures).</li>
+    <li><a href="transmission-mount-plate/">Transmission mount plate</a> <span class="muted">(updated 2026-03-20)</span> — cast bearing plate pre/post machining, parting lines; STEP downloads.</li>
+    <li><a href="yoke/">Yoke &amp; drive shafts</a> <span class="muted">(updated 2026-03-20)</span> — yoke track faces, shafts/bearings, scrapers/covers, jam-case concerns.</li>
+    <li><a href="drive-shafts/">Drive shafts</a> <span class="muted">(updated 2026-03-20)</span> — yoke track side/top views, pull bracket + rod stopper, top cap concept (figures).</li>
   </ul>
 
   <h2>Introduction</h2>
-  <p>Yoke, two 35 mm drive shafts (with shaft mounts), two LMK35UU linear bearings, transmission mount plate. Mounts on the main frame. Transmits force from <a href="../Drivetrain/">drivetrain</a> to <a href="../Extraction-syncronisation/">extraction/sync</a>; fruit pressed against <a href="../Collection/">collection</a> on loaded mount plate.</p>
+  <p>The transmission converts the <a href="../Drivetrain/">drivetrain</a>'s rotary cam motion into a controlled linear stroke that drives the extraction and core ejection cycle. A scotch-yoke assembly rides on two 35 mm hardened stainless shafts guided by flanged linear bearings (LMK35UU family), carrying force from the drivetrain cam bearings through to the <a href="../Extraction-syncronisation/">extraction and synchronisation</a> module where fruit is pressed against the <a href="../Collection/">collection</a> peelers. The assembly mounts on a dedicated transmission mount plate bolted to the main <a href="../Frame/">frame</a>.</p>
 
   <h2>Colour key &amp; components</h2>
   <p class="muted">Applies to the figures on this page.</p>
@@ -121,7 +121,7 @@
 
   <h3>Interfaces</h3>
   <ul>
-    <li><strong>Input:</strong> Force from gears (drivetrain) on drivetrain mount plate.</li>
+    <li><strong>Input:</strong> Force from gears (<a href="../Drivetrain/">drivetrain</a>) on <a href="../Drivetrain/drivetrain-mount-plate/">drivetrain mount plate</a>.</li>
     <li><strong>Output:</strong> Linear motion of yoke → extraction/synchronisation → fruit pressed against collection system.</li>
     <li><strong>Mount:</strong> Transmission mount plate <span class="swatch" style="background-color:#B341C3" title="#B341C3"></span> on main frame. See <a href="../Frame/">Frame</a>. Collection system on <a href="../Frame/">loaded mount plate</a>.</li>
   </ul>
@@ -154,5 +154,8 @@
   if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
 })();
   </script>
+
+  <p class="back"><a href="../index.html">← Back to P6 RFP overview</a></p>
+  <footer style="margin-top:2rem; padding-top:1rem; border-top:1px solid var(--border); color:var(--muted); font-size:0.85rem;">Last updated: 2026-03-20.</footer>
 </body>
 </html>

@@ -30,7 +30,7 @@
     .iface-table th { color: var(--muted); font-weight: 600; }
     .reminder { background: rgba(88, 166, 255, 0.12); border: 1px solid var(--accent); border-radius: 6px; padding: 0.75rem 1rem; margin: 1rem 0; font-size: 0.95rem; }
   </style>
-                          <link rel="stylesheet" href="../assets/site.css">
+  <link rel="stylesheet" href="../assets/site.css">
 </head>
 <body>
 <p class="back"><a href="../index.html">← Back to P6 RFP overview</a></p>
@@ -38,13 +38,13 @@
 
   <h2>Subpages</h2>
   <ul>
-    <li><a href="fruit-support/">Fruit support</a> <span class="muted">(with content)</span> — staging for oranges to drop into peelers; 3 rails, pusher; CAD views and colour key.</li>
-    <li><a href="peelers/">Peelers</a> <span class="muted">(with content)</span> — driven peelers; flange fabrication + adjust/ream alignment workflow.</li>
-    <li><a href="driven-bracket/">Driven bracket</a> <span class="muted">(with content)</span> — high-load bracket; cast concept + post-machining; chute deflector mounting WIP.</li>
+    <li><a href="fruit-support/">Fruit support</a> <span class="muted">(updated 2026-03-20)</span> — staging for oranges to drop into peelers; 3 rails, pusher; CAD views and colour key.</li>
+    <li><a href="peelers/">Peelers</a> <span class="muted">(updated 2026-03-20)</span> — driven peelers; flange fabrication + adjust/ream alignment workflow.</li>
+    <li><a href="driven-bracket/">Driven bracket</a> <span class="muted">(updated 2026-03-20)</span> — high-load bracket; cast concept + post-machining; chute deflector mounting WIP.</li>
   </ul>
 
   <h2>Introduction</h2>
-  <p>Stages oranges from the <a href="../Feeder/">feeder</a> and meshes with <a href="../Collection/">static peelers</a> for extraction. Yokes from <a href="../Transmission/">transmission</a> drive the bracket and peelers.</p>
+  <p>The extraction &amp; synchronisation subsystem is the moving half of the juicing assembly. It receives individual oranges from the <a href="../Feeder/">fruit intake system</a>, stages them on the fruit support rails, and then drives the driven peelers into the <a href="../Collection/">collection</a> module's static peelers to compress and juice the fruit. Linear motion comes from the <a href="../Transmission/">transmission</a> yoke and shafts, which push the driven bracket (and everything mounted to it) through the compression stroke. At end-of-stroke the target gap between driven and static peeler faces is approximately 2–3 mm.</p>
   <div class="reminder"><strong>Peel deflectors:</strong> The <strong>chute deflector</strong> (this subsystem) under the <strong>driven</strong> peeler modules is the deflector required to cover the core chutes during compression and route peel correctly. <strong>Static deflectors on the collection mount plate are removed</strong> (figures/text refresh pending).</div>
 
   <h2>Colour key &amp; components</h2>
@@ -129,7 +129,8 @@
   <h3>Subassemblies</h3>
   <ul>
     <li><a href="fruit-support/">Fruit support</a> — rails, connecting link, pusher; direct fruit from pipe to peeler.</li>
-    <li>Driven peelers, driven bracket, chute deflectors — detail pages TBD.</li>
+    <li><a href="peelers/">Peelers</a> — driven peelers; flange fabrication + adjust/ream alignment workflow.</li>
+    <li><a href="driven-bracket/">Driven bracket</a> — high-load bracket; cast concept + post-machining; chute deflector mounting.</li>
   </ul>
 
   <h3>Interfaces and tolerances</h3>
@@ -139,8 +140,8 @@
     <tbody>
       <tr><td>Driven bracket</td><td>2 sets of 4× mount holes on back for yokes; carries yoke load; mashes against static peelers</td><td><a href="../Transmission/">Transmission</a>, <a href="../Collection/">Collection</a></td></tr>
       <tr><td>Driven peelers</td><td>Mesh with static peelers for extraction</td><td><a href="../Collection/">Collection</a></td></tr>
-      <tr><td>Fruit support</td><td>Base bolted to drive bracket; 3 pairs angled rails (height taper to center); rails 3°→8°; pusher for roller; CIP spray through gaps</td><td><a href="fruit-support/">Fruit support</a>, <a href="../Feeder/">Feeder</a></td></tr>
-      <tr><td>Roller</td><td>Pushes open spring on feeder to release one orange onto fruit support</td><td><a href="../Feeder/">Feeder</a></td></tr>
+      <tr><td>Fruit support</td><td>Base bolted to drive bracket; 3 pairs angled rails (height taper to center); rails 3°→8°; pusher for roller; CIP spray through gaps</td><td><a href="fruit-support/">Fruit support</a>, <a href="../Feeder/">Fruit intake system</a></td></tr>
+      <tr><td>Roller</td><td>Pushes open spring on fruit intake system to release one orange onto fruit support</td><td><a href="../Feeder/">Fruit intake system</a></td></tr>
       <tr><td>Chute deflectors</td><td>Redirect peel to back of bin; mounted to driven bracket; bent plate (WIP)</td><td><a href="../Outflow-disposal/">Disposal system</a>, <a href="../Collection/">Collection</a></td></tr>
     </tbody>
   </table>
@@ -162,5 +163,6 @@
   if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
 })();
   </script>
+  <footer style="margin-top:2rem; padding-top:1rem; border-top:1px solid var(--border); color:var(--muted); font-size:0.85rem;">Last updated: 2026-03-20.</footer>
 </body>
 </html>

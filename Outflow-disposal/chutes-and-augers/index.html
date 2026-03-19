@@ -28,7 +28,7 @@
     .slideshow-controls button:hover { background: var(--accent); color: #fff; }
     .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
   </style>
-                          <link rel="stylesheet" href="../../assets/site.css">
+  <link rel="stylesheet" href="../../assets/site.css">
 </head>
 <body>
 <p class="back"><a href="../index.html">← Back to Disposal system</a> · <a href="../../index.html">P6 RFP overview</a></p>
@@ -36,7 +36,7 @@
   <p class="muted">Folded/welded sheet-metal peel chute + welded core chute hexagonal tubes, feeding two separate auger paths (peels vs. cores).</p>
 
   <h2>Introduction</h2>
-  <p>This subassembly separates <strong>peel</strong> and <strong>cores</strong> after the pressing stroke. Cores fall into <strong>core chute tubes</strong> beneath each peeler station, while peel material flows around the core tubes into the <strong>peel chute</strong>. The two resulting streams are conveyed away separately by <strong>two augers</strong>.</p>
+  <p>The chutes and augers subassembly is the physical hardware within the <a href="../index.html">Disposal system</a> that separates <strong>peel</strong> and <strong>core</strong> waste streams after the pressing stroke. Cores ejected by <a href="../../Plug-ejection/">core ejection</a> fall into <strong>core chute tubes</strong> (hexagonal tubes beneath each peeler station), while peel material flows around the core tubes into the <strong>peel chute</strong> (folded sheet metal). Two augers then convey each stream independently out of the machine, with under-machine clearance interfacing with the <a href="../../Frame/">frame</a>.</p>
 
   <h2>Colour key &amp; components</h2>
   <p class="muted">CAD colours for this subpage (component meanings should match the main disposal gallery).</p>
@@ -82,7 +82,7 @@
     <li><strong>Input (cores)</strong>: from <a href="../../Plug-ejection/">core ejection</a>; cores fall into core chute tubes.</li>
     <li><strong>Input (peels)</strong>: from <a href="../../Collection/">collection</a> / extraction; peel flows to peel chute and around core tubes via chute geometry.</li>
     <li><strong>Output</strong>: two auger takeoffs — one for peel, one for cores.</li>
-    <li><strong>Mount</strong>: folded chute assembly mounts to the frame and interfaces with side panels and the peel chute lip.</li>
+    <li><strong>Mount</strong>: folded chute assembly mounts to the <a href="../../Frame/">frame</a> and interfaces with side panels and the peel chute lip.</li>
   </ul>
   <h3>Interfaces and tolerances</h3>
   <p class="muted">Known interfaces and tolerances (owner intent). Links go to related subsystems.</p>
@@ -116,7 +116,7 @@
     <li>Define acceptable edge geometry for NSF compliance: what minimum radii and maximum shelf/step heights are acceptable.</li>
   </ol>
 
-  <p class="back"><a href="../index.html">← Back to Disposal system</a></p>
+  <p class="back"><a href="../index.html">← Back to Disposal system</a> · <a href="../../index.html">P6 RFP overview</a></p>
   <script>
 (function(){
   var el = document.getElementById('skel-chutesandaugers-slideshow');
@@ -132,5 +132,6 @@
   if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
 })();
   </script>
+  <footer style="margin-top:2rem; padding-top:1rem; border-top:1px solid var(--border); color:var(--muted); font-size:0.85rem;">Last updated: 2026-03-20.</footer>
 </body>
 </html>

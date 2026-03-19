@@ -26,7 +26,7 @@
     .slideshow-controls button:hover { background: var(--accent); color: #fff; }
     .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
   </style>
-                          <link rel="stylesheet" href="../assets/site.css">
+  <link rel="stylesheet" href="../assets/site.css">
 </head>
 <body>
 <p class="back"><a href="../index.html">← Back to P6 RFP overview</a></p>
@@ -34,13 +34,13 @@
 
   <h2>Subpages</h2>
   <ul>
-    <li><a href="feeding-subassembly/">Feeding subassembly</a> <span class="muted">(with content)</span> — per-unit detail: mount plate, 90° entry tube, straight tube, spring guide, sync spring; 8 CAD views and colour key.</li>
-    <li><a href="feeder-body/">Feeder body</a> <span class="muted">(with content)</span> — shell/lid/bracing; rotates on hinge for access and washdown/CIP.</li>
-    <li><a href="entry-tubes/">Entry tubes</a> <span class="muted">(with content)</span> — adjustable-height, removable tubes connecting upstream lines to each feeding unit.</li>
+    <li><a href="feeding-subassembly/">Feeding subassembly</a> <span class="muted">(updated 2026-03-20)</span> — per-unit detail: mount plate, 90° entry tube, straight tube, spring guide, sync spring; 8 CAD views and colour key.</li>
+    <li><a href="feeder-body/">Feeder body</a> <span class="muted">(updated 2026-03-20)</span> — shell/lid/bracing; rotates on hinge for access and washdown/CIP.</li>
+    <li><a href="entry-tubes/">Entry tubes</a> <span class="muted">(updated 2026-03-20)</span> — adjustable-height, removable tubes connecting upstream lines to each feeding unit.</li>
   </ul>
 
   <h2>Introduction</h2>
-  <p>Top-level fruit intake system: feeder body, brace, feeding subassembly, and entry tubes. The feeder body rotates on the feeder hinge for access and CIP.</p>
+  <p>The fruit intake system (subsystem 6) reliably delivers one orange per cycle to each of the machine's four extraction stations. It consists of a hinged feeder body (shell and lid that opens for access and CIP), structural bracing, per-station feeding subassemblies (90° tube, straight tube, sync spring, and mount plate), and adjustable entry tubes connecting to upstream sorting lines. During each cycle, oranges stacked in the entry tubes roll through the 90° tube onto a sync spring; the spring gates the column and releases a single fruit onto the <a href="../Extraction-syncronisation/">fruit support</a> below.</p>
 
   <h2>Colour key &amp; components</h2>
   <p class="muted">CAD colours for this section. Per-unit detail: <a href="feeding-subassembly/">Feeding subassembly</a>.</p>
@@ -120,7 +120,8 @@
   <ul>
     <li><strong>Feeder hinge</strong> — feeder body rotates for access and CIP; overcentered hinge (see <a href="../Enclosure-shell/">Enclosure / shell</a>).</li>
     <li><strong>Brace</strong> — welded to lid; supports feeding subassembly and entry tubes.</li>
-    <li><strong>Fruit flow</strong> — entry tubes → feeding subassembly → <a href="../Extraction-syncronisation/">extraction &amp; synchronisation</a> (fruit support, peelers).</li>
+    <li><strong>Fruit flow</strong> — entry tubes → feeding subassembly → <a href="../Extraction-syncronisation/">extraction &amp; synchronisation</a> (fruit support, sync spring interaction).</li>
+    <li><strong>Downstream</strong> — after extraction, juice and peels flow to <a href="../Collection/">collection</a> (peelers, filter tube, plug cutter).</li>
   </ul>
 
   <p class="back"><a href="../index.html">← Back to P6 RFP overview</a></p>
@@ -140,5 +141,6 @@
   if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
 })();
   </script>
+  <footer style="margin-top:2rem; padding-top:1rem; border-top:1px solid var(--border); color:var(--muted); font-size:0.85rem;">Last updated: 2026-03-20.</footer>
 </body>
 </html>

@@ -31,12 +31,12 @@
     .figure-standalone img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
     .figure-standalone figcaption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); }
   </style>
-                          <link rel="stylesheet" href="../../assets/site.css">
+  <link rel="stylesheet" href="../../assets/site.css">
 </head>
 <body>
-<p class="back"><a href="../index.html">← Back to Feeder</a></p>
+<p class="back"><a href="../index.html">← Back to Fruit intake system</a> · <a href="../../index.html">P6 RFP overview</a></p>
   <h1>Feeding subassembly</h1>
-  <p class="muted">Part of the <a href="../index.html">Fruit intake system</a>. Feeds oranges one at a time to the <a href="../../Extraction-syncronisation/">extraction/synchronisation</a> mechanism.</p>
+  <p>The feeding subassembly is the per-station module within the <a href="../index.html">fruit intake system</a> that gates a column of oranges and releases one at a time onto the <a href="../../Extraction-syncronisation/">fruit support</a>. Each unit consists of a mount plate, flanged 90° entry tube, straight tube with spring guide, and a sync spring mechanism — all riveted to the feeder body for easy swap during design iteration.</p>
 
   <h2>Description</h2>
   <p>The feeding subassembly regulates the flow of oranges from the entry tubes and releases them one at a time onto the fruit support. Rollers on the extraction/synchronisation system push open the yellow sync spring to allow a single orange to drop. The whole subassembly is mounted to a tan mount plate <span class="swatch" style="background-color:#AF782E" title="#AF782E"></span>, which is then mounted onto the feeder body.</p>
@@ -144,6 +144,7 @@
     <li><strong>Input:</strong> Oranges from beige entry tubes (feeder top-level) roll into the 90° entry tube.</li>
     <li><strong>Output:</strong> Rollers on the <a href="../../Extraction-syncronisation/">extraction/synchronisation</a> system push open the yellow sync spring; one orange drops onto the fruit support.</li>
     <li><strong>Mount:</strong> Subassembly mount plate attaches to the feeder body.</li>
+    <li><strong>Downstream:</strong> After extraction, juice and peels flow to the <a href="../../Collection/">collection</a> system (peelers, filter tube).</li>
   </ul>
 
   <div class="param-block">
@@ -154,7 +155,7 @@
     </ul>
   </div>
 
-  <p class="back"><a href="../index.html">← Back to Feeder</a></p>
+  <p class="back"><a href="../index.html">← Back to Fruit intake system</a> · <a href="../../index.html">P6 RFP overview</a></p>
   <script>
 (function(){
   var el = document.getElementById('feedsub-slideshow');
@@ -171,5 +172,6 @@
   if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
 })();
   </script>
+  <footer style="margin-top:2rem; padding-top:1rem; border-top:1px solid var(--border); color:var(--muted); font-size:0.85rem;">Last updated: 2026-03-20.</footer>
 </body>
 </html>
