@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Machine control definition and UI — Controls — P6 RFP</title>
+  <title>Definição de controle e interface — Controles — P6 RFP</title>
   <style>
     :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
     body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
@@ -28,29 +28,29 @@
     .slideshow-controls button:hover { background: var(--accent); color: #fff; }
     .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
   </style>
-      <link rel="stylesheet" href="../../../assets/site.css">
+                <link rel="stylesheet" href="../../../assets/site.css">
 </head>
 <body>
 <nav class="site-lang-bar" aria-label="Language">
   <span class="lang-label">Idioma:</span>
-  <a href="../../../Controls-Electronics/machine-control-definition-and-ui/index.html">English</a>
+  <a href="../../../Controls-Electronics/machine-control-definition-and-ui/index.html">Inglês</a>
   <span aria-hidden="true">·</span>
   <a href="../../../zh/Controls-Electronics/machine-control-definition-and-ui/index.html">中文</a>
   <span aria-hidden="true">·</span>
   <a href="index.html" aria-current="page">Português</a>
 </nav>
 
-<p class="back"><a href="../index.html">← Voltar a Controls and electronics</a> · <a href="../../index.html">Visão geral do RFP P6</a></p>
-  <h1>Machine control definition and UI</h1>
-  <p class="muted">Part of the <a href="../index.html">Controls and electronics</a> section. Local stand-alone controls, indicators, safety UI, and lockout/tagout.</p>
+<p class="back"><a href="../index.html">← Voltar a Controles e eletrônica</a> · <a href="../../index.html">Visão geral do RFP P6</a></p>
+  <h1>Definição de controle e interface</h1>
+  <p class="muted">Peça of the <a href="../index.html">Controles e eletrônica</a> section. Local stand-alone controls, indicators, safety UI, and lockout/tagout.</p>
 
   <h2>Introdução</h2>
   <p>The machine must be operable as a stand-alone unit with local ON/OFF and run/stop controls. The UI should be easy-access at the top-front of the machine, with clear indicators for RUNNING/STOPPED and safety-open state. A rear lockout/tagout (LOTO) unit is required for service and seasonal teardown.</p>
 
-  <h2>Legenda de cores &amp; components</h2>
+  <h2>Legenda de cores e componentes</h2>
   <p class="muted">UI components and intent.</p>
   <table>
-    <tr><th>Colour(s)</th><th>Component</th></tr>
+    <tr><th>Cor(es)</th><th>Componente</th></tr>
     <tr><td><em>—</em></td><td><strong>Top-front control unit</strong> — ON/START, OFF/STOP, E-STOP, RUNNING and STOPPED indicators.</td></tr>
     <tr><td><em>—</em></td><td><strong>Safety status indicator</strong> — “machine open” indicator when any lid interlock is open.</td></tr>
     <tr><td><em>—</em></td><td><strong>Rear LOTO unit</strong> — lockout/tagout isolation point accessible from the top-rear.</td></tr>
@@ -60,25 +60,25 @@
   <p class="muted">Control panel concept and placement (photo/CAD snapshot).</p>
   <div class="slideshow" id="controls-ui-slideshow">
     <div class="slideshow-track">
-      <div class="slide active" id="fig1" data-caption="Figure 1. Top-front control unit concept (photo)."><img src="../../../Controls-Electronics/machine-control-definition-and-ui/images/01.png" alt="Figure 1"></div>
+      <div class="slide active" id="fig1" data-caption="Figura 1. Top-front control unit concept (photo)."><img src="../../../Controls-Electronics/machine-control-definition-and-ui/images/01.png" alt="Figura 1"></div>
     </div>
-    <p class="slideshow-caption" id="controls-ui-caption" aria-live="polite">Figure 1. Top-front control unit concept (photo).</p>
+    <p class="slideshow-caption" id="controls-ui-caption" aria-live="polite">Figura 1. Top-front control unit concept (photo).</p>
     <div class="slideshow-controls">
-      <button type="button" id="controls-ui-prev" aria-label="Previous">← Previous</button>
+      <button type="button" id="controls-ui-prev" aria-label="Anterior">← Anterior</button>
       <span class="slideshow-counter" id="controls-ui-counter">1 / 1</span>
-      <button type="button" id="controls-ui-next" aria-label="Next">Next →</button>
+      <button type="button" id="controls-ui-next" aria-label="Próximo">Próximo →</button>
     </div>
   </div>
 
   <h3>Figuras recomendadas (clareza para o contratado)</h3>
   <ul class="muted">
-    <li><strong>Add figure</strong>: <strong>Panel face layout</strong> — exact button/indicator positions and labeling.</li>
-    <li><strong>Add figure</strong>: <strong>Rear LOTO access</strong> — operator reach path with covers open/closed.</li>
-    <li><strong>Add figure</strong>: <strong>Wiring home-run</strong> — from panel to motor contactor and lid switches (block diagram).</li>
+    <li><strong>Adicionar figura</strong>: <strong>Panel face layout</strong> — exact button/indicator positions and labeling.</li>
+    <li><strong>Adicionar figura</strong>: <strong>Rear LOTO access</strong> — operator reach path with covers open/closed.</li>
+    <li><strong>Adicionar figura</strong>: <strong>Wiring home-run</strong> — from panel to motor contactor and lid switches (block diagram).</li>
   </ul>
 
   <h2>Discussão</h2>
-  <h3>Rough design &amp; intent</h3>
+  <h3>Design preliminar e intenção</h3>
   <ul>
     <li><strong>Stand-alone operation</strong> — local power and run controls allow independent operation, inspection, component replacement, and simple cleaning.</li>
     <li><strong>Clear state indication</strong> — operator should quickly see whether the machine is running, stopped, or prevented from running due to safety-open conditions.</li>
@@ -100,13 +100,13 @@
     <li><strong>Lockable</strong> — designed for lockout/tagout process (plant procedures may vary).</li>
   </ul>
 
-  <h3>Known issues &amp; risks</h3>
+  <h3>Problemas e riscos conhecidos</h3>
   <ul>
     <li><strong>Washdown exposure</strong> — UI and wiring must be water protected; choose enclosures, seals, and glands appropriate for industrial cleaning.</li>
     <li><strong>Safety logic clarity</strong> — avoid ambiguous states; make it obvious why the machine will not start (open lid, E-stop, etc.).</li>
   </ul>
 
-  <h3>Questions for contractor</h3>
+  <h3>Perguntas para o contratado</h3>
   <ol>
     <li>Recommend industrial components and enclosure/IP rating appropriate for washdown exposure.</li>
     <li>Propose panel layout that is ergonomic (top-front) and maintainable, with clear labeling and indicator logic.</li>
@@ -124,14 +124,14 @@
   <h3>Interfaces e tolerâncias</h3>
   <p class="muted">Tolerances TBD; contractor to propose mounting and sealing details consistent with washdown environment.</p>
   <table class="iface-table">
-    <thead><tr><th>Part</th><th>Interface / tolerance</th><th>Related</th></tr></thead>
+    <thead><tr><th>Peça</th><th>Interface / tolerância</th><th>Relacionado</th></tr></thead>
     <tbody>
-      <tr><td>Top-front UI</td><td>Washdown-resistant enclosure and gland sealing; labeling/ergonomics</td><td><a href="../index.html">Controls and electronics</a></td></tr>
+      <tr><td>Top-front UI</td><td>Washdown-resistant enclosure and gland sealing; labeling/ergonomics</td><td><a href="../index.html">Controles e eletrônica</a></td></tr>
       <tr><td>Rear LOTO</td><td>Lockable isolation point; access envelope</td><td>—</td></tr>
     </tbody>
   </table>
 
-  <h3>Componentes</h3>
+  <h3>Componentees</h3>
   <ul>
     <li>ON/START, OFF/STOP, E-STOP pushbuttons</li>
     <li>RUNNING/STOPPED indicators</li>
@@ -140,7 +140,7 @@
     <li>Enclosure, wiring, glands, labels</li>
   </ul>
 
-  <p class="back"><a href="../index.html">← Voltar a Controls and electronics</a></p>
+  <p class="back"><a href="../index.html">← Voltar a Controles e eletrônica</a></p>
   <script>
 (function(){
   var el = document.getElementById('controls-ui-slideshow');

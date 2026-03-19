@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>10. Clean-in-place (CIP) — P6 RFP</title>
+  <title>10. 就地清洗（CIP） — P6 RFP</title>
   <style>
     :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; }
     body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
@@ -14,12 +14,12 @@
     .back { margin-bottom: 1rem; font-size: 0.9rem; }
     .muted { color: var(--muted); font-size: 0.9rem; }
   </style>
-      <link rel="stylesheet" href="../../assets/site.css">
+                <link rel="stylesheet" href="../../assets/site.css">
 </head>
 <body>
 <nav class="site-lang-bar" aria-label="Language">
   <span class="lang-label">语言：</span>
-  <a href="../../Clean-in-place/index.html">English</a>
+  <a href="../../Clean-in-place/index.html">英文</a>
   <span aria-hidden="true">·</span>
   <a href="index.html" aria-current="page">中文</a>
   <span aria-hidden="true">·</span>
@@ -27,26 +27,26 @@
 </nav>
 
 <p class="back"><a href="../index.html">← 返回 P6 RFP 总览</a></p>
-  <h1>10. Clean-in-place (CIP)</h1>
+  <h1>10. 就地清洗（CIP）</h1>
 
   <h2>子页面</h2>
   <ul>
     <li><a href="cip-nozzles-and-feed-pipes/index.html">CIP nozzles and feed pipes</a> <span class="muted">(有内容)</span> — spray nozzles, manifolds, rigid piping and flexible hose interfaces.</li>
-    <li><a href="third-party-cip-control-equipment/index.html">Third-party CIP control equipment</a> <span class="muted">(有内容)</span> — plant CIP integration, cycles, and acceptance testing.</li>
+    <li><a href="third-party-cip-control-equipment/index.html">第三方 CIP 控制设备</a> <span class="muted">(有内容)</span> — plant CIP integration, cycles, and acceptance testing.</li>
   </ul>
 
   <h2>简介</h2>
-  <p>The P6 CIP solution is provided by the <strong>plant CIP system</strong>. The machine is connected to the plant CIP line and cleaned internally through fixed spray nozzles and (for the juice collection circuit) a counter-flow backflush through the juice line.</p>
+  <p>The P6 CIP solution is provided by the <strong>plant CIP system</strong>. The machine is connected to the plant CIP line and cleaned internally through fixed spray nozzles and (for the 果汁收集 circuit) a counter-flow backflush through the juice line.</p>
 
   <h2>讨论</h2>
-  <h3>Rough design &amp; intent</h3>
+  <h3>初步设计与意图</h3>
   <ul>
     <li><strong>External system</strong> — CIP cycles are controlled by the plant CIP system (pressure, temperature, chemical concentration, and durations).</li>
-    <li><strong>Machine must run</strong> — During CIP, the machine must be running to achieve effective cleaning (moving peelers/plungers expose surfaces and clear flow paths).</li>
+    <li><strong>Machine must run</strong> — During CIP, the machine must be running to achieve effective cleaning (moving 削皮器/plungers expose surfaces and clear flow paths).</li>
     <li><strong>Two cleaning paths</strong>:
       <ul>
-        <li><strong>Spray nozzle cleaning</strong> — internal cleaning via fixed nozzles targeting feed tubes, peelers, and deflectors.</li>
-        <li><strong>Juice circuit backflush</strong> — juice collection system cleaning (collector, filter, plunger) via CIP solution coming through the <strong>juice line</strong> as a <strong>counter-flow (back flush)</strong> process.</li>
+        <li><strong>Spray nozzle cleaning</strong> — internal cleaning via fixed nozzles targeting feed tubes, 削皮器, and 导流板.</li>
+        <li><strong>Juice circuit backflush</strong> — 果汁收集 system cleaning (collector, filter, plunger) via CIP solution coming through the <strong>juice line</strong> as a <strong>counter-flow (back flush)</strong> process.</li>
       </ul>
     </li>
   </ul>
@@ -63,32 +63,32 @@
   <ul>
     <li><strong>Total nozzles</strong> — 21 total (current concept).</li>
     <li><strong>Single input</strong> — nozzles connect via rigid stainless pipes/manifolds to a single input connection per manifold group, with flexible hoses to allow feeder open/close.</li>
-    <li><strong>Feeder lid nozzles (12)</strong> — 4 sets × 3 nozzles per set:
+    <li><strong>进料器 lid nozzles (12)</strong> — 4 sets × 3 nozzles per set:
       <ul>
         <li>A: 1 circular-jet nozzle at the curve of the feeding tube turned backwards (one per tube).</li>
         <li>B: 1 angled-jet nozzle behind the feeding tube pointing to the movable peeler (mid-stroke) (one per peeler).</li>
         <li>C: 1 angled-jet nozzle at the front of the feeding tube pointing to the fixed peeler (one per peeler).</li>
       </ul>
     </li>
-    <li><strong>Below movable peelers (4)</strong> — D: 4 angled nozzles at the rear plate of the peel deflector pointing to the movable peeler (mid-stroke) (4 sets × 1 nozzle).</li>
-    <li><strong>Below static peelers (5)</strong> — E: 5 angled nozzles at the front plate of the peel collector between the core ducts and at both sides (one per peeler +1), avoiding the deflectors.</li>
+    <li><strong>Below movable 削皮器 (4)</strong> — D: 4 angled nozzles at the rear plate of the peel deflector pointing to the movable peeler (mid-stroke) (4 sets × 1 nozzle).</li>
+    <li><strong>Below static 削皮器 (5)</strong> — E: 5 angled nozzles at the front plate of the peel collector between the core ducts and at both sides (one per peeler +1), avoiding the 导流板.</li>
   </ul>
 
   <h3>DFM &amp; integration (China)</h3>
   <ul>
     <li><strong>Piping</strong> — feeder nozzles are connected by rigid stainless-steel pipes and connect to the plant CIP line via a flexible hose to allow feeder to open/close.</li>
-    <li><strong>Peel deflector manifold</strong> — nozzles below peelers are also connected by rigid stainless pipes and connected to the plant CIP line through a flexible hose.</li>
+    <li><strong>Peel deflector manifold</strong> — nozzles below 削皮器 are also connected by rigid stainless pipes and connected to the plant CIP line through a flexible hose.</li>
     <li><strong>Hygiene</strong> — all CIP plumbing in splash/food zones should avoid pockets, use sanitary fittings, and be serviceable for inspection/replacement.</li>
   </ul>
 
   <h3>Open items (requires further design)</h3>
   <ul>
     <li>Spray pattern and nozzle type selection (jet type, coverage, droplet size).</li>
-    <li>Spray angles and exact mounting locations (collision avoidance with moving peelers/deflectors).</li>
+    <li>Spray angles and exact mounting locations (collision avoidance with moving 削皮器/导流板).</li>
     <li>Connection type/standard (sanitary fittings), flow rate, and operating pressure.</li>
   </ul>
 
-  <h3>Questions for contractor</h3>
+  <h3>承包商问题</h3>
   <ol>
     <li>Propose nozzle types, spray patterns, and mounting angles to achieve full coverage without collisions across the full stroke.</li>
     <li>Specify CIP manifold tubing sizes, fitting standards, and flexible hose requirements for feeder open/close motion.</li>
@@ -106,13 +106,13 @@
   </ul>
 
   <h3>状态</h3>
-  <p>System-level concept captured. Still TBD: nozzle selection, spray angles, connection standards, flow rate, and operating pressure. Add figures showing nozzle locations and manifold routing as they are defined.</p>
+  <p>System-level concept captured. Still TBD: nozzle selection, spray angles, connection standards, flow rate, and operating pressure. 补充图示s showing nozzle locations and manifold routing as they are defined.</p>
 
   <h3>建议补充图示（便于承包商理解）</h3>
   <ul class="muted">
-    <li><strong>Add figure</strong>: <strong>Plant hookup block diagram</strong> — supply/return to P6 manifolds + juice-line backflush branch.</li>
-    <li><strong>Add figure</strong>: <strong>Machine photo set</strong> — all nozzle groups labeled (see <a href="cip-nozzles-and-feed-pipes/index.html">Nozzles and feed pipes</a>).</li>
-    <li><strong>Add figure</strong>: <strong>Acceptance test points</strong> — where plant CIP confirms coverage (tie to <a href="third-party-cip-control-equipment/index.html">Third-party CIP control</a>).</li>
+    <li><strong>补充图示</strong>: <strong>Plant hookup block diagram</strong> — supply/return to P6 manifolds + juice-line backflush branch.</li>
+    <li><strong>补充图示</strong>: <strong>Machine photo set</strong> — all nozzle groups labeled (see <a href="cip-nozzles-and-feed-pipes/index.html">Nozzles and feed pipes</a>).</li>
+    <li><strong>补充图示</strong>: <strong>Acceptance test points</strong> — where plant CIP confirms coverage (tie to <a href="third-party-cip-control-equipment/index.html">Third-party CIP control</a>).</li>
   </ul>
 </body>
 </html>

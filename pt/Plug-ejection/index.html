@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>7. Core ejection — P6 RFP</title>
+  <title>7. Ejeção de caroço — P6 RFP</title>
   <style>
     :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
     body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
@@ -29,95 +29,95 @@
     .iface-table th, .iface-table td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
     .iface-table th { color: var(--muted); font-weight: 600; }
   </style>
-      <link rel="stylesheet" href="../../assets/site.css">
+                <link rel="stylesheet" href="../../assets/site.css">
 </head>
 <body>
 <nav class="site-lang-bar" aria-label="Language">
   <span class="lang-label">Idioma:</span>
-  <a href="../../Plug-ejection/index.html">English</a>
+  <a href="../../Plug-ejection/index.html">Inglês</a>
   <span aria-hidden="true">·</span>
   <a href="../../zh/Plug-ejection/index.html">中文</a>
   <span aria-hidden="true">·</span>
   <a href="index.html" aria-current="page">Português</a>
 </nav>
 
-<p class="back"><a href="../index.html">← Voltar a Visão geral do RFP P6</a></p>
-  <h1>7. Core ejection</h1>
+<p class="back"><a href="../index.html">← Voltar à visão geral do RFP P6</a></p>
+  <h1>7. Ejeção de caroço</h1>
 
   <h2>Subpáginas</h2>
   <ul>
-    <li><a href="plunger-drive-bracket/index.html">Plunger drive bracket</a> <span class="muted">(com conteúdo)</span> — assembly CAD + iso/top/front views; carries four plungers.</li>
-    <li><a href="plunger-drive-system-in-side-panels/index.html">Plunger drive system in side panels</a> <span class="muted">(com conteúdo)</span> — CAD + side-panel photos; rods, LMK16 bearings, springs, housings.</li>
+    <li><a href="plunger-drive-bracket/index.html">Suporte de acionamento do êmbolo</a> <span class="muted">(com conteúdo)</span> — assembly CAD + iso/top/front views; carries four plungers.</li>
+    <li><a href="plunger-drive-system-in-side-panels/index.html">Sistema de acionamento do êmbolo nos painéis laterais</a> <span class="muted">(com conteúdo)</span> — CAD + side-panel photos; rods, LMK16 bearings, springs, housings.</li>
   </ul>
 
   <h2>Introdução</h2>
-  <p>Core ejection system: plunger drive bracket, plungers, and the plunger drive system in the side panels; ejects the core from the plug cutter into the disposal core chute.</p>
+  <p>Ejeção de caroço system: suporte de acionamento do êmbolo, plungers, and the plunger drive system in the side panels; ejects the core from the plug cutter into the disposal core chute.</p>
 
-  <h2>Legenda de cores &amp; components</h2>
+  <h2>Legenda de cores e componentes</h2>
   <p class="muted">Plunger assembly, drive bracket, juice outflow — detail pages TBD. Green housings enclose spring and guide rods; interface with filter/plug-cutter and core chute.</p>
   <table>
-    <tr><th>Colour(s)</th><th>Component</th></tr>
+    <tr><th>Cor(es)</th><th>Componente</th></tr>
     <tr><td><span class="swatch" style="background-color:#5151FA"></span></td><td><strong>Plunger</strong> — pushes through filter to eject core (four in parallel)</td></tr>
-    <tr><td><span class="swatch" style="background-color:#D1A4FF"></span></td><td><strong>Plunger drive bracket</strong> — carries plungers; connects to drive rods</td></tr>
+    <tr><td><span class="swatch" style="background-color:#D1A4FF"></span></td><td><strong>Suporte de acionamento do êmbolo</strong> — carries plungers; connects to drive rods</td></tr>
     <tr><td><span class="swatch" style="background-color:#B31B5B"></span></td><td><strong>Plunger drive rods</strong> — linear actuation; through LMK16 into green housings</td></tr>
     <tr><td><span class="swatch" style="background-color:#EBA13D"></span></td><td><strong>LMK16 linear bearing</strong> — guides rods at housing interfaces</td></tr>
     <tr><td><span class="swatch" style="background-color:#8CC135"></span></td><td><strong>Plunger drive spring</strong> — return force; coiled around rod in housing</td></tr>
-    <tr><td>—</td><td><strong>Filter</strong> — plunger passes through; juice to <a href="../Collection/index.html">Collection</a>. <strong>Plug cutter</strong> — in Collection; core ejected by this system</td></tr>
+    <tr><td>—</td><td><strong>Filter</strong> — plunger passes through; juice to <a href="../Collection/index.html">Coleta</a>. <strong>Plug cutter</strong> — in Coleta; core ejected by this system</td></tr>
   </table>
 
   <h2 id="gallery">Figuras</h2>
-  <p class="muted">CAD views. Refer to figures in the text as <a href="#fig1">Figure 1</a>, <a href="#fig2">Figure 2</a>, etc.</p>
+  <p class="muted">Vistas CAD. Consulte as figuras no texto como <a href="#fig1">Figura 1</a>, <a href="#fig2">Figura 2</a>, etc.</p>
   <div class="slideshow" id="plug-slideshow">
     <div class="slideshow-track">
-      <div class="slide active" id="fig1" data-caption="Figure 1. Exploded — plunger drive bracket, plungers, plunger drive rods, LMK16 linear bearing, plunger drive spring, green housings."><img src="../../Plug-ejection/images/plug-ejection-1.png" alt="Plug ejection exploded"></div>
-      <div class="slide" id="fig2" data-caption="Figure 2. Right — green housing, plunger drive rod, plunger drive spring, plunger drive bracket, plunger, LMK16 bearings."><img src="../../Plug-ejection/images/plug-ejection-2.png" alt="Plug ejection right"></div>
-      <div class="slide" id="fig3" data-caption="Figure 3. Orthogonal — central housing, plunger drive bracket, plunger, spring, plunger drive rods, LMK16 bearings (left and right)."><img src="../../Plug-ejection/images/plug-ejection-3.png" alt="Plug ejection orthogonal"></div>
-      <div class="slide" id="fig4" data-caption="Figure 4. Top — two green housings, plunger drive bracket with clamps, plunger drive rod through system, plunger, LMK16, plunger drive spring in right housing."><img src="../../Plug-ejection/images/plug-ejection-4.png" alt="Plug ejection top"></div>
-      <div class="slide" id="fig5" data-caption="Figure 5. Front — plunger drive bracket, four sub-assemblies (V-bracket, plunger, rods, springs), green end blocks."><img src="../../Plug-ejection/images/plug-ejection-5.png" alt="Plug ejection front"></div>
-      <div class="slide" id="fig6" data-caption="Figure 6. Front elevated — plunger drive bracket, four plungers, LMK16 at left/right, green housings, plunger drive rods."><img src="../../Plug-ejection/images/plug-ejection-6.png" alt="Plug ejection front elevated"></div>
+      <div class="slide active" id="fig1" data-caption="Figura 1. Exploded — suporte de acionamento do êmbolo, plungers, plunger drive rods, LMK16 linear bearing, plunger drive spring, green housings."><img src="../../Plug-ejection/images/plug-ejection-1.png" alt="Plug ejection exploded"></div>
+      <div class="slide" id="fig2" data-caption="Figura 2. Right — green housing, plunger drive rod, plunger drive spring, suporte de acionamento do êmbolo, plunger, LMK16 bearings."><img src="../../Plug-ejection/images/plug-ejection-2.png" alt="Plug ejection right"></div>
+      <div class="slide" id="fig3" data-caption="Figura 3. Orthogonal — central housing, suporte de acionamento do êmbolo, plunger, spring, plunger drive rods, LMK16 bearings (left and right)."><img src="../../Plug-ejection/images/plug-ejection-3.png" alt="Plug ejection orthogonal"></div>
+      <div class="slide" id="fig4" data-caption="Figura 4. Top — two green housings, suporte de acionamento do êmbolo with clamps, plunger drive rod through system, plunger, LMK16, plunger drive spring in right housing."><img src="../../Plug-ejection/images/plug-ejection-4.png" alt="Plug ejection top"></div>
+      <div class="slide" id="fig5" data-caption="Figura 5. Front — suporte de acionamento do êmbolo, four sub-assemblies (V-bracket, plunger, rods, springs), green end blocks."><img src="../../Plug-ejection/images/plug-ejection-5.png" alt="Plug ejection front"></div>
+      <div class="slide" id="fig6" data-caption="Figura 6. Front elevated — suporte de acionamento do êmbolo, four plungers, LMK16 at left/right, green housings, plunger drive rods."><img src="../../Plug-ejection/images/plug-ejection-6.png" alt="Plug ejection front elevated"></div>
     </div>
-    <p class="slideshow-caption" id="plug-caption" aria-live="polite">Figure 1. Exploded — plunger drive bracket, plungers, plunger drive rods, LMK16 linear bearing, plunger drive spring, green housings.</p>
+    <p class="slideshow-caption" id="plug-caption" aria-live="polite">Figura 1. Exploded — suporte de acionamento do êmbolo, plungers, plunger drive rods, LMK16 linear bearing, plunger drive spring, green housings.</p>
     <div class="slideshow-controls">
-      <button type="button" id="plug-prev" aria-label="Previous">← Previous</button>
+      <button type="button" id="plug-prev" aria-label="Anterior">← Anterior</button>
       <span class="slideshow-counter" id="plug-counter">1 / 6</span>
-      <button type="button" id="plug-next" aria-label="Next">Next →</button>
+      <button type="button" id="plug-next" aria-label="Próximo">Próximo →</button>
     </div>
   </div>
 
   <h3>Figuras recomendadas (clareza para o contratado)</h3>
   <ul class="muted">
-    <li><strong>Add figure</strong>: <strong>Stroke timeline</strong> — plunger position vs yoke angle through press + eject.</li>
-    <li><strong>Add figure</strong>: <strong>Core drop path</strong> — from plug cutter into core chute (section).</li>
-    <li><strong>Add figure</strong>: <strong>Side-panel seal plane</strong> — sheet metal joint for juice zone.</li>
+    <li><strong>Adicionar figura</strong>: <strong>Stroke timeline</strong> — plunger position vs yoke angle through press + eject.</li>
+    <li><strong>Adicionar figura</strong>: <strong>Core drop path</strong> — from plug cutter into core chute (section).</li>
+    <li><strong>Adicionar figura</strong>: <strong>Side-panel seal plane</strong> — sheet metal joint for juice zone.</li>
   </ul>
 
   <h2>Discussão</h2>
-  <h3>Core ejection (cycle)</h3>
+  <h3>Ejeção de caroço (cycle)</h3>
   <ol>
     <li><strong>Pressing stroke:</strong> Juice to <a href="../Collection/index.html">collector</a> Y-section; core remains in plug cutter / filter.</li>
-    <li><strong>Core ejection:</strong> Plunger pushes through filter, ejects core from plug cutter → core <strong>falls into core chute</strong> (<a href="../Outflow-disposal/index.html">disposal</a>).</li>
-    <li><strong>Disposal:</strong> Peels to sides of peelers; two augers take peels and cores away separately.</li>
+    <li><strong>Ejeção de caroço:</strong> Plunger pushes through filter, ejects core from plug cutter → core <strong>falls into core chute</strong> (<a href="../Outflow-disposal/index.html">disposal</a>).</li>
+    <li><strong>Descarte:</strong> Peels to sides of descascadores; two augers take peels and cores away separately.</li>
   </ol>
 
   <h3>Interfaces</h3>
   <ul>
-    <li><strong>Input:</strong> Core in plug cutter/filter after pressing stroke (from <a href="../Collection/index.html">Collection</a>).</li>
+    <li><strong>Input:</strong> Core in plug cutter/filter after pressing stroke (from <a href="../Collection/index.html">Coleta</a>).</li>
     <li><strong>Output:</strong> Core ejected → falls into <a href="../Outflow-disposal/index.html">disposal</a> core chute.</li>
-    <li><strong>Drive:</strong> Plunger actuation from <a href="../Drivetrain/index.html">drivetrain</a> / <a href="../Transmission/index.html">transmission</a> (yoke/cam).</li>
+    <li><strong>Drive:</strong> Plunger actuation from <a href="../Drivetrain/index.html">drivetrain</a> / <a href="../Transmission/index.html">transmissão</a> (yoke/cam).</li>
   </ul>
 
   <h3>Interfaces e tolerâncias</h3>
-  <p class="muted">Known interfaces and tolerances. Links go to related subsystems. Once every subsystem has an overview, subassemblies will be described in detail with how they interface with other components.</p>
+  <p class="muted">Interfaces e tolerâncias conhecidas. Links para subsistemas relacionados. Once every subsystem has an overview, subassemblies will be described in detail with how they interface with other components.</p>
   <table class="iface-table">
-    <thead><tr><th>Part</th><th>Interface / tolerance</th><th>Related</th></tr></thead>
+    <thead><tr><th>Peça</th><th>Interface / tolerância</th><th>Relacionado</th></tr></thead>
     <tbody>
-      <tr><td>Plunger</td><td>Passes through filter; ejects core from plug cutter</td><td><a href="../Collection/index.html">Collection</a></td></tr>
-      <tr><td>Plunger drive bracket</td><td>Carries four plungers; connected to plunger drive rods; moves in unison</td><td>—</td></tr>
-      <tr><td>Plunger drive rods</td><td>Slide through LMK16 linear bearings; pass into green housings; driven by drivetrain/transmission</td><td><a href="../Drivetrain/index.html">Drivetrain</a>, <a href="../Transmission/index.html">Transmission</a></td></tr>
+      <tr><td>Plunger</td><td>Passes through filter; ejects core from plug cutter</td><td><a href="../Collection/index.html">Coleta</a></td></tr>
+      <tr><td>Suporte de acionamento do êmbolo</td><td>Carries four plungers; connected to plunger drive rods; moves in unison</td><td>—</td></tr>
+      <tr><td>Plunger drive rods</td><td>Slide through LMK16 linear bearings; pass into green housings; driven by drivetrain/transmissão</td><td><a href="../Drivetrain/index.html">Acionamento</a>, <a href="../Transmission/index.html">Transmissão</a></td></tr>
       <tr><td>LMK16 linear bearing</td><td>At housing entry/exit; guides plunger drive rods</td><td>—</td></tr>
       <tr><td>Plunger drive spring</td><td>Coiled around rod in green housing; return force</td><td>—</td></tr>
-      <tr><td>Core (output)</td><td>Falls into core chute after ejection</td><td><a href="../Outflow-disposal/index.html">Disposal system</a></td></tr>
-      <tr><td>Filter / plug cutter</td><td>Housed in collection; plunger interfaces with same station</td><td><a href="../Collection/index.html">Collection</a></td></tr>
+      <tr><td>Core (output)</td><td>Falls into core chute after ejection</td><td><a href="../Outflow-disposal/index.html">Sistema de descarte</a></td></tr>
+      <tr><td>Filter / plug cutter</td><td>Housed in collection; plunger interfaces with same station</td><td><a href="../Collection/index.html">Coleta</a></td></tr>
     </tbody>
   </table>
   <script>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Third-party CIP control equipment — CIP — P6 RFP</title>
+  <title>Equipamento de controle CIP terceirizado — CIP — P6 RFP</title>
   <style>
     :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
     body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
@@ -28,29 +28,29 @@
     .slideshow-controls button:hover { background: var(--accent); color: #fff; }
     .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
   </style>
-      <link rel="stylesheet" href="../../../assets/site.css">
+                <link rel="stylesheet" href="../../../assets/site.css">
 </head>
 <body>
 <nav class="site-lang-bar" aria-label="Language">
   <span class="lang-label">Idioma:</span>
-  <a href="../../../Clean-in-place/third-party-cip-control-equipment/index.html">English</a>
+  <a href="../../../Clean-in-place/third-party-cip-control-equipment/index.html">Inglês</a>
   <span aria-hidden="true">·</span>
   <a href="../../../zh/Clean-in-place/third-party-cip-control-equipment/index.html">中文</a>
   <span aria-hidden="true">·</span>
   <a href="index.html" aria-current="page">Português</a>
 </nav>
 
-<p class="back"><a href="../index.html">← Voltar a Clean-in-place (CIP)</a> · <a href="../../index.html">Visão geral do RFP P6</a></p>
-  <h1>Third-party CIP control equipment</h1>
-  <p class="muted">Part of the <a href="../index.html">Clean-in-place (CIP)</a> section. How P6 integrates with the plant CIP system (cycles, hookups, and acceptance testing).</p>
+<p class="back"><a href="../index.html">← Voltar a Limpeza no local (CIP)</a> · <a href="../../index.html">Visão geral do RFP P6</a></p>
+  <h1>Equipamento de controle CIP terceirizado</h1>
+  <p class="muted">Peça of the <a href="../index.html">Limpeza no local (CIP)</a> section. How P6 integrates with the plant CIP system (cycles, hookups, and acceptance testing).</p>
 
   <h2>Introdução</h2>
-  <p>P6 does not provide a standalone CIP controller. The CIP solution is provided by the <strong>plant CIP system</strong>. P6 connects to the plant CIP supply for internal spray cleaning and uses the juice line for counter-flow backflush cleaning of the juice collection circuit.</p>
+  <p>P6 does not provide a standalone CIP controller. The CIP solution is provided by the <strong>plant CIP system</strong>. P6 connects to the plant CIP supply for internal spray cleaning and uses the juice line for counter-flow backflush cleaning of the coleta de suco circuit.</p>
 
-  <h2>Legenda de cores &amp; components</h2>
+  <h2>Legenda de cores e componentes</h2>
   <p class="muted">Key equipment responsibilities and interfaces.</p>
   <table>
-    <tr><th>Colour(s)</th><th>Component</th></tr>
+    <tr><th>Cor(es)</th><th>Componente</th></tr>
     <tr><td><em>—</em></td><td><strong>Plant CIP system</strong> — controls rinse/chemical cycles, pressure, temperature, and concentration; provides supply/return infrastructure.</td></tr>
     <tr><td><em>—</em></td><td><strong>P6 CIP manifolds</strong> — rigid stainless piping and flexible hose connections to plant supply.</td></tr>
     <tr><td><em>—</em></td><td><strong>Juice-line backflush integration</strong> — valves/T-junction allowing CIP solution to flow back through collectors/filter/plunger circuit.</td></tr>
@@ -60,9 +60,9 @@
   <p class="muted">Add integration diagrams when available.</p>
   <h3>Figuras recomendadas (clareza para o contratado)</h3>
   <ul class="muted">
-    <li><strong>Add figure</strong>: plant CIP connection points to P6 manifolds (supply/return, hose routing, feeder open/close motion).</li>
-    <li><strong>Add figure</strong>: juice-line backflush plumbing (T-valve, check valves, drain/return path) tied to the Collection system.</li>
-    <li><strong>Add figure</strong>: acceptance test flow (indicator test points and rinse confirmation).</li>
+    <li><strong>Adicionar figura</strong>: plant CIP connection points to P6 manifolds (supply/return, hose routing, feeder open/close motion).</li>
+    <li><strong>Adicionar figura</strong>: juice-line backflush plumbing (T-valve, check valves, drain/return path) tied to the Coleta system.</li>
+    <li><strong>Adicionar figura</strong>: acceptance test flow (indicator test points and rinse confirmation).</li>
   </ul>
 
   <h2>Discussão</h2>
@@ -88,7 +88,7 @@
     <li><strong>Control</strong> — all cycle sequencing and parameter control is by the plant CIP system.</li>
   </ul>
 
-  <h3>Questions for contractor</h3>
+  <h3>Perguntas para o contratado</h3>
   <ol>
     <li>Define recommended hookup standard(s) (sanitary fitting type, hose spec, quick-disconnect strategy) suitable for CN plants and seasonal maintenance.</li>
     <li>Specify required check valves/return routing/drain strategy and <strong>valve switching requirements</strong> so CIP fluid cannot contaminate production juice tanks (tank isolation during CIP) and production cannot contaminate CIP returns during cleaning.</li>
@@ -98,15 +98,15 @@
   <h3>Interfaces e tolerâncias</h3>
   <p class="muted">Tolerances TBD; contractor to propose connection and mounting requirements consistent with plant CIP pressure/vibration and feeder motion.</p>
   <table class="iface-table">
-    <thead><tr><th>Part</th><th>Interface / tolerance</th><th>Related</th></tr></thead>
+    <thead><tr><th>Peça</th><th>Interface / tolerância</th><th>Relacionado</th></tr></thead>
     <tbody>
       <tr><td>Plant CIP supply</td><td>Provides water/chemical cycles; pressure/temperature/concentration plant-defined</td><td>—</td></tr>
-      <tr><td>P6 spray manifolds</td><td>Rigid stainless manifolds with flexible hose to allow feeder motion</td><td><a href="../../Feeder/index.html">Fruit intake system</a>, <a href="../../Extraction-syncronisation/index.html">Extraction</a></td></tr>
-      <tr><td>Juice-line backflush</td><td>Counter-flow CIP through juice line; valving/check valves TBD</td><td><a href="../../Collection/index.html">Collection</a></td></tr>
+      <tr><td>P6 spray manifolds</td><td>Rigid stainless manifolds with flexible hose to allow feeder motion</td><td><a href="../../Feeder/index.html">Sistema de alimentação de frutas</a>, <a href="../../Extraction-syncronisation/index.html">Extraction</a></td></tr>
+      <tr><td>Juice-line backflush</td><td>Counter-flow CIP through juice line; valving/check valves TBD</td><td><a href="../../Collection/index.html">Coleta</a></td></tr>
     </tbody>
   </table>
 
-  <h3>Componentes</h3>
+  <h3>Componentees</h3>
   <ul>
     <li>Plant CIP skid/controller (external)</li>
     <li>Supply/return hoses and sanitary quick-disconnects</li>
@@ -114,6 +114,6 @@
     <li>Indicator test materials/procedure (acceptance testing)</li>
   </ul>
 
-  <p class="back"><a href="../index.html">← Voltar a Clean-in-place (CIP)</a></p>
+  <p class="back"><a href="../index.html">← Voltar a Limpeza no local (CIP)</a></p>
 </body>
 </html>

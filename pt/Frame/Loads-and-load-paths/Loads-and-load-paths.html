@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Loads and load paths — Frame — P6 RFP</title>
+  <title>Cargas e caminhos de carga — Estrutura — P6 RFP</title>
   <style>
     :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
     body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
@@ -30,50 +30,50 @@
     .slideshow-controls button:hover { background: var(--accent); color: #fff; }
     .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
   </style>
-      <link rel="stylesheet" href="../../../assets/site.css">
+                <link rel="stylesheet" href="../../../assets/site.css">
 </head>
 <body>
 <nav class="site-lang-bar" aria-label="Language">
   <span class="lang-label">Idioma:</span>
-  <a href="../../../Frame/Loads-and-load-paths/Loads-and-load-paths.html">English</a>
+  <a href="../../../Frame/Loads-and-load-paths/Loads-and-load-paths.html">Inglês</a>
   <span aria-hidden="true">·</span>
   <a href="../../../zh/Frame/Loads-and-load-paths/Loads-and-load-paths.html">中文</a>
   <span aria-hidden="true">·</span>
   <a href="Loads-and-load-paths.html" aria-current="page">Português</a>
 </nav>
 
-<p class="back"><a href="../index.html">← Voltar a Frame</a> · <a href="../../index.html">Visão geral do RFP P6</a></p>
-  <h1>Loads and load paths</h1>
-  <p class="muted">Part of the <a href="../index.html">Frame</a> section. How operating loads are carried through the frame to the floor.</p>
+<p class="back"><a href="../index.html">← Voltar à estrutura</a> · <a href="../../index.html">Visão geral do RFP P6</a></p>
+  <h1>Cargas e caminhos de carga</h1>
+  <p class="muted">Peça of the <a href="../index.html">Estrutura</a> section. How operating loads are carried through the frame to the floor.</p>
 
   <section>
-    <h2>Primary loads</h2>
-    <p>The frame must carry reaction forces from the <a href="../../Drivetrain/index.html">drivetrain</a>, <a href="../../Transmission/index.html">transmission</a>, <a href="../../Extraction-syncronisation/index.html">extraction</a> (driven bracket and peelers), and <a href="../../Plug-ejection/index.html">core ejection</a> (plunger drive) without excessive deflection. Alignment between yoke, bearings, and peelers must be maintained for timing and bearing life.</p>
+    <h2>Cargas principais</h2>
+    <p>The frame must carry reaction forces from the <a href="../../Drivetrain/index.html">drivetrain</a>, <a href="../../Transmission/index.html">transmissão</a>, <a href="../../Extraction-syncronisation/index.html">extraction</a> (suporte acionado and descascadores), and <a href="../../Plug-ejection/index.html">core ejection</a> (plunger drive) without excessive deflection. Alignment between yoke, bearings, and descascadores must be maintained for timing and bearing life.</p>
     <table>
-      <thead><tr><th>Source</th><th>Load type</th><th>Path through frame</th></tr></thead>
+      <thead><tr><th>Fonte</th><th>Tipo de carga</th><th>Caminho através da estrutura</th></tr></thead>
       <tbody>
-        <tr><td>Drivetrain (motor, reducer, gears)</td><td>Reaction to drive torque; weight of motor, reducer, gear train</td><td>Drivetrain mount plate → side rails → main frame → leveling mounts → floor</td></tr>
-        <tr><td>Transmission (yoke, shafts, bearings)</td><td>Reaction to linear stroke force; inertia of yoke and driven mass</td><td>Transmission mount plate → side rails → main frame → leveling mounts → floor</td></tr>
-        <tr><td>Extraction (driven bracket, peelers)</td><td>Compression force during juicing; reaction from static peelers</td><td>Loaded mount plate (collection side) ↔ driven bracket; loaded plate → side rails → main frame → floor</td></tr>
-        <tr><td>Core ejection (plunger drive)</td><td>Reaction to plunger force (compression springs, rod load)</td><td>Plunger housings and bracket react into loaded/collection structure; into loaded mount plate and side rails → main frame → floor</td></tr>
+        <tr><td>Acionamento (motor, reducer, gears)</td><td>Reaction to drive torque; weight of motor, reducer, gear train</td><td>Placa de montagem do acionamento → side rails → main frame → leveling mounts → floor</td></tr>
+        <tr><td>Transmissão (mancal, eixos, rolamentos)</td><td>Reaction to linear stroke force; inertia of yoke and driven mass</td><td>Placa de montagem da transmissão → side rails → main frame → leveling mounts → floor</td></tr>
+        <tr><td>Extraction (suporte acionado, descascadores)</td><td>Compression force during juicing; reaction from static descascadores</td><td>Loaded mount plate (collection side) ↔ suporte acionado; loaded plate → side rails → main frame → floor</td></tr>
+        <tr><td>Ejeção de caroço (plunger drive)</td><td>Reaction to plunger force (compression springs, rod load)</td><td>Plunger housings and bracket react into loaded/collection structure; into loaded mount plate and side rails → main frame → floor</td></tr>
       </tbody>
     </table>
   </section>
 
   <section>
-    <h2>Key load cases (to validate)</h2>
+    <h2>Casos de carga principais (a validar)</h2>
     <p class="muted">Current values below are preliminary and intended to help contractors define load cases and acceptance targets. Contractor to validate with final geometry, belt center distance, gear module/profile, and cam/yoke details.</p>
     <ul>
       <li><strong>Motor / belt / reducer excitation</strong> — WEG W21/W22 IE3 motor (7.5 kW / 10 hp) drives the reducer via SPA belts (ratio currently 1:1; two belts planned). Belt tensioning and motor vibration transmit radial loads and vibration into the drivetrain mount plate and frame.</li>
       <li><strong>Reducer output / gear mesh</strong> — Target reducer output speed ~70 rpm. Preliminary drivetrain calculations indicate ~1023 N·m torque at the driven gear, with estimated gear mesh forces on the order of ~6.6 kN tangential and ~7.2 kN normal (to be validated).</li>
-      <li><strong>Cam-yoke reciprocation</strong> — Cam bearing offset ~89 mm from shaft axis drives yoke reciprocation. This introduces cyclic forces and moments into the transmission mount plate, the two drive shafts, and their supports.</li>
+      <li><strong>Cam-yoke reciprocation</strong> — Cam bearing offset ~89 mm from shaft axis drives yoke reciprocation. This introduces cyclic forces and moments into the transmissão mount plate, the two drive shafts, and their supports.</li>
       <li><strong>Peak compression event</strong> — Worst-case operating condition assumes maximum drivetrain capability drives the extraction/compression event; frame and mount plates should withstand this with an appropriate factor of safety and without losing alignment.</li>
     </ul>
   </section>
 
   <section>
-    <h2>Moments at linear bearings and mount plates</h2>
-    <p>The transmission uses two shafts guided by two LMK35UU (35 mm) linear bearings. The bearings are located above the mount plate, so off-axis forces and any asymmetry between left/right sides generate moments into the transmission mount plate and the frame.</p>
+    <h2>Momentos em rolamentos lineares e placas de montagem</h2>
+    <p>The transmissão uses two shafts guided by two LMK35UU (35 mm) linear bearings. The bearings are located above the mount plate, so off-axis forces and any asymmetry between left/right sides generate moments into the transmissão mount plate and the frame.</p>
     <ul>
       <li><strong>Asymmetric / jam case</strong> — If one side binds or sees higher friction than the other, the shafts can twist and impose additional moment loads on the linear bearings and plate.</li>
       <li><strong>Overturning moments</strong> — Vertical offset between bearing reaction line and the mount plate creates an overturning moment that tends to rotate the mount plate about a horizontal axis. This is expected to be significant on the collection side during compression.</li>
@@ -82,7 +82,7 @@
   </section>
 
   <section>
-    <h2>Load path principles</h2>
+    <h2>Princípios de caminho de carga</h2>
     <ul>
       <li><strong>Clear paths</strong> — No single member or joint should see disproportionate load; loads should spread through the welded structure and into the three plates as intended.</li>
       <li><strong>Minimise deflection</strong> — Stiffness of the main frame and plate interfaces is critical so that yoke travel, peeler mesh, and plunger alignment stay within design intent.</li>
@@ -92,48 +92,48 @@
   </section>
 
   <section>
-    <h2>Notes for RFP</h2>
-    <p>Contractors are asked to verify and document load cases and load paths for the as-built configuration, and to propose practical acceptance targets for stiffness and alignment (including asymmetric/jam cases for the transmission shafts). Where appropriate, contractors should recommend whether simplified calculations are sufficient or whether FEA is warranted for the frame weldment and/or critical mount plates.</p>
+    <h2>Notas para RFP</h2>
+    <p>Contractors are asked to verify and document load cases and load paths for the as-built configuration, and to propose practical acceptance targets for stiffness and alignment (including asymmetric/jam cases for the transmissão shafts). Where appropriate, contractors should recommend whether simplified calculations are sufficient or whether FEA is warranted for the frame weldment and/or critical mount plates.</p>
   </section>
 
   <section>
-    <h2>Questions for contractor</h2>
+    <h2>Perguntas para o contratado</h2>
     <ol>
       <li>Derive validated load cases (motor/belt radial loads from tensioning, gear mesh forces, cam-yoke reciprocation forces, peak compression), and provide force/moment estimates at each mount plate interface.</li>
       <li>Validate or correct the preliminary drivetrain figures (~1023 N·m torque at driven gear; ~6.6 kN tangential and ~7.2 kN normal gear forces) and document assumptions.</li>
       <li>Quantify moments and bearing loads for the LMK35UU-guided shafts, including an asymmetric/jam case, and recommend mount plate stiffness and joint design.</li>
-      <li>Recommend whether FEA is required (frame weldment, drivetrain plate around tapered roller bearing, transmission plate around linear bearings) and provide boundary conditions and acceptance metrics.</li>
+      <li>Recommend whether FEA is required (frame weldment, drivetrain plate around tapered roller bearing, transmissão plate around linear bearings) and provide boundary conditions and acceptance metrics.</li>
       <li>Propose acceptance targets for allowable deflection/misalignment that preserve peeler alignment and bearing life, and recommend inspection checks to verify them.</li>
     </ol>
   </section>
 
   <section>
     <h2 id="gallery">Figuras</h2>
-    <p class="muted">CAD views. Refer to figures in the text as <a href="#fig1">Figure 1</a>, <a href="#fig2">Figure 2</a>, etc.</p>
+    <p class="muted">Vistas CAD. Consulte as figuras no texto como <a href="#fig1">Figura 1</a>, <a href="#fig2">Figura 2</a>, etc.</p>
     <div class="slideshow" id="frame-slideshow">
       <div class="slideshow-track">
-        <div class="slide active" id="fig1" data-caption="Figure 1. Frame weldment — overall structure, interface plates, and primary load path into side rails (CAD)."><img src="../../../Frame/Loads-and-load-paths/images/01.png" alt="Frame — load path overview 1"></div>
-        <div class="slide" id="fig2" data-caption="Figure 2. Mount plate interfaces — reactions from drivetrain, transmission, and collection paths into the frame (CAD)."><img src="../../../Frame/Loads-and-load-paths/images/02.png" alt="Frame — mount plate load paths"></div>
-        <div class="slide" id="fig3" data-caption="Figure 3. Frame stiffness / bracing context — how operating loads distribute before reaching leveling feet (CAD)."><img src="../../../Frame/Loads-and-load-paths/images/03.png" alt="Frame — bracing and reactions"></div>
-        <div class="slide" id="fig4" data-caption="Figure 4. Frame-to-floor — leveling feet, leg reactions, and floor load path (CAD)."><img src="../../../Frame/Loads-and-load-paths/images/04.png" alt="Frame — feet and floor reactions"></div>
+        <div class="slide active" id="fig1" data-caption="Figura 1. Estrutura weldment — overall structure, interface plates, and primary load path into side rails (CAD)."><img src="../../../Frame/Loads-and-load-paths/images/01.png" alt="Estrutura — load path overview 1"></div>
+        <div class="slide" id="fig2" data-caption="Figura 2. Mount plate interfaces — reactions from drivetrain, transmissão, and collection paths into the frame (CAD)."><img src="../../../Frame/Loads-and-load-paths/images/02.png" alt="Estrutura — mount plate load paths"></div>
+        <div class="slide" id="fig3" data-caption="Figura 3. Estrutura stiffness / bracing context — how operating loads distribute before reaching leveling feet (CAD)."><img src="../../../Frame/Loads-and-load-paths/images/03.png" alt="Estrutura — bracing and reactions"></div>
+        <div class="slide" id="fig4" data-caption="Figura 4. Estrutura-to-floor — leveling feet, leg reactions, and floor load path (CAD)."><img src="../../../Frame/Loads-and-load-paths/images/04.png" alt="Estrutura — feet and floor reactions"></div>
       </div>
-      <p class="slideshow-caption" id="frame-caption" aria-live="polite">Figure 1. Frame weldment — overall structure and load path overview.</p>
+      <p class="slideshow-caption" id="frame-caption" aria-live="polite">Figura 1. Estrutura weldment — overall structure and load path overview.</p>
       <div class="slideshow-controls">
-        <button type="button" id="frame-prev" aria-label="Previous">← Previous</button>
+        <button type="button" id="frame-prev" aria-label="Anterior">← Anterior</button>
         <span class="slideshow-counter" id="frame-counter">1 / 4</span>
-        <button type="button" id="frame-next" aria-label="Next">Next →</button>
+        <button type="button" id="frame-next" aria-label="Próximo">Próximo →</button>
       </div>
     </div>
 
     <h3>Figuras recomendadas (clareza para o contratado)</h3>
     <ul class="muted">
-      <li><strong>Add figure</strong>: <strong>Free-body / reaction summary</strong> — numeric estimates at feet and rail joints for worst-case jam.</li>
-      <li><strong>Add figure</strong>: <strong>Plate-shim photo</strong> — real example of drivetrain/transmission/loaded plate fit-up on rails.</li>
-      <li><strong>Add figure</strong>: <strong>Deflection criteria sketch</strong> — allowable tilt that still preserves peeler alignment.</li>
+      <li><strong>Adicionar figura</strong>: <strong>Free-body / reaction summary</strong> — numeric estimates at feet and rail joints for worst-case jam.</li>
+      <li><strong>Adicionar figura</strong>: <strong>Plate-shim photo</strong> — real example of drivetrain/transmissão/loaded plate fit-up on rails.</li>
+      <li><strong>Adicionar figura</strong>: <strong>Deflection criteria sketch</strong> — allowable tilt that still preserves peeler alignment.</li>
     </ul>
   </section>
 
-  <p class="back"><a href="../index.html">← Voltar a Frame</a> · <a href="../../index.html">Visão geral do RFP P6</a></p>
+  <p class="back"><a href="../index.html">← Voltar à estrutura</a> · <a href="../../index.html">Visão geral do RFP P6</a></p>
   <script>
 (function(){
   var el = document.getElementById('frame-slideshow');

@@ -36,12 +36,12 @@
     .flow { background: rgba(88, 166, 255, 0.08); border: 1px solid var(--border); border-radius: 8px; padding: 1rem 1.25rem; margin: 1rem 0; }
     .flow ol { margin: 0.5rem 0 0 1rem; }
   </style>
-      <link rel="stylesheet" href="../../assets/site.css">
+                <link rel="stylesheet" href="../../assets/site.css">
 </head>
 <body>
 <nav class="site-lang-bar" aria-label="Language">
   <span class="lang-label">语言：</span>
-  <a href="../../Overview/index.html">English</a>
+  <a href="../../Overview/index.html">英文</a>
   <span aria-hidden="true">·</span>
   <a href="index.html" aria-current="page">中文</a>
   <span aria-hidden="true">·</span>
@@ -50,7 +50,7 @@
 
 <p class="back"><a href="../index.html">← 返回 P6 RFP 总览</a></p>
   <h1>项目概览</h1>
-  <p class="muted">Single reference for the P6 industrial prototype and RFP structure.</p>
+  <p class="muted">P6 工业样机和 RFP 结构的单一参考。</p>
   <p>
     The P6 is the newest generation citrus juicer in the Delijuice line. It is designed to handle a wide range of citrus varieties (including lemons) with a repeatable, industrial extraction cycle that separates juice from waste streams.
     The program is setting up a pilot production environment in <strong>Jiangxi (China)</strong> with target setup in <strong>October</strong>. The first machine to prototype and validate is the <strong>P6-870</strong>; the <strong>P6-970</strong> with 3x larger extraction modules is planned later.
@@ -60,8 +60,8 @@
 
   
   <section>
-    <h2>What P6 is</h2>
-    <p><strong>P6</strong> is the current industrial prototype (Delijuice 870/970). Newest version; prototyping in China with design work via Jamieson. Extractors, deflectors, screw conveyors. Machine lineage: P3 → P4 → P5 (Brazil 2002, Sumitomo cyclo refs) → <strong>P6</strong> (current). 323 = commercial/countertop (separate).</p>
+    <h2>P6 简介</h2>
+    <p><strong>P6</strong> is the current industrial prototype (Delijuice 870/970). Newest version; prototyping in China with design work via Jamieson. Extractors, 导流板, screw conveyors. Machine lineage: P3 → P4 → P5 (Brazil 2002, Sumitomo cyclo refs) → <strong>P6</strong> (current). 323 = commercial/countertop (separate).</p>
     <ul>
       <li><strong>Jiangxi (JX):</strong> Factory with <strong>LTA (Long Tai An)</strong>. Miniplant: 8,160 L/h, 6 extractors, turbo-filter, pasteurizer. <strong>LTA pressure for operations by October.</strong></li>
       <li><strong>Drawings target:</strong> April 1st for Sean/YES fabrication (China, Shenzhen area).</li>
@@ -69,11 +69,11 @@
   </section>
 
   <section>
-    <h2>How the machine works</h2>
+    <h2>机器工作原理</h2>
     <div class="flow">
-      <strong>Delijuice 压榨循环 (high-level)</strong>
+      <strong>Delijuice 压榨循环（概览）</strong>
       <ol>
-        <li><strong>Fruit intake</strong> — citrus is staged one-at-a-time and presented to the extraction cavity.</li>
+        <li><strong>水果进料</strong> — citrus is staged one-at-a-time and presented to the extraction cavity.</li>
         <li><strong>Compression</strong> — fruit is compressed/peeled; juice is routed through the filtration/collection path.</li>
         <li><strong>Juice outflow</strong> — juice flows into collectors and then to tanks/pasteurisation equipment.</li>
         <li><strong>Core expulsion</strong> — a plug/core is ejected and routed to the core waste chute/auger.</li>
@@ -83,13 +83,13 @@
   </section>
 
   <section>
-    <h2>Factory product flow (citrus → juice → pasteurisation → filling)</h2>
+    <h2>工厂产品流程（柑橘→果汁→巴氏杀菌→灌装）</h2>
     <div class="flow">
-      <strong>High-level process flow diagram (end-to-end)</strong>
+      <strong>高级工艺流程图（端到端）</strong>
       <div style="white-space: pre-wrap; margin-top: 0.75rem; color: var(--muted); font-size: 0.95rem;">
 Pre-sorted, pre-washed citrus
         -> Size sorting
-        -> Feed line to P6-870 entry tubes
+        -> Feed line to P6-870 进料管
         -> Extraction in P6-870
              - ~1360 L/hr per extractor
              - planned line: 6 extractors in series (~8160 L/hr)
@@ -100,7 +100,7 @@ Pre-sorted, pre-washed citrus
         -> Refrigeration
       </div>
       <ol>
-        <li><strong>Third-party sorting + feed</strong> — pre-sorted, pre-washed citrus goes through a size sorter and then into the P6 feed lines and entry tubes.</li>
+        <li><strong>Third-party sorting + feed</strong> — pre-sorted, pre-washed citrus goes through a size sorter and then into the P6 feed lines and 进料管.</li>
         <li><strong>P6 extraction</strong> — staged fruit is compressed/peeled; juice is routed through filtration/collection and leaves the machine as juice; peel/core waste streams are routed to their respective augers.</li>
         <li><strong>Juice tanking</strong> — juice flows from collectors into <strong>juice tanks</strong> sized to the total line rate (~8160 L/hr).</li>
         <li><strong>Downstream processing</strong> — paddle finisher, holding tank with agitator, tube-in-tube pasteuriser, cooling tank, then filling and refrigeration.</li>
@@ -109,81 +109,81 @@ Pre-sorted, pre-washed citrus
   </section>
   
   <section>
-    <h2>Top-level assemblies</h2>
+    <h2>顶级装配</h2>
     <p>Each subsystem has its own RFP section with photos, Q&A, and part/parameter details. The legend below lists all 11 subsystems with their CAD colour(s) and a short description.</p>
     <table class="colour-key">
-      <thead><tr><th class="n">#</th><th class="sw">Colour</th><th>Subsystem</th><th class="desc">Purpose</th></tr></thead>
+      <thead><tr><th class="n">#</th><th class="sw">颜色</th><th>子系统</th><th class="desc">用途</th></tr></thead>
       <tbody>
-        <tr><td class="n">1</td><td class="sw"><span class="swatch" style="background:#A4E637"></span></td><td><a href="../Frame/index.html">Frame</a></td><td class="desc">Primary welded structure and datum for alignment; supports drivetrain/transmission/loaded plates and carries operating loads to the floor.</td></tr>
-        <tr><td class="n">2</td><td class="sw"><span class="swatch" style="background:#FFE899"></span> <span class="swatch" style="background:#FF95DA"></span> <span class="swatch" style="background:#1E7334"></span></td><td><a href="../Drivetrain/index.html">Drivetrain</a></td><td class="desc">Powertrain (WEG motor → V-belts → Sumitomo reducer → gear train) that drives cam bearings for the extraction stroke.</td></tr>
-        <tr><td class="n">3</td><td class="sw"><span class="swatch" style="background:#C41D63"></span> <span class="swatch" style="background:#E6612E"></span></td><td><a href="../Transmission/index.html">Transmission system</a></td><td class="desc">Yoke + 35 mm shafts + flanged sealed linear bearings (LMK/LMF family) on a mount plate; converts drivetrain cam rotation into the linear motion used by extraction.</td></tr>
-        <tr><td class="n">4</td><td class="sw"><span class="swatch" style="background:#317DDE"></span></td><td><a href="../Extraction-syncronisation/index.html">Extraction &amp; synchronisation</a></td><td class="desc">Driven peelers, driven bracket, fruit support and deflectors; stages fruit and synchronizes peeler motion during the pressing stroke.</td></tr>
-        <tr><td class="n">5</td><td class="sw"><span class="swatch" style="background:#FCAB3B"></span></td><td><a href="../Collection/index.html">Collection</a></td><td class="desc">Static peelers + filter tube + plug cutter + juice collectors (Y-tubes); separates juice from pulp while retaining the core for ejection.</td></tr>
-        <tr><td class="n">6</td><td class="sw"><span class="swatch" style="background:#71C32D"></span></td><td><a href="../Feeder/index.html">Fruit intake system</a></td><td class="desc">Feeder body and per-station feeding subassemblies (sync springs, entry tubes) that release one orange at a time onto fruit support.</td></tr>
-        <tr><td class="n">7</td><td class="sw"><span class="swatch" style="background:#F4FF43"></span> <span class="swatch" style="background:#2E7BDD"></span> <span class="swatch" style="background:#9B79E6"></span> <span class="swatch" style="background:#F9A93C"></span></td><td><a href="../Plug-ejection/index.html">Core ejection</a></td><td class="desc">Plungers + drive bracket/rods/springs that push through the filter and eject the core from the plug cutter into the core chute.</td></tr>
-        <tr><td class="n">8</td><td class="sw"><span class="swatch" style="background:#D822B0"></span> <span class="swatch" style="background:#2793AE"></span></td><td><a href="../Outflow-disposal/index.html">Disposal system</a></td><td class="desc">Peel chute + core chutes + two augers that keep peel and cores separate and convey both waste streams out of the machine.</td></tr>
-        <tr><td class="n">9</td><td class="sw"><span class="swatch" style="background:#489B27"></span> <span class="swatch" style="background:#F54646"></span> <span class="swatch" style="background:#7838DC"></span> <span class="swatch" style="background:#469925"></span> <span class="swatch" style="background:#F44545"></span></td><td><a href="../Enclosure-shell/index.html">Enclosure / shell</a></td><td class="desc">Protective covers and overcentered hinges; guards operators from moving parts (drivetrain/plungers) while allowing fast access for cleaning/service.</td></tr>
-        <tr><td class="n">10</td><td class="sw"><span class="na">—</span></td><td><a href="../Clean-in-place/index.html">Clean-in-place (CIP)</a></td><td class="desc">Spray nozzles/piping and third-party CIP integration (TBD) for cleaning food-contact and splash zones without full disassembly.</td></tr>
-        <tr><td class="n">11</td><td class="sw"><span class="na">—</span></td><td><a href="../Controls-Electronics/index.html">Controls and electronics</a></td><td class="desc">UI, safety interlocks, motor control/power distribution, and sensing (e.g. yoke position) that coordinate the extraction cycle.</td></tr>
+        <tr><td class="n">1</td><td class="sw"><span class="swatch" style="background:#A4E637"></span></td><td><a href="../Frame/index.html">机架</a></td><td class="desc">Primary welded structure and datum for alignment; supports drivetrain/传动/loaded plates and carries operating loads to the floor.</td></tr>
+        <tr><td class="n">2</td><td class="sw"><span class="swatch" style="background:#FFE899"></span> <span class="swatch" style="background:#FF95DA"></span> <span class="swatch" style="background:#1E7334"></span></td><td><a href="../Drivetrain/index.html">传动系统</a></td><td class="desc">Powertrain (WEG motor → V-belts → Sumitomo reducer → gear train) that drives cam bearings for the extraction stroke.</td></tr>
+        <tr><td class="n">3</td><td class="sw"><span class="swatch" style="background:#C41D63"></span> <span class="swatch" style="background:#E6612E"></span></td><td><a href="../Transmission/index.html">传动系统</a></td><td class="desc">Yoke + 35 mm shafts + flanged sealed linear bearings (LMK/LMF family) on a mount plate; converts drivetrain cam rotation into the linear motion used by extraction.</td></tr>
+        <tr><td class="n">4</td><td class="sw"><span class="swatch" style="background:#317DDE"></span></td><td><a href="../Extraction-syncronisation/index.html">压榨与同步</a></td><td class="desc">Driven 削皮器, 从动支架, 水果托架 and 导流板; stages fruit and synchronizes peeler motion during the pressing stroke.</td></tr>
+        <tr><td class="n">5</td><td class="sw"><span class="swatch" style="background:#FCAB3B"></span></td><td><a href="../Collection/index.html">收集</a></td><td class="desc">Static 削皮器 + filter tube + plug cutter + juice collectors (Y-tubes); separates juice from pulp while retaining the core for ejection.</td></tr>
+        <tr><td class="n">6</td><td class="sw"><span class="swatch" style="background:#71C32D"></span></td><td><a href="../Feeder/index.html">水果进料系统</a></td><td class="desc">进料器本体 and per-station feeding subassemblies (sync springs, 进料管) that release one orange at a time onto 水果托架.</td></tr>
+        <tr><td class="n">7</td><td class="sw"><span class="swatch" style="background:#F4FF43"></span> <span class="swatch" style="background:#2E7BDD"></span> <span class="swatch" style="background:#9B79E6"></span> <span class="swatch" style="background:#F9A93C"></span></td><td><a href="../Plug-ejection/index.html">果芯弹出</a></td><td class="desc">Plungers + drive bracket/rods/springs that push through the filter and eject the core from the plug cutter into the core chute.</td></tr>
+        <tr><td class="n">8</td><td class="sw"><span class="swatch" style="background:#D822B0"></span> <span class="swatch" style="background:#2793AE"></span></td><td><a href="../Outflow-disposal/index.html">废物处理系统</a></td><td class="desc">Peel chute + core chutes + two augers that keep peel and cores separate and convey both waste streams out of the machine.</td></tr>
+        <tr><td class="n">9</td><td class="sw"><span class="swatch" style="background:#489B27"></span> <span class="swatch" style="background:#F54646"></span> <span class="swatch" style="background:#7838DC"></span> <span class="swatch" style="background:#469925"></span> <span class="swatch" style="background:#F44545"></span></td><td><a href="../Enclosure-shell/index.html">外壳/外壳</a></td><td class="desc">Protective covers and overcentered hinges; guards operators from moving parts (drivetrain/plungers) while allowing fast access for cleaning/service.</td></tr>
+        <tr><td class="n">10</td><td class="sw"><span class="na">—</span></td><td><a href="../Clean-in-place/index.html">就地清洗（CIP）</a></td><td class="desc">Spray nozzles/piping and third-party CIP integration (TBD) for cleaning food-contact and splash zones without full disassembly.</td></tr>
+        <tr><td class="n">11</td><td class="sw"><span class="na">—</span></td><td><a href="../Controls-Electronics/index.html">控制与电子</a></td><td class="desc">UI, safety interlocks, motor control/power distribution, and sensing (e.g. yoke position) that coordinate the extraction cycle.</td></tr>
       </tbody>
     </table>
 
-    <h3 id="exploded-top-assembly">Exploded view (top-level assembly)</h3>
-    <p class="muted">Exploded CAD sequence for the full machine. Assembly-step and subsystem close-up figures remain on the <a href="../Frame/index.html">Frame</a> page.</p>
+    <h3 id="exploded-top-assembly">爆炸图（顶级装配）</h3>
+    <p class="muted">Exploded CAD sequence for the full machine. 装配步骤和子系统特写图示保留在 <a href="../Frame/index.html">机架</a> 页面。</p>
     <div class="slideshow" id="top-exploded-slideshow">
       <div class="slideshow-track">
-        <div class="slide active" data-caption="Figure E1. Top-level assembly — exploded (step 1 of 8)."><img src="../../Overview/exploded/01.png" alt="Exploded assembly 1"></div>
-        <div class="slide" data-caption="Figure E2. Top-level assembly — exploded (step 2 of 8)."><img src="../../Overview/exploded/02.png" alt="Exploded assembly 2"></div>
-        <div class="slide" data-caption="Figure E3. Top-level assembly — exploded (step 3 of 8)."><img src="../../Overview/exploded/03.png" alt="Exploded assembly 3"></div>
-        <div class="slide" data-caption="Figure E4. Top-level assembly — exploded (step 4 of 8)."><img src="../../Overview/exploded/04.png" alt="Exploded assembly 4"></div>
-        <div class="slide" data-caption="Figure E5. Top-level assembly — exploded (step 5 of 8)."><img src="../../Overview/exploded/05.png" alt="Exploded assembly 5"></div>
-        <div class="slide" data-caption="Figure E6. Top-level assembly — exploded (step 6 of 8)."><img src="../../Overview/exploded/06.png" alt="Exploded assembly 6"></div>
-        <div class="slide" data-caption="Figure E7. Top-level assembly — exploded (step 7 of 8)."><img src="../../Overview/exploded/07.png" alt="Exploded assembly 7"></div>
-        <div class="slide" data-caption="Figure E8. Top-level assembly — exploded (step 8 of 8)."><img src="../../Overview/exploded/08.png" alt="Exploded assembly 8"></div>
+        <div class="slide active" data-caption="图 E1. 顶级装配 — 爆炸图（第 1/8 步）。"><img src="../../Overview/exploded/01.png" alt="Exploded assembly 1"></div>
+        <div class="slide" data-caption="图 E2. 顶级装配 — 爆炸图（第 2/8 步）。"><img src="../../Overview/exploded/02.png" alt="Exploded assembly 2"></div>
+        <div class="slide" data-caption="图 E3. 顶级装配 — 爆炸图（第 3/8 步）。"><img src="../../Overview/exploded/03.png" alt="Exploded assembly 3"></div>
+        <div class="slide" data-caption="图 E4. 顶级装配 — 爆炸图（第 4/8 步）。"><img src="../../Overview/exploded/04.png" alt="Exploded assembly 4"></div>
+        <div class="slide" data-caption="图 E5. 顶级装配 — 爆炸图（第 5/8 步）。"><img src="../../Overview/exploded/05.png" alt="Exploded assembly 5"></div>
+        <div class="slide" data-caption="图 E6. 顶级装配 — 爆炸图（第 6/8 步）。"><img src="../../Overview/exploded/06.png" alt="Exploded assembly 6"></div>
+        <div class="slide" data-caption="图 E7. 顶级装配 — 爆炸图（第 7/8 步）。"><img src="../../Overview/exploded/07.png" alt="Exploded assembly 7"></div>
+        <div class="slide" data-caption="图 E8. 顶级装配 — 爆炸图（第 8/8 步）。"><img src="../../Overview/exploded/08.png" alt="Exploded assembly 8"></div>
       </div>
-      <p class="slideshow-caption" id="top-exploded-caption" aria-live="polite">Figure E1. Top-level assembly — exploded (step 1 of 8).</p>
+      <p class="slideshow-caption" id="top-exploded-caption" aria-live="polite">图 E1. 顶级装配 — 爆炸图（第 1/8 步）。</p>
       <div class="slideshow-controls">
-        <button type="button" id="top-exploded-prev" aria-label="Previous">← Previous</button>
+        <button type="button" id="top-exploded-prev" aria-label="上一张">← 上一张</button>
         <span class="slideshow-counter" id="top-exploded-counter">1 / 8</span>
-        <button type="button" id="top-exploded-next" aria-label="Next">Next →</button>
+        <button type="button" id="top-exploded-next" aria-label="下一张">下一张 →</button>
       </div>
     </div>
 
-    <h3>Assembled views</h3>
-    <p class="muted">Top-level assembly in assembled state. 图示 1–10.</p>
+    <h3>装配视图</h3>
+    <p class="muted">顶级装配状态。图 1–10。</p>
     <div class="slideshow" id="top-assembled-slideshow">
       <div class="slideshow-track">
-        <div class="slide active" id="assem1" data-caption="Figure 1. Top-level assembly (assembled)."><img src="../../Overview/images/01.png" alt="Top-level assembly assembled 1"></div>
-        <div class="slide" id="assem2" data-caption="Figure 2. Top-level assembly (assembled)."><img src="../../Overview/images/02.png" alt="Top-level assembly assembled 2"></div>
-        <div class="slide" id="assem3" data-caption="Figure 3. Top-level assembly (assembled)."><img src="../../Overview/images/03.png" alt="Top-level assembly assembled 3"></div>
-        <div class="slide" id="assem4" data-caption="Figure 4. Top-level assembly (assembled)."><img src="../../Overview/images/04.png" alt="Top-level assembly assembled 4"></div>
-        <div class="slide" id="assem5" data-caption="Figure 5. Top-level assembly (assembled)."><img src="../../Overview/images/05.png" alt="Top-level assembly assembled 5"></div>
-        <div class="slide" id="assem6" data-caption="Figure 6. Top-level assembly (assembled)."><img src="../../Overview/images/06.png" alt="Top-level assembly assembled 6"></div>
-        <div class="slide" id="assem7" data-caption="Figure 7. Top-level assembly (assembled)."><img src="../../Overview/images/07.png" alt="Top-level assembly assembled 7"></div>
-        <div class="slide" id="assem8" data-caption="Figure 8. Top-level assembly (assembled)."><img src="../../Overview/images/08.png" alt="Top-level assembly assembled 8"></div>
-        <div class="slide" id="assem9" data-caption="Figure 9. Top-level assembly (assembled)."><img src="../../Overview/images/09.png" alt="Top-level assembly assembled 9"></div>
-        <div class="slide" id="assem10" data-caption="Figure 10. Top-level assembly (assembled)."><img src="../../Overview/images/10.png" alt="Top-level assembly assembled 10"></div>
+        <div class="slide active" id="assem1" data-caption="图 1. 顶级装配（装配状态）。"><img src="../../Overview/images/01.png" alt="Top-level assembly assembled 1"></div>
+        <div class="slide" id="assem2" data-caption="图 2. 顶级装配（装配状态）。"><img src="../../Overview/images/02.png" alt="Top-level assembly assembled 2"></div>
+        <div class="slide" id="assem3" data-caption="图 3. 顶级装配（装配状态）。"><img src="../../Overview/images/03.png" alt="Top-level assembly assembled 3"></div>
+        <div class="slide" id="assem4" data-caption="图 4. 顶级装配（装配状态）。"><img src="../../Overview/images/04.png" alt="Top-level assembly assembled 4"></div>
+        <div class="slide" id="assem5" data-caption="图 5. 顶级装配（装配状态）。"><img src="../../Overview/images/05.png" alt="Top-level assembly assembled 5"></div>
+        <div class="slide" id="assem6" data-caption="图 6. 顶级装配（装配状态）。"><img src="../../Overview/images/06.png" alt="Top-level assembly assembled 6"></div>
+        <div class="slide" id="assem7" data-caption="图 7. 顶级装配（装配状态）。"><img src="../../Overview/images/07.png" alt="Top-level assembly assembled 7"></div>
+        <div class="slide" id="assem8" data-caption="图 8. 顶级装配（装配状态）。"><img src="../../Overview/images/08.png" alt="Top-level assembly assembled 8"></div>
+        <div class="slide" id="assem9" data-caption="图 9. 顶级装配（装配状态）。"><img src="../../Overview/images/09.png" alt="Top-level assembly assembled 9"></div>
+        <div class="slide" id="assem10" data-caption="图 10. 顶级装配（装配状态）。"><img src="../../Overview/images/10.png" alt="Top-level assembly assembled 10"></div>
       </div>
-      <p class="slideshow-caption" id="top-assembled-caption" aria-live="polite">Figure 1. Top-level assembly (assembled).</p>
+      <p class="slideshow-caption" id="top-assembled-caption" aria-live="polite">图 1. 顶级装配（装配状态）。</p>
       <div class="slideshow-controls">
-        <button type="button" id="top-assembled-prev" aria-label="Previous">← Previous</button>
+        <button type="button" id="top-assembled-prev" aria-label="上一张">← 上一张</button>
         <span class="slideshow-counter" id="top-assembled-counter">1 / 10</span>
-        <button type="button" id="top-assembled-next" aria-label="Next">Next →</button>
+        <button type="button" id="top-assembled-next" aria-label="下一张">下一张 →</button>
       </div>
     </div>
 
     <h3>建议补充图示（便于承包商理解）</h3>
     <ul class="muted">
-      <li><strong>Add figure</strong>: <strong>Overall envelope</strong> — machine L×W×H and service clearances around hinged subsystems.</li>
-      <li><strong>Add figure</strong>: <strong>Subsystem color map</strong> — single labeled photo matching the table above (for JX walkthroughs).</li>
-      <li><strong>Add figure</strong>: <strong>Utility interfaces</strong> — electrical, CIP, and juice-out stub locations on the installed skid.</li>
+      <li><strong>补充图示</strong>: <strong>整体外形</strong> — machine L×W×H and service clearances around hinged subsystems.</li>
+      <li><strong>补充图示</strong>: <strong>子系统颜色图</strong> — single labeled photo matching the table above (for JX walkthroughs).</li>
+      <li><strong>补充图示</strong>: <strong>公用接口</strong> — electrical, CIP, and juice-out stub locations on the installed skid.</li>
     </ul>
   </section>
 
 
   <section id="general-design">
-    <h2>General design, manufacturing, and food-safety requirements</h2>
-    <h3>Materials, food safety, and surfaces</h3>
+    <h2>通用设计、制造与食品安全要求</h2>
+    <h3>材料、食品安全与表面</h3>
     <ul>
       <li>Use food-safe materials in all food and splash zones (e.g. stainless steels and compatible polymers); avoid galvanic pairs and corrosive finishes.</li>
       <li>In food zones target surface roughness around Ra 0.8–1.6 μm so surfaces are cleanable and do not trap pulp.</li>
@@ -191,14 +191,14 @@ Pre-sorted, pre-washed citrus
       <li>Seal or weld all seams in food and splash zones so there are no capillary gaps; avoid lap joints and unsealed overlaps in these areas.</li>
       <li>Deburr all edges; no sharp edges or burrs exposed to operators or in any zone that can collect food.</li>
     </ul>
-    <h3>Fasteners and joints</h3>
+    <h3>紧固件与连接</h3>
     <ul>
       <li>Minimise the number of different fastener sizes; where practical restrict to M3, M5, M10, and M16 for increasing strength levels.</li>
       <li>Avoid exposed threads in food and splash zones; use standoffs, weld studs, or through-holes with nuts outside the zone.</li>
       <li>Prefer dowel pins for locating parts in shear; use shoulder bolts for joints that carry shear and rotation.</li>
       <li>Minimise total fastener count with shared brackets and clear load paths; design for easy disassembly and reassembly for cleaning.</li>
     </ul>
-    <h3>Design for manufacturability</h3>
+    <h3>可制造性设计</h3>
     <ul>
       <li>Favour symmetric parts and avoid unnecessary handedness where possible.</li>
       <li>Minimise machining and secondary processing by using stock sizes, simple weldments, and laser/plasma-cut profiles.</li>

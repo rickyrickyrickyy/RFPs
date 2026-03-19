@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Motor power management — Controls — P6 RFP</title>
+  <title>Gerenciamento de potência do motor — Controles — P6 RFP</title>
   <style>
     :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
     body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
@@ -28,29 +28,29 @@
     .slideshow-controls button:hover { background: var(--accent); color: #fff; }
     .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
   </style>
-      <link rel="stylesheet" href="../../../assets/site.css">
+                <link rel="stylesheet" href="../../../assets/site.css">
 </head>
 <body>
 <nav class="site-lang-bar" aria-label="Language">
   <span class="lang-label">Idioma:</span>
-  <a href="../../../Controls-Electronics/motor-power-management/index.html">English</a>
+  <a href="../../../Controls-Electronics/motor-power-management/index.html">Inglês</a>
   <span aria-hidden="true">·</span>
   <a href="../../../zh/Controls-Electronics/motor-power-management/index.html">中文</a>
   <span aria-hidden="true">·</span>
   <a href="index.html" aria-current="page">Português</a>
 </nav>
 
-<p class="back"><a href="../index.html">← Voltar a Controls and electronics</a> · <a href="../../index.html">Visão geral do RFP P6</a></p>
-  <h1>Motor power management</h1>
-  <p class="muted">Part of the <a href="../index.html">Controls and electronics</a> section. Power distribution, protection, and sensing for the drivetrain motor in a washdown environment.</p>
+<p class="back"><a href="../index.html">← Voltar a Controles e eletrônica</a> · <a href="../../index.html">Visão geral do RFP P6</a></p>
+  <h1>Gerenciamento de potência do motor</h1>
+  <p class="muted">Peça of the <a href="../index.html">Controles e eletrônica</a> section. Power distribution, protection, and sensing for the drivetrain motor in a washdown environment.</p>
 
   <h2>Introdução</h2>
   <p>This page defines the electrical power/control items needed to run and protect the drivetrain motor, and to provide current sensing for spike detection and throughput estimation. The design must be suitable for industrial cleaning (water protection) and for a 50 Hz China installation baseline.</p>
 
-  <h2>Legenda de cores &amp; components</h2>
+  <h2>Legenda de cores e componentes</h2>
   <p class="muted">Key electrical components (implementation details TBD).</p>
   <table>
-    <tr><th>Colour(s)</th><th>Component</th></tr>
+    <tr><th>Cor(es)</th><th>Componente</th></tr>
     <tr><td><em>—</em></td><td><strong>Main disconnect / breaker</strong> — local isolation (supports stand-alone operation and LOTO).</td></tr>
     <tr><td><em>—</em></td><td><strong>AC contactor + motor starter / soft starter</strong> — switching, controlled start/stop behavior, and overcurrent protection for the motor circuit.</td></tr>
     <tr><td><em>—</em></td><td><strong>Internal control panel</strong> — relays, control IO/PCB/PLC as required (final architecture TBD).</td></tr>
@@ -61,8 +61,8 @@
   <p class="muted">Add wiring diagrams and cabinet layout when available. (No motor power images are committed yet.)</p>
   <h3>Figuras recomendadas (clareza para o contratado)</h3>
   <ul class="muted">
-    <li><strong>Add figure</strong>: single-line diagram (power in → disconnect → contactor/starter → motor).</li>
-    <li><strong>Add figure</strong>: cabinet layout and cable routing/glands for washdown protection.</li>
+    <li><strong>Adicionar figura</strong>: single-line diagram (power in → disconnect → contactor/starter → motor).</li>
+    <li><strong>Adicionar figura</strong>: cabinet layout and cable routing/glands for washdown protection.</li>
   </ul>
 
   <h2>Discussão</h2>
@@ -94,7 +94,7 @@
   <ul>
     <li><strong>Local operation</strong> — local ON/OFF and run/stop (stand-alone).</li>
     <li><strong>LOTO</strong> — rear lockout/tagout isolation point.</li>
-    <li><strong>Safety interlocks</strong> — fail-safe lid switches and stop-with-peelers-open logic.</li>
+    <li><strong>Safety interlocks</strong> — fail-safe lid switches and stop-with-descascadores-open logic.</li>
     <li><strong>Water protection</strong> — enclosures, glands, routing suitable for rigorous washdown.</li>
   </ul>
 
@@ -104,7 +104,7 @@
     <li><strong>Cycle sensor</strong> — cycle count per period (may share hardware with yoke position / open-peeler stop sensor).</li>
   </ul>
 
-  <h3>Questions for contractor</h3>
+  <h3>Perguntas para o contratado</h3>
   <ol>
     <li>Propose a washdown-safe electrical architecture (cabinet IP rating, glands, routing) suitable for a China plant.</li>
     <li>Specify the motor starter/contactor and whether a soft starter is required; include <strong>overcurrent protection</strong> sizing based on motor current/duty assumptions.</li>
@@ -121,14 +121,14 @@
   <h3>Interfaces e tolerâncias</h3>
   <p class="muted">Interfaces (tolerances TBD; contractor to propose).</p>
   <table class="iface-table">
-    <thead><tr><th>Part</th><th>Interface / tolerance</th><th>Related</th></tr></thead>
+    <thead><tr><th>Peça</th><th>Interface / tolerância</th><th>Relacionado</th></tr></thead>
     <tbody>
-      <tr><td>Motor</td><td>WEG W22 (or equivalent); 50 Hz baseline; vertical shaft down; IPW55</td><td><a href="../../Drivetrain/index.html">Drivetrain</a></td></tr>
+      <tr><td>Motor</td><td>WEG W22 (or equivalent); 50 Hz baseline; vertical shaft down; IPW55</td><td><a href="../../Drivetrain/index.html">Acionamento</a></td></tr>
       <tr><td>Control cabinet</td><td>Washdown protection (IP rating) and gland/cable routing</td><td>—</td></tr>
       <tr><td>Current sensor</td><td>Provides current spike detection and throughput estimate</td><td>—</td></tr>
     </tbody>
   </table>
 
-  <p class="back"><a href="../index.html">← Voltar a Controls and electronics</a></p>
+  <p class="back"><a href="../index.html">← Voltar a Controles e eletrônica</a></p>
 </body>
 </html>

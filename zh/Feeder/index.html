@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>6. Fruit intake system — P6 RFP</title>
+  <title>6. 水果进料系统 — P6 RFP</title>
   <style>
     :root { --bg: #1a1d21; --card: #24282e; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
     body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
@@ -26,12 +26,12 @@
     .slideshow-controls button:hover { background: var(--accent); color: #fff; }
     .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
   </style>
-      <link rel="stylesheet" href="../../assets/site.css">
+                <link rel="stylesheet" href="../../assets/site.css">
 </head>
 <body>
 <nav class="site-lang-bar" aria-label="Language">
   <span class="lang-label">语言：</span>
-  <a href="../../Feeder/index.html">English</a>
+  <a href="../../Feeder/index.html">英文</a>
   <span aria-hidden="true">·</span>
   <a href="index.html" aria-current="page">中文</a>
   <span aria-hidden="true">·</span>
@@ -39,97 +39,97 @@
 </nav>
 
 <p class="back"><a href="../index.html">← 返回 P6 RFP 总览</a></p>
-  <h1>6. Fruit intake system</h1>
+  <h1>6. 水果进料系统</h1>
 
   <h2>子页面</h2>
   <ul>
-    <li><a href="feeding-subassembly/index.html">Feeding subassembly</a> <span class="muted">(有内容)</span> — per-unit detail: mount plate, 90° entry tube, straight tube, spring guide, sync spring; 8 CAD views and colour key.</li>
-    <li><a href="feeder-body/index.html">Feeder body</a> <span class="muted">(有内容)</span> — shell/lid/bracing; rotates on hinge for access and washdown/CIP.</li>
-    <li><a href="entry-tubes/index.html">Entry tubes</a> <span class="muted">(有内容)</span> — adjustable-height, removable tubes connecting upstream lines to each feeding unit.</li>
+    <li><a href="feeding-subassembly/index.html">进料子组件</a> <span class="muted">(有内容)</span> — per-unit detail: mount plate, 90° entry tube, straight tube, spring guide, sync spring; 8 CAD views and colour key.</li>
+    <li><a href="feeder-body/index.html">进料器本体</a> <span class="muted">(有内容)</span> — shell/lid/bracing; rotates on hinge for access and washdown/CIP.</li>
+    <li><a href="entry-tubes/index.html">进料管</a> <span class="muted">(有内容)</span> — adjustable-height, removable tubes connecting upstream lines to each feeding unit.</li>
   </ul>
 
   <h2>简介</h2>
-  <p>Top-level fruit intake system: feeder body, brace, feeding subassembly, and entry tubes. The feeder body rotates on the feeder hinge for access and CIP.</p>
+  <p>Top-level fruit intake system: 进料器本体, brace, 进料子组件, and 进料管. The 进料器本体 rotates on the feeder hinge for access and CIP.</p>
 
-  <h2>颜色说明 &amp; components</h2>
-  <p class="muted">CAD colours for this section. Per-unit detail: <a href="feeding-subassembly/index.html">Feeding subassembly</a>.</p>
+  <h2>颜色说明与部件</h2>
+  <p class="muted">本节 CAD 颜色。每单元详情： <a href="feeding-subassembly/index.html">进料子组件</a>.</p>
   <table>
-    <tr><th>Colour(s)</th><th>Component</th></tr>
-    <tr><td><span class="swatch" style="background-color:#DDA44E"></span></td><td><strong>Feeder body</strong> — orange-tan base; rotates on feeder hinge for access/CIP</td></tr>
+    <tr><th>颜色</th><th>部件</th></tr>
+    <tr><td><span class="swatch" style="background-color:#DDA44E"></span></td><td><strong>进料器本体</strong> — orange-tan base; rotates on feeder hinge for access/CIP</td></tr>
     <tr><td><span class="swatch" style="background-color:#41733B"></span> <span class="swatch" style="background-color:#71AEE8"></span></td><td><strong>Brace</strong> — dark green + light blue; welded to lid, supports system</td></tr>
-    <tr><td><span class="swatch" style="background-color:#C1EF64"></span></td><td><strong>Feeding subassembly</strong> — one per station; curved tube, sync springs, mount plate, 90° tube</td></tr>
-    <tr><td><span class="swatch" style="background-color:#FFE297"></span></td><td><strong>Entry tubes</strong> — light yellow; guide fruit into each feeding subassembly</td></tr>
+    <tr><td><span class="swatch" style="background-color:#C1EF64"></span></td><td><strong>进料子组件</strong> — one per station; curved tube, sync springs, mount plate, 90° tube</td></tr>
+    <tr><td><span class="swatch" style="background-color:#FFE297"></span></td><td><strong>进料管</strong> — light yellow; guide fruit into each 进料子组件</td></tr>
   </table>
 
   <h2 id="gallery">Top-level feeder views</h2>
-  <p class="muted">CAD views showing feeder body, brace, feeding subassembly, and entry tubes. Refer to <a href="#fig1">Figure 1</a>, <a href="#fig2">Figure 2</a>, etc.</p>
+  <p class="muted">CAD 视图显示进料器本体、支架、进料子组件和进料管。引用 <a href="#fig1">图 1</a>, <a href="#fig2">图 2</a>, etc.</p>
   <div class="slideshow" id="feeder-slideshow">
     <div class="slideshow-track">
-      <div class="slide active" id="fig1" data-caption="Figure 1. Top-level — feeder body (orange-tan), lime green feeding subassembly, light yellow entry tubes, dark green and light blue brace, magenta base."><img src="../../Feeder/images/feeder-1.png" alt="Feeder top-level view"></div>
-      <div class="slide" id="fig2" data-caption="Figure 2. Elevated — feeder body, braces, feeding subassembly, entry tubes."><img src="../../Feeder/images/feeder-2.png" alt="Feeder elevated"></div>
-      <div class="slide" id="fig3" data-caption="Figure 3. Side — feeder body, brace, lime green feeding subassembly, entry tubes."><img src="../../Feeder/images/feeder-3.png" alt="Feeder side"></div>
-      <div class="slide" id="fig4" data-caption="Figure 4. Front — four feeding units on feeder body; brace and entry tubes per unit."><img src="../../Feeder/images/feeder-4.png" alt="Feeder front four units"></div>
-      <div class="slide" id="fig5" data-caption="Figure 5. Side — feeder body, feeding subassembly with spring mechanism; feeder hinge allows body rotation."><img src="../../Feeder/images/feeder-5.png" alt="Feeder side with spring"></div>
-      <div class="slide" id="fig6" data-caption="Figure 6. Front — four units; helical conveyor connecting bases; brace and entry tubes."><img src="../../Feeder/images/feeder-6.png" alt="Feeder front with conveyor"></div>
-      <div class="slide" id="fig7" data-caption="Figure 7. Side angled — four lime green feeding subassemblies, springs, brace."><img src="../../Feeder/images/feeder-7.png" alt="Feeder side angled"></div>
-      <div class="slide" id="fig8" data-caption="Figure 8. Top — four lime green subassemblies on feeder body; entry tubes in background."><img src="../../Feeder/images/feeder-8.png" alt="Feeder top view"></div>
-      <div class="slide" id="fig9" data-caption="Figure 9. Close-up — feeding subassembly base, entry tubes, brace detail."><img src="../../Feeder/images/feeder-9.png" alt="Feeder close-up"></div>
+      <div class="slide active" id="fig1" data-caption="图 1. Top-level — 进料器本体 (orange-tan), lime green 进料子组件, light yellow 进料管, dark green and light blue brace, magenta base."><img src="../../Feeder/images/feeder-1.png" alt="进料器 top-level view"></div>
+      <div class="slide" id="fig2" data-caption="图 2. Elevated — 进料器本体, braces, 进料子组件, 进料管."><img src="../../Feeder/images/feeder-2.png" alt="进料器 elevated"></div>
+      <div class="slide" id="fig3" data-caption="图 3. Side — 进料器本体, brace, lime green 进料子组件, 进料管."><img src="../../Feeder/images/feeder-3.png" alt="进料器 side"></div>
+      <div class="slide" id="fig4" data-caption="图 4. Front — four feeding units on 进料器本体; brace and 进料管 per unit."><img src="../../Feeder/images/feeder-4.png" alt="进料器 front four units"></div>
+      <div class="slide" id="fig5" data-caption="图 5. Side — 进料器本体, 进料子组件 with spring mechanism; feeder hinge allows body rotation."><img src="../../Feeder/images/feeder-5.png" alt="进料器 side with spring"></div>
+      <div class="slide" id="fig6" data-caption="图 6. Front — four units; helical conveyor connecting bases; brace and 进料管."><img src="../../Feeder/images/feeder-6.png" alt="进料器 front with conveyor"></div>
+      <div class="slide" id="fig7" data-caption="图 7. Side angled — four lime green feeding subassemblies, springs, brace."><img src="../../Feeder/images/feeder-7.png" alt="进料器 side angled"></div>
+      <div class="slide" id="fig8" data-caption="图 8. Top — four lime green subassemblies on 进料器本体; 进料管 in background."><img src="../../Feeder/images/feeder-8.png" alt="进料器 top view"></div>
+      <div class="slide" id="fig9" data-caption="图 9. Close-up — 进料子组件 base, 进料管, brace detail."><img src="../../Feeder/images/feeder-9.png" alt="进料器 close-up"></div>
     </div>
-    <p class="slideshow-caption" id="feeder-caption" aria-live="polite">Figure 1. Top-level — feeder body (orange-tan), lime green feeding subassembly, light yellow entry tubes, dark green and light blue brace, magenta base.</p>
+    <p class="slideshow-caption" id="feeder-caption" aria-live="polite">图 1. Top-level — 进料器本体 (orange-tan), lime green 进料子组件, light yellow 进料管, dark green and light blue brace, magenta base.</p>
     <div class="slideshow-controls">
-      <button type="button" id="feeder-prev" aria-label="Previous">← Previous</button>
+      <button type="button" id="feeder-prev" aria-label="上一张">← 上一张</button>
       <span class="slideshow-counter" id="feeder-counter">1 / 9</span>
-      <button type="button" id="feeder-next" aria-label="Next">Next →</button>
+      <button type="button" id="feeder-next" aria-label="下一张">下一张 →</button>
     </div>
   </div>
 
   <h3>建议补充图示（便于承包商理解）</h3>
   <ul class="muted">
-    <li><strong>Add figure</strong>: <strong>Four-station layout</strong> — key spacing dimensions vs frame / transmission.</li>
-    <li><strong>Add figure</strong>: <strong>Helical conveyor interface</strong> — infeed height to feeder base (if not obvious in gallery).</li>
-    <li><strong>Add figure</strong>: <strong>Open-hinge service</strong> — feeder body swing clearance for CIP and tube removal.</li>
+    <li><strong>补充图示</strong>: <strong>四工位布局</strong> — key spacing dimensions vs frame / 传动.</li>
+    <li><strong>补充图示</strong>: <strong>螺旋输送机接口</strong> — infeed height to feeder base (if not obvious in gallery).</li>
+    <li><strong>补充图示</strong>: <strong>铰链开启维护</strong> — 进料器本体 swing clearance for CIP and tube removal.</li>
   </ul>
 
   <h2>讨论</h2>
-  <h3>Rough design &amp; intent</h3>
+  <h3>初步设计与意图</h3>
   <ul>
     <li><strong>System goal</strong> — Release <strong>one orange per cycle</strong> into each extraction station.</li>
-    <li><strong>Flow sequence</strong> — Upstream sorter/lines → adjustable entry tubes → 90° tube → orange rests on sync spring while a column stacks above → pusher opens spring during compression to drop one orange onto fruit support → spring closes on return stroke to hold the next orange while the staged orange drops into the peelers.</li>
-    <li><strong>Modularity</strong> — Feeding subassembly tubes are riveted to a mount plate and the mount plate is riveted to the feeder body so modules can be swapped/iterated by drilling out rivets.</li>
+    <li><strong>Flow sequence</strong> — Upstream sorter/lines → adjustable 进料管 → 90° tube → orange rests on sync spring while a column stacks above → pusher opens spring during compression to drop one orange onto 水果托架 → spring closes on return stroke to hold the next orange while the staged orange drops into the 削皮器.</li>
+    <li><strong>Modularity</strong> — 进料子组件 tubes are riveted to a mount plate and the mount plate is riveted to the 进料器本体 so modules can be swapped/iterated by drilling out rivets.</li>
   </ul>
 
-  <h3>Known issues &amp; risks</h3>
+  <h3>已知问题与风险</h3>
   <ul>
     <li><strong>Jams / double-drop</strong> — Sync spring must reliably gate a fruit column and release only one orange at a time without wedging.</li>
-    <li><strong>Collision envelope</strong> — Fruit support and pusher must never collide with entry tubes/90° tubes; pusher lateral flex can cause catastrophic collisions with tubes/lids.</li>
+    <li><strong>Collision envelope</strong> — 水果托架 and pusher must never collide with 进料管/90° tubes; pusher lateral flex can cause catastrophic collisions with tubes/lids.</li>
     <li><strong>Washdown</strong> — This region is in/near splash zone; edges and joints must be cleanable and safe to handle.</li>
   </ul>
 
-  <h3>DFM &amp; manufacturing (China)</h3>
+  <h3>DFM 与制造（中国）</h3>
   <ul>
-    <li><strong>Tube standards</strong> — Feeding subassembly uses 3″ NPS / DN90 Sch 5S as a baseline; contractor may choose China-available equivalents that preserve function and cleanability.</li>
+    <li><strong>Tube standards</strong> — 进料子组件 uses 3″ NPS / DN90 Sch 5S as a baseline; contractor may choose China-available equivalents that preserve function and cleanability.</li>
     <li><strong>Hinge/pins</strong> — Entry tube adjustability relies on pinned joints; contractor to propose robust hardware and anti-loosening.</li>
     <li><strong>CIP nozzle integration</strong> — 90° tube includes a port/tube for a nozzle to spray down the entry/spring zone; nozzle and mounting details TBD.</li>
   </ul>
 
-  <h3>Questions for contractor</h3>
+  <h3>承包商问题</h3>
   <ol>
     <li>Validate the sync spring gating concept for reliable one-at-a-time release (fruit size range, friction, jam/double-drop failure modes) and propose improvements.</li>
     <li>Propose tube/hinge/pin designs that are adjustable, rigid when locked, and fast to disassemble for seasonal maintenance.</li>
     <li>Propose a CIP nozzle placement and cleaning strategy for the entry tube and spring region (spray direction, drain paths, avoiding dead zones).</li>
   </ol>
 
-  <h3>Subassemblies</h3>
+  <h3>子组件</h3>
   <ul>
-    <li><a href="feeding-subassembly/index.html">Feeding subassembly</a> — mount plate, flanged 90° entry tube, straight tube and spring guide, sync spring (8 CAD views, colour key, parameters).</li>
-    <li>Feeder body, 90° entry tube, external duct — detail pages TBD.</li>
+    <li><a href="feeding-subassembly/index.html">进料子组件</a> — mount plate, flanged 90° entry tube, straight tube and spring guide, sync spring (8 CAD views, colour key, parameters).</li>
+    <li>进料器本体, 90° entry tube, external duct — detail pages TBD.</li>
   </ul>
 
-  <h3>Interfaces</h3>
+  <h3>接口</h3>
   <ul>
-    <li><strong>Feeder hinge</strong> — feeder body rotates for access and CIP; overcentered hinge (see <a href="../Enclosure-shell/index.html">Enclosure / shell</a>).</li>
-    <li><strong>Brace</strong> — welded to lid; supports feeding subassembly and entry tubes.</li>
-    <li><strong>Fruit flow</strong> — entry tubes → feeding subassembly → <a href="../Extraction-syncronisation/index.html">extraction &amp; synchronisation</a> (fruit support, peelers).</li>
+    <li><strong>进料器 hinge</strong> — 进料器本体 rotates for access and CIP; overcentered hinge (see <a href="../Enclosure-shell/index.html">外壳/外壳</a>).</li>
+    <li><strong>Brace</strong> — welded to lid; supports 进料子组件 and 进料管.</li>
+    <li><strong>Fruit flow</strong> — 进料管 → 进料子组件 → <a href="../Extraction-syncronisation/index.html">extraction &amp; synchronisation</a> (水果托架, 削皮器).</li>
   </ul>
 
   <p class="back"><a href="../index.html">← 返回 P6 RFP 总览</a></p>

@@ -15,68 +15,12 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 EXCLUDE_TOP = {"zh", "pt", "assets", "tools", ".git", "node_modules", ".cursor"}
 
-UI_ZH = [
-    ("Recommended figures (contractor clarity)", "建议补充图示（便于承包商理解）"),
-    ("Recommended figures", "建议补充图示"),
-    ("with content", "有内容"),
-    ("to be completed", "待完成"),
-    ("skeleton", "骨架页"),
-    ("What's filled in (highlights)", "已完成内容摘要"),
-    ("Bill of materials (BOM)", "物料清单（BOM）"),
-    ("Questions for RFP", "RFP 问题清单"),
-    ("Delijuice extraction cycle", "Delijuice 压榨循环"),
-    ("Project overview", "项目概览"),
-    ("P6 RFP overview", "P6 RFP 总览"),
-    ("← Back to P6 RFP overview", "← 返回 P6 RFP 总览"),
-    ("← Back to", "← 返回"),
-    ("Subpages", "子页面"),
-    ("Subsystems", "子系统"),
-    ("Reference", "参考"),
-    ("Introduction", "简介"),
-    ("Figures", "图示"),
-    ("Discussion", "讨论"),
-    ("Components", "部件"),
-    ("Interfaces and tolerances", "接口与公差"),
-    ("Colour key", "颜色说明"),
-    ("Status", "状态"),
-    ("Scope", "范围"),
-    ("More", "更多"),
-    ("Future developments", "后续开发"),
-    ("Last updated:", "最后更新："),
-    ("Language:", "语言："),
-    ("Skip to content", "跳到正文"),
-]
-UI_PT = [
-    ("Recommended figures (contractor clarity)", "Figuras recomendadas (clareza para o contratado)"),
-    ("Recommended figures", "Figuras recomendadas"),
-    ("with content", "com conteúdo"),
-    ("to be completed", "a concluir"),
-    ("skeleton", "esqueleto"),
-    ("What's filled in (highlights)", "Destaques do que já está preenchido"),
-    ("Bill of materials (BOM)", "Lista de materiais (BOM)"),
-    ("Questions for RFP", "Perguntas para o RFP"),
-    ("Delijuice extraction cycle", "Ciclo de extração Delijuice"),
-    ("Project overview", "Visão geral do projeto"),
-    ("P6 RFP overview", "Visão geral do RFP P6"),
-    ("← Back to P6 RFP overview", "← Voltar à visão geral do RFP P6"),
-    ("← Back to", "← Voltar a"),
-    ("Subpages", "Subpáginas"),
-    ("Subsystems", "Subsistemas"),
-    ("Reference", "Referência"),
-    ("Introduction", "Introdução"),
-    ("Figures", "Figuras"),
-    ("Discussion", "Discussão"),
-    ("Components", "Componentes"),
-    ("Interfaces and tolerances", "Interfaces e tolerâncias"),
-    ("Colour key", "Legenda de cores"),
-    ("Status", "Estado"),
-    ("Scope", "Âmbito"),
-    ("More", "Mais"),
-    ("Future developments", "Desenvolvimentos futuros"),
-    ("Last updated:", "Última atualização:"),
-    ("Language:", "Idioma:"),
-    ("Skip to content", "Ir para o conteúdo"),
-]
+# Import translations (tools/ is script dir when run as python tools/build_i18n.py)
+sys.path.insert(0, str(ROOT))
+from tools.translations import get_ui_zh, get_ui_pt
+
+UI_ZH = get_ui_zh()
+UI_PT = get_ui_pt()
 
 
 def list_english_html() -> list[Path]:
@@ -185,10 +129,30 @@ def inject_body(html: str, bar: str) -> str:
     return re.sub(r"(<body[^>]*>)", r"\1\n" + bar, html, count=1)
 
 
+def protect_url_attributes(html: str) -> tuple[str, list[str]]:
+    """Replace href/src values with placeholders so translation doesn't corrupt paths."""
+    urls: list[str] = []
+
+    def repl(m: re.Match) -> str:
+        attr, q, val = m.group(1), m.group(2), m.group(3)
+        urls.append(val)
+        return f'{attr}={q}__URL_{len(urls)-1}__{q}'
+
+    html = re.sub(r'(href|src)=(["\'])([^"\']+)\2', repl, html)
+    return html, urls
+
+
+def restore_url_attributes(html: str, urls: list[str]) -> str:
+    for i, url in enumerate(urls):
+        html = html.replace(f'__URL_{i}__', url)
+    return html
+
+
 def apply_ui_dict(html: str, pairs: list[tuple[str, str]]) -> str:
+    html, urls = protect_url_attributes(html)
     for en, loc in pairs:
         html = html.replace(en, loc)
-    return html
+    return restore_url_attributes(html, urls)
 
 
 def should_relink(url: str) -> bool:

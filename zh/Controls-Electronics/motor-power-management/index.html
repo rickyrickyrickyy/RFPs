@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Motor power management — Controls — P6 RFP</title>
+  <title>电机功率管理 — 控制 — P6 RFP</title>
   <style>
     :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
     body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
@@ -28,29 +28,29 @@
     .slideshow-controls button:hover { background: var(--accent); color: #fff; }
     .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
   </style>
-      <link rel="stylesheet" href="../../../assets/site.css">
+                <link rel="stylesheet" href="../../../assets/site.css">
 </head>
 <body>
 <nav class="site-lang-bar" aria-label="Language">
   <span class="lang-label">语言：</span>
-  <a href="../../../Controls-Electronics/motor-power-management/index.html">English</a>
+  <a href="../../../Controls-Electronics/motor-power-management/index.html">英文</a>
   <span aria-hidden="true">·</span>
   <a href="index.html" aria-current="page">中文</a>
   <span aria-hidden="true">·</span>
   <a href="../../../pt/Controls-Electronics/motor-power-management/index.html">Português</a>
 </nav>
 
-<p class="back"><a href="../index.html">← 返回 Controls and electronics</a> · <a href="../../index.html">P6 RFP 总览</a></p>
-  <h1>Motor power management</h1>
-  <p class="muted">Part of the <a href="../index.html">Controls and electronics</a> section. Power distribution, protection, and sensing for the drivetrain motor in a washdown environment.</p>
+<p class="back"><a href="../index.html">← 返回 控制与电子</a> · <a href="../../index.html">P6 RFP 总览</a></p>
+  <h1>电机功率管理</h1>
+  <p class="muted">部件 of the <a href="../index.html">控制与电子</a> section. Power distribution, protection, and sensing for the drivetrain motor in a washdown environment.</p>
 
   <h2>简介</h2>
   <p>This page defines the electrical power/control items needed to run and protect the drivetrain motor, and to provide current sensing for spike detection and throughput estimation. The design must be suitable for industrial cleaning (water protection) and for a 50 Hz China installation baseline.</p>
 
-  <h2>颜色说明 &amp; components</h2>
+  <h2>颜色说明与部件</h2>
   <p class="muted">Key electrical components (implementation details TBD).</p>
   <table>
-    <tr><th>Colour(s)</th><th>Component</th></tr>
+    <tr><th>颜色</th><th>部件</th></tr>
     <tr><td><em>—</em></td><td><strong>Main disconnect / breaker</strong> — local isolation (supports stand-alone operation and LOTO).</td></tr>
     <tr><td><em>—</em></td><td><strong>AC contactor + motor starter / soft starter</strong> — switching, controlled start/stop behavior, and overcurrent protection for the motor circuit.</td></tr>
     <tr><td><em>—</em></td><td><strong>Internal control panel</strong> — relays, control IO/PCB/PLC as required (final architecture TBD).</td></tr>
@@ -61,8 +61,8 @@
   <p class="muted">Add wiring diagrams and cabinet layout when available. (No motor power images are committed yet.)</p>
   <h3>建议补充图示（便于承包商理解）</h3>
   <ul class="muted">
-    <li><strong>Add figure</strong>: single-line diagram (power in → disconnect → contactor/starter → motor).</li>
-    <li><strong>Add figure</strong>: cabinet layout and cable routing/glands for washdown protection.</li>
+    <li><strong>补充图示</strong>: single-line diagram (power in → disconnect → contactor/starter → motor).</li>
+    <li><strong>补充图示</strong>: cabinet layout and cable routing/glands for washdown protection.</li>
   </ul>
 
   <h2>讨论</h2>
@@ -94,7 +94,7 @@
   <ul>
     <li><strong>Local operation</strong> — local ON/OFF and run/stop (stand-alone).</li>
     <li><strong>LOTO</strong> — rear lockout/tagout isolation point.</li>
-    <li><strong>Safety interlocks</strong> — fail-safe lid switches and stop-with-peelers-open logic.</li>
+    <li><strong>Safety interlocks</strong> — fail-safe lid switches and stop-with-削皮器-open logic.</li>
     <li><strong>Water protection</strong> — enclosures, glands, routing suitable for rigorous washdown.</li>
   </ul>
 
@@ -104,7 +104,7 @@
     <li><strong>Cycle sensor</strong> — cycle count per period (may share hardware with yoke position / open-peeler stop sensor).</li>
   </ul>
 
-  <h3>Questions for contractor</h3>
+  <h3>承包商问题</h3>
   <ol>
     <li>Propose a washdown-safe electrical architecture (cabinet IP rating, glands, routing) suitable for a China plant.</li>
     <li>Specify the motor starter/contactor and whether a soft starter is required; include <strong>overcurrent protection</strong> sizing based on motor current/duty assumptions.</li>
@@ -112,23 +112,23 @@
     <li>Confirm inlet connector(s) and wiring approach for 380/415 V 3-phase 50 Hz (CN baseline), and advise how to keep a single design compatible with 60 Hz markets where possible.</li>
   </ol>
 
-  <h3>Interfaces</h3>
+  <h3>接口</h3>
   <ul>
     <li><strong>Input:</strong> plant power (3-phase), operator commands, safety interlocks.</li>
     <li><strong>Output:</strong> protected power to drivetrain motor; sensor signals to control logic/IoT export.</li>
     <li><strong>Mount:</strong> internal control cabinet/panel.</li>
   </ul>
   <h3>接口与公差</h3>
-  <p class="muted">Interfaces (tolerances TBD; contractor to propose).</p>
+  <p class="muted">接口 (tolerances TBD; contractor to propose).</p>
   <table class="iface-table">
-    <thead><tr><th>Part</th><th>Interface / tolerance</th><th>Related</th></tr></thead>
+    <thead><tr><th>部件</th><th>接口 / 公差</th><th>相关</th></tr></thead>
     <tbody>
-      <tr><td>Motor</td><td>WEG W22 (or equivalent); 50 Hz baseline; vertical shaft down; IPW55</td><td><a href="../../Drivetrain/index.html">Drivetrain</a></td></tr>
+      <tr><td>Motor</td><td>WEG W22 (or equivalent); 50 Hz baseline; vertical shaft down; IPW55</td><td><a href="../../Drivetrain/index.html">传动系统</a></td></tr>
       <tr><td>Control cabinet</td><td>Washdown protection (IP rating) and gland/cable routing</td><td>—</td></tr>
       <tr><td>Current sensor</td><td>Provides current spike detection and throughput estimate</td><td>—</td></tr>
     </tbody>
   </table>
 
-  <p class="back"><a href="../index.html">← 返回 Controls and electronics</a></p>
+  <p class="back"><a href="../index.html">← 返回 控制与电子</a></p>
 </body>
 </html>

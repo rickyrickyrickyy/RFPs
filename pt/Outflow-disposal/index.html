@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>8. Disposal system — P6 RFP</title>
+  <title>8. Sistema de descarte — P6 RFP</title>
   <style>
     :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
     body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
@@ -29,70 +29,70 @@
     .iface-table th, .iface-table td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
     .iface-table th { color: var(--muted); font-weight: 600; }
   </style>
-      <link rel="stylesheet" href="../../assets/site.css">
+                <link rel="stylesheet" href="../../assets/site.css">
 </head>
 <body>
 <nav class="site-lang-bar" aria-label="Language">
   <span class="lang-label">Idioma:</span>
-  <a href="../../Outflow-disposal/index.html">English</a>
+  <a href="../../Outflow-disposal/index.html">Inglês</a>
   <span aria-hidden="true">·</span>
   <a href="../../zh/Outflow-disposal/index.html">中文</a>
   <span aria-hidden="true">·</span>
   <a href="index.html" aria-current="page">Português</a>
 </nav>
 
-<p class="back"><a href="../index.html">← Voltar a Visão geral do RFP P6</a></p>
-  <h1>8. Disposal system</h1>
+<p class="back"><a href="../index.html">← Voltar à visão geral do RFP P6</a></p>
+  <h1>8. Sistema de descarte</h1>
 
   <h2>Subpáginas</h2>
   <ul>
-    <li><a href="chutes-and-augers/index.html">Chutes and augers</a> <span class="muted">(com conteúdo)</span> — CAD, chute assembly photo, supplier auger diagram; peel vs core paths.</li>
-    <li><a href="deflectors/index.html">Deflectors</a> <span class="muted">(com conteúdo)</span> — driven deflector CAD context + photo covering core chute / auger opening.</li>
+    <li><a href="chutes-and-augers/index.html">Calhas e parafusos transportadores</a> <span class="muted">(com conteúdo)</span> — CAD, chute assembly photo, supplier auger diagram; peel vs core paths.</li>
+    <li><a href="deflectors/index.html">Defletores</a> <span class="muted">(com conteúdo)</span> — driven deflector CAD context + photo covering core chute / auger opening.</li>
   </ul>
 
   <h2>Introdução</h2>
-  <p>Disposal routes <strong>peels</strong> and <strong>cores</strong> into separate conveyance paths. After core ejection, cores fall into <strong>core chutes</strong> (hexagonal-tube concept beneath each peeler station) while peel material flows around the core chutes into the <strong>peel chute</strong>. Two augers convey peels vs. cores separately to support different downstream handling (e.g., secondary wash/juice extraction for cores).</p>
+  <p>Descarte routes <strong>peels</strong> and <strong>cores</strong> into separate conveyance paths. After core ejection, cores fall into <strong>core chutes</strong> (hexagonal-tube concept beneath each peeler station) while peel material flows around the core chutes into the <strong>peel chute</strong>. Two augers convey peels vs. cores separately to support different downstream handling (e.g., secondary wash/juice extraction for cores).</p>
 
-  <h2>Legenda de cores &amp; components</h2>
-  <p class="muted">Peel chute, core chutes, augers — detail pages TBD. Some CAD views use alternative colours (second row).</p>
+  <h2>Legenda de cores e componentes</h2>
+  <p class="muted">Calha de cascas, calhas de caroços, parafusos — páginas de detalhe a definir.</p>
   <table>
-    <tr><th>Colour(s)</th><th>Component</th></tr>
-    <tr><td><span class="swatch" style="background-color:#D43C3C"></span> <span class="swatch" style="background-color:#2768BC" title="alt"></span></td><td><strong>Peel chute</strong> — folded sheet metal; peels from sides of peelers</td></tr>
+    <tr><th>Cor(es)</th><th>Componente</th></tr>
+    <tr><td><span class="swatch" style="background-color:#D43C3C"></span> <span class="swatch" style="background-color:#2768BC" title="alt"></span></td><td><strong>Peel chute</strong> — folded sheet metal; peels from sides of descascadores</td></tr>
     <tr><td>— <span class="swatch" style="background-color:#D79132" title="alt"></span></td><td><strong>Core chutes</strong> — welded to peel chute; cores after core ejection</td></tr>
     <tr><td><span class="swatch" style="background-color:#28B399"></span> <span class="swatch" style="background-color:#FFED9E" title="alt"></span></td><td><strong>Two augers</strong> — take peels and cores away separately</td></tr>
   </table>
 
   <h2 id="gallery">Figuras</h2>
-  <p class="muted">CAD views. Refer to figures in the text as <a href="#fig1">Figure 1</a>, <a href="#fig2">Figure 2</a>, etc.</p>
+  <p class="muted">Vistas CAD. Consulte as figuras no texto como <a href="#fig1">Figura 1</a>, <a href="#fig2">Figura 2</a>, etc.</p>
   <div class="slideshow" id="disp-slideshow">
     <div class="slideshow-track">
-      <div class="slide active" id="fig1" data-caption="Figure 1. Top-down isometric — red chute on teal base, two channels."><img src="../../Outflow-disposal/images/disposal-top-isometric.png" alt="Top isometric"></div>
-      <div class="slide" id="fig2" data-caption="Figure 2. Red peel chute with core chutes; two teal augers."><img src="../../Outflow-disposal/images/disposal-chute-augers.png" alt="Chute and augers"></div>
-      <div class="slide" id="fig3" data-caption="Figure 3. Red chute only, above frame."><img src="../../Outflow-disposal/images/disposal-chute-only.png" alt="Chute only"></div>
-      <div class="slide" id="fig4" data-caption="Figure 4. Right — red chute, core chutes, teal augers below."><img src="../../Outflow-disposal/images/disposal-right-chute-core.png" alt="Right chute and core"></div>
-      <div class="slide" id="fig5" data-caption="Figure 5. Front — red folded sheet metal chute above teal frame."><img src="../../Outflow-disposal/images/disposal-front-chute-frame.png" alt="Front chute and frame"></div>
-      <div class="slide" id="fig6" data-caption="Figure 6. Right — red chute; two teal U-shaped auger housings."><img src="../../Outflow-disposal/images/disposal-right-u-channels.png" alt="Right U-channels"></div>
-      <div class="slide" id="fig7" data-caption="Figure 7. Alternative — blue peel chute, orange core chutes."><img src="../../Outflow-disposal/images/disposal-alt-blue-orange.png" alt="Alt blue/orange"></div>
-      <div class="slide" id="fig8" data-caption="Figure 8. Alternative — blue chute, orange core chutes, channels."><img src="../../Outflow-disposal/images/disposal-alt-isometric.png" alt="Alt isometric"></div>
-      <div class="slide" id="fig9" data-caption="Figure 9. Red chute, four core chutes, teal auger channels."><img src="../../Outflow-disposal/images/disposal-red-core-teal-channels.png" alt="Red core teal channels"></div>
+      <div class="slide active" id="fig1" data-caption="Figura 1. Top-down isometric — red chute on teal base, two channels."><img src="../../Outflow-disposal/images/disposal-top-isometric.png" alt="Top isometric"></div>
+      <div class="slide" id="fig2" data-caption="Figura 2. Red peel chute with core chutes; two teal augers."><img src="../../Outflow-disposal/images/disposal-chute-augers.png" alt="Chute and augers"></div>
+      <div class="slide" id="fig3" data-caption="Figura 3. Red chute only, above frame."><img src="../../Outflow-disposal/images/disposal-chute-only.png" alt="Chute only"></div>
+      <div class="slide" id="fig4" data-caption="Figura 4. Right — red chute, core chutes, teal augers below."><img src="../../Outflow-disposal/images/disposal-right-chute-core.png" alt="Right chute and core"></div>
+      <div class="slide" id="fig5" data-caption="Figura 5. Front — red folded sheet metal chute above teal frame."><img src="../../Outflow-disposal/images/disposal-front-chute-frame.png" alt="Front chute and frame"></div>
+      <div class="slide" id="fig6" data-caption="Figura 6. Right — red chute; two teal U-shaped auger housings."><img src="../../Outflow-disposal/images/disposal-right-u-channels.png" alt="Right U-channels"></div>
+      <div class="slide" id="fig7" data-caption="Figura 7. Alternative — blue peel chute, orange core chutes."><img src="../../Outflow-disposal/images/disposal-alt-blue-orange.png" alt="Alt blue/orange"></div>
+      <div class="slide" id="fig8" data-caption="Figura 8. Alternative — blue chute, orange core chutes, channels."><img src="../../Outflow-disposal/images/disposal-alt-isometric.png" alt="Alt isometric"></div>
+      <div class="slide" id="fig9" data-caption="Figura 9. Red chute, four core chutes, teal auger channels."><img src="../../Outflow-disposal/images/disposal-red-core-teal-channels.png" alt="Red core teal channels"></div>
     </div>
-    <p class="slideshow-caption" id="disp-caption" aria-live="polite">Figure 1. Top-down isometric — red chute on teal base, two channels.</p>
+    <p class="slideshow-caption" id="disp-caption" aria-live="polite">Figura 1. Top-down isometric — red chute on teal base, two channels.</p>
     <div class="slideshow-controls">
-      <button type="button" id="disp-prev" aria-label="Previous">← Previous</button>
+      <button type="button" id="disp-prev" aria-label="Anterior">← Anterior</button>
       <span class="slideshow-counter" id="disp-counter">1 / 9</span>
-      <button type="button" id="disp-next" aria-label="Next">Next →</button>
+      <button type="button" id="disp-next" aria-label="Próximo">Próximo →</button>
     </div>
   </div>
 
   <h3>Figuras recomendadas (clareza para o contratado)</h3>
   <ul class="muted">
-    <li><strong>Add figure</strong>: <strong>Peel vs core separation</strong> — plan view streamlines at hex chute array.</li>
-    <li><strong>Add figure</strong>: <strong>Auger infeed transition</strong> — chute-to-auger for peel and core lines separately.</li>
-    <li><strong>Add figure</strong>: <strong>High-level P&amp;ID</strong> — optional, if third-party auger vendor needs flow context.</li>
+    <li><strong>Adicionar figura</strong>: <strong>Peel vs core separation</strong> — plan view streamlines at hex chute array.</li>
+    <li><strong>Adicionar figura</strong>: <strong>Auger infeed transition</strong> — chute-to-auger for peel and core lines separately.</li>
+    <li><strong>Adicionar figura</strong>: <strong>High-level P&amp;ID</strong> — optional, if third-party auger vendor needs flow context.</li>
   </ul>
 
   <h2>Discussão</h2>
-  <h3>Function (cycle)</h3>
+  <h3>Função (ciclo)</h3>
   <ol>
     <li>Core from <a href="../Plug-ejection/index.html">core ejection</a> <strong>falls into the core chutes</strong> directly below each peeler station.</li>
     <li>Peels leave the peeler station and <strong>flow around the core chutes</strong> via chute geometry (hexagonal tubes with triangular leading/trailing faces), preventing peels from entering the core chute stream.</li>
@@ -102,17 +102,17 @@
   <h3>Interfaces</h3>
   <ul>
     <li><strong>Input (cores):</strong> From <a href="../Plug-ejection/index.html">core ejection</a> — core falls into core chute.</li>
-    <li><strong>Input (peels):</strong> From <a href="../Collection/index.html">collection</a>/extraction — peels to sides of peelers, two channels.</li>
+    <li><strong>Input (peels):</strong> From <a href="../Collection/index.html">collection</a>/extraction — peels to sides of descascadores, two channels.</li>
     <li><strong>Output:</strong> Two augers convey peels and plugs/cores away separately.</li>
   </ul>
 
   <h2>Interfaces e tolerâncias</h2>
-  <p class="muted">Known interfaces and tolerances. Links go to related subsystems.</p>
+  <p class="muted">Interfaces e tolerâncias conhecidas. Links para subsistemas relacionados.</p>
   <table class="iface-table">
-    <thead><tr><th>Part</th><th>Interface / tolerance</th><th>Related</th></tr></thead>
+    <thead><tr><th>Peça</th><th>Interface / tolerância</th><th>Relacionado</th></tr></thead>
     <tbody>
-      <tr><td>Core chutes</td><td>Receive cores from core ejection; welded to peel chute</td><td><a href="../Plug-ejection/index.html">Core ejection</a></td></tr>
-      <tr><td>Peel chute</td><td>Receives peels from sides of peelers (collection/extraction); two channels</td><td><a href="../Collection/index.html">Collection</a></td></tr>
+      <tr><td>Core chutes</td><td>Receive cores from core ejection; welded to peel chute</td><td><a href="../Plug-ejection/index.html">Ejeção de caroço</a></td></tr>
+      <tr><td>Peel chute</td><td>Receives peels from sides of descascadores (collection/extraction); two channels</td><td><a href="../Collection/index.html">Coleta</a></td></tr>
       <tr><td>Augers</td><td>Two augers; convey peels and cores away separately</td><td>—</td></tr>
     </tbody>
   </table>

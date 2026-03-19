@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>2. Drivetrain — P6 RFP</title>
+  <title>2. 传动系统 — P6 RFP</title>
   <style>
     :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
     body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
@@ -30,12 +30,12 @@
     .iface-table th { color: var(--muted); font-weight: 600; }
     .reminder { background: rgba(88, 166, 255, 0.12); border: 1px solid var(--accent); border-radius: 6px; padding: 0.75rem 1rem; margin: 1rem 0; font-size: 0.95rem; }
   </style>
-      <link rel="stylesheet" href="../../assets/site.css">
+                <link rel="stylesheet" href="../../assets/site.css">
 </head>
 <body>
 <nav class="site-lang-bar" aria-label="Language">
   <span class="lang-label">语言：</span>
-  <a href="../../Drivetrain/index.html">English</a>
+  <a href="../../Drivetrain/index.html">英文</a>
   <span aria-hidden="true">·</span>
   <a href="index.html" aria-current="page">中文</a>
   <span aria-hidden="true">·</span>
@@ -43,26 +43,26 @@
 </nav>
 
 <p class="back"><a href="../index.html">← 返回 P6 RFP 总览</a></p>
-  <h1>2. Drivetrain</h1>
+  <h1>2. 传动系统</h1>
 
   <h2>子页面</h2>
   <ul>
-    <li><a href="motor-and-reducer/index.html">Motor and reducer</a> <span class="muted">(有内容)</span> — motor, V-belt, Sumitomo reducer; mounting, tensioning, and shaft extension questions.</li>
-    <li><a href="gears-and-cam-bearings/index.html">Gears and cam bearings</a> <span class="muted">(有内容)</span> — gear train, cam rollers, lubrication; interface to transmission yoke.</li>
-    <li><a href="drivetrain-mount-plate/index.html">Drivetrain mount plate</a> <span class="muted">(有内容)</span> — mount plate on frame; shimming/dowelization workflow and stiffness requirements.</li>
+    <li><a href="motor-and-reducer/index.html">电机与减速机</a> <span class="muted">(有内容)</span> — motor, V-belt, Sumitomo reducer; mounting, tensioning, and shaft extension questions.</li>
+    <li><a href="gears-and-cam-bearings/index.html">齿轮与凸轮轴承</a> <span class="muted">(有内容)</span> — gear train, cam rollers, lubrication; interface to 传动 yoke.</li>
+    <li><a href="drivetrain-mount-plate/index.html">传动安装板</a> <span class="muted">(有内容)</span> — mount plate on frame; shimming/dowelization workflow and stiffness requirements.</li>
   </ul>
 
   <h2>简介</h2>
-  <p>Motor → V-belt → reducer → gear train → cam bearings → interface with <a href="../Transmission/index.html">transmission</a> yoke. Mounts on drivetrain mount plate (frame). This subsystem is the primary source of torque, vibration, and cyclic loading into the machine structure.</p>
+  <p>Motor → V-belt → reducer → gear train → cam bearings → interface with <a href="../Transmission/index.html">传动</a> yoke. Mounts on drivetrain mount plate (frame). This subsystem is the primary source of torque, vibration, and cyclic loading into the machine structure.</p>
   <div class="reminder"><strong>Catalog links:</strong> <a href="https://www.weg.net/catalog/weg/US/en/c/MT_IEC_3PHASE_LV_TEFC_W22_IE2/list">WEG W22 IEC TEFC (IE2)</a> · <a href="https://us.sumitomodrive.com/sites/default/files/2025-03/cyclo_6000_reducer_catalog_v12_web-2.pdf">Sumitomo Cyclo 6000 catalog (PDF)</a></div>
 
-  <h2>颜色说明 &amp; components</h2>
-  <p class="muted">CAD colours for this section. Applies to the drivetrain figures on this page.</p>
+  <h2>颜色说明与部件</h2>
+  <p class="muted">本节 CAD 颜色。适用于本页传动图示。</p>
   <table>
-    <tr><th>Colour(s)</th><th>Component</th></tr>
+    <tr><th>颜色</th><th>部件</th></tr>
     <tr><td><span class="swatch" style="background-color:#CA2B6D"></span></td><td><strong>Driven gear</strong> — transfers reducer output torque into the gear train; set backlash to prevent binding.</td></tr>
     <tr><td><span class="swatch" style="background-color:#9EDA3B"></span></td><td><strong>Passive gear</strong> — mates with driven gear to transmit torque to the cam-bearing shaft; backlash and tooth contact are critical.</td></tr>
-    <tr><td><span class="swatch" style="background-color:#8E6FD3"></span></td><td><strong>Cam bearings</strong> — interface with <a href="../Transmission/index.html">transmission</a> yoke</td></tr>
+    <tr><td><span class="swatch" style="background-color:#8E6FD3"></span></td><td><strong>Cam bearings</strong> — interface with <a href="../Transmission/index.html">传动</a> yoke</td></tr>
     <tr><td><span class="swatch" style="background-color:#F0DE44"></span></td><td><strong>Passive gear shaft</strong> — supports passive gear and cam bearings; alignment controls yoke stroke smoothness.</td></tr>
     <tr><td><span class="swatch" style="background-color:#7EFF7D"></span></td><td><strong>Locating capped roller bearing unit</strong> — SKF F4BRP 208-SRB-CRH (locating, capped/end-cover option). Used under the passive gear to locate axially.</td></tr>
     <tr><td><span class="swatch" style="background-color:#6F3BC2"></span></td><td><strong>Non-locating roller bearing unit</strong> — SKF F4BRP 208-SRB-CLE (non-locating). Used to support the Sumitomo reducer output shaft side while allowing axial float.</td></tr>
@@ -75,34 +75,34 @@
   </table>
 
   <h2 id="gallery">图示</h2>
-  <p class="muted">Drivetrain: motor, reducer, belt, gear train, cam bearings. Refer to figures as <a href="#fig1">Figure 1</a>, <a href="#fig2">Figure 2</a>, etc.</p>
+  <p class="muted">传动：电机、减速机、皮带、齿轮系、凸轮轴承。引用图示为 <a href="#fig1">图 1</a>, <a href="#fig2">图 2</a>, etc.</p>
   <div class="slideshow" id="drive-slideshow">
     <div class="slideshow-track">
-      <div class="slide active" id="fig1" data-caption="Figure 1. Drivetrain assembly — mounting plate, driving gear (magenta), driven gear (lime green), reducer, motor, pulleys and V-belt."><img src="../../Drivetrain/images/drivetrain-1.png" alt="Drivetrain assembly view 1"></div>
-      <div class="slide" id="fig2" data-caption="Figure 2. Drivetrain assembly — gear train on mounting plate, gearbox (beige), motor (dark green), belt drive (blue)."><img src="../../Drivetrain/images/drivetrain-2.png" alt="Drivetrain assembly view 2"></div>
-      <div class="slide" id="fig3" data-caption="Figure 3. Gear train and shaft extensions — two gears (magenta, lime green), central beam, cam bearings (purple), reducer."><img src="../../Drivetrain/images/drivetrain-3.png" alt="Drivetrain gear train and shafts"></div>
-      <div class="slide" id="fig4" data-caption="Figure 4. Drivetrain detail — driven gear, driving gear, reducer body, motor, pulleys and belt."><img src="../../Drivetrain/images/drivetrain-4.png" alt="Drivetrain detail"></div>
-      <div class="slide" id="fig5" data-caption="Figure 5. Drivetrain — gear train, reducer, motor and V-belt drive."><img src="../../Drivetrain/images/drivetrain-5.png" alt="Drivetrain gear train and belt"></div>
-      <div class="slide" id="fig6" data-caption="Figure 6. Drivetrain detail — shaft extensions (purple), gears, central beam, mounting plate."><img src="../../Drivetrain/images/drivetrain-6.png" alt="Drivetrain shafts and gears"></div>
-      <div class="slide" id="fig7" data-caption="Figure 7. Side view — motor, reducer, V-belt drive, central housing, beam and mounts."><img src="../../Drivetrain/images/drivetrain-7.png" alt="Drivetrain side view"></div>
+      <div class="slide active" id="fig1" data-caption="图 1. 传动系统 assembly — mounting plate, driving gear (magenta), driven gear (lime green), reducer, motor, pulleys and V-belt."><img src="../../Drivetrain/images/drivetrain-1.png" alt="传动系统 assembly view 1"></div>
+      <div class="slide" id="fig2" data-caption="图 2. 传动系统 assembly — gear train on mounting plate, gearbox (beige), motor (dark green), belt drive (blue)."><img src="../../Drivetrain/images/drivetrain-2.png" alt="传动系统 assembly view 2"></div>
+      <div class="slide" id="fig3" data-caption="图 3. Gear train and shaft extensions — two gears (magenta, lime green), central beam, cam bearings (purple), reducer."><img src="../../Drivetrain/images/drivetrain-3.png" alt="传动系统 gear train and shafts"></div>
+      <div class="slide" id="fig4" data-caption="图 4. 传动系统 detail — driven gear, driving gear, reducer body, motor, pulleys and belt."><img src="../../Drivetrain/images/drivetrain-4.png" alt="传动系统 detail"></div>
+      <div class="slide" id="fig5" data-caption="图 5. 传动系统 — gear train, reducer, motor and V-belt drive."><img src="../../Drivetrain/images/drivetrain-5.png" alt="传动系统 gear train and belt"></div>
+      <div class="slide" id="fig6" data-caption="图 6. 传动系统 detail — shaft extensions (purple), gears, central beam, mounting plate."><img src="../../Drivetrain/images/drivetrain-6.png" alt="传动系统 shafts and gears"></div>
+      <div class="slide" id="fig7" data-caption="图 7. Side view — motor, reducer, V-belt drive, central housing, beam and mounts."><img src="../../Drivetrain/images/drivetrain-7.png" alt="传动系统 side view"></div>
     </div>
-    <p class="slideshow-caption" id="drive-caption" aria-live="polite">Figure 1. Drivetrain assembly — mounting plate, driving gear (magenta), driven gear (lime green), reducer, motor, pulleys and V-belt.</p>
+    <p class="slideshow-caption" id="drive-caption" aria-live="polite">图 1. 传动系统 assembly — mounting plate, driving gear (magenta), driven gear (lime green), reducer, motor, pulleys and V-belt.</p>
     <div class="slideshow-controls">
-      <button type="button" id="drive-prev" aria-label="Previous">← Previous</button>
+      <button type="button" id="drive-prev" aria-label="上一张">← 上一张</button>
       <span class="slideshow-counter" id="drive-counter">1 / 7</span>
-      <button type="button" id="drive-next" aria-label="Next">Next →</button>
+      <button type="button" id="drive-next" aria-label="下一张">下一张 →</button>
     </div>
   </div>
 
   <h3>建议补充图示（便于承包商理解）</h3>
   <ul class="muted">
-    <li><strong>Add figure</strong>: <strong>Reducer shaft extension</strong> — adapter sketch resolving bore mismatch (see <a href="motor-and-reducer/index.html">Motor and reducer</a> risks).</li>
-    <li><strong>Add figure</strong>: <strong>Locating vs non-locating bearing</strong> — thermal expansion direction on passive gear shaft.</li>
-    <li><strong>Add figure</strong>: <strong>Cover clearance</strong> — belt guard vs pulley OD at max wear adjustment.</li>
+    <li><strong>补充图示</strong>: <strong>减速机轴延伸</strong> — adapter sketch resolving bore mismatch (see <a href="motor-and-reducer/index.html">电机与减速机</a> risks).</li>
+    <li><strong>补充图示</strong>: <strong>定位与非定位轴承</strong> — thermal expansion direction on passive gear shaft.</li>
+    <li><strong>补充图示</strong>: <strong>罩盖间隙</strong> — belt guard vs pulley OD at max wear adjustment.</li>
   </ul>
 
   <h2>讨论</h2>
-  <h3>Rough design &amp; intent</h3>
+  <h3>初步设计与意图</h3>
   <ul>
     <li><strong>状态</strong> — CAD exists for the drivetrain layout and interfaces, but final specifications (belt center distance, gear module/profile, helical angle decision, detailed bearing selection/arrangement) are still being developed.</li>
     <li><strong>Prime mover</strong> — WEG W21/W22 IE3 motor, product number 13533507: 7.5 kW (10 hp), 50 Hz, 4-pole, rated speed 1460 rpm, rated torque ~49 N·m, 38 mm shaft.</li>
@@ -110,7 +110,7 @@
     <li><strong>Reducer</strong> — Sumitomo Cyclo 6000 series; output speed target ~70 rpm. Reducer output torque drives the gear train which drives cam bearings for reciprocation.</li>
   </ul>
 
-  <h3>Known issues &amp; risks</h3>
+  <h3>已知问题与风险</h3>
   <ul>
     <li><strong>Vibration + cyclic loading into frame</strong> — Motor/reducer and belt tension introduce vibration; cam-yoke reciprocation adds cyclic force content. Joints (bolts + dowels) must be designed to avoid slip/fretting.</li>
     <li><strong>Belt tension / radial loads</strong> — Center distance and tensioning method are not finalized; belt tension sets radial loads on motor/reducer shafts and the mount plate, and affects bearing life and noise.</li>
@@ -119,14 +119,14 @@
     <li><strong>Shaft/bore mismatch + custom extensions</strong> — The SKF mounted bearing unit bore (e.g. 63.5 mm nominal for F4BRP 208 units) does not exactly match the Cyclo 6000 reducer shaft geometry in the current concept. Both reducer input and output shafts also need extension for the machine layout. Custom shaft extensions/adapters (or alternate bearing selection) are required; contractor to propose the safest/most manufacturable approach.</li>
   </ul>
 
-  <h3>DFM &amp; manufacturing (China)</h3>
+  <h3>DFM 与制造（中国）</h3>
   <ul>
     <li><strong>Gear manufacturing plan</strong> — Contractor to propose gear material and heat treatment, tooth finishing, achievable tolerances, and inspection (profile, lead, runout, backlash). Prefer China-available processes and vendors.</li>
     <li><strong>Bearing arrangement</strong> — Contractor to review locating/non-locating scheme, preload strategy, and how to inspect/maintain. Provide alternates if current SKF parts are hard to source locally.</li>
     <li><strong>Mounting + service</strong> — Design should allow belt tension adjustment, pulley alignment check, and reducer service without removing large assemblies unnecessarily.</li>
   </ul>
 
-  <h3>Optimizations sought</h3>
+  <h3>寻求的优化</h3>
   <ul>
     <li><strong>Reliability</strong> — Long fatigue life for gears and bearings under cyclic loading; robust to misalignment.</li>
     <li><strong>Noise + efficiency</strong> — Acceptable noise for an industrial juicing line; keep losses manageable.</li>
@@ -134,7 +134,7 @@
     <li><strong>Weight reduction</strong> — Driven gear weight reduction is desired if it does not compromise stiffness, contact stress, or manufacturability.</li>
   </ul>
 
-  <h3>Questions for contractor</h3>
+  <h3>承包商问题</h3>
   <ol>
     <li>Validate the motor/belt/reducer configuration and propose a robust belt tensioning approach (center distance, adjustment range, target belt tension, and resulting radial loads).</li>
     <li>Using final gear geometry, validate drivetrain load cases. Current preliminary figures: reducer output speed ~70 rpm; driven gear torque ~1023 N·m; estimated gear mesh forces ~6.6 kN tangential and ~7.2 kN normal (to be validated).</li>
@@ -144,20 +144,20 @@
     <li>Recommend acceptance checks for as-built drivetrain: backlash range, runout, alignment, vibration/noise checks, and a simple load test.</li>
   </ol>
 
-  <h3>Supply chain &amp; alternates</h3>
+  <h3>供应链与替代品</h3>
   <ul>
     <li><strong>Motor</strong> — WEG motor is currently specified; contractor to propose China-available equivalents if substitution is acceptable.</li>
     <li><strong>Reducer</strong> — Sumitomo Cyclo reducer currently assumed; contractor to propose equivalents or local sourcing options with similar performance and footprint.</li>
     <li><strong>Bearings</strong> — SKF part numbers exist in CAD for some bearings; contractor to propose locally available equivalents where needed.</li>
   </ul>
 
-  <h3>Expected deliverables &amp; acceptance</h3>
+  <h3>预期交付与验收</h3>
   <ul>
     <li><strong>Deliverables</strong> — Finalized drivetrain design package including motor+reducer mounting, belt tensioning method, gear drawings/specs (material/heat treat), bearing arrangement, and a load-case summary for mount plate reactions.</li>
-    <li><strong>Acceptance</strong> — Drivetrain runs smoothly at target speed without abnormal vibration/noise; gear contact pattern and backlash within targets; no joint slip at mount interfaces under cyclic load.</li>
+    <li><strong>Acceptance</strong> — 传动系统 runs smoothly at target speed without abnormal vibration/noise; gear contact pattern and backlash within targets; no joint slip at mount interfaces under cyclic load.</li>
   </ul>
 
-  <h3>Component summaries</h3>
+  <h3>部件摘要</h3>
   <ul>
     <li><strong>Bearings</strong> — support shaft rotation, reduce friction, and need regular inspection/greasing to maintain life.</li>
     <li><strong>Plunger drive rods</strong> — connect the drivetrain/yoke to the core ejection plungers; alignment is critical so rods run freely through their linear bearings.</li>
@@ -166,24 +166,24 @@
     <li><strong>Sumitomo reducer</strong> — reduces motor speed and increases torque; follow the Sumitomo manual for mounting, lubrication, and maintenance intervals.</li>
     <li><strong>Reducer mount</strong> — locates and supports the reducer on the drivetrain mount plate so the motor, belt, and gears stay in alignment under load.</li>
     <li><strong>Two gears</strong> — transmit torque from the reducer to the cam bearings; spacing and backlash must be set so teeth share load without binding.</li>
-    <li><strong>Drive belt and motor transmission</strong> — couple the WEG motor to the reducer; belt tension and alignment should be easy to inspect and adjust.</li>
+    <li><strong>Drive belt and motor 传动</strong> — couple the WEG motor to the reducer; belt tension and alignment should be easy to inspect and adjust.</li>
     <li><strong>Pulley guard</strong> — prevents accidental contact with the belt and pulleys and should be removable for maintenance but secure in normal operation.</li>
   </ul>
 
-  <h3>Interfaces</h3>
+  <h3>接口</h3>
   <ul>
     <li><strong>Input:</strong> WEG W21/W22 IE3 motor → V-belt → Sumitomo Cyclo 6000 reducer.</li>
-    <li><strong>Output:</strong> Cam bearings <span class="swatch" style="background-color:#4AB6F6" title="#4AB6F6"></span> interface with <a href="../Transmission/index.html">yoke</a> of transmission subsystem.</li>
-    <li><strong>Mount:</strong> <a href="../Frame/index.html">Drivetrain mount plate</a> on main frame.</li>
+    <li><strong>Output:</strong> Cam bearings <span class="swatch" style="background-color:#4AB6F6" title="#4AB6F6"></span> interface with <a href="../Transmission/index.html">yoke</a> of 传动 subsystem.</li>
+    <li><strong>Mount:</strong> <a href="../Frame/index.html">传动安装板</a> on main frame.</li>
   </ul>
 
   <h3>接口与公差</h3>
-  <p class="muted">Known interfaces and tolerances. Links go to related subsystems.</p>
+  <p class="muted">已知接口与公差。链接指向相关子系统。</p>
   <table class="iface-table">
-    <thead><tr><th>Part</th><th>Interface / tolerance</th><th>Related</th></tr></thead>
+    <thead><tr><th>部件</th><th>接口 / 公差</th><th>相关</th></tr></thead>
     <tbody>
-      <tr><td>Drivetrain mount plate</td><td>Mounts to frame; H7/dowel alignment per frame</td><td><a href="../Frame/index.html">Frame</a></td></tr>
-      <tr><td>Cam bearings</td><td>Interface with transmission yoke; drive linear motion</td><td><a href="../Transmission/index.html">Transmission</a></td></tr>
+      <tr><td>传动安装板</td><td>Mounts to frame; H7/dowel alignment per frame</td><td><a href="../Frame/index.html">机架</a></td></tr>
+      <tr><td>Cam bearings</td><td>Interface with 传动 yoke; drive linear motion</td><td><a href="../Transmission/index.html">传动</a></td></tr>
       <tr><td>V-belt</td><td>DIN 2215 17×957; 2-belt; 1000 mm long</td><td>—</td></tr>
       <tr><td>Sumitomo Cyclo 6000</td><td>Reducer; specs TBD</td><td>—</td></tr>
       <tr><td>WEG W21/W22 IE3</td><td>Motor; product 13533507; datasheet to be added</td><td>—</td></tr>
