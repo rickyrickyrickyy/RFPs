@@ -58,9 +58,9 @@ Short snapshot so Marceline and Cursor have current context. Update when priorit
 - **Entry point:** **index.html** at the repo root. No build step.
 - **Later (Cloudflare):** When ready, connect the same repo to Cloudflare Pages (or Workers) and point your domain there.
 
-### Site languages (branch `feature/translations-in-progress`)
+### Site languages (on `main`)
 
-- **English** remains the source of truth at normal paths (`index.html`, `Frame/`, …).
+- **English** remains the **source of truth** at normal paths (`index.html`, `Frame/`, …). Regenerate `zh/` + `pt/` from these files after edits.
 - **简体中文** mirrors live under **`zh/`**, **Português** under **`pt/`**, same folder layout. Each page has a sticky language bar (`assets/site.css`).
 - **Regenerate** after editing English HTML (from repo root):
   ```bash
@@ -71,7 +71,7 @@ Short snapshot so Marceline and Cursor have current context. Update when priorit
   - `--limit N` — only first N pages (quick test).
   - `--no-translate` — rebuild mirrors with **English** body text (link test only).
 - **Translation engine:** **Argos Translate** (offline, primary when models are installed) translates visible text, `alt`, `title`, `data-caption`, `aria-label`, and Mermaid node labels. If Argos is missing, the script falls back to MyMemory then Google (rate-limited). **Have fluent reviewers** polish technical Portuguese/Chinese before contract use.
-- **`main`** may stay English-only; merge this branch when zh/pt are ready.
+- **Pre-merge English-only `main`** is preserved on branch **`main-english-only`** (snapshot before zh/pt landed on `main`). `feature/translations-in-progress` can stay in sync with `main` for optional topic work.
 
 ## Layout
 
@@ -82,7 +82,7 @@ Short snapshot so Marceline and Cursor have current context. Update when priorit
 | **memory/** | Marceline’s session summaries and project state (`*.memory.md`). |
 | **Overview/** | P6 context summary, subsystem lists, session summaries. |
 | **index.html** | RFP-only entry: overview, nav (with content / to be completed). Marceline and hosting info stay in this README. |
-| **zh/**, **pt/** | Localized HTML mirrors (regenerate with `tools/build_i18n.py` on i18n branch). |
+| **zh/**, **pt/** | Localized HTML mirrors (regenerate with `tools/build_i18n.py`). |
 | **assets/site.css** | Shared layout + language bar + mobile rules. |
 | **tools/build_i18n.py** | Builds `zh/` + `pt/` from English; full-page MT for visible text + captions. |
 | **tools/requirements-i18n.txt** | `beautifulsoup4`, `deep-translator`, `lxml` for the build script. |
