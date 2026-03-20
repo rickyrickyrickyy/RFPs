@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>7. Ejeção do núcleo — P6 RFP</title>
+<style>
+    :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
+    a { color: var(--accent); }
+    h1 { font-size: 1.35rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.25rem; }
+    ul, ol { padding-left: 1.25rem; }
+    .back { margin-bottom: 1rem; font-size: 0.9rem; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    .swatch { display: inline-block; width: 1.25rem; height: 1.25rem; border: 1px solid var(--border); border-radius: 3px; vertical-align: middle; }
+    table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+    th, td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
+    .slideshow { margin: 1.5rem 0; }
+    .slideshow .slide { display: none; }
+    .slideshow .slide.active { display: block; }
+    .slideshow .slide img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
+    .slideshow-caption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); min-height: 2.5em; }
+    .slideshow-controls { display: flex; align-items: center; gap: 1rem; margin-top: 0.75rem; flex-wrap: wrap; }
+    .slideshow-controls button { background: var(--border); color: var(--text); border: none; padding: 0.35rem 0.75rem; border-radius: 4px; cursor: pointer; font-size: 0.9rem; }
+    .slideshow-controls button:hover { background: var(--accent); color: #fff; }
+    .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
+    .iface-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    .iface-table th, .iface-table td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
+    .iface-table th { color: var(--muted); font-weight: 600; }
+  </style>
+  <link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<nav class="site-lang-bar" aria-label="Language">
+  <span class="lang-label">Idioma:</span>
+  <a href="../../Plug-ejection/index.html">English</a>
+  <span aria-hidden="true">·</span>
+  <a href="../../zh/Plug-ejection/index.html">中文</a>
+  <span aria-hidden="true">·</span>
+  <a href="index.html" aria-current="page">Português</a>
+</nav>
+
+<p class="back"><a href="../index.html">← Voltar para P6 RFP visão geral</a></p>
+<h1>7. Ejeção do núcleo</h1>
+<h2>Subpáginas</h2>
+<ul>
+<li><a href="plunger-drive-bracket/index.html">Suporte de acionamento do mergulhador</a> <span class="muted">(atualizado em 2026-03-20)</span>— montagem CAD + vistas iso/top/front; carrega quatro êmbolos.</li>
+<li><a href="plunger-drive-system-in-side-panels/index.html">Sistema de acionamento de mergulhadores em painéis laterais</a> <span class="muted">(atualizado em 2026-03-20)</span>— CAD + fotos laterais; varetas, rolamentos LMK16, molas, caixas.</li>
+</ul>
+<h2>Introdução</h2>
+<p>O sistema de ejeção do núcleo (subsistema 7) remove o núcleo laranja pressionado do cortador de plugue e o deixa cair no<a href="../Outflow-disposal/index.html">Sistema de eliminação</a>É o pára-quedas do núcleo. Utiliza êmbolos de mola de compressão montados num suporte de acionamento, acionados através de hastes de acionamento guiadas por rolamento linear alojadas nos painéis laterais. A<a href="../Transmission/index.html">transmissão</a>O jugo puxa as hastes de acionamento para trás contra as molas durante o curso de retorno; na liberação, as molas empurram os êmbolos para a frente através do tubo de filtro para ejetar o núcleo.</p>
+<h2>&amp; Componentes da chave de cor</h2>
+<p class="muted">Conjunto de mergulhadores, suporte de acionamento, saída de suco — páginas detalhadas TBD. As caixas verdes incluem molas e varetas de guia; interface com filtro/plugue-cortador e pára-quedas do núcleo.</p>
+<table>
+<tr><th>Cor( s)</th><th>Componente</th></tr>
+<tr><td><span class="swatch" style="background-color:#5151FA"></span></td><td><strong>Plunger</strong>— empurra através do filtro para ejectar o núcleo (quatro em paralelo)</td></tr>
+<tr><td><span class="swatch" style="background-color:#D1A4FF"></span></td><td><strong>Suporte de acionamento do mergulhador</strong>— carrega êmbolos; liga-se às barras de accionamento</td></tr>
+<tr><td><span class="swatch" style="background-color:#B31B5B"></span></td><td><strong>Barras de accionamento de mergulhadores</strong>— acção linear; através da LMK16 em alojamentos verdes</td></tr>
+<tr><td><span class="swatch" style="background-color:#EBA13D"></span></td><td><strong>Rolamento linear LMK16</strong>— barras de guia nas interfaces de alojamento</td></tr>
+<tr><td><span class="swatch" style="background-color:#8CC135"></span></td><td><strong>Plunger drive mola</strong>— força de retorno; enrolado em torno de uma haste na caixa</td></tr>
+<tr><td>—</td><td><strong>Filtro</strong>— o êmbolo passa;<a href="../Collection/index.html">Colecção</a>.<strong>Cortador de plug-ins</strong>— na colecção; núcleo ejectado por este sistema</td></tr>
+</table>
+<h2 id="gallery">Figuras</h2>
+<p class="muted">Vistas CAD. Ver figuras no texto como<a href="#fig1">Figura 1</a>,<a href="#fig2">Figura 2</a>, etc.</p>
+<div class="slideshow" id="plug-slideshow">
+<div class="slideshow-track">
+<div class="slide active" data-caption="Figura 1. Explodido — suporte do êmbolo, êmbolos, hastes do êmbolo, rolamento linear LMK16, mola do êmbolo, caixas verdes." id="fig1"><img alt="Explosão do núcleo" src="../../Plug-ejection/images/plug-ejection-1.png"/></div>
+<div class="slide" data-caption="Figura 2. Direita — caixa verde, haste do êmbolo, mola do êmbolo, suporte do êmbolo, êmbolo, rolamentos LMK16." id="fig2"><img alt="Ejeção do núcleo direito" src="../../Plug-ejection/images/plug-ejection-2.png"/></div>
+<div class="slide" data-caption="Figura 3. Ortogonal — caixa central, suporte do êmbolo, êmbolo, mola, hastes do êmbolo, rolamentos LMK16 (esquerda e direita)." id="fig3"><img alt="Ortogonal de ejeção do núcleo" src="../../Plug-ejection/images/plug-ejection-3.png"/></div>
+<div class="slide" data-caption="Figura 4. Topo — duas caixas verdes, suporte do êmbolo com braçadeiras, haste do êmbolo através do sistema, êmbolo, LMK16, mola do êmbolo na caixa direita." id="fig4"><img alt="Topo de ejecção do núcleo" src="../../Plug-ejection/images/plug-ejection-4.png"/></div>
+<div class="slide" data-caption="Figura 5. Frente — suporte do êmbolo, quatro subconjuntos (V-bracket, êmbolo, hastes, molas), blocos de extremidade verde." id="fig5"><img alt="Frente de ejeção do núcleo" src="../../Plug-ejection/images/plug-ejection-5.png"/></div>
+<div class="slide" data-caption="Figura 6. Frente elevada — suporte do êmbolo, quatro êmbolos, LMK16 à esquerda/direita, caixas verdes, hastes do êmbolo." id="fig6"><img alt="Frente de ejeção do núcleo elevada" src="../../Plug-ejection/images/plug-ejection-6.png"/></div>
+</div>
+<p aria-live="polite" class="slideshow-caption" id="plug-caption">Figura 1. Explodido — suporte do êmbolo, êmbolos, hastes do êmbolo, rolamento linear LMK16, mola do êmbolo, caixas verdes.</p>
+<div class="slideshow-controls">
+<button aria-label="Anterior" id="plug-prev" type="button">← Anterior</button>
+<span class="slideshow-counter" id="plug-counter">1 / 6</span>
+<button aria-label="Próxima" id="plug-next" type="button">Próxima →</button>
+</div>
+</div>
+<h3>Números recomendados (clareza do contratante)</h3>
+<ul class="muted">
+<li><strong>Adicionar figura</strong>:<strong>Tempo de curso</strong>— posição do êmbolo vs ângulo do jugo através da pressão + ejectar.</li>
+<li><strong>Adicionar figura</strong>:<strong>Localização da gota principal</strong>— do cortador para o pára-quedas do núcleo (secção).</li>
+<li><strong>Adicionar figura</strong>:<strong>Avião de vedação lateral</strong>— junta metálica para a zona do sumo.</li>
+</ul>
+<h2>Discussão</h2>
+<h3>Ejeção do núcleo (ciclo)</h3>
+<ol>
+<li><strong>Curso de pressão:</strong>Suco para<a href="../Collection/index.html">colector</a>Seção Y; núcleo permanece no cortador de plug / filtro.</li>
+<li><strong>Ejecção do núcleo:</strong>Pulger empurra através do filtro, ejeta o núcleo do cortador de plug → núcleo<strong>cai no pára-quedas principal</strong>(<a href="../Outflow-disposal/index.html">eliminação</a>).</li>
+<li><strong>Eliminação:</strong>Descasca para os lados dos descascadores; dois augers levam cascas e núcleos separadamente.</li>
+</ol>
+<h3>Interfaces</h3>
+<ul>
+<li><strong>Entrada:</strong>Núcleo em plug cutter / filtro após pressionar curso (de<a href="../Collection/index.html">Colecção</a>).</li>
+<li><strong>Saída:</strong>Núcleo ejetado → cai em<a href="../Outflow-disposal/index.html">eliminação</a>Paraquedas do núcleo.</li>
+<li><strong>Conduza:</strong>Actuação do mergulhador de<a href="../Drivetrain/index.html">drivetrain</a>/<a href="../Transmission/index.html">transmissão</a>(Yoke/cam).</li>
+</ul>
+<h3>Interfaces e tolerâncias</h3>
+<p class="muted">Interfaces e tolerâncias conhecidas. As ligações vão para subsistemas relacionados. Uma vez que cada subsistema tenha uma visão geral, os subconjuntos serão descritos em detalhes com a forma como eles se relacionam com outros componentes.</p>
+<table class="iface-table">
+<thead><tr><th>Parte</th><th>Interface / tolerância</th><th>Relacionado</th></tr></thead>
+<tbody>
+<tr><td>Plunger</td><td>Passa através do filtro; ejeta o núcleo do cortador de plug</td><td><a href="../Collection/index.html">Colecção</a></td></tr>
+<tr><td>Suporte de acionamento do mergulhador</td><td>Carrega quatro êmbolos; ligado às hastes do êmbolo; move-se em uníssono</td><td>—</td></tr>
+<tr><td>Barras de accionamento de mergulhadores</td><td>Deslize através de rolamentos lineares LMK16; passe para caixas verdes; impulsionado pelo drivetrain/transmissão</td><td><a href="../Drivetrain/index.html">Condução</a>,<a href="../Transmission/index.html">Transmissão</a></td></tr>
+<tr><td>Rolamento linear LMK16</td><td>No alojamento entrada/saída; guias hastes de acionamento do êmbolo</td><td>—</td></tr>
+<tr><td>Plunger drive mola</td><td>Conectado ao redor da vara em carcaça verde; força de retorno</td><td>—</td></tr>
+<tr><td>Principal (saída)</td><td>Cai no pára-quedas do núcleo após ejecção</td><td><a href="../Outflow-disposal/index.html">Sistema de eliminação</a></td></tr>
+<tr><td>Filtro / cortador de plug</td><td>Alojado na coleção; interfaces do êmbolo com a mesma estação</td><td><a href="../Collection/index.html">Colecção</a></td></tr>
+</tbody>
+</table>
+<script>
+(function(){
+  var el = document.getElementById('plug-slideshow');
+  if (!el) return;
+  var slides = el.querySelectorAll('.slide');
+  var cap = document.getElementById('plug-caption');
+  var counter = document.getElementById('plug-counter');
+  var n = slides.length;
+  var i = 0;
+  function go(k) { i = (k + n) % n; slides.forEach(function(s,j){ s.classList.toggle('active', j===i); }); if (cap) cap.textContent = slides[i].getAttribute('data-caption') || ''; if (counter) counter.textContent = (i+1) + ' / ' + n; }
+  el.querySelector('#plug-prev').addEventListener('click', function(){ go(i-1); });
+  el.querySelector('#plug-next').addEventListener('click', function(){ go(i+1); });
+  var hash = window.location.hash;
+  if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
+})();
+  </script>
+<p class="back"><a href="../index.html">← Voltar para P6 RFP visão geral</a></p>
+<footer style="margin-top:2rem; padding-top:1rem; border-top:1px solid var(--border); color:var(--muted); font-size:0.85rem;">Última atualização: 2026-03-20.</footer>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>9. Enclosure / shell — P6 RFP</title>
+<style>
+    :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
+    a { color: var(--accent); }
+    h1 { font-size: 1.35rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.25rem; }
+    ul { padding-left: 1.25rem; }
+    .back { margin-bottom: 1rem; font-size: 0.9rem; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    .swatch { display: inline-block; width: 1.25rem; height: 1.25rem; border: 1px solid var(--border); border-radius: 3px; vertical-align: middle; }
+    table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+    th, td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
+    .reminder { background: rgba(88, 166, 255, 0.12); border: 1px solid var(--accent); border-radius: 6px; padding: 0.75rem 1rem; margin: 1rem 0; font-size: 0.95rem; }
+    .slideshow { margin: 1.5rem 0; }
+    .slideshow .slide { display: none; }
+    .slideshow .slide.active { display: block; }
+    .slideshow .slide img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
+    .slideshow-caption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); min-height: 2.5em; }
+    .slideshow-controls { display: flex; align-items: center; gap: 1rem; margin-top: 0.75rem; flex-wrap: wrap; }
+    .slideshow-controls button { background: var(--border); color: var(--text); border: none; padding: 0.35rem 0.75rem; border-radius: 4px; cursor: pointer; font-size: 0.9rem; }
+    .slideshow-controls button:hover { background: var(--accent); color: #fff; }
+    .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
+  </style>
+  <link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<nav class="site-lang-bar" aria-label="Language">
+  <span class="lang-label">Idioma:</span>
+  <a href="../../Enclosure-shell/index.html">English</a>
+  <span aria-hidden="true">·</span>
+  <a href="../../zh/Enclosure-shell/index.html">中文</a>
+  <span aria-hidden="true">·</span>
+  <a href="index.html" aria-current="page">Português</a>
+</nav>
+
+<p class="back"><a href="../index.html">← Voltar para P6 RFP visão geral</a></p>
+<h1>9. Encloque / shell</h1>
+<h2>Subpáginas</h2>
+<ul>
+<li><a href="protective-covers/index.html">Tampas protectoras (pulverizador, drivetrain)</a> <span class="muted">(atualizado em 2026-03-20)</span>— figura CAD da galeria partilhada.</li>
+<li><a href="overcentered-hinges/index.html">Dobradiças sobrecentradas</a> <span class="muted">(atualizado em 2026-03-20)</span>— Figura CAD + discussão; conceito de ligação/bracket.</li>
+</ul>
+<h2>Introdução</h2>
+<p>A<strong>Anexo / shell</strong>(Subsistema 9) protege os operadores de partes móveis — cintos/pulsões, êmbolos e conjuntos de descascador — permitindo o acesso rápido para limpeza, serviço e inspeção. Consiste em duas capas principais (do lado do mergulhador e<a href="../Drivetrain/index.html">drivetrain</a>-lado) montado no<a href="../Frame/index.html">quadro</a>utilizando dobradiças overcentered que prendem cada tampa em uma posição estável aberta ou fechada. Três travas de segurança da tampa (interruptores de ímã codificados) alimentação para o<a href="../Controls-Electronics/index.html">Controlos e electrónica</a>subsistema para impedir o funcionamento quando qualquer cobertura estiver aberta.</p>
+<h2>&amp; Componentes da chave de cor</h2>
+<p class="muted">Duas capas principais + dobradiças overcentered. Alimentador, tampa de drivetrain e tampa do êmbolo usar dobradiças overcentered (abrir ficar aberto, fechar ficar fechado).</p>
+<table>
+<tr><th>Cor( s)</th><th>Componente</th></tr>
+<tr><td><span class="swatch" style="background-color:#BC4944"></span></td><td><strong>Tampa do mergulhador</strong>— protege<a href="../Plug-ejection/index.html">ejeção do núcleo</a>êmbolos</td></tr>
+<tr><td><span class="swatch" style="background-color:#489C26"></span></td><td><strong>Cobertura do comboio</strong>— coberturas<a href="../Drivetrain/index.html">drivetrain</a></td></tr>
+<tr><td><span class="swatch" style="background-color:#4FB3DD"></span></td><td><strong>Dobradiça sobrecentrada</strong>— ligação/braço; montagem em tampas e quadros</td></tr>
+<tr><td><span class="swatch" style="background-color:#E3B938"></span></td><td><strong>Base / quadro</strong>— apoio estrutural às coberturas</td></tr>
+</table>
+<div class="reminder"><strong>Desenho da curva (WIP):</strong>Molas e método de montagem para dobradiças overcentered ainda não projetado.</div>
+<h2 id="gallery">Figuras</h2>
+<p class="muted">Vistas CAD da tampa do êmbolo, tampa do drivetrain, e montagem da dobradiça overcentered. Consultar<a href="#fig1">Figura 1</a>,<a href="#fig2">Figura 2</a>, etc.</p>
+<div class="slideshow" id="enc-slideshow">
+<div class="slideshow-track">
+<div class="slide active" data-caption="Figura 1. Capa do comboio (verde) com dois conjuntos de dobradiças (braço azul, braço rosa; suporte de lavanda) montados ao lado." id="fig1"><img alt="Dobradiças na cobertura do comboio" src="../../Enclosure-shell/images/covers-1.png"/></div>
+<div class="slide" data-caption="Figura 2. Elevada — tampa do êmbolo vermelho, tampa verde do drivetrain, montadiças de dobradiças; estrutura interna." id="fig2"><img alt="Coberturas elevadas" src="../../Enclosure-shell/images/covers-2.png"/></div>
+<div class="slide" data-caption="Figura 3. Lado - tampa do êmbolo (vermelho), cobertura do drivetrain (verde), dobradiça sobrecentrada azul, placa base bronzeada." id="fig3"><img alt="Lado das capas" src="../../Enclosure-shell/images/covers-3.png"/></div>
+<div class="slide" data-caption="Figura 4. Secção — Tampa vermelha do êmbolo, cobertura verde do comboio, dobradiça azul; êmbolo interno, tubos, componentes de extracção." id="fig4"><img alt="Secção de capas" src="../../Enclosure-shell/images/covers-4.png"/></div>
+<div class="slide" data-caption="Figura 5. Direita — capa de transmissão verde, corpo magenta/pulnger, dobradiça sobrecentrada (azul, rosa, roxo claro); eixos internos, engrenagem." id="fig5"><img alt="Cobre a direita interna" src="../../Enclosure-shell/images/covers-5.png"/></div>
+<div class="slide" data-caption="Figura 6. Frente - tampa verde do drivetrain, tampas do êmbolo magenta (esquerda/direita), quadro amarelo, cinco dobradiças overcentered (azul/rosa)." id="fig6"><img alt="Capas dianteiras" src="../../Enclosure-shell/images/covers-6.png"/></div>
+<div class="slide" data-caption="Figura 7. Frente — capa do comboio (verde), tampas do êmbolo (vermelho/magenta), quatro subconjuntos do êmbolo, duas dobradiças azuis." id="fig7"><img alt="Cobre os êmbolos da frente" src="../../Enclosure-shell/images/covers-7.png"/></div>
+<div class="slide" data-caption="Figura 8. Lado direito — cobertura do drivetrain (verde), montagem adjacente, ligação de dobradiças sobrecentrada (azul/roxo), placa base amarela." id="fig8"><img alt="Cobre o lado direito" src="../../Enclosure-shell/images/covers-8.png"/></div>
+</div>
+<p aria-live="polite" class="slideshow-caption" id="enc-caption">Figura 1. Capa do comboio (verde) com dois conjuntos de dobradiças (braço azul, braço rosa; suporte de lavanda) montados ao lado.</p>
+<div class="slideshow-controls">
+<button aria-label="Anterior" id="enc-prev" type="button">← Anterior</button>
+<span class="slideshow-counter" id="enc-counter">22 / 8</span>
+<button aria-label="Próxima" id="enc-next" type="button">Próxima →</button>
+</div>
+</div>
+<h3>Números recomendados (clareza do contratante)</h3>
+<ul class="muted">
+<li><strong>Adicionar figura</strong>:<strong>Alvos de íman interbloqueio</strong>— um diagrama por tampa (alimentador / êmbolo / tracção).</li>
+<li><strong>Adicionar figura</strong>:<strong>Cobrir verificação de colisão aberta</strong>— curso completo com coberturas em posições de serviço.</li>
+<li><strong>Adicionar figura</strong>:<strong>Afinação de dobradiças assistida por molas</strong>— força vs ângulo, uma vez finalizada a dobradiça WIP.</li>
+</ul>
+<h2>Discussão</h2>
+<h3>Interfaces</h3>
+<ul>
+<li><strong>Tampa do mergulhador</strong>— dobradiça sobrecentrada em quadro/alimentador; protege<a href="../Plug-ejection/index.html">ejeção do núcleo</a>êmbolos.</li>
+<li><strong>Cobertura do comboio</strong>— dobradiças sobrecentradas no corpo do quadro/alimentador;<a href="../Drivetrain/index.html">drivetrain</a>.</li>
+<li><strong>Alimentador</strong>— montados igualmente com dobradiças overscentes;<a href="../Feeder/index.html">Sistema de ingestão de frutas</a>.</li>
+</ul>
+<p class="back"><a href="../index.html">← Voltar para P6 RFP visão geral</a></p>
+<script>
+(function(){
+  var el = document.getElementById('enc-slideshow');
+  if (!el) return;
+  var slides = el.querySelectorAll('.slide');
+  var cap = document.getElementById('enc-caption');
+  var counter = document.getElementById('enc-counter');
+  var n = slides.length;
+  var i = 0;
+  function go(k) { i = (k + n) % n; slides.forEach(function(s,j){ s.classList.toggle('active', j===i); }); if (cap) cap.textContent = slides[i].getAttribute('data-caption') || ''; if (counter) counter.textContent = (i+1) + ' / ' + n; }
+  el.querySelector('#enc-prev').addEventListener('click', function(){ go(i-1); });
+  el.querySelector('#enc-next').addEventListener('click', function(){ go(i+1); });
+  var hash = window.location.hash;
+  if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
+})();
+  </script>
+<footer style="margin-top:2rem; padding-top:1rem; border-top:1px solid var(--border); color:var(--muted); font-size:0.85rem;">Última atualização: 2026-03-20.</footer>
+</body>
+</html>

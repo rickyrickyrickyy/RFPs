@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>3. Transmissão – P6 RFP</title>
+<style>
+    :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
+    a { color: var(--accent); }
+    h1 { font-size: 1.35rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.25rem; }
+    ul { padding-left: 1.25rem; }
+    .back { margin-bottom: 1rem; font-size: 0.9rem; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+    th, td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
+    .swatch { display: inline-block; width: 1.25rem; height: 1.25rem; border: 1px solid var(--border); border-radius: 3px; vertical-align: middle; }
+    .slideshow { margin: 1.5rem 0; }
+    .slideshow .slide { display: none; }
+    .slideshow .slide.active { display: block; }
+    .slideshow .slide img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
+    .slideshow-caption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); min-height: 2.5em; }
+    .slideshow-controls { display: flex; align-items: center; gap: 1rem; margin-top: 0.75rem; flex-wrap: wrap; }
+    .slideshow-controls button { background: var(--border); color: var(--text); border: none; padding: 0.35rem 0.75rem; border-radius: 4px; cursor: pointer; font-size: 0.9rem; }
+    .slideshow-controls button:hover { background: var(--accent); color: #fff; }
+    .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
+    .iface-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    .iface-table th, .iface-table td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
+    .iface-table th { color: var(--muted); font-weight: 600; }
+  </style>
+  <link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<nav class="site-lang-bar" aria-label="Language">
+  <span class="lang-label">Idioma:</span>
+  <a href="../../Transmission/index.html">English</a>
+  <span aria-hidden="true">·</span>
+  <a href="../../zh/Transmission/index.html">中文</a>
+  <span aria-hidden="true">·</span>
+  <a href="index.html" aria-current="page">Português</a>
+</nav>
+
+<p class="back"><a href="../index.html">← Voltar para visão geral da RFP P6</a></p>
+<h1>3. Transmissão</h1>
+<h2>Subpáginas</h2>
+<ul>
+<li><a href="transmission-mount-plate/index.html">Placa de montagem da transmissão</a> <span class="muted">(updated 2026-03-20)</span>— pré/pós-usinagem de placas de rolamento fundidas, linhas de separação; Downloads STEP.</li>
+<li><a href="yoke/index.html">Garfo e eixos de transmissão</a> <span class="muted">(updated 2026-03-20)</span>— faces da esteira do garfo, eixos/rolamentos, raspadores/tampas, preocupações com caixas de travamento.</li>
+<li><a href="drive-shafts/index.html">Eixos de transmissão</a> <span class="muted">(updated 2026-03-20)</span>— vistas laterais/superiores da pista, suporte de tração + batente da haste, conceito de tampa superior (figuras).</li>
+</ul>
+<h2>Introdução</h2>
+<p>A transmissão converte o<a href="../Drivetrain/index.html">trem de força</a>O movimento do came rotativo em um curso linear controlado que aciona o ciclo de extração e ejeção do núcleo. Um conjunto scotch-yoke é montado em dois eixos de aço inoxidável endurecido de 35 mm guiados por rolamentos lineares flangeados (família LMK35UU), transportando força dos rolamentos do came do trem de força até o<a href="../Extraction-syncronisation/index.html">extração e sincronização</a>módulo onde a fruta é pressionada contra o<a href="../Collection/index.html">coleção</a>descascadores. O conjunto é montado em uma placa de montagem de transmissão dedicada aparafusada ao<a href="../Frame/index.html">quadro</a>.</p>
+<h2>Colour key &amp; components</h2>
+<p class="muted">Aplica-se às figuras desta página.</p>
+<table>
+<tr><th>Colour(s)</th><th>Component</th></tr>
+<tr><td><span class="swatch" style="background-color:#2F9EBA"></span></td><td><strong>Jugo</strong>— faz interface com os rolamentos do came do sistema de transmissão e converte a rotação no curso de extração.</td></tr>
+<tr><td><span class="swatch" style="background-color:#798C2E"></span></td><td><strong>Dois eixos de transmissão</strong>(35 mm) — guias lineares para a forquilha; montagens de eixo em ambas as extremidades definem paralelismo e rigidez.</td></tr>
+<tr><td><span class="swatch" style="background-color:#3582E4"></span></td><td><strong>Dois rolamentos lineares LMK35UU</strong>— suporta translação de garfo de baixo atrito em eixos de 35 mm; o alinhamento impede a ligação.</td></tr>
+<tr><td><span class="swatch" style="background-color:#B341C3"></span></td><td><strong>Placa de montagem da transmissão</strong>- monta em<a href="../Frame/index.html">quadro</a>; carrega suportes de eixo e mantém o espaçamento/alinhamento do eixo.</td></tr>
+</table>
+<h2 id="gallery">Figures</h2>
+<p class="muted">Visualizações CAD. Consulte as figuras no texto como<a href="#fig1">Figure 1</a>, <a href="#fig2">Figure 2</a>, etc.</p>
+<div class="slideshow" id="trans-slideshow">
+<div class="slideshow-track">
+<div class="slide active" data-caption="Figura 1. Conjunto da transmissão: placa de montagem, garfo, dois eixos, dois rolamentos lineares LMK35UU." id="fig1"><img alt="Conjunto de transmissão" src="../../Transmission/images/transmission-overview.png"/></div>
+<div class="slide" data-caption="Figura 2. Vista lateral — garfo, eixos, suportes de eixo, rolamentos lineares." id="fig2"><img alt="Vista lateral" src="../../Transmission/images/transmission-side.png"/></div>
+<div class="slide" data-caption="Figura 3. Isométrico – placa de montagem da transmissão, garfo, eixos de transmissão, rolamentos." id="fig3"><img alt="Isométrico" src="../../Transmission/images/transmission-isometric.png"/></div>
+<div class="slide" data-caption="Figura 4. Perfil lateral – placa, eixos, rolamentos, garfo." id="fig4"><img alt="Perfil lateral" src="../../Transmission/images/transmission-side-plate.png"/></div>
+<div class="slide" data-caption="Figura 5. Vista lateral direita." id="fig5"><img alt="Vista do lado direito" src="../../Transmission/images/transmission-right.png"/></div>
+<div class="slide" data-caption="Figura 6. Lateral — garfo, eixos, rolamentos na placa de montagem da transmissão." id="fig6"><img alt="Jugo lateral" src="../../Transmission/images/transmission-side-yoke.png"/></div>
+<div class="slide" data-caption="Figura 7. Parte superior — garfo, eixos, rolamentos; placa de montagem do sistema de coleta à vista." id="fig7"><img alt="Vista superior" src="../../Transmission/images/transmission-top.png"/></div>
+</div>
+<p aria-live="polite" class="slideshow-caption" id="trans-caption">Figura 1. Conjunto da transmissão: placa de montagem, garfo, dois eixos, dois rolamentos lineares LMK35UU.</p>
+<div class="slideshow-controls">
+<button aria-label="Previous" id="trans-prev" type="button">← Previous</button>
+<span class="slideshow-counter" id="trans-counter">1/7</span>
+<button aria-label="Next" id="trans-next" type="button">Next →</button>
+</div>
+</div>
+<h2>Discussão</h2>
+<h3>Rough design &amp; intent</h3>
+<ul>
+<li><strong>Propósito</strong>— Converta o movimento do rolo de comando do sistema de transmissão em um curso linear controlado, mantendo o alinhamento entre os descascadores de extração e coleta. A rigidez e a repetibilidade da transmissão são essenciais para evitar emperramento e colisões.</li>
+<li><strong>Elementos-chave</strong>— Garfo, dois eixos de 35 mm, rolamentos lineares flangeados/vedados de 35 mm (família LMF/LMK) e placa de montagem da transmissão. O comprimento do eixo é determinado pela distância entre os descascadores do lado da coleta e a folga necessária de "quase toque" no final do curso de compressão (folga alvo de aproximadamente 2–3 mm entre as faces do descascador acionado e estático no final do curso).</li>
+<li><strong>Realidade de manutenção</strong>— Espere desmontagem/remontagem completa aproximadamente sazonalmente (≈ anualmente). A estratégia de alinhamento deve suportar reconstrução repetível sem reusinagem completa.</li>
+</ul>
+<h3>Problemas e riscos conhecidos</h3>
+<ul>
+<li><strong>Estojo de encadernação / encadernação assimétrica</strong>— O pior caso é um emperramento de rolamento linear ou fruta/lixo causando carregamento assimétrico. Os eixos podem torcer e impor grandes momentos nos rolamentos lineares e na placa de montagem; O sistema deve sobreviver a um cenário de "espremedor de pedra" com alto fator de segurança.</li>
+<li><strong>Amplificação de momento</strong>— Os rolamentos lineares são elevados da placa de montagem. O deslocamento vertical cria momentos de tombamento que tentam girar a placa de montagem; a estrutura/cavilhas/parafusos devem suportá-los sem se deslocar.</li>
+<li><strong>Exposição à lavagem</strong>— A face frontal da placa de montagem da transmissão está exposta a spray/suco de limpeza; materiais, vedações e raspadores/proteções são importantes.</li>
+</ul>
+<h3>DFM e manufatura (China)</h3>
+<ul>
+<li><strong>Fluxo de trabalho de alinhamento</strong>— Espere um fluxo de trabalho "alinhar → apertar → perfurar/escarear para cavilhas" semelhante às placas da estrutura/transmissão. O empreiteiro deverá propor o esquema de dados exato e a estratégia de calços repetíveis.</li>
+<li><strong>Arquiteturas de duas placas</strong>— A placa de montagem da transmissão tem dois projetos candidatos: (a) fundida em areia + pós-usinada e (b) placa de aço soldada + alívio de tensão + usinagem. O empreiteiro deve aconselhar o melhor caminho de custo/lead/qualidade.</li>
+<li><strong>Superfícies de higiene</strong>— Quaisquer superfícies próximas à polpa/suco devem ter acabamentos laváveis ​​e evitar fendas; considere projetos de raspador/tampa para eixos e faces de rolamento.</li>
+</ul>
+<h3>Otimizações procuradas</h3>
+<ul>
+<li><strong>Robustez de ligação</strong>— Maximize a tolerância ao desalinhamento e à contaminação sem escoriações no eixo ou falhas nos rolamentos.</li>
+<li><strong>Alinhamento repetível</strong>— Rápida reconstrução sazonal que retorna o alinhamento do descascador sem extensos calços.</li>
+<li><strong>Capacidade de limpeza</strong>— Reduz o acúmulo de suco nos eixos/rolamentos; adicione raspadores/tampas quando necessário.</li>
+</ul>
+<h3>Questions for contractor</h3>
+<ol>
+<li>Defina casos de carga para a transmissão, incluindo um caso assimétrico/emperramento (um lado liga) e um pior caso de "objeto rígido". Forneça estimativas de força/momento na placa de montagem e na estrutura.</li>
+<li>Recomende um procedimento de alinhamento + cavilha para desmontagem/reconstrução sazonal (o que é ajustável, o que é fresado para cavilhas e o que é calçado).</li>
+<li>Recomendar paralelismo de eixo e tolerâncias de alinhamento de rolamentos aceitáveis ​​para evitar emperramento ao longo da vida útil e propor verificações de inspeção.</li>
+<li>Propor uma abordagem de raspador/cobertura do eixo para lavagem, incluindo materiais compatíveis com produtos químicos de limpeza e intervalos esperados de desgaste/manutenção.</li>
+</ol>
+<h3>Valores recomendados (claridade do contratante)</h3>
+<ul>
+<li><strong>Adicionar figura</strong>: <strong>Corpo livre</strong>— garfo + eixos + rolamentos lineares mostrando caso de carga emperrada/assimétrica e braços de momento na placa.</li>
+<li><strong>Adicionar figura</strong>: <strong>Dados</strong>— esboço de quais faces/furos definem o alinhamento do descascador e quais interfaces são fixadas após o alinhamento.</li>
+<li><strong>Adicionar figura</strong>: <strong>Conceito de raspador</strong>— esboço em corte da proposta de cobertura de chapa moldada + lábio raspador no eixo.</li>
+</ul>
+<h3>Interfaces</h3>
+<ul>
+<li><strong>Entrada:</strong>Força das engrenagens (<a href="../Drivetrain/index.html">trem de força</a>) sobre<a href="../Drivetrain/drivetrain-mount-plate/index.html">placa de montagem do trem de força</a>.</li>
+<li><strong>Saída:</strong>Movimento linear do garfo → extração/sincronização → fruta pressionada contra o sistema de coleta.</li>
+<li><strong>Montar:</strong>Placa de montagem da transmissão<span class="swatch" style="background-color:#B341C3" title="#B341C3"></span>no quadro principal. Ver<a href="../Frame/index.html">Quadro</a>. Sistema de coleta ativado<a href="../Frame/index.html">placa de montagem carregada</a>.</li>
+</ul>
+<h3>Interfaces and tolerances</h3>
+<p class="muted">Interfaces e tolerâncias conhecidas. Os links vão para subsistemas relacionados.</p>
+<table class="iface-table">
+<thead><tr><th>Part</th><th>Interface / tolerance</th><th>Relacionado</th></tr></thead>
+<tbody>
+<tr><td>Jugo</td><td>Interfaces com rolamentos de cames do sistema de transmissão; transmite movimento linear</td><td><a href="../Drivetrain/index.html">Transmissão</a></td></tr>
+<tr><td>Eixos de transmissão</td><td>35 mm de diâmetro; suportes de eixo em ambas as extremidades</td><td>—</td></tr>
+<tr><td>Rolamentos LMK35UU</td><td>Rolamentos lineares em eixos de 35 mm; guiar o movimento do garfo</td><td>—</td></tr>
+<tr><td>Placa de montagem da transmissão</td><td>Montado na moldura; Alinhamento H7/cavilha por quadro</td><td><a href="../Frame/index.html">Quadro</a></td></tr>
+<tr><td>Sistema de coleta</td><td>Montado em placa de montagem carregada (estrutura); fruta pressionada contra ele</td><td><a href="../Collection/index.html">Collection</a>, <a href="../Frame/index.html">Quadro</a></td></tr>
+</tbody>
+</table>
+<script>
+(function(){
+  var el = document.getElementById('trans-slideshow');
+  if (!el) return;
+  var slides = el.querySelectorAll('.slide');
+  var cap = document.getElementById('trans-caption');
+  var counter = document.getElementById('trans-counter');
+  var n = slides.length;
+  var i = 0;
+  function go(k) { i = (k + n) % n; slides.forEach(function(s,j){ s.classList.toggle('active', j===i); }); if (cap) cap.textContent = slides[i].getAttribute('data-caption') || ''; if (counter) counter.textContent = (i+1) + ' / ' + n; }
+  el.querySelector('#trans-prev').addEventListener('click', function(){ go(i-1); });
+  el.querySelector('#trans-next').addEventListener('click', function(){ go(i+1); });
+  var hash = window.location.hash;
+  if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
+})();
+  </script>
+<p class="back"><a href="../index.html">← Voltar para visão geral da RFP P6</a></p>
+<footer style="margin-top:2rem; padding-top:1rem; border-top:1px solid var(--border); color:var(--muted); font-size:0.85rem;">Última atualização: 20/03/2026.</footer>
+</body>
+</html>

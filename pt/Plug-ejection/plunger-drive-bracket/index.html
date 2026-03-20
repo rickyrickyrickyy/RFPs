@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Suporte de acionamento do mergulhador — Ejeção do núcleo — P6 RFP</title>
+<style>
+    :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
+    a { color: var(--accent); }
+    h1 { font-size: 1.35rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.25rem; }
+    h3 { font-size: 1rem; margin-top: 1rem; color: var(--muted); }
+    ul, ol { padding-left: 1.25rem; }
+    .back { margin-bottom: 1rem; font-size: 0.9rem; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    .swatch { display: inline-block; width: 1.25rem; height: 1.25rem; border: 1px solid var(--border); border-radius: 3px; vertical-align: middle; }
+    table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+    th, td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
+    .iface-table th { color: var(--muted); font-weight: 600; }
+    .slideshow { margin: 1.5rem 0; }
+    .slideshow .slide { display: none; }
+    .slideshow .slide.active { display: block; }
+    .slideshow .slide img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
+    .slideshow-caption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); min-height: 2.5em; }
+    .slideshow-controls { display: flex; align-items: center; gap: 1rem; margin-top: 0.75rem; flex-wrap: wrap; }
+    .slideshow-controls button { background: var(--border); color: var(--text); border: none; padding: 0.35rem 0.75rem; border-radius: 4px; cursor: pointer; font-size: 0.9rem; }
+    .slideshow-controls button:hover { background: var(--accent); color: #fff; }
+    .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
+  </style>
+  <link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+<nav class="site-lang-bar" aria-label="Language">
+  <span class="lang-label">Idioma:</span>
+  <a href="../../../Plug-ejection/plunger-drive-bracket/index.html">English</a>
+  <span aria-hidden="true">·</span>
+  <a href="../../../zh/Plug-ejection/plunger-drive-bracket/index.html">中文</a>
+  <span aria-hidden="true">·</span>
+  <a href="index.html" aria-current="page">Português</a>
+</nav>
+
+<p class="back"><a href="../index.html">← Voltar à ejeção do núcleo</a>·<a href="../../index.html">P6 RFP</a></p>
+<h1>Suporte de acionamento do mergulhador</h1>
+<p>O êmbolo é o suporte de accionamento dentro do<a href="../index.html">ejeção do núcleo</a>sistema que carrega quatro êmbolos e transmite força axial das hastes de acionamento. Ele empurra e puxa as bases do êmbolo estritamente na direção do eixo de ejeção, evitando momentos de racking e mantendo os êmbolos concêntricos com o<a href="../../Collection/plungers-and-filter/index.html">tubo de filtro</a>.</p>
+<h2>Introdução</h2>
+<p>O suporte da accionamento do êmbolo liga a accionamento da accionamento da accionamento (através de hastes da accionamento do êmbolo) aos quatro êmbolos de ejecção do núcleo. O seu principal requisito é<strong>Pureza cinemática</strong>: o suporte deve ser aplicado<strong>Unicamente força axial</strong>(para a frente/para trás ao longo do eixo de ejecção da máquina) e não deve introduzir momentos à esquerda/direita/para cima/para baixo nos êmbolos. Manter isto evita o modo de falha crítica de<strong>Piscagem do êmbolo</strong>e a furar.</p>
+<h2>&amp; Componentes da chave de cor</h2>
+<p class="muted">Suporte de acionamento, interfaces de atuação, e (opcional) mecanismo de inserção/remoção estilo guilhotina.</p>
+<table>
+<tr><th>Cor( s)</th><th>Componente</th></tr>
+<tr><td><em>—</em></td><td><strong>Suporte de acionamento do mergulhador</strong>— carrega quatro êmbolos e move-se na direcção de ejecção.</td></tr>
+<tr><td><em>—</em></td><td><strong>Guilhotina / acesso de inserção deslizante</strong>— mecanismo opcional que permite remover os êmbolos para o serviço, mantendo o comportamento de empurrar/puxar restringido.</td></tr>
+</table>
+<h2 id="gallery">Figuras</h2>
+<p class="muted">Montagem CAD de<code>Plug-ejection/imagens/</code>com foco em suporte<strong>iso / topo / frente</strong>views nesta página. Consultar<a href="#fig1">Figura 1</a>–<a href="#fig4">Figura 4</a>.</p>
+<div class="slideshow" id="skel-plungerdrivebracket-slideshow">
+<div class="slideshow-track">
+<div class="slide active" data-caption="Figura 1. Suporte de acionamento do mergulhador no contexto completo de montagem de ejeção do núcleo (CAD compartilhado)." id="fig1"><img alt="Contexto de montagem do suporte de acionamento do mergulhador" src="../../../Plug-ejection/images/plug-ejection-4.png"/></div>
+<div class="slide" data-caption="Figura 2. Braquete de accionamento do mergulhador — isométrico." id="fig2"><img alt="Suporte de acionamento de mergulhador isométrico" src="../../../Plug-ejection/plunger-drive-bracket/images/isoview.png"/></div>
+<div class="slide" data-caption="Figura 3. Suporte de acionamento do mergulhador — visão superior." id="fig3"><img alt="Plunger drive bracket visão superior" src="../../../Plug-ejection/plunger-drive-bracket/images/topview.png"/></div>
+<div class="slide" data-caption="Figura 4. Suporte de acionamento do mergulhador — vista frontal." id="fig4"><img alt="Plunger drive bracket visão frontal" src="../../../Plug-ejection/plunger-drive-bracket/images/frontview.png"/></div>
+</div>
+<p aria-live="polite" class="slideshow-caption" id="skel-plungerdrivebracket-caption">Figura 1. Suporte de acionamento do mergulhador no contexto completo de montagem de ejeção do núcleo (CAD compartilhado).</p>
+<div class="slideshow-controls">
+<button aria-label="Anterior" id="skel-plungerdrivebracket-prev" type="button">← Anterior</button>
+<span class="slideshow-counter" id="skel-plungerdrivebracket-counter">1 / 4</span>
+<button aria-label="Próxima" id="skel-plungerdrivebracket-next" type="button">Próxima →</button>
+</div>
+</div>
+<h3>Números recomendados (clareza do contratante)</h3>
+<ul class="muted">
+<li><strong>Adicionar figura</strong>:<strong>Guilhotina / acesso de serviço</strong>— estados abertos vs fechados para remoção do êmbolo.</li>
+<li><strong>Adicionar figura</strong>:<strong>Alinhamento de quatro mergulhadores</strong>— concentricidade para filtrar tubos com dimensões (suplemento<a href="#fig2">Figuras 2–4</a>).</li>
+<li><strong>Adicionar figura</strong>:<strong>Junta Rod-to-bracket</strong>— detalhe de fixação de momento reduzido.</li>
+</ul>
+<h2>Discussão</h2>
+<h3>Componentes</h3>
+<ul>
+<li><strong>Suporte de transmissão</strong>— suporta as bases do êmbolo; restringido para que se mova para a frente/para trás apenas no eixo de ejecção.</li>
+<li><strong>Restrição de acesso ao serviço</strong>— assegurar que o mecanismo de inserção/remoção não comprometa o alinhamento axial durante o funcionamento normal.</li>
+</ul>
+<h3>Interfaces</h3>
+<ul>
+<li><strong>Entrada</strong>: hastes accionadas pelo êmbolo<a href="../../Transmission/index.html">transmissão</a>sistema de jugo.</li>
+<li><strong>Saída</strong>: êmbolos empurrem para o<a href="../../Collection/plungers-and-filter/index.html">tubo de filtro</a>e retrair para ejetar núcleos no<a href="../../Outflow-disposal/index.html">Sistema de eliminação</a>É o pára-quedas do núcleo.</li>
+<li><strong>Montar</strong>: guiado pelas caixas de rolamentos lineares de painel lateral para garantir o movimento de haste/pulmão paralelo.</li>
+</ul>
+<h3>Interfaces e tolerâncias</h3>
+<p class="muted">O suporte deve manter os êmbolos concêntricos com tubos de filtro/corte de plugue para evitar racking e garantir o desempenho de vedação.</p>
+<table class="iface-table">
+<thead><tr><th>Parte</th><th>Interface / tolerância</th><th>Relacionado</th></tr></thead>
+<tbody>
+<tr><td>Caminho de carga somente axial</td><td>O suporte não deve transmitir os momentos laterais/para cima/para baixo para os êmbolos;</td><td><a href="../plunger-drive-system-in-side-panels/index.html">Sistema de acionamento de mergulhadores em painéis laterais</a></td></tr>
+<tr><td>Concentricidade</td><td>O eixo do mergulhador deve permanecer paralelo ao eixo do tubo filtrante sobre o curso completo (o bloqueio deve ser seguro)</td><td><a href="../../Collection/plungers-and-filter/index.html">Outras máquinas e aparelhos, n.e.</a></td></tr>
+</tbody>
+</table>
+<h3>Problemas e riscos conhecidos</h3>
+<ul>
+<li><strong>Risco de racking</strong>— se for introduzido algum momento, os êmbolos podem acoplar-se no tubo do filtro, o que conduz a uma aderência e a danos.</li>
+<li><strong>Modo de falha de encaixe/jam</strong>— um êmbolo preso pode propagar forças no mecanismo de accionamento; o suporte deve ser concebido para minimizar a amplificação do momento.</li>
+</ul>
+<h3>DFM e fabricação (China)</h3>
+<ul>
+<li><strong>Abordagem opcional da guilhotina</strong>— corrimãos deslizantes + "porta" da placa central para permitir que os êmbolos sejam removidos para o serviço, preservando o aperto/puxe restrito durante a operação.</li>
+<li><strong>Materiais de baixa fricção</strong>— considerar os plásticos de engenharia (por exemplo, Delrin / polímero reforçado com fibras) onde são necessárias interfaces deslizantes, mas garantir que qualquer contacto com a zona alimentar permanece seguro.</li>
+</ul>
+<h3>Perguntas para o contratante</h3>
+<ol>
+<li>Propor um mecanismo de inserção/remoção para êmbolos (guilhotina vs alterna) que preserva a atuação axial-somente e concentricidade repetivel.</li>
+<li>Definir como validar que o suporte não aplica momentos significativos aos êmbolos (ensaios/inspecção/abordagem de medição).</li>
+<li>Propor materiais para interfaces deslizantes que são de baixo atrito, mas compatíveis com lavagem e segurança alimentar (incluindo risco microplástico).</li>
+</ol>
+<p class="back"><a href="../index.html">← Voltar à ejeção do núcleo</a>·<a href="../../index.html">P6 RFP</a></p>
+<script>
+(function(){
+  var el = document.getElementById('skel-plungerdrivebracket-slideshow');
+  if (!el) return;
+  var slides = el.querySelectorAll('.slide');
+  var cap = document.getElementById('skel-plungerdrivebracket-caption');
+  var counter = document.getElementById('skel-plungerdrivebracket-counter');
+  var n = slides.length, i = 0;
+  function go(k) { i = (k + n) % n; slides.forEach(function(s,j){ s.classList.toggle('active', j===i); }); if (cap) cap.textContent = slides[i].getAttribute('data-caption') || ''; if (counter) counter.textContent = (i+1) + ' / ' + n; }
+  el.querySelector('#skel-plungerdrivebracket-prev').addEventListener('click', function(){ go(i-1); });
+  el.querySelector('#skel-plungerdrivebracket-next').addEventListener('click', function(){ go(i+1); });
+  var hash = window.location.hash;
+  if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
+})();
+  </script>
+<footer style="margin-top:2rem; padding-top:1rem; border-top:1px solid var(--border); color:var(--muted); font-size:0.85rem;">Última atualização: 2026-03-20.</footer>
+</body>
+</html>

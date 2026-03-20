@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>机器控制定义和UI——控制——P6 RFP</title>
+<style>
+    :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
+    a { color: var(--accent); }
+    h1 { font-size: 1.35rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.25rem; }
+    h3 { font-size: 1rem; margin-top: 1rem; color: var(--muted); }
+    ul, ol { padding-left: 1.25rem; }
+    .back { margin-bottom: 1rem; font-size: 0.9rem; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    .swatch { display: inline-block; width: 1.25rem; height: 1.25rem; border: 1px solid var(--border); border-radius: 3px; vertical-align: middle; }
+    table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+    th, td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
+    .iface-table th { color: var(--muted); font-weight: 600; }
+    .slideshow { margin: 1.5rem 0; }
+    .slideshow .slide { display: none; }
+    .slideshow .slide.active { display: block; }
+    .slideshow .slide img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
+    .slideshow-caption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); min-height: 2.5em; }
+    .slideshow-controls { display: flex; align-items: center; gap: 1rem; margin-top: 0.75rem; flex-wrap: wrap; }
+    .slideshow-controls button { background: var(--border); color: var(--text); border: none; padding: 0.35rem 0.75rem; border-radius: 4px; cursor: pointer; font-size: 0.9rem; }
+    .slideshow-controls button:hover { background: var(--accent); color: #fff; }
+    .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
+  </style>
+  <link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+<nav class="site-lang-bar" aria-label="Language">
+  <span class="lang-label">语言：</span>
+  <a href="../../../Controls-Electronics/machine-control-definition-and-ui/index.html">English</a>
+  <span aria-hidden="true">·</span>
+  <a href="index.html" aria-current="page">中文</a>
+  <span aria-hidden="true">·</span>
+  <a href="../../../pt/Controls-Electronics/machine-control-definition-and-ui/index.html">Português</a>
+</nav>
+
+<p class="back"><a href="../index.html">回到控制器和电子设备</a>* 妇女<a href="../../index.html">私营部门筹资和伙伴关系司概览</a></p>
+<h1>机器控制定义和UI</h1>
+<p class="muted">部分<a href="../index.html">管制和电子</a>节。 地方独立控制,指标,安全UI,以及停机/停机.</p>
+<h2>导言</h2>
+<p>本页面定义了操作器的控件和P6在<a href="../index.html">管制和电子</a>子系统。 机器必须作为具有本地ON/OFF的独立单元运行,并在顶端运行/停止控制,有明确的RUNNING/STOPPED指标和安全开放状态. 三个编码盖安全间锁(来自<a href="../../Enclosure-shell/index.html">附文/壳</a>当任何封面打开时防止操作。 需要后关/停机装置(LOTO)来提供服务和季节性拆卸。</p>
+<h2>颜色密钥组件( C)</h2>
+<p class="muted">UI组件和意图.</p>
+<table>
+<tr><th>颜色</th><th>构成部分</th></tr>
+<tr><td><em>. . . . . .</em></td><td><strong>前置控制单元</strong>执行/STAT、关闭/STOP、电子STOP、运行和停止指标。</td></tr>
+<tr><td><em>. . . . . .</em></td><td><strong>安全状况指标</strong>——当任何盖间锁打开时,"机器打开"指示器.</td></tr>
+<tr><td><em>. . . . . .</em></td><td><strong>后LOTO 单元</strong>——关闭/停靠隔离点从顶部进入.</td></tr>
+</table>
+<h2 id="gallery">图</h2>
+<p class="muted">控制面板概念和放置(图片/CAD快照).</p>
+<div class="slideshow" id="controls-ui-slideshow">
+<div class="slideshow-track">
+<div class="slide active" data-caption="图1. 顶部控制单元概念(照片)。" id="fig1"><img alt="图1" src="../../../Controls-Electronics/machine-control-definition-and-ui/images/01.png"/></div>
+</div>
+<p aria-live="polite" class="slideshow-caption" id="controls-ui-caption">图1. 顶部控制单元概念(照片)。</p>
+<div class="slideshow-controls">
+<button aria-label="上一个" id="controls-ui-prev" type="button">上一个</button>
+<span class="slideshow-counter" id="controls-ui-counter">1个/ 1个</span>
+<button aria-label="下一个" id="controls-ui-next" type="button">下一个</button>
+</div>
+</div>
+<h3>建议数字(承包商的清晰度)</h3>
+<ul class="muted">
+<li><strong>添加图</strong>编号 :<strong>面板布局</strong>准确的按钮/指示器位置和标签。</li>
+<li><strong>添加图</strong>编号 :<strong>后 LOTO 访问</strong>——接线员通过盖子打开/关闭到达路径.</li>
+<li><strong>添加图</strong>编号 :<strong>全垒打</strong>——从面板到运动接触器和盖开关(块图).</li>
+</ul>
+<h2>讨论情况</h2>
+<h3>粗略设计意图( M)</h3>
+<ul>
+<li><strong>独立运作</strong>——局部动力和运行控制允许独立运行,检查,更换部件,以及简单的清洁.</li>
+<li><strong>清除状态指示</strong>——操作员应当迅速看清机器是否因安全开放条件而运行,停止运行,或者无法运行.</li>
+</ul>
+<h3>控制面板要求(前期)</h3>
+<ul>
+<li><strong>启动/启动</strong>密钥切换</li>
+<li><strong>运行/被支持</strong>按钮</li>
+<li><strong>紧急停车</strong>按钮</li>
+<li><strong>运行/部署</strong>指标</li>
+<li><strong>运营/业务</strong>指标</li>
+<li><strong>机器打开</strong>/ 安全开口指标( 间隙状态: 任何支线/ 插头/ 驱动列车盖盖开口)</li>
+</ul>
+<h3>LOTO 要求(上-后)</h3>
+<ul>
+<li><strong>方便获取</strong>——迅速隔离电力服务.</li>
+<li><strong>可锁定</strong>用于停产/停产过程(种植程序可能不同)。</li>
+</ul>
+<h3>已知问题和风险</h3>
+<ul>
+<li><strong>冲洗接触</strong>——UI和布线必须防水;选择适合工业清洁的围网,封条和腺体.</li>
+<li><strong>安全逻辑的明确性</strong>——避免模棱两可的状态;明确机器为何不会启动(打开盖子,E-stop等).</li>
+</ul>
+<h3>承包者的问题</h3>
+<ol>
+<li>建议适用于冲洗接触的工业部件和附件/IP评级。</li>
+<li>提出具有明确标签和指示逻辑的工学(顶部)和可维护的面板布局。</li>
+<li>提出符合植物实践的LOTO架构和位置,同时对操作员来说仍然简单.</li>
+<li>建议采用与商用机器相同的控制板,采用编码安全盖硬件(磁铁码防误用)和布线/集成方法。</li>
+</ol>
+<h3>接口</h3>
+<ul>
+<li><strong>输入 :</strong>操作员按钮按下; 安全间隔状态 。</li>
+<li><strong>输出 :</strong>运行/停止命令到运动控件;状态可见指示器。</li>
+<li><strong>挂载 :</strong>前置面板; 连接到内部控制柜的线路。</li>
+</ul>
+<h3>接口和容忍度</h3>
+<p class="muted">耐用TBD;承包商提出与冲洗环境相一致的安装和密封细节。</p>
+<table class="iface-table">
+<thead><tr><th>编</th><th>接口/容忍度</th><th>相关</th></tr></thead>
+<tbody>
+<tr><td>顶端 UI</td><td>耐冲洗的封闭和腺体密封;标签/工程学</td><td><a href="../index.html">管制和电子</a></td></tr>
+<tr><td>后边 LOTO</td><td>可锁隔离点; 访问信封</td><td>. . . . . .</td></tr>
+</tbody>
+</table>
+<h3>构成部分</h3>
+<ul>
+<li>ON/OFF、运行/STOP、E-STOP推扣</li>
+<li>执行/运行/指标</li>
+<li>安全开放指标</li>
+<li>后关/停机装置</li>
+<li>附文、线条、腺体、标签</li>
+</ul>
+<p class="back"><a href="../index.html">回到控制器和电子设备</a>* 妇女<a href="../../index.html">私营部门筹资和伙伴关系司概览</a></p>
+<script>
+(function(){
+  var el = document.getElementById('controls-ui-slideshow');
+  if (!el) return;
+  var slides = el.querySelectorAll('.slide');
+  var cap = document.getElementById('controls-ui-caption');
+  var counter = document.getElementById('controls-ui-counter');
+  var n = slides.length, i = 0;
+  function go(k) {
+    i = (k + n) % n;
+    slides.forEach(function(s,j){ s.classList.toggle('active', j===i); });
+    if (cap) cap.textContent = slides[i].getAttribute('data-caption') || '';
+    if (counter) counter.textContent = (i+1) + ' / ' + n;
+  }
+  el.querySelector('#controls-ui-prev').addEventListener('click', function(){ go(i-1); });
+  el.querySelector('#controls-ui-next').addEventListener('click', function(){ go(i+1); });
+  var hash = window.location.hash;
+  if (hash && hash.match(/^#fig(\d+)$/)) {
+    var idx = parseInt(RegExp.$1, 10) - 1;
+    if (idx >= 0 && idx < n) { i = idx; go(i); }
+  }
+})();
+  </script>
+<footer style="margin-top:2rem; padding-top:1rem; border-top:1px solid var(--border); color:var(--muted); font-size:0.85rem;">最新更新时间:2026-03-20.</footer>
+</body>
+</html>

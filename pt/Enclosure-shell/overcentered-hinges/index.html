@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Dobradiças sobrecentradas — Compartimento — P6 RFP</title>
+<style>
+    :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
+    a { color: var(--accent); }
+    h1 { font-size: 1.35rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.25rem; }
+    h3 { font-size: 1rem; margin-top: 1rem; color: var(--muted); }
+    ul, ol { padding-left: 1.25rem; }
+    .back { margin-bottom: 1rem; font-size: 0.9rem; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    .swatch { display: inline-block; width: 1.25rem; height: 1.25rem; border: 1px solid var(--border); border-radius: 3px; vertical-align: middle; }
+    table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+    th, td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
+    .iface-table th { color: var(--muted); font-weight: 600; }
+    .slideshow { margin: 1.5rem 0; }
+    .slideshow .slide { display: none; }
+    .slideshow .slide.active { display: block; }
+    .slideshow .slide img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
+    .slideshow-caption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); min-height: 2.5em; }
+    .slideshow-controls { display: flex; align-items: center; gap: 1rem; margin-top: 0.75rem; flex-wrap: wrap; }
+    .slideshow-controls button { background: var(--border); color: var(--text); border: none; padding: 0.35rem 0.75rem; border-radius: 4px; cursor: pointer; font-size: 0.9rem; }
+    .slideshow-controls button:hover { background: var(--accent); color: #fff; }
+    .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
+  </style>
+  <link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+<nav class="site-lang-bar" aria-label="Language">
+  <span class="lang-label">Idioma:</span>
+  <a href="../../../Enclosure-shell/overcentered-hinges/index.html">English</a>
+  <span aria-hidden="true">·</span>
+  <a href="../../../zh/Enclosure-shell/overcentered-hinges/index.html">中文</a>
+  <span aria-hidden="true">·</span>
+  <a href="index.html" aria-current="page">Português</a>
+</nav>
+
+<p class="back"><a href="../index.html">← Voltar ao cerco / shell</a>·<a href="../../index.html">P6 RFP</a></p>
+<h1>Dobradiças sobrecentradas</h1>
+<p class="muted">Ligação de dobradiças over-center utilizada para manter as tampas fechadas durante a operação e abertas para serviço/acesso; projetada para chapa metálica dobrada/soldada com auxílio de mola.</p>
+<h2>Introdução</h2>
+<p>Dobradiças supercentradas são o mecanismo de montagem dentro do<a href="../index.html">Anexo / shell</a>subsistema usado para anexar a tampa do alimentador, a tampa da shell do drivetrain, e a tampa do lado do êmbolo ao<a href="../../Frame/index.html">quadro</a>. A geometria da dobradiça proporciona uma posição "aberta" estável (fica aberta para acesso ao serviço) e uma posição "fechada" estável (fica fechada para proteger os operadores durante a operação). Molas enviesam a ligação para que fique naturalmente em qualquer posição, e os suportes de dobradiça interface com placas de apoio rígidas em vez de folha de cobertura fina.</p>
+<h2>&amp; Componentes da chave de cor</h2>
+<p class="muted">Componentes de dobra: suporte de montagem, pivô / pinos, trava / stopper característica, e pontos de montagem de mola.</p>
+<table>
+<tr><th>Cor( s)</th><th>Componente</th></tr>
+<tr><td><em>—</em></td><td><strong>Suporte/braço de dobra</strong>— chapas metálicas soldadas e pivôs à base de colheres.</td></tr>
+<tr><td><em>—</em></td><td><strong>Interruptor + fecho</strong>— posiciona a ligação em posições over-center abertas/fechadas.</td></tr>
+<tr><td><em>—</em></td><td><strong>Montagens de molas</strong>— os locais dos buracos suportam a colocação da mola (de ambos os lados).</td></tr>
+</table>
+<h2 id="gallery">Figuras</h2>
+<p class="muted">Reutilizar as janelas de dobradiças existentes do compartimento (até serem adicionados valores CAD específicos da dobradiça).</p>
+<div class="slideshow" id="skel-overcenteredhinges-slideshow">
+<div class="slideshow-track">
+<div class="slide active" data-caption="Figura 1. Conceito de montagem de dobradiças overcenter (visualização CAD de gabinete existente)." id="fig1"><img alt="Dobradiças overcentes" src="../../../Enclosure-shell/images/covers-5.png"/></div>
+</div>
+<p aria-live="polite" class="slideshow-caption" id="skel-overcenteredhinges-caption">Figura 1. Conceito de montagem de dobradiças overcenter.</p>
+<div class="slideshow-controls">
+<button aria-label="Anterior" id="skel-overcenteredhinges-prev" type="button">← Anterior</button>
+<span class="slideshow-counter" id="skel-overcenteredhinges-counter">1 / 1</span>
+<button aria-label="Próxima" id="skel-overcenteredhinges-next" type="button">Próxima →</button>
+</div>
+</div>
+<h3>Números recomendados (clareza do contratante)</h3>
+<ul class="muted">
+<li><strong>Adicionar figura</strong>:<strong>Detalhes do padrão do buraco</strong>— furos pivô, fecho e mola com tolerâncias.</li>
+<li><strong>Adicionar figura</strong>:<strong>Abrir vs o centro fechado</strong>— ângulos de ligação e linha de acção da mola.</li>
+<li><strong>Adicionar figura</strong>:<strong>Placa de apoio / endurecedor</strong>— a forma como as cargas de dobradiças entram no quadro ou na capa.</li>
+</ul>
+<h2>Discussão</h2>
+<h3>Componentes</h3>
+<ul>
+<li><strong>Buraco de pivô</strong>— o primeiro furo mais próximo da superfície de montagem define o ponto pivô.</li>
+<li><strong>Paragem/parada</strong>— o furo seguinte cria uma trava de fixação à medida que o braço gira sobre o centro.</li>
+<li><strong>Buraco de montagem da mola</strong>— o furo final contém travessões que permitem a montagem de molas em ambos os lados.</li>
+<li><strong>Dowel + retenção de mola</strong>— as partes da dobradiça podem ser formadas a partir de chapas metálicas soldadas e utilizar dobradiças/pinos para localizar características e molas.</li>
+</ul>
+<h3>Interfaces</h3>
+<ul>
+<li><strong>Entrada:</strong>massa de cobertura + forças de abertura/fechamento do utilizador e reacção de mola.</li>
+<li><strong>Saída:</strong>posições estáveis abertas e fechadas para coberturas; envolvimento repetitivo para travas de segurança.</li>
+<li><strong>Montar:</strong>Montagem da dobradiça em placas de apoio/reforçamento para que as tampas finas permaneçam rígidas.</li>
+</ul>
+<h3>Interfaces e tolerâncias</h3>
+<p class="muted">Os locais dos furos, a geometria das rolhas e a resistência da mola devem ser afinados para que a tampa fique fechada sob as forças de vibração e lavagem e permaneça aberta para o serviço.</p>
+<table class="iface-table">
+<thead><tr><th>Parte</th><th>Interface / tolerância</th><th>Relacionado</th></tr></thead>
+<tbody>
+<tr><td>Geometria over-center</td><td>Os locais de paragem/latch devem ser robustos; a mola deve manter-se fechada quando fechada</td><td><a href="../protective-covers/index.html">Coberturas protectoras</a></td></tr>
+<tr><td>Montagem da mola</td><td>A colocação da mola deve suportar condições over-center abertas e fechadas</td><td>—</td></tr>
+</tbody>
+</table>
+<h3>Problemas e riscos conhecidos</h3>
+<ul>
+<li><strong>Soldagem vs formação</strong>— a intenção do proprietário é investigar uma geometria de folha dobrada mais simples para reduzir a soldagem e melhorar a manufacturabilidade; os detalhes atuais do projeto da dobradiça são WIP.</li>
+<li><strong>Resistência à mola + local do furo</strong>— não finalizados; devem ser sintonizados através de ensaios de protótipos e ser repetiveis através de construções.</li>
+</ul>
+<h3>Perguntas para o contratante</h3>
+<ol>
+<li>Proponha um design de dobradiça overcenter manufacturável (dobrado/soldado) que atenda a robustez de lavagem e posições abertas/fechadas repetiveis.</li>
+<li>Defina a seleção da mola e como as tolerâncias de geometria da dobradiça afetam a estabilidade aberta/fechada.</li>
+<li>Recomendar materiais anti-corrosão / terminar adequados para salpicos de alimentos e produtos químicos de limpeza.</li>
+</ol>
+<p class="back"><a href="../index.html">← Voltar ao cerco / shell</a>·<a href="../../index.html">P6 RFP</a></p>
+<script>
+(function(){
+  var el = document.getElementById('skel-overcenteredhinges-slideshow');
+  if (!el) return;
+  var slides = el.querySelectorAll('.slide');
+  var cap = document.getElementById('skel-overcenteredhinges-caption');
+  var counter = document.getElementById('skel-overcenteredhinges-counter');
+  var n = slides.length, i = 0;
+  function go(k) { i = (k + n) % n; slides.forEach(function(s,j){ s.classList.toggle('active', j===i); }); if (cap) cap.textContent = slides[i].getAttribute('data-caption') || ''; if (counter) counter.textContent = (i+1) + ' / ' + n; }
+  el.querySelector('#skel-overcenteredhinges-prev').addEventListener('click', function(){ go(i-1); });
+  el.querySelector('#skel-overcenteredhinges-next').addEventListener('click', function(){ go(i+1); });
+  var hash = window.location.hash;
+  if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
+})();
+  </script>
+<footer style="margin-top:2rem; padding-top:1rem; border-top:1px solid var(--border); color:var(--muted); font-size:0.85rem;">Última atualização: 2026-03-20.</footer>
+</body>
+</html>

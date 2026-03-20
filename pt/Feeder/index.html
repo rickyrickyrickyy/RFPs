@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>6. Sistema de ingestão de frutas — P6 RFP</title>
+<style>
+    :root { --bg: #1a1d21; --card: #24282e; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
+    a { color: var(--accent); }
+    h1 { font-size: 1.35rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.25rem; }
+    ul { padding-left: 1.25rem; }
+    .back { margin-bottom: 1rem; font-size: 0.9rem; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    .swatch { display: inline-block; width: 1.25rem; height: 1.25rem; border: 1px solid var(--border); border-radius: 3px; vertical-align: middle; }
+    table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+    th, td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
+    .slideshow { margin: 1.5rem 0; }
+    .slideshow .slide { display: none; }
+    .slideshow .slide.active { display: block; }
+    .slideshow .slide img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
+    .slideshow-caption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); min-height: 2.5em; }
+    .slideshow-controls { display: flex; align-items: center; gap: 1rem; margin-top: 0.75rem; flex-wrap: wrap; }
+    .slideshow-controls button { background: var(--border); color: var(--text); border: none; padding: 0.35rem 0.75rem; border-radius: 4px; cursor: pointer; font-size: 0.9rem; }
+    .slideshow-controls button:hover { background: var(--accent); color: #fff; }
+    .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
+  </style>
+  <link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<nav class="site-lang-bar" aria-label="Language">
+  <span class="lang-label">Idioma:</span>
+  <a href="../../Feeder/index.html">English</a>
+  <span aria-hidden="true">·</span>
+  <a href="../../zh/Feeder/index.html">中文</a>
+  <span aria-hidden="true">·</span>
+  <a href="index.html" aria-current="page">Português</a>
+</nav>
+
+<p class="back"><a href="../index.html">← Voltar para P6 RFP visão geral</a></p>
+<h1>6. Sistema de ingestão de frutas</h1>
+<h2>Subpáginas</h2>
+<ul>
+<li><a href="feeding-subassembly/index.html">Subconjunto de alimentação</a> <span class="muted">(atualizado em 2026-03-20)</span>— detalhe por unidade: placa de montagem, tubo de entrada de 90°, tubo reto, guia de mola, mola de sincronização; 8 vistas CAD e chave de cor.</li>
+<li><a href="feeder-body/index.html">Corpo do alimentador</a> <span class="muted">(atualizado em 2026-03-20)</span>— shell/lid/bracing; roda sobre dobradiça para acesso e lavagem/CIP.</li>
+<li><a href="entry-tubes/index.html">Tubos de entrada</a> <span class="muted">(atualizado em 2026-03-20)</span>— tubos reguláveis e removíveis que ligam as linhas a montante a cada unidade de alimentação.</li>
+</ul>
+<h2>Introdução</h2>
+<p>O sistema de ingestão de fruta (subsistema 6) fornece de forma fiável uma laranja por ciclo para cada uma das quatro estações de extracção da máquina. Consiste em um corpo alimentador articulado (concha e tampa que se abre para acesso e CIP), reforço estrutural, subconjuntos de alimentação por estação (tubo de 90°, tubo reto, mola de sincronização e placa de montagem), e tubos de entrada ajustável que se conectam a linhas de triagem a montante. Durante cada ciclo, laranjas empilhadas nos tubos de entrada rolam através do tubo de 90° em uma mola de sincronia; a mola porta a coluna e libera uma única fruta para o<a href="../Extraction-syncronisation/index.html">apoio aos frutos</a>abaixo.</p>
+<h2>&amp; Componentes da chave de cor</h2>
+<p class="muted">Cores CAD para esta secção. Dado por unidade:<a href="feeding-subassembly/index.html">Subconjunto de alimentação</a>.</p>
+<table>
+<tr><th>Cor( s)</th><th>Componente</th></tr>
+<tr><td><span class="swatch" style="background-color:#DDA44E"></span></td><td><strong>Corpo do alimentador</strong>— base laranja-tan; roda sobre dobradiça de alimentação para acesso CIP</td></tr>
+<tr><td><span class="swatch" style="background-color:#41733B"></span> <span class="swatch" style="background-color:#71AEE8"></span></td><td><strong>Brace</strong>— verde escuro + azul claro; soldado à tampa, sistema de suportes</td></tr>
+<tr><td><span class="swatch" style="background-color:#C1EF64"></span></td><td><strong>Subconjunto de alimentação</strong>— um por estação; tubo curvo, molas de sincronização, placa de montagem, tubo de 90°</td></tr>
+<tr><td><span class="swatch" style="background-color:#FFE297"></span></td><td><strong>Tubos de entrada</strong>— amarelo claro; fruto guia para cada subconjunto de alimentação</td></tr>
+</table>
+<h2 id="gallery">Visões de alimentação de topo</h2>
+<p class="muted">Vistas CAD mostrando corpo alimentador, suporte, alimentação subconjunto, e tubos de entrada. Consultar<a href="#fig1">Figura 1</a>,<a href="#fig2">Figura 2</a>, etc.</p>
+<div class="slideshow" id="feeder-slideshow">
+<div class="slideshow-track">
+<div class="slide active" data-caption="Figura 1. Nível superior — corpo alimentador (laranja-tan), subconjunto de alimentação verde cal, tubos de entrada amarelo claro, verde escuro e azul claro, base magenta." id="fig1"><img alt="Visão de nível superior do alimentador" src="../../Feeder/images/feeder-1.png"/></div>
+<div class="slide" data-caption="Figura 2. Elevação — corpo alimentador, cintas, subconjunto de alimentação, tubos de entrada." id="fig2"><img alt="Alimentador elevado" src="../../Feeder/images/feeder-2.png"/></div>
+<div class="slide" data-caption="Figura 3. Lado - corpo alimentador, cinta, cal verde alimentação subconjunto, tubos de entrada." id="fig3"><img alt="Lado do alimentador" src="../../Feeder/images/feeder-3.png"/></div>
+<div class="slide" data-caption="Figura 4. Frente — quatro unidades de alimentação no corpo do alimentador; suporte e tubos de entrada por unidade." id="fig4"><img alt="Alimentador dianteiro quatro unidades" src="../../Feeder/images/feeder-4.png"/></div>
+<div class="slide" data-caption="Figura 5. Lado — corpo alimentador, alimentação subconjunto com mecanismo de mola; dobradiça alimentador permite rotação do corpo." id="fig5"><img alt="Lado alimentador com mola" src="../../Feeder/images/feeder-5.png"/></div>
+<div class="slide" data-caption="Figura 6. Frente — quatro unidades; bases de ligação do transportador helicoidal; tubos de suporte e de entrada." id="fig6"><img alt="Frente do alimentador com transportador" src="../../Feeder/images/feeder-6.png"/></div>
+<div class="slide" data-caption="Figura 7. Ângulo lateral — quatro subconjuntos de alimentação verde - limão, molas, aparelho." id="fig7"><img alt="Ângulo lateral do alimentador" src="../../Feeder/images/feeder-7.png"/></div>
+<div class="slide" data-caption="Figura 8. Topo — quatro subconjuntos verdes de cal no corpo do alimentador; tubos de entrada em fundo." id="fig8"><img alt="Vista superior do alimentador" src="../../Feeder/images/feeder-8.png"/></div>
+<div class="slide" data-caption="Figura 9. Close-up — alimentação de base subconjunto, tubos de entrada, detalhe do aparelho." id="fig9"><img alt="close-up do alimentador" src="../../Feeder/images/feeder-9.png"/></div>
+</div>
+<p aria-live="polite" class="slideshow-caption" id="feeder-caption">Figura 1. Nível superior — corpo alimentador (laranja-tan), subconjunto de alimentação verde cal, tubos de entrada amarelo claro, verde escuro e azul claro, base magenta.</p>
+<div class="slideshow-controls">
+<button aria-label="Anterior" id="feeder-prev" type="button">← Anterior</button>
+<span class="slideshow-counter" id="feeder-counter">1 / 9</span>
+<button aria-label="Próxima" id="feeder-next" type="button">Próxima →</button>
+</div>
+</div>
+<h3>Números recomendados (clareza do contratante)</h3>
+<ul class="muted">
+<li><strong>Adicionar figura</strong>:<strong>Disposição de quatro estações</strong>— dimensões de espaçamento das teclas vs quadro/transmissão.</li>
+<li><strong>Adicionar figura</strong>:<strong>Interface transportadora helicoidal</strong>— altura da alimentação para base (se não for evidente na galeria).</li>
+<li><strong>Adicionar figura</strong>:<strong>Serviço de movimento aberto</strong>— desobstrução do corpo do alimentador para remoção de CIP e tubo.</li>
+</ul>
+<h2>Discussão</h2>
+<h3>Desenho e intenção difíceis</h3>
+<ul>
+<li><strong>Objetivo do sistema</strong>— Libertação<strong>uma laranja por ciclo</strong>em cada estação de extração.</li>
+<li><strong>Sequência de fluxo</strong>— Seletor de montante/linhas → tubos de entrada ajustável → tubo de 90° → laranja repousa na mola de sincronização enquanto uma coluna empilha acima → empurrador abre a mola durante a compressão para soltar uma laranja no suporte de fruta → mola fecha no curso de retorno para segurar a laranja seguinte enquanto a laranja encenada cai nos descascadores.</li>
+<li><strong>Modularidade</strong>— Os tubos de alimentação subconjunto são rebitados a uma placa de montagem e a placa de montagem é rebitada ao corpo do alimentador para que os módulos possam ser trocados/iterados através da perfuração de rebites.</li>
+</ul>
+<h3>Problemas e riscos conhecidos</h3>
+<ul>
+<li><strong>Jams / dupla gota</strong>— a mola de sincronia deve fechar de forma fiável uma coluna de frutos e libertar apenas uma laranja de cada vez, sem tecelagem.</li>
+<li><strong>Envelope de colisão</strong>— O suporte e o empurrador das frutas nunca devem colidir com tubos de entrada/tubos de 90°; a flexão lateral do empurrador pode provocar colisões catastróficas com tubos/lides.</li>
+<li><strong>Lavagem</strong>— Esta região situa-se dentro/perto da zona de salpico; as bordas e as juntas devem ser limpáveis e seguras de manusear.</li>
+</ul>
+<h3>DFM e fabricação (China)</h3>
+<ul>
+<li><strong>Normas aplicáveis aos tubos</strong>— A subconjunto de alimentação utiliza 3′′ NPS / DN90 Sch 5S como linha de base; o contratante pode escolher equivalentes disponíveis na China que preservem a função e a limpeza.</li>
+<li><strong>Alfinetes</strong>— A regulabilidade do tubo de entrada depende de juntas fixas; contratante para propor hardware robusto e anti-perda.</li>
+<li><strong>Integração do bico CIP</strong>— tubo de 90° inclui uma porta/tubo para um bocal pulverizar a zona de entrada/mola; bico e detalhes de montagem TBD.</li>
+</ul>
+<h3>Perguntas para o contratante</h3>
+<ol>
+<li>Validar o conceito de sync spring gating para uma versão confiável de cada vez (gama de tamanho de fruta, atrito, modos de falha de geléia/dupla gota) e propor melhorias.</li>
+<li>Proponha projetos de tubos/rodas/pinos que sejam ajustáveis, rígidos quando bloqueados e rápidos para desmontar para manutenção sazonal.</li>
+<li>Proponha uma estratégia de colocação e limpeza do bico CIP para a região de entrada do tubo e da mola (direção de pulverização, vias de drenagem, evitando zonas mortas).</li>
+</ol>
+<h3>Subconjuntos</h3>
+<ul>
+<li><a href="feeding-subassembly/index.html">Subconjunto de alimentação</a>— placa de montagem, tubo de entrada flangeado de 90°, tubo reto e guia de mola, sincronizar mola (8 vistas CAD, chave de cor, parâmetros).</li>
+<li>Corpo do alimentador, tubo de entrada de 90°, conduta externa — páginas de detalhe TBD.</li>
+</ul>
+<h3>Interfaces</h3>
+<ul>
+<li><strong>Dobradiça de alimentação</strong>— o corpo do alimentador gira para acesso e PIC; dobradiça sobrecentrada (ver<a href="../Enclosure-shell/index.html">Anexo / shell</a>).</li>
+<li><strong>Brace</strong>— soldados à tampa; suportes de alimentação subconjuntos e tubos de entrada.</li>
+<li><strong>Fluxo de frutos</strong>— tubos de entrada → alimentação subconjunto →<a href="../Extraction-syncronisation/index.html">extração e sincronização</a>(suporte à fruta, interação da mola sincronizada).</li>
+<li><strong>A jusante</strong>— após extracção, o sumo e as cascas fluem para<a href="../Collection/index.html">coleção</a>(peeleres, tubo de filtro, cortador de plug).</li>
+</ul>
+<p class="back"><a href="../index.html">← Voltar para P6 RFP visão geral</a></p>
+<script>
+(function(){
+  var el = document.getElementById('feeder-slideshow');
+  if (!el) return;
+  var slides = el.querySelectorAll('.slide');
+  var cap = document.getElementById('feeder-caption');
+  var counter = document.getElementById('feeder-counter');
+  var n = slides.length;
+  var i = 0;
+  function go(k) { i = (k + n) % n; slides.forEach(function(s,j){ s.classList.toggle('active', j===i); }); if (cap) cap.textContent = slides[i].getAttribute('data-caption') || ''; if (counter) counter.textContent = (i+1) + ' / ' + n; }
+  el.querySelector('#feeder-prev').addEventListener('click', function(){ go(i-1); });
+  el.querySelector('#feeder-next').addEventListener('click', function(){ go(i+1); });
+  var hash = window.location.hash;
+  if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
+})();
+  </script>
+<footer style="margin-top:2rem; padding-top:1rem; border-top:1px solid var(--border); color:var(--muted); font-size:0.85rem;">Última atualização: 2026-03-20.</footer>
+</body>
+</html>

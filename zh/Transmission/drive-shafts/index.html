@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>传动轴 — 变速箱 — P6 RFP</title>
+<style>
+    :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
+    a { color: var(--accent); }
+    h1 { font-size: 1.35rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.25rem; }
+    h3 { font-size: 1rem; margin-top: 1rem; color: var(--muted); }
+    ul, ol { padding-left: 1.25rem; }
+    .back { margin-bottom: 1rem; font-size: 0.9rem; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    .slideshow { margin: 1.5rem 0; }
+    .slideshow-track { position: relative; }
+    .slideshow .slide { display: none; }
+    .slideshow .slide.active { display: block; }
+    .slideshow .slide img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
+    .slideshow-caption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); min-height: 2.5em; }
+    .slideshow-controls { display: flex; align-items: center; gap: 1rem; margin-top: 0.75rem; flex-wrap: wrap; }
+    .slideshow-controls button { background: var(--border); color: var(--text); border: none; padding: 0.35rem 0.75rem; border-radius: 4px; cursor: pointer; font-size: 0.9rem; }
+    .slideshow-controls button:hover { background: var(--accent); color: #fff; }
+    .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
+  </style>
+  <link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+<nav class="site-lang-bar" aria-label="Language">
+  <span class="lang-label">语言：</span>
+  <a href="../../../Transmission/drive-shafts/index.html">English</a>
+  <span aria-hidden="true">·</span>
+  <a href="index.html" aria-current="page">中文</a>
+  <span aria-hidden="true">·</span>
+  <a href="../../../pt/Transmission/drive-shafts/index.html">Português</a>
+</nav>
+
+<p class="back"><a href="../index.html">← 返回传输</a> · <a href="../../index.html">P6 RFP 概述</a></p>
+<h1>传动轴</h1>
+<p class="muted">轭轨道几何形状、轴平行度视图、拉支架/杆止动件啮合和顶盖概念。设计讨论和公差仍然存在<a href="../yoke/index.html">轭和驱动轴</a>。</p>
+<h2>介绍</h2>
+<p>此页面包含<strong>仅数字</strong>适用于 35 毫米轴/轭轨道区域。对于装载、轴承选择和承包商问题，请使用<a href="../yoke/index.html">轭和驱动轴</a>。</p>
+<h2 id="gallery">人物</h2>
+<p class="muted">参考<a href="#fig1">图1</a>–<a href="#fig4">图4</a>。 （文件名<code>并行性2.png</code>正如回购协议中所提供的。）</p>
+<div class="slideshow" id="ds-slideshow">
+<div class="slideshow-track">
+<div class="slide active" data-caption="图 1. 轭凸轮轨道 — 侧面/边缘视图（平行度和轨道面环境）。" id="fig1"><img alt="轭轨道侧视图" src="../../../Transmission/drive-shafts/images/parallelism.png"/></div>
+<div class="slide" data-caption="图 2. 轭凸轮轨道 — 顶视图/平面图（轨道宽度和滚子路径）。" id="fig2"><img alt="轭轨俯视图" src="../../../Transmission/drive-shafts/images/parralelism2.png"/></div>
+<div class="slide" data-caption="图 3.拉动支架接合柱塞驱动杆挡块（返回行程）。" id="fig3"><img alt="拉支架和杆限位器" src="../../../Transmission/drive-shafts/images/pullbracket.png"/></div>
+<div class="slide" data-caption="图 4. 轭顶盖概念 — 安装滚轮后的全宽加强板。" id="fig4"><img alt="轭顶盖概念" src="../../../Transmission/drive-shafts/images/topCap.png"/></div>
+</div>
+<p aria-live="polite" class="slideshow-caption" id="ds-caption">图 1. 轭凸轮轨道 — 侧视图。</p>
+<div class="slideshow-controls">
+<button aria-label="以前的" id="ds-prev" type="button">← 上一页</button>
+<span class="slideshow-counter" id="ds-counter">1 / 4</span>
+<button aria-label="下一个" id="ds-next" type="button">下一页 →</button>
+</div>
+</div>
+<h3>推荐数字（承包商清晰度）</h3>
+<ul class="muted">
+<li><strong>添加图</strong>：<strong>轴承/轴组</strong>— 显示 LMF/LMK 安装座、轴肩和刮刀/盖间隙的分解图或剖面图。</li>
+<li><strong>添加图</strong>：<strong>拉杆+限位器</strong>— 整个返回行程的间隙和啮合深度（补充图 3-4）。</li>
+</ul>
+<p class="back"><a href="../index.html">← 返回传输</a> · <a href="../../index.html">P6 RFP 概述</a></p>
+<script>
+(function(){
+  var el = document.getElementById('ds-slideshow');
+  if (!el) return;
+  var slides = el.querySelectorAll('.slide');
+  var cap = document.getElementById('ds-caption');
+  var counter = document.getElementById('ds-counter');
+  var n = slides.length, i = 0;
+  function go(k) { i = (k + n) % n; slides.forEach(function(s,j){ s.classList.toggle('active', j===i); }); if (cap) cap.textContent = slides[i].getAttribute('data-caption') || ''; if (counter) counter.textContent = (i+1) + ' / ' + n; }
+  document.getElementById('ds-prev').addEventListener('click', function(){ go(i-1); });
+  document.getElementById('ds-next').addEventListener('click', function(){ go(i+1); });
+  var hash = window.location.hash;
+  if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
+})();
+  </script>
+<footer style="margin-top:2rem; padding-top:1rem; border-top:1px solid var(--border); color:var(--muted); font-size:0.85rem;">最后更新时间：2026 年 3 月 20 日。</footer>
+</body>
+</html>

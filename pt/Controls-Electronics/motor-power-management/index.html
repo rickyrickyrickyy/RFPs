@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Gestão da potência do motor — Controlos — P6 RFP</title>
+<style>
+    :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
+    a { color: var(--accent); }
+    h1 { font-size: 1.35rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.25rem; }
+    h3 { font-size: 1rem; margin-top: 1rem; color: var(--muted); }
+    ul, ol { padding-left: 1.25rem; }
+    .back { margin-bottom: 1rem; font-size: 0.9rem; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    .swatch { display: inline-block; width: 1.25rem; height: 1.25rem; border: 1px solid var(--border); border-radius: 3px; vertical-align: middle; }
+    table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+    th, td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
+    .iface-table th { color: var(--muted); font-weight: 600; }
+    .slideshow { margin: 1.5rem 0; }
+    .slideshow .slide { display: none; }
+    .slideshow .slide.active { display: block; }
+    .slideshow .slide img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
+    .slideshow-caption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); min-height: 2.5em; }
+    .slideshow-controls { display: flex; align-items: center; gap: 1rem; margin-top: 0.75rem; flex-wrap: wrap; }
+    .slideshow-controls button { background: var(--border); color: var(--text); border: none; padding: 0.35rem 0.75rem; border-radius: 4px; cursor: pointer; font-size: 0.9rem; }
+    .slideshow-controls button:hover { background: var(--accent); color: #fff; }
+    .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
+  </style>
+  <link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+<nav class="site-lang-bar" aria-label="Language">
+  <span class="lang-label">Idioma:</span>
+  <a href="../../../Controls-Electronics/motor-power-management/index.html">English</a>
+  <span aria-hidden="true">·</span>
+  <a href="../../../zh/Controls-Electronics/motor-power-management/index.html">中文</a>
+  <span aria-hidden="true">·</span>
+  <a href="index.html" aria-current="page">Português</a>
+</nav>
+
+<p class="back"><a href="../index.html">← Voltar aos controles e eletrônicos</a>·<a href="../../index.html">P6 RFP</a></p>
+<h1>Gestão da energia do motor</h1>
+<p class="muted">Parte da<a href="../index.html">Controlos e electrónica</a>secção. Distribuição de energia, proteção e sensoriamento para o motor de tração em um ambiente de lavagem.</p>
+<h2>Introdução</h2>
+<p>Esta página — parte do<a href="../index.html">Controlos e electrónica</a>Subsistema — define a potência eléctrica e os elementos de protecção necessários para o funcionamento<a href="../../Drivetrain/index.html">drivetrain</a>motor (WEG W22, 50 Hz China linha de base) e para fornecer sensoriamento de corrente para detecção de picos e estimativa de rendimento. O design deve ser adequado para ambientes de lavagem industrial e integrar-se ao<a href="../../Enclosure-shell/index.html">compartimento</a>travas de segurança.</p>
+<h2>&amp; Componentes da chave de cor</h2>
+<p class="muted">Principais componentes elétricos (detalhes de implementação TBD).</p>
+<table>
+<tr><th>Cor( s)</th><th>Componente</th></tr>
+<tr><td><em>—</em></td><td><strong>Desconexão / disjuntor principal</strong>— isolamento local (apoio à operação autónoma e LOTO).</td></tr>
+<tr><td><em>—</em></td><td><strong>Contator AC + arranque do motor / arranque suave</strong>— comutação, comportamento de arranque/paragem controlado e protecção de sobrecorrente para o circuito motor.</td></tr>
+<tr><td><em>—</em></td><td><strong>Painel de controlo interno</strong>— relés, comando IO/PCB/PLC conforme necessário (arquitetura final TBD).</td></tr>
+<tr><td><em>—</em></td><td><strong>Sensor de corrente de motor</strong>— medição instantânea da corrente para detecção de picos e estimativa da produção bruta.</td></tr>
+</table>
+<h2 id="gallery">Figuras</h2>
+<p class="muted">Adicione diagramas de fiação e layout do gabinete quando disponível. (Nenhuma imagem de potência do motor ainda está comprometida.)</p>
+<h3>Números recomendados (clareza do contratante)</h3>
+<ul class="muted">
+<li><strong>Adicionar figura</strong>: diagrama de linha única (potência em → desconectar → contator/iniciador → motor).</li>
+<li><strong>Adicionar figura</strong>: disposição do armário e roteamento de cabos / glandes para proteção de lavagem.</li>
+</ul>
+<h2>Discussão</h2>
+<h3>Especificações de base do motor (referência)</h3>
+<p>Algumas especificações anteriores foram para mercados de 60 Hz. P6 A linha de base da China é 50 Hz.</p>
+<table class="iface-table">
+<thead><tr><th>Parâmetro</th><th>50 Hz (início da China)</th><th>60 Hz (referência)</th></tr></thead>
+<tbody>
+<tr><td>Motor</td><td>WEG W22 (ou equivalente), 10 hp (7,5 kW), 4 pólos</td><td>WEG W22 (ou equivalente), 10 hp, 4-pole</td></tr>
+<tr><td>Velocidade</td><td>~1470 rpm</td><td>~1760 rpm</td></tr>
+<tr><td>Tensões</td><td>3-fase de 220 / 380 / 440 V (tensão final da planta TBD)</td><td>3-fase de 220 / 380 / 440 V</td></tr>
+<tr><td>Protecção</td><td>IPW55 (conforme especificado)</td><td>IPW55 (conforme especificado)</td></tr>
+<tr><td>Montagem</td><td>V5T (pé, vertical, eixo para baixo)</td><td>V5T (pé, vertical, eixo para baixo)</td></tr>
+</tbody>
+</table>
+<h3>Interface de energia da instalação (por país, referência)</h3>
+<p class="muted">Use esta tabela para direcionar a escolha do conector de entrada, o design da fiação e o dimensionamento inicial/proteção. A China é o alvo de base. Sempre que possível, procurar<strong>Motor de dupla tensão, de dupla frequência</strong>reduzir o risco variante.</p>
+<table class="iface-table">
+<thead><tr><th>País</th><th>Tipo de saída</th><th>Tipo de fase</th><th>Tensão (V)</th><th>Actual (A)</th><th>Frequência (Hz)</th></tr></thead>
+<tbody>
+<tr><td>Brasil</td><td>IEC 60309</td><td>Três fases</td><td>380/415</td><td>10</td><td>60</td></tr>
+<tr><td>China</td><td>IEC 60309</td><td>Três fases</td><td>380/415</td><td>16+</td><td>50</td></tr>
+<tr><td>EUA</td><td>NEMA L</td><td>Três fases</td><td>480Y/277</td><td>20+</td><td>60</td></tr>
+</tbody>
+</table>
+<h3>Requisitos de controlo e protecção</h3>
+<ul>
+<li><strong>Operação local</strong>— ligar/desligar e correr/parar (estando em pé).</li>
+<li><strong>LOTO</strong>— ponto de isolamento da retaguarda/tagout.</li>
+<li><strong>Fechaduras de segurança</strong>— interruptores de tampa de segurança e lógica de abertura de stop-with-peeler.</li>
+<li><strong>Protecção da água</strong>— compartimentos, glândulas, roteamento adequado para uma lavagem rigorosa.</li>
+</ul>
+<h3>Sentindo</h3>
+<ul>
+<li><strong>Sensor de corrente de motor</strong>— medição instantânea da corrente para detecção de picos e estimativa do rendimento bruto (frutos transformados por período).</li>
+<li><strong>Sensor de ciclo</strong>— contagem de ciclos por período (pode partilhar o hardware com o sensor da posição do jugo/paragem do motor aberto).</li>
+</ul>
+<h3>Perguntas para o contratante</h3>
+<ol>
+<li>Propor uma arquitetura elétrica de segurança de lavagem (classificação IP de cabinete, glândulas, roteamento) adequada para uma planta da China.</li>
+<li>Especificar o arranque/contactor do motor e se é necessário um arranque suave; incluir<strong>protecção sobrecorrente</strong>dimensionamento baseado em pressupostos de corrente/dever motor.</li>
+<li>Especifique o hardware de sensoriamento atual e como ele será usado para detecção de picos e estimativa de vazão.</li>
+<li>Confirme o(s) conector(es) de entrada e a aproximação de fiação para 380/415 V de 50 Hz de 3 fases (baseline NC) e aconselhe como manter um único projeto compatível com os mercados de 60 Hz, sempre que possível.</li>
+</ol>
+<h3>Interfaces</h3>
+<ul>
+<li><strong>Entrada:</strong>potência da instalação (3 fase), comandos do operador, interligações de segurança.</li>
+<li><strong>Saída:</strong>energia protegida para acionamento motor; sinais de sensor para controlar a lógica / exportação de IoT.</li>
+<li><strong>Montar:</strong>armário/painel de controlo interno.</li>
+</ul>
+<h3>Interfaces e tolerâncias</h3>
+<p class="muted">Interfaces (tolerâncias TBD; contratante para propor).</p>
+<table class="iface-table">
+<thead><tr><th>Parte</th><th>Interface / tolerância</th><th>Relacionado</th></tr></thead>
+<tbody>
+<tr><td>Motor</td><td>WEG W22 (ou equivalente); linha de base de 50 Hz; eixo vertical para baixo; IPW55</td><td><a href="../../Drivetrain/index.html">Condução</a></td></tr>
+<tr><td>Gabinete de controlo</td><td>Proteção contra lavagem (classificação IP) e roteamento glândula/cabo</td><td>—</td></tr>
+<tr><td>Sensor atual</td><td>Fornece detecção de picos atuais e estimativa de rendimento</td><td>—</td></tr>
+</tbody>
+</table>
+<p class="back"><a href="../index.html">← Voltar aos controles e eletrônicos</a>·<a href="../../index.html">P6 RFP</a></p>
+<footer style="margin-top:2rem; padding-top:1rem; border-top:1px solid var(--border); color:var(--muted); font-size:0.85rem;">Última atualização: 2026-03-20.</footer>
+</body>
+</html>

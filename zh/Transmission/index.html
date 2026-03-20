@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>3. 传输——P6 RFP</title>
+<style>
+    :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
+    a { color: var(--accent); }
+    h1 { font-size: 1.35rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.25rem; }
+    ul { padding-left: 1.25rem; }
+    .back { margin-bottom: 1rem; font-size: 0.9rem; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+    th, td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
+    .swatch { display: inline-block; width: 1.25rem; height: 1.25rem; border: 1px solid var(--border); border-radius: 3px; vertical-align: middle; }
+    .slideshow { margin: 1.5rem 0; }
+    .slideshow .slide { display: none; }
+    .slideshow .slide.active { display: block; }
+    .slideshow .slide img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
+    .slideshow-caption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); min-height: 2.5em; }
+    .slideshow-controls { display: flex; align-items: center; gap: 1rem; margin-top: 0.75rem; flex-wrap: wrap; }
+    .slideshow-controls button { background: var(--border); color: var(--text); border: none; padding: 0.35rem 0.75rem; border-radius: 4px; cursor: pointer; font-size: 0.9rem; }
+    .slideshow-controls button:hover { background: var(--accent); color: #fff; }
+    .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
+    .iface-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    .iface-table th, .iface-table td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
+    .iface-table th { color: var(--muted); font-weight: 600; }
+  </style>
+  <link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<nav class="site-lang-bar" aria-label="Language">
+  <span class="lang-label">语言：</span>
+  <a href="../../Transmission/index.html">English</a>
+  <span aria-hidden="true">·</span>
+  <a href="index.html" aria-current="page">中文</a>
+  <span aria-hidden="true">·</span>
+  <a href="../../pt/Transmission/index.html">Português</a>
+</nav>
+
+<p class="back"><a href="../index.html">← 返回 P6 RFP 概述</a></p>
+<h1>3. 传输</h1>
+<h2>子页面</h2>
+<ul>
+<li><a href="transmission-mount-plate/index.html">变速箱安装板</a> <span class="muted">(updated 2026-03-20)</span>— 铸造轴承板前/后加工、分型线；步骤下载。</li>
+<li><a href="yoke/index.html">轭架和驱动轴</a> <span class="muted">(updated 2026-03-20)</span>— 轭轨道面、轴/轴承、刮刀/盖、堵塞情况问题。</li>
+<li><a href="drive-shafts/index.html">传动轴</a> <span class="muted">(updated 2026-03-20)</span>— 轭轨侧视图/俯视图、拉支架 + 杆限位器、顶盖概念（图）。</li>
+</ul>
+<h2>介绍</h2>
+<p>传输将转换为<a href="../Drivetrain/index.html">动力传动系统</a>的旋转凸轮运动转变为受控的线性行程，驱动提取和芯弹出循环。拨叉组件安装在两个由法兰直线轴承（LMK35UU 系列）引导的 35 毫米硬化不锈钢轴上，将动力从传动系统凸轮轴承传递到<a href="../Extraction-syncronisation/index.html">提取和同步</a>水果被压在模块上<a href="../Collection/index.html">收藏</a>削皮器。该组件安装在专用变速箱安装板上，该安装板用螺栓固定在主变速箱上<a href="../Frame/index.html">框架</a>。</p>
+<h2>色键和组件</h2>
+<p class="muted">适用于本页的图。</p>
+<table>
+<tr><th>颜色）</th><th>成分</th></tr>
+<tr><td><span class="swatch" style="background-color:#2F9EBA"></span></td><td><strong>轭</strong>— 与传动系统凸轮轴承连接，并将旋转转换为拔出冲程。</td></tr>
+<tr><td><span class="swatch" style="background-color:#798C2E"></span></td><td><strong>两个传动轴</strong>(35 mm) — 轭架线性导轨；两端的轴安装座设置平行度和刚度。</td></tr>
+<tr><td><span class="swatch" style="background-color:#3582E4"></span></td><td><strong>两个LMK35UU直线轴承</strong>— 支持 35 mm 轴上的低摩擦轭平移；对齐可以防止结合。</td></tr>
+<tr><td><span class="swatch" style="background-color:#B341C3"></span></td><td><strong>变速箱安装板</strong>— 安装到<a href="../Frame/index.html">框架</a>;承载轴安装座并保持轴间距/对准。</td></tr>
+</table>
+<h2 id="gallery">人物</h2>
+<p class="muted">CAD 视图。参考文中的数字为<a href="#fig1">图1</a>, <a href="#fig2">图2</a>， ETC。</p>
+<div class="slideshow" id="trans-slideshow">
+<div class="slideshow-track">
+<div class="slide active" data-caption="图 1. 变速箱组件：安装板、轭架、两个轴、两个 LMK35UU 直线轴承。" id="fig1"><img alt="变速箱总成" src="../../Transmission/images/transmission-overview.png"/></div>
+<div class="slide" data-caption="图 2. 侧视图 — 轭架、轴、轴安装座、线性轴承。" id="fig2"><img alt="侧面图" src="../../Transmission/images/transmission-side.png"/></div>
+<div class="slide" data-caption="图 3. 等轴测图 — 变速箱安装板、轭、传动轴、轴承。" id="fig3"><img alt="等距" src="../../Transmission/images/transmission-isometric.png"/></div>
+<div class="slide" data-caption="图 4. 侧面轮廓 — 板、轴、轴承、轭。" id="fig4"><img alt="侧面轮廓" src="../../Transmission/images/transmission-side-plate.png"/></div>
+<div class="slide" data-caption="图 5. 右视图。" id="fig5"><img alt="右视图" src="../../Transmission/images/transmission-right.png"/></div>
+<div class="slide" data-caption="图 6. 侧面 — 变速箱安装板上的轭、轴、轴承。" id="fig6"><img alt="侧轭" src="../../Transmission/images/transmission-side-yoke.png"/></div>
+<div class="slide" data-caption="图 7. 顶部 — 轭架、轴、轴承；收集系统安装板可见。" id="fig7"><img alt="俯视图" src="../../Transmission/images/transmission-top.png"/></div>
+</div>
+<p aria-live="polite" class="slideshow-caption" id="trans-caption">图 1. 变速箱组件：安装板、轭架、两个轴、两个 LMK35UU 直线轴承。</p>
+<div class="slideshow-controls">
+<button aria-label="以前的" id="trans-prev" type="button">← 上一页</button>
+<span class="slideshow-counter" id="trans-counter">1 / 7</span>
+<button aria-label="下一个" id="trans-next" type="button">下一页 →</button>
+</div>
+</div>
+<h2>讨论</h2>
+<h3>Rough design &amp; intent</h3>
+<ul>
+<li><strong>目的</strong>— 将传动系统凸轮滚柱运动转换为受控线性行程，同时保持提取和收集削皮器之间的对齐。传输刚度和重复性对于防止绑定和碰撞至关重要。</li>
+<li><strong>关键要素</strong>— 轭架、两个 35 毫米轴、法兰/密封 35 毫米直线轴承（LMF/LMK 系列）和变速箱安装板。轴长度由收集侧剥离器之间的距离和压缩冲程结束时所需的“几乎接触”间隙决定（冲程结束时从动剥离器面和静态剥离器面之间的目标间隙约为 2-3 毫米）。</li>
+<li><strong>维修实景</strong>— 预计大约按季节（约每年）进行全面拆卸/重新组装。对准策略必须支持可重复重建，而无需完全重新加工。</li>
+</ul>
+<h3>已知问题和风险</h3>
+<ul>
+<li><strong>果酱/不对称装订盒</strong>— 最坏的情况是一个线性轴承约束或水果/垃圾导致不对称负载。轴可能会扭曲并向直线轴承和安装板施加很大的力矩；系统应能够承受高安全系数的“榨汁机中的石头”情况。</li>
+<li><strong>力矩放大</strong>— 线性轴承从安装板上升起。垂直偏移会产生试图旋转安装板的倾覆力矩；框架/销钉/螺栓必须承载这些且不会移动。</li>
+<li><strong>冲洗暴露</strong>— 变速箱安装板正面暴露于清洁喷雾/汁液中；材料、密封件和刮刀/防护装置很重要。</li>
+</ul>
+<h3>DFM 和制造（中国）</h3>
+<ul>
+<li><strong>对齐工作流程</strong>— 预计“对齐 → 拧紧 → 钻孔/扩孔销钉”工作流程类似于车架/传动系统板。承包商应提出准确的基准方案和可重复的垫片策略。</li>
+<li><strong>两板架构</strong>— 变速箱安装板有两种候选设计：(a) 砂铸 + 后加工，以及 (b) 焊接钢板 + 应力消除 + 加工。承包商提供最佳成本/领先/质量路径建议。</li>
+<li><strong>卫生表面</strong>— 靠近果肉/果汁的任何表面都应具有可清洁的饰面并避免出现裂缝；考虑轴和轴承面的刮刀/盖设计。</li>
+</ul>
+<h3>寻求优化</h3>
+<ul>
+<li><strong>结合稳健性</strong>— 最大限度地提高对不对中和污染的耐受性，而不会出现轴磨损或轴承故障。</li>
+<li><strong>可重复对准</strong>— 快速季节性重建，无需大量重新调整垫片即可恢复削皮器对齐。</li>
+<li><strong>可清洁性</strong>— 减少轴/轴承上的汁液积聚；在需要的地方添加刮刀/盖子。</li>
+</ul>
+<h3>Questions for contractor</h3>
+<ol>
+<li>定义传输的负载情况，包括不对称/堵塞情况（一侧绑定）和“硬物体”最坏情况。提供安装板和框架的力/力矩估计。</li>
+<li>建议针对季节性拆卸/重建采用对齐+销钉程序（哪些是可调节的，哪些是销钉铰孔的，以及哪些是垫片的）。</li>
+<li>推荐可接受的轴平行度和轴承对中公差，以防止在使用寿命期间出现卡滞，并提出检查检查。</li>
+<li>提出用于冲洗的轴刮刀/盖方法，包括与清洁化学品兼容的材料和预期的磨损/维护间隔。</li>
+</ol>
+<h3>推荐数字（承包商清晰度）</h3>
+<ul>
+<li><strong>添加图</strong>：<strong>自由体</strong>— 轭架 + 轴 + 线性轴承，显示堵塞/不对称负载情况和力臂进入板。</li>
+<li><strong>添加图</strong>：<strong>基准面</strong>— 草图显示了哪些面/孔定义了剥离器对齐以及对齐后哪些接口被用榫钉固定。</li>
+<li><strong>添加图</strong>：<strong>刮刀概念</strong>— 所建议的成型板盖 + 轴上刮刀唇缘的截面草图。</li>
+</ul>
+<h3>接口</h3>
+<ul>
+<li><strong>输入：</strong>来自齿轮的力（<a href="../Drivetrain/index.html">动力传动系统</a>） 在<a href="../Drivetrain/drivetrain-mount-plate/index.html">传动系统安装板</a>。</li>
+<li><strong>输出：</strong>轭架的线性运动→提取/同步→水果压在收集系统上。</li>
+<li><strong>山：</strong>变速箱安装板<span class="swatch" style="background-color:#B341C3" title="#B341C3"></span>在主框架上。看<a href="../Frame/index.html">框架</a>。采集系统开启<a href="../Frame/index.html">装载安装板</a>。</li>
+</ul>
+<h3>Interfaces and tolerances</h3>
+<p class="muted">已知的接口和公差。链接到相关子系统。</p>
+<table class="iface-table">
+<thead><tr><th>Part</th><th>Interface / tolerance</th><th>有关的</th></tr></thead>
+<tbody>
+<tr><td>轭</td><td>与传动系统凸轮轴承接口；传递线性运动</td><td><a href="../Drivetrain/index.html">传动系统</a></td></tr>
+<tr><td>传动轴</td><td>直径35毫米；轴安装在两端</td><td>—</td></tr>
+<tr><td>LMK35UU轴承</td><td>35 毫米轴上的线性轴承；导向轭运动</td><td>—</td></tr>
+<tr><td>变速箱安装板</td><td>安装到框架上；每帧 H7/定位销对准</td><td><a href="../Frame/index.html">框架</a></td></tr>
+<tr><td>采集系统</td><td>安装在负载安装板（框架）上；水果压在上面</td><td><a href="../Collection/index.html">Collection</a>, <a href="../Frame/index.html">框架</a></td></tr>
+</tbody>
+</table>
+<script>
+(function(){
+  var el = document.getElementById('trans-slideshow');
+  if (!el) return;
+  var slides = el.querySelectorAll('.slide');
+  var cap = document.getElementById('trans-caption');
+  var counter = document.getElementById('trans-counter');
+  var n = slides.length;
+  var i = 0;
+  function go(k) { i = (k + n) % n; slides.forEach(function(s,j){ s.classList.toggle('active', j===i); }); if (cap) cap.textContent = slides[i].getAttribute('data-caption') || ''; if (counter) counter.textContent = (i+1) + ' / ' + n; }
+  el.querySelector('#trans-prev').addEventListener('click', function(){ go(i-1); });
+  el.querySelector('#trans-next').addEventListener('click', function(){ go(i+1); });
+  var hash = window.location.hash;
+  if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
+})();
+  </script>
+<p class="back"><a href="../index.html">← 返回 P6 RFP 概述</a></p>
+<footer style="margin-top:2rem; padding-top:1rem; border-top:1px solid var(--border); color:var(--muted); font-size:0.85rem;">最后更新时间：2026 年 3 月 20 日。</footer>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>11. 管制和电子——P6</title>
+<style>
+    :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
+    a { color: var(--accent); }
+    h1 { font-size: 1.35rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.25rem; }
+    ul { padding-left: 1.25rem; }
+    .back { margin-bottom: 1rem; font-size: 0.9rem; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    .tbd { color: var(--muted); font-style: italic; }
+  </style>
+  <link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<nav class="site-lang-bar" aria-label="Language">
+  <span class="lang-label">语言：</span>
+  <a href="../../Controls-Electronics/index.html">English</a>
+  <span aria-hidden="true">·</span>
+  <a href="index.html" aria-current="page">中文</a>
+  <span aria-hidden="true">·</span>
+  <a href="../../pt/Controls-Electronics/index.html">Português</a>
+</nav>
+
+<p class="back"><a href="../index.html">* 回到P6</a></p>
+<h1>11. 控制和电子</h1>
+<h2>分页</h2>
+<ul>
+<li><a href="machine-control-definition-and-ui/index.html">机器控制定义和UI</a> <span class="muted">(更新2026-03-20) (中文(简体) ).</span>——独立局部控制,按钮/指示器,LOTO.</li>
+<li><a href="motor-power-management/index.html">汽车电力管理</a> <span class="muted">(更新2026-03-20) (中文(简体) ).</span>——电源保护,接触器/启动器,防水,电流感应.</li>
+<li><a href="yoke-position-sensor/index.html">Yoke 位置传感器</a> <span class="muted">(更新2026-03-20) (中文(简体) ).</span>——循环感测,用于停用-pelers-open和循环计数(TBD执行)。</li>
+</ul>
+<h2>导言</h2>
+<p><strong>管制和电子</strong>(子系统11)涵盖P6上的所有电气:操作员控制面板(电子站、上/下、起/站、指示器),3个编码盖安全间锁。<a href="../Enclosure-shell/index.html">附文/壳</a>,用于<a href="../Drivetrain/index.html">驱动列车</a>电动机(WEG W22),以及压载位置传感器<a href="../Transmission/index.html">传输</a>循环时间和安全停止逻辑。 该子系统必须是独立的可操作性,被冲洗式保护,并且为未来的IOT/数据集成做好准备.</p>
+<h2>讨论情况</h2>
+<h3>粗略设计意图( M)</h3>
+<ul>
+<li><strong>独立运作</strong>——机器必须作为独立的单元(当地ON/OFF)可以操作,用于独立操作,检查,部件更换,以及简单的清洁.</li>
+<li><strong>水的保护</strong>所有电气系统都必须受到保护,以便进行严格的工业清洁(封闭/IP、腺体、电缆线路和冲洗做法)。</li>
+<li><strong>数据准备</strong>——应准备数据交换(IOT/工厂集成)的控制系统,即使没有在第一个原型上实施.</li>
+</ul>
+<h3>用户控制面板</h3>
+<p>运算器接口用于电源、运行控制和状态。</p>
+<ul>
+<li><strong>开始/开始</strong>按钮 —— 启动机器操作。</li>
+<li><strong>关闭/停止</strong>按钮 ——停止机器操作。</li>
+<li><strong>紧急停车</strong>——硬站;机器在重置前不能运行.</li>
+<li><strong>运行</strong>指标 —— 显示机器运行状态。</li>
+<li><strong>停下来</strong>指示器 – 显示机器停止状态 。</li>
+<li><strong>机器打开</strong>指标 ——表示任何安全盖是打开的(间锁活动)。</li>
+</ul>
+<h3>锁定/标记退出( LOTO)</h3>
+<p>提供易于进入的后方LOTO单元,以隔离电力供服务和季节性拆解。</p>
+<h3>安全开关</h3>
+<p>打开安全开关<strong>3盖</strong>(车盖、车盖、支线)<a href="../Enclosure-shell/index.html">附文/壳</a>) (中文(简体) ). 互锁逻辑必须是故障安全:当任何盖子打开时,机器会关闭,无法运行.</p>
+<ul>
+<li><strong>编码安全开关</strong>——编码间锁偏爱强健.</li>
+<li><strong>编码盖开关(磁铁码)</strong>——只有指定的磁/操作手柄才能启动盖式安全开关(反误用). 包括故障安全行为和清晰的"机器打开"指标.</li>
+<li><strong>控制板整合</strong>——盖安全开关输入必须采用与商业机器控制相同的突破板+主板架构进行集成,因此安全行为与现有系统相匹配.</li>
+<li><strong>停止剥皮/ 开放状态</strong>包括一种在剥皮机/盖子处于不安全状态时防止操作(或触发停止)的传感器/逻辑路径.</li>
+</ul>
+<h3>汽车控制和电力管理</h3>
+<p>空调电源分配和发动机驱动<a href="../Drivetrain/index.html">驱动列车</a>发动机。</p>
+<ul>
+<li><strong>AC 联系人</strong>——发动机电路主电源切换.</li>
+<li><strong>汽车启动器/ 软启动器</strong>——控制主驱动电动机的启动/停止和保护,包括超流保护.</li>
+<li><strong>内部控制小组</strong>——断路器,继电器,PCB/IO根据需要(最终架构TBD).</li>
+<li><strong>电线和电缆管理</strong>——控制面板、电动机和安全电路所需的路由、腺体和管理。</li>
+<li><strong>汽车 :</strong> <strong>WEG W22 (英语).</strong>- 中国50赫兹基线(见<a href="motor-power-management/index.html">汽车电力管理</a>; 垂直挂载, 向下滚动( V5T 样式)。</li>
+<li><strong>电流感应</strong>用于检测和估计吞吐量的瞬时电流测量(一段时间内加工的水果)。</li>
+</ul>
+<h3>Yoke 位置传感器</h3>
+<p>P6要求<a href="../Transmission/index.html">枷锁</a>位置/循环传感器(安装在<a href="../Transmission/index.html">传输</a>(c) 支持控制下的安全停车条件和关键条件<strong>完全打开停止</strong>行为使得内部部件可以被服务/删除. 准确的传感器类型和信号接口为TBD.</p>
+<ul>
+<li><strong>循环传感器</strong>提供周期计数(每个周期的周期)。 根据最终机制,这可能是与"打开剥皮机停止"相同的传感器.</li>
+<li><strong>完全打开停止位置</strong>——当机器在正常运行中被关闭/停止运行时,系统必须停止在<strong>完全打开位置</strong>(操作员访问/搬运)。</li>
+<li><strong>紧急/闭锁关闭</strong>——当按下E-stop或者一个编码的盖子安全开关表示一个打开的盖子/间锁断层时,机器必须立即关闭(没有重新定位到打开).</li>
+</ul>
+<h3>状态</h3>
+<p>获取了系统要求。 Still TBD:详细的电气架构(PLC/PCB选择),封装IP评级,线程标准,以及最终的传感器选择. 开发时添加照片和线条图。</p>
+<h2>建议数字(承包商的清晰度)</h2>
+<ul class="muted">
+<li><strong>添加图</strong>编号 :<strong>系统块图</strong>——电子站,盖间锁,运动接触器,传感器输入(单页).</li>
+<li><strong>添加图</strong>编号 :<strong>IP概念</strong>- 用于冲洗的柜/腺布局(见<a href="motor-power-management/index.html">汽车电力管理</a>) (中文(简体) ).</li>
+<li><strong>添加图</strong>编号 :<strong>传感器 + 安全状态</strong>- 看到没?<a href="yoke-position-sensor/index.html">Yoke 位置传感器</a>呼唤</li>
+</ul>
+<footer style="margin-top:2rem; padding-top:1rem; border-top:1px solid var(--border); color:var(--muted); font-size:0.85rem;">最新更新时间:2026-03-20.</footer>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>4. Extração e sincronização — P6 RFP</title>
+<style>
+    :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
+    a { color: var(--accent); }
+    h1 { font-size: 1.35rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.25rem; }
+    ul, ol { padding-left: 1.25rem; }
+    .back { margin-bottom: 1rem; font-size: 0.9rem; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    .swatch { display: inline-block; width: 1.25rem; height: 1.25rem; border: 1px solid var(--border); border-radius: 3px; vertical-align: middle; }
+    table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+    th, td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
+    .slideshow { margin: 1.5rem 0; }
+    .slideshow .slide { display: none; }
+    .slideshow .slide.active { display: block; }
+    .slideshow .slide img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
+    .slideshow-caption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); min-height: 2.5em; }
+    .slideshow-controls { display: flex; align-items: center; gap: 1rem; margin-top: 0.75rem; flex-wrap: wrap; }
+    .slideshow-controls button { background: var(--border); color: var(--text); border: none; padding: 0.35rem 0.75rem; border-radius: 4px; cursor: pointer; font-size: 0.9rem; }
+    .slideshow-controls button:hover { background: var(--accent); color: #fff; }
+    .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
+    .iface-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    .iface-table th, .iface-table td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
+    .iface-table th { color: var(--muted); font-weight: 600; }
+    .reminder { background: rgba(88, 166, 255, 0.12); border: 1px solid var(--accent); border-radius: 6px; padding: 0.75rem 1rem; margin: 1rem 0; font-size: 0.95rem; }
+  </style>
+  <link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<nav class="site-lang-bar" aria-label="Language">
+  <span class="lang-label">Idioma:</span>
+  <a href="../../Extraction-syncronisation/index.html">English</a>
+  <span aria-hidden="true">·</span>
+  <a href="../../zh/Extraction-syncronisation/index.html">中文</a>
+  <span aria-hidden="true">·</span>
+  <a href="index.html" aria-current="page">Português</a>
+</nav>
+
+<p class="back"><a href="../index.html">← Voltar para P6 RFP visão geral</a></p>
+<h1>4. Extração e sincronização</h1>
+<h2>Subpáginas</h2>
+<ul>
+<li><a href="fruit-support/index.html">Apoio aos frutos</a> <span class="muted">(atualizado em 2026-03-20)</span>— preparação de laranjas para descascadores; 3 carris, empurrador; vistas CAD e chave de cor.</li>
+<li><a href="peelers/index.html">Peelers</a> <span class="muted">(atualizado em 2026-03-20)</span>— descascadores accionados; fabricação de flanges + fluxo de trabalho de ajustamento/alinhamento de feixes.</li>
+<li><a href="driven-bracket/index.html">Suporte acionado</a> <span class="muted">(atualizado em 2026-03-20)</span>— suporte de alta carga; conceito de fundição + pós-maquinagem; montagem do deflector de pára-quedas WIP.</li>
+</ul>
+<h2>Introdução</h2>
+<p>O subsistema de extração e sincronização é a metade móvel do conjunto de suco. Recebe laranjas individuais da<a href="../Feeder/index.html">sistema de ingestão de fruta</a>, estaciona-os sobre os trilhos de apoio à fruta, e depois conduz os descascadores conduzidos para o<a href="../Collection/index.html">coleção</a>Os descascadores estáticos do módulo para comprimir e espremer a fruta. O movimento linear vem do<a href="../Transmission/index.html">transmissão</a>jugo e eixos, que empurram o suporte acionado (e tudo montado a ele) através do curso de compressão. No fim do curso, o intervalo alvo entre as faces accionadas e as faces estáticas do descascador é de aproximadamente 2-3 mm.</p>
+<div class="reminder"><strong>Descasque dos deflectores:</strong>A<strong>Deflector de pára-quedas</strong>(este subsistema) no âmbito do<strong>conduzido</strong>módulos de descascador é o defletor necessário para cobrir os pára-quedas do núcleo durante a compressão e peeling de rota corretamente.<strong>Deflectores estáticos na placa de montagem da coleção são removidos</strong>(figuras/reforço de texto pendentes).</div>
+<h2>&amp; Componentes da chave de cor</h2>
+<p class="muted">Cores CAD apenas para esta secção. Subconjuntos com mais cores: ver suas páginas (por exemplo.<a href="fruit-support/index.html">Apoio aos frutos</a>).</p>
+<table>
+<tr><th>Cor( s)</th><th>Componente</th></tr>
+<tr><td><span class="swatch" style="background-color:#E67E22"></span></td><td><strong>Descascadores de motor</strong>— malhas com descascadores estáticos (recolha);</td></tr>
+<tr><td><span class="swatch" style="background-color:#F1C40F"></span></td><td><strong>Suporte acionado</strong>— carrega carga do jugo; esmaga contra descascadores estáticos; 2x4 montar furos nas costas para jugos</td></tr>
+<tr><td><span class="swatch" style="background-color:#2ECC71"></span></td><td><strong>Apoio aos frutos</strong>— a preparação das laranjas para descascarem;<a href="fruit-support/index.html">Subpágina de apoio aos frutos</a>para detalhes &amp; cores extras</td></tr>
+<tr><td><span class="swatch" style="background-color:#1E8449"></span></td><td><strong>Pino central</strong>— no centro de cada descasque accionado</td></tr>
+<tr><td><span class="swatch" style="background-color:#9B59B6"></span></td><td><strong>Rolo</strong>— empurra a mola de alimentação aberta para colocar uma laranja no suporte dos frutos</td></tr>
+<tr><td><span class="swatch" style="background-color:#E74C3C"></span></td><td><strong>Deflectores de chute</strong>— reencaminhar a casca para trás da caixa; montado no suporte accionado; placa dobrada; evitar a casca em calhas durante a compressão</td></tr>
+</table>
+<h2 id="gallery">Figuras</h2>
+<p class="muted">Conjunto de extracção (8 visualizações). Descrição do apoio aos frutos:<a href="../../Extraction-syncronisation/fruit-support/#gallery">Subpágina de apoio aos frutos</a>.</p>
+<div class="slideshow" id="ext-slideshow">
+<div class="slideshow-track">
+<div class="slide active" data-caption="Figura 1. Isométrico — quatro módulos; deflectores de pára-quedas (vermelhos) sob descasques; descascadores accionados, suporte de fruta, rolos." id="fig1"><img alt="Sincronização da extracção isométrica" src="../../Extraction-syncronisation/images/extraction-1.png"/></div>
+<div class="slide" data-caption="Figura 2. Frente — suporte accionado, quatro unidades de descascador com pinos centrais, suporte de fruta, rolos; deflectores de pára-quedas (vermelhos) por baixo de cada unidade." id="fig2"><img alt="Sincronização da extração frontal" src="../../Extraction-syncronisation/images/extraction-2.png"/></div>
+<div class="slide" data-caption="Figura 3. Lado - suporte de fruta acima dos descascadores; rolos; suporte acionado; deflectores de pára-quedas (vermelhos) no fundo." id="fig3"><img alt="Lado de sincronização da extração" src="../../Extraction-syncronisation/images/extraction-3.png"/></div>
+<div class="slide" data-caption="Figura 4. Direita — descascadores accionados, suporte de fruta, rolo, deflector de pára-quedas (vermelho)." id="fig4"><img alt="Sincronização da extracção à direita" src="../../Extraction-syncronisation/images/extraction-4.png"/></div>
+<div class="slide" data-caption="Figura 5. Lado — suporte acionado, descascadores, suporte de frutas, rolos; deflectores de pára-quedas (vermelhos) abaixo do suporte." id="fig5"><img alt="Sincronização da extracção do lado 2" src="../../Extraction-syncronisation/images/extraction-5.png"/></div>
+<div class="slide" data-caption="Figura 6. Frente — suporte acionado, suporte de fruta, rolos; deflectores de pára-quedas (vermelho); quatro estações." id="fig6"><img alt="Sincronização da extracção da frente 2" src="../../Extraction-syncronisation/images/extraction-6.png"/></div>
+<div class="slide" data-caption="Figura 7. Frente — quatro módulos; suporte de frutos (verde brilhante), descascadores accionados (laranja), deflectores de pára-quedas (vermelho), suporte accionado (amarelo)." id="fig7"><img alt="Sincronização da extracção da frente 3" src="../../Extraction-syncronisation/images/extraction-7.png"/></div>
+<div class="slide" data-caption="Figura 8. Frente/lado — quatro módulos; deflectores de pára-quedas (vermelhos) visíveis." id="fig8"><img alt="A extração sincroniza o lado da frente" src="../../Extraction-syncronisation/images/extraction-8.png"/></div>
+</div>
+<p aria-live="polite" class="slideshow-caption" id="ext-caption">Figura 1. Isométrico — quatro módulos; deflectores de pára-quedas (vermelhos) sob descasques; descascadores accionados, suporte de fruta, rolos.</p>
+<div class="slideshow-controls">
+<button aria-label="Anterior" id="ext-prev" type="button">← Anterior</button>
+<span class="slideshow-counter" id="ext-counter">22 / 8</span>
+<button aria-label="Próxima" id="ext-next" type="button">Próxima →</button>
+</div>
+</div>
+<h2>Discussão</h2>
+<h3>Desenho e intenção difíceis</h3>
+<ul>
+<li><strong>O que este subsistema faz</strong>— Receber uma única laranja do alimentador e estacioná-la no suporte dos frutos, em seguida, conduzir o evento de extracção por malhagem<strong>Peelings accionados</strong>com<strong>Descascadores estáticos</strong>(colecção). A<a href="../Transmission/index.html">transmissão</a>jugo / eixo empurrar este módulo para o módulo de coleta durante a compressão.</li>
+<li><strong>Estado do projeto</strong>— A geometria do núcleo do rolo é herdada de uma máquina comercial. A<strong>flanges de montagem</strong>para descascadores acionados e estáticos (e como eles são fabricados) não são finalizados e são planejados como flanges usinados, adicionados aos descascadores existentes.</li>
+<li><strong>Higiene/lavagem</strong>- Isto está dentro da zona de salpicos. Todas as superfícies devem ser laváveis por pulverização sem bolsas/prateleiras; as faces superiores devem ser inclinadas para drenagem. Os fixadores devem seguir a prática higiênica (por exemplo, evitar Phillips/lotado sempre que possível; preferir cabeças hex).</li>
+</ul>
+<h3>Problemas e riscos conhecidos</h3>
+<ul>
+<li><strong>Caminho de alta força</strong>— O suporte acionado carrega grandes cargas e momentos de flexão: eixos de transmissão empurram em um suporte curto, suportando quatro módulos de descascador. A vida de rigidez e fadiga é crítica.</li>
+<li><strong>Alinhamento do rolo</strong>— Os descascadores accionados devem ser concêntricos/alinhados com descascadores estáticos. O plano atual depende de uma abordagem de ajuste-então-bloqueio (buracos de ajuste soltos para ajuste, em seguida, furar/reboque e adicionar parafusos/dobras de ombro).</li>
+<li><strong>Rigidez do empurrador de sincronização</strong>— Apenas um empurrador é usado em quatro módulos, empurrando uma mola diagonal. Se o empurrador ou o suporte do fruto se flexionar lateralmente (eixo X), ele pode colidir com tubos/leves e causar danos catastróficos.</li>
+<li><strong>Os deflectores são WIP</strong>— os deflectores devem impedir que a casca caia nos pára-quedas do núcleo durante a compressão e redireccionar a casca para o pára-quedas da casca; o conceito actual ainda não está limitado.</li>
+</ul>
+<h3>DFM e fabricação (China)</h3>
+<ul>
+<li><strong>Suporte acionado</strong>— A intenção actual é um suporte accionado por areia com ângulos de projecto e pós-maquinagem para faces/buracos de montagem críticos. Contratante para confirmar a espessura das costelas, qualidade de fundição, e se fundido vs soldado é melhor.</li>
+<li><strong>Acabamento superficial</strong>— considerar o pós-processamento do suporte moldado para melhorar a limpeza (por exemplo, suavização/acabamento do fluxo) de modo a não haver fendas onde a polpa possa acumular-se.</li>
+<li><strong>Fabricação de flanges de peeler</strong>— O plano consiste em maquinar flanges (lante) e soldar uma placa aos descascadores existentes para aparafusamento. Contratante para propor uma abordagem robusta de soldagem + inspeção que preserva a geometria e higiene.</li>
+<li><strong>Apoio aos frutos</strong>— O projecto actual utiliza placas de 5 mm de corte de água montadas com ranhuras e soldadas. A rigidez deve evitar a inclinação e a flexão lateral, permitindo a pulverização CIP através de carris/gaps.</li>
+</ul>
+<h3>Otimizações procuradas</h3>
+<ul>
+<li><strong>Repetibilidade do alinhamento</strong>— Procedimento de alinhamento rápido que pode ser repetido sazonalmente (ajustar → lock → dowel/ombro-bolt).</li>
+<li><strong>Limpeza</strong>— Sem bolsos; faces superiores inclinadas; aberturas de carris que permitem a limpeza por pulverização dos descascadores.</li>
+<li><strong>Rigidez</strong>— Aumentar a rigidez dos suportes accionados e dos frutos para evitar colisões e preservar o alinhamento do descascador.</li>
+</ul>
+<h3>Perguntas para o contratante</h3>
+<ol>
+<li>Proponha a melhor estratégia de fabricação para o suporte acionado (cast vs soldado) dadas necessidades de lavagem/higiene, necessidades de rigidez e cadeia de suprimentos da China.</li>
+<li>Propor um procedimento de alinhamento do descascador e tolerâncias para concentricidade / mesh para que os descascadores não colidem e desgaste é controlado.</li>
+<li>Reveja os requisitos de rigidez do suporte de frutas + empurrador e proponha alterações de projeto que impeçam a flexão lateral e colisões, mantendo o spray CIP.</li>
+<li>Propor um projeto defletor de pára-quedas que seja rígido, manufacturável (formado/curvado), e que não colida durante o movimento; garantir que a casca é encaminhada para o pára-quedas de casca (não o pára-quedas de núcleo).</li>
+</ol>
+<h3>Números recomendados (clareza do contratante)</h3>
+<ul>
+<li><strong>Adicionar figura</strong>:<strong>Esboço de alinhamento do rolo</strong>— concentricidade do descascador versus estática e em que é fornecido um ajustamento versus onde os furos são aparafusados/aparafusados.</li>
+<li><strong>Adicionar figura</strong>:<strong>Envelope de colisão do empurrador</strong>— a deslocação do empurrador, a trajectória da mola e a desobstrução dos tubos/lides;</li>
+<li><strong>Adicionar figura</strong>:<strong>Intenção do deflector</strong>— a trajectória de descamação e a exigência de "não cair no pára-quedas do núcleo";</li>
+</ul>
+<h3>Subconjuntos</h3>
+<ul>
+<li><a href="fruit-support/index.html">Apoio aos frutos</a>— carris, ligação, empurrador; frutas directas do tubo ao descascador.</li>
+<li><a href="peelers/index.html">Peelers</a>— descascadores accionados; fabricação de flanges + fluxo de trabalho de ajustamento/alinhamento de feixes.</li>
+<li><a href="driven-bracket/index.html">Suporte acionado</a>— suportes de alta carga; conceito de molde + pós-maquinagem; montagem do deflector de pára-quedas.</li>
+</ul>
+<h3>Interfaces e tolerâncias</h3>
+<p class="muted">Interfaces conhecidas. As ligações vão para subsistemas relacionados.</p>
+<table class="iface-table">
+<thead><tr><th>Parte</th><th>Interface / tolerância</th><th>Relacionado</th></tr></thead>
+<tbody>
+<tr><td>Suporte acionado</td><td>2 conjuntos de 4× montar buracos nas costas para jugos; carrega carga de jugo; mashinhas contra descascadores estáticos</td><td><a href="../Transmission/index.html">Transmissão</a>,<a href="../Collection/index.html">Colecção</a></td></tr>
+<tr><td>Descascadores de motor</td><td>Malha com descascadores estáticos para extracção</td><td><a href="../Collection/index.html">Colecção</a></td></tr>
+<tr><td>Apoio aos frutos</td><td>Base aparafusada para o suporte de acionamento; 3 pares de trilhos angulares (redutor de altura ao centro); trilhos 3°→8°; empurrador para rolo; pulverizador CIP através de lacunas</td><td><a href="fruit-support/index.html">Apoio aos frutos</a>,<a href="../Feeder/index.html">Sistema de ingestão de frutas</a></td></tr>
+<tr><td>Rolo</td><td>Empurra mola aberta no sistema de ingestão de frutas para liberar uma laranja no suporte de frutas</td><td><a href="../Feeder/index.html">Sistema de ingestão de frutas</a></td></tr>
+<tr><td>Deflectores de chute</td><td>Reencaminhar a casca para trás da caixa; montado no suporte accionado; placa dobrada (WIP)</td><td><a href="../Outflow-disposal/index.html">Sistema de eliminação</a>,<a href="../Collection/index.html">Colecção</a></td></tr>
+</tbody>
+</table>
+<p class="back"><a href="../index.html">← Voltar para P6 RFP visão geral</a></p>
+<script>
+(function(){
+  var el = document.getElementById('ext-slideshow');
+  if (!el) return;
+  var slides = el.querySelectorAll('.slide');
+  var cap = document.getElementById('ext-caption');
+  var counter = document.getElementById('ext-counter');
+  var n = slides.length;
+  var i = 0;
+  function go(k) { i = (k + n) % n; slides.forEach(function(s,j){ s.classList.toggle('active', j===i); }); if (cap) cap.textContent = slides[i].getAttribute('data-caption') || ''; if (counter) counter.textContent = (i+1) + ' / ' + n; }
+  el.querySelector('#ext-prev').addEventListener('click', function(){ go(i-1); });
+  el.querySelector('#ext-next').addEventListener('click', function(){ go(i+1); });
+  var hash = window.location.hash;
+  if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
+})();
+  </script>
+<footer style="margin-top:2rem; padding-top:1rem; border-top:1px solid var(--border); color:var(--muted); font-size:0.85rem;">Última atualização: 2026-03-20.</footer>
+</body>
+</html>

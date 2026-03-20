@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>9. 附文/壳-P6</title>
+<style>
+    :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
+    a { color: var(--accent); }
+    h1 { font-size: 1.35rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.25rem; }
+    ul { padding-left: 1.25rem; }
+    .back { margin-bottom: 1rem; font-size: 0.9rem; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    .swatch { display: inline-block; width: 1.25rem; height: 1.25rem; border: 1px solid var(--border); border-radius: 3px; vertical-align: middle; }
+    table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+    th, td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
+    .reminder { background: rgba(88, 166, 255, 0.12); border: 1px solid var(--accent); border-radius: 6px; padding: 0.75rem 1rem; margin: 1rem 0; font-size: 0.95rem; }
+    .slideshow { margin: 1.5rem 0; }
+    .slideshow .slide { display: none; }
+    .slideshow .slide.active { display: block; }
+    .slideshow .slide img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
+    .slideshow-caption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); min-height: 2.5em; }
+    .slideshow-controls { display: flex; align-items: center; gap: 1rem; margin-top: 0.75rem; flex-wrap: wrap; }
+    .slideshow-controls button { background: var(--border); color: var(--text); border: none; padding: 0.35rem 0.75rem; border-radius: 4px; cursor: pointer; font-size: 0.9rem; }
+    .slideshow-controls button:hover { background: var(--accent); color: #fff; }
+    .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
+  </style>
+  <link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<nav class="site-lang-bar" aria-label="Language">
+  <span class="lang-label">语言：</span>
+  <a href="../../Enclosure-shell/index.html">English</a>
+  <span aria-hidden="true">·</span>
+  <a href="index.html" aria-current="page">中文</a>
+  <span aria-hidden="true">·</span>
+  <a href="../../pt/Enclosure-shell/index.html">Português</a>
+</nav>
+
+<p class="back"><a href="../index.html">* 回到P6</a></p>
+<h1>9. 附文/空壳</h1>
+<h2>分页</h2>
+<ul>
+<li><a href="protective-covers/index.html">防护罩(推车、驱动列车)</a> <span class="muted">(更新2026-03-20) (中文(简体) ).</span>——CAD数字来自共享的围廊.</li>
+<li><a href="overcentered-hinges/index.html">超中心链</a> <span class="muted">(更新2026-03-20) (中文(简体) ).</span>——CAD图+讨论;链接/括号概念.</li>
+</ul>
+<h2>导言</h2>
+<p>那个<strong>附文/壳</strong>(子系统9)从移动部件——带状/脉冲、螺旋桨驱动器和剥皮器组件——守卫操作员,同时允许快速进入清洁、服务和检查。 它由两个主要的封面组成(Plunger-side和<a href="../Drivetrain/index.html">驱动列车</a>- 侧)<a href="../Frame/index.html">边框</a>使用将每个盖盖固定在稳定开放或封闭位置的超中心链。 三个盖盖安全间锁(有编码的磁铁开关)装入<a href="../Controls-Electronics/index.html">控制器和电子设备</a>当任何封面打开时,防止操作的子系统。</p>
+<h2>颜色密钥组件( C)</h2>
+<p class="muted">两个主封面+超中心链条. 进气器,驱动列车盖,以及进气器盖,所有使用过心轴(开口闭口闭口闭口).</p>
+<table>
+<tr><th>颜色</th><th>构成部分</th></tr>
+<tr><td><span class="swatch" style="background-color:#BC4944"></span></td><td><strong>管道覆盖</strong>- 保护<a href="../Plug-ejection/index.html">核心弹出</a>喷射器</td></tr>
+<tr><td><span class="swatch" style="background-color:#489C26"></span></td><td><strong>驱动列车覆盖</strong>覆盖<a href="../Drivetrain/index.html">驱动列车</a></td></tr>
+<tr><td><span class="swatch" style="background-color:#4FB3DD"></span></td><td><strong>超中心链</strong>- 连接/架;架设到覆盖和框架</td></tr>
+<tr><td><span class="swatch" style="background-color:#E3B938"></span></td><td><strong>基础/框架</strong>——覆盖结构支持.</td></tr>
+</table>
+<div class="reminder"><strong>兴格设计(WIP):</strong>过度中心链条的弹簧和组装方法尚未设计.</div>
+<h2 id="gallery">图</h2>
+<p class="muted">CAD的观点是 遮盖,驱动列车遮盖, 和过于核心的连接。 参见<a href="#fig1">图1</a>, (中文).<a href="#fig2">图2</a>等 类.</p>
+<div class="slideshow" id="enc-slideshow">
+<div class="slideshow-track">
+<div class="slide active" data-caption="图1. 车体覆盖(绿色),两个支链组件(蓝色括号、粉红色臂;薰衣草括号)挂在侧面。" id="fig1"><img alt="车盖上的兴斯" src="../../Enclosure-shell/images/covers-1.png"/></div>
+<div class="slide" data-caption="图2. 高架——红色插座覆盖,绿色驱动列车覆盖,轴架挂架;内部结构." id="fig2"><img alt="覆盖度提高" src="../../Enclosure-shell/images/covers-2.png"/></div>
+<div class="slide" data-caption="图3. 侧面——螺旋盖(红色),驱动列车盖(绿色),蓝色超中心轴,褐色底板." id="fig3"><img alt="封面边" src="../../Enclosure-shell/images/covers-3.png"/></div>
+<div class="slide" data-caption="图4. 部分——红色螺旋柱盖,绿色驱动列车盖,蓝色链条;内部螺旋柱,管,提取组件." id="fig4"><img alt="覆盖部分" src="../../Enclosure-shell/images/covers-4.png"/></div>
+<div class="slide" data-caption="图5. 右侧——绿色驱动列车盖、红衣/吊轴车体、超中央轴(蓝色、粉红色、淡紫色);内轴、齿轮。" id="fig5"><img alt="右侧内部覆盖" src="../../Enclosure-shell/images/covers-5.png"/></div>
+<div class="slide" data-caption="图6. 前部——绿色驱动列车车盖,紫红色插座车盖(左/右),黄色框架,5个过度中心轴(蓝色/平克)." id="fig6"><img alt="前盖" src="../../Enclosure-shell/images/covers-6.png"/></div>
+<div class="slide" data-caption="图7. 前部——驱动列车车盖(绿色),螺旋桨车盖(红色/马琴塔),四个螺旋桨子组装,两个蓝色支链." id="fig7"><img alt="覆盖前置插件" src="../../Enclosure-shell/images/covers-7.png"/></div>
+<div class="slide" data-caption="图8. 右侧——驱动列车覆盖(绿色),相邻组装,超中心连接(蓝色/纯色),黄色底板." id="fig8"><img alt="覆盖右侧" src="../../Enclosure-shell/images/covers-8.png"/></div>
+</div>
+<p aria-live="polite" class="slideshow-caption" id="enc-caption">图1. 车体覆盖(绿色),两个支链组件(蓝色括号、粉红色臂;薰衣草括号)挂在侧面。</p>
+<div class="slideshow-controls">
+<button aria-label="上一个" id="enc-prev" type="button">上一个</button>
+<span class="slideshow-counter" id="enc-counter">1,8个</span>
+<button aria-label="下一个" id="enc-next" type="button">下一个</button>
+</div>
+</div>
+<h3>建议数字(承包商的清晰度)</h3>
+<ul class="muted">
+<li><strong>添加图</strong>编号 :<strong>互锁磁力目标</strong>每盖一个图(feeder / spiner / drivetrain).</li>
+<li><strong>添加图</strong>编号 :<strong>覆盖打开的碰撞检查</strong>——在服役岗位上用盖子全中风.</li>
+<li><strong>添加图</strong>编号 :<strong>弹簧辅助轴调谐</strong>——WIP链条敲定后,力对角.</li>
+</ul>
+<h2>讨论情况</h2>
+<h3>接口</h3>
+<ul>
+<li><strong>管道覆盖</strong>——以框架/feeder为中心;保护<a href="../Plug-ejection/index.html">核心弹出</a>冲刺者.</li>
+<li><strong>驱动列车覆盖</strong>- 框架/收费机体过于集中的链条;<a href="../Drivetrain/index.html">驱动列车</a>。 。 。 。</li>
+<li><strong>进纸器</strong>- 也安装了过于核心的链条;见<a href="../Feeder/index.html">水果摄入系统</a>。 。 。 。</li>
+</ul>
+<p class="back"><a href="../index.html">* 回到P6</a></p>
+<script>
+(function(){
+  var el = document.getElementById('enc-slideshow');
+  if (!el) return;
+  var slides = el.querySelectorAll('.slide');
+  var cap = document.getElementById('enc-caption');
+  var counter = document.getElementById('enc-counter');
+  var n = slides.length;
+  var i = 0;
+  function go(k) { i = (k + n) % n; slides.forEach(function(s,j){ s.classList.toggle('active', j===i); }); if (cap) cap.textContent = slides[i].getAttribute('data-caption') || ''; if (counter) counter.textContent = (i+1) + ' / ' + n; }
+  el.querySelector('#enc-prev').addEventListener('click', function(){ go(i-1); });
+  el.querySelector('#enc-next').addEventListener('click', function(){ go(i+1); });
+  var hash = window.location.hash;
+  if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
+})();
+  </script>
+<footer style="margin-top:2rem; padding-top:1rem; border-top:1px solid var(--border); color:var(--muted); font-size:0.85rem;">最新更新时间:2026-03-20.</footer>
+</body>
+</html>

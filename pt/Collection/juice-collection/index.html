@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Recolha de sumos — Recolha — P6 RFP</title>
+<style>
+    :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
+    a { color: var(--accent); }
+    h1 { font-size: 1.35rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.25rem; }
+    h3 { font-size: 1rem; margin-top: 1rem; color: var(--muted); }
+    ul, ol { padding-left: 1.25rem; }
+    .back { margin-bottom: 1rem; font-size: 0.9rem; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    .swatch { display: inline-block; width: 1.25rem; height: 1.25rem; border: 1px solid var(--border); border-radius: 3px; vertical-align: middle; }
+    table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+    th, td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
+    .iface-table th { color: var(--muted); font-weight: 600; }
+    .slideshow { margin: 1.5rem 0; }
+    .slideshow .slide { display: none; }
+    .slideshow .slide.active { display: block; }
+    .slideshow .slide img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
+    .slideshow-caption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); min-height: 2.5em; }
+    .slideshow-controls { display: flex; align-items: center; gap: 1rem; margin-top: 0.75rem; flex-wrap: wrap; }
+    .slideshow-controls button { background: var(--border); color: var(--text); border: none; padding: 0.35rem 0.75rem; border-radius: 4px; cursor: pointer; font-size: 0.9rem; }
+    .slideshow-controls button:hover { background: var(--accent); color: #fff; }
+    .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
+    .figure-standalone { margin: 1.25rem 0; }
+    .figure-standalone img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
+    .figure-standalone figcaption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); }
+  </style>
+  <link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+<nav class="site-lang-bar" aria-label="Language">
+  <span class="lang-label">Idioma:</span>
+  <a href="../../../Collection/juice-collection/index.html">English</a>
+  <span aria-hidden="true">·</span>
+  <a href="../../../zh/Collection/juice-collection/index.html">中文</a>
+  <span aria-hidden="true">·</span>
+  <a href="index.html" aria-current="page">Português</a>
+</nav>
+
+<p class="back"><a href="../index.html">← Voltar para a coleção</a>·<a href="../../index.html">P6 RFP</a></p>
+<h1>Colecção de sumos</h1>
+<p class="muted">Parte da<a href="../index.html">Colecção</a>secção. Corpos coletores e tubos de saída que encaminham suco para tanques/bombas de terceiros, e fornecem um caminho CIP de fluxo inverso.</p>
+<h2>Introdução</h2>
+<p>Os coletores de suco capturam o suco saindo das ranhuras do tubo de filtro e o retiram da máquina através de tubagens sanitárias e interfaces de conexão rápida. Os coletores também se destinam a suportar um modo CIP de fluxo reverso que libera fluido de limpeza de volta através dos tubos de filtro e para fora dos cortadores de plug.</p>
+<h2>&amp; Componentes da chave de cor</h2>
+<p class="muted">Principais componentes e intenções (as cores podem variar de acordo com as figuras CAD).</p>
+<table>
+<tr><th>Cor( s)</th><th>Componente</th></tr>
+<tr><td><em>—</em></td><td><strong>Corpo colecionador</strong>—<strong>304 inox</strong>montagem do tubo (conceito: tamanho padrão do tubo; corpo principal ~57 mm OD escolhido para disponibilidade, não uma exigência dura);<strong>alvo de rugosidade da superfície interior da zona alimentar Ra ~0,8 μm</strong>.</td></tr>
+<tr><td><em>—</em></td><td><strong>Tubo de saída</strong>— conceito dimensionado para ligações rápidas comuns; a intenção atual é de ~38 mm OD saída para mangueira de borracha via adaptador de nervuras.</td></tr>
+<tr><td><em>—</em></td><td><strong>Interface de ligação rápida</strong>—<strong>padrão</strong>Ferrule/flange sanitário que se acasala a jusante<strong>ligação de borracha nervurada</strong>(escolha uma especificação comum de conexão rápida disponível na China, sempre que possível) para desconexão rápida.</td></tr>
+<tr><td><em>—</em></td><td><strong>Comutação em T</strong>— conceito para alternar entre "suco para tanque" vs "fluido CIP para colector".</td></tr>
+</table>
+<h2 id="gallery">Figuras</h2>
+<p class="muted">O contexto do sistema permanece no<a href="../../../Collection/index.html#gallery">Coleta galeria principal</a>. Abaixo: relação coletor + filtro e uma visão lateral da submontagem suco-coleção.<a href="#fig-juice-collector">Figura 1</a>;<a href="#fig-juice-side">Figura 2</a>.</p>
+<figure class="figure-standalone" id="fig-juice-collector">
+<img alt="Coletor de suco e conjunto de filtro" src="../../../Collection/juice-collection/images/collectorandfilter.png"/>
+<figcaption><strong>Figura 1.</strong>Colector e filtro — relação de montagem (foto).</figcaption>
+</figure>
+<figure class="figure-standalone" id="fig-juice-side">
+<img alt="Vista lateral da subconjunto de recolha de sumos" src="../../../Collection/juice-collection/images/sideview.png"/>
+<figcaption><strong>Figura 2.</strong>Vista lateral — perfil subconjunto da coleção do suco.</figcaption>
+</figure>
+<h3>Números recomendados (clareza do contratante)</h3>
+<ul class="muted">
+<li><strong>Adicionar figura</strong>:<strong>Chamadas de tamanho de tubo</strong>(corpo principal OD, saída OD/ID) e tipos de montagem soldada.</li>
+<li><strong>Adicionar figura</strong>: a jusante<strong>conexão rápida + adaptador de mangueira com nervuras</strong>parte exemplo e como acasala com mangueira de borracha.</li>
+<li><strong>Adicionar figura</strong>:<strong>Esquema de canalização CIP</strong>(válvula T, válvulas de retenção, direcção do fluxo).</li>
+</ul>
+<h2>Discussão</h2>
+<h3>Desenho e intenção difíceis</h3>
+<ul>
+<li><strong>Fluxo dianteiro</strong>— O sumo sai através de aberturas de tubo filtrante para o corpo do colector e, em seguida, através do tubo de saída para tanques/bombas de terceiros.</li>
+<li><strong>Tamanhos padrão dos tubos</strong>— O conceito atual utiliza 304 tamanhos de tubos inoxidáveis selecionados para disponibilidade (corpo principal ~57 mm OD; saída de tamanho para conexão rápida comum e hardware de mangueira).</li>
+<li><strong>Requisitos de acabamento da superfície</strong>— As superfícies interiores da zona alimentar devem ser fabricadas/terminadas para se manterem limpáveis (objectivo<strong>Ra ~0,8 μm</strong>A menos que o contratante proponha um acabamento de superfície alternativo validado em termos de higiene).</li>
+</ul>
+<h3>Conceito CIP (fluxo inverso)</h3>
+<ul>
+<li><strong>Alternando</strong>— Uma válvula T é utilizada para seleccionar entre "juice out" vs "CIP fluid in".</li>
+<li><strong>Direcção do fluxo</strong>— o fluido CIP entra através do tubo de saída e inunda a câmara de colector, depois flui através do tubo de filtro e sai da linha central do cortador de plugue para desprender as fendas e passagens internas.</li>
+</ul>
+<h3>Problemas e riscos conhecidos</h3>
+<ul>
+<li><strong>Limpar zonas mortas</strong>— Contratante para identificar as regiões estagnadas na geometria do colector em que a pasta possa acumular-se e propor melhorias na drenagem/fluxo.</li>
+<li><strong>Normas de ligação</strong>— É necessário escolher uma norma de ligação rápida (Tri-Clamp ou equivalente) e materiais de vedação compatíveis com produtos químicos CIP.</li>
+</ul>
+<h3>Perguntas para o contratante</h3>
+<ol>
+<li>Recomendar normas sanitárias/rápidas de conexão CN disponíveis e tamanhos específicos de tubos (DO/ID) para atender aos requisitos de fluxo e limpeza.</li>
+<li>Valide o conceito CIP de fluxo reverso e proponha válvulas/válvulas de verificação necessárias, limites de pressão e protocolo de manutenção/limpeza.</li>
+<li>Proponha um adaptador de mangueira nervurada robusto e útil e uma estratégia de conexão rápida para o tubo de saída (inclua opções de fornecimento na China).</li>
+</ol>
+<h3>Interfaces</h3>
+<ul>
+<li><strong>Entrada:</strong>Suco de tubos filtrantes.</li>
+<li><strong>Saída:</strong>Tubo de saída para canalização de terceiros; caminho de entrada CIP no modo de fluxo reverso.</li>
+<li><strong>Montar:</strong>Coletores montar na placa de montagem da coleção e interface com descascador estático / geometria do coletor.</li>
+</ul>
+<h3>Interfaces e tolerâncias</h3>
+<p class="muted">Interfaces e tolerâncias conhecidas. As ligações vão para subsistemas relacionados.</p>
+<table class="iface-table">
+<thead><tr><th>Parte</th><th>Interface / tolerância</th><th>Relacionado</th></tr></thead>
+<tbody>
+<tr><td>Corpo colecionador</td><td>Conjunto de tubo inoxidável padrão 304; alvo da zona alimentar interior<strong>Ra ~0,8 μm</strong>(requisito de limpeza). Corpo principal ~57 mm Conceito de OD (condutor de disponibilidade; pode mudar)</td><td><a href="../index.html">Colecção</a></td></tr>
+<tr><td>Tubo de saída</td><td>Conceito: ~38 mm OD saída tamanho para conexão rápida + adaptador de mangueira nervuras</td><td>—</td></tr>
+<tr><td>Valva em T</td><td>Interruptor entre saída de suco e entrada de CIP (conceito)</td><td>—</td></tr>
+</tbody>
+</table>
+<p class="back"><a href="../index.html">← Voltar para a coleção</a>·<a href="../../index.html">P6 RFP</a></p>
+<footer style="margin-top:2rem; padding-top:1rem; border-top:1px solid var(--border); color:var(--muted); font-size:0.85rem;">Última atualização: 2026-03-20.</footer>
+</body>
+</html>

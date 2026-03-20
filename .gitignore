@@ -6,3 +6,6 @@ __pycache__/
 # Cursor / workspace artifacts
 .cursor/skills/
 RFPs.code-workspace
+
+# i18n build logs
+tools/build_i18n*.txt

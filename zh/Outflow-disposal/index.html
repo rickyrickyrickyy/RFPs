@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>8. 处置系统-P6 RFP</title>
+<style>
+    :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
+    a { color: var(--accent); }
+    h1 { font-size: 1.35rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.25rem; }
+    ul { padding-left: 1.25rem; }
+    .back { margin-bottom: 1rem; font-size: 0.9rem; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+    th, td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
+    .swatch { display: inline-block; width: 1.25rem; height: 1.25rem; border: 1px solid var(--border); border-radius: 3px; vertical-align: middle; }
+    .slideshow { margin: 1.5rem 0; }
+    .slideshow .slide { display: none; }
+    .slideshow .slide.active { display: block; }
+    .slideshow .slide img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
+    .slideshow-caption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); min-height: 2.5em; }
+    .slideshow-controls { display: flex; align-items: center; gap: 1rem; margin-top: 0.75rem; flex-wrap: wrap; }
+    .slideshow-controls button { background: var(--border); color: var(--text); border: none; padding: 0.35rem 0.75rem; border-radius: 4px; cursor: pointer; font-size: 0.9rem; }
+    .slideshow-controls button:hover { background: var(--accent); color: #fff; }
+    .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
+    .iface-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    .iface-table th, .iface-table td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
+    .iface-table th { color: var(--muted); font-weight: 600; }
+  </style>
+  <link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<nav class="site-lang-bar" aria-label="Language">
+  <span class="lang-label">语言：</span>
+  <a href="../../Outflow-disposal/index.html">English</a>
+  <span aria-hidden="true">·</span>
+  <a href="index.html" aria-current="page">中文</a>
+  <span aria-hidden="true">·</span>
+  <a href="../../pt/Outflow-disposal/index.html">Português</a>
+</nav>
+
+<p class="back"><a href="../index.html">* 回到P6</a></p>
+<h1>8. 处置系统</h1>
+<h2>分页</h2>
+<ul>
+<li><a href="chutes-and-augers/index.html">提琴手和弹琴手</a> <span class="muted">(更新2026-03-20) (中文(简体) ).</span>——CAD,槽组装照片,供应商auger图;剥离对核心路径.</li>
+<li><a href="deflectors/index.html">防御器</a> <span class="muted">(更新2026-03-20) (中文(简体) ).</span>——驱动偏转器 CAD 上下文+覆盖核心槽/auger 打开的照片.</li>
+</ul>
+<h2>导言</h2>
+<p>那个<strong>处置系统</strong>(子系统8)路线<strong>皮条</strong>和<strong>核心</strong>进入单独的运输通道,使每个废物流都能在下游独立处理。 之后<a href="../Plug-ejection/index.html">核心弹出</a>,核心会掉入<strong>核心槽</strong>(每个剥皮站下方的对角-tube概念)<strong>剥槽</strong>. 两种取料机然后将皮和芯分别从机器中输送出来——例如,在将皮进行处理时,芯可以进行二次洗涤或提取汁液。</p>
+<h2>颜色密钥组件( C)</h2>
+<p class="muted">皮尔槽 核心槽 augers——细节页 TBD. 一些 CAD 视图使用替代颜色( 第二行) 。</p>
+<table>
+<tr><th>颜色</th><th>构成部分</th></tr>
+<tr><td><span class="swatch" style="background-color:#D43C3C"></span> <span class="swatch" style="background-color:#2768BC" title="备选案文"></span></td><td><strong>皮尔槽</strong>- 折叠的金属薄板;剥皮器的皮条</td></tr>
+<tr><td>. . . . . .<span class="swatch" style="background-color:#D79132" title="备选案文"></span></td><td><strong>核心槽</strong>焊接为剥离槽;核心弹出后核</td></tr>
+<tr><td><span class="swatch" style="background-color:#28B399"></span> <span class="swatch" style="background-color:#FFED9E" title="备选案文"></span></td><td><strong>两个人</strong>把皮和核分开</td></tr>
+</table>
+<h2 id="gallery">图</h2>
+<p class="muted">CAD观点. 参见案文中的数字:<a href="#fig1">图1</a>, (中文).<a href="#fig2">图2</a>等 类.</p>
+<div class="slideshow" id="disp-slideshow">
+<div class="slideshow-track">
+<div class="slide active" data-caption="图1. 自上而下的同位素——位于地基上的红槽,两个通道." id="fig1"><img alt="顶端同位素" src="../../Outflow-disposal/images/disposal-top-isometric.png"/></div>
+<div class="slide" data-caption="图2. 带有核心槽的红皮槽;两根齿轮。" id="fig2"><img alt="水管和水管" src="../../Outflow-disposal/images/disposal-chute-augers.png"/></div>
+<div class="slide" data-caption="图3. 仅红槽,上架." id="fig3"><img alt="只带管" src="../../Outflow-disposal/images/disposal-chute-only.png"/></div>
+<div class="slide" data-caption="图4. 右侧——红槽,核心槽,下方为齿轮." id="fig4"><img alt="右降落伞和核心" src="../../Outflow-disposal/images/disposal-right-chute-core.png"/></div>
+<div class="slide" data-caption="图5. 前部-红色折叠板金属槽,位于钢架上方。" id="fig5"><img alt="前槽和边框" src="../../Outflow-disposal/images/disposal-front-chute-frame.png"/></div>
+<div class="slide" data-caption="图6. 右——红槽;两座Teal U形的Auger住房。" id="fig6"><img alt="右 U 频道" src="../../Outflow-disposal/images/disposal-right-u-channels.png"/></div>
+<div class="slide" data-caption="图7. 替代品——蓝皮槽、橙芯槽。" id="fig7"><img alt="亚特蓝/橙" src="../../Outflow-disposal/images/disposal-alt-blue-orange.png"/></div>
+<div class="slide" data-caption="图8. 替代品——蓝色槽,橙色核心槽,通道." id="fig8"><img alt="换位异构" src="../../Outflow-disposal/images/disposal-alt-isometric.png"/></div>
+<div class="slide" data-caption="图9. 红槽,四个核心槽,teal auger通道." id="fig9"><img alt="红色核心通道" src="../../Outflow-disposal/images/disposal-red-core-teal-channels.png"/></div>
+</div>
+<p aria-live="polite" class="slideshow-caption" id="disp-caption">图1. 自上而下的同位素——位于地基上的红槽,两个通道.</p>
+<div class="slideshow-controls">
+<button aria-label="上一个" id="disp-prev" type="button">上一个</button>
+<span class="slideshow-counter" id="disp-counter">1/9 (中文(简体) ).</span>
+<button aria-label="下一个" id="disp-next" type="button">下一个</button>
+</div>
+</div>
+<h3>建议数字(承包商的清晰度)</h3>
+<ul class="muted">
+<li><strong>添加图</strong>编号 :<strong>皮尔与核心分离</strong>——计划视图精简六槽阵列.</li>
+<li><strong>添加图</strong>编号 :<strong>接收到的过渡</strong>——分离沟槽,用于剥离和核心线.</li>
+<li><strong>添加图</strong>编号 :<strong>高级P&amp;ID</strong>——可选,如果第三方接头供应商需要流程上下文.</li>
+</ul>
+<h2>讨论情况</h2>
+<h3>函数(周期)</h3>
+<ol>
+<li>核心从<a href="../Plug-ejection/index.html">核心弹出</a> <strong>掉进核心槽</strong>每座皮革车站正下方</li>
+<li>皮尔斯离开皮革车站<strong>围绕核心槽流动</strong>通过伞形几何(hexagonal tunnel 带有三角导/牵引面),防止皮条进入核心槽流.</li>
+<li>两个接线员传达<strong>皮条</strong>和<strong>核心</strong>分开。</li>
+</ol>
+<h3>接口</h3>
+<ul>
+<li><strong>输入( 分数) :</strong>从<a href="../Plug-ejection/index.html">核心弹出</a>——核心落入核心槽.</li>
+<li><strong>输入( 页) :</strong>从<a href="../Collection/index.html">收藏</a>/剥离——剥到剥离器的两侧,两条通道.</li>
+<li><strong>输出 :</strong>两只雄鹿分别传送皮和核。</li>
+</ul>
+<h2>接口和容忍度</h2>
+<p class="muted">已知的界面与容性. 链接到相关的子系统.</p>
+<table class="iface-table">
+<thead><tr><th>编</th><th>接口/容忍度</th><th>相关</th></tr></thead>
+<tbody>
+<tr><td>核心槽</td><td>从核心弹出接收核心; 焊接到剥离槽</td><td><a href="../Plug-ejection/index.html">核心弹出</a></td></tr>
+<tr><td>皮尔槽</td><td>从剥皮者一侧接收剥皮(收集/提取);两个渠道</td><td><a href="../Collection/index.html">收藏</a></td></tr>
+<tr><td>预兆</td><td>2台自动取款机;将皮和芯分别运走;需要进行机下清理</td><td><a href="../Frame/index.html">框架</a></td></tr>
+</tbody>
+</table>
+<script>
+(function(){
+  var el = document.getElementById('disp-slideshow');
+  if (!el) return;
+  var slides = el.querySelectorAll('.slide');
+  var cap = document.getElementById('disp-caption');
+  var counter = document.getElementById('disp-counter');
+  var n = slides.length;
+  var i = 0;
+  function go(k) { i = (k + n) % n; slides.forEach(function(s,j){ s.classList.toggle('active', j===i); }); if (cap) cap.textContent = slides[i].getAttribute('data-caption') || ''; if (counter) counter.textContent = (i+1) + ' / ' + n; }
+  el.querySelector('#disp-prev').addEventListener('click', function(){ go(i-1); });
+  el.querySelector('#disp-next').addEventListener('click', function(){ go(i+1); });
+  var hash = window.location.hash;
+  if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
+})();
+  </script>
+<footer style="margin-top:2rem; padding-top:1rem; border-top:1px solid var(--border); color:var(--muted); font-size:0.85rem;">最新更新时间:2026-03-20.</footer>
+</body>
+</html>

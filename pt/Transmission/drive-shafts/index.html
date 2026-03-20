@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Eixos de transmissão — Transmissão — P6 RFP</title>
+<style>
+    :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
+    a { color: var(--accent); }
+    h1 { font-size: 1.35rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.25rem; }
+    h3 { font-size: 1rem; margin-top: 1rem; color: var(--muted); }
+    ul, ol { padding-left: 1.25rem; }
+    .back { margin-bottom: 1rem; font-size: 0.9rem; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    .slideshow { margin: 1.5rem 0; }
+    .slideshow-track { position: relative; }
+    .slideshow .slide { display: none; }
+    .slideshow .slide.active { display: block; }
+    .slideshow .slide img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
+    .slideshow-caption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); min-height: 2.5em; }
+    .slideshow-controls { display: flex; align-items: center; gap: 1rem; margin-top: 0.75rem; flex-wrap: wrap; }
+    .slideshow-controls button { background: var(--border); color: var(--text); border: none; padding: 0.35rem 0.75rem; border-radius: 4px; cursor: pointer; font-size: 0.9rem; }
+    .slideshow-controls button:hover { background: var(--accent); color: #fff; }
+    .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
+  </style>
+  <link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+<nav class="site-lang-bar" aria-label="Language">
+  <span class="lang-label">Idioma:</span>
+  <a href="../../../Transmission/drive-shafts/index.html">English</a>
+  <span aria-hidden="true">·</span>
+  <a href="../../../zh/Transmission/drive-shafts/index.html">中文</a>
+  <span aria-hidden="true">·</span>
+  <a href="index.html" aria-current="page">Português</a>
+</nav>
+
+<p class="back"><a href="../index.html">← Voltar para Transmissão</a> · <a href="../../index.html">P6 RFP overview</a></p>
+<h1>Eixos de transmissão</h1>
+<p class="muted">Geometria da pista do garfo, visualizações de paralelismo do eixo, engate do suporte de tração/rolha da haste e conceito de tampa superior. A discussão do projeto e as tolerâncias permanecem<a href="../yoke/index.html">Garfo e eixos de transmissão</a>.</p>
+<h2>Introdução</h2>
+<p>Esta página contém<strong>apenas figuras</strong>para a região da pista do eixo/garfo de 35 mm. Para carregamento, seleção de rolamentos e dúvidas do empreiteiro, use<a href="../yoke/index.html">Garfo e eixos de transmissão</a>.</p>
+<h2 id="gallery">Figures</h2>
+<p class="muted">Consulte<a href="#fig1">Figure 1</a>–<a href="#fig4">Figura 4</a>. (Nome do arquivo<code>parralelismo2.png</code>é conforme fornecido no repo.)</p>
+<div class="slideshow" id="ds-slideshow">
+<div class="slideshow-track">
+<div class="slide active" data-caption="Figura 1. Yoke cam track — vista lateral/borda (paralelismo e contexto da face da trilha)." id="fig1"><img alt="Vista lateral da pista do jugo" src="../../../Transmission/drive-shafts/images/parallelism.png"/></div>
+<div class="slide" data-caption="Figura 2. Trilha do came do garfo - vista superior/plana (largura da trilha e caminho do rolete)." id="fig2"><img alt="Vista superior da pista do jugo" src="../../../Transmission/drive-shafts/images/parralelism2.png"/></div>
+<div class="slide" data-caption="Figura 3. Puxe o suporte engatando o batente da haste de acionamento do êmbolo (curso de retorno)." id="fig3"><img alt="Puxe o suporte e o batente da haste" src="../../../Transmission/drive-shafts/images/pullbracket.png"/></div>
+<div class="slide" data-caption="Figura 4. Conceito da tampa superior do garfo – placa de reforço em toda a largura após a instalação dos roletes." id="fig4"><img alt="Conceito de tampa superior Yoke" src="../../../Transmission/drive-shafts/images/topCap.png"/></div>
+</div>
+<p aria-live="polite" class="slideshow-caption" id="ds-caption">Figura 1. Trilha do came do garfo - vista lateral.</p>
+<div class="slideshow-controls">
+<button aria-label="Previous" id="ds-prev" type="button">← Previous</button>
+<span class="slideshow-counter" id="ds-counter">1/4</span>
+<button aria-label="Next" id="ds-next" type="button">Next →</button>
+</div>
+</div>
+<h3>Valores recomendados (claridade do contratante)</h3>
+<ul class="muted">
+<li><strong>Adicionar figura</strong>: <strong>Pilha de rolamentos/eixos</strong>— explodido ou seção mostrando montagens LMF/LMK, ressaltos do eixo e folga do raspador/tampa.</li>
+<li><strong>Adicionar figura</strong>: <strong>Puxe o suporte + batente da haste</strong>— folga e profundidade de engate através do curso de retorno completo (suplemento Figuras 3–4).</li>
+</ul>
+<p class="back"><a href="../index.html">← Voltar para Transmissão</a> · <a href="../../index.html">P6 RFP overview</a></p>
+<script>
+(function(){
+  var el = document.getElementById('ds-slideshow');
+  if (!el) return;
+  var slides = el.querySelectorAll('.slide');
+  var cap = document.getElementById('ds-caption');
+  var counter = document.getElementById('ds-counter');
+  var n = slides.length, i = 0;
+  function go(k) { i = (k + n) % n; slides.forEach(function(s,j){ s.classList.toggle('active', j===i); }); if (cap) cap.textContent = slides[i].getAttribute('data-caption') || ''; if (counter) counter.textContent = (i+1) + ' / ' + n; }
+  document.getElementById('ds-prev').addEventListener('click', function(){ go(i-1); });
+  document.getElementById('ds-next').addEventListener('click', function(){ go(i+1); });
+  var hash = window.location.hash;
+  if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
+})();
+  </script>
+<footer style="margin-top:2rem; padding-top:1rem; border-top:1px solid var(--border); color:var(--muted); font-size:0.85rem;">Última atualização: 20/03/2026.</footer>
+</body>
+</html>

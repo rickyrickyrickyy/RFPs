@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Equipamento de controlo CIP de terceiros — CIP — P6 RFP</title>
+<style>
+    :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
+    a { color: var(--accent); }
+    h1 { font-size: 1.35rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.25rem; }
+    h3 { font-size: 1rem; margin-top: 1rem; color: var(--muted); }
+    ul, ol { padding-left: 1.25rem; }
+    .back { margin-bottom: 1rem; font-size: 0.9rem; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    .swatch { display: inline-block; width: 1.25rem; height: 1.25rem; border: 1px solid var(--border); border-radius: 3px; vertical-align: middle; }
+    table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+    th, td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
+    .iface-table th { color: var(--muted); font-weight: 600; }
+    .slideshow { margin: 1.5rem 0; }
+    .slideshow .slide { display: none; }
+    .slideshow .slide.active { display: block; }
+    .slideshow .slide img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
+    .slideshow-caption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); min-height: 2.5em; }
+    .slideshow-controls { display: flex; align-items: center; gap: 1rem; margin-top: 0.75rem; flex-wrap: wrap; }
+    .slideshow-controls button { background: var(--border); color: var(--text); border: none; padding: 0.35rem 0.75rem; border-radius: 4px; cursor: pointer; font-size: 0.9rem; }
+    .slideshow-controls button:hover { background: var(--accent); color: #fff; }
+    .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
+  </style>
+  <link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+<nav class="site-lang-bar" aria-label="Language">
+  <span class="lang-label">Idioma:</span>
+  <a href="../../../Clean-in-place/third-party-cip-control-equipment/index.html">English</a>
+  <span aria-hidden="true">·</span>
+  <a href="../../../zh/Clean-in-place/third-party-cip-control-equipment/index.html">中文</a>
+  <span aria-hidden="true">·</span>
+  <a href="index.html" aria-current="page">Português</a>
+</nav>
+
+<p class="back"><a href="../index.html">← Voltar ao lugar limpo (CIP)</a>·<a href="../../index.html">P6 RFP</a></p>
+<h1>Equipamento de controlo CIP de terceiros</h1>
+<p class="muted">Parte da<a href="../index.html">Limpeza no local (CIP)</a>secção. Como P6 se integra com o sistema CIP da planta (ciclos, ganchos e testes de aceitação).</p>
+<h2>Introdução</h2>
+<p>O P6 não fornece um controlador CIP autónomo — a solução CIP é fornecida pelo<strong>Sistema CIP da planta</strong>. Esta página define como P6 se integra com esse sistema externo. P6 conecta-se ao fornecimento CIP da planta para a limpeza interna do pulverizador e usa a linha de suco para a limpeza contra-fluxo de retrofluxo do<a href="../../Collection/index.html">recolha de sumos</a>circuito. Durante o PIC, o isolamento do tanque deve impedir que o fluido CIP entre em tanques de suco de produção.</p>
+<h2>&amp; Componentes da chave de cor</h2>
+<p class="muted">Principais responsabilidades e interfaces do equipamento.</p>
+<table>
+<tr><th>Cor( s)</th><th>Componente</th></tr>
+<tr><td><em>—</em></td><td><strong>Sistema de PIC vegetal</strong>— controlos dos ciclos de lavagem/química, pressão, temperatura e concentração;</td></tr>
+<tr><td><em>—</em></td><td><strong>Manipuladores P6 CIP</strong>— tubagens inoxidáveis rígidas e ligações flexíveis das mangueiras à instalação de abastecimento.</td></tr>
+<tr><td><em>—</em></td><td><strong>Integração de retrofluxos de linha de suco</strong>— válvulas/junção T que permitem que a solução CIP volte a fluir através de colectores/filtro/circuito de incandescência.</td></tr>
+</table>
+<h2 id="gallery">Figuras</h2>
+<p class="muted">Adicionar diagramas de integração quando disponíveis.</p>
+<h3>Números recomendados (clareza do contratante)</h3>
+<ul class="muted">
+<li><strong>Adicionar figura</strong>: planta pontos de conexão CIP para coletores P6 (fornecimento/retorno, roteamento de mangueira, alimentação movimento aberto/fechado).</li>
+<li><strong>Adicionar figura</strong>: encanamento de retorno de linha de suco (válvula T, válvulas de retenção, canalização/caminho de retorno) amarrado ao sistema Collection.</li>
+<li><strong>Adicionar figura</strong>: fluxo de ensaio de aceitação (pontos de ensaio indicativos e confirmação de lavagem).</li>
+</ul>
+<h2>Discussão</h2>
+<h3>Processo CIP controlado por plantas</h3>
+<p>O sistema CIP da planta normalmente executa a seguinte sequência (durações finais dependem da capacidade da planta e resultados de limpeza):</p>
+<ol>
+<li><strong>Enxaguar a água</strong>— retirar o material a granel.</li>
+<li><strong>Lixivia / solução de sabão</strong>— etapa de limpeza química.</li>
+<li><strong>Enxaguar a água final</strong>— remover os resíduos químicos.</li>
+</ol>
+<p class="muted">Após o ciclo, realizar testes de indicador químico para confirmar que a máquina está livre de solução de limpeza. Adicionar um ciclo de lavagem adicional, se necessário.</p>
+<h3>Requisitos de funcionamento</h3>
+<ul>
+<li><strong>A máquina deve estar a funcionar.</strong>durante o PIC para uma cobertura eficaz da limpeza.</li>
+</ul>
+<h3>Interfaces</h3>
+<ul>
+<li><strong>Ligação à limpeza por pulverização</strong>— o fornecimento de CIP das instalações liga-se a colectores de pulverização P6 (grupo alimentador-lide e grupo de deflector de casca). As mangueiras flexíveis são necessárias para permitir o movimento do alimentador abrir/fechar.</li>
+<li><strong>Limpeza do circuito de sumos</strong>— A solução CIP é encaminhada através da linha de suco como um contrafluxo/refluxo para limpar coletores de suco, filtro e circuito de êmbolo.</li>
+<li><strong>Isolamento do tanque durante o PIC</strong>— lógica da válvula necessária: durante o PIC, deve desligar-se o caminho normal de "suco para os tanques/saída" para que o fluido CIP seja encaminhado para o circuito dos colectores/filtro/pulver e<strong>não contém</strong>fluxo para os tanques de suco de produção.</li>
+<li><strong>Controlo</strong>— todos os ciclos de sequenciamento e controlo dos parâmetros são efectuados pelo sistema CIP da instalação.</li>
+</ul>
+<h3>Perguntas para o contratante</h3>
+<ol>
+<li>Defina o(s) padrão(s) recomendado(s) de ligação (tipo(s) sanitário(s), especificação de mangueira, estratégia de desconexão rápida) adequado(s) para instalações de NC e manutenção sazonal.</li>
+<li>Especificar as válvulas de retenção necessárias/roteamento de retorno/estratégia de drenagem e<strong>Requisitos de comutação da válvula</strong>Assim, o líquido CIP não pode contaminar tanques de suco de produção (isolamento do tanque durante o CIP) e a produção não pode contaminar retornos de CIP durante a limpeza.</li>
+<li>Propor um protocolo de teste de aceitação: indicadores químicos, critérios de enxaguamento e tempo mínimo de execução durante o PIC (ligado para cobertura de pulverização e eficácia de retrofluxo).</li>
+</ol>
+<h3>Interfaces e tolerâncias</h3>
+<p class="muted">Tolerâncias TBD; contratante para propor requisitos de conexão e montagem consistentes com pressão/vibração CIP planta e movimento do alimentador.</p>
+<table class="iface-table">
+<thead><tr><th>Parte</th><th>Interface / tolerância</th><th>Relacionado</th></tr></thead>
+<tbody>
+<tr><td>Fornecimento de PIC vegetal</td><td>Fornece água/ciclos químicos; pressão/temperatura/concentração definida pela planta</td><td>—</td></tr>
+<tr><td>P6 pulverizadores</td><td>Manipuladores rígidos com mangueira flexível para permitir o movimento do alimentador</td><td><a href="../../Feeder/index.html">Sistema de ingestão de frutas</a>,<a href="../../Extraction-syncronisation/index.html">Extração</a></td></tr>
+<tr><td>Refluxo de linha de sumo</td><td>CIP de contrafluxo através da linha de suco; válvulas de valva/verificação TBD</td><td><a href="../../Collection/index.html">Colecção</a></td></tr>
+</tbody>
+</table>
+<h3>Componentes</h3>
+<ul>
+<li>Instalação CIP skid/controller (externa)</li>
+<li>Mangueiras de abastecimento/retorno e desconexão rápida sanitária</li>
+<li>Válvulas/junções T para descargas de sumo</li>
+<li>Indicador de materiais/procedimento de ensaio (ensaio de aceitação)</li>
+</ul>
+<p class="back"><a href="../index.html">← Voltar ao lugar limpo (CIP)</a>·<a href="../../index.html">P6 RFP</a></p>
+<footer style="margin-top:2rem; padding-top:1rem; border-top:1px solid var(--border); color:var(--muted); font-size:0.85rem;">Última atualização: 2026-03-20.</footer>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Definição do controlo da máquina e IU — Controlos — P6 RFP</title>
+<style>
+    :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
+    a { color: var(--accent); }
+    h1 { font-size: 1.35rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.25rem; }
+    h3 { font-size: 1rem; margin-top: 1rem; color: var(--muted); }
+    ul, ol { padding-left: 1.25rem; }
+    .back { margin-bottom: 1rem; font-size: 0.9rem; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    .swatch { display: inline-block; width: 1.25rem; height: 1.25rem; border: 1px solid var(--border); border-radius: 3px; vertical-align: middle; }
+    table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+    th, td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
+    .iface-table th { color: var(--muted); font-weight: 600; }
+    .slideshow { margin: 1.5rem 0; }
+    .slideshow .slide { display: none; }
+    .slideshow .slide.active { display: block; }
+    .slideshow .slide img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
+    .slideshow-caption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); min-height: 2.5em; }
+    .slideshow-controls { display: flex; align-items: center; gap: 1rem; margin-top: 0.75rem; flex-wrap: wrap; }
+    .slideshow-controls button { background: var(--border); color: var(--text); border: none; padding: 0.35rem 0.75rem; border-radius: 4px; cursor: pointer; font-size: 0.9rem; }
+    .slideshow-controls button:hover { background: var(--accent); color: #fff; }
+    .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
+  </style>
+  <link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+<nav class="site-lang-bar" aria-label="Language">
+  <span class="lang-label">Idioma:</span>
+  <a href="../../../Controls-Electronics/machine-control-definition-and-ui/index.html">English</a>
+  <span aria-hidden="true">·</span>
+  <a href="../../../zh/Controls-Electronics/machine-control-definition-and-ui/index.html">中文</a>
+  <span aria-hidden="true">·</span>
+  <a href="index.html" aria-current="page">Português</a>
+</nav>
+
+<p class="back"><a href="../index.html">← Voltar aos controles e eletrônicos</a>·<a href="../../index.html">P6 RFP</a></p>
+<h1>Definição do controle da máquina e UI</h1>
+<p class="muted">Parte da<a href="../index.html">Controlos e electrónica</a>secção. Controles autônomos locais, indicadores, UI de segurança e bloqueio/tagout.</p>
+<h2>Introdução</h2>
+<p>Esta página define os controles e indicadores voltados para o operador para P6 dentro do<a href="../index.html">Controlos e electrónica</a>Subsistema. A máquina deve ser operada como uma unidade independente com comandos locais ON/OFF e correr/parar na frente superior, com indicadores claros para RUNNING/STOPPED e estado de segurança aberto. Três travas de segurança da tampa codificadas (da<a href="../../Enclosure-shell/index.html">Anexo / shell</a>) impedir a operação quando qualquer cobertura está aberta. É necessária uma unidade de bloqueio/tagout traseiro (LOTO) para o serviço e a destruição sazonal.</p>
+<h2>&amp; Componentes da chave de cor</h2>
+<p class="muted">Componentes de IU e intenção.</p>
+<table>
+<tr><th>Cor( s)</th><th>Componente</th></tr>
+<tr><td><em>—</em></td><td><strong>Unidade de controlo frontal superior</strong>— indicadores ON/START, OFF/STOP, E-STOP, RUNNING e STOPED.</td></tr>
+<tr><td><em>—</em></td><td><strong>Indicador do estado de segurança</strong>— indicador de "máquina aberta" quando estiver aberto qualquer bloqueio de tampa.</td></tr>
+<tr><td><em>—</em></td><td><strong>Unidade traseira LOTO</strong>— ponto de isolamento lockout/tagout acessível a partir do rebordo superior.</td></tr>
+</table>
+<h2 id="gallery">Figuras</h2>
+<p class="muted">Conceito do painel de controle e colocação (foto/Snapshot do CAD).</p>
+<div class="slideshow" id="controls-ui-slideshow">
+<div class="slideshow-track">
+<div class="slide active" data-caption="Figura 1. Conceito da unidade de controle frontal superior (foto)." id="fig1"><img alt="Figura 1" src="../../../Controls-Electronics/machine-control-definition-and-ui/images/01.png"/></div>
+</div>
+<p aria-live="polite" class="slideshow-caption" id="controls-ui-caption">Figura 1. Conceito da unidade de controle frontal superior (foto).</p>
+<div class="slideshow-controls">
+<button aria-label="Anterior" id="controls-ui-prev" type="button">← Anterior</button>
+<span class="slideshow-counter" id="controls-ui-counter">1 / 1</span>
+<button aria-label="Próxima" id="controls-ui-next" type="button">Próxima →</button>
+</div>
+</div>
+<h3>Números recomendados (clareza do contratante)</h3>
+<ul class="muted">
+<li><strong>Adicionar figura</strong>:<strong>Disposição da face do painel</strong>— as posições exactas dos botões/indicadores e a rotulagem.</li>
+<li><strong>Adicionar figura</strong>:<strong>Acesso LOTO traseiro</strong>— o operador alcança o caminho com as capas abertas/fechadas.</li>
+<li><strong>Adicionar figura</strong>:<strong>Fiação home-run</strong>— desde o painel até aos interruptores do motor e das tampas (grama de bloqueio).</li>
+</ul>
+<h2>Discussão</h2>
+<h3>Desenho e intenção difíceis</h3>
+<ul>
+<li><strong>Operação autónoma</strong>— os controlos de potência e de funcionamento locais permitem uma operação, inspecção, substituição de componentes e uma limpeza simples.</li>
+<li><strong>Indicação de estado clara</strong>— o operador deve verificar rapidamente se a máquina está a funcionar, a parar ou a ser impedida de funcionar devido a condições de segurança abertas.</li>
+</ul>
+<h3>Requisitos do painel de controlo (frente superior)</h3>
+<ul>
+<li><strong>PODER Ligar/desligar</strong>interruptor de teclas</li>
+<li><strong>RUNNING/SOPPPED</strong>botão</li>
+<li><strong>Paragem de emergência</strong>botão</li>
+<li><strong>RUNNING/STOPPED</strong>indicador</li>
+<li><strong>PODER ligado/desligado</strong>indicador</li>
+<li><strong>MÁQUINA ABERTA</strong>/ indicador de segurança-aberto (estado de interlocução: qualquer alimentador/pulgador / tampa de tampa do drivetrain aberta)</li>
+</ul>
+<h3>Requisitos LOTO (top-rear)</h3>
+<ul>
+<li><strong>Acesso fácil</strong>— isolar rapidamente a energia para o serviço.</li>
+<li><strong>Travável</strong>— concebidos para o processo de lockout/tagout (os procedimentos de instalação podem variar).</li>
+</ul>
+<h3>Problemas e riscos conhecidos</h3>
+<ul>
+<li><strong>Exposição à lavagem</strong>— a IU e a fiação devem estar protegidas contra a água; escolha gabinetes, selos e glândulas adequados para limpeza industrial.</li>
+<li><strong>clareza lógica de segurança</strong>— evitar estados ambíguos; tornar evidente porque é que a máquina não vai arrancar (capa aberta, E-stop, etc.).</li>
+</ul>
+<h3>Perguntas para o contratante</h3>
+<ol>
+<li>Recomendar componentes industriais e classificação do compartimento/PI adequados para a exposição à lavagem.</li>
+<li>Propor layout de painel que seja ergonômico (superior) e manuvável, com rotulagem clara e lógica indicadora.</li>
+<li>Proponha arquitetura e localização LOTO que atenda à prática da planta enquanto permanece simples para os operadores.</li>
+<li>Recomendar o hardware de tampa de segurança codificado (código de ímã anti-desvio) e a abordagem de fiação/integração usando as mesmas placas de controle que a máquina comercial.</li>
+</ol>
+<h3>Interfaces</h3>
+<ul>
+<li><strong>Entrada:</strong>O botão do operador pressiona; estados de travamento de segurança.</li>
+<li><strong>Saída:</strong>comando run/stop para controles motores; indicadores visíveis para o estado.</li>
+<li><strong>Montar:</strong>painel frontal superior; vias de ligação para o gabinete de controlo interno.</li>
+</ul>
+<h3>Interfaces e tolerâncias</h3>
+<p class="muted">Tolerâncias TBD; contratante para propor detalhes de montagem e vedação consistentes com ambiente de lavagem.</p>
+<table class="iface-table">
+<thead><tr><th>Parte</th><th>Interface / tolerância</th><th>Relacionado</th></tr></thead>
+<tbody>
+<tr><td>IU de topo</td><td>Retentor e vedação das glândulas resistentes à lavagem; rotulagem/ergonomia</td><td><a href="../index.html">Controlos e electrónica</a></td></tr>
+<tr><td>LOTO traseiro</td><td>Ponto de isolamento bloqueável; envelope de acesso</td><td>—</td></tr>
+</tbody>
+</table>
+<h3>Componentes</h3>
+<ul>
+<li>Botões de pressão, de pressão ou de pressão</li>
+<li>Indicadores ON/OFF RUNNING/STOPPED</li>
+<li>Indicador de segurança aberto</li>
+<li>Dispositivo de bloqueamento/tagote traseiro</li>
+<li>Cercar, fiação, glândulas, etiquetas</li>
+</ul>
+<p class="back"><a href="../index.html">← Voltar aos controles e eletrônicos</a>·<a href="../../index.html">P6 RFP</a></p>
+<script>
+(function(){
+  var el = document.getElementById('controls-ui-slideshow');
+  if (!el) return;
+  var slides = el.querySelectorAll('.slide');
+  var cap = document.getElementById('controls-ui-caption');
+  var counter = document.getElementById('controls-ui-counter');
+  var n = slides.length, i = 0;
+  function go(k) {
+    i = (k + n) % n;
+    slides.forEach(function(s,j){ s.classList.toggle('active', j===i); });
+    if (cap) cap.textContent = slides[i].getAttribute('data-caption') || '';
+    if (counter) counter.textContent = (i+1) + ' / ' + n;
+  }
+  el.querySelector('#controls-ui-prev').addEventListener('click', function(){ go(i-1); });
+  el.querySelector('#controls-ui-next').addEventListener('click', function(){ go(i+1); });
+  var hash = window.location.hash;
+  if (hash && hash.match(/^#fig(\d+)$/)) {
+    var idx = parseInt(RegExp.$1, 10) - 1;
+    if (idx >= 0 && idx < n) { i = idx; go(i); }
+  }
+})();
+  </script>
+<footer style="margin-top:2rem; padding-top:1rem; border-top:1px solid var(--border); color:var(--muted); font-size:0.85rem;">Última atualização: 2026-03-20.</footer>
+</body>
+</html>

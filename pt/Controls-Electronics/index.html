@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>11. Controlos e electrónica — P6 RFP</title>
+<style>
+    :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
+    a { color: var(--accent); }
+    h1 { font-size: 1.35rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.25rem; }
+    ul { padding-left: 1.25rem; }
+    .back { margin-bottom: 1rem; font-size: 0.9rem; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    .tbd { color: var(--muted); font-style: italic; }
+  </style>
+  <link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<nav class="site-lang-bar" aria-label="Language">
+  <span class="lang-label">Idioma:</span>
+  <a href="../../Controls-Electronics/index.html">English</a>
+  <span aria-hidden="true">·</span>
+  <a href="../../zh/Controls-Electronics/index.html">中文</a>
+  <span aria-hidden="true">·</span>
+  <a href="index.html" aria-current="page">Português</a>
+</nav>
+
+<p class="back"><a href="../index.html">← Voltar para P6 RFP visão geral</a></p>
+<h1>11. Controles e eletrônicos</h1>
+<h2>Subpáginas</h2>
+<ul>
+<li><a href="machine-control-definition-and-ui/index.html">Definição do controle da máquina e UI</a> <span class="muted">(atualizado em 2026-03-20)</span>— controlo local autónomo, botões/indicadores, LOTO.</li>
+<li><a href="motor-power-management/index.html">Gestão da energia do motor</a> <span class="muted">(atualizado em 2026-03-20)</span>— protecção da energia, contactor/início, impermeabilização, detecção de corrente.</li>
+<li><a href="yoke-position-sensor/index.html">Sensor de posição do ioque</a> <span class="muted">(atualizado em 2026-03-20)</span>— sensoriamento de ciclo para a contagem aberta e de ciclo (aplicação do TBD).</li>
+</ul>
+<h2>Introdução</h2>
+<p><strong>Controlos e electrónica</strong>(Subsistema 11) abrange tudo o que é elétrico em P6: o painel de controle do operador (E-stop, ligado/desligado, start/stop, indicadores), três travas de segurança de tampa codificada alimentadas a partir do<a href="../Enclosure-shell/index.html">Anexo / shell</a>, gestão de energia do motor AC para o<a href="../Drivetrain/index.html">drivetrain</a>motor (WEG W22), e um sensor de posição do jugo no<a href="../Transmission/index.html">transmissão</a>para o tempo de ciclo e a lógica de paragem segura. O subsistema deve ser operável, protegido por lavagem e pronto para a futura integração IoT/dados.</p>
+<h2>Discussão</h2>
+<h3>Desenho e intenção difíceis</h3>
+<ul>
+<li><strong>Operação autónoma</strong>— A máquina deve ser operada como uma unidade autónoma (local ON/OFF) para funcionamento independente, inspecção, substituição de componentes e limpeza simples.</li>
+<li><strong>Protecção da água</strong>— todos os sistemas eléctricos devem ser protegidos para uma limpeza industrial rigorosa (fecho/PI, glândulas, canalização de cabos e práticas de lavagem).</li>
+<li><strong>Preparação dos dados</strong>— o sistema de controlo deve ser preparado para o intercâmbio de dados (integração IoT/planta), mesmo que não seja implementado no primeiro protótipo.</li>
+</ul>
+<h3>Painel de controle do usuário</h3>
+<p>Interface de operador para energia, controle de execução e status.</p>
+<ul>
+<li><strong>ON / INÍCIO</strong>botão — iniciar a operação da máquina.</li>
+<li><strong>OFF / STOP</strong>botão — funcionamento da máquina de paragem.</li>
+<li><strong>Paragem de emergência</strong>— paragem difícil; a máquina não pode funcionar até ser reiniciada.</li>
+<li><strong>RUNNING</strong>indicador — mostra o estado de funcionamento da máquina.</li>
+<li><strong>PARADO</strong>indicador — mostra o estado parado da máquina.</li>
+<li><strong>Máquina aberta</strong>indicador — indica que qualquer tampa de segurança está aberta (intertravamento activo).</li>
+</ul>
+<h3>Bloquear / tagout (LOTO)</h3>
+<p>Forneça uma unidade LOTO traseira de fácil acesso para isolar a energia para serviço e quebra sazonal.</p>
+<h3>Interruptores de segurança</h3>
+<p>Interruptores de segurança ligados<strong>3 tampas</strong>(cobertura do multiplicador, cobertura do comboio, alimentador — ver<a href="../Enclosure-shell/index.html">Anexo / shell</a>). A lógica do bloqueio deve ser segura: quando qualquer tampa está aberta, a máquina desliga-se e não pode correr.</p>
+<ul>
+<li><strong>Interruptores de segurança codificados</strong>— entrelaçamentos codificados preferidos para a robustez.</li>
+<li><strong>Interruptores de tampa codificados (código do ímã)</strong>— apenas o cabo de íman/operador especificado pode activar o interruptor de segurança da tampa (anti-desvio). Incluir o comportamento de segurança e claro indicador de "máquina aberta".</li>
+<li><strong>Integração do painel de controlo</strong>— as entradas dos interruptores de segurança das tampas devem ser integradas utilizando a mesma estrutura de abertura + arquitectura da placa principal que os comandos da máquina comercial, pelo que o comportamento de segurança corresponde aos sistemas existentes.</li>
+<li><strong>Parar com descascadores/condição aberta</strong>— incluir um sensor/caminho lógico que impeça o funcionamento (ou os gatilhos de parar) se os peelers/lids estiverem em estado inseguro.</li>
+</ul>
+<h3>Controlo do motor e gestão da energia</h3>
+<p>Distribuição de energia AC e acionamento motor para o<a href="../Drivetrain/index.html">drivetrain</a>Motor.</p>
+<ul>
+<li><strong>Contacto AC</strong>— comutação de potência principal para o circuito do motor.</li>
+<li><strong>Motor de arranque / arranque suave</strong>— o arranque/paragem controlado e a protecção do motor principal, incluindo a protecção de sobrecorrentes.</li>
+<li><strong>Painel de controlo interno</strong>— disjuntores, relés, PCB/IO, conforme necessário (arquitetura final TBD).</li>
+<li><strong>Gestão de fios e cabos</strong>— roteamento, glândulas e gestão conforme necessário para os circuitos de controlo, motor e segurança.</li>
+<li><strong>Motor:</strong> <strong>WEG W22</strong>— 50 Hz de base para a China (ver<a href="motor-power-management/index.html">Gestão da energia do motor</a>para detalhes); montagem vertical, eixo para baixo (estilo V5T).</li>
+<li><strong>Sensor de corrente do motor</strong>— medição instantânea da corrente para detecção e estimativa do rendimento dos picos (frutos transformados num período de tempo).</li>
+</ul>
+<h3>Sensor de posição do ioque</h3>
+<p>P6 exige<a href="../Transmission/index.html">jugo</a>sensor de posição/ciclo (montado no<a href="../Transmission/index.html">transmissão</a>) para apoiar condições de paragem seguras controladas e um<strong>Parada totalmente aberta</strong>comportamento para que as peças internas possam ser atendidas/removidas. O tipo exato de sensor e a interface de sinal são TBD.</p>
+<ul>
+<li><strong>Sensor de ciclo</strong>— prever a contagem de ciclos (ciclos por período). Este pode ser o mesmo sensor que "parar descascadores abertos" dependendo do mecanismo final.</li>
+<li><strong>Posição de paragem totalmente aberta</strong>— quando a máquina é desligada/parada em funcionamento normal, o sistema deve parar com o jugo na<strong>posição totalmente aberta</strong>(acesso/remoção do operador).</li>
+<li><strong>Desligamento de emergência/interligação</strong>— quando o ponto E é pressionado ou um interruptor de segurança da tampa codificado indica uma falha de tampa aberta/intertravamento, a máquina deve desligar-se imediatamente (sem reposicionamento para abrir).</li>
+</ul>
+<h3>Estado</h3>
+<p>Requisitos do sistema capturados. Ainda TBD: arquitetura elétrica detalhada (escolha de PLC/PCB), classificação IP de gabinete, padrões de fiação e seleção final de sensores. Adicione fotos e diagramas de fiação como eles são desenvolvidos.</p>
+<h2>Números recomendados (clareza do contratante)</h2>
+<ul class="muted">
+<li><strong>Adicionar figura</strong>:<strong>Diagrama do bloco do sistema</strong>— Paragem electrónica, bloqueios de tampa, contactor de motor, entradas de sensor (página única).</li>
+<li><strong>Adicionar figura</strong>:<strong>Conceito de IP do anexo</strong>— armário/plano glande para lavagem (ver<a href="motor-power-management/index.html">Gestão da energia do motor</a>).</li>
+<li><strong>Adicionar figura</strong>:<strong>Sensor + estados seguros</strong>— ver<a href="yoke-position-sensor/index.html">Sensor de posição do ioque</a>Chamadas.</li>
+</ul>
+<footer style="margin-top:2rem; padding-top:1rem; border-top:1px solid var(--border); color:var(--muted); font-size:0.85rem;">Última atualização: 2026-03-20.</footer>
+</body>
+</html>

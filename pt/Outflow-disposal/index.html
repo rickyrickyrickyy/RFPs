@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>8. Sistema de eliminação — P6 RFP</title>
+<style>
+    :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
+    a { color: var(--accent); }
+    h1 { font-size: 1.35rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.25rem; }
+    ul { padding-left: 1.25rem; }
+    .back { margin-bottom: 1rem; font-size: 0.9rem; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+    th, td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
+    .swatch { display: inline-block; width: 1.25rem; height: 1.25rem; border: 1px solid var(--border); border-radius: 3px; vertical-align: middle; }
+    .slideshow { margin: 1.5rem 0; }
+    .slideshow .slide { display: none; }
+    .slideshow .slide.active { display: block; }
+    .slideshow .slide img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
+    .slideshow-caption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); min-height: 2.5em; }
+    .slideshow-controls { display: flex; align-items: center; gap: 1rem; margin-top: 0.75rem; flex-wrap: wrap; }
+    .slideshow-controls button { background: var(--border); color: var(--text); border: none; padding: 0.35rem 0.75rem; border-radius: 4px; cursor: pointer; font-size: 0.9rem; }
+    .slideshow-controls button:hover { background: var(--accent); color: #fff; }
+    .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
+    .iface-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    .iface-table th, .iface-table td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
+    .iface-table th { color: var(--muted); font-weight: 600; }
+  </style>
+  <link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<nav class="site-lang-bar" aria-label="Language">
+  <span class="lang-label">Idioma:</span>
+  <a href="../../Outflow-disposal/index.html">English</a>
+  <span aria-hidden="true">·</span>
+  <a href="../../zh/Outflow-disposal/index.html">中文</a>
+  <span aria-hidden="true">·</span>
+  <a href="index.html" aria-current="page">Português</a>
+</nav>
+
+<p class="back"><a href="../index.html">← Voltar para P6 RFP visão geral</a></p>
+<h1>8. Sistema de eliminação</h1>
+<h2>Subpáginas</h2>
+<ul>
+<li><a href="chutes-and-augers/index.html">Chutes e chutes</a> <span class="muted">(atualizado em 2026-03-20)</span>— CAD, foto de montagem do pára-quedas, diagrama do fornecedor; percursos peeling vs core.</li>
+<li><a href="deflectors/index.html">Deflectores</a> <span class="muted">(atualizado em 2026-03-20)</span>— deflector accionado contexto CAD + foto que cobre o pára-quedas do núcleo / abertura auger.</li>
+</ul>
+<h2>Introdução</h2>
+<p>A<strong>Sistema de eliminação</strong>Rotas (subsistema 8)<strong>cascas</strong>e<strong>núcleos</strong>para que cada fluxo de resíduos possa ser tratado independentemente a jusante. Após<a href="../Plug-ejection/index.html">ejeção do núcleo</a>, núcleos caem em<strong>pára-quedas do núcleo</strong>(conceito de tubo hexagonal por baixo de cada estação de descascador) enquanto material de casca flui em torno do núcleo pára-quedas para o<strong>pára-quedas de pele</strong>. Dois augers então transportam cascas e núcleos separadamente da máquina — por exemplo, núcleos podem ir para lavagem secundária ou extração de suco enquanto cascas vão para a eliminação.</p>
+<h2>&amp; Componentes da chave de cor</h2>
+<p class="muted">Descasque o pára-quedas, os pára-quedas do núcleo, os agitadores — páginas detalhadas TBD. Algumas vistas CAD usam cores alternativas (segunda linha).</p>
+<table>
+<tr><th>Cor( s)</th><th>Componente</th></tr>
+<tr><td><span class="swatch" style="background-color:#D43C3C"></span> <span class="swatch" style="background-color:#2768BC" title="alt"></span></td><td><strong>Descasque o pára-quedas</strong>— Chapas metálicas dobradas; cascas de descasque</td></tr>
+<tr><td>—<span class="swatch" style="background-color:#D79132" title="alt"></span></td><td><strong>Parafusos principais</strong>— soldados em pára-quedas; núcleos após ejecção do núcleo</td></tr>
+<tr><td><span class="swatch" style="background-color:#28B399"></span> <span class="swatch" style="background-color:#FFED9E" title="alt"></span></td><td><strong>Dois Augers</strong>— retirar as cascas e os núcleos separadamente</td></tr>
+</table>
+<h2 id="gallery">Figuras</h2>
+<p class="muted">Vistas CAD. Ver figuras no texto como<a href="#fig1">Figura 1</a>,<a href="#fig2">Figura 2</a>, etc.</p>
+<div class="slideshow" id="disp-slideshow">
+<div class="slideshow-track">
+<div class="slide active" data-caption="Figura 1. Isométrico de cima para baixo — pára-quedas vermelho na base de teal, dois canais." id="fig1"><img alt="Isométrico superior" src="../../Outflow-disposal/images/disposal-top-isometric.png"/></div>
+<div class="slide" data-caption="Figura 2. Paraquedas de casca vermelha com pára-quedas de núcleo; dois augers de teal." id="fig2"><img alt="Chute e augers" src="../../Outflow-disposal/images/disposal-chute-augers.png"/></div>
+<div class="slide" data-caption="Figura 3. Apenas paraquedas vermelhas, acima da moldura." id="fig3"><img alt="Chute apenas" src="../../Outflow-disposal/images/disposal-chute-only.png"/></div>
+<div class="slide" data-caption="Figura 4. Direita — pára-quedas vermelho, pára-quedas de núcleo, augers de teal abaixo." id="fig4"><img alt="Paraquedas e núcleo direito" src="../../Outflow-disposal/images/disposal-right-chute-core.png"/></div>
+<div class="slide" data-caption="Figura 5. Frente – pára-quedas de metal de chapa dobrada vermelha acima da moldura de azulejo." id="fig5"><img alt="Parafusos frontais" src="../../Outflow-disposal/images/disposal-front-chute-frame.png"/></div>
+<div class="slide" data-caption="Figura 6. Direita — pára-quedas vermelho; duas caixas em forma de teal U." id="fig6"><img alt="Canais U direito" src="../../Outflow-disposal/images/disposal-right-u-channels.png"/></div>
+<div class="slide" data-caption="Figura 7. Alternativa — paraquedas de casca azul, paraquedas de núcleo laranja." id="fig7"><img alt="Alt azul/laranja" src="../../Outflow-disposal/images/disposal-alt-blue-orange.png"/></div>
+<div class="slide" data-caption="Figura 8. Alternativa — pára-quedas azul, pára-quedas laranja, canais." id="fig8"><img alt="Alt isométrico" src="../../Outflow-disposal/images/disposal-alt-isometric.png"/></div>
+<div class="slide" data-caption="Figura 9, pára-quedas vermelho, quatro pára-quedas centrais, canais Teal Auger." id="fig9"><img alt="Canais de azulejo vermelho" src="../../Outflow-disposal/images/disposal-red-core-teal-channels.png"/></div>
+</div>
+<p aria-live="polite" class="slideshow-caption" id="disp-caption">Figura 1. Isométrico de cima para baixo — pára-quedas vermelho na base de teal, dois canais.</p>
+<div class="slideshow-controls">
+<button aria-label="Anterior" id="disp-prev" type="button">← Anterior</button>
+<span class="slideshow-counter" id="disp-counter">1 / 9</span>
+<button aria-label="Próxima" id="disp-next" type="button">Próxima →</button>
+</div>
+</div>
+<h3>Números recomendados (clareza do contratante)</h3>
+<ul class="muted">
+<li><strong>Adicionar figura</strong>:<strong>Separação Peel vs Núcleo</strong>— o plano de visão racionaliza-se no conjunto de pára-quedas hex.</li>
+<li><strong>Adicionar figura</strong>:<strong>Transição de alimentação de Auger</strong>— calha-a-boca para as linhas de casca e de núcleo separadamente.</li>
+<li><strong>Adicionar figura</strong>:<strong>P&amp;ID de alto nível</strong>— facultativo, se o fornecedor terceiro necessitar de um contexto de fluxo.</li>
+</ul>
+<h2>Discussão</h2>
+<h3>Função (ciclo)</h3>
+<ol>
+<li>Principal de<a href="../Plug-ejection/index.html">ejeção do núcleo</a> <strong>cai nos pára-quedas do núcleo</strong>diretamente abaixo de cada estação de descascamento.</li>
+<li>Peels deixar a estação de descascamento e<strong>fluir em torno dos pára-quedas do núcleo</strong>através de geometria de pára-quedas (tubos hexagonais com faces triangulares de chumbo/traidor), impedindo que cascas entrem no córrego de pára-quedas do núcleo.</li>
+<li>Dois augers transmitem<strong>cascas</strong>e<strong>núcleos</strong>Separadamente.</li>
+</ol>
+<h3>Interfaces</h3>
+<ul>
+<li><strong>Entrada (níveis):</strong>De<a href="../Plug-ejection/index.html">ejeção do núcleo</a>— o núcleo cai no pára-quedas do núcleo.</li>
+<li><strong>Entrada (pele):</strong>De<a href="../Collection/index.html">coleção</a>/extração - cascas para lados de descascadores, dois canais.</li>
+<li><strong>Saída:</strong>Dois augers transportam cascas e núcleos separadamente.</li>
+</ul>
+<h2>Interfaces e tolerâncias</h2>
+<p class="muted">Interfaces e tolerâncias conhecidas. As ligações vão para subsistemas relacionados.</p>
+<table class="iface-table">
+<thead><tr><th>Parte</th><th>Interface / tolerância</th><th>Relacionado</th></tr></thead>
+<tbody>
+<tr><td>Parafusos principais</td><td>Receber núcleos de ejecção do núcleo; soldados em pára-quedas</td><td><a href="../Plug-ejection/index.html">Ejeção do núcleo</a></td></tr>
+<tr><td>Descasque o pára-quedas</td><td>Recebe cascas dos lados dos descascadores (colecção/extração); dois canais</td><td><a href="../Collection/index.html">Colecção</a></td></tr>
+<tr><td>Augers</td><td>Dois augers; transporte de cascas e núcleos separadamente; desobstrução necessária</td><td><a href="../Frame/index.html">Frame</a></td></tr>
+</tbody>
+</table>
+<script>
+(function(){
+  var el = document.getElementById('disp-slideshow');
+  if (!el) return;
+  var slides = el.querySelectorAll('.slide');
+  var cap = document.getElementById('disp-caption');
+  var counter = document.getElementById('disp-counter');
+  var n = slides.length;
+  var i = 0;
+  function go(k) { i = (k + n) % n; slides.forEach(function(s,j){ s.classList.toggle('active', j===i); }); if (cap) cap.textContent = slides[i].getAttribute('data-caption') || ''; if (counter) counter.textContent = (i+1) + ' / ' + n; }
+  el.querySelector('#disp-prev').addEventListener('click', function(){ go(i-1); });
+  el.querySelector('#disp-next').addEventListener('click', function(){ go(i+1); });
+  var hash = window.location.hash;
+  if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
+})();
+  </script>
+<footer style="margin-top:2rem; padding-top:1rem; border-top:1px solid var(--border); color:var(--muted); font-size:0.85rem;">Última atualização: 2026-03-20.</footer>
+</body>
+</html>

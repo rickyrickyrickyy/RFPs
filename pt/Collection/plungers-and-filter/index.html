@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>P6 RFP</title>
+<style>
+    :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
+    a { color: var(--accent); }
+    h1 { font-size: 1.35rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.25rem; }
+    h3 { font-size: 1rem; margin-top: 1rem; color: var(--muted); }
+    ul, ol { padding-left: 1.25rem; }
+    .back { margin-bottom: 1rem; font-size: 0.9rem; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    .swatch { display: inline-block; width: 1.25rem; height: 1.25rem; border: 1px solid var(--border); border-radius: 3px; vertical-align: middle; }
+    table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+    th, td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
+    .iface-table th { color: var(--muted); font-weight: 600; }
+    .slideshow { margin: 1.5rem 0; }
+    .slideshow .slide { display: none; }
+    .slideshow .slide.active { display: block; }
+    .slideshow .slide img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
+    .slideshow-caption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); min-height: 2.5em; }
+    .slideshow-controls { display: flex; align-items: center; gap: 1rem; margin-top: 0.75rem; flex-wrap: wrap; }
+    .slideshow-controls button { background: var(--border); color: var(--text); border: none; padding: 0.35rem 0.75rem; border-radius: 4px; cursor: pointer; font-size: 0.9rem; }
+    .slideshow-controls button:hover { background: var(--accent); color: #fff; }
+    .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
+  </style>
+  <link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+<nav class="site-lang-bar" aria-label="Language">
+  <span class="lang-label">Idioma:</span>
+  <a href="../../../Collection/plungers-and-filter/index.html">English</a>
+  <span aria-hidden="true">·</span>
+  <a href="../../../zh/Collection/plungers-and-filter/index.html">中文</a>
+  <span aria-hidden="true">·</span>
+  <a href="index.html" aria-current="page">Português</a>
+</nav>
+
+<p class="back"><a href="../index.html">← Voltar para a coleção</a>·<a href="../../index.html">P6 RFP</a></p>
+<h1>Outras máquinas e aparelhos, n.e.</h1>
+<p class="muted">Parte da<a href="../index.html">Colecção</a>secção. Tubo de filtro, cortador de plugue e interface de êmbolo (vestimento, vedação e limpeza CIP).</p>
+<h2>Introdução</h2>
+<p>O tubo de filtro e o cortador de plug definem o caminho de filtração do suco e o caminho de ejeção do núcleo. Os mergulhadores passam pelo tubo de filtro durante o ciclo para ejetar o núcleo e raspar a polpa da região de fenda. Esta submontagem é sensível ao acabamento, alinhamento e vedação da superfície; os projetos atuais são baseados na máquina comercial, mas com maior comprimento e maiores expectativas de carga/pressão industrial.</p>
+<h2>&amp; Componentes da chave de cor</h2>
+<p class="muted">Principais componentes e intenções (as cores podem variar de acordo com as figuras CAD).</p>
+<table>
+<tr><th>Cor( s)</th><th>Componente</th></tr>
+<tr><td><em>—</em></td><td><strong>Tubo filtrante</strong>— tubo de aço endurecido com fendas verticais cortadas a laser (conceito de largura de fenda ~0,7 mm). Versão mais longa do que comercial. Final ID alvo ~Ra 0,8 μm para que os êmbolos podem deslizar e selar.</td></tr>
+<tr><td><em>—</em></td><td><strong>Cortador de plug-ins</strong>— ponta de aço endurecida substituível que corta o núcleo; fixada separadamente ao tubo de filtro para que a aresta de corte possa ser substituída rapidamente. O tubo filtrante não se destina a ser uma parte substituível frequente.</td></tr>
+<tr><td><em>—</em></td><td><strong>Interface do mergulhador</strong>— o êmbolo entra no tubo de filtro com<strong>raspador</strong>que limpa a polpa da região de fenda a cada ciclo. Espera-se que o raspador seja<strong>Lâminas de 3–4</strong>, usando uma liga raspadora selecionada para evitar desgaste excessivo no tubo (dura).</td></tr>
+<tr><td><em>—</em></td><td><strong>Cap / base</strong>— conceito de tampa removível que detém o tubo de filtro (e, possivelmente, forma base para o cortador de plugue); método de montagem cap-to-colector TBD.</td></tr>
+</table>
+<h2 id="gallery">Figuras</h2>
+<p class="muted">Pulgadores sentados em tubos de filtro / contexto coletor. Vistas de recolha adicionais:<a href="../../../Collection/index.html#gallery">Coleta galeria principal</a>.</p>
+<div class="slideshow" id="plunger-filter-slideshow">
+<div class="slideshow-track">
+<div class="slide active" data-caption="Figura 1. Pulgadores dentro de tubos de filtro — contexto de montagem do coletor (CAD)." id="fig1"><img alt="Tubos filtrantes interiores" src="../../../Collection/plungers-and-filter/images/plungers-in-filter.png"/></div>
+</div>
+<p aria-live="polite" class="slideshow-caption" id="plunger-filter-caption">Figura 1. Pulgadores dentro dos tubos de filtro.</p>
+<div class="slideshow-controls">
+<button aria-label="Anterior" id="plunger-filter-prev" type="button">← Anterior</button>
+<span class="slideshow-counter" id="plunger-filter-counter">1 / 1</span>
+<button aria-label="Próxima" id="plunger-filter-next" type="button">Próxima →</button>
+</div>
+</div>
+<h3>Números recomendados (clareza do contratante)</h3>
+<ul class="muted">
+<li><strong>Adicionar figura</strong>:<strong>Padrão de fenda + caminho do suco</strong>— secção ou vista desenvolvida que mostre a geometria da fenda vs lâminas raspadoras.</li>
+<li><strong>Adicionar figura</strong>:<strong>Plug cortador / êmbolo empilhamento</strong>— cadeia dimensional desde o pino central até à ponta do êmbolo (engajado vs retraído).</li>
+<li><strong>Adicionar figura</strong>:<strong>Selo / zona de fuga</strong>— destacar a interface êmbolo-tubo para as propostas de vedação do contratante.</li>
+</ul>
+<h2>Discussão</h2>
+<h3>Desenho e intenção difíceis</h3>
+<ul>
+<li><strong>Base comercial</strong>— O tubo de filtro e o cortador de ficha são baseados na geometria da máquina comercial; a versão industrial aumenta o comprimento e espera maiores cargas e maior pressão durante a extração.</li>
+<li><strong>Terminar a &amp; vedação</strong>— O ID do tubo de filtro deve ser moído/polido (conceito de Ra ~0,8 μm) para que os êmbolos deslizem suavemente e seja possível obter uma vedação.</li>
+<li><strong>Material</strong>— Intenção é aço endurecido para tubo de filtro e cortador de plug (vs antes de 304) para reduzir o desgaste da ação do raspador.</li>
+</ul>
+<h3>Metas de geometria (plug/cutter + curso do êmbolo)</h3>
+<ul>
+<li><strong>Extensão do cortador de plug- in:</strong>borda do cortador de plugue deve ser aproximadamente<strong>9 mm</strong>fora da<strong>pino central</strong>face de referência (geometria de separação de núcleo).</li>
+<li><strong>Extensão da ponta do mergulhador:</strong>a ponta do êmbolo deve estender- se aproximadamente<strong>15 mm</strong>fora da<strong>cortador de plugs</strong>(comprimento ligado / volume da câmara de pressão).</li>
+<li><strong>Profundidade de retracção:</strong>até onde os êmbolos se retraem durante o passo de compressão<strong>atunável</strong>Ajustando a<strong>C-clip</strong>posição nos eixos do êmbolo (contratante para definir o método de regulação e o intervalo).</li>
+</ul>
+<h3>Problemas e riscos conhecidos</h3>
+<ul>
+<li><strong>Fuga</strong>— Problema conhecido: o sumo vaza através da interface êmbolo-tubo. A estratégia do selo ainda está sendo pesquisada: e<strong>O-ring dentro do tubo de filtro é um risco</strong>porque a ação do raspador pode cortá-lo/vesti-lo durante o êmbolo frequente dentro / fora. O contratante deve propor uma<strong>não-O-ring ou O-ring-safe</strong>aproximação de vedação que sobrevive a pressões industriais e lavagem.</li>
+<li><strong>Usar</strong>— A acção do raspador pode tornar o tubo de rugosidade ID se os materiais não forem correctamente escolhidos; o tratamento térmico/acabamento deve ser validado.</li>
+<li><strong>Alinhamento</strong>— O tubo é soldado a uma tampa e depois montado; solda e montagem empilhamento pode desalinhar os êmbolos, aumentando o vazamento e desgaste.</li>
+</ul>
+<h3>DFM e fabricação (China)</h3>
+<ul>
+<li><strong>Entalhando</strong>— padrão de fenda de corte a laser (conceito de largura de fenda de 0,7 mm) em tubo de aço endurecido; contratante para propor rota de fabricação e inspeção.</li>
+<li><strong>Tratamento térmico + acabamento</strong>— Contratante para propor métodos de endurecimento e de pós-trilho/polido que mantenham a rectidão do tubo e a geometria da fenda dentro da tolerância.</li>
+<li><strong>Montagem</strong>— Contratante para propor como soldar a tampa sem distorcer o tubo, e como controlar o alinhamento do eixo do tubo através da montagem.</li>
+</ul>
+<h3>Perguntas para o contratante</h3>
+<ol>
+<li>Propor a<strong>não-O-ring ou O-ring-safe</strong>aproximação de vedação para tubo êmbolo-filtro adequado para alta pressão e lavagem (se for utilizado qualquer anel O, coloque-o de modo a não ser cortado/utilizado pela ação do raspador durante a entrada/saída repetida).</li>
+<li>Recomendar material/tratamento térmico/acabado para<strong>tubo de filtro de aço endurecido</strong>+<strong>Ponta de cortador de plugue endurecido substituível</strong>+<strong>Lâminas para raspar 3-4</strong>(a liga de straper pode ser selecionada mais suave do que o tubo para reduzir o desgaste do tubo), com vida útil esperada e estratégia de serviço.</li>
+<li>Confirme que o cortador de plug é um<strong>Ponta substituível</strong>ligado a a<strong>não substituível</strong>tubo de filtro (borda de corte é item de desgaste). Propor um método de fixação higiênico e estratégia de retenção que evite<strong>fios expostos dentro da câmara de sumo</strong>.</li>
+<li>Proponha um plano de inspeção e aceitação para o tubo (terminal ID, retilíneo, qualidade de fenda) e para o desempenho de vedação do êmbolo montado.</li>
+</ol>
+<h3>Interfaces</h3>
+<ul>
+<li><strong>Entrada:</strong>O suco sai da fruta em fendas de tubo filtrante; o êmbolo entra no tubo para ejeção do núcleo e raspagem.</li>
+<li><strong>Saída:</strong>Suco para coletor; núcleo ejetado através de cortador de plugue para<a href="../../Outflow-disposal/index.html">Sistema de eliminação</a>; Saídas de fluxo reverso CIP plug cutter centralline.</li>
+<li><strong>Montar:</strong>Tubo de filtro e montagem do cortador de plugue na montagem da coleção e interface para os êmbolos de ejeção do núcleo.</li>
+</ul>
+<h3>Interfaces e tolerâncias</h3>
+<p class="muted">Interfaces e tolerâncias conhecidas. As ligações vão para subsistemas relacionados.</p>
+<table class="iface-table">
+<thead><tr><th>Parte</th><th>Interface / tolerância</th><th>Relacionado</th></tr></thead>
+<tbody>
+<tr><td>Tubo filtrante</td><td>Aço endurecido; fendas de corte a laser (conceito ~0,7 mm); meta de acabamento ID ~Ra conceito de 0,8 μm; rectidão/alinhamento crítico</td><td><a href="../index.html">Colecção</a></td></tr>
+<tr><td>Cortador de plug-ins</td><td>Aço endurecido<strong>Ponta substituível</strong>ligado ao tubo não substituível; implementar o alvo<strong>~9 mm</strong>extensão de borda plug-cutter da<strong>pino central</strong>face de referência; evitar os fios expostos dentro da câmara de sumo</td><td><a href="../../Plug-ejection/index.html">Ejeção do núcleo</a></td></tr>
+<tr><td>Plunger</td><td>Selos contra tubo durante o ciclo; alvo<strong>~15 mm</strong>Extensão do êmbolo-ponta para fora do cortador de plugue; profundidade de retração durante o passo de compressão é ajustável (contrator para definir através de C-clipe/Geometria de condução); raspador limpa a polpa da região de fenda cada ciclo</td><td><a href="../../Plug-ejection/index.html">Ejeção do núcleo</a></td></tr>
+</tbody>
+</table>
+<p class="back"><a href="../index.html">← Voltar para a coleção</a>·<a href="../../index.html">P6 RFP</a></p>
+<script>
+(function(){
+  var el = document.getElementById('plunger-filter-slideshow');
+  if (!el) return;
+  var slides = el.querySelectorAll('.slide');
+  var cap = document.getElementById('plunger-filter-caption');
+  var counter = document.getElementById('plunger-filter-counter');
+  var n = slides.length, i = 0;
+  function go(k) { i = (k + n) % n; slides.forEach(function(s,j){ s.classList.toggle('active', j===i); }); if (cap) cap.textContent = slides[i].getAttribute('data-caption') || ''; if (counter) counter.textContent = (i+1) + ' / ' + n; }
+  var prev = document.getElementById('plunger-filter-prev');
+  var next = document.getElementById('plunger-filter-next');
+  if (prev) prev.addEventListener('click', function(){ go(i-1); });
+  if (next) next.addEventListener('click', function(){ go(i+1); });
+})();
+  </script>
+<footer style="margin-top:2rem; padding-top:1rem; border-top:1px solid var(--border); color:var(--muted); font-size:0.85rem;">Última atualização: 2026-03-20.</footer>
+</body>
+</html>

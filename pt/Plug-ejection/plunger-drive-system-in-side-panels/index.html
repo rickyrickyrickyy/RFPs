@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Sistema de acionamento por êmbolo nos painéis laterais — Ejeção do núcleo — P6 RFP</title>
+<style>
+    :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
+    a { color: var(--accent); }
+    h1 { font-size: 1.35rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.25rem; }
+    h3 { font-size: 1rem; margin-top: 1rem; color: var(--muted); }
+    ul, ol { padding-left: 1.25rem; }
+    .back { margin-bottom: 1rem; font-size: 0.9rem; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    .swatch { display: inline-block; width: 1.25rem; height: 1.25rem; border: 1px solid var(--border); border-radius: 3px; vertical-align: middle; }
+    table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+    th, td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
+    .iface-table th { color: var(--muted); font-weight: 600; }
+    .slideshow { margin: 1.5rem 0; }
+    .slideshow .slide { display: none; }
+    .slideshow .slide.active { display: block; }
+    .slideshow .slide img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
+    .slideshow-caption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); min-height: 2.5em; }
+    .slideshow-controls { display: flex; align-items: center; gap: 1rem; margin-top: 0.75rem; flex-wrap: wrap; }
+    .slideshow-controls button { background: var(--border); color: var(--text); border: none; padding: 0.35rem 0.75rem; border-radius: 4px; cursor: pointer; font-size: 0.9rem; }
+    .slideshow-controls button:hover { background: var(--accent); color: #fff; }
+    .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
+  </style>
+  <link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+<nav class="site-lang-bar" aria-label="Language">
+  <span class="lang-label">Idioma:</span>
+  <a href="../../../Plug-ejection/plunger-drive-system-in-side-panels/index.html">English</a>
+  <span aria-hidden="true">·</span>
+  <a href="../../../zh/Plug-ejection/plunger-drive-system-in-side-panels/index.html">中文</a>
+  <span aria-hidden="true">·</span>
+  <a href="index.html" aria-current="page">Português</a>
+</nav>
+
+<p class="back"><a href="../index.html">← Voltar para Ejeção do Core</a> · <a href="../../index.html">P6 RFP overview</a></p>
+<h1>Sistema de acionamento de êmbolo nos painéis laterais</h1>
+<p>O sistema de acionamento do êmbolo nos painéis laterais é o alojamento de atuação dentro do<a href="../index.html">ejeção central</a>sistema que converte<a href="../../Transmission/index.html">transmissão</a>o movimento do garfo em movimento controlado do êmbolo. Ele abriga duas hastes de acionamento paralelas guiadas por rolamentos lineares flangeados LMK16, com uma mola de compressão que fornece força de retorno e uma interface de clipe C para ajustar a profundidade de retração do êmbolo.</p>
+<h2>Introdução</h2>
+<p>Este subconjunto converte o movimento acionado pelo garfo em movimento controlado do êmbolo de ejeção do núcleo usando duas hastes de acionamento paralelas. As hastes são guiadas por mancais lineares flangeados (família LMK16 neste conceito) instalados dentro dos alojamentos do painel lateral. Uma mola de compressão fornece força de retorno e reduz o ruído de impacto através de uma interface de amortecimento de borracha.</p>
+<h2>Colour key &amp; components</h2>
+<p class="muted">Hastes, rolamentos, retorno por mola, alojamentos e painéis laterais que intercalam as zonas de suco/respingos.</p>
+<table>
+<tr><th>Colour(s)</th><th>Component</th></tr>
+<tr><td><em>—</em></td><td><strong>Hastes de acionamento do êmbolo</strong>- duas hastes endurecidas paralelas acionadas por atuação em garfo.</td></tr>
+<tr><td><em>—</em></td><td><strong>Rolamentos lineares LMK16</strong>— guie as hastes através dos alojamentos verdes para preservar o alinhamento.</td></tr>
+<tr><td><em>—</em></td><td><strong>Mola de compressão + interface C-clip</strong>— armazena energia durante a retração e retorna o braquete durante a compressão; o<strong>Posição do clipe C</strong>é a principal alavanca de ajuste para determinar até que ponto os êmbolos se retraem/liberam durante o curso de compressão.</td></tr>
+<tr><td><em>—</em></td><td><strong>Painéis laterais</strong>— chapa metálica dobrada que guia e veda o conjunto do êmbolo na zona de respingo/suco.</td></tr>
+</table>
+<h2 id="gallery">Figures</h2>
+<p class="muted">CAD de<code>Ejeção de plug/imagens/</code>além de fotos do painel lateral nesta página. Consulte<a href="#fig1">Figure 1</a>–<a href="#fig3">Figura 3</a>.</p>
+<div class="slideshow" id="skel-plungerdrivesystemin-slideshow">
+<div class="slideshow-track">
+<div class="slide active" data-caption="Figura 1. Caixas do painel lateral com hastes guiadas por LMK16 e retorno por mola (CAD)." id="fig1"><img alt="Sistema de painel lateral de acionamento de êmbolo CAD" src="../../../Plug-ejection/images/plug-ejection-2.png"/></div>
+<div class="slide" data-caption="Figura 2. Vista lateral — contexto painel/haste (foto)." id="fig2"><img alt="Vista lateral do painel lateral do acionamento do êmbolo" src="../../../Plug-ejection/plunger-drive-system-in-side-panels/images/sideview.png"/></div>
+<div class="slide" data-caption="Figura 3. Detalhe do suporte/caixa (foto)." id="fig3"><img alt="Detalhe do suporte lateral" src="../../../Plug-ejection/plunger-drive-system-in-side-panels/images/sidebracket.png"/></div>
+</div>
+<p aria-live="polite" class="slideshow-caption" id="skel-plungerdrivesystemin-caption">Figura 1. Caixas do painel lateral com hastes guiadas por LMK16 e retorno por mola (CAD).</p>
+<div class="slideshow-controls">
+<button aria-label="Previous" id="skel-plungerdrivesystemin-prev" type="button">← Previous</button>
+<span class="slideshow-counter" id="skel-plungerdrivesystemin-counter">1/3</span>
+<button aria-label="Next" id="skel-plungerdrivesystemin-next" type="button">Next →</button>
+</div>
+</div>
+<h3>Valores recomendados (claridade do contratante)</h3>
+<ul class="muted">
+<li><strong>Adicionar figura</strong>: <strong>Afinação de clipe C</strong>— profundidade de retração versus curso de compressão com dimensões.</li>
+<li><strong>Adicionar figura</strong>: <strong>Carcaça LMK16 ao painel</strong>- vedar e lavar caminhos de drenagem.</li>
+<li><strong>Adicionar figura</strong>: <strong>Mola + batente de borracha</strong>— empilhamento em retração total (ruído/choque).</li>
+</ul>
+<h2>Discussão</h2>
+<h3>Components</h3>
+<ul>
+<li><strong>Hastes de transmissão</strong>— duas hastes passam através de caixas de rolamentos lineares para orientação paralela.</li>
+<li><strong>Caixas de rolamentos lineares</strong>— abrigar rolamentos LMK16 que alinham e guiam as hastes.</li>
+<li><strong>Clipe C + mola de compressão</strong>— durante o curso de retração, o garfo puxa as hastes de acionamento, comprimindo a mola por meio de uma pilha de clipes em C/suportes em C.</li>
+<li><strong>Almofada de borracha</strong>— uma inserção de borracha no batente de deslocamento da mola para evitar impactos do clipe C (redução de ruído e choque).</li>
+<li><strong>Interface do suporte de acionamento do êmbolo</strong>— as hastes se conectam ao suporte de acionamento do êmbolo para empurrar/puxar os êmbolos sem introduzir momentos.</li>
+<li><strong>Painéis laterais</strong>— chapa metálica dobrada que imprensa os êmbolos na zona de suco/respingos; encaixe frouxamente com vedação entre as superfícies.</li>
+</ul>
+<h3>Interfaces</h3>
+<ul>
+<li><strong>Input</strong>: <a href="../../Transmission/index.html">transmissão</a>atuação acionada por garfo (cursos de retração/compressão).</li>
+<li><strong>Output</strong>: movimento axial do suporte de acionamento do êmbolo; inserção/retração do êmbolo através do tubo do filtro; núcleos ejetados caem no<a href="../../Outflow-disposal/index.html">sistema de eliminação</a>rampa central.</li>
+<li><strong>Mount</strong>: painéis laterais fazem interface com placas coletoras/transmissoras; as instalações do alojamento do mancal linear devem permanecer concêntricas/paralelas ao eixo do tubo do filtro.</li>
+</ul>
+<h3>Interfaces and tolerances</h3>
+<p class="muted">O alinhamento é crítico: as hastes/rolamentos devem ser concêntricos e paralelos ao eixo do tubo do filtro para que os êmbolos não se desloquem sob carga.</p>
+<table class="iface-table">
+<thead><tr><th>Part</th><th>Interface / tolerance</th><th>Relacionado</th></tr></thead>
+<tbody>
+<tr><td>Paralelismo de haste</td><td>Duas hastes devem ser paralelas e guiadas através de rolamentos lineares para que o movimento do suporte permaneça apenas axial</td><td><a href="../plunger-drive-bracket/index.html">Suporte de acionamento do êmbolo</a></td></tr>
+<tr><td>Concentricidade do rolamento</td><td>O eixo do rolamento deve ser concêntrico com o tubo do filtro/eixo do êmbolo para evitar momentos e vazamento/desgaste</td><td><a href="../../Collection/plungers-and-filter/index.html">Êmbolos e filtro</a></td></tr>
+<tr><td>Folga do painel lateral</td><td>Os painéis laterais devem ser folgados para montagem, mas é necessária vedação nas zonas de respingos/suco para evitar vazamentos</td><td><a href="../../Collection/index.html">Collection</a></td></tr>
+<tr><td>Alavanca de ajuste do clipe C</td><td>Defina até que ponto os êmbolos retraem durante o curso de compressão, definindo a posição do clipe C/geometria de parada (o contratante definirá o método de ajuste e a faixa)</td><td><a href="../../Collection/plungers-and-filter/index.html">Êmbolos + filtro</a></td></tr>
+</tbody>
+</table>
+<h3>Êmbolo + materiais (intenção principal)</h3>
+<ul>
+<li><strong>Manga de êmbolo de baixa fricção</strong>— o conceito usa uma luva UHMW (segura para alimentos) em torno de uma haste central que entra em contato com o interior do tubo do filtro para minimizar o atrito e o desgaste.</li>
+<li><strong>Raspador</strong>— o raspador da ponta do êmbolo remove a polpa da região da ranhura do tubo do filtro durante a retração, reduzindo a polpa fibrosa e melhorando a eficiência do próximo ciclo.</li>
+<li><strong>Cuidado com o anel de vedação</strong>— Os anéis de vedação dentro do tubo do filtro podem ser cortados/desgastados pelo deslocamento repetido do raspador durante a manutenção; a estratégia do selo ainda está em pesquisa.</li>
+</ul>
+<h3>Problemas e riscos conhecidos</h3>
+<ul>
+<li><strong>Trasfega</strong>— se o alinhamento das hastes/rolamentos ou dos suportes introduzir momento, os êmbolos podem quebrar e emperrar (modo de falha crítica).</li>
+<li><strong>Vazamento + vedação</strong>— a vedação da zona de suco/respingo entre os painéis laterais e as placas de coleta/transmissão deve ser repetível após a manutenção.</li>
+</ul>
+<h3>DFM e manufatura (China)</h3>
+<ul>
+<li><strong>Fluxo de trabalho de alinhamento de mancais e rolamentos</strong>— definir um método de alinhamento/escareamento que preserve a concentricidade entre os ciclos de manutenção.</li>
+<li><strong>Painéis laterais</strong>— montagem de chapa dobrada; garantem uma geometria suave e limpável e interfaces seladas.</li>
+<li><strong>Interfaces deslizantes</strong>— se estiver usando plásticos de engenharia Delrin/reforçados com fibra (por exemplo, para guilhotinas/placas deslizantes), defina a segurança alimentar e os testes de desgaste.</li>
+</ul>
+<h3>Questions for contractor</h3>
+<ol>
+<li>Confirme o melhor plano de alinhamento/montagem para manter os eixos da haste/rolamento concêntricos e paralelos ao eixo do tubo do filtro.</li>
+<li>Proponha detalhes de interface de mola + clipe C que evitem danos/ruídos por impacto na lavagem.</li>
+<li>Proponha materiais de baixo atrito seguros para alimentos para as mangas do êmbolo e defina uma abordagem de vedação aceitável considerando o deslocamento do raspador.</li>
+<li>Defina a estratégia de vedação entre painéis laterais e placas (borracha reutilizável versus selante reutilizável) consistente com a cadência de manutenção.</li>
+<li>Especifique um método prático para ajustar/definir a posição do clipe C (e a profundidade de retração resultante) para que o comprimento engatado e a separação do núcleo permaneçam dentro dos alvos nos tipos laranja.</li>
+</ol>
+<p class="back"><a href="../index.html">← Voltar para Ejeção do Core</a> · <a href="../../index.html">P6 RFP overview</a></p>
+<script>
+(function(){
+  var el = document.getElementById('skel-plungerdrivesystemin-slideshow');
+  if (!el) return;
+  var slides = el.querySelectorAll('.slide');
+  var cap = document.getElementById('skel-plungerdrivesystemin-caption');
+  var counter = document.getElementById('skel-plungerdrivesystemin-counter');
+  var n = slides.length, i = 0;
+  function go(k) { i = (k + n) % n; slides.forEach(function(s,j){ s.classList.toggle('active', j===i); }); if (cap) cap.textContent = slides[i].getAttribute('data-caption') || ''; if (counter) counter.textContent = (i+1) + ' / ' + n; }
+  el.querySelector('#skel-plungerdrivesystemin-prev').addEventListener('click', function(){ go(i-1); });
+  el.querySelector('#skel-plungerdrivesystemin-next').addEventListener('click', function(){ go(i+1); });
+  var hash = window.location.hash;
+  if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
+})();
+  </script>
+<footer style="margin-top:2rem; padding-top:1rem; border-top:1px solid var(--border); color:var(--muted); font-size:0.85rem;">Última atualização: 20/03/2026.</footer>
+</body>
+</html>

@@ -58,10 +58,20 @@ Short snapshot so Marceline and Cursor have current context. Update when priorit
 - **Entry point:** **index.html** at the repo root. No build step.
 - **Later (Cloudflare):** When ready, connect the same repo to Cloudflare Pages (or Workers) and point your domain there.
 
-### Site languages (paused)
+### Site languages (branch `feature/translations-in-progress`)
 
-- **English only** for now: `zh/` and `pt/` mirrors were removed from `main` until a proper translation workflow exists.
-- Shared **mobile / layout** styles may still live in **`assets/site.css`**; any future i18n should regenerate mirrors from English sources of truth.
+- **English** remains the source of truth at normal paths (`index.html`, `Frame/`, …).
+- **简体中文** mirrors live under **`zh/`**, **Português** under **`pt/`**, same folder layout. Each page has a sticky language bar (`assets/site.css`).
+- **Regenerate** after editing English HTML (from repo root):
+  ```bash
+  pip install -r tools/requirements-i18n.txt
+  python tools/install_argos_models.py   # once per machine: offline en→zh, en→pt models
+  python tools/build_i18n.py
+  ```
+  - `--limit N` — only first N pages (quick test).
+  - `--no-translate` — rebuild mirrors with **English** body text (link test only).
+- **Translation engine:** **Argos Translate** (offline, primary when models are installed) translates visible text, `alt`, `title`, `data-caption`, `aria-label`, and Mermaid node labels. If Argos is missing, the script falls back to MyMemory then Google (rate-limited). **Have fluent reviewers** polish technical Portuguese/Chinese before contract use.
+- **`main`** may stay English-only; merge this branch when zh/pt are ready.
 
 ## Layout
 
@@ -72,8 +82,10 @@ Short snapshot so Marceline and Cursor have current context. Update when priorit
 | **memory/** | Marceline’s session summaries and project state (`*.memory.md`). |
 | **Overview/** | P6 context summary, subsystem lists, session summaries. |
 | **index.html** | RFP-only entry: overview, nav (with content / to be completed). Marceline and hosting info stay in this README. |
-| **assets/site.css** | Shared layout (e.g. mobile-friendly rules). |
-| **tools/build_i18n.py** | Optional / future: regenerate language mirrors when i18n is re-enabled. |
+| **zh/**, **pt/** | Localized HTML mirrors (regenerate with `tools/build_i18n.py` on i18n branch). |
+| **assets/site.css** | Shared layout + language bar + mobile rules. |
+| **tools/build_i18n.py** | Builds `zh/` + `pt/` from English; full-page MT for visible text + captions. |
+| **tools/requirements-i18n.txt** | `beautifulsoup4`, `deep-translator`, `lxml` for the build script. |
 | **Frame/** | Frame subsystem RFP draft. |
 | **Enclosure-shell/** | Enclosure / shell (related to Frame). |
 | **Feeder/**, **Plug-ejection/**, **Drivetrain/**, etc. | Subsystem RFP sections (each with index.html + README.md). |

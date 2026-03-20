@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>第三方CIP控制设备——CIP——P6 RFP</title>
+<style>
+    :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
+    a { color: var(--accent); }
+    h1 { font-size: 1.35rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.25rem; }
+    h3 { font-size: 1rem; margin-top: 1rem; color: var(--muted); }
+    ul, ol { padding-left: 1.25rem; }
+    .back { margin-bottom: 1rem; font-size: 0.9rem; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    .swatch { display: inline-block; width: 1.25rem; height: 1.25rem; border: 1px solid var(--border); border-radius: 3px; vertical-align: middle; }
+    table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+    th, td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
+    .iface-table th { color: var(--muted); font-weight: 600; }
+    .slideshow { margin: 1.5rem 0; }
+    .slideshow .slide { display: none; }
+    .slideshow .slide.active { display: block; }
+    .slideshow .slide img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
+    .slideshow-caption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); min-height: 2.5em; }
+    .slideshow-controls { display: flex; align-items: center; gap: 1rem; margin-top: 0.75rem; flex-wrap: wrap; }
+    .slideshow-controls button { background: var(--border); color: var(--text); border: none; padding: 0.35rem 0.75rem; border-radius: 4px; cursor: pointer; font-size: 0.9rem; }
+    .slideshow-controls button:hover { background: var(--accent); color: #fff; }
+    .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
+  </style>
+  <link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+<nav class="site-lang-bar" aria-label="Language">
+  <span class="lang-label">语言：</span>
+  <a href="../../../Clean-in-place/third-party-cip-control-equipment/index.html">English</a>
+  <span aria-hidden="true">·</span>
+  <a href="index.html" aria-current="page">中文</a>
+  <span aria-hidden="true">·</span>
+  <a href="../../../pt/Clean-in-place/third-party-cip-control-equipment/index.html">Português</a>
+</nav>
+
+<p class="back"><a href="../index.html">QQ 回到干净的地方( CIP)</a>* 妇女<a href="../../index.html">私营部门筹资和伙伴关系司概览</a></p>
+<h1>第三方CIP控制设备</h1>
+<p class="muted">部分<a href="../index.html">现场清洁(CIP)</a>节。 P6如何与工厂的CIP系统(循环、连接和验收测试)融合。</p>
+<h2>导言</h2>
+<p>P6不提供独立的CIP控制器——CIP解决方案由<strong>工厂CIP系统</strong>。本页定义了P6如何与外部系统融合。 P6连接工厂的CIP供应,用于内部喷雾清洁,并使用果汁线进行反流回流清洁<a href="../../Collection/index.html">果汁收集</a>电路 在CIP期间,罐体隔离阀能必须防止CIP液体进入生产汁罐.</p>
+<h2>颜色密钥组件( C)</h2>
+<p class="muted">关键设备责任与接口.</p>
+<table>
+<tr><th>颜色</th><th>构成部分</th></tr>
+<tr><td><em>. . . . . .</em></td><td><strong>工厂CIP系统</strong>控制洗涤/化学循环、压力、温度和浓度;提供供应/返回基础设施。</td></tr>
+<tr><td><em>. . . . . .</em></td><td><strong>P6 CIP 倍数</strong>——硬性不锈管和软管连接到厂房供应.</td></tr>
+<tr><td><em>. . . . . .</em></td><td><strong>果汁线回流整合</strong>——阀门/T连接,允许CIP溶液通过收集器/过滤器/插件电路回流.</td></tr>
+</table>
+<h2 id="gallery">图</h2>
+<p class="muted">可用时添加集成图 。</p>
+<h3>建议数字(承包商的清晰度)</h3>
+<ul class="muted">
+<li><strong>添加图</strong>:工厂CIP连接指P6多路(供应/返回,软管路由,支线打开/关闭运动).</li>
+<li><strong>添加图</strong>:果汁线回流管道(T-Valve,检查阀门,排水/返回路径)与收集系统捆绑.</li>
+<li><strong>添加图</strong>:接受测试流量(指标测试点和冲洗确认).</li>
+</ul>
+<h2>讨论情况</h2>
+<h3>工厂控制的CIP程序</h3>
+<p>工厂CIP系统通常运行以下序列(最终持续时间取决于植物能力和清洁结果):</p>
+<ol>
+<li><strong>净水</strong>——去掉散装材料.</li>
+<li><strong>语言/肥皂溶液</strong>——化学清洁步骤.</li>
+<li><strong>最后用水冲洗</strong>- 清除化学残留物。</li>
+</ol>
+<p class="muted">循环后,进行化学指标测试,确认机器没有清洁溶液. 需要时增加一个擦洗周期。</p>
+<h3>业务费用</h3>
+<ul>
+<li><strong>机器一定在运行</strong>在有效清洗的CIP中。</li>
+</ul>
+<h3>接口</h3>
+<ul>
+<li><strong>喷洒清理连接</strong>——工厂CIP供应与P6喷涂机(胶盖组和皮防腐组)连接. 需要弹性软管来允许支线打开/关闭移动.</li>
+<li><strong>汁电路清洁</strong>——CIP溶液通过果汁线作为逆流/回流来清洁果汁收集器,过滤器,和冲流电路.</li>
+<li><strong>CIP期间的坦克隔离</strong>——需要的阀门逻辑:在CIP期间,必须关闭正常的"汁到罐/输出"路径,从而将CIP流体通向集热器/过滤器/plunger电路和<strong>没有</strong>进入生产汁罐</li>
+<li><strong>控件</strong>——所有循环测序和参数控制都由植物CIP系统进行.</li>
+</ul>
+<h3>承包者的问题</h3>
+<ol>
+<li>确定适合氯化萘植物和季节性维护的推荐接合标准(卫生装配型、水管光谱、快速分离战略)。</li>
+<li>指定所需的检查阀/返回路线/排水战略;<strong>阀门切换要求</strong>因此,CIP液体不能污染生产汁罐(CIP期间的坦克隔离),生产也不能污染CIP在清洗期间的返回.</li>
+<li>提出验收试验协议:化学指标、洗涤标准,以及CIP期间的最小运行时间(与喷雾覆盖和后溢效果有关)。</li>
+</ol>
+<h3>接口和容忍度</h3>
+<p class="muted">耐用TBD;承包商提出符合工厂CIP压力/振动和支线运动的连接和安装要求。</p>
+<table class="iface-table">
+<thead><tr><th>编</th><th>接口/容忍度</th><th>相关</th></tr></thead>
+<tbody>
+<tr><td>工厂CIP供应</td><td>提供水/化学循环;压力/温度/浓缩工厂定义</td><td>. . . . . .</td></tr>
+<tr><td>P6 喷洒机</td><td>带软管的硬质不锈纸,以便支线运动</td><td><a href="../../Feeder/index.html">水果摄入系统</a>, (中文).<a href="../../Extraction-syncronisation/index.html">采掘业</a></td></tr>
+<tr><td>果汁线回流</td><td>通过果汁线逆流CIP; 阀门/检查阀门TBD</td><td><a href="../../Collection/index.html">收藏</a></td></tr>
+</tbody>
+</table>
+<h3>构成部分</h3>
+<ul>
+<li>工厂CIP滑动/控制器(外部)</li>
+<li>供应/回路软管和卫生快速断路</li>
+<li>阀门/T-插座,用于果汁线后排</li>
+<li>指标测试材料/程序(接受测试)</li>
+</ul>
+<p class="back"><a href="../index.html">QQ 回到干净的地方( CIP)</a>* 妇女<a href="../../index.html">私营部门筹资和伙伴关系司概览</a></p>
+<footer style="margin-top:2rem; padding-top:1rem; border-top:1px solid var(--border); color:var(--muted); font-size:0.85rem;">最新更新时间:2026-03-20.</footer>
+</body>
+</html>

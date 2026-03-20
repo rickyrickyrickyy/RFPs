@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Resumo do projecto — P6 RFP</title>
+<style>
+    :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
+    a { color: var(--accent); }
+    h1 { font-size: 1.35rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.5rem; }
+    h3 { font-size: 1rem; margin-top: 1rem; color: var(--muted); }
+    ul { padding-left: 1.25rem; }
+    .back { margin-bottom: 1rem; font-size: 0.9rem; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    section { margin: 1rem 0; }
+    li { margin: 0.35rem 0; }
+    .swatch { display: inline-block; width: 1rem; height: 1rem; border: 1px solid var(--border); border-radius: 2px; vertical-align: middle; }
+    .slideshow { margin: 1rem 0; }
+    .slideshow .slide { display: none; }
+    .slideshow .slide.active { display: block; }
+    .slideshow .slide img { max-width: 100%; height: auto; border: 1px solid var(--border); border-radius: 6px; display: block; }
+    .slideshow-caption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); min-height: 2em; }
+    .slideshow-controls { display: flex; align-items: center; gap: 0.75rem; margin-top: 0.5rem; flex-wrap: wrap; }
+    .slideshow-controls button { background: var(--border); color: var(--text); border: none; padding: 0.3rem 0.6rem; border-radius: 4px; cursor: pointer; font-size: 0.9rem; }
+    .slideshow-controls button:hover { background: var(--accent); color: #fff; }
+    .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
+    table.colour-key { width: 100%; border-collapse: collapse; font-size: 0.85rem; margin: 0.5rem 0; }
+    table.colour-key th, table.colour-key td { text-align: left; padding: 0.4rem 0.6rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+    table.colour-key th { color: var(--muted); font-weight: 600; white-space: nowrap; }
+    table.colour-key td.n { width: 1.5rem; text-align: right; color: var(--muted); }
+    table.colour-key td.sw { width: 6rem; }
+    table.colour-key td.desc { max-width: 28rem; }
+    table.colour-key td.sw .na { color: var(--muted); font-size: 0.9em; }
+    .flow { background: rgba(88, 166, 255, 0.08); border: 1px solid var(--border); border-radius: 8px; padding: 1rem 1.25rem; margin: 1rem 0; }
+    .flow ol { margin: 0.5rem 0 0 1rem; }
+    .mermaid-wrap { margin: 1rem 0; overflow-x: auto; background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+    .mermaid-wrap .mermaid { display: flex; justify-content: center; }
+    footer.site { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; }
+  </style>
+  <link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<nav class="site-lang-bar" aria-label="Language">
+  <span class="lang-label">Idioma:</span>
+  <a href="../../Overview/index.html">English</a>
+  <span aria-hidden="true">·</span>
+  <a href="../../zh/Overview/index.html">中文</a>
+  <span aria-hidden="true">·</span>
+  <a href="index.html" aria-current="page">Português</a>
+</nav>
+
+<p class="back"><a href="../index.html">← Voltar para P6 RFP visão geral</a></p>
+<h1>Visão geral do projecto</h1>
+<p class="muted">Referência única para o protótipo industrial P6 e a estrutura RFP.<strong>Última actualização:</strong>2026-03-20.</p>
+<p>O P6 é o espremedor de citrinos de última geração na linha Delijuice. É projetado para lidar com uma ampla gama de variedades de citrinos (incluindo limões) com um ciclo de extração industrial repetitivo que separa suco de fluxos de resíduos.
+O programa está configurando um ambiente de produção piloto em<strong>Jiangxi (China)</strong>com a configuração do alvo<strong>Outubro</strong>. A primeira máquina a protótipo e validação é o<strong>P6-870</strong>;<strong>P6-970</strong>com módulos de extração 3x maiores é planejado posteriormente.
+<strong>P6-870 rendimento:</strong>~280 frutos/min, produzindo uma estimativa<strong>1360 L/h</strong>de sumo. Uma linha piloto está prevista com<strong>6 extractores em série</strong>para alcançar<strong>8160 L/h</strong>, portanto, todos os equipamentos de terceiros a jusante devem ser dimensionados para essa capacidade total.
+O P6-870 foi projetado para integrar-se com linhas de suco de laranja industriais existentes e pode ser substituído por<strong>Estilo JBT Marel</strong>máquinas construídas por Kaiyi ou fornecedores de linhas semelhantes.
+</p>
+<section>
+<h2>O que é P6</h2>
+<p><strong>P6</strong>é o atual<strong>protótipo industrial</strong>máquina cítrica construída em torno do<strong>Ciclo de extração de Delijuice</strong>(mesma sequência funcional como extratores industriais anteriores de Delijuice).<strong>Linha de máquinas:</strong>P3 → P4 → P5 →<strong>P6</strong>(O foco de desenvolvimento de hoje). O programa P6 está sendo protótipo em colaboração entre<strong>Delijuice</strong>e<strong>SIM Usinagem</strong>(fabricação). O menor<strong>323</strong>/ linha de bancada é uma família de produtos separada – não o assunto deste RFP.</p>
+<ul>
+<li><strong>Jiangxi (JX):</strong>Fábrica com<strong>LTA (Long Tai An)</strong>. Alvo miniplante: 8,160 L/h, 6 extratores, turbo-filtro, pasteurizador.<strong>Pressão operacional: Outubro.</strong></li>
+<li><strong>Desenhos / alvo fab:</strong> <strong>15 de Maio</strong>para SIM fabricar (área de Shenzhen).</li>
+</ul>
+</section>
+<section>
+<h2>Como funciona a máquina</h2>
+<div class="flow">
+<strong>Ciclo de extração de Delijuice (alto nível)</strong>
+<ol>
+<li><strong>Consumo de fruta</strong>— os citrinos são montados uma vez e apresentados à cavidade de extracção.</li>
+<li><strong>Compressão</strong>— o fruto é comprimido/peleado; o sumo é encaminhado através da via de filtração/colecção.</li>
+<li><strong>Saída de sumo</strong>— o sumo flui para os colectores e depois para os tanques/equipamentos de pasteurização.</li>
+<li><strong>Expulsão do núcleo</strong>— um plug/core é ejectado e encaminhado para o pára-quedas/auger dos resíduos do núcleo.</li>
+</ol>
+</div>
+<p>Para o tempo de curso, o movimento do jugo, e como a ingestão vs compressão interagem, veja<a href="Delijuice-cycle.html">Ciclo de extração de Delijuice</a>.</p>
+</section>
+<section>
+<h2>Fluxo de produto de fábrica (citrus → suco → pasteurização → enchimento)</h2>
+<div class="flow">
+<p><strong>A montante → P6 → tanque → a jusante.</strong>A triagem e alimentação de terceiros trazem frutas para os tubos de entrada P6; P6 sai suco para plantar tanque; cascas e núcleos vão para linhas de auger separadas.</p>
+<ol>
+<li><strong>Ordenação de terceiros + alimentação</strong>— citrinos pré-sortidos, pré-lavados, através de um separador de dimensões em linhas de alimentação P6 e tubos de entrada.</li>
+<li><strong>Extração P6</strong>— Frutos em fase de descasque/compressão; sumo através de filtração/recolha; casca e núcleo para separar os pára-quedas/augers. ~1360 L/h por extrator; linha planejada de 6× ~8160 L/h.</li>
+<li><strong>Sumo-tanque</strong>— Sumo dos colectores para<strong>tanques de sumo</strong>tamanho para a taxa total da linha.</li>
+<li><strong>Processamento a jusante</strong>— Ver diagrama de fluxo abaixo (acabador de remo → pasteurização → corrente fria).</li>
+</ol>
+<p class="muted" style="margin-top:0.75rem"><em>Se o diagrama não renderizar, habilite JavaScript; a sequência também está listada em ordem sob o gráfico.</em></p>
+<div class="mermaid-wrap"><pre class="mermaid">
+flowchart LR
+  A[Tamanho ordenar + alimentação] --&gt; B[Extração P6]
+  B --&gt; C[Colectores de sumos]
+  B --&gt; W[Peel + augers de núcleo]
+  C --&gt; D[Tanques de sumos]
+  D --&gt; E[Terminador de remo]
+  E --&gt; F[Tanque de retenção + agitador]
+  F --&gt; G[Pasteurizador de tubos]
+  G --&gt; H[Tanque de arrefecimento]
+  H --&gt; I[Preenchimento]
+  I --&gt; J[Refrigeração]
+      </pre></div>
+<p><strong>Sequência descendente (mesmo que o diagrama):</strong>Terminador de pá → tanque de retenção (agitador) → pasteurizador de tubo → tanque de refrigeração → enchimento → refrigeração.</p>
+</div>
+</section>
+<section>
+<h2>Conjuntos de topo</h2>
+<p>Cada subsistema tem sua própria seção RFP com fotos, Q&amp;A e detalhes de peça/parâmetro. A legenda abaixo lista todos os 11 subsistemas com suas cores CAD e uma breve descrição.</p>
+<table class="colour-key">
+<thead><tr><th class="n"># #</th><th class="sw">Cor</th><th>Subsistema</th><th class="desc">Objecto</th></tr></thead>
+<tbody>
+<tr><td class="n">1</td><td class="sw"><span class="swatch" style="background:#A4E637"></span></td><td><a href="../Frame/index.html">Frame</a></td><td class="desc">Estrutura soldada primária e dado para alinhamento; suporta acionamento/transmissão/carga de placas e carrega cargas operacionais para o chão.</td></tr>
+<tr><td class="n">2</td><td class="sw"><span class="swatch" style="background:#FFE899"></span> <span class="swatch" style="background:#FF95DA"></span> <span class="swatch" style="background:#1E7334"></span></td><td><a href="../Drivetrain/index.html">Condução</a></td><td class="desc">Powertrain (motor WEG → cintos V → redutor Sumitomo → trem de engrenagem) que aciona rolamentos de came para o curso de extração.</td></tr>
+<tr><td class="n">3</td><td class="sw"><span class="swatch" style="background:#C41D63"></span> <span class="swatch" style="background:#E6612E"></span></td><td><a href="../Transmission/index.html">Sistema de transmissão</a></td><td class="desc">Converte rotação da came do drivetrain no movimento linear para o curso de extração (yoke, eixos, rolamentos lineares na placa de montagem da transmissão).</td></tr>
+<tr><td class="n">4</td><td class="sw"><span class="swatch" style="background:#317DDE"></span></td><td><a href="../Extraction-syncronisation/index.html">Extração e sincronização</a></td><td class="desc">Montagem impulsionada que funciona com a linha de ingestão de frutas: estágio de fruta, acionamento de descascadores / movimento sincronia, e<strong>gotas de uma fruta de cada vez</strong>para a câmara de sumo (lado de recolha).</td></tr>
+<tr><td class="n">5</td><td class="sw"><span class="swatch" style="background:#FCAB3B"></span></td><td><a href="../Collection/index.html">Colecção</a></td><td class="desc">Descascadores estáticos, tubo de filtro, cortador de plug, coletores de suco: separado<strong>sumo de casca e de sementes</strong>e mantém o núcleo para<a href="../Plug-ejection/index.html">ejeção do núcleo</a>.</td></tr>
+<tr><td class="n">6</td><td class="sw"><span class="swatch" style="background:#71C32D"></span></td><td><a href="../Feeder/index.html">Sistema de ingestão de frutas</a></td><td class="desc">Linha de admissão e corpo alimentador: traz frutos e<strong>liberta uma laranja de cada vez</strong>Para o percurso de extracção/sincronização (a montante da gota na câmara).</td></tr>
+<tr><td class="n">7</td><td class="sw"><span class="swatch" style="background:#F4FF43"></span> <span class="swatch" style="background:#2E7BDD"></span> <span class="swatch" style="background:#9B79E6"></span> <span class="swatch" style="background:#F9A93C"></span></td><td><a href="../Plug-ejection/index.html">Ejeção do núcleo</a></td><td class="desc">Plungers + suporte de acionamento / varetas / molas que empurram através do filtro e ejetam o núcleo do cortador de plug para o pára-quedas do núcleo.</td></tr>
+<tr><td class="n">8</td><td class="sw"><span class="swatch" style="background:#D822B0"></span> <span class="swatch" style="background:#2793AE"></span></td><td><a href="../Outflow-disposal/index.html">Sistema de eliminação</a></td><td class="desc">Descasque o pára-quedas + pára-quedas do núcleo + dois augers que mantêm a casca e os núcleos separados e transportam ambos os fluxos de resíduos para fora da máquina.</td></tr>
+<tr><td class="n">9</td><td class="sw"><span class="swatch" style="background:#489B27"></span> <span class="swatch" style="background:#F54646"></span> <span class="swatch" style="background:#7838DC"></span> <span class="swatch" style="background:#469925"></span> <span class="swatch" style="background:#F44545"></span></td><td><a href="../Enclosure-shell/index.html">Anexo / shell</a></td><td class="desc">Tampas protetoras e dobradiças overcentered; protege os operadores de partes móveis (drivetrain/pulngers) permitindo o acesso rápido para limpeza / serviço.</td></tr>
+<tr><td class="n">10</td><td class="sw"><span class="na">—</span></td><td><a href="../Clean-in-place/index.html">Limpeza no local (CIP)</a></td><td class="desc">Tubos de pulverização/pipe e integração de terceiros com CIP (TBD) para limpeza de zonas de contato com alimentos e salpicos sem desmontagem total.</td></tr>
+<tr><td class="n">11</td><td class="sw"><span class="na">—</span></td><td><a href="../Controls-Electronics/index.html">Controlos e electrónica</a></td><td class="desc">IU, travas de segurança, distribuição de controle/potência do motor e sensoriamento (por exemplo, posição do jugo) que coordenam o ciclo de extração.</td></tr>
+</tbody>
+</table>
+<h3 id="exploded-top-assembly">Vista explosiva (conjunto de nível superior)</h3>
+<p class="muted">Sequência CAD explodida para a máquina completa. Os dados relativos à fase de montagem e ao subsistema continuam a figurar<a href="../Frame/index.html">Frame</a>Page.</p>
+<div class="slideshow" id="top-exploded-slideshow">
+<div class="slideshow-track">
+<div class="slide active" data-caption="Figura E1. Montagem de topo — explodiu (passo 1 de 7)."><img alt="Conjunto explosivo 1" src="../../Overview/exploded/01.png"/></div>
+<div class="slide" data-caption="Figura E2. Montagem de topo — explodiu (passo 2 de 7)."><img alt="Conjunto explosivo 2" src="../../Overview/exploded/02.png"/></div>
+<div class="slide" data-caption="Figura E3. Montagem de topo — explodiu (passo 3 de 7)."><img alt="Conjunto explosivo 3" src="../../Overview/exploded/03.png"/></div>
+<div class="slide" data-caption="Figura E4. Montagem de topo — explodiu (passo 4 de 7)."><img alt="Conjunto explosivo 4" src="../../Overview/exploded/04.png"/></div>
+<div class="slide" data-caption="Figura E5. Montagem de topo — explodiu (passo 5 de 7)."><img alt="Montagem explodida 5" src="../../Overview/exploded/05.png"/></div>
+<div class="slide" data-caption="Figura E6. Montagem de topo — explodiu (passo 6 de 7)."><img alt="Conjunto explosivo 6" src="../../Overview/exploded/06.png"/></div>
+<div class="slide" data-caption="Figura E7. Montagem de topo — explodiu (passo 7 de 7)."><img alt="Conjunto explosivo 7" src="../../Overview/exploded/07.png"/></div>
+</div>
+<p aria-live="polite" class="slideshow-caption" id="top-exploded-caption">Figura E1. Montagem de topo — explodiu (passo 1 de 7).</p>
+<div class="slideshow-controls">
+<button aria-label="Anterior" id="top-exploded-prev" type="button">← Anterior</button>
+<span class="slideshow-counter" id="top-exploded-counter">1 / 7</span>
+<button aria-label="Próxima" id="top-exploded-next" type="button">Próxima →</button>
+</div>
+</div>
+<h3>Vistas reunidas</h3>
+<p class="muted">Montagem de topo em estado montado. Figuras 1–10.</p>
+<div class="slideshow" id="top-assembled-slideshow">
+<div class="slideshow-track">
+<div class="slide active" data-caption="Figura 1. Montagem de topo (montada)." id="assem1"><img alt="Montagem de topo montada 1" src="../../Overview/images/01.png"/></div>
+<div class="slide" data-caption="Figura 2. Montagem de topo (montada)." id="assem2"><img alt="Montagem de topo montada 2" src="../../Overview/images/02.png"/></div>
+<div class="slide" data-caption="Figura 3. Montagem de topo (montada)." id="assem3"><img alt="Montagem de topo montada 3" src="../../Overview/images/03.png"/></div>
+<div class="slide" data-caption="Figura 4. Montagem de topo (montada)." id="assem4"><img alt="Montagem de topo montada 4" src="../../Overview/images/04.png"/></div>
+<div class="slide" data-caption="Figura 5. Montagem de topo (montada)." id="assem5"><img alt="Montagem de topo montada 5" src="../../Overview/images/05.png"/></div>
+<div class="slide" data-caption="Figura 6. Montagem de topo (montada)." id="assem6"><img alt="Montagem de topo montada 6" src="../../Overview/images/06.png"/></div>
+<div class="slide" data-caption="Figura 7. Montagem de topo (montada)." id="assem7"><img alt="Montagem de topo montada 7" src="../../Overview/images/07.png"/></div>
+<div class="slide" data-caption="Figura 8. Montagem de topo (montada)." id="assem8"><img alt="Montagem de topo montada 8" src="../../Overview/images/08.png"/></div>
+<div class="slide" data-caption="Figura 9. Montagem de topo (montada)." id="assem9"><img alt="Montagem de topo montada 9" src="../../Overview/images/09.png"/></div>
+<div class="slide" data-caption="Figura 10. Montagem de topo (montada)." id="assem10"><img alt="Montagem de topo montada 10" src="../../Overview/images/10.png"/></div>
+</div>
+<p aria-live="polite" class="slideshow-caption" id="top-assembled-caption">Figura 1. Montagem de topo (montada).</p>
+<div class="slideshow-controls">
+<button aria-label="Anterior" id="top-assembled-prev" type="button">← Anterior</button>
+<span class="slideshow-counter" id="top-assembled-counter">1 / 10</span>
+<button aria-label="Próxima" id="top-assembled-next" type="button">Próxima →</button>
+</div>
+</div>
+<h3>Números recomendados (clareza do contratante)</h3>
+<ul class="muted">
+<li><strong>Adicionar figura</strong>:<strong>Envelope global</strong>— máquina L×W×H e folgas de serviço em torno de subsistemas articulados.</li>
+<li><strong>Adicionar figura</strong>:<strong>Mapa de cores do subsistema</strong>— uma única fotografia rotulada que corresponda à tabela acima (para os percursos JX).</li>
+<li><strong>Adicionar figura</strong>:<strong>Interfaces de utilidade pública</strong>— locais eléctricos, CIP e desfibriladores instalados.</li>
+</ul>
+</section>
+<section id="general-design">
+<h2>Requisitos gerais de concepção, fabrico e segurança alimentar</h2>
+<h3>Materiais, segurança alimentar e superfícies</h3>
+<ul>
+<li>Utilizar materiais seguros para alimentos em todas as zonas de alimentos e salpicos (por exemplo, aços inoxidáveis e polímeros compatíveis); evitar pares galvânicos e acabamentos corrosivos.</li>
+<li>Nas zonas alimentares, a rugosidade da superfície alvo em torno de Ra 0.8–1.6 μm, por isso as superfícies são limpáveis e não aprisionam a polpa.</li>
+<li>Siga as orientações do estilo NSF: sem prateleiras, bolsos ou áreas escondidas em áreas de comida ou salpicos; todos os alimentos e líquidos devem ter um caminho definido para drenar.</li>
+<li>Selar ou soldar todas as costuras em alimentos e zonas de respingos, de modo que não hajam lacunas capilares; evitar juntas lap e seladas sobreposições nestas áreas.</li>
+<li>Deburr todas as bordas; sem bordas afiadas ou rebarbas expostas aos operadores ou em qualquer zona que possa coletar alimentos.</li>
+</ul>
+<h3>Fixadores e articulações</h3>
+<ul>
+<li>Minimizar o número de diferentes tamanhos de parafusos; onde prático restringir a M3, M5, M10 e M16 para aumentar os níveis de resistência.</li>
+<li>Nas áreas de contacto com alimentos:<strong>sem linhas expostas</strong>; usar impasses, pregos de solda ou parafusos com porcas fora da zona. Onde os parafusos da máquina são necessários para o serviço,<strong>Hex head, Phillips, e slotted</strong>As unidades são aceitáveis; evitar outros tipos de unidades dentro ou acima das zonas alimentares, salvo acordo.</li>
+<li>Prefer pinos dowel para localizar peças em cisalhamento; use parafusos de ombro para articulações que carregam cisalhamento e rotação.</li>
+<li>Minimize a contagem total de parafusos com suportes compartilhados e caminhos de carga claros; design para fácil desmontagem e remontagem para limpeza.</li>
+</ul>
+<h3>Desenho para fabricação</h3>
+<ul>
+<li>Favoreça as peças simétricas e evite a manipulação desnecessária sempre que possível.</li>
+<li>Minimizar usinagem e processamento secundário usando tamanhos de estoque, soldas simples e perfis de corte laser/plasma.</li>
+<li>Especificar tolerâncias suficientes para a função; os métodos de pós-processamento (por exemplo, moagem, brunimento, polimento) são selecionados pelos fabricantes para atender a essas tolerâncias.</li>
+</ul>
+</section>
+<p class="back"><a href="../index.html">← Voltar para P6 RFP visão geral</a></p>
+<script>
+(function(){
+  function initSlideshow(id) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    var slides = el.querySelectorAll('.slide');
+    var capId = id.replace('-slideshow','-caption');
+    var counterId = id.replace('-slideshow','-counter');
+    var prevId = id.replace('-slideshow','-prev');
+    var nextId = id.replace('-slideshow','-next');
+    var cap = document.getElementById(capId);
+    var counter = document.getElementById(counterId);
+    var n = slides.length, i = 0;
+    function go(k) {
+      i = (k + n) % n;
+      slides.forEach(function(s,j){ s.classList.toggle('active', j===i); });
+      if (cap) cap.textContent = slides[i].getAttribute('data-caption') || '';
+      if (counter) counter.textContent = (i+1) + ' / ' + n;
+    }
+    var prevBtn = document.getElementById(prevId);
+    var nextBtn = document.getElementById(nextId);
+    if (prevBtn) prevBtn.addEventListener('click', function(){ go(i-1); });
+    if (nextBtn) nextBtn.addEventListener('click', function(){ go(i+1); });
+  }
+  initSlideshow('top-exploded-slideshow');
+  initSlideshow('top-assembled-slideshow');
+})();
+  </script>
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: 'dark',
+    securityLevel: 'loose',
+    themeVariables: { primaryTextColor: '#e6edf3', lineColor: '#8b949e', primaryColor: '#30363d' }
+  });
+  </script>
+<footer class="site">Última atualização: 2026-03-20.</footer>
+</body>
+</html>

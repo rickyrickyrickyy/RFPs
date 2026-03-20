@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Cargas e vias de carga — Quadro — P6 RFP</title>
+<style>
+    :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
+    a { color: var(--accent); }
+    h1 { font-size: 1.35rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.5rem; }
+    h3 { font-size: 1rem; margin-top: 1rem; color: var(--muted); }
+    ul, ol { padding-left: 1.25rem; }
+    .back { margin-bottom: 1rem; font-size: 0.9rem; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    section { margin: 1.25rem 0; }
+    li { margin: 0.35rem 0; }
+    table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+    th, td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
+    th { color: var(--muted); font-weight: 600; }
+    .slideshow { margin: 1.5rem 0; }
+    .slideshow-track { position: relative; }
+    .slideshow .slide { display: none; }
+    .slideshow .slide.active { display: block; }
+    .slideshow .slide img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
+    .slideshow-caption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); min-height: 2.5em; }
+    .slideshow-controls { display: flex; align-items: center; gap: 1rem; margin-top: 0.75rem; flex-wrap: wrap; }
+    .slideshow-controls button { background: var(--border); color: var(--text); border: none; padding: 0.35rem 0.75rem; border-radius: 4px; cursor: pointer; font-size: 0.9rem; }
+    .slideshow-controls button:hover { background: var(--accent); color: #fff; }
+    .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
+  </style>
+  <link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+<nav class="site-lang-bar" aria-label="Language">
+  <span class="lang-label">Idioma:</span>
+  <a href="../../../Frame/Loads-and-load-paths/Loads-and-load-paths.html">English</a>
+  <span aria-hidden="true">·</span>
+  <a href="../../../zh/Frame/Loads-and-load-paths/Loads-and-load-paths.html">中文</a>
+  <span aria-hidden="true">·</span>
+  <a href="Loads-and-load-paths.html" aria-current="page">Português</a>
+</nav>
+
+<p class="back"><a href="../index.html">← Voltar ao Quadro</a>·<a href="../../index.html">P6 RFP</a></p>
+<h1>Cargas e caminhos de carga</h1>
+<p>Esta página descreve as cargas operacionais primárias que actuam sobre o quadro P6 — a partir do<a href="../../Drivetrain/index.html">drivetrain</a>,<a href="../../Transmission/index.html">transmissão</a>, extração, e subsistemas de ejeção do núcleo - e como essas cargas são realizadas através da estrutura soldada, placas de montagem, e juntas aparafusadas até os pés de nivelamento e piso. É parte do<a href="../index.html">Frame</a>seção e fornece a base da caixa de carga para empreiteiros que validam a rigidez e alinhamento do quadro.</p>
+<section>
+<h2>Cargas primárias</h2>
+<p>O quadro deve conter forças de reacção da<a href="../../Drivetrain/index.html">drivetrain</a>,<a href="../../Transmission/index.html">transmissão</a>,<a href="../../Extraction-syncronisation/index.html">extração</a>(conjuntos e descascadores accionados), e<a href="../../Plug-ejection/index.html">ejeção do núcleo</a>Sem deflexão excessiva. O alinhamento entre jugos, rolamentos e descascadores deve ser mantido para o tempo e a vida útil.</p>
+<table>
+<thead><tr><th>Origem</th><th>Tipo de carga</th><th>Caminho através da moldura</th></tr></thead>
+<tbody>
+<tr><td>Comboio (motor, redutor, artes)</td><td>Reação ao binário de acionamento; peso do motor, redutor, trem de engrenagem</td><td>Placa de montagem do trem → trilhos laterais → quadro principal → montagens de nivelamento → piso</td></tr>
+<tr><td>Transmissão (yoke, eixos, rolamentos)</td><td>Reação à força de curso linear; inércia do jugo e massa acionada</td><td>Placa de montagem de transmissão → trilhos laterais → quadro principal → montagens de nivelamento → piso</td></tr>
+<tr><td>Extração (carcaça accionada, descascadores)</td><td>Força de compressão durante o engorduramento; reacção dos descascadores estáticos</td><td>Placa de montagem carregada (lado da coleção) ↔ suporte acionado; placa carregada → carris laterais → quadro principal → piso</td></tr>
+<tr><td>Ejeção do núcleo (acionamento do mergulhador)</td><td>Reação à força do êmbolo (molas de compressão, carga da haste)</td><td>Caixas e suportes do mergulhador reagem na estrutura carregada / coleta; em placa de montagem carregada e trilhos laterais → quadro principal → piso</td></tr>
+</tbody>
+</table>
+</section>
+<section>
+<h2>Casos de carga chave (para validar)</h2>
+<p class="muted">Os valores atuais abaixo são preliminares e visam ajudar os contratantes a definir casos de carga e alvos de aceitação. Contratante para validar com geometria final, distância central da correia, módulo de engrenagem/perfil e detalhes cam/yoke.</p>
+<ul>
+<li><strong>Excitação motor / cinto / redutor</strong>— motor WEG W21/W22 IE3 (7,5 kW/10 hp) conduz o redutor através de correias SPA (razão actualmente 1:1; duas correias planeadas). O tensionamento do cinto e a vibração do motor transmitem cargas radiais e vibrações para a placa e quadro de montagem do drivetrain.</li>
+<li><strong>Redução de saída / malha de engrenagem</strong>— Velocidade de saída do redutor de alvo ~70 rpm. Cálculos preliminares do drivingtrain indicam ~1023 N·m de torque na engrenagem acionada, com forças de malha de engrenagem estimadas na ordem de ~6.6 kN tangencial e ~7.2 kN normal (a validar).</li>
+<li><strong>Reciprocação Cam-yoke</strong>— Deslocamento do rolamento da came ~89 mm do eixo do eixo do eixo aciona reciprocação do jugo. Isso introduz forças cíclicas e momentos na placa de montagem de transmissão, os dois eixos de acionamento, e seus suportes.</li>
+<li><strong>Evento máximo de compressão</strong>— A pior condição de funcionamento pressupõe a capacidade máxima de acionamento do acionamento do evento de extração/compressão; as placas de montagem e moldura devem suportar isso com um fator adequado de segurança e sem perder o alinhamento.</li>
+</ul>
+</section>
+<section>
+<h2>Momentos em rolamentos lineares e placas de montagem</h2>
+<p>A transmissão utiliza dois eixos guiados por dois rolamentos lineares LMK35UU (35 mm). Os rolamentos estão localizados acima da placa de montagem, forças fora do eixo e qualquer assimetria entre os lados esquerdo/direita geram momentos na placa de montagem de transmissão e na moldura.</p>
+<ul>
+<li><strong>Caixa assimétrica / jam</strong>— se um lado se ligar ou vir um atrito superior ao outro, os eixos podem torcer e impor cargas de momento adicionais nos rolamentos e placas lineares.</li>
+<li><strong>Revertendo momentos</strong>— O deslocamento vertical entre a linha de reação do rolamento e a placa de montagem cria um momento de inversão que tende a girar a placa de montagem sobre um eixo horizontal. Espera-se que isso seja significativo no lado da coleta durante a compressão.</li>
+<li><strong>Transferência de carga</strong>— Estes momentos devem ser levados através da placa de montagem para os pinos de aparafusamento e fixação aparafusada nos carris laterais, em seguida, para o quadro soldado e para baixo para os montagens de nivelamento e piso.</li>
+</ul>
+</section>
+<section>
+<h2>Princípios do caminho de carga</h2>
+<ul>
+<li><strong>Limpar caminhos</strong>— nenhuma peça ou junta deve ver a carga desproporcionada; as cargas devem espalhar-se através da estrutura soldada e nas três chapas, conforme previsto.</li>
+<li><strong>Minimizar deflexão</strong>— A rigidez das interfaces do quadro principal e da placa é fundamental para que o jugo viaje, a malha do descascador e o alinhamento do êmbolo permaneçam dentro da intenção de projeto.</li>
+<li><strong>Reacção no chão</strong>— Todas as cargas de funcionamento devem ser transportadas através das pernas para os suportes de nivelamento (Endplates M24) e para o piso; não devem existir vias de reacção flutuantes ou cantilevered.</li>
+<li><strong>Juntas</strong>— As interfaces aparafusadas (placas para armação, suportes para chapas) devem ser adequadas para o cisalhamento e a tensão; as pás carregam a localização e o cisalhamento, quando especificado.</li>
+</ul>
+</section>
+<section>
+<h2>Notas relativas ao RFP</h2>
+<p>Solicita-se aos contratantes que verifiquem e documentem os casos de carga e os caminhos de carga para a configuração tal como construída, e que proponham metas práticas de aceitação para rigidez e alinhamento (incluindo os casos assimétricos/embaraçados para os eixos de transmissão). Se for caso disso, os contratantes devem recomendar se os cálculos simplificados são suficientes ou se o FEA se justifica para as chapas de soldadura e/ou montagem crítica.</p>
+</section>
+<section>
+<h2>Perguntas para o contratante</h2>
+<ol>
+<li>Casos de carga validados derivados (cargas radiais motoras/cintas de tensionamento, forças de malha de engrenagens, forças de reciprocação cam-yoke, compressão de pico), e fornecer força/momento estimativas em cada interface de placa de montagem.</li>
+<li>Validar ou corrigir as figuras preliminares do drivetrain (~1023 N·m torque na engrenagem acionada; ~6.6 kN tangencial e ~7.2 kN forças normais da engrenagem) e documentar suposições.</li>
+<li>Quantificar momentos e cargas de rolamento para os eixos guiados por LMK35UU, incluindo uma caixa assimétrica/embaraçada, e recomendar rigidez da placa de montagem e projeto de articulação.</li>
+<li>Recomendar se a FEA é necessária (soldadura de quadro, placa de transmissão em torno do rolamento de rolos cônicos, placa de transmissão em torno de rolamentos lineares) e fornecer condições de contorno e métricas de aceitação.</li>
+<li>Propor alvos de aceitação para deflexão / desalinhamento permissível que preservam o alinhamento do descascador e a vida útil do rolamento, e recomendar verificações de inspeção para verificar.</li>
+</ol>
+</section>
+<section>
+<h2 id="gallery">Figuras</h2>
+<p class="muted">Vistas CAD. Ver figuras no texto como<a href="#fig1">Figura 1</a>,<a href="#fig2">Figura 2</a>, etc.</p>
+<div class="slideshow" id="frame-slideshow">
+<div class="slideshow-track">
+<div class="slide active" data-caption="Figura 1. Soldadura do quadro — estrutura global, placas de interface e trajecto de carga primária em carris laterais (CAD)." id="fig1"><img alt="Quadro — visão geral do caminho de carga 1" src="../../../Frame/Loads-and-load-paths/images/01.png"/></div>
+<div class="slide" data-caption="Figura 2. Montagem de interfaces de placas – reações do drivetrain, transmissão e caminhos de coleta para o quadro (CAD)." id="fig2"><img alt="Quadro — caminhos de carga da placa de montagem" src="../../../Frame/Loads-and-load-paths/images/02.png"/></div>
+<div class="slide" data-caption="Figura 3. Rigidez do quadro/contexto de apoio — como as cargas operacionais se distribuem antes de atingir os pés de nivelamento (CAD)." id="fig3"><img alt="Quadro — reforço e reacções" src="../../../Frame/Loads-and-load-paths/images/03.png"/></div>
+<div class="slide" data-caption="Figura 4. Frame-to-floor — pés de nivelamento, reações das pernas e trajetória de carga do piso (CAD)." id="fig4"><img alt="Quadro — reacções dos pés e do chão" src="../../../Frame/Loads-and-load-paths/images/04.png"/></div>
+</div>
+<p aria-live="polite" class="slideshow-caption" id="frame-caption">Figura 1. Soldadura do quadro — estrutura geral e visão geral do caminho de carga.</p>
+<div class="slideshow-controls">
+<button aria-label="Anterior" id="frame-prev" type="button">← Anterior</button>
+<span class="slideshow-counter" id="frame-counter">1 / 4</span>
+<button aria-label="Próxima" id="frame-next" type="button">Próxima →</button>
+</div>
+</div>
+<h3>Números recomendados (clareza do contratante)</h3>
+<ul class="muted">
+<li><strong>Adicionar figura</strong>:<strong>Resumo do corpo livre / reacção</strong>— estimativas numéricas dos pés e das juntas dos carris para o compota mais grave.</li>
+<li><strong>Adicionar figura</strong>:<strong>Foto do "Plate-shim"</strong>— um verdadeiro exemplo de montagem do comboio/transmissão/carregado nos carris.</li>
+<li><strong>Adicionar figura</strong>:<strong>Esboço dos critérios de deflexão</strong>— inclinação admissível que ainda preserva o alinhamento do descascador.</li>
+</ul>
+</section>
+<p class="back"><a href="../index.html">← Voltar ao Quadro</a>·<a href="../../index.html">P6 RFP</a></p>
+<script>
+(function(){
+  var el = document.getElementById('frame-slideshow');
+  if (!el) return;
+  var slides = el.querySelectorAll('.slide');
+  var cap = document.getElementById('frame-caption');
+  var counter = document.getElementById('frame-counter');
+  var n = slides.length;
+  var i = 0;
+  function go(k) { i = (k + n) % n; slides.forEach(function(s,j){ s.classList.toggle('active', j===i); }); if (cap) cap.textContent = slides[i].getAttribute('data-caption') || ''; if (counter) counter.textContent = (i+1) + ' / ' + n; }
+  el.querySelector('#frame-prev').addEventListener('click', function(){ go(i-1); });
+  el.querySelector('#frame-next').addEventListener('click', function(){ go(i+1); });
+  var hash = window.location.hash;
+  if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
+})();
+  </script>
+<footer style="margin-top:2rem; padding-top:1rem; border-top:1px solid var(--border); color:var(--muted); font-size:0.85rem;">Última atualização: 2026-03-20.</footer>
+</body>
+</html>

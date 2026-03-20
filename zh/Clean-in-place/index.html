@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>10. 清洁现场——P6</title>
+<style>
+    :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
+    a { color: var(--accent); }
+    h1 { font-size: 1.35rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.25rem; }
+    ul { padding-left: 1.25rem; }
+    .back { margin-bottom: 1rem; font-size: 0.9rem; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+  </style>
+  <link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<nav class="site-lang-bar" aria-label="Language">
+  <span class="lang-label">语言：</span>
+  <a href="../../Clean-in-place/index.html">English</a>
+  <span aria-hidden="true">·</span>
+  <a href="index.html" aria-current="page">中文</a>
+  <span aria-hidden="true">·</span>
+  <a href="../../pt/Clean-in-place/index.html">Português</a>
+</nav>
+
+<p class="back"><a href="../index.html">* 回到P6</a></p>
+<h1>10. 现场清洁(CIP)</h1>
+<h2>分页</h2>
+<ul>
+<li><a href="cip-nozzles-and-feed-pipes/index.html">CIP 喷嘴和管道</a> <span class="muted">(更新2026-03-20) (中文(简体) ).</span>——喷喷喷喷喷嘴,多管,刚性管道和软管接口.</li>
+<li><a href="third-party-cip-control-equipment/index.html">第三方CIP控制设备</a> <span class="muted">(更新2026-03-20) (中文(简体) ).</span>工厂CIP集成、循环和验收测试。</li>
+</ul>
+<h2>导言</h2>
+<p><strong>净置</strong>(第10子系统)使P6的内部清洁不需完全拆卸——这是实现以下目标的关键要求:<a href="../index.html">食品安全和遵守法规</a>. CIP解决方案由<strong>工厂CIP系统</strong>P6与工厂供应相连,内部通过固定喷雾喷嘴进行清理,针对的是食物接触区和喷洒区,外加反流回流<a href="../Collection/index.html">果汁收集</a>电路 在CIP期间,罐体隔离阀能确保CIP流体通向收集器/过滤器/聚电路和<strong>没有</strong>进入生产汁罐。</p>
+<h2>讨论情况</h2>
+<h3>粗略设计意图( M)</h3>
+<ul>
+<li><strong>外部系统</strong>——CIP周期由工厂CIP系统控制(压力,温度,化学浓度和持续时间).</li>
+<li><strong>机器必须运行</strong>——在CIP期间,机器必须运行以实现有效的清洁(移动的剥皮机/插件暴露表面和清晰的流量路径).</li>
+<li><strong>两条清洁道</strong>编号 :
+<ul>
+<li><strong>喷嘴清洁</strong>通过固定喷嘴对饲料管、剥皮器和偏转器进行内部清洗。</li>
+<li><strong>果汁电路回流</strong>——通过CIP溶液通过CIP来清洗汁液收集系统(收集器,滤波器,冲压器).<strong>果汁线</strong>作为<strong>逆流( 回冲)</strong>进程。</li>
+</ul>
+</li>
+</ul>
+<h3>工厂CIP周期(典型)</h3>
+<p>实际持续时间取决于清洁结果和工厂的CIP性能(压力,温度,浓度). 需要进行化学指标测试,以确认没有清洗溶液残留。</p>
+<ol>
+<li><strong>第一次冲水</strong>——基本物质清除.</li>
+<li><strong>语言/肥皂溶液</strong>——清理化学台阶.</li>
+<li><strong>最后用水冲洗</strong>· 删除化学材料;用指标核实;必要时增加额外的冲洗。</li>
+</ol>
+<h3>喷嘴(P6)</h3>
+<ul>
+<li><strong>喷嘴共计</strong>——共计21项(现行构想).</li>
+<li><strong>单项输入</strong>——喷嘴通过刚性不锈管/磁膜连接到每个多管组的单一输入连接,并配有灵活的软管以允许支线打开/关闭.</li>
+<li><strong><a href="../Feeder/index.html">水果摄入系统</a>盖子喷嘴(12)</strong>- 每套4套×3个喷嘴(一个CIP喷嘴港位于90°喂食管内):
+<ul>
+<li>A:进食管曲线处的1个圆喷嘴向后转(每管1个).</li>
+<li>B:在饲料管后面指向可移动剥皮机(中风)的1个角喷嘴(每剥皮机1个).</li>
+<li>C:指向固定剥皮器(每剥皮器1枚)的饲料管前部1角喷嘴.</li>
+</ul>
+</li>
+<li><strong>移动剥皮机以下(4)</strong>—— D: 向可移动的剥离器(中风)指向后板的4个角喷嘴(4套×1喷嘴).</li>
+<li><strong>静态剥离器下面(5)</strong>——E:5角喷嘴,位于皮采集器的前板在核心管道之间和两侧(每剥皮机+1),避开偏转器.</li>
+</ul>
+<h3>DFM和一体化(中国)</h3>
+<ul>
+<li><strong>管道</strong>——支线喷嘴由刚性不锈钢管连接,并通过弹性软管连接到工厂的CIP线,使支线可以打开/关闭.</li>
+<li><strong>Peel 偏转倍数</strong>——皮层下部的喷嘴也由刚性不锈管连接,并通过柔性软管与工厂CIP线相连.</li>
+<li><strong>卫生</strong>· 喷水区/食品区的所有CIP管道应避免口袋,使用卫生设备,并可用于检查/更换。</li>
+</ul>
+<h3>开放项目(需要进一步设计)</h3>
+<ul>
+<li>喷雾模式和喷嘴类型选择(喷气型,覆盖,滴滴大小).</li>
+<li>喷射角度和确切的起落位置(用移动的剥皮机/脱衣机避免碰撞)。</li>
+<li>连接类型/标准(卫生配件)、流量和操作压力。</li>
+</ul>
+<h3>承包者的问题</h3>
+<ol>
+<li>提出喷嘴类型、喷雾图案和仰角,以实现全覆盖,而不会在整个中风之间发生碰撞。</li>
+<li>指定CIP多管大小、装配标准和支线开/近运动的灵活软管要求。</li>
+<li>验证果汁-电路逆流回流法(Valving, check 阀门,压力限制),并确定验收试验计划.</li>
+<li>采用化学指标建议验证步骤,并确定冲洗标准,以确保不留下化学残留物。</li>
+</ol>
+<h3>构成部分</h3>
+<ul>
+<li>喷嘴(共计21个)和安装硬件</li>
+<li>连接喷嘴的硬不锈块/管道</li>
+<li>软软软管,允许支线在连接工厂CIP时打开/关闭</li>
+<li>汁线逆流回流阀/连接</li>
+<li>工厂CIP控制器/设备(外部)</li>
+</ul>
+<h3>状态</h3>
+<p>系统级概念被捕获. Still TBD:喷嘴选择,喷射角度,连接标准,流速,操作压力. 添加显示喷嘴位置和多种路线的数字。</p>
+<h3>建议数字(承包商的清晰度)</h3>
+<ul class="muted">
+<li><strong>添加图</strong>编号 :<strong>植物连接块图</strong>——供应/返回P6倍体+果汁线回流支线.</li>
+<li><strong>添加图</strong>编号 :<strong>机器摄影机集</strong>- 所有喷嘴组都有标签(见<a href="cip-nozzles-and-feed-pipes/index.html">喷嘴和管道</a>) (中文(简体) ).</li>
+<li><strong>添加图</strong>编号 :<strong>验收点</strong>——工厂CIP确认覆盖范围(与<a href="third-party-cip-control-equipment/index.html">第三方CIP控制</a>) (中文(简体) ).</li>
+</ul>
+<footer style="margin-top:2rem; padding-top:1rem; border-top:1px solid var(--border); color:var(--muted); font-size:0.85rem;">最新更新时间:2026-03-20.</footer>
+</body>
+</html>

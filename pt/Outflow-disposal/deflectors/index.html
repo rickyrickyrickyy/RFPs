@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Deflectores — Eliminação — P6 RFP</title>
+<style>
+    :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
+    a { color: var(--accent); }
+    h1 { font-size: 1.35rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.25rem; }
+    h3 { font-size: 1rem; margin-top: 1rem; color: var(--muted); }
+    ul, ol { padding-left: 1.25rem; }
+    .back { margin-bottom: 1rem; font-size: 0.9rem; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    .swatch { display: inline-block; width: 1.25rem; height: 1.25rem; border: 1px solid var(--border); border-radius: 3px; vertical-align: middle; }
+    table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+    th, td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
+    .iface-table th { color: var(--muted); font-weight: 600; }
+    .slideshow { margin: 1.5rem 0; }
+    .slideshow .slide { display: none; }
+    .slideshow .slide.active { display: block; }
+    .slideshow .slide img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
+    .slideshow-caption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); min-height: 2.5em; }
+    .slideshow-controls { display: flex; align-items: center; gap: 1rem; margin-top: 0.75rem; flex-wrap: wrap; }
+    .slideshow-controls button { background: var(--border); color: var(--text); border: none; padding: 0.35rem 0.75rem; border-radius: 4px; cursor: pointer; font-size: 0.9rem; }
+    .slideshow-controls button:hover { background: var(--accent); color: #fff; }
+    .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
+  </style>
+  <link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+<nav class="site-lang-bar" aria-label="Language">
+  <span class="lang-label">Idioma:</span>
+  <a href="../../../Outflow-disposal/deflectors/index.html">English</a>
+  <span aria-hidden="true">·</span>
+  <a href="../../../zh/Outflow-disposal/deflectors/index.html">中文</a>
+  <span aria-hidden="true">·</span>
+  <a href="index.html" aria-current="page">Português</a>
+</nav>
+
+<p class="back"><a href="../index.html">← Voltar ao sistema de eliminação</a>·<a href="../../index.html">P6 RFP</a></p>
+<h1>Deflectores</h1>
+<p class="muted">Cobertura necessária do núcleo durante a compressão: hardware defletor no<strong>Descascador movido em movimento</strong>inferior (deflectores estáticos removidos).</p>
+<h2>Introdução</h2>
+<p>Os deflectores fazem parte do<a href="../index.html">Sistema de eliminação</a>e prevenir<strong>cascas</strong>de cair na<strong>pára-quedas do núcleo</strong>fluxo durante a compressão. No conceito mais recente, deflectores estáticos na placa de montagem da coleção foram removidos; em vez disso, um<strong>Deflector montado sob os descascadores accionados</strong>cobre as aberturas do pára-quedas do núcleo durante o curso de compressão, encaminhando a casca para o pára-quedas da casca e mantendo o fluxo do núcleo limpo.</p>
+<h2>&amp; Componentes da chave de cor</h2>
+<p class="muted">O hardware defletor é parte da pilha de descascador de suporte de extração móvel; a página de eliminação documenta a interface e os requisitos.</p>
+<table>
+<tr><th>Cor( s)</th><th>Componente</th></tr>
+<tr><td><em>—</em></td><td><strong>Deflector inferior conduzido</strong>— chapa(s) rígida(s) formada(s)/dobrável(s) montada(s) sob módulos de descascador accionado(s) para cobrir os pára-quedas do núcleo durante a compressão.</td></tr>
+<tr><td><em>—</em></td><td><strong>Interface de núcleo-chute</strong>— desobstrução envelope vs. tubos de núcleo e vias de escoamento.</td></tr>
+</table>
+<h2 id="gallery">Figuras</h2>
+<p class="muted">Contexto do pára-quedas principal (CAD) mais<strong>foto do deflector accionado que cobre a abertura do núcleo/auger</strong>durante a intenção de compressão. Consultar<a href="#fig1">Figura 1</a>–<a href="#fig2">Figura 2</a>.</p>
+<div class="slideshow" id="skel-deflectors-slideshow">
+<div class="slideshow-track">
+<div class="slide active" data-caption="Figura 1. Contexto do pára-quedas principal (CAD) — sobreposição do deflector ainda útil para animação de curso." id="fig1"><img alt="Contexto do pára-quedas principal CAD" src="../../../Outflow-disposal/images/disposal-right-chute-core.png"/></div>
+<div class="slide" data-caption="Figura 2. Defletor de pára-quedas acionado — foto mostrando cobertura sobre o pára-quedas de núcleo / entrada de auger (peel mantido fora do fluxo de núcleo)." id="fig2"><img alt="Deflector que cobre o pára-quedas do núcleo e a abertura do auger" src="../../../Outflow-disposal/deflectors/images/deflectorCovering.png"/></div>
+</div>
+<p aria-live="polite" class="slideshow-caption" id="skel-deflectors-caption">Figura 1. Contexto do pára-quedas principal (CAD) — sobreposição do deflector ainda útil para animação de curso.</p>
+<div class="slideshow-controls">
+<button aria-label="Anterior" id="skel-deflectors-prev" type="button">← Anterior</button>
+<span class="slideshow-counter" id="skel-deflectors-counter">1 / 2</span>
+<button aria-label="Próxima" id="skel-deflectors-next" type="button">Próxima →</button>
+</div>
+</div>
+<h3>Números recomendados (clareza do contratante)</h3>
+<ul class="muted">
+<li><strong>Adicionar figura</strong>:<strong>Sobreposição CAD do deflector de pára-quedas conduzido</strong>— em<a href="#fig1">Figura 1</a>através de curso de compressão total (foto cobertura em<a href="#fig2">Figura 2</a>suplementos mas não substitui a sequência CAD).</li>
+<li><strong>Adicionar figura</strong>:<strong>Rasgar a trajectória</strong>— a geometria hexálica da borda do deflector e do tubo central.</li>
+<li><strong>Adicionar figura</strong>:<strong>Alcance de pulverização CIP</strong>— vias de pulverização em redor/por baixo do deflector (ligar<a href="../../Clean-in-place/index.html">CIP</a>).</li>
+</ul>
+<h2>Discussão</h2>
+<h3>Componentes</h3>
+<ul>
+<li><strong>Placa(s) deflector(es) formado(s)/dobrável(s)</strong>montado sob descascadores accionados para cobrir as aberturas do pára-quedas do núcleo durante a compressão.</li>
+<li><strong>Interface de montagem</strong>para os módulos de suporte e descascador accionados; devem ser isentos de colisão e seguros de alimentos/limpáveis.</li>
+</ul>
+<h3>Interfaces</h3>
+<ul>
+<li><strong>Entrada:</strong>trajectória de descamação e posição de curso de compressão a partir de<a href="../../Extraction-syncronisation/index.html">extração e sincronização</a>.</li>
+<li><strong>Saída:</strong>descasque a derivação da corrente de pára-quedas do núcleo para o pára-quedas da casca.</li>
+<li><strong>Montar:</strong>interface do descascador accionado/interface do suporte accionado (componente móvel).</li>
+</ul>
+<h3>Interfaces e tolerâncias</h3>
+<p class="muted">O defletor deve manter a folga e cobertura sobre o curso de compressão total sem colisão. O pulverizador CIP deve ser capaz de alcançar ao redor/através do defletor conforme projetado.</p>
+<table class="iface-table">
+<thead><tr><th>Parte</th><th>Interface / tolerância</th><th>Relacionado</th></tr></thead>
+<tbody>
+<tr><td>Cobertura do deflector</td><td>Deve cobrir aberturas de pára-quedas do núcleo durante a compressão, permitindo o caminho de fluxo necessário</td><td><a href="../index.html">Sistema de eliminação</a></td></tr>
+<tr><td>Compatibilidade com pulverizadores CIP</td><td>Sem pontos cegos: o padrão de pulverização deve limpar superfícies atrás/sob deflector</td><td><a href="../../Clean-in-place/index.html">Limpeza no local (CIP)</a></td></tr>
+<tr><td>Envelope de colisão</td><td>Define o envelope mínimo de folga versus componentes de descascador em movimento e tubos de pára-quedas de núcleo</td><td><a href="../../Extraction-syncronisation/index.html">Extração e sincronização</a></td></tr>
+</tbody>
+</table>
+<h3>Problemas e riscos conhecidos</h3>
+<ul>
+<li><strong>Flexão do deflector</strong>— se o deflector se curvar sob o impacto da vibração/do sumo, a casca pode entrar no pára-quedas do núcleo e/ou as superfícies podem colidir com as partes móveis.</li>
+<li><strong>Zonas cegas CIP</strong>— o deflector pode bloquear a pulverização; deve verificar se o padrão de pulverização pode limpar as superfícies dianteira e inferior.</li>
+</ul>
+<h3>Perguntas para o contratante</h3>
+<ol>
+<li>Proponha um defletor rígido e manufacturável (formado/curvado) que mantenha a folga durante o movimento.</li>
+<li>Especificar o método de montagem e a estratégia de fixação adequada para lavagem e segurança alimentar (limpável, sem fendas/pockets).</li>
+<li>Proponha um plano de teste de compatibilidade de defletor + spray CIP (valência de alcance de pulverização + verificação da eficácia de limpeza).</li>
+</ol>
+<p class="back"><a href="../index.html">← Voltar ao sistema de eliminação</a>·<a href="../../index.html">P6 RFP</a></p>
+<script>
+(function(){
+  var el = document.getElementById('skel-deflectors-slideshow');
+  if (!el) return;
+  var slides = el.querySelectorAll('.slide');
+  var cap = document.getElementById('skel-deflectors-caption');
+  var counter = document.getElementById('skel-deflectors-counter');
+  var n = slides.length, i = 0;
+  function go(k) { i = (k + n) % n; slides.forEach(function(s,j){ s.classList.toggle('active', j===i); }); if (cap) cap.textContent = slides[i].getAttribute('data-caption') || ''; if (counter) counter.textContent = (i+1) + ' / ' + n; }
+  el.querySelector('#skel-deflectors-prev').addEventListener('click', function(){ go(i-1); });
+  el.querySelector('#skel-deflectors-next').addEventListener('click', function(){ go(i+1); });
+  var hash = window.location.hash;
+  if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
+})();
+  </script>
+<footer style="margin-top:2rem; padding-top:1rem; border-top:1px solid var(--border); color:var(--muted); font-size:0.85rem;">Última atualização: 2026-03-20.</footer>
+</body>
+</html>

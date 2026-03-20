@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>1. Quadro — P6 RFP</title>
+<style>
+    :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
+    a { color: var(--accent); }
+    h1 { font-size: 1.35rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.25rem; }
+    ul { padding-left: 1.25rem; }
+    .back { margin-bottom: 1rem; font-size: 0.9rem; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    ol { padding-left: 1.25rem; }
+    .swatch { display: inline-block; width: 1.25rem; height: 1.25rem; border: 1px solid var(--border); border-radius: 3px; vertical-align: middle; flex-shrink: 0; }
+    .slideshow { margin: 1.5rem 0; }
+    .slideshow-track { position: relative; }
+    .slideshow .slide { display: none; }
+    .slideshow .slide.active { display: block; }
+    .slideshow .slide img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
+    .slideshow-caption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); min-height: 2.5em; }
+    .slideshow-controls { display: flex; align-items: center; gap: 1rem; margin-top: 0.75rem; flex-wrap: wrap; }
+    .slideshow-controls button { background: var(--border); color: var(--text); border: none; padding: 0.35rem 0.75rem; border-radius: 4px; cursor: pointer; font-size: 0.9rem; }
+    .slideshow-controls button:hover { background: var(--accent); color: #fff; }
+    .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
+    .iface-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    .iface-table th, .iface-table td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
+    .iface-table th { color: var(--muted); font-weight: 600; }
+    table.colour-key { width: 100%; border-collapse: collapse; font-size: 0.85rem; margin: 0.5rem 0; }
+    table.colour-key th, table.colour-key td { text-align: left; padding: 0.4rem 0.6rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+    table.colour-key th { color: var(--muted); font-weight: 600; white-space: nowrap; }
+    table.colour-key td.sw { width: 6rem; }
+    table.colour-key td.sw .na { color: var(--muted); font-size: 0.9em; }
+  </style>
+  <link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<nav class="site-lang-bar" aria-label="Language">
+  <span class="lang-label">Idioma:</span>
+  <a href="../../Frame/index.html">English</a>
+  <span aria-hidden="true">·</span>
+  <a href="../../zh/Frame/index.html">中文</a>
+  <span aria-hidden="true">·</span>
+  <a href="index.html" aria-current="page">Português</a>
+</nav>
+
+<p class="back"><a href="../index.html">← Voltar para P6 RFP visão geral</a></p>
+<h1>Quadro</h1>
+<h2>Subpáginas</h2>
+<ul>
+<li><a href="Loads-and-load-paths/Loads-and-load-paths.html">Cargas e caminhos de carga</a> <span class="muted">(atualizado em 2026-03-20)</span>— cargas de reacção, trajectórias de carga para o piso, galeria de figuras CAD em moldura.</li>
+</ul>
+<h2>Introdução</h2>
+<p>A<strong>quadro</strong>é a estrutura soldada primária e<strong>datum para alinhamento</strong>.<strong>Todos os subsistemas montam para ele.</strong>Foco no design:<strong>estabilidade</strong>,<strong>alinhamento</strong>,<strong>transmissão de força</strong>, e<strong>montagem fácil e repetivel</strong>Os três principais<strong>Placas carregadas</strong>são<strong>placa de montagem de recolha (carregada)</strong>,<strong>placa de montagem de transmissão</strong>, e<strong>placa de montagem drivetrain</strong>—tudo o resto pende de um<strong>montagem de cima para baixo</strong>sequência para essas interfaces. Detalhe abaixo expande a ordem de montagem, construção e questões de empreiteiro.</p>
+<h2 id="how-subassemblies-fit-together">&amp; Figuras da chave de cores (como os subconjuntos se encaixam)</h2>
+<p class="muted">Etapas de montagem e closes do subsistema. A<strong>Montagem de topo explodida</strong>slideshow está ligado<a href="../../Overview/index.html#exploded-top-assembly">Visão geral do projecto</a>. Uma chave de cor abaixo se aplica a todas as figuras desta seção.</p>
+<h3>Tecla de cores (todas as figuras)</h3>
+<p class="muted">Chave de cor CAD para o conjunto de topo. Cada subsistema liga-se à sua secção RFP.</p>
+<table class="colour-key">
+<thead>
+<tr>
+<th class="sw">Cor</th><th>Subsistema</th>
+<th class="sw">Cor</th><th>Subsistema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="sw"><span class="swatch" style="background:#A4E637"></span></td><td><a href="index.html">Frame</a></td>
+<td class="sw"><span class="swatch" style="background:#FFE899"></span> <span class="swatch" style="background:#FF95DA"></span> <span class="swatch" style="background:#1E7334"></span></td><td><a href="../Drivetrain/index.html">Condução</a></td>
+</tr>
+<tr>
+<td class="sw"><span class="swatch" style="background:#C41D63"></span> <span class="swatch" style="background:#E6612E"></span></td><td><a href="../Transmission/index.html">Transmissão</a></td>
+<td class="sw"><span class="swatch" style="background:#FCAB3B"></span></td><td><a href="../Collection/index.html">Colecção</a></td>
+</tr>
+<tr>
+<td class="sw"><span class="swatch" style="background:#317DDE"></span></td><td><a href="../Extraction-syncronisation/index.html">Extração e sincronização</a></td>
+<td class="sw"><span class="swatch" style="background:#71C32D"></span></td><td><a href="../Feeder/index.html">Consumo de fruta</a></td>
+</tr>
+<tr>
+<td class="sw"><span class="swatch" style="background:#F4FF43"></span> <span class="swatch" style="background:#2E7BDD"></span> <span class="swatch" style="background:#9B79E6"></span> <span class="swatch" style="background:#F9A93C"></span></td><td><a href="../Plug-ejection/index.html">Ejeção do núcleo</a></td>
+<td class="sw"><span class="swatch" style="background:#D822B0"></span> <span class="swatch" style="background:#2793AE"></span></td><td><a href="../Outflow-disposal/index.html">Eliminação</a></td>
+</tr>
+<tr>
+<td class="sw"><span class="swatch" style="background:#489B27"></span> <span class="swatch" style="background:#F54646"></span> <span class="swatch" style="background:#7838DC"></span> <span class="swatch" style="background:#469925"></span> <span class="swatch" style="background:#F44545"></span></td><td><a href="../Enclosure-shell/index.html">Anexo / shell</a></td>
+<td class="sw"><span class="na">—</span></td><td><a href="../Clean-in-place/index.html">CIP</a></td>
+</tr>
+<tr>
+<td class="sw"><span class="na">—</span></td><td><a href="../Controls-Electronics/index.html">Controles e eletrônicos</a></td>
+<td class="sw"></td><td></td>
+</tr>
+</tbody>
+</table>
+<h3>Passos de montagem</h3>
+<p>Fluxo de trabalho de cima para baixo destinado a ficar<strong>repetivel</strong>Depois do serviço demolir. As figuras A1–A5 ilustram a sequência; as legendas permanecem curtas – use esta lista para a intenção completa.</p>
+<ol>
+<li><strong>Level e placa as interfaces.</strong>Defina a altura do quadro nas seis montagens de nivelamento. Localize as três placas de montagem principais (colecção/carregada, transmissão, transmissão) nas carris laterais e vigas transversais utilizando<strong>furos de parafuso</strong>,<strong>xims</strong>, e verificações de flacidez. Alinhar, pinçar, então<strong>broca e resma</strong>em vez de<strong>H7 colheres</strong>onde o esquema de dados o exige (ver Construção).<em>Figura A1.</em></li>
+<li><strong>Yoke e extração/sincronização.</strong>Instalar o módulo de dobra e extração/sincronização nos eixos de transmissão/drivetrain.<em>Figura A2.</em></li>
+<li><strong>- Um pendrive.</strong>Abaixe o sistema de acionamento do êmbolo entre as placas; conecte o jugo às hastes do êmbolo/bracket.<em>Figuras A3–A4.</em></li>
+<li><strong>Cerco e alimentador.</strong>Montar dobradiças overcenter tampas / prateleiras e anexar o alimentador a partir do topo; verificar trava / interlock e folgas.<em>Figura A5.</em></li>
+</ol>
+<p>Alinhamento do rolo e eixo deve ser estabelecido uma vez (ajustar → bloqueio), em seguida, realizada com<strong>alinhar-então-drill/rel</strong>Doweling / ombro-bolt indexing assim reconstruções não perdem concentricidade.</p>
+<div class="slideshow" id="frame-assembly-steps-slideshow">
+<div class="slideshow-track">
+<div class="slide active" data-caption="Figura A1 — Quadro de nível; localizar e fixar as três placas de interface principais."><img alt="Passo 1 de montagem — três placas de interface" src="../../Frame/assembly-steps/1.png"/></div>
+<div class="slide" data-caption="Figura A2 — Gema e extração/sincronização nos eixos do drivetrain/transmissão."><img alt="Etapa 2 da montagem — jugo e extracção" src="../../Frame/assembly-steps/2.png"/></div>
+<div class="slide" data-caption="Figura A3 — Acionamento do êmbolo inferior; conecte-se ao jugo e hastes."><img alt="Passo de montagem 3a – instalação do êmbolo" src="../../Frame/assembly-steps/3.png"/></div>
+<div class="slide" data-caption="Figura A4 — Acionamento do mergulhador sentado e conectado."><img alt="Passo de montagem 3b — êmbolo no lugar" src="../../Frame/assembly-steps/4.png"/></div>
+<div class="slide" data-caption="Figura A5 — Tampas/cobre e alimentador de cima."><img alt="Passo 4 de montagem — alimentador e conchas" src="../../Frame/assembly-steps/5.png"/></div>
+</div>
+<p aria-live="polite" class="slideshow-caption" id="frame-assembly-steps-caption">Figura A1 — Quadro de nível; localizar e fixar as três placas de interface principais.</p>
+<div class="slideshow-controls">
+<button aria-label="Anterior" id="frame-assembly-steps-prev" type="button">← Anterior</button>
+<span class="slideshow-counter" id="frame-assembly-steps-counter">1 / 5</span>
+<button aria-label="Próxima" id="frame-assembly-steps-next" type="button">Próxima →</button>
+</div>
+</div>
+<h3>closes do subsistema</h3>
+<p class="muted">Fechar as interfaces entre subsistemas centrais. Figuras C1–C8 (C8 é uma visão alternativa do drivetrain-enclosure).</p>
+<div class="slideshow" id="frame-subsystem-closeups-slideshow">
+<div class="slideshow-track">
+<div class="slide active" data-caption="Figura C1. Interface de ejeção/colecção do núcleo — êmbolo, colectores e região do êmbolo."><img alt="Fechar — ejecção do núcleo e recolha 1" src="../../Frame/subsystem-closeups/1.png"/></div>
+<div class="slide" data-caption="Figura C2. Interface de ejeção / coleção de núcleo — visão alternativa."><img alt="Fechar — ejecção do núcleo e recolha 2" src="../../Frame/subsystem-closeups/2.png"/></div>
+<div class="slide" data-caption="Figura C3. Pilha de transmissão — motor, redutor, engrenagens e contexto de montagem."><img alt="Closeup — drivetrain" src="../../Frame/subsystem-closeups/3.png"/></div>
+<div class="slide" data-caption="Figura C4. Transmissão para extração — região do jugo/eixo e módulo acionado."><img alt="Fechar — transmissão à extracção" src="../../Frame/subsystem-closeups/4.png"/></div>
+<div class="slide" data-caption="Figura C5. Transmissão para extração – alinhamento e contexto do rolamento."><img alt="Fechar — transmissão à extracção 2" src="../../Frame/subsystem-closeups/5.png"/></div>
+<div class="slide" data-caption="Figura C6. Enclausura — anexo shell/hinge às placas de montagem."><img alt="Fechar — dobradiças do compartimento 1" src="../../Frame/subsystem-closeups/6.png"/></div>
+<div class="slide" data-caption="Figura C7. Anexo — detalhe da dobradiça e do suporte."><img alt="Fechar — dobradiças do compartimento 2" src="../../Frame/subsystem-closeups/7.png"/></div>
+<div class="slide" data-caption="Figura C8. Encloso — roteamento de cobertura e autorizações."><img alt="Fechar — dobradiças do compartimento 3" src="../../Frame/subsystem-closeups/8.png"/></div>
+</div>
+<p aria-live="polite" class="slideshow-caption" id="frame-subsystem-closeups-caption">Figura C1. Interface de ejeção / coleção do núcleo.</p>
+<div class="slideshow-controls">
+<button aria-label="Anterior" id="frame-subsystem-closeups-prev" type="button">← Anterior</button>
+<span class="slideshow-counter" id="frame-subsystem-closeups-counter">22 / 8</span>
+<button aria-label="Próxima" id="frame-subsystem-closeups-next" type="button">Próxima →</button>
+</div>
+</div>
+<h2>Discussão</h2>
+<h3>Construção</h3>
+<p><strong>Quadro principal:</strong>Tubos quadrados 80×80×5 GB/T como barras de carga primária;<strong>#8 C-brackets</strong>Para os membros secundários/apoiadores;<strong>gussets</strong>entre membros, conforme mostrado em CAD; solda totalmente soldada.<strong>Nivelamento:</strong>McMaster<strong>6111K669</strong>M24 × 100 mm montagens de nivelamento giratório sobre<strong>Endplates M24</strong>nas seis pernas.</p>
+<p><strong>Montagem e dobradiças:</strong>Os trilhos laterais e os feixes cruzados fornecem<strong>interfaces com parafusos</strong>Para as três placas principais. As placas são abaixadas e alinhadas nesses parafusos primeiro;<strong>furos de dobra são criados após o alinhamento</strong>por<strong>broca + frenagem para H7</strong>para reconstrução repetível – não contando com “placas de dobra” pré-cortadas nos trilhos como o esquema de localização primária.</p>
+<p class="muted">Detalhe e interfaces são fornecidos pelo proprietário; tolerância final e montagem são para empreiteiros. Ver<a href="../Overview/Questions-for-RFP.html">Perguntas sobre o RFP</a>Para eliminar parâmetros por subsistema e subconjunto.</p>
+<h3>Desenho e intenção difíceis</h3>
+<ul>
+<li><strong>Estado</strong>— Existe CAD preliminar (altura actual). Não liberado para fabricação; espera-se que os contratantes proponham melhorias de DFM e tolerância/montagem.</li>
+<li><strong>O que a moldura deve fazer</strong>— Fornecer uma estrutura de datum estável e repetivel para que o acionamento, transmissão, extração e coleta possam ser alinhados e montados sem perda de tempo ou vida útil do rolamento.</li>
+<li><strong>Interfaces superiores</strong>— Três placas de montagem principais (carregadas/colecção, transmissão, drivetrain) montam do topo para os carris laterais do quadro. O conceito atual inclui dowels (H7) + shims; contratante pode propor uma melhor estratégia de ajuste/localização para gerenciar a distorção de solda.</li>
+</ul>
+<h3>Problemas e riscos conhecidos</h3>
+<ul>
+<li><strong>Distorção de solda / planicidade</strong>— risco de que as superfícies da interface superior como soldada não sejam flush/flat. Existem pés de nivelamento ajustáveis, mas espera-se que o ajuste da interface placa-trilho e/ou shimming compense a distorção local.</li>
+<li><strong>Repetibilidade do alinhamento</strong>— O alinhamento repetido após o serviço é crítico. O módulo de extracção (descascadores accionados) deve alinhar-se concentricamente com os descascadores do lado da recolha; o desalinhamento corre o risco de colisão e de desgaste acelerado.</li>
+<li><strong>Desembaraço das máquinas (3a partes)</strong>— A máquina está planeada para se sentar numa plataforma elevada, de modo que os augers podem ser localizados por baixo e a distância exata do chão não é uma restrição primária. Ainda assim, para plantas-piloto menores, a folga extra abaixo do quadro pode ser benéfica para a instalação/remoção mais rápida e acesso ao serviço; contratante a considerar.</li>
+<li><strong>Área de coleta capa / acesso ao usuário</strong>— A corrente do êmbolo de abertura ascendente/bloqueio da tampa de recolha do operador de acesso próximo da frente. A abordagem de tampa/ringue/cobertura alternada pode exigir alterações na inclinação do carril e características de montagem perto do lado da coleção.</li>
+</ul>
+<h3>DFM e fabricação (China)</h3>
+<ul>
+<li><strong>Solda + plano de instalação</strong>— Fornecer sequências recomendadas de balanço e solda para controlar a distorção e alcançar a planicidade/quadrado prático nas interfaces das placas.</li>
+<li><strong>Usinagem pós-solda contra interfaces ajustáveis</strong>— Recomendar se maquinar almofadas/carris após a soldadura, ou em vez disso usar interfaces de placa ajustável/imprimível para atender aos requisitos de alinhamento.</li>
+<li><strong>Selecção de membros</strong>— Confirmar disponibilidade local de 80×80×5 GB/T tubo e GB/T #8 C-canal/C-brackets; propor equivalentes se melhor para rigidez, controle de distorção ou simplicidade de fabricação.</li>
+<li><strong>Tratamento de superfície</strong>— O quadro está exposto a vapores/agentes de limpeza, mas está fora da câmara de extracção principal. Recomendar um acabamento prático resistente à corrosão para este ambiente.</li>
+</ul>
+<h3>Otimizações procuradas</h3>
+<ul>
+<li><strong>Montagem repetitiva</strong>— um plano robusto "alinhar uma vez, em seguida, dowel/ream" para as placas de montagem e os datums do descascador.</li>
+<li><strong>Manutenção</strong>— fácil remoção/reinstalação de subsistemas sem re-embarque ou realinhamento, sempre que possível.</li>
+<li><strong>Tolerância de distorção</strong>— Reduzir a sensibilidade à flacidez da solda através do desenho da interface e dos dados.</li>
+<li><strong>Acesso do operador</strong>— Melhorar o conceito de cobertura/lide da área de recolha para que os operadores possam estar próximos da frente da máquina.</li>
+</ul>
+<h3>Perguntas para o contratante</h3>
+<ol>
+<li>Propor uma sequência de solda + fixação / jig abordagem para controlar a distorção e atingir alvos práticos de planicidade / quadrado nas interfaces da placa.</li>
+<li>Recomendar o esquema de datum e estratégia de localização (dois / H7, shims, montagens ajustáveis, almofadas usinadas) para garantir o alinhamento repetível após a remoção do serviço.</li>
+<li>Devemos esperar a usinagem pós-solda (e onde), ou podemos evitá-la com interfaces ajustáveis/imprimíveis? Fornecer trocas.</li>
+<li>Recomendar as escolhas de membro/travamento (GB/T #8 C-canal ou alternativas) que são comuns na China e melhorar o desempenho de rigidez/distorção.</li>
+<li>Propor uma estratégia de desobstrução para terceiros peeling/core augers sob o pára-quedas da casca (definição de envelopes, altura ajustável, membro transversal inferior removível/relocalizado, etc.).</li>
+<li>Proponha um conceito de cobertura/montagem de área de coleta que melhore o acesso do operador, mantendo a segurança e a rigidez.</li>
+</ol>
+<h3>Cadeia de suprimentos e alternativas</h3>
+<ul>
+<li><strong>Montagens de nivelamento</strong>— Especificações actuais: McMaster 6111K669 M24. Contrator para propor equivalentes disponíveis para a China, se aceitável.</li>
+<li><strong>Perfis e placas</strong>— Preferir perfis GB/ISO comuns e tamanhos de estoque; propor equivalentes quando reduzem o tempo de lead ou complexidade de fabricação.</li>
+</ul>
+<h3>Entregas esperadas e aceitação</h3>
+<ul>
+<li><strong>Entregas</strong>— Pacote de desenho de soldadura actualizado (chamados de solda), esquema de dados, objectivos de tolerância, controlos de inspecção recomendados e um processo de montagem/alinhamento/doolização para reconstruções repetiveis.</li>
+<li><strong>Aceitação</strong>— Três placas de montagem podem ser alinhadas e permanecer alinhadas sob cargas de funcionamento; o alinhamento do descascador de extracção à recolha é repetivel após desmontagem/remontagem; as juntas não deslizam/freta sob vibrações/cargas cíclicas.</li>
+</ul>
+<h3>Princípios de concepção</h3>
+<p>Estes princípios guiam o design de quadros e quaisquer alterações na configuração atual.</p>
+<table style="width:100%; border-collapse: collapse; font-size: 0.95rem;">
+<thead>
+<tr style="border-bottom: 1px solid var(--border);">
+<th style="text-align:left; padding: 0.4rem 0.5rem 0.4rem 0;">Princípio</th>
+<th style="text-align:left; padding: 0.4rem 0;">Designação das mercadorias</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom: 1px solid var(--border);">
+<td style="padding: 0.5rem 0.5rem 0.5rem 0; vertical-align: top;"><strong>Estabilidade</strong></td>
+<td style="padding: 0.5rem 0;">Resista à deflexão sob cargas de operação para que o alinhamento e o tempo sejam mantidos. A rigidez da estrutura soldada e interfaces de placa é crítica.</td>
+</tr>
+<tr style="border-bottom: 1px solid var(--border);">
+<td style="padding: 0.5rem 0.5rem 0.5rem 0; vertical-align: top;"><strong>Alinhamento</strong></td>
+<td style="padding: 0.5rem 0;">As três interfaces principais (drivetrain, transmissão, placas de montagem carregadas) devem ser localizadas e orientadas de modo que os eixos de transmissão, rolamentos e peelers alinham-se à intenção de projeto. As dobras e furos H7 fornecem alinhamento repetitivo após desmontagem.</td>
+</tr>
+<tr style="border-bottom: 1px solid var(--border);">
+<td style="padding: 0.5rem 0.5rem 0.5rem 0; vertical-align: top;"><strong>Forçar a transmissão</strong></td>
+<td style="padding: 0.5rem 0;">As forças de reacção do comboio e do êmbolo devem ser transportadas através do quadro para o chão sem distorção local. Caminhos de carga limpos; articulações adequadas.</td>
+</tr>
+<tr style="border-bottom: 1px solid var(--border);">
+<td style="padding: 0.5rem 0.5rem 0.5rem 0; vertical-align: top;"><strong>Repetibilidade</strong></td>
+<td style="padding: 0.5rem 0;">Placas e suportes removíveis e remontáveis sem perda de alinhamento. H7 furos e dowels definir o datum; shims para caber-up.</td>
+</tr>
+<tr style="border-bottom: 1px solid var(--border);">
+<td style="padding: 0.5rem 0.5rem 0.5rem 0; vertical-align: top;"><strong>Manutenção</strong></td>
+<td style="padding: 0.5rem 0;">Subconjuntos removíveis e reinstaláveis para manutenção. Sem alinhamento permanente.</td>
+</tr>
+<tr style="border-bottom: 1px solid var(--border);">
+<td style="padding: 0.5rem 0.5rem 0.5rem 0; vertical-align: top;"><strong>Fabricabilidade</strong></td>
+<td style="padding: 0.5rem 0;">Materiais, soldabilidade e sequência de montagem alcançáveis pelo parceiro de fabricação (por exemplo, Sean/YES).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="gallery">Figuras</h3>
+<p class="muted">Frame galeria CAD (placas de montagem, nivelamento) está em<a href="../../Frame/Loads-and-load-paths/Loads-and-load-paths.html#gallery">Cargas e caminhos de carga</a>.</p>
+<h3>Números recomendados (clareza do contratante)</h3>
+<ul class="muted">
+<li><strong>Adicionar figura</strong>:<strong>Série de fotografias de fluxo de trabalho</strong>— shim → broca → ream para placas carregadas vs transmissão vs drivetrain.</li>
+<li><strong>Adicionar figura</strong>:<strong>Nivelamento das pernas</strong>— Interface de montagem giratória M24 com a placa do tubo.</li>
+<li><strong>Adicionar figura</strong>:<strong>Dados globais</strong>— diagrama único que liga os trilhos à cadeia de alinhamento do descascador.</li>
+</ul>
+<h3>Componentes</h3>
+<ul>
+<li><strong>Quadro principal</strong>— tubos quadrados 80×80×5 GB/T, #8 C-brackets, totalmente soldadas; seis pernas com placas endplates M24</li>
+<li><strong>Montagens de nivelamento</strong>— 6111K669 M24 100 mm Montanha de nivelamento giratório (McMaster)</li>
+<li><strong>Placa de montagem carregada</strong>— montagem da recolha; módulo de recolha e lado estático da extracção</li>
+<li><strong>Placa de montagem da transmissão</strong>— subsistema «transmissão», dois eixos de 35 mm, dois rolamentos lineares LMK35UU (antiga placa de montagem de rolamentos)</li>
+<li><strong>Placa de montagem do comboio</strong>— duas engrenagens, rolamentos cónicos, espaçador redutor, redutor Sumitomo</li>
+<li><strong>Suporte acionado</strong>— montagem do eixo de transmissão/moção (se necessário)</li>
+</ul>
+<h3>Interfaces e tolerâncias</h3>
+<p class="muted">Interfaces e tolerâncias conhecidas para peças de moldura. As ligações vão para subsistemas relacionados.</p>
+<table class="iface-table">
+<thead><tr><th>Parte</th><th>Interface / tolerância</th><th>Relacionado</th></tr></thead>
+<tbody>
+<tr><td>Quadro principal</td><td>Tubos quadrados 80×80×5 GB/T; #8 C-brackets; gussets; interfaces de placas aparafusadas em carris/fios de cruzamento; H7 dowels via alinhamento-então-drill/ream após ajuste</td><td>—</td></tr>
+<tr><td>Montagens de nivelamento</td><td>6111K669 M24 100 mm (McMaster); endplates M24 perfurados em seis pernas</td><td>—</td></tr>
+<tr><td>Placa de montagem carregada</td><td>Montagens de cima para cima; H7 furos para dobradiças; abas para montagem</td><td><a href="../Collection/index.html">Colecção</a></td></tr>
+<tr><td>Placa de montagem da transmissão</td><td>Monta de cima para cima; H7 buracos para dobradiças</td><td><a href="../Transmission/index.html">Transmissão</a></td></tr>
+<tr><td>Placa de montagem do comboio</td><td>Monta de cima para cima; H7 buracos para dobradiças</td><td><a href="../Drivetrain/index.html">Condução</a></td></tr>
+</tbody>
+</table>
+<script>
+(function(){
+  function initSlideshow(id) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    var slides = el.querySelectorAll('.slide');
+    var capId = id.replace('-slideshow','-caption');
+    var counterId = id.replace('-slideshow','-counter');
+    var prevId = id.replace('-slideshow','-prev');
+    var nextId = id.replace('-slideshow','-next');
+    var cap = document.getElementById(capId);
+    var counter = document.getElementById(counterId);
+    var n = slides.length, i = 0;
+    function go(k) {
+      i = (k + n) % n;
+      slides.forEach(function(s,j){ s.classList.toggle('active', j===i); });
+      if (cap) cap.textContent = slides[i].getAttribute('data-caption') || '';
+      if (counter) counter.textContent = (i+1) + ' / ' + n;
+    }
+    var prevBtn = document.getElementById(prevId);
+    var nextBtn = document.getElementById(nextId);
+    if (prevBtn) prevBtn.addEventListener('click', function(){ go(i-1); });
+    if (nextBtn) nextBtn.addEventListener('click', function(){ go(i+1); });
+  }
+  initSlideshow('frame-assembly-steps-slideshow');
+  initSlideshow('frame-subsystem-closeups-slideshow');
+})();
+  </script>
+<footer style="margin-top:2rem; padding-top:1rem; border-top:1px solid var(--border); color:var(--muted); font-size:0.85rem;">Última atualização: 2026-03-20.</footer>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>汽车和压缩机——驱动火车——P6</title>
+<style>
+    :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
+    a { color: var(--accent); }
+    h1 { font-size: 1.35rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.25rem; }
+    h3 { font-size: 1rem; margin-top: 1rem; color: var(--muted); }
+    ul, ol { padding-left: 1.25rem; }
+    .back { margin-bottom: 1rem; font-size: 0.9rem; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    .swatch { display: inline-block; width: 1.25rem; height: 1.25rem; border: 1px solid var(--border); border-radius: 3px; vertical-align: middle; }
+    table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+    th, td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
+    .iface-table th { color: var(--muted); font-weight: 600; }
+    .slideshow { margin: 1.5rem 0; }
+    .slideshow .slide { display: none; }
+    .slideshow .slide.active { display: block; }
+    .slideshow .slide img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
+    .slideshow-caption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); min-height: 2.5em; }
+    .slideshow-controls { display: flex; align-items: center; gap: 1rem; margin-top: 0.75rem; flex-wrap: wrap; }
+    .slideshow-controls button { background: var(--border); color: var(--text); border: none; padding: 0.35rem 0.75rem; border-radius: 4px; cursor: pointer; font-size: 0.9rem; }
+    .slideshow-controls button:hover { background: var(--accent); color: #fff; }
+    .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
+  </style>
+  <link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+<nav class="site-lang-bar" aria-label="Language">
+  <span class="lang-label">语言：</span>
+  <a href="../../../Drivetrain/motor-and-reducer/index.html">English</a>
+  <span aria-hidden="true">·</span>
+  <a href="index.html" aria-current="page">中文</a>
+  <span aria-hidden="true">·</span>
+  <a href="../../../pt/Drivetrain/motor-and-reducer/index.html">Português</a>
+</nav>
+
+<p class="back"><a href="../index.html">返回驱动列车</a>* 妇女<a href="../../index.html">私营部门筹资和伙伴关系司概览</a></p>
+<h1>汽车和压缩机</h1>
+<p class="muted">部分<a href="../index.html">驱动列车</a>节。 机车+带式驱动+减速架架及机车主振动/调压输入.</p>
+<h2>导言</h2>
+<p>这个子组装定义了马达/减速器的选择,带式驱动器布局,以及加挂/加压方法. 它将驱动列车的光圈负载(从皮带张力),振动放入车架,以及驱动齿轮列车的减速输出扭矩.</p>
+<h2>目录链接</h2>
+<ul>
+<li><strong>WEG W22 IEC TEFC目录(IE2)</strong>. . . . . .<a href="https://www.weg.net/catalog/weg/US/en/c/MT_IEC_3PHASE_LV_TEFC_W22_IE2/list">WEG 目录列表</a></li>
+<li><strong>苏米托莫Cyclo 6000目录 (PDF).</strong>. . . . . .<a href="https://us.sumitomodrive.com/sites/default/files/2025-03/cyclo_6000_reducer_catalog_v12_web-2.pdf">苏米托莫 PDF</a></li>
+</ul>
+<h2>颜色密钥组件( C)</h2>
+<p class="muted">主要组件;不同数字的颜色可能不同. 主要意图是指定接口以及承包商必须验证哪些接口。</p>
+<table>
+<tr><th>颜色</th><th>构成部分</th></tr>
+<tr><td><em>. . . . . .</em></td><td><strong>汽车</strong>——WEG W21/W22 IE3发动机,产品133507:7.5kW(10hp),50Hz,4-pole,额定速度1460rpm,额定扭矩~49N~m,38毫米轴.</td></tr>
+<tr><td><em>. . . . . .</em></td><td><strong>V带驱动器</strong>——SPA带;目前的概念使用1:1的拉杆(170毫米的投球dia马达和减速器). 计划两条腰带 中心距离和张力方法为TBD.</td></tr>
+<tr><td><em>. . . . . .</em></td><td><strong>缩小器</strong>——Sumitomo Cyclo 6000系列;输出速度目标~70 rpm(最终比例/模型从目录选择中确认).</td></tr>
+</table>
+<h2 id="gallery">图</h2>
+<p class="muted">P6型机车/减速器CAD(图1-2). 图3<strong>另一个机器的参考照片</strong>显示一个坚果/立体式的马达挂载概念,仅供启发,而不是P6设计.</p>
+<div class="slideshow" id="motor-reducer-slideshow">
+<div class="slideshow-track">
+<div class="slide active" data-caption="图1. 汽车和压缩机——P6 CAD(铺设/带路由)。" id="fig1"><img alt="汽车和压缩机CAD 1" src="../../../Drivetrain/motor-and-reducer/images/01.png"/></div>
+<div class="slide" data-caption="图2. 汽车和压缩机——P6 CAD(详细/上升上下文)。" id="fig2"><img alt="汽车和压缩机CAD 2" src="../../../Drivetrain/motor-and-reducer/images/02.png"/></div>
+<div class="slide" data-caption="图3. 参考——另一台机器上的电动机挂板(鼓励对峙/核糖体紧张概念;而不是P6)。" id="fig3"><img alt="参考电动机挂载提示" src="../../../Drivetrain/motor-and-reducer/images/03.png"/></div>
+</div>
+<p aria-live="polite" class="slideshow-caption" id="motor-reducer-caption">图1. 汽车和压缩机——P6 CAD。</p>
+<div class="slideshow-controls">
+<button aria-label="上一个" id="motor-reducer-prev" type="button">上一个</button>
+<span class="slideshow-counter" id="motor-reducer-counter">1,3个</span>
+<button aria-label="下一个" id="motor-reducer-next" type="button">下一个</button>
+</div>
+</div>
+<p class="muted">附加语境 :<a href="../../../Drivetrain/index.html#gallery">驱动列车主画廊</a>。 。 。 。</p>
+<h3>建议数字(承包商的清晰度)</h3>
+<ul class="muted">
+<li><strong>添加图</strong>编号 :<strong>带状紧张机制</strong>——shims, Jack 螺丝,或带有中距离维度的幻灯片细节.</li>
+<li><strong>添加图</strong>编号 :<strong>汽车挂载板</strong>——最后材料(vs木构概念)和螺栓图案用于驱动列车板.</li>
+<li><strong>添加图</strong>编号 :<strong>Pulley 校对检查</strong>用于SPA带径流的边缘/视线方法。</li>
+</ul>
+<h2>讨论情况</h2>
+<h3>粗略设计意图( M)</h3>
+<ul>
+<li><strong>主要目标</strong>——向齿轮列车提供稳定的减速输出扭矩,同时保持带张力,拉力对齐,振动可控.</li>
+<li><strong>挂载方向</strong>——电动机的轴向垂直向下挂载当前概念,减压器输入轴也向垂直向下倾斜. 这些垂直轴之间有带状电源转移</li>
+<li><strong>主要不详</strong>——必须最终确定带中心距离和张力机制,因为它在挂载板上设置了带状负载,振动,硬度要求.</li>
+</ul>
+<h3>参考电动机+还原器规格(50赫兹对60赫兹)</h3>
+<p class="muted">一些遗留的规格是60赫兹市场。 中国基线为50赫兹。 下面的削减器模型号码来自先前的费用清单,应当予以确认(一些注释表明,6145对6165)。</p>
+<table class="iface-table">
+<thead><tr><th>项目</th><th>50赫兹(中国基线)</th><th>60赫兹(参考)</th></tr></thead>
+<tbody>
+<tr><td>汽车</td><td>WEG W22, 10 hp, 4- pole, ~1470 rpm; 220/380/440 V 3-相; IPW55; V5T 垂直轴向下</td><td>WEG W22, 10 hp, 4- pole, ~1760 rpm; 220/380/440 V 3-相; IPW55; V5T 垂直轴向下</td></tr>
+<tr><td>缩小器</td><td>Sumitomo Cyclo Drive CWVJ-6165-21(iQQQ) 瞄准~70 rpm; 垂直向上输出轴(TBD)</td><td>Sumitomo Cyclo Drive CWVJ-6165-25(i≈25) 瞄准~70 rpm; flanged,垂直,输出轴向上(TBD)</td></tr>
+</tbody>
+</table>
+<h3>参考带驱动计算(来自以前的内部工作表——必须验证)</h3>
+<p class="muted">以下数值从P6 870(中国,50赫兹)之前的内部计算/工作表中复制。 合同的起点是承包商。<strong>不要假设它们是正确的</strong>承包者必须重新检查腰带选择、功率评级、包装角度假设、张力法以及由此产生的轴/轴负载。</p>
+<ul>
+<li><strong>服务因素</strong>: 1.3(工作表输入)</li>
+<li><strong>汽车</strong>:WEG W21 多载IE3,PN 1353507,7.5千瓦,50赫兹,4-波尔,1500rpm同步,1460rpm额定,380/660 V,14.6/8.41 A,49.03 N-m 额定扭矩, 38 毫米轴</li>
+<li><strong>带子</strong>: SPA profile,包裹;1:1比;弹管直径170毫米/170毫米;目标带速度~13米/秒.</li>
+<li><strong>中间距离</strong>:暂定~340毫米(工作表)</li>
+<li><strong>需要带子</strong>:2(工作表结果;注:一个更古老的手动计算假设3个带带)</li>
+</ul>
+<h4 class="muted">主要工作表产出(Gates/ISO 4184方法参考)</h4>
+<table class="iface-table">
+<thead><tr><th>参数</th><th>工作表价值</th><th>注/需要验证</th></tr></thead>
+<tbody>
+<tr><td>标准带长</td><td>1250毫米口径</td><td>选择最接近暂定长度(~1214毫米). 确认可用性和拉力中心距离耐力.</td></tr>
+<tr><td>每带净千瓦</td><td>6.78千瓦时</td><td>取决于表格、生命目标、包装角度和校正(arc/contact,长度)。 复为最后几何.</td></tr>
+<tr><td>需要带子</td><td>2个</td><td>对照值勤周期、服务系数、寿命和包装角度进行验证;考虑带宽带以休克/振动。</td></tr>
+<tr><td>安装津贴</td><td>25毫米口径</td><td>安装时最小中间距离缩短;如果不可能的话,工作表建议闲置/加速度器.</td></tr>
+<tr><td>每带静态张力</td><td>~226 纳</td><td>强烈依赖包装角度和张力方法. 驱动轴/带射线负载。</td></tr>
+<tr><td>建议的偏移力(共计)</td><td>~18.5–27.5 北纬</td><td>如报告;确认方法以及是否正确乘以带数。</td></tr>
+</tbody>
+</table>
+<h4 class="muted">旧手动计算笔记(甚至更暂定)</h4>
+<p class="muted">更古老的手动钙(仅注)假设3条带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带状带</p>
+<h3>已知问题和风险</h3>
+<ul>
+<li><strong>腰带张力的辐射负荷</strong>- 承包者必须量化带状张力以及由此产生的发动机和减压轴的射线负荷。</li>
+<li><strong>振动</strong>汽车/减震器的振动会传入电框;必须考虑安装硬度和加固/隔离。</li>
+<li><strong>阴影扩展</strong>——机器布局需要延长减量输入/输出轴线;承包商提出安全、可制造的扩展/适应方法和耐受性。</li>
+<li><strong>未设计的带状护卫</strong>需要有一个拉杆/带状护卫;可能需要在机背安装铁轨/结构,以支持警卫工作。</li>
+<li><strong>下游保护(防腐剂)</strong>——我们不肯定杉友Cyclo减量器是否应该包括/接收限制/超载保护策略,以便在摊位或干扰事件期间保护下游部件(齿轮列车,凸轮轴承);承包商推荐.</li>
+</ul>
+<h3>DFM和制造业(中国)</h3>
+<ul>
+<li><strong>挂载</strong>- 建议安装一个马达/减速器,支持轻便的腰带张力和拉力对齐检查。</li>
+<li><strong>警卫</strong>- 提供安全但可移动维护的实用的拉带/带状护卫。</li>
+<li><strong>紧张的概念</strong>——目前的主人翁概念是"站立的马力调整"挂载:马达坐落在多块有堆积的坚果/洗涤器(板下营养,板上坚果/洗涤器,马达脚,马达脚以上坚果)上,因此马达位置可以根据皮带张力进行调整. 这种方法必须包括一个锁定策略,这样张力就不会在振动下漂移.</li>
+</ul>
+<h3>带状规格——需要承包商支助</h3>
+<p class="muted">我们希望承包商领导带选择和验证. 先前的内部计算是存在的,但并不视为正确;仅作为起点使用。</p>
+<ul>
+<li><strong>当前 CAD 制约</strong>——电动机输出轴与减速输入轴之间的中心距离为:<strong>紧张时最多340.311毫米</strong>,且未加时较小(安装位置)。</li>
+<li><strong>没有闲置者</strong>——当前概念使用.<strong>无闲置/排气机拖拉机</strong>;带张力由运动位置(核桃/立方调整)决定.</li>
+<li><strong>比率</strong>1:1牵引车(概念)和50赫兹电动机基线;如果能提高可靠性/可使用性,承包者可提出替代品。</li>
+</ul>
+<h3>承包者的问题</h3>
+<ol>
+<li><strong>带状选择</strong>: 选择最终拉力大小和速度的带状配置和带状计数,使用定义的服务因子和生命目标. 提供计算依据(表格/标准)并显示边距。</li>
+<li><strong>长度和中心距离</strong>: 选择一个<em>标准带长</em>与中心距离相容的340.311毫米(分机),并提供足够的松动/旅行,无需闲置。 指定需要调整的旅行。</li>
+<li><strong>紧张目标+程序</strong>: 提供与我们的坚果/立体张力法(如偏转力法、频率法等)相兼容的推荐静态/安装张力(和实地程序)。</li>
+<li><strong>放射性负载</strong>: 计算电动机上的射线载荷和从皮带张力/最大张力的减速轴/载荷,确认可接受性与电动机/减速器的分级和预期的错配。</li>
+<li><strong>锁定+漂移</strong>: 提出坚果/立体调整的锁定策略,使腰带张力和对齐不会在振动下漂移(并界定检查/延长间隔)。</li>
+<li><strong>中国采购</strong>: 提供中国现有的带状和牵引物来源选择(和可接受的替代品),并附有周转时间和推荐的零部件。</li>
+<li>确认 ~70 rpm 输出所需的精确的 Cyclo 6000 型/ ratio ,并提供安装/ Lubrication 要求.</li>
+<li>评价是否指定<strong>矩形限制器/超载保护</strong>保护下游部件。 提供建议设置和权衡。</li>
+<li>为马达/带/降压器提出实用润滑/保养计划:什么是润滑剂、推荐的润滑剂类型、检查间隔以及试制厂如何安全进行维修。</li>
+<li>提出投入和输出轴扩展/适应设计(材料、适配类别、键/弹簧、径流目标)和组装/检查计划。</li>
+<li>评估替代架构:在常规方向上载马达,并使用右角/角变速箱驱动垂直减速器输入. 这能改善振动、服务或安全吗? 提供权衡和采购选择。</li>
+<li>提出可以安装在机器背面的带状/脉冲装置的警卫概念(需要什么样的栏杆/架子以及如何拆除以进行维修)。</li>
+</ol>
+<h3>接口和容忍度</h3>
+<p class="muted">已知的界面与容性. 链接到相关的子系统.</p>
+<table class="iface-table">
+<thead><tr><th>编</th><th>接口/容忍度</th><th>相关</th></tr></thead>
+<tbody>
+<tr><td>汽车</td><td>WEG W21/W22 IE3, 7.5 kW, 1460 rpm 额定; 38 mm 轴(从选定的模型中确认框架/挂载形式)</td><td>. . . . . .</td></tr>
+<tr><td>V带驱动器</td><td>SPA带; 1:1 拖拉机(170 mm pitch dia)概念; 规划两个带; 中心距离和紧张的TBD</td><td>. . . . . .</td></tr>
+<tr><td>缩小器</td><td>Sumitomo Cyclo 6000系列; 选择比例/模型以实现目标输出速度; 确认输出轴几何和挂载</td><td>. . . . . .</td></tr>
+<tr><td>挂载</td><td>汽车+减压器挂载驱动列车挂载板;每台Frame/Drivetrain的对齐性和硬度要求</td><td><a href="../drivetrain-mount-plate/index.html">驱动列车挂载板</a></td></tr>
+</tbody>
+</table>
+<p class="back"><a href="../index.html">返回驱动列车</a>* 妇女<a href="../../index.html">私营部门筹资和伙伴关系司概览</a></p>
+<script>
+(function(){
+  var el = document.getElementById('motor-reducer-slideshow');
+  if (!el) return;
+  var slides = el.querySelectorAll('.slide');
+  var cap = document.getElementById('motor-reducer-caption');
+  var counter = document.getElementById('motor-reducer-counter');
+  var n = slides.length, i = 0;
+  function go(k) { i = (k + n) % n; slides.forEach(function(s,j){ s.classList.toggle('active', j===i); }); if (cap) cap.textContent = slides[i].getAttribute('data-caption') || ''; if (counter) counter.textContent = (i+1) + ' / ' + n; }
+  document.getElementById('motor-reducer-prev').addEventListener('click', function(){ go(i-1); });
+  document.getElementById('motor-reducer-next').addEventListener('click', function(){ go(i+1); });
+  var hash = window.location.hash;
+  if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
+})();
+  </script>
+<footer style="margin-top:2rem; padding-top:1rem; border-top:1px solid var(--border); color:var(--muted); font-size:0.85rem;">最新更新时间:2026-03-20.</footer>
+</body>
+</html>

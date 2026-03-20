@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Chutes e augers — Eliminação — P6 RFP</title>
+<style>
+    :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
+    a { color: var(--accent); }
+    h1 { font-size: 1.35rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.25rem; }
+    h3 { font-size: 1rem; margin-top: 1rem; color: var(--muted); }
+    ul, ol { padding-left: 1.25rem; }
+    .back { margin-bottom: 1rem; font-size: 0.9rem; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    .swatch { display: inline-block; width: 1.25rem; height: 1.25rem; border: 1px solid var(--border); border-radius: 3px; vertical-align: middle; }
+    table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+    th, td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
+    .iface-table th { color: var(--muted); font-weight: 600; }
+    .slideshow { margin: 1.5rem 0; }
+    .slideshow .slide { display: none; }
+    .slideshow .slide.active { display: block; }
+    .slideshow .slide img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
+    .slideshow-caption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); min-height: 2.5em; }
+    .slideshow-controls { display: flex; align-items: center; gap: 1rem; margin-top: 0.75rem; flex-wrap: wrap; }
+    .slideshow-controls button { background: var(--border); color: var(--text); border: none; padding: 0.35rem 0.75rem; border-radius: 4px; cursor: pointer; font-size: 0.9rem; }
+    .slideshow-controls button:hover { background: var(--accent); color: #fff; }
+    .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
+  </style>
+  <link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+<nav class="site-lang-bar" aria-label="Language">
+  <span class="lang-label">Idioma:</span>
+  <a href="../../../Outflow-disposal/chutes-and-augers/index.html">English</a>
+  <span aria-hidden="true">·</span>
+  <a href="../../../zh/Outflow-disposal/chutes-and-augers/index.html">中文</a>
+  <span aria-hidden="true">·</span>
+  <a href="index.html" aria-current="page">Português</a>
+</nav>
+
+<p class="back"><a href="../index.html">← Voltar ao sistema de eliminação</a>·<a href="../../index.html">P6 RFP</a></p>
+<h1>Chutes e chutes</h1>
+<p class="muted">Tubos hexagonais de pára-quedas de metal de chapa dobrada/soldada + tubos hexagonais de pára-quedas de núcleo soldado, alimentando dois caminhos separados (peels vs. núcleos).</p>
+<h2>Introdução</h2>
+<p>A subconjunto de pára-quedas e augers é o hardware físico dentro do<a href="../index.html">Sistema de eliminação</a>que separa<strong>casca</strong>e<strong>núcleo</strong>resíduos de fluxos após o curso de pressão. Núcleos ejetados por<a href="../../Plug-ejection/index.html">ejeção do núcleo</a>cair em<strong>Tubos de pára-quedas do núcleo</strong>(tubos hexagonais por baixo de cada estação de descascamento), enquanto o material de casca flui em torno dos tubos de núcleo para o<strong>pára-quedas de pele</strong>(metal dobrado). Dois augers então transportam cada fluxo independentemente para fora da máquina, com desobstrução da máquina<a href="../../Frame/index.html">quadro</a>.</p>
+<h2>&amp; Componentes da chave de cor</h2>
+<p class="muted">Cores CAD para esta subpágina (os significados dos componentes devem corresponder à galeria principal de eliminação).</p>
+<table>
+<tr><th>Cor( s)</th><th>Componente</th></tr>
+<tr><td><em>—</em></td><td><strong>Pára-quedas</strong>— recebe o fluxo de cascas; fornece geometria para percorrer os tubos do pára-quedas.</td></tr>
+<tr><td><em>—</em></td><td><strong>Parafusos principais (tubos hexagonais)</strong>— receber núcleos ejetados e mantê-los separados da casca.</td></tr>
+<tr><td><em>—</em></td><td><strong>Dois caminhos mais difíceis</strong>— transportar separadamente cascas e núcleos para diferentes operações a jusante (por exemplo, lavagem secundária para núcleos).</td></tr>
+</table>
+<h2 id="gallery">Figuras</h2>
+<p class="muted">CAD (galeria-mãe),<strong>foto do conjunto de pára-quedas</strong>, e<strong>diagrama de referência do fornecedor Auger</strong>. Consultar<a href="#fig1">Figura 1</a>–<a href="#fig3">Figura 3</a>.</p>
+<div class="slideshow" id="skel-chutesandaugers-slideshow">
+<div class="slideshow-track">
+<div class="slide active" data-caption="Figura 1. Peel calha + núcleo tubos de pára-quedas alimentando dois caminhos auger (CAD — mesmo ativo como galeria principal de eliminação)." id="fig1"><img alt="Chute e Augers CAD" src="../../../Outflow-disposal/images/disposal-chute-augers.png"/></div>
+<div class="slide" data-caption="Figura 2. Montagem de chute – fotografia (contexto fabricado/instalado)." id="fig2"><img alt="Foto de montagem Chute" src="../../../Outflow-disposal/chutes-and-augers/images/Chutephoto.png"/></div>
+<div class="slide" data-caption="Figura 3. Auger — diagrama fornecido pelo fornecedor (referência para roteamento, interface e citação; não para CAD de propriedade do P6." id="fig3"><img alt="Diagrama do fornecedor auger" src="../../../Outflow-disposal/chutes-and-augers/images/augerDiagram.png"/></div>
+</div>
+<p aria-live="polite" class="slideshow-caption" id="skel-chutesandaugers-caption">Figura 1. Peel calha + núcleo tubos de pára-quedas alimentando dois caminhos auger (CAD — mesmo ativo como galeria principal de eliminação).</p>
+<div class="slideshow-controls">
+<button aria-label="Anterior" id="skel-chutesandaugers-prev" type="button">← Anterior</button>
+<span class="slideshow-counter" id="skel-chutesandaugers-counter">1 / 3</span>
+<button aria-label="Próxima" id="skel-chutesandaugers-next" type="button">Próxima →</button>
+</div>
+</div>
+<h3>Números recomendados (clareza do contratante)</h3>
+<ul class="muted">
+<li><strong>Adicionar figura</strong>:<strong>Descasque o lábio do pára-quedas</strong>— geometria da face do tubo hex heading/trailing versus fluxo da casca (secção reduzida).</li>
+<li><strong>Adicionar figura</strong>:<strong>Detalhes da interface do Auger</strong>— Transição específica P6 de<strong>Esta máquina...</strong>saídas de pára-quedas para peeling vs núcleo augers (padrão parafuso, selo, e diâmetros) — suplemento<a href="#fig3">Figura 3</a>Referência do fornecedor.</li>
+<li><strong>Adicionar figura</strong>:<strong>Drenagem de lavagem</strong>— declives e furos de drenagem no conjunto de pára-quedas dobrados.</li>
+</ul>
+<h2>Discussão</h2>
+<h3>Componentes</h3>
+<ul>
+<li><strong>Descasque o pára-quedas</strong>— montagem de chapas metálicas soldadas/dobradas montadas na estrutura; utiliza a geometria labial do pára-quedas para evitar que a casca entre em tubos de pára-quedas.</li>
+<li><strong>Tubos de pára-quedas</strong>— quatro tubos hexagonais por baixo de cada estação de descascador; a largura cobre a lacuna que permite a queda do núcleo mantendo a casca separada.</li>
+<li><strong>Dois Augers</strong>— equipamento externo de auger/tubo para transportar a casca e os núcleos de forma independente.</li>
+</ul>
+<h3>Interfaces</h3>
+<ul>
+<li><strong>Entrada (níveis)</strong>: de<a href="../../Plug-ejection/index.html">ejeção do núcleo</a>; núcleos caem em tubos de pára-quedas.</li>
+<li><strong>Entrada (pele)</strong>: de<a href="../../Collection/index.html">coleção</a>/ extração; a casca flui para descascar o pára-quedas e em torno de tubos de núcleo através da geometria do pára-quedas.</li>
+<li><strong>Saída</strong>: duas decolagem auger - uma para casca, uma para núcleos.</li>
+<li><strong>Montar</strong>: montagens de montagem de pára-quedas dobradas para o<a href="../../Frame/index.html">quadro</a>e interfaces com painéis laterais e o lábio do pára-quedas da casca.</li>
+</ul>
+<h3>Interfaces e tolerâncias</h3>
+<p class="muted">Interfaces e tolerâncias conhecidas (intenção do proprietário). As ligações vão para subsistemas relacionados.</p>
+<table class="iface-table">
+<thead><tr><th>Parte</th><th>Interface / tolerância</th><th>Relacionado</th></tr></thead>
+<tbody>
+<tr><td>Peel lábio do pára-quedas + painéis laterais</td><td>Restrição NSF: só são permitidos passos negativos; nenhuma prateleira que possa prender a casca da fruta; as bordas superiores não devem criar bordas positivas</td><td><a href="../../Collection/index.html">Colecção</a>,<a href="../../Transmission/index.html">Transmissão</a></td></tr>
+<tr><td>Geometria do tubo de conduta principal</td><td>A largura do tubo deve cobrir a lacuna sob o padrão do dedo do descascador sem bloquear a queda do núcleo; concebida para evitar a entrada da casca no fluxo do núcleo</td><td><a href="../../Plug-ejection/index.html">Ejeção do núcleo</a>,<a href="../../Collection/index.html">Colecção</a></td></tr>
+<tr><td>Posições de descolagem do Auger</td><td>External-dependente; contratante para propor interface de auger consistente e esquema de fixação</td><td>—</td></tr>
+</tbody>
+</table>
+<h3>Problemas e riscos conhecidos</h3>
+<ul>
+<li><strong>Qualidade de separação Peel/core</strong>— se a casca entrar em contacto com os tubos de pára-quedas, o processamento a jusante é misturado.</li>
+<li><strong>Ajuste de baixa tolerância</strong>— o lábio do pára-quedas e as arestas de montagem devem caber no interior da zona de extracção sem degraus/pranchas positivos.</li>
+<li><strong>Limpeza</strong>— a geometria dobrada/soldada deve evitar fendas que prendem óleo/fibra; garantir o acesso à lavagem.</li>
+</ul>
+<h3>DFM e fabricação (China)</h3>
+<ul>
+<li><strong>Conjunto de dobra + solda</strong>— o pára-quedas e as bases estruturais devem ser feitas como um único conjunto de chapas de metal dobradas/soldadas para fabricação.</li>
+<li><strong>Conceito de borda ajustável</strong>— os lábios/bordas dobrados no pára-quedas da casca devem permitir que o ajuste fino corresponda às tolerâncias das placas de montagem de recolha/transmissão (sem criação de passos positivos).</li>
+<li><strong>Finalização</strong>— definir acabamento de solda e suavização da superfície para apoiar a limpeza (requisitos sanitários TBD).</li>
+</ul>
+<h3>Perguntas para o contratante</h3>
+<ol>
+<li>Propor requisitos de interface auger (diâmetro, ângulo de descolagem/descolagem, fixação) e identificar o que pode ser fonte localmente na China.</li>
+<li>Confirme como fabricar os tubos de núcleo hexagonais e solda-los ao pára-quedas da casca, mantendo o alinhamento e superfícies limpas.</li>
+<li>Definir geometria de borda aceitável para conformidade NSF: quais raios mínimos e alturas máximas de prateleira/passo são aceitáveis.</li>
+</ol>
+<p class="back"><a href="../index.html">← Voltar ao sistema de eliminação</a>·<a href="../../index.html">P6 RFP</a></p>
+<script>
+(function(){
+  var el = document.getElementById('skel-chutesandaugers-slideshow');
+  if (!el) return;
+  var slides = el.querySelectorAll('.slide');
+  var cap = document.getElementById('skel-chutesandaugers-caption');
+  var counter = document.getElementById('skel-chutesandaugers-counter');
+  var n = slides.length, i = 0;
+  function go(k) { i = (k + n) % n; slides.forEach(function(s,j){ s.classList.toggle('active', j===i); }); if (cap) cap.textContent = slides[i].getAttribute('data-caption') || ''; if (counter) counter.textContent = (i+1) + ' / ' + n; }
+  el.querySelector('#skel-chutesandaugers-prev').addEventListener('click', function(){ go(i-1); });
+  el.querySelector('#skel-chutesandaugers-next').addEventListener('click', function(){ go(i+1); });
+  var hash = window.location.hash;
+  if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
+})();
+  </script>
+<footer style="margin-top:2rem; padding-top:1rem; border-top:1px solid var(--border); color:var(--muted); font-size:0.85rem;">Última atualização: 2026-03-20.</footer>
+</body>
+</html>

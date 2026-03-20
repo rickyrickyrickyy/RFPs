@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>齿轮和凸轮轴承——驱动列车——P6</title>
+<style>
+    :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
+    a { color: var(--accent); }
+    h1 { font-size: 1.35rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.25rem; }
+    h3 { font-size: 1rem; margin-top: 1rem; color: var(--muted); }
+    ul, ol { padding-left: 1.25rem; }
+    .back { margin-bottom: 1rem; font-size: 0.9rem; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    .swatch { display: inline-block; width: 1.25rem; height: 1.25rem; border: 1px solid var(--border); border-radius: 3px; vertical-align: middle; }
+    table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+    th, td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
+    .iface-table th { color: var(--muted); font-weight: 600; }
+    .slideshow { margin: 1.5rem 0; }
+    .slideshow .slide { display: none; }
+    .slideshow .slide.active { display: block; }
+    .slideshow .slide img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
+    .slideshow-caption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); min-height: 2.5em; }
+    .slideshow-controls { display: flex; align-items: center; gap: 1rem; margin-top: 0.75rem; flex-wrap: wrap; }
+    .slideshow-controls button { background: var(--border); color: var(--text); border: none; padding: 0.35rem 0.75rem; border-radius: 4px; cursor: pointer; font-size: 0.9rem; }
+    .slideshow-controls button:hover { background: var(--accent); color: #fff; }
+    .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
+  </style>
+  <link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+<nav class="site-lang-bar" aria-label="Language">
+  <span class="lang-label">语言：</span>
+  <a href="../../../Drivetrain/gears-and-cam-bearings/index.html">English</a>
+  <span aria-hidden="true">·</span>
+  <a href="index.html" aria-current="page">中文</a>
+  <span aria-hidden="true">·</span>
+  <a href="../../../pt/Drivetrain/gears-and-cam-bearings/index.html">Português</a>
+</nav>
+
+<p class="back"><a href="../index.html">返回驱动列车</a>* 妇女<a href="../../index.html">私营部门筹资和伙伴关系司概览</a></p>
+<h1>齿轮和凸轮轴承</h1>
+<p class="muted">部分<a href="../index.html">驱动列车</a>节。 齿轮列车和带凸轮的接口可以将减速扭矩转换成回转运动,用于枷锁.</p>
+<h2>导言</h2>
+<p>这种子组装通过驱动齿轮和被动齿轮向一个或多个凸轮轴承传递减速输出扭矩. 凸轮轴承接触枷锁,生成传播和提取周期所使用的回转中风. 齿轮设计选择(模块、螺旋/螺旋、热处理、反弹)和轴/轴承硬度驱动器疲劳寿命、噪音和对齐稳定性。</p>
+<h2>颜色密钥组件( C)</h2>
+<p class="muted">关键组成部分和承包商应验证哪些内容。</p>
+<table>
+<tr><th>颜色</th><th>构成部分</th></tr>
+<tr><td><em>. . . . . .</em></td><td><strong>驱动齿轮</strong>——接收减员输出扭矩. 如果能保持硬度和牙齿强度,则希望减轻体重。</td></tr>
+<tr><td><em>. . . . . .</em></td><td><strong>被动齿轮+轴</strong>向凸轮轴传递扭矩。 坚韧和冲出 控制枷锁 平滑和承载生命。</td></tr>
+<tr><td><em>. . . . . .</em></td><td><strong>凸轮轴承</strong>——当前概念使用支撑滚筒/轨迹滚筒轴承.<a href="https://www.skf.com/cn/products/rolling-bearings/track-rollers/support-rollers/productid-NUTR%2025%20A">SKF NUTR 25 A型导弹</a>(或等值)安装在抵消半径(概念~89毫米)上,并与<a href="../../Transmission/index.html">传输</a>枷锁来创造互惠。 可能堆放两台滚筒,以增加与枷锁的接触区.</td></tr>
+<tr><td><em>. . . . . .</em></td><td><strong>挂载轴承单元</strong>在目前的概念中,使用了SKF F4BRP 208-SRB-CRH(定位)和F4BRP 208-SRB-CLE(不定位);承包商确认适合性,必要时提出等价物。</td></tr>
+</table>
+<h2 id="gallery">图</h2>
+<p class="muted">挂载轴承单元,凸轮轴承横截面,枷锁滚筒接触,齿轮对CAD. 另见<a href="../../../Drivetrain/index.html#gallery">驱动列车主画廊</a>。 。 。 。</p>
+<div class="slideshow" id="gears-cam-slideshow">
+<div class="slideshow-track">
+<div class="slide active" data-caption="图1. SKF F4BRP挂载轴承单元(定位CRH+非定位CLE概念)在驱动列车板上." id="fig1"><img alt="挂载轴承单元" src="../../../Drivetrain/gears-and-cam-bearings/images/bearingUnits.png"/></div>
+<div class="slide" data-caption="图2. Cam / 轨迹滚轴轴承——横截面(NUTR型后继器概念)." id="fig2"><img alt="凸轮轴承横截面" src="../../../Drivetrain/gears-and-cam-bearings/images/cambearing-crosssection.png"/></div>
+<div class="slide" data-caption="图3. Yoke赛道——凸轮滚筒接触补丁/接触长度." id="fig3"><img alt="相机轴承的 Yoke 接触补丁" src="../../../Drivetrain/gears-and-cam-bearings/images/yokeContactPatch.png"/></div>
+<div class="slide" data-caption="图4. 被动齿轮(idler side)——网状和轴状上下文。" id="fig4"><img alt="被动齿轮" src="../../../Drivetrain/gears-and-cam-bearings/images/passivegear.png"/></div>
+<div class="slide" data-caption="图5. 驱动齿轮——减量输入/凸轮后侧." id="fig5"><img alt="驱动齿轮" src="../../../Drivetrain/gears-and-cam-bearings/images/drivenGear.png"/></div>
+</div>
+<p aria-live="polite" class="slideshow-caption" id="gears-cam-caption">图1. 挂载轴承单元。</p>
+<div class="slideshow-controls">
+<button aria-label="上一个" id="gears-cam-prev" type="button">上一个</button>
+<span class="slideshow-counter" id="gears-cam-counter">1 / 5 个</span>
+<button aria-label="下一个" id="gears-cam-next" type="button">下一个</button>
+</div>
+</div>
+<h3>建议数字(承包商的清晰度)</h3>
+<ul class="muted">
+<li><strong>添加图</strong>编号 :<strong>齿纹</strong>——模块,面宽,网格反弹检查点.</li>
+<li><strong>添加图</strong>编号 :<strong>保留凸轮</strong>——线状后置与锁核肩(exploted)用于循环弯曲.</li>
+<li><strong>添加图</strong>编号 :<strong>打开齿轮润滑</strong>——非密封封面下的油路或盾构概念.</li>
+</ul>
+<h2>讨论情况</h2>
+<h3>粗略设计意图( M)</h3>
+<ul>
+<li><strong>操作点</strong>——减速器输出目标~70 rpm. 在驱动齿轮~1023 N~m(以最终减速率和效率进行验证)进行初步扭矩.</li>
+<li><strong>齿轮设计目前未知( 承包商拥有)</strong>- 我们尚未确定齿轮舱/轮廓、牙质、材料/热处理、完成、反弹或反弹控制策略。 我们希望承包商根据我们的装载设想以及中国能够可靠制造/检查的装备,提出完整的成套齿轮设计。</li>
+<li><strong>目前齿轮功率估计数</strong>——在齿轮网格上按~6.6 kN的亲和度和~7.2 kN的正常度排列(初步;取决于模块,投球直径,压力角,和螺旋角).</li>
+<li><strong>驱动齿轮概念</strong>——斯普尔齿轮,~38齿,~308毫米弹管直径,模块~8(最终舱/外观TBD),20°正常压力角. 当前面宽概念~56毫米(TBD).</li>
+<li><strong>凸轮转换</strong>支持滚筒/轨迹滚筒轴承(概念:<a href="https://www.skf.com/cn/products/rolling-bearings/track-rollers/support-rollers/productid-NUTR%2025%20A">SKF NUTR 25 A型导弹</a>)在~25毫米凸轮后/轴上. 可能堆放两台滚筒,以增加枷锁接触面积,减少局部接触压力。</li>
+</ul>
+<h3>已知问题和风险</h3>
+<ul>
+<li><strong>未最后确定齿轮几何</strong>模块选择(6 vs 8),purch vs Helical,接触比率必须最终确定,以确保疲劳寿命和可接受的噪音.</li>
+<li><strong>热治疗+完成</strong>——牙齿硬度和修饰(hob + 磨/有/卷)严重影响磨损,效率和生命.</li>
+<li><strong>对齐敏感性</strong>- 齿轮网和凸轮/焦距接口对轴平行和硬度敏感。 错位会增加噪音,减少生命.</li>
+<li><strong>保留凸轮</strong>——当前概念考虑齿轮面上有一个线状孔,带有螺纹的25毫米后/轴(步肩站对可调节锁核). 保留策略必须抵制循环弯曲和放松.</li>
+<li><strong>润滑不定</strong>目前的概念实际上是一种无封盖的开口装置。 齿轮和凸轮/焦距接触的润滑法尚未定义。</li>
+</ul>
+<h3>DFM和制造业(中国)</h3>
+<ul>
+<li><strong>制造路线</strong>- 承包商利用中国现有的供应商提出齿轮材料、热处理、牙刷、可实现的耐受性和检查计划。</li>
+<li><strong>反斜/接触目标</strong>- 承包者提出反斜拉距和接触模式接受度,这种接受度对组装容堆栈很强。</li>
+<li><strong>凸轮 + 轴承堆栈</strong>——承包商推荐将凸轮杆挂到齿轮上的最佳方式(线形+肩,按压型,按键型,法兰格型等),以及如何保留两个堆叠凸轮轴承(航天器,锁核,线锁等)用于疲劳寿命.</li>
+</ul>
+<h3>承包者的问题</h3>
+<ol>
+<li>根据我们的装箱设计,提出完整的齿轮设计(模块/标注/牙形,材料+热处理,完成,以及反斜目标/距离),并说明中国疲劳/服饰寿命和制造的理由。
+<br/>食品/卫生护栏:如果任何齿轮/摄像头硬件在冲洗/服务期间可用果汁/溅射湿,请具体说明<strong>食品安全</strong>,顺利完成材料并避免<strong>汁室内暴露的线条</strong>(只有螺丝头在室外).</li>
+<li>验证初步的扭矩/力估计,并提供全套负载箱(包括摊位/高峰事件和环形凸轮加载)。</li>
+<li>指定回击目标、牙齿接触接受检查,以及保护轴承和枷锁运动质量所需的径流/调节容限。</li>
+<li>提出含凸轮/焦距接口细节(材料、润滑、磨损策略)和验收,以避免装订和冲击负荷。</li>
+<li>提出一个可强力进行循环弯曲且不松动(在中国是可制造/可检查的)的凸轮保留设计。 比较"固定肩站"与"可调节的锁核"方法.</li>
+<li>确认是否叠叠二<a href="https://www.skf.com/cn/products/rolling-bearings/track-rollers/support-rollers/productid-NUTR%2025%20A">NUTR 25 A 导弹</a>滚筒适合枷锁接触几何和负载(对齐耐受性,边缘加载风险). 如果没有,则提出替代方案(较宽的滚筒、加冕轮廓、双排或导引跟踪器)。</li>
+<li>提出齿轮列车和凸轮/焦距接触的润滑方法:油脂类型/应用、维修间隔以及如何防止污染,同时保持可用性。</li>
+</ol>
+<h3>接口和容忍度</h3>
+<p class="muted">已知的界面与容性. 链接到相关的子系统.</p>
+<table class="iface-table">
+<thead><tr><th>编</th><th>接口/容忍度</th><th>相关</th></tr></thead>
+<tbody>
+<tr><td>减产 + 驱动齿轮</td><td>托克传输;轴/钥匙/支线和径流目标TBD</td><td><a href="../motor-and-reducer/index.html">汽车和压缩机</a></td></tr>
+<tr><td>驱动齿轮 被动齿轮</td><td>反斜/接触目标 TBD; 对齐敏感网格</td><td>. . . . . .</td></tr>
+<tr><td>骆驼滚车 ~ 枷锁</td><td>与<a href="../../Transmission/index.html">传送</a>枷锁;抵消半径~89毫米概念;支持滚筒轴承概念:<a href="https://www.skf.com/cn/products/rolling-bearings/track-rollers/support-rollers/productid-NUTR%2025%20A">SKF NUTR 25 A型导弹</a>;可使用两个堆叠式滚筒;磨损/润滑策略 TBD</td><td><a href="../../Transmission/index.html">传送</a></td></tr>
+<tr><td>挂载轴承单元</td><td>SKF F4BRP 208-SRB-CRH(定位)和F4BRP 208-SRB-CLE(不定位);额定轴直径63.5毫米(2.5英寸)</td><td><a href="https://www.skf.com/group/products/mounted-bearings/roller-bearing-units/flanged-units/productid-F4BRP%20208-SRB-CLE">苏格兰足球俱乐部</a></td></tr>
+</tbody>
+</table>
+<p class="back"><a href="../index.html">返回驱动列车</a>* 妇女<a href="../../index.html">私营部门筹资和伙伴关系司概览</a></p>
+<script>
+(function(){
+  var el = document.getElementById('gears-cam-slideshow');
+  if (!el) return;
+  var slides = el.querySelectorAll('.slide');
+  var cap = document.getElementById('gears-cam-caption');
+  var counter = document.getElementById('gears-cam-counter');
+  var n = slides.length, i = 0;
+  function go(k) { i = (k + n) % n; slides.forEach(function(s,j){ s.classList.toggle('active', j===i); }); if (cap) cap.textContent = slides[i].getAttribute('data-caption') || ''; if (counter) counter.textContent = (i+1) + ' / ' + n; }
+  document.getElementById('gears-cam-prev').addEventListener('click', function(){ go(i-1); });
+  document.getElementById('gears-cam-next').addEventListener('click', function(){ go(i+1); });
+  var hash = window.location.hash;
+  if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
+})();
+  </script>
+<footer style="margin-top:2rem; padding-top:1rem; border-top:1px solid var(--border); color:var(--muted); font-size:0.85rem;">最新更新时间:2026-03-20.</footer>
+</body>
+</html>

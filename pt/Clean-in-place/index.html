@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>10. Limpeza no local (CIP) — P6 RFP</title>
+<style>
+    :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
+    a { color: var(--accent); }
+    h1 { font-size: 1.35rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.25rem; }
+    ul { padding-left: 1.25rem; }
+    .back { margin-bottom: 1rem; font-size: 0.9rem; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+  </style>
+  <link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<nav class="site-lang-bar" aria-label="Language">
+  <span class="lang-label">Idioma:</span>
+  <a href="../../Clean-in-place/index.html">English</a>
+  <span aria-hidden="true">·</span>
+  <a href="../../zh/Clean-in-place/index.html">中文</a>
+  <span aria-hidden="true">·</span>
+  <a href="index.html" aria-current="page">Português</a>
+</nav>
+
+<p class="back"><a href="../index.html">← Voltar para P6 RFP visão geral</a></p>
+<h1>10. Limpeza no local (CIP)</h1>
+<h2>Subpáginas</h2>
+<ul>
+<li><a href="cip-nozzles-and-feed-pipes/index.html">Agulhetas CIP e tubos de alimentação</a> <span class="muted">(atualizado em 2026-03-20)</span>— bicos, colectores, tubos rígidos e interfaces flexíveis de mangueiras.</li>
+<li><a href="third-party-cip-control-equipment/index.html">Equipamento de controlo CIP de terceiros</a> <span class="muted">(atualizado em 2026-03-20)</span>— os ensaios de integração, ciclos e aceitação dos PIC da instalação.</li>
+</ul>
+<h2>Introdução</h2>
+<p><strong>Limpeza no local</strong>(Subsistema 10) permite a limpeza interna de P6 sem desmontagem total — um requisito fundamental para<a href="../index.html">segurança alimentar e conformidade regulamentar</a>. A solução CIP é fornecida pela<strong>Sistema CIP da planta</strong>; P6 conecta-se ao fornecimento da planta e é limpa internamente através de bocais de pulverização fixas visando zonas de contato com alimentos e splash, além de um contra-fluxo<a href="../Collection/index.html">recolha de sumos</a>circuito. Durante o CIP, o isolamento do tanque garante que o fluido CIP é encaminhado para o circuito coletores/filtro/pulver e<strong>não</strong>em tanques de sumo de produção.</p>
+<h2>Discussão</h2>
+<h3>Desenho e intenção difíceis</h3>
+<ul>
+<li><strong>Sistema externo</strong>— os ciclos CIP são controlados pelo sistema CIP (pressão, temperatura, concentração química e durações).</li>
+<li><strong>A máquina deve funcionar</strong>— Durante o período CIP, a máquina deve funcionar de modo a obter uma limpeza eficaz (os descascadores/descascadores expõem superfícies e caminhos de escoamento claros).</li>
+<li><strong>Dois caminhos de limpeza</strong>:
+<ul>
+<li><strong>Limpeza do bico de pulverização</strong>— limpeza interna através de bocais fixos que visam tubos, descascadores e deflectores de alimentação.</li>
+<li><strong>Retorno do circuito de sumos</strong>— limpeza do sistema de recolha de sumos (colector, filtro, êmbolo) através da solução CIP que passa através da<strong>linha de sumo</strong>como uma<strong>contra- fluxo (reboque)</strong>Processo.</li>
+</ul>
+</li>
+</ul>
+<h3>Ciclo CIP da planta (típico)</h3>
+<p>As durações reais dependem dos resultados de limpeza e do desempenho CIP da planta (pressão, temperatura, concentração). São necessários ensaios de indicadores químicos para confirmar que não resta nenhuma solução de limpeza.</p>
+<ol>
+<li><strong>Primeira lavagem de água</strong>— remoção de materiais de base.</li>
+<li><strong>Lixivia / solução de sabão</strong>— etapa de limpeza química.</li>
+<li><strong>Enxaguar a água final</strong>— retirar o material químico; verificar com indicadores; adicionar, se necessário, uma lavagem adicional.</li>
+</ol>
+<h3>Tubos de pulverização (P6)</h3>
+<ul>
+<li><strong>Total de bocais</strong>— 21 total (conceito actual).</li>
+<li><strong>Entrada única</strong>— os bicos ligam-se através de tubos/manípulas inoxidáveis rígidos a uma única ligação de entrada por grupo de colectores, com mangueiras flexíveis para permitir a abertura/fechamento do alimentador.</li>
+<li><strong><a href="../Feeder/index.html">Sistema de ingestão de frutas</a>bicos de tampa (12)</strong>— 4 conjuntos × 3 bocais por conjunto (uma porta de bocal CIP está situada no tubo de alimentação de 90°):
+<ul>
+<li>A: 1 bico de jacto circular na curva do tubo de alimentação virado para trás (um por tubo).</li>
+<li>B: 1 bico de jacto angular atrás do tubo de alimentação que aponta para o descascador móvel (meio curso) (um por descascador).</li>
+<li>C: 1 bocal de jacto angular na frente do tubo de alimentação que aponta para o descascador fixo (um por descascador).</li>
+</ul>
+</li>
+<li><strong>Abaixo dos descascadores móveis (4)</strong>— D: 4 bicos angulados na placa posterior do deflector de casca que aponta para o descascador móvel (4 conjuntos × 1 bocal).</li>
+<li><strong>Abaixo dos descascadores estáticos (5)</strong>— E: 5 bicos angulares na placa dianteira do colector de cascas entre as condutas principais e em ambos os lados (um por descascador +1), evitando os deflectores.</li>
+</ul>
+<h3>DFM &amp; integração (China)</h3>
+<ul>
+<li><strong>Tubulação</strong>— os bicos de alimentação são ligados por tubos rígidos de aço inoxidável e ligados à linha CIP da fábrica através de uma mangueira flexível para permitir que o alimentador abra/feche.</li>
+<li><strong>Manipulador deflector de deslize</strong>— os bicos abaixo dos descascadores são também ligados por tubos inoxidáveis rígidos e ligados à linha CIP da instalação através de uma mangueira flexível.</li>
+<li><strong>Higiene</strong>— todas as canalizações CIP em zonas de salpicos/alimentos devem evitar bolsas, utilizar acessórios sanitários e ser úteis para inspecção/substituição.</li>
+</ul>
+<h3>Itens abertos (necessários mais design)</h3>
+<ul>
+<li>Padrão de pulverização e seleção do tipo de bocal (tipo de jato, cobertura, tamanho da gota).</li>
+<li>Ângulos de pulverização e locais exatos de montagem (evitação de colisão com descascadores/defletores em movimento).</li>
+<li>Tipo/padrão de conexão (conjuntos sanitários), vazão e pressão de operação.</li>
+</ul>
+<h3>Perguntas para o contratante</h3>
+<ol>
+<li>Proponha tipos de bicos, padrões de pulverização e ângulos de montagem para alcançar cobertura total sem colisões em todo o curso.</li>
+<li>Especifique tamanhos de tubulação de coletores CIP, padrões de ajuste e requisitos flexíveis de mangueiras para alimentação em movimento aberto/fechado.</li>
+<li>Validar a abordagem de contrafluxo do circuito de suco (valvagem, válvulas de retenção, limites de pressão) e definir um plano de teste de aceitação.</li>
+<li>Recomendar etapas de validação utilizando indicadores químicos e definir critérios de lavagem para garantir que nenhum resíduo químico permanece.</li>
+</ol>
+<h3>Componentes</h3>
+<ul>
+<li>Tubos de pulverização (21 total) e equipamento de montagem</li>
+<li>Manipuladores/tubos rígidos de ligação</li>
+<li>Mangueiras flexíveis para permitir que o alimentador abra/feche enquanto conectado à planta CIP</li>
+<li>Valvação/conexão para contrafluxo de linha de suco</li>
+<li>Controlador/equipamento CIP da planta (externo)</li>
+</ul>
+<h3>Estado</h3>
+<p>Conceito de nível de sistema capturado. Ainda TBD: seleção de bicos, ângulos de pulverização, padrões de conexão, vazão e pressão operacional. Adicione figuras que mostrem os locais dos bicos e o roteamento dos coletores conforme estão definidos.</p>
+<h3>Números recomendados (clareza do contratante)</h3>
+<ul class="muted">
+<li><strong>Adicionar figura</strong>:<strong>Diagrama do bloco de ligação da planta</strong>— fornecimento/retorno aos colectores P6 + ramo de descarga de sumo.</li>
+<li><strong>Adicionar figura</strong>:<strong>Conjunto de fotos da máquina</strong>— todos os grupos de bocais marcados (ver<a href="cip-nozzles-and-feed-pipes/index.html">Agulhetas e tubos de alimentação</a>).</li>
+<li><strong>Adicionar figura</strong>:<strong>Pontos de ensaio de aceitação</strong>— sempre que o PIC da instalação confirme a cobertura (<a href="third-party-cip-control-equipment/index.html">Controlo CIP de terceiros</a>).</li>
+</ul>
+<footer style="margin-top:2rem; padding-top:1rem; border-top:1px solid var(--border); color:var(--muted); font-size:0.85rem;">Última atualização: 2026-03-20.</footer>
+</body>
+</html>

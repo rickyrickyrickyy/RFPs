@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>管道和过滤器——收集——P6</title>
+<style>
+    :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
+    a { color: var(--accent); }
+    h1 { font-size: 1.35rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.25rem; }
+    h3 { font-size: 1rem; margin-top: 1rem; color: var(--muted); }
+    ul, ol { padding-left: 1.25rem; }
+    .back { margin-bottom: 1rem; font-size: 0.9rem; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    .swatch { display: inline-block; width: 1.25rem; height: 1.25rem; border: 1px solid var(--border); border-radius: 3px; vertical-align: middle; }
+    table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+    th, td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
+    .iface-table th { color: var(--muted); font-weight: 600; }
+    .slideshow { margin: 1.5rem 0; }
+    .slideshow .slide { display: none; }
+    .slideshow .slide.active { display: block; }
+    .slideshow .slide img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
+    .slideshow-caption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); min-height: 2.5em; }
+    .slideshow-controls { display: flex; align-items: center; gap: 1rem; margin-top: 0.75rem; flex-wrap: wrap; }
+    .slideshow-controls button { background: var(--border); color: var(--text); border: none; padding: 0.35rem 0.75rem; border-radius: 4px; cursor: pointer; font-size: 0.9rem; }
+    .slideshow-controls button:hover { background: var(--accent); color: #fff; }
+    .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
+  </style>
+  <link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+<nav class="site-lang-bar" aria-label="Language">
+  <span class="lang-label">语言：</span>
+  <a href="../../../Collection/plungers-and-filter/index.html">English</a>
+  <span aria-hidden="true">·</span>
+  <a href="index.html" aria-current="page">中文</a>
+  <span aria-hidden="true">·</span>
+  <a href="../../../pt/Collection/plungers-and-filter/index.html">Português</a>
+</nav>
+
+<p class="back"><a href="../index.html">QQ 回收藏库</a>* 妇女<a href="../../index.html">私营部门筹资和伙伴关系司概览</a></p>
+<h1>管道和过滤器</h1>
+<p class="muted">部分<a href="../index.html">收藏</a>节。 过滤管、插头切割器和插管接口(装束、密封和CIP清洁)。</p>
+<h2>导言</h2>
+<p>滤波管和插头切割器定义了汁滤波路径和核心弹出路径. Plungers在循环期间通过滤波管,以弹出芯片并从槽区刮出纸浆. 这种子组装对表面完成,对齐,封存具有敏感性;当前设计以商业机器为基础,但长度增加,工业负载/压力预期值提高.</p>
+<h2>颜色密钥组件( C)</h2>
+<p class="muted">主要组成部分和意图(颜色可能因CAD数字而异)。</p>
+<table>
+<tr><th>颜色</th><th>构成部分</th></tr>
+<tr><td><em>. . . . . .</em></td><td><strong>过滤管</strong>——硬化钢管带有激光切割的垂直槽(~0.7毫米槽宽度概念). 长于商业版. ID完成目标~RA 0.8 μm,这样插管可以滑动并密封.</td></tr>
+<tr><td><em>. . . . . .</em></td><td><strong>插头切割器</strong>——硬化的钢质可替换的尖端,可切割芯片;单独附着在滤波管上,因此可以快速更换尖端. 过滤管并非要经常更换。</td></tr>
+<tr><td><em>. . . . . .</em></td><td><strong>Plunger 接口</strong>—— 冲压器在滤波管内穿行<strong>刮纸机</strong>这可以清除每个周期的槽区。 斯克莱珀预计<strong>3-4叶片</strong>,使用所选择的刮刮合金避免在(硬)管上过度磨损.</td></tr>
+<tr><td><em>. . . . . .</em></td><td><strong>盖/ 基部</strong>——可移动端盖概念,它持有滤波管(并可能形成插件切割器的基座);盖对集合器的加装方法TBD.</td></tr>
+</table>
+<h2 id="gallery">图</h2>
+<p class="muted">位于过滤管/收集器上下文的 Plungers 。 其他收藏视图 :<a href="../../../Collection/index.html#gallery">收藏主画廊</a>。 。 。 。</p>
+<div class="slideshow" id="plunger-filter-slideshow">
+<div class="slideshow-track">
+<div class="slide active" data-caption="图1. 滤波管内部的管道——采集器组装环境(CAD)。" id="fig1"><img alt="过滤管内的管道" src="../../../Collection/plungers-and-filter/images/plungers-in-filter.png"/></div>
+</div>
+<p aria-live="polite" class="slideshow-caption" id="plunger-filter-caption">图1. 滤波管内部的管道。</p>
+<div class="slideshow-controls">
+<button aria-label="上一个" id="plunger-filter-prev" type="button">上一个</button>
+<span class="slideshow-counter" id="plunger-filter-counter">1个/ 1个</span>
+<button aria-label="下一个" id="plunger-filter-next" type="button">下一个</button>
+</div>
+</div>
+<h3>建议数字(承包商的清晰度)</h3>
+<ul class="muted">
+<li><strong>添加图</strong>编号 :<strong>槽图案 + 汁液路径</strong>——显示槽几何与刮刀的区段或发达视图.</li>
+<li><strong>添加图</strong>编号 :<strong>插件切割器/ 插件堆叠</strong>——维链从中央针通过剪切器到插孔尖端(接触对子收回).</li>
+<li><strong>添加图</strong>编号 :<strong>密封/泄漏区</strong>突出显示承包商封条投标书的插座界面。</li>
+</ul>
+<h2>讨论情况</h2>
+<h3>粗略设计意图( M)</h3>
+<ul>
+<li><strong>商业基线</strong>——滤管和插头切割器以商业机器几何为主;工业版增加长度,期望提炼时负载和压力较高.</li>
+<li><strong>完成封存( S)</strong>——滤管ID应当为地面/凹陷(Ra~0.8μm概念),使冲积器顺利滑动,并可以实现密封.</li>
+<li><strong>材料</strong>—— Intent是用于滤管和插头切割器(vs before 304)的硬化钢,以减少刮刮器的磨损.</li>
+</ul>
+<h3>几何目标(插座/插座+插座)</h3>
+<ul>
+<li><strong>插件剪切器扩展 :</strong>插件剪切边缘应该大约<strong>9毫米口径</strong>离开<strong>中针</strong>参考面(核心分隔几何).</li>
+<li><strong>Plunger 提示扩展名 :</strong>插孔小费应大致延伸<strong>15毫米口径</strong>离开<strong>插头切割器</strong>(约定长度/压力舱体积).</li>
+<li><strong>缩小深度 :</strong>在压缩步骤中, 螺旋桨还原有多远<strong>金枪鱼</strong>通过调整<strong>剪辑</strong>在冲压器驱动轴上的位置(确定调整方法和范围的承包商)。</li>
+</ul>
+<h3>已知问题和风险</h3>
+<ul>
+<li><strong>渗漏</strong>——已知问题:果汁泄露过螺旋管对调介面. 封印战略仍在研究中:<strong>过滤管内的O环是一种风险</strong>因为刮刮器在频繁的喷出时可以切/穿。 承包者应提出<strong>非O环或O环安全</strong>在工业压力和冲洗中幸存下来的密封方法。</li>
+<li><strong>穿着</strong>——如果材料选择不正确,斯克拉珀动作可以粗糙管ID;热处理/完成必须验证.</li>
+<li><strong>对齐</strong>——管焊成盖子,然后组装;焊接和组装堆放可以错配插管,增加渗漏和磨损.</li>
+</ul>
+<h3>DFM和制造业(中国)</h3>
+<ul>
+<li><strong>分档</strong>——硬化钢管中的激光切割槽图案(0.7毫米槽宽概念);承包商提议制造路线和检查.</li>
+<li><strong>热处理+ 完成</strong>- 承包者提议采用加硬和加硬后/加硬后方法,使管子直径和槽位几何保持耐受性。</li>
+<li><strong>大会</strong>- 承包者提议如何在无扭曲管的情况下焊接盖,以及如何通过组装控制管轴线对齐。</li>
+</ul>
+<h3>承包者的问题</h3>
+<ol>
+<li>提议a<strong>非O环或O环安全</strong>适用于高压和冲洗的冲压至过滤器管的密封方法(如果使用任何O环,则将其放置,以免在重复进出时被刮刮器的切/织)。</li>
+<li>建议材料/热处理/完成<strong>硬钢滤波管</strong>+ 键<strong>可替换的硬化插头切削尖</strong>+ 键<strong>3-4刮刀</strong>(scraper合金可能选用比管子更柔软以减少管子磨损),有预期穿戴寿命和服务策略.</li>
+<li>确认插头切割器是<strong>可替换的小费</strong>所附文件a<strong>不可替换</strong>过滤管(切边是佩戴项). 提出卫生附着方法和保留战略,避免<strong>汁室内暴露的线条</strong>。 。 。 。</li>
+<li>为管(ID完成、直径、槽质量)和组装的密封喷雾器性能提出检查和验收计划。</li>
+</ol>
+<h3>接口</h3>
+<ul>
+<li><strong>输入 :</strong>果汁将果实出口到过滤管槽中;冲积器进入管内进行核心喷出和刮出.</li>
+<li><strong>输出 :</strong>Juice to collector; 核心通过插件切割器弹射到<a href="../../Outflow-disposal/index.html">处置系统</a>; CIP 逆流退出插头切线中线.</li>
+<li><strong>挂载 :</strong>过滤管和插件切割器在收集组装和接口上挂载到核心喷射喷出器上.</li>
+</ul>
+<h3>接口和容忍度</h3>
+<p class="muted">已知的界面与容性. 链接到相关的子系统.</p>
+<table class="iface-table">
+<thead><tr><th>编</th><th>接口/容忍度</th><th>相关</th></tr></thead>
+<tbody>
+<tr><td>过滤管</td><td>硬化钢;激光切割槽(~0.7毫米概念);ID完成目标~RA 0.8微米概念;直径/对齐临界</td><td><a href="../index.html">收藏</a></td></tr>
+<tr><td>插头切割器</td><td>硬钢<strong>可替换的小费</strong>附于不可替换管; 执行目标<strong>~9毫米口径</strong>插件剪切边缘扩展<strong>中针</strong>参考面; 避免在汁室内暴露线程</td><td><a href="../../Plug-ejection/index.html">核心弹出</a></td></tr>
+<tr><td>弹簧</td><td>周期内对管的密封;目标<strong>~15毫米口径</strong>插头切除器的插头-尖端延伸;压缩步骤的回缩深度为可捕性(承包商通过C-clip/驱动几何定义);刮削器从槽区清除每个周期的纸浆</td><td><a href="../../Plug-ejection/index.html">核心弹出</a></td></tr>
+</tbody>
+</table>
+<p class="back"><a href="../index.html">QQ 回收藏库</a>* 妇女<a href="../../index.html">私营部门筹资和伙伴关系司概览</a></p>
+<script>
+(function(){
+  var el = document.getElementById('plunger-filter-slideshow');
+  if (!el) return;
+  var slides = el.querySelectorAll('.slide');
+  var cap = document.getElementById('plunger-filter-caption');
+  var counter = document.getElementById('plunger-filter-counter');
+  var n = slides.length, i = 0;
+  function go(k) { i = (k + n) % n; slides.forEach(function(s,j){ s.classList.toggle('active', j===i); }); if (cap) cap.textContent = slides[i].getAttribute('data-caption') || ''; if (counter) counter.textContent = (i+1) + ' / ' + n; }
+  var prev = document.getElementById('plunger-filter-prev');
+  var next = document.getElementById('plunger-filter-next');
+  if (prev) prev.addEventListener('click', function(){ go(i-1); });
+  if (next) next.addEventListener('click', function(){ go(i+1); });
+})();
+  </script>
+<footer style="margin-top:2rem; padding-top:1rem; border-top:1px solid var(--border); color:var(--muted); font-size:0.85rem;">最新更新时间:2026-03-20.</footer>
+</body>
+</html>

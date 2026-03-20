@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Motor e redutor — Motor — P6 RFP</title>
+<style>
+    :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
+    a { color: var(--accent); }
+    h1 { font-size: 1.35rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.25rem; }
+    h3 { font-size: 1rem; margin-top: 1rem; color: var(--muted); }
+    ul, ol { padding-left: 1.25rem; }
+    .back { margin-bottom: 1rem; font-size: 0.9rem; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    .swatch { display: inline-block; width: 1.25rem; height: 1.25rem; border: 1px solid var(--border); border-radius: 3px; vertical-align: middle; }
+    table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+    th, td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
+    .iface-table th { color: var(--muted); font-weight: 600; }
+    .slideshow { margin: 1.5rem 0; }
+    .slideshow .slide { display: none; }
+    .slideshow .slide.active { display: block; }
+    .slideshow .slide img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
+    .slideshow-caption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); min-height: 2.5em; }
+    .slideshow-controls { display: flex; align-items: center; gap: 1rem; margin-top: 0.75rem; flex-wrap: wrap; }
+    .slideshow-controls button { background: var(--border); color: var(--text); border: none; padding: 0.35rem 0.75rem; border-radius: 4px; cursor: pointer; font-size: 0.9rem; }
+    .slideshow-controls button:hover { background: var(--accent); color: #fff; }
+    .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
+  </style>
+  <link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+<nav class="site-lang-bar" aria-label="Language">
+  <span class="lang-label">Idioma:</span>
+  <a href="../../../Drivetrain/motor-and-reducer/index.html">English</a>
+  <span aria-hidden="true">·</span>
+  <a href="../../../zh/Drivetrain/motor-and-reducer/index.html">中文</a>
+  <span aria-hidden="true">·</span>
+  <a href="index.html" aria-current="page">Português</a>
+</nav>
+
+<p class="back"><a href="../index.html">← Voltar ao Drivetrain</a>·<a href="../../index.html">P6 RFP</a></p>
+<h1>Motor e redutor</h1>
+<p class="muted">Parte da<a href="../index.html">Condução</a>secção. Motor + acionamento da correia + montagem do redutor e a entrada primária de vibração / torque para a máquina.</p>
+<h2>Introdução</h2>
+<p>Esta subconjunto define a seleção motor/redutor, layout do acionamento da correia e abordagem de montagem/tensão. Ele define as cargas radiais do acionamento (da tensão do cinto), vibração no quadro e o torque de saída redutor que impulsiona o trem de engrenagem.</p>
+<h2>Links do catálogo</h2>
+<ul>
+<li><strong>WEG W22 IEC TEFC catalog (IE2)</strong>—<a href="https://www.weg.net/catalog/weg/US/en/c/MT_IEC_3PHASE_LV_TEFC_W22_IE2/list">Lista de catálogos WEG</a></li>
+<li><strong>Catálogo Sumitomo Cyclo 6000 (PDF)</strong>—<a href="https://us.sumitomodrive.com/sites/default/files/2025-03/cyclo_6000_reducer_catalog_v12_web-2.pdf">Sumitomo PDF</a></li>
+</ul>
+<h2>&amp; Componentes da chave de cor</h2>
+<p class="muted">Principais componentes; as cores podem diferir entre figuras. A intenção principal é especificar interfaces e o que os contratantes devem validar.</p>
+<table>
+<tr><th>Cor( s)</th><th>Componente</th></tr>
+<tr><td><em>—</em></td><td><strong>Motor</strong>— WEG W21/W22 IE3 motor, produto 13533507: 7,5 kW (10 hp), 50 Hz, 4 pólos, velocidade nominal 1460 rpm, torque nominal ~49 N·m, eixo de 38 mm.</td></tr>
+<tr><td><em>—</em></td><td><strong>Condução de cintos em V</strong>— correias SPA; conceito actual utiliza polias 1:1 (170 mm pitch dia motor e redutor). Dois cintos planeados. A distância central e o método de tensionamento são TBD.</td></tr>
+<tr><td><em>—</em></td><td><strong>Redutor</strong>— Série Sumitomo Cyclo 6000; velocidade de saída alvo ~70 rpm (razão final/modelo a ser confirmado a partir da seleção do catálogo).</td></tr>
+</table>
+<h2 id="gallery">Figuras</h2>
+<p class="muted">P6 motor/redutor DAC (Figuras 1–2). Figura 3 é a<strong>foto de referência de outra máquina</strong>Apresentando apenas um conceito de montagem de motor à base de nozes/standoff-estilo para inspiração — não o projeto P6.</p>
+<div class="slideshow" id="motor-reducer-slideshow">
+<div class="slideshow-track">
+<div class="slide active" data-caption="Figura 1. Motor e redutor — P6 CAD (layout / contexto do caminho da correia)." id="fig1"><img alt="Motor e redutor CAD 1" src="../../../Drivetrain/motor-and-reducer/images/01.png"/></div>
+<div class="slide" data-caption="Figura 2. Motor e redutor — P6 CAD (detalhes/contexto de montagem)." id="fig2"><img alt="Motor e redutor CAD 2" src="../../../Drivetrain/motor-and-reducer/images/02.png"/></div>
+<div class="slide" data-caption="Figura 3. Referência — Placa de montagem do motor noutra máquina (inspiração para o conceito de tensionamento do stopoff/nut; não P6)." id="fig3"><img alt="Inspiração de montagem de motor de referência" src="../../../Drivetrain/motor-and-reducer/images/03.png"/></div>
+</div>
+<p aria-live="polite" class="slideshow-caption" id="motor-reducer-caption">Figura 1. Motor e redutor — P6 CAD.</p>
+<div class="slideshow-controls">
+<button aria-label="Anterior" id="motor-reducer-prev" type="button">← Anterior</button>
+<span class="slideshow-counter" id="motor-reducer-counter">1 / 3</span>
+<button aria-label="Próxima" id="motor-reducer-next" type="button">Próxima →</button>
+</div>
+</div>
+<p class="muted">Contexto adicional:<a href="../../../Drivetrain/index.html#gallery">Galeria principal do Drivetrain</a>.</p>
+<h3>Números recomendados (clareza do contratante)</h3>
+<ul class="muted">
+<li><strong>Adicionar figura</strong>:<strong>Mecanismo de tensionamento do cinto</strong>— shims, jack screw, ou slide detalhe com dimensões de distância central.</li>
+<li><strong>Adicionar figura</strong>:<strong>Placa de montagem do motor</strong>— material final (conceito de madeira vs) e padrão de parafuso para a placa de transmissão.</li>
+<li><strong>Adicionar figura</strong>:<strong>Verificação do alinhamento da polia</strong>— método de borda/linha de visão para o escoamento da correia SPA.</li>
+</ul>
+<h2>Discussão</h2>
+<h3>Desenho e intenção difíceis</h3>
+<ul>
+<li><strong>Objectivo primário</strong>— Forneça um binário de saída de redução estável ao trem de engrenagem, mantendo o tensionamento da correia, o alinhamento da polia e a vibração controláveis.</li>
+<li><strong>Orientação de montagem</strong>— O conceito actual monta o motor com o seu eixo virado verticalmente para baixo, e o eixo de entrada do redutor também é orientado verticalmente para baixo. Uma correia transfere energia entre estes eixos verticais.</li>
+<li><strong>Principal desconhecido</strong>— A distância do centro do cinto e o mecanismo de tensionamento devem ser finalizados porque ele estabelece os requisitos de carga radial, vibração e rigidez na placa de montagem.</li>
+</ul>
+<h3>Motor de referência + especificações redutoras (50 Hz vs 60 Hz)</h3>
+<p class="muted">Algumas especificações legadas foram para mercados de 60 Hz. A linha de base da China é de 50 Hz. Os números do modelo do redutor abaixo são de uma lista de custos anterior e devem ser confirmados (algumas notas sugerem 6145 vs 6165).</p>
+<table class="iface-table">
+<thead><tr><th>Item</th><th>50 Hz (início da China)</th><th>60 Hz (referência)</th></tr></thead>
+<tbody>
+<tr><td>Motor</td><td>WEG W22, 10 cv, 4 pólos, ~1470 rpm; 220/380/440 V 3 fases; IPW55; V5T eixo vertical para baixo</td><td>WEG W22, 10 hp, 4-pole, ~1760 rpm; 220/380/440 V 3-phase; IPW55; V5T eixo vertical para baixo</td></tr>
+<tr><td>Redutor</td><td>Sumitomo Cyclo Drive CWVJ-6165-21 (i) 21-70 rpm; flangeado, vertical, eixo de saída para cima (TBD)</td><td>Sumitomo Cyclo Drive CWVJ-6165-25 (i) visando ~70 rpm; flangeado, vertical, eixo de saída para cima (TBD)</td></tr>
+</tbody>
+</table>
+<h3>Cálculo do cinto de referência (da ficha de trabalho interna anterior — deve ser validado)</h3>
+<p class="muted">Os seguintes valores são copiados de um cálculo interno anterior/placa de trabalho para P6 870 (China, 50 Hz). São fornecidos como ponto de partida para os contratantes —<strong>não suponha que eles estão corretos</strong>. O contratante deve voltar a verificar a seleção da correia, a classificação da potência, os pressupostos do ângulo de envoltório, o método de tensionamento e as cargas radiais resultantes do eixo/comprimento.</p>
+<ul>
+<li><strong>Factor de serviço</strong>: 1.3 (input da folha de trabalho)</li>
+<li><strong>Motor</strong>: WEG W21 Multimounting IE3, PN 1353307, 7,5 kW, 50 Hz, 4-pole, 1500 rpm síncrono, 1460 rpm avaliado, 380/660 V, 14.6./8.41 A, 49.03 Torque nominal N·m, eixo de 38 mm</li>
+<li><strong>Cinto</strong>: Perfil SPA, embrulhado; relação 1:1; diâmetros de pitch 170 mm / 170 mm; velocidade do cinto alvo ~13 m/s</li>
+<li><strong>Distância central</strong>: tentativa ~340 mm (folha de trabalho)</li>
+<li><strong>Cintos necessários</strong>: 2 (resultado da planilha; nota: um cálculo manual mais antigo assumiu 3 correias bandadas)</li>
+</ul>
+<h4 class="muted">Principais saídas da planilha (referência do método Gates/ISO 4184)</h4>
+<table class="iface-table">
+<thead><tr><th>Parâmetro</th><th>Valor da planilha</th><th>Notas / validação necessárias</th></tr></thead>
+<tbody>
+<tr><td>Comprimento padrão do cinto</td><td>1250 mm</td><td>Escolhido mais próximo do comprimento experimental (~1214 mm). Confirme a disponibilidade e as tolerâncias de distância do centro da polia.</td></tr>
+<tr><td>kW líquidos por cinto</td><td>6.78 kW</td><td>Depende de tabelas, alvo de vida, ângulo de enrolamento e correções (arc/contato, comprimento). Recalcular para geometria final.</td></tr>
+<tr><td># cintos necessários</td><td>2</td><td>Validar contra o ciclo de serviço, fator de serviço, horas de vida e ângulo de envoltório; considerar cintos bandados para choque/vibração.</td></tr>
+<tr><td>Subsídio de instalação</td><td>25 mm</td><td>Diminuição mínima da distância central para instalação; se não for possível, a planilha sugere ocioso/tensionador.</td></tr>
+<tr><td>Tensão estática por cinto</td><td>~226 N</td><td>Fortemente dependente do ângulo de envoltório e do método de tensionamento. Aciona cargas radiais de eixo/comando.</td></tr>
+<tr><td>Força de deflexão recomendada (total)</td><td>~18.5–27.5 N</td><td>Como relatado; confirmar método e se multiplicado pela contagem do cinto corretamente.</td></tr>
+</tbody>
+</table>
+<h4 class="muted">Notas de cálculo manuais mais antigas (ainda mais tentativas)</h4>
+<p class="muted">Um cálculo manual mais antigo (notas somente) assumiu 3 faixas de cintos, distância central ~344 mm, força tangencial da correia ~577 N, e uma carga radial relatada no motor ~961 N. Trate-os como placeholders ásperos; valide-os com ângulo de envoltório final, coeficiente de atrito, razão de tensão, e se um ocioso é usado.</p>
+<h3>Problemas e riscos conhecidos</h3>
+<ul>
+<li><strong>Cargas radiais da tensão do cinto</strong>— O contratante deve quantificar a tensão do cinto e as cargas radiais resultantes nos eixos motor e redutor.</li>
+<li><strong>Vibração</strong>— As vibrações do motor/redutor transmitem para o quadro; deve considerar-se a rigidez e o amortecimento/isolamento do suporte.</li>
+<li><strong>Extensões de eixo</strong>— A disposição da máquina exige a extensão dos eixos de entrada/saída do redutor; o contratante propõe uma extensão/abordagem de adaptação segura e manufacturável e tolerâncias.</li>
+<li><strong>Guarda de cintos não concebidos</strong>— É necessária uma polia/guarda de cintos; podem ser necessários trilhos/estruturas de montagem na parte de trás da máquina para apoiar a guarda.</li>
+<li><strong>Proteção a jusante (limitador de torque)</strong>— Não temos certeza se o redutor de ciclo Sumitomo deve incluir/receber uma estratégia de limitação/sobrecarga de torque para proteger componentes a jusante (comboio de rede, rolamentos de came) durante baias ou eventos de engarrafamento; contratante para recomendar.</li>
+</ul>
+<h3>DFM e fabricação (China)</h3>
+<ul>
+<li><strong>Montagem</strong>— Recomendar uma montagem de motor/redutor que suporte fácil tensão da correia e verificação de alinhamento da polia.</li>
+<li><strong>Guarda</strong>— Forneça uma polia/guarda prática que seja segura e removível para manutenção.</li>
+<li><strong>Conceito de tensionamento</strong>— o conceito de proprietário actual é um "standoff stud ajuste" montagem: motor senta-se em múltiplos through-studs / parafusos com porcas empilhadas / lavadoras (noz abaixo da placa, porca / máquina de lavar acima da placa, pé motor, porca acima do pé) para que a posição do motor pode ser ajustada para a tensão do cinto. Esta abordagem deve incluir uma estratégia de bloqueio para que a tensão não se desloque sob vibrações.</li>
+</ul>
+<h3>Especificação do cinto — apoio ao contratante exigido</h3>
+<p class="muted">Queremos que o empreiteiro lidere a seleção e validação do cinto. Existem cálculos internos anteriores, mas não são tratados como corretos; use-os apenas como ponto de partida.</p>
+<ul>
+<li><strong>Restrição CAD atual</strong>— distância central entre o eixo de saída do motor e o eixo de entrada do redutor<strong>no máximo 340.311 mm quando tensionado</strong>, e menor quando sem tensão (posição de instalação).</li>
+<li><strong>Sem ocioso</strong>— utilização do conceito actual<strong>sem polia ociosa/tensionária</strong>; A tensão do cinto é definida pela posição do motor (ajustamento de porca/standoff).</li>
+<li><strong>Razão</strong>— 1:1 polias (conceito) e um motor de 50 Hz linha de base; o contratante pode propor alternativas se melhorar a fiabilidade/servibilidade.</li>
+</ul>
+<h3>Perguntas para o contratante</h3>
+<ol>
+<li><strong>Seleção do cinto</strong>: Selecione o perfil da correia e a contagem da correia para o tamanho da polia final e velocidade, usando um fator de serviço definido e alvo de vida. Fornecer a base de cálculo (quadros/padrão) e mostrar margens.</li>
+<li><strong>Comprimento e distância central</strong>: Selecione a<em>comprimento padrão da correia</em>que é compatível com distância central ≤ 340.311 mm (tensionada) e proporciona folga/viagem suficiente para instalação sem ocioso. Especifique a viagem de ajuste necessária.</li>
+<li><strong>Objectivos de tensão + procedimento</strong>: Fornecer tensão estática/instalação recomendada (e um procedimento de campo) compatível com nosso método de tensionamento porca/standoff (por exemplo, método de força de deflexão, método de frequência, etc.).</li>
+<li><strong>Cargas radiais</strong>: Calcular cargas radiais em eixos/reboques do motor e do redutor da tensão da correia através da tensão min/max, e confirmar aceitabilidade vs motor/redutor ratings de rolamentos e desalinhamento esperado.</li>
+<li><strong>Bloqueamento + deriva</strong>: Propor uma estratégia de bloqueio para o ajuste de porca / standoff para que a tensão e alinhamento do cinto não derrapem sob vibração (e definir intervalos de inspeção / retensão).</li>
+<li><strong>Fontes de abastecimento da China</strong>: Fornecer opções de fornecimento de correia e polia disponíveis na China (e substitutos aceitáveis), com tempos de chumbo e peças de reposição recomendadas.</li>
+<li>Confirme o modelo exato do ciclo 6000/razão necessária para a saída de ~70 rpm e forneça requisitos de montagem/lubrificação.</li>
+<li>Avaliar se especificar um<strong>limitador de torque / proteção contra sobrecarga</strong>no ciclo (ou num regime de protecção equivalente) para proteger os componentes a jusante. Fornecer configurações recomendadas e trade-offs.</li>
+<li>Propor um plano prático de lubrificação/manutenção para o motor/cinta/redutor: o que é lubrificado, tipo de lubrificante recomendado, intervalo de inspeção e como a manutenção é realizada com segurança na fábrica piloto.</li>
+<li>Propor a extensão do eixo de entrada e saída / projeto(s) de adaptador (materiais, classes de ajuste, chaveamento / splines, alvos de escoamento) e um plano de montagem / inspeção.</li>
+<li>Avaliar uma arquitetura alternativa: montar o motor em uma orientação convencional e usar uma caixa de velocidades de ângulo direito/ângulo para conduzir a entrada do redutor vertical. Isso melhoraria a vibração, o serviço ou a segurança? Fornecer trade-offs e opções de fornecimento.</li>
+<li>Propor um conceito de guarda para o cinto / pulleys que pode ser montado na parte de trás da máquina (que trilhos / brackets são necessários e como é removido para manutenção).</li>
+</ol>
+<h3>Interfaces e tolerâncias</h3>
+<p class="muted">Interfaces e tolerâncias conhecidas. As ligações vão para subsistemas relacionados.</p>
+<table class="iface-table">
+<thead><tr><th>Parte</th><th>Interface / tolerância</th><th>Relacionado</th></tr></thead>
+<tbody>
+<tr><td>Motor</td><td>WEG W21/W22 IE3, 7,5 kW, 1460 rpm nominal; eixo de 38 mm (forma de montagem/frame confirmado a partir do modelo seleccionado)</td><td>—</td></tr>
+<tr><td>Condução de cintos em V</td><td>Cintas SPA; conceito 1:1 polias (170 mm pitch dia); duas correias planejadas; distância central e tensionamento TBD</td><td>—</td></tr>
+<tr><td>Redutor</td><td>Série Sumitomo Cyclo 6000; selecione relação/modelo para atingir a velocidade de saída alvo; confirme a geometria do eixo de saída e montagem</td><td>—</td></tr>
+<tr><td>Montagem</td><td>Motor + montagem redutor para a placa de montagem do drivetrain; requisitos de alinhamento e rigidez por quadro / drivetrain</td><td><a href="../drivetrain-mount-plate/index.html">Placa de montagem do comboio</a></td></tr>
+</tbody>
+</table>
+<p class="back"><a href="../index.html">← Voltar ao Drivetrain</a>·<a href="../../index.html">P6 RFP</a></p>
+<script>
+(function(){
+  var el = document.getElementById('motor-reducer-slideshow');
+  if (!el) return;
+  var slides = el.querySelectorAll('.slide');
+  var cap = document.getElementById('motor-reducer-caption');
+  var counter = document.getElementById('motor-reducer-counter');
+  var n = slides.length, i = 0;
+  function go(k) { i = (k + n) % n; slides.forEach(function(s,j){ s.classList.toggle('active', j===i); }); if (cap) cap.textContent = slides[i].getAttribute('data-caption') || ''; if (counter) counter.textContent = (i+1) + ' / ' + n; }
+  document.getElementById('motor-reducer-prev').addEventListener('click', function(){ go(i-1); });
+  document.getElementById('motor-reducer-next').addEventListener('click', function(){ go(i+1); });
+  var hash = window.location.hash;
+  if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
+})();
+  </script>
+<footer style="margin-top:2rem; padding-top:1rem; border-top:1px solid var(--border); color:var(--muted); font-size:0.85rem;">Última atualização: 2026-03-20.</footer>
+</body>
+</html>

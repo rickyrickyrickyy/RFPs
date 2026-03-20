@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>汽车电力管理——控制——P6 RFP</title>
+<style>
+    :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
+    a { color: var(--accent); }
+    h1 { font-size: 1.35rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.25rem; }
+    h3 { font-size: 1rem; margin-top: 1rem; color: var(--muted); }
+    ul, ol { padding-left: 1.25rem; }
+    .back { margin-bottom: 1rem; font-size: 0.9rem; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    .swatch { display: inline-block; width: 1.25rem; height: 1.25rem; border: 1px solid var(--border); border-radius: 3px; vertical-align: middle; }
+    table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+    th, td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
+    .iface-table th { color: var(--muted); font-weight: 600; }
+    .slideshow { margin: 1.5rem 0; }
+    .slideshow .slide { display: none; }
+    .slideshow .slide.active { display: block; }
+    .slideshow .slide img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
+    .slideshow-caption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); min-height: 2.5em; }
+    .slideshow-controls { display: flex; align-items: center; gap: 1rem; margin-top: 0.75rem; flex-wrap: wrap; }
+    .slideshow-controls button { background: var(--border); color: var(--text); border: none; padding: 0.35rem 0.75rem; border-radius: 4px; cursor: pointer; font-size: 0.9rem; }
+    .slideshow-controls button:hover { background: var(--accent); color: #fff; }
+    .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
+  </style>
+  <link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+<nav class="site-lang-bar" aria-label="Language">
+  <span class="lang-label">语言：</span>
+  <a href="../../../Controls-Electronics/motor-power-management/index.html">English</a>
+  <span aria-hidden="true">·</span>
+  <a href="index.html" aria-current="page">中文</a>
+  <span aria-hidden="true">·</span>
+  <a href="../../../pt/Controls-Electronics/motor-power-management/index.html">Português</a>
+</nav>
+
+<p class="back"><a href="../index.html">回到控制器和电子设备</a>* 妇女<a href="../../index.html">私营部门筹资和伙伴关系司概览</a></p>
+<h1>汽车电力管理</h1>
+<p class="muted">部分<a href="../index.html">管制和电子</a>节。 冲洗环境中的驱动电动机的动力分配、保护和感应。</p>
+<h2>导言</h2>
+<p>本页的第一部分<a href="../index.html">管制和电子</a>子系统——定义运行该系统所需的电力和保护项目。<a href="../../Drivetrain/index.html">驱动列车</a>发动机(WEG W22,50Hz China basure),提供流感探测,用于尖端探测和吞吐量估计. 设计必须适合工业冲洗环境并与工业冲洗环境相结合。<a href="../../Enclosure-shell/index.html">附录</a>安全连锁。</p>
+<h2>颜色密钥组件( C)</h2>
+<p class="muted">关键电气组件(实施细节 TBD).</p>
+<table>
+<tr><th>颜色</th><th>构成部分</th></tr>
+<tr><td><em>. . . . . .</em></td><td><strong>主断开/ 断开器</strong>——局部隔离(支持独立运行和LOTO).</td></tr>
+<tr><td><em>. . . . . .</em></td><td><strong>AC 联系器 + 运动启动器 / 软启动器</strong>——切换,控制启动/停止行为,以及对运动电路的超流保护.</td></tr>
+<tr><td><em>. . . . . .</em></td><td><strong>内部控制小组</strong>——接力,按要求控制IO/PCB/PLC(最终架构TBD).</td></tr>
+<tr><td><em>. . . . . .</em></td><td><strong>电流传感器</strong>即时电流测量,用于探测悬崖和粗略的吞吐量估计。</td></tr>
+</table>
+<h2 id="gallery">图</h2>
+<p class="muted">可用时添加线条图和柜式布局 。 (还没有输入电动机图像)</p>
+<h3>建议数字(承包商的清晰度)</h3>
+<ul class="muted">
+<li><strong>添加图</strong>: 单线图(功率在 → 断开 → 接触器/启动器 → 运动器).</li>
+<li><strong>添加图</strong>:柜台布局和电缆路由/腺,用于冲洗防护.</li>
+</ul>
+<h2>讨论情况</h2>
+<h3>汽车基线规格(参考)</h3>
+<p>以前的一些规格是60赫兹市场。 P6中国基线50赫兹.</p>
+<table class="iface-table">
+<thead><tr><th>参数</th><th>50赫兹(中国基线)</th><th>60赫兹(参考)</th></tr></thead>
+<tbody>
+<tr><td>汽车</td><td>WEG W22(或等效), 10 hp(≈7.5 kW), 4 杆</td><td>WEG W22(或等价)、10 hp、4-pole</td></tr>
+<tr><td>速度</td><td>~1470转</td><td>~1760 转</td></tr>
+<tr><td>电压</td><td>220 / 380 / 440 V 3相(最后工厂电压TBD)</td><td>220 / 380 / 440 V 三相</td></tr>
+<tr><td>保护</td><td>IPW55(按规定)</td><td>IPW55(按规定)</td></tr>
+<tr><td>挂载</td><td>V5T(英尺、垂直、轴向下)</td><td>V5T(英尺、垂直、轴向下)</td></tr>
+</tbody>
+</table>
+<h3>工厂电源接口(按国家、参考)</h3>
+<p class="muted">使用此表来驱动导入连接器选择、 线程设计和启动器/ 保护大小 。 中国是基线目标。 在可能的情况下,目标是:<strong>双电压双频电动机</strong>减少变种风险。</p>
+<table class="iface-table">
+<thead><tr><th>国家</th><th>输出类型</th><th>阶段类型</th><th>电压(V)</th><th>当前(A)</th><th>频率(赫兹)</th></tr></thead>
+<tbody>
+<tr><td>联合国</td><td>独立选举委员会 60309</td><td>三阶段</td><td>第380/415号决议</td><td>10个</td><td>页:1</td></tr>
+<tr><td>中国</td><td>独立选举委员会 60309</td><td>三阶段</td><td>第380/415号决议</td><td>16岁以上</td><td>50个</td></tr>
+<tr><td>美国</td><td>尼玛</td><td>三阶段</td><td>480Y/277号</td><td>20岁以上</td><td>页:1</td></tr>
+</tbody>
+</table>
+<h3>管制和保护要求</h3>
+<ul>
+<li><strong>当地业务</strong>地方办事处/外地办事处和运行/停靠(独立)。</li>
+<li><strong>卢托</strong>后闭塞/隔绝隔离点。</li>
+<li><strong>安全连锁</strong>——故障安全盖开关与截断-pelers-open逻辑.</li>
+<li><strong>水的保护</strong>——粘合物,腺体,路线适合严格冲洗.</li>
+</ul>
+<h3>遥感</h3>
+<ul>
+<li><strong>电流传感器</strong>用于检测悬崖和粗略吞吐量估计的即时当前计量(每个时期加工水果)。</li>
+<li><strong>循环传感器</strong>——周期计数每期(可与枷锁位置/开peler stop传感器共享硬件).</li>
+</ul>
+<h3>承包者的问题</h3>
+<ol>
+<li>提出适合中国植物的冲洗式安全电气结构(内阁IP评分,腺体,路由).</li>
+<li>指定启动器/接合器以及是否需要软启动器;<strong>超时保护</strong>根据动电流/值班假设进行测距。</li>
+<li>指定当前遥感硬件,以及将如何将其用于悬浮探测和吞吐量估计。</li>
+<li>确认380/415 V 3相50赫兹(CN基线)的连接器和接线方法,并就如何尽可能保持与60赫兹市场兼容的单一设计提出建议。</li>
+</ol>
+<h3>接口</h3>
+<ul>
+<li><strong>输入 :</strong>工厂电(3-相),操作员命令,安全间锁.</li>
+<li><strong>输出 :</strong>保护驱动电动机的动力; 控制逻辑/IOT输出的传感器信号。</li>
+<li><strong>挂载 :</strong>内部管制柜/小组。</li>
+</ul>
+<h3>接口和容忍度</h3>
+<p class="muted">接口(容忍TBD;承包商提议)。</p>
+<table class="iface-table">
+<thead><tr><th>编</th><th>接口/容忍度</th><th>相关</th></tr></thead>
+<tbody>
+<tr><td>汽车</td><td>WEG W22(或等效);50赫兹基线;垂直轴向下;IPW55</td><td><a href="../../Drivetrain/index.html">驱动列车</a></td></tr>
+<tr><td>控制柜</td><td>冲洗防护(IP评级)和腺体/电缆线路</td><td>. . . . . .</td></tr>
+<tr><td>当前传感器</td><td>提供当前悬浮探测和吞吐量估计数</td><td>. . . . . .</td></tr>
+</tbody>
+</table>
+<p class="back"><a href="../index.html">回到控制器和电子设备</a>* 妇女<a href="../../index.html">私营部门筹资和伙伴关系司概览</a></p>
+<footer style="margin-top:2rem; padding-top:1rem; border-top:1px solid var(--border); color:var(--muted); font-size:0.85rem;">最新更新时间:2026-03-20.</footer>
+</body>
+</html>

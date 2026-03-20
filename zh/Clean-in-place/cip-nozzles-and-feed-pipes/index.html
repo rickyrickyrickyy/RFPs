@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>CIP 喷嘴和进料管 — CIP — P6 RFP</title>
+<style>
+    :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
+    a { color: var(--accent); }
+    h1 { font-size: 1.35rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.25rem; }
+    h3 { font-size: 1rem; margin-top: 1rem; color: var(--muted); }
+    ul, ol { padding-left: 1.25rem; }
+    .back { margin-bottom: 1rem; font-size: 0.9rem; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    .swatch { display: inline-block; width: 1.25rem; height: 1.25rem; border: 1px solid var(--border); border-radius: 3px; vertical-align: middle; }
+    table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+    th, td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
+    .iface-table th { color: var(--muted); font-weight: 600; }
+    .slideshow { margin: 1.5rem 0; }
+    .slideshow .slide { display: none; }
+    .slideshow .slide.active { display: block; }
+    .slideshow .slide img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
+    .slideshow-caption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); min-height: 2.5em; }
+    .slideshow-controls { display: flex; align-items: center; gap: 1rem; margin-top: 0.75rem; flex-wrap: wrap; }
+    .slideshow-controls button { background: var(--border); color: var(--text); border: none; padding: 0.35rem 0.75rem; border-radius: 4px; cursor: pointer; font-size: 0.9rem; }
+    .slideshow-controls button:hover { background: var(--accent); color: #fff; }
+    .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
+  </style>
+  <link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+<nav class="site-lang-bar" aria-label="Language">
+  <span class="lang-label">语言：</span>
+  <a href="../../../Clean-in-place/cip-nozzles-and-feed-pipes/index.html">English</a>
+  <span aria-hidden="true">·</span>
+  <a href="index.html" aria-current="page">中文</a>
+  <span aria-hidden="true">·</span>
+  <a href="../../../pt/Clean-in-place/cip-nozzles-and-feed-pipes/index.html">Português</a>
+</nav>
+
+<p class="back"><a href="../index.html">← 返回原位清洗 (CIP)</a> · <a href="../../index.html">P6 RFP 概述</a></p>
+<h1>CIP 喷嘴和进料管</h1>
+<p class="muted">的一部分<a href="../index.html">原位清洗 (CIP)</a>部分。喷嘴布局 + 刚性不锈钢歧管 + 与工厂 CIP 管线连接的柔性软管接口。</p>
+<h2>介绍</h2>
+<p>本页介绍了清洁 P6 内部的喷嘴以及将它们连接到工厂 CIP 系统的管道策略。共有 21 个喷嘴，排列成一个<a href="../../Feeder/index.html">水果摄入系统</a>盖子组（12 个喷嘴，每个 90° 进料管中有一个 CIP 端口）和一个剥离偏转器组（剥离器下方有 9 个喷嘴）。每组通过刚性不锈钢管道连接到单个输入，并使用柔性软管来允许进料器打开/关闭。这<a href="../../Collection/index.html">果汁收集</a>通过逆流反冲洗单独清洁回路（参见<a href="../third-party-cip-control-equipment/index.html">第三方CIP控制</a>）。</p>
+<h2>色键和组件</h2>
+<p class="muted">要定义的组件（颜色可能因 CAD 图形而异）。</p>
+<table>
+<tr><th>颜色）</th><th>成分</th></tr>
+<tr><td><em>—</em></td><td><strong>喷嘴</strong>— 总共 21 个；每个站混合圆形喷射和倾斜喷射位置。</td></tr>
+<tr><td><em>—</em></td><td><strong>刚性不锈钢管道</strong>— 将喷嘴连接到每组单个输入连接的歧管。</td></tr>
+<tr><td><em>—</em></td><td><strong>柔性软管</strong>— 将歧管组连接到工厂 CIP 管线，同时允许进料器打开/关闭。</td></tr>
+</table>
+<h2 id="gallery">人物</h2>
+<p class="muted">CIP 喷嘴布局和进料管布线（照片/CAD 快照）。</p>
+<div class="slideshow" id="cip-nozzles-feedpipes-slideshow">
+<div class="slideshow-track">
+<div class="slide active" data-caption="图 1. CIP 喷嘴布局/布线概述（照片）。" id="fig1"><img alt="图1" src="../../../Clean-in-place/cip-nozzles-and-feed-pipes/images/01.png"/></div>
+<div class="slide" data-caption="图 2. CIP 喷嘴布局/布线细节（照片）。" id="fig2"><img alt="图2" src="../../../Clean-in-place/cip-nozzles-and-feed-pipes/images/02.png"/></div>
+</div>
+<p aria-live="polite" class="slideshow-caption" id="cip-nozzles-feedpipes-caption">图 1. CIP 喷嘴布局/布线概述（照片）。</p>
+<div class="slideshow-controls">
+<button aria-label="以前的" id="cip-nozzles-feedpipes-prev" type="button">← 上一页</button>
+<span class="slideshow-counter" id="cip-nozzles-feedpipes-counter">1 / 2</span>
+<button aria-label="下一个" id="cip-nozzles-feedpipes-next" type="button">下一页 →</button>
+</div>
+</div>
+<h3>推荐数字（承包商清晰度）</h3>
+<ul class="muted">
+<li><strong>添加图</strong>：<strong>带标签的照片</strong>— 喷嘴组<strong>A-E</strong>至少一个已建成的站点（不仅是示意性作物）。</li>
+<li><strong>添加图</strong>：<strong>歧管/软管布线图</strong>— 刚性管 + 带馈线的柔性环<strong>铰链打开与关闭</strong>。</li>
+<li><strong>添加图</strong>：<strong>喷雾覆盖草图</strong>— 进料管和削皮器目标上的锥体/角度叠加用于清洁验证。</li>
+</ul>
+<h2>讨论</h2>
+<h3>喷嘴位置（根据 P6 概念）</h3>
+<p>位置 A–E 对应于 CIP 规范。确切的喷嘴型号、喷射角度和流量待定，并且必须通过清洁测试进行验证。</p>
+<ul>
+<li><strong>A（进料曲线，圆形射流）</strong>— 每个进料管一个喷嘴，瞄准弯曲部分（管向后转动）。</li>
+<li><strong>B（进料管后面，有角度的喷射）</strong>— 每个削皮器一个喷嘴，用于<strong>活动削皮器</strong>中风左右。</li>
+<li><strong>C（进料管前部，倾斜喷射）</strong>— 每个削皮器一个喷嘴，用于<strong>固定削皮器</strong>。</li>
+<li><strong>D（剥离偏转器后板，倾斜喷射）</strong>— 每个削皮器一个喷嘴对准可移动削皮器（中行程）；安装在削皮器下方。喷雾范围必须清洁后面/周围的表面<strong>驱动溜槽偏转器</strong>在压缩过程中覆盖核心滑槽。</li>
+<li><strong>E（果皮收集器前板，倾斜喷射）</strong>— 每个削皮机一个喷嘴，加上位于核心管道之间和两侧的一个附加喷嘴（总共 5 个），避免使用偏转器硬件（更新概念：偏转器主要是驱动/下削皮器）。</li>
+</ul>
+<h3>喷嘴数</h3>
+<ul>
+<li><strong>全部的</strong>：21个喷嘴</li>
+<li><strong>喂食器盖</strong>：12个（4位×每位3个喷嘴：A + B + C）</li>
+<li><strong>下方可移动削皮器</strong>：4（4位×1喷嘴：D）</li>
+<li><strong>低于静态削皮器</strong>：5（E：每个削皮器一个+1）</li>
+</ul>
+<h3>管道/歧管策略</h3>
+<ul>
+<li><strong>刚性不锈钢管</strong>将喷嘴连接到每组（进料器盖组、剥离偏转器组）的歧管中。</li>
+<li><strong>柔性软管</strong>将每个歧管组连接到工厂 CIP 管线，允许进料器在连接时打开/关闭。</li>
+<li><strong>每组单个输入</strong>是集成和快速连接的首选。</li>
+</ul>
+<h3>承包商的问题</h3>
+<ol>
+<li>为每个位置 (A–E) 选择喷嘴类型和喷涂模式，以实现完全覆盖，最大限度地减少过度喷涂且无碰撞。</li>
+<li>指定两个歧管组的管道尺寸、配件标准和软管规格（压力等级、弯曲半径、卫生要求）。</li>
+<li>定义要在首次测试中验证的操作目标：压力、流量、温度、浓度和循环持续时间（工厂控制）。</li>
+</ol>
+<h3>接口</h3>
+<ul>
+<li><strong>输入</strong>：通过柔性软管向每个歧管组提供工厂 CIP 供应。</li>
+<li><strong>输出</strong>：按照喷嘴图 A-E 定义的进料管、削皮器、导流板和收集区域的喷雾覆盖范围。</li>
+<li><strong>山</strong>：喷嘴安装到进料器盖组件和剥离偏转器/收集器结构上；布线必须允许访问和馈线运动。</li>
+</ul>
+<h3>接口和公差</h3>
+<p class="muted">公差待定；承包商提出安装和对准公差，以保持喷嘴瞄准并避免振动/冲洗时发生碰撞。</p>
+<table class="iface-table">
+<thead><tr><th>部分</th><th>接口/公差</th><th>有关的</th></tr></thead>
+<tbody>
+<tr><td>进料器盖歧管</td><td>带柔性软管连接的刚性不锈钢管道；必须允许进料器打开/关闭运动</td><td><a href="../../Feeder/index.html">水果摄入系统</a></td></tr>
+<tr><td>剥离偏转歧管</td><td>带柔性软管连接的刚性不锈钢管道；必须避免运动中的碰撞</td><td><a href="../../Extraction-syncronisation/index.html">提取和同步</a>, <a href="../../Collection/index.html">收藏</a></td></tr>
+</tbody>
+</table>
+<h3>成分</h3>
+<ul>
+<li>喷嘴（圆形喷嘴+倾斜喷嘴类型）</li>
+<li>刚性不锈钢管道/歧管和配件</li>
+<li>工厂 CIP 供应的柔性软管</li>
+<li>用于喷嘴和管道的安装支架/夹子</li>
+</ul>
+<p class="back"><a href="../index.html">← 返回原位清洗 (CIP)</a> · <a href="../../index.html">P6 RFP 概述</a></p>
+<script>
+(function(){
+  var el = document.getElementById('cip-nozzles-feedpipes-slideshow');
+  if (!el) return;
+  var slides = el.querySelectorAll('.slide');
+  var cap = document.getElementById('cip-nozzles-feedpipes-caption');
+  var counter = document.getElementById('cip-nozzles-feedpipes-counter');
+  var n = slides.length, i = 0;
+  function go(k) {
+    i = (k + n) % n;
+    slides.forEach(function(s,j){ s.classList.toggle('active', j===i); });
+    if (cap) cap.textContent = slides[i].getAttribute('data-caption') || '';
+    if (counter) counter.textContent = (i+1) + ' / ' + n;
+  }
+  el.querySelector('#cip-nozzles-feedpipes-prev').addEventListener('click', function(){ go(i-1); });
+  el.querySelector('#cip-nozzles-feedpipes-next').addEventListener('click', function(){ go(i+1); });
+  var hash = window.location.hash;
+  if (hash && hash.match(/^#fig(\d+)$/)) {
+    var idx = parseInt(RegExp.$1, 10) - 1;
+    if (idx >= 0 && idx < n) { i = idx; go(i); }
+  }
+})();
+  </script>
+<footer style="margin-top:2rem; padding-top:1rem; border-top:1px solid var(--border); color:var(--muted); font-size:0.85rem;">最后更新时间：2026 年 3 月 20 日。</footer>
+</body>
+</html>

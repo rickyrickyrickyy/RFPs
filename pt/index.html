@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>P6 RFP — Delijuice 870/970 Protótipo industrial</title>
+<style>
+    :root { --bg: #1a1d21; --card: #24282e; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; --draft: #8b949e; }
+    * { box-sizing: border-box; }
+    body { font-family: system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 0; }
+    .wrap { max-width: 56rem; margin: 0 auto; padding: 1.5rem; }
+    header { border-bottom: 1px solid var(--border); padding-bottom: 1rem; margin-bottom: 1.5rem; }
+    h1 { font-size: 1.5rem; font-weight: 600; margin: 0 0 0.25rem 0; }
+    .subtitle { color: var(--muted); font-size: 0.95rem; margin: 0; }
+    .intro { margin: 1rem 0 1.5rem 0; color: var(--text); font-size: 0.98rem; }
+    nav { margin: 1.5rem 0; }
+    nav h2 { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 0 0 0.6rem 0; }
+    nav ul { list-style: none; padding: 0; margin: 0; }
+    nav ul.nav-sub { margin-left: 1.25rem; margin-top: 0.2rem; margin-bottom: 0.35rem; padding-left: 0.75rem; border-left: 2px solid var(--border); }
+    nav li { margin: 0.35rem 0; display: flex; align-items: center; gap: 0.5rem; }
+    nav li.sub { margin: 0.2rem 0; font-size: 0.95rem; }
+    nav a { color: var(--accent); text-decoration: none; }
+    nav a:hover { text-decoration: underline; }
+    .badge { font-size: 0.7rem; padding: 0.15rem 0.45rem; border-radius: 4px; background: var(--card); color: var(--draft); border: 1px solid var(--border); }
+    .badge.ready { color: #7ee787; border-color: #238636; background: rgba(35,134,54,0.15); }
+    section { margin: 2rem 0; padding: 1rem 0; border-top: 1px solid var(--border); }
+    section.preamble { border-top: none; margin-top: 0; padding-top: 0; }
+    section h2 { font-size: 1.2rem; margin: 0 0 0.75rem 0; }
+    section h3 { font-size: 1rem; margin: 1rem 0 0.5rem 0; }
+    section ul { margin: 0.5rem 0; padding-left: 1.25rem; }
+    section li { margin: 0.25rem 0; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    .highlights { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem 1.25rem; margin: 1rem 0 0 0; font-size: 0.92rem; }
+    .highlights h2 { font-size: 1rem; margin: 0 0 0.5rem 0; color: var(--text); }
+    .highlights ul { margin: 0.35rem 0 0 0; padding-left: 1.2rem; }
+    .highlights li { margin: 0.3rem 0; }
+    footer { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; }
+  </style>
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<nav class="site-lang-bar" aria-label="Language">
+  <span class="lang-label">Idioma:</span>
+  <a href="../index.html">English</a>
+  <span aria-hidden="true">·</span>
+  <a href="../zh/index.html">中文</a>
+  <span aria-hidden="true">·</span>
+  <a href="index.html" aria-current="page">Português</a>
+</nav>
+
+<div class="wrap">
+<header>
+<h1>P6 RFP — Delijuice 870/970</h1>
+<p class="subtitle">Subsistema de protótipo industrial RFPs. Alvo dos desenhos:<strong>15 de Maio</strong>(SIM) Operações-piloto JX: Outubro (pressão).</p>
+</header>
+<section class="preamble">
+<h2>Introdução</h2>
+<p><strong>P6</strong>é o atual<strong>protótipo industrial</strong>sumo de citrinos (família Delijuice 870/970). É executado o<strong>Ciclo de extração de Delijuice</strong>(ingestão → compressão/jucitação → saída do suco → ejeção do núcleo). Linha de máquinas:<strong>P3 → P4 → P5 → P6</strong>(O foco de hoje). O programa P6 está sendo protótipo em colaboração entre<strong>Delijuice</strong>e<strong>SIM Usinagem</strong>(fabricação). Cada página do subsistema inclui figuras mais, onde preenchido, componentes, interfaces e notas de projeto. Ver<a href="Overview/index.html">Visão geral do projecto</a>para subsistemas, fluxo de fábrica e guarnições de segurança alimentar.</p>
+<p class="muted"><strong>Cores CAD:</strong>As lendas são<strong>por subsistema</strong>—use a chave de cor na página que possui a figura que você está lendo.</p>
+<p class="intro">Emblemas verdes mostram o<strong>última passagem de conteúdo</strong>Data para essa página (o trabalho do subsistema é o RFP, não a produção congelada de CAD).</p>
+<div class="highlights">
+<h2>O que está preenchido (altos)</h2>
+<ul class="muted" style="margin-top:0">
+<li><strong>Quadro → Cargas e caminhos de carga</strong>— galeria + discussão de carga.</li>
+<li><strong>&amp; Transmissão da unidade de tração</strong>— galerias completas, motor/redutor, artes/câmara, ambas as placas de montagem, juntas + figuras de eixo.</li>
+<li><strong>Extração e sincronização</strong>— galeria principal;<strong>apoio aos frutos</strong>,<strong>descascadores</strong>,<strong>suporte acionado</strong>subpáginas com figuras + notas do contratante.</li>
+<li><strong>Colecção</strong>— galeria principal;<strong>recolha de sumos</strong>(colector/filtro + fotos laterais) e<strong>êmbolos &amp; filtro</strong>.</li>
+<li><strong>Consumo de fruta</strong>— galeria principal;<strong>Subconjunto de alimentação</strong>(explodido + CIP/pusher/carrossel de mola),<strong>Corpo do alimentador</strong>(iso + topo),<strong>tubos de entrada</strong>(hinge + fotos de tubo).</li>
+<li><strong>Ejeção do núcleo</strong>— galeria principal;<strong>suporte do êmbolo</strong>(conjunto CAD + iso/top/front) +<strong>unidade lateral de painel</strong>(CAD + fotos).</li>
+<li><strong>Eliminação</strong>— galeria principal;<strong>pára-quedas &amp; augers</strong>(CAD + foto de pára-quedas + diagrama de auger do fornecedor);<strong>deflectores</strong>(CAD + deflector que cobre o núcleo/abreviação do auger).</li>
+<li><strong>Anexo</strong>— galeria da capa principal; referência de subpáginas de dobradiça/cobrir CAD partilhado.</li>
+<li><strong>CIP</strong>— galeria de bocais + página de integração de terceiros.</li>
+<li><strong>Controlos</strong>— Foto IU, potência do motor, requisitos de sensor de jugo.</li>
+</ul>
+<p class="muted" style="margin:0.75rem 0 0 0; font-size:0.85rem;">Cada página do subsistema inclui um<strong>Números recomendados</strong>lista onde mais fotos/diagramas ajudaria contratantes.</p>
+</div>
+</section>
+<nav>
+<h2>Referência</h2>
+<ul>
+<li><a href="Overview/index.html">Visão geral do projecto</a>— o que é P6, subsistemas, fluxo de fábrica, visões explodidas</li>
+<li><a href="Overview/Delijuice-cycle.html">Ciclo de extração de Delijuice</a>— quatro etapas, cronometragem, ligações do subsistema</li>
+<li><a href="Overview/BOM.html">Conta de materiais (BOM)</a>— nomes dos componentes (EN / 中文 / PT) para futuras traduções</li>
+</ul>
+<h2>Subsistemas (1–11)</h2>
+<p class="muted" style="margin: 0.25rem 0 0.5rem 0; font-size: 0.85rem;">Os subconjuntos estão enumerados em cada subsistema. Detalhe e interfaces são fornecidos pelo proprietário; tolerância final e montagem são para empreiteiros.</p>
+<ul>
+<li><strong>1.</strong> <a href="Frame/index.html">Frame</a> <span class="badge ready">2026-03-20</span>
+<ul class="nav-sub">
+<li class="sub"><a href="Frame/Loads-and-load-paths/Loads-and-load-paths.html">Cargas e caminhos de carga</a> <span class="badge ready">2026-03-20</span></li>
+</ul>
+</li>
+<li><strong>2.</strong> <a href="Drivetrain/index.html">Condução</a> <span class="badge ready">2026-03-20</span>
+<ul class="nav-sub">
+<li class="sub"><a href="Drivetrain/motor-and-reducer/index.html">Motor e redutor</a> <span class="badge ready">2026-03-20</span></li>
+<li class="sub"><a href="Drivetrain/gears-and-cam-bearings/index.html">Engrenagens e rolamentos de cames</a> <span class="badge ready">2026-03-20</span></li>
+<li class="sub"><a href="Drivetrain/drivetrain-mount-plate/index.html">Placa de montagem do comboio</a> <span class="badge ready">2026-03-20</span></li>
+</ul>
+</li>
+<li><strong>3.</strong> <a href="Transmission/index.html">Sistema de transmissão</a> <span class="badge ready">2026-03-20</span>
+<ul class="nav-sub">
+<li class="sub"><a href="Transmission/transmission-mount-plate/index.html">Placa de montagem da transmissão</a> <span class="badge ready">2026-03-20</span></li>
+<li class="sub"><a href="Transmission/yoke/index.html">Tubos de iogue e de transmissão</a> <span class="badge ready">2026-03-20</span></li>
+</ul>
+</li>
+<li><strong>4.</strong> <a href="Extraction-syncronisation/index.html">Extração e sincronização</a> <span class="badge ready">2026-03-20</span>
+<ul class="nav-sub">
+<li class="sub"><a href="Extraction-syncronisation/fruit-support/index.html">Apoio aos frutos</a> <span class="badge ready">2026-03-20</span></li>
+<li class="sub"><a href="Extraction-syncronisation/peelers/index.html">Peelers</a> <span class="badge ready">2026-03-20</span></li>
+<li class="sub"><a href="Extraction-syncronisation/driven-bracket/index.html">Suporte acionado</a> <span class="badge ready">2026-03-20</span></li>
+</ul>
+</li>
+<li><strong>5.</strong> <a href="Collection/index.html">Colecção</a> <span class="badge ready">2026-03-20</span>
+<ul class="nav-sub">
+<li class="sub"><a href="Collection/juice-collection/index.html">Colecção de sumos</a> <span class="badge ready">2026-03-20</span></li>
+<li class="sub"><a href="Collection/plungers-and-filter/index.html">Outras máquinas e aparelhos, n.e.</a> <span class="badge ready">2026-03-20</span></li>
+</ul>
+</li>
+<li><strong>6.</strong> <a href="Feeder/index.html">Sistema de ingestão de frutas</a> <span class="badge ready">2026-03-20</span>
+<ul class="nav-sub">
+<li class="sub"><a href="Feeder/feeding-subassembly/index.html">Subconjunto de alimentação</a> <span class="badge ready">2026-03-20</span></li>
+<li class="sub"><a href="Feeder/feeder-body/index.html">Corpo do alimentador</a> <span class="badge ready">2026-03-20</span></li>
+<li class="sub"><a href="Feeder/entry-tubes/index.html">Tubos de entrada</a> <span class="badge ready">2026-03-20</span></li>
+</ul>
+</li>
+<li><strong>7.</strong> <a href="Plug-ejection/index.html">Ejeção do núcleo</a> <span class="badge ready">2026-03-20</span>
+<ul class="nav-sub">
+<li class="sub"><a href="Plug-ejection/plunger-drive-bracket/index.html">Suporte de acionamento do mergulhador</a> <span class="badge ready">2026-03-20</span></li>
+<li class="sub"><a href="Plug-ejection/plunger-drive-system-in-side-panels/index.html">Sistema de acionamento de mergulhadores em painéis laterais</a> <span class="badge ready">2026-03-20</span></li>
+</ul>
+</li>
+<li><strong>8.</strong> <a href="Outflow-disposal/index.html">Sistema de eliminação</a> <span class="badge ready">2026-03-20</span>
+<ul class="nav-sub">
+<li class="sub"><a href="Outflow-disposal/chutes-and-augers/index.html">Chutes e chutes</a> <span class="badge ready">2026-03-20</span></li>
+<li class="sub"><a href="Outflow-disposal/deflectors/index.html">Deflectores</a> <span class="badge ready">2026-03-20</span></li>
+</ul>
+</li>
+<li><strong>9.</strong> <a href="Enclosure-shell/index.html">Anexo / shell</a> <span class="badge ready">2026-03-20</span>
+<ul class="nav-sub">
+<li class="sub"><a href="Enclosure-shell/protective-covers/index.html">Tampas protectoras (pulverizador, drivetrain)</a> <span class="badge ready">2026-03-20</span></li>
+<li class="sub"><a href="Enclosure-shell/overcentered-hinges/index.html">Dobradiças sobrecentradas</a> <span class="badge ready">2026-03-20</span></li>
+</ul>
+</li>
+<li><strong>10.</strong> <a href="Clean-in-place/index.html">Limpeza no local (CIP)</a> <span class="badge ready">2026-03-20</span>
+<ul class="nav-sub">
+<li class="sub"><a href="Clean-in-place/cip-nozzles-and-feed-pipes/index.html">Agulhetas CIP e tubos de alimentação</a> <span class="badge ready">2026-03-20</span></li>
+<li class="sub"><a href="Clean-in-place/third-party-cip-control-equipment/index.html">Equipamento de controlo CIP de terceiros</a> <span class="badge ready">2026-03-20</span></li>
+</ul>
+</li>
+<li><strong>11.</strong> <a href="Controls-Electronics/index.html">Controlos e electrónica</a> <span class="badge ready">2026-03-20</span>
+<ul class="nav-sub">
+<li class="sub"><a href="Controls-Electronics/machine-control-definition-and-ui/index.html">Definição do controle da máquina e UI</a> <span class="badge ready">2026-03-20</span></li>
+<li class="sub"><a href="Controls-Electronics/motor-power-management/index.html">Gestão da energia do motor</a> <span class="badge ready">2026-03-20</span></li>
+<li class="sub"><a href="Controls-Electronics/yoke-position-sensor/index.html">Sensor de posição do ioque</a> <span class="badge ready">2026-03-20</span></li>
+</ul>
+</li>
+</ul>
+<h2>Mais</h2>
+<ul>
+<li><a href="3rd-party/index.html">Integração de terceiros e locais</a> <span class="badge">a completar</span></li>
+<li><a href="Overview/Questions-for-RFP.html">Perguntas sobre o RFP</a> <span class="muted">— lista de verificação de trabalho (não de navegação primária)</span></li>
+<li><span class="muted">Evolução futura</span> <span class="badge">a completar</span></li>
+</ul>
+</nav>
+<footer>Última atualização: 2026-03-20.
+</footer>
+</div>
+</body>
+</html>

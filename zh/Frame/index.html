@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>1. 框架——P6 RFP</title>
+<style>
+    :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
+    a { color: var(--accent); }
+    h1 { font-size: 1.35rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.25rem; }
+    ul { padding-left: 1.25rem; }
+    .back { margin-bottom: 1rem; font-size: 0.9rem; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    ol { padding-left: 1.25rem; }
+    .swatch { display: inline-block; width: 1.25rem; height: 1.25rem; border: 1px solid var(--border); border-radius: 3px; vertical-align: middle; flex-shrink: 0; }
+    .slideshow { margin: 1.5rem 0; }
+    .slideshow-track { position: relative; }
+    .slideshow .slide { display: none; }
+    .slideshow .slide.active { display: block; }
+    .slideshow .slide img { max-width: 100%; height: auto; border: 1px solid var(--border); display: block; }
+    .slideshow-caption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); min-height: 2.5em; }
+    .slideshow-controls { display: flex; align-items: center; gap: 1rem; margin-top: 0.75rem; flex-wrap: wrap; }
+    .slideshow-controls button { background: var(--border); color: var(--text); border: none; padding: 0.35rem 0.75rem; border-radius: 4px; cursor: pointer; font-size: 0.9rem; }
+    .slideshow-controls button:hover { background: var(--accent); color: #fff; }
+    .slideshow-counter { font-size: 0.85rem; color: var(--muted); }
+    .iface-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    .iface-table th, .iface-table td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
+    .iface-table th { color: var(--muted); font-weight: 600; }
+    table.colour-key { width: 100%; border-collapse: collapse; font-size: 0.85rem; margin: 0.5rem 0; }
+    table.colour-key th, table.colour-key td { text-align: left; padding: 0.4rem 0.6rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+    table.colour-key th { color: var(--muted); font-weight: 600; white-space: nowrap; }
+    table.colour-key td.sw { width: 6rem; }
+    table.colour-key td.sw .na { color: var(--muted); font-size: 0.9em; }
+  </style>
+  <link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<nav class="site-lang-bar" aria-label="Language">
+  <span class="lang-label">语言：</span>
+  <a href="../../Frame/index.html">English</a>
+  <span aria-hidden="true">·</span>
+  <a href="index.html" aria-current="page">中文</a>
+  <span aria-hidden="true">·</span>
+  <a href="../../pt/Frame/index.html">Português</a>
+</nav>
+
+<p class="back"><a href="../index.html">* 回到P6</a></p>
+<h1>1. 框架</h1>
+<h2>分页</h2>
+<ul>
+<li><a href="Loads-and-load-paths/Loads-and-load-paths.html">装入路径</a> <span class="muted">(更新2026-03-20) (中文(简体) ).</span>——反应负载,负载路径到地板,框架CAD人物画廊.</li>
+</ul>
+<h2>导言</h2>
+<p>那个<strong>边框</strong>是主焊接结构,<strong>对齐基准</strong>。 。 。 。<strong>所有子系统都挂到上面</strong>设计重点 :<strong>稳定</strong>, (中文).<strong>对齐</strong>, (中文).<strong>部队传输</strong>,以及<strong>可重复、易于组装</strong>三个主要<strong>装入的车牌</strong>这是<strong>收藏(装入)挂载盘</strong>, (中文).<strong>传输挂载板</strong>,以及<strong>驱动火车挂载板</strong>- 其他一切从一个<strong>自上而下装配</strong>排序到这些界面。 下文详述了组装订单、施工和承包商问题。</p>
+<h2 id="how-subassemblies-fit-together">颜色密钥和数字( 子组装如何组合)</h2>
+<p class="muted">组装步骤和子系统特写。 那个<strong>爆炸的顶级组件</strong>幻灯片放映开始<a href="../../Overview/index.html#exploded-top-assembly">项目概览</a>。下面的一个彩色密钥适用于本节的所有数字。</p>
+<h3>颜色密钥( 所有数字)</h3>
+<p class="muted">顶级组件的 CAD 颜色密钥 。 每个子系统都与其RFP部分链接.</p>
+<table class="colour-key">
+<thead>
+<tr>
+<th class="sw">颜色</th><th>子系统</th>
+<th class="sw">颜色</th><th>子系统</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="sw"><span class="swatch" style="background:#A4E637"></span></td><td><a href="index.html">框架</a></td>
+<td class="sw"><span class="swatch" style="background:#FFE899"></span> <span class="swatch" style="background:#FF95DA"></span> <span class="swatch" style="background:#1E7334"></span></td><td><a href="../Drivetrain/index.html">驱动列车</a></td>
+</tr>
+<tr>
+<td class="sw"><span class="swatch" style="background:#C41D63"></span> <span class="swatch" style="background:#E6612E"></span></td><td><a href="../Transmission/index.html">传送</a></td>
+<td class="sw"><span class="swatch" style="background:#FCAB3B"></span></td><td><a href="../Collection/index.html">收藏</a></td>
+</tr>
+<tr>
+<td class="sw"><span class="swatch" style="background:#317DDE"></span></td><td><a href="../Extraction-syncronisation/index.html">提取和同步</a></td>
+<td class="sw"><span class="swatch" style="background:#71C32D"></span></td><td><a href="../Feeder/index.html">水果摄入量</a></td>
+</tr>
+<tr>
+<td class="sw"><span class="swatch" style="background:#F4FF43"></span> <span class="swatch" style="background:#2E7BDD"></span> <span class="swatch" style="background:#9B79E6"></span> <span class="swatch" style="background:#F9A93C"></span></td><td><a href="../Plug-ejection/index.html">核心弹出</a></td>
+<td class="sw"><span class="swatch" style="background:#D822B0"></span> <span class="swatch" style="background:#2793AE"></span></td><td><a href="../Outflow-disposal/index.html">处置</a></td>
+</tr>
+<tr>
+<td class="sw"><span class="swatch" style="background:#489B27"></span> <span class="swatch" style="background:#F54646"></span> <span class="swatch" style="background:#7838DC"></span> <span class="swatch" style="background:#469925"></span> <span class="swatch" style="background:#F44545"></span></td><td><a href="../Enclosure-shell/index.html">附文/壳</a></td>
+<td class="sw"><span class="na">. . . . . .</span></td><td><a href="../Clean-in-place/index.html">CIP 工业促进中心</a></td>
+</tr>
+<tr>
+<td class="sw"><span class="na">. . . . . .</span></td><td><a href="../Controls-Electronics/index.html">控制与电子</a></td>
+<td class="sw"></td><td></td>
+</tr>
+</tbody>
+</table>
+<h3>集会步骤</h3>
+<p>打算保留自上而下的工作流程<strong>可重复</strong>服务后撕毁。 图A1-A5说明了顺序;标题不长——用此列表来充分说明意图。</p>
+<ol>
+<li><strong>平面和板块的接口。</strong>在6个平整的山上设置帧高度. 将三个主要挂载板(收集/装载、传输、驱动列车)放在侧轨和横梁上,使用<strong>螺栓孔</strong>, (中文).<strong>嘘</strong>和扁平检查。 那就对齐,夹住<strong>钻孔和雷弹</strong>(单位:千美元)<strong>H7 毛巾</strong>在基准计划要求的情况下(见建筑)。<em>图A1。</em></li>
+<li><strong>优酷与提取/同步.</strong>在传输/驱动列车轴上安装枷锁和提取/同步模块。<em>图A2</em></li>
+<li><strong>普罗涅盘.</strong>降低板块之间的螺旋桨驱动系统;连接枷锁与螺旋杆/夹板.<em>图A3-A4。</em></li>
+<li><strong>附文及供养者.</strong>上层中轴线覆盖/封套,并从顶端附着支线;验证夹/间锁和通关.<em>图A5.</em></li>
+</ol>
+<p>便捷和轴线对齐应建立一次(恰好)-锁定,然后与<strong>对齐时钻探/梦想</strong>涂抹/肩bolt索引,所以重建不会失去同心.</p>
+<div class="slideshow" id="frame-assembly-steps-slideshow">
+<div class="slideshow-track">
+<div class="slide active" data-caption="图A1 — Level 帧; 定位和紧贴三个主要接口板块."><img alt="组装步骤1——三个接口板块" src="../../Frame/assembly-steps/1.png"/></div>
+<div class="slide" data-caption="图A2——Yoke和驱动装置/传输轴上的提取/同步。"><img alt="集会步骤2——枷锁和开采" src="../../Frame/assembly-steps/2.png"/></div>
+<div class="slide" data-caption="图A3 — 下游螺旋桨驱动器; 连接到枷锁和棒."><img alt="组装步骤3a——安装冲压器驱动器" src="../../Frame/assembly-steps/3.png"/></div>
+<div class="slide" data-caption="图A4 — Plunger 驱动器就座并连接。"><img alt="组装步骤3b——推进器到位" src="../../Frame/assembly-steps/4.png"/></div>
+<div class="slide" data-caption="图A5——Hinges/封面和顶部支线."><img alt="组装步骤4——支线和贝壳" src="../../Frame/assembly-steps/5.png"/></div>
+</div>
+<p aria-live="polite" class="slideshow-caption" id="frame-assembly-steps-caption">图A1 — Level 帧; 定位和紧贴三个主要接口板块.</p>
+<div class="slideshow-controls">
+<button aria-label="上一个" id="frame-assembly-steps-prev" type="button">上一个</button>
+<span class="slideshow-counter" id="frame-assembly-steps-counter">1 / 5 个</span>
+<button aria-label="下一个" id="frame-assembly-steps-next" type="button">下一个</button>
+</div>
+</div>
+<h3>子系统特写</h3>
+<p class="muted">关闭核心子系统之间的接口. 图C1–C8(C8是另一款驱动列车闭塞视图).</p>
+<div class="slideshow" id="frame-subsystem-closeups-slideshow">
+<div class="slideshow-track">
+<div class="slide active" data-caption="图C1 核心弹射 / 收集接口—— 喷射器驱动器, 收集器,和喷射器区域."><img alt="特写——核心弹射和收集 1" src="../../Frame/subsystem-closeups/1.png"/></div>
+<div class="slide" data-caption="图C2 核心弹出 / 收集接口—— 备选视图."><img alt="特写——核心弹射和收集 2" src="../../Frame/subsystem-closeups/2.png"/></div>
+<div class="slide" data-caption="图C3。 驱动列车堆—马达,减速器,齿轮和挂载上下文."><img alt="特写-驱动列车" src="../../Frame/subsystem-closeups/3.png"/></div>
+<div class="slide" data-caption="图C4. 向提取的传输——枷锁/碎片区和驱动模块。"><img alt="特写——传送到提取器" src="../../Frame/subsystem-closeups/4.png"/></div>
+<div class="slide" data-caption="图C5. 向提取的传输——对齐和承载上下文。"><img alt="特写——传送到提取 2" src="../../Frame/subsystem-closeups/5.png"/></div>
+<div class="slide" data-caption="图C6. 附文——挂载板的壳/信封附件。"><img alt="特写——附文链条1" src="../../Frame/subsystem-closeups/6.png"/></div>
+<div class="slide" data-caption="图C7. 附文——链条和括号细节。"><img alt="特写——附文链条2" src="../../Frame/subsystem-closeups/7.png"/></div>
+<div class="slide" data-caption="图C8. 附文——包括路线和审批。"><img alt="特写——附文链条 3" src="../../Frame/subsystem-closeups/8.png"/></div>
+</div>
+<p aria-live="polite" class="slideshow-caption" id="frame-subsystem-closeups-caption">图C1 核心弹出/收藏界面.</p>
+<div class="slideshow-controls">
+<button aria-label="上一个" id="frame-subsystem-closeups-prev" type="button">上一个</button>
+<span class="slideshow-counter" id="frame-subsystem-closeups-counter">1,8个</span>
+<button aria-label="下一个" id="frame-subsystem-closeups-next" type="button">下一个</button>
+</div>
+</div>
+<h2>讨论情况</h2>
+<h3>建筑业</h3>
+<p><strong>主帧 :</strong>80×80×5 GB/T平方管作为主负载成员;<strong>#8 C-括号</strong>二级/辅助成员;<strong>组合</strong>如CAD所示,在成员之间;完全焊接。<strong>等级 :</strong>麦克马斯特<strong>6111K669号</strong>M24 × 100毫米摇摆式平整挂载<strong>M24 窃听端板</strong>在六条腿。</p>
+<p><strong>登山和道巾:</strong>侧式铁路和横梁<strong>螺栓式接口</strong>三块主板 板子先被闪烁,先与螺栓对齐;<strong>在对齐后创建 dowel 孔</strong>由<strong>钻+雷电到H7</strong>重复重建——而不是依靠铁路上预先切割的 " 墙方块 " 作为主要定位方案。</p>
+<p class="muted">细节和接口由业主提供;最后的容忍和组装由承包商提供。 见<a href="../Overview/Questions-for-RFP.html">对RFP提出的问题</a>冲出每个子系统和子组装的参数。</p>
+<h3>粗略设计意图( M)</h3>
+<ul>
+<li><strong>状态</strong>——初步CAD存在(当前高度). 不为制造而释放;预计承包商会提出DFM和耐力/组装改进。</li>
+<li><strong>框必须做什么</strong>——提供稳定,可重复的基准结构,从而可以对齐和重新组装,不失去时间或携带生命。</li>
+<li><strong>顶端接口</strong>3个主挂车板(装车/收集、传输、驱动列车)从顶部挂到车架侧轨。 目前的概念包括毛巾(H7) + shims;承包商可以提出改进的调整/分配战略,以管理焊接扭曲。</li>
+</ul>
+<h3>已知问题和风险</h3>
+<ul>
+<li><strong>焊接扭曲/ 平整</strong>—— 悬浮式顶端接口表面不冲/平面的风险. 存在可调整的平面脚步,但板对铁路接口的可调整性和/或闪烁性预计将弥补局部扭曲.</li>
+<li><strong>对齐可重复性</strong>——服务后重复调整至关重要. 提取舱(驱动剥皮机)必须与收集侧剥皮机同心合力;错配有碰撞和加速磨损的风险。</li>
+<li><strong>机下清除(第3方接受者)</strong>——该机计划坐落在一个高架平台上,因此可以定位在下方,准确的地板清空并不是主要制约. 然而,对于较小的试点工厂来说,框架下的额外清关可能有利于安装/搬运设备以及获得服务;承包商可以考虑。</li>
+<li><strong>收藏区覆盖/用户访问</strong>——目前向上打开的插件/收集封条操作员接近前方。 备选盖/盖/盖方法可能需要改变铁路上架和靠近收集一侧的上升特征。</li>
+</ul>
+<h3>DFM和制造业(中国)</h3>
+<ul>
+<li><strong>焊接+固定计划</strong>——提供推荐的jigging和焊接序列,以控制扭曲,并在板块接口上实现实用的扁平/平整.</li>
+<li><strong>后封机与可调整接口</strong>——建议焊接后机垫/铁道,或者使用可调节/可遮挡的板板接口来满足对齐要求.</li>
+<li><strong>成员甄选</strong>——确认局部可用80×80×5 GB/T管和GB/T #8 C-通道/C-括号;如硬度,扭曲控制或制造简单,则提出等效物.</li>
+<li><strong>表面处理</strong>- 框架暴露在蒸气/清洁剂中,但在主要提取室之外。 建议在这种环境下完成实际防腐蚀的工作。</li>
+</ul>
+<h3>寻求优化</h3>
+<ul>
+<li><strong>可重复装配</strong>——强力的"对接一次,然后是dowel/ream"计划,用于挂板和剥皮的底盘.</li>
+<li><strong>可适用性</strong>——简便清除/重新安装子系统,在可能情况下不进行重排或重新调整.</li>
+<li><strong>扭曲容忍性</strong>——通过接口设计和基准降低焊接平面的敏感性.</li>
+<li><strong>运算符访问</strong>——改进收集区域覆盖/盖面概念,使操作员能够站到机器前方.</li>
+</ul>
+<h3>承包者的问题</h3>
+<ol>
+<li>提出焊接序列+固定/jig方法来控制扭曲,并击中板块接口的实用扁平/方位目标.</li>
+<li>建议基准计划和定位策略(dowels/H7,shims,可调整的挂载,机器垫),以确保在清除服务后重复对齐.</li>
+<li>我们应该期待后封装的机械(以及在哪里),还是可以通过可调整/可遮蔽的接口避免? 提供权衡。</li>
+<li>建议中国常见的成员/交叉选择(GB/T #8 C-通道或替代品),提高硬度/扭曲性能.</li>
+<li>为皮槽下的第三方剥离/核心剥离器提出清理战略(包裹定义、可调整高度、移动/重新定位下跨成员等)。</li>
+<li>提出一个收集区域覆盖/覆盖式安装概念,在保持安全和坚韧性的同时,改善操作员的准入。</li>
+</ol>
+<h3>供应链和候补</h3>
+<ul>
+<li><strong>平级挂载</strong>——当前规格:麦克马斯特6111K669 M24. 承包者在可接受的情况下提出中方可用的等价物。</li>
+<li><strong>简介和牌照</strong>偏好常见的GB/ISO剖面图和股票尺寸;在它们减少准备时间或制造复杂程度时提出等效物。</li>
+</ul>
+<h3>预期成果和接受</h3>
+<ul>
+<li><strong>可交付成果</strong>- 更新焊接图包(焊接图包)、数据计数、容忍目标、建议检查、以及可重复重建的组装/调整/处理程序。</li>
+<li><strong>接受情况</strong>——在运行负载下可以对齐三个挂板并保持对齐;在拆卸/重新组装后,提取到收集的剥离器对齐可以重复;在循环振动/负载下,关节不会滑动/裂变.</li>
+</ul>
+<h3>设计原则</h3>
+<p>这些原则指导了帧设计和当前配置的任何改变.</p>
+<table style="width:100%; border-collapse: collapse; font-size: 0.95rem;">
+<thead>
+<tr style="border-bottom: 1px solid var(--border);">
+<th style="text-align:left; padding: 0.4rem 0.5rem 0.4rem 0;">原则</th>
+<th style="text-align:left; padding: 0.4rem 0;">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom: 1px solid var(--border);">
+<td style="padding: 0.5rem 0.5rem 0.5rem 0; vertical-align: top;"><strong>稳定</strong></td>
+<td style="padding: 0.5rem 0;">在操作负载下抵抗偏转,从而保持对齐和定时. 焊接结构和板块接口的硬度至关重要.</td>
+</tr>
+<tr style="border-bottom: 1px solid var(--border);">
+<td style="padding: 0.5rem 0.5rem 0.5rem 0; vertical-align: top;"><strong>对齐</strong></td>
+<td style="padding: 0.5rem 0;">三个主要接口(驱动列车、传输、装载的挂载板)应定位并导向驱动轴、轴承和脱皮机,使其符合设计意图。 doweels和H7孔在解体后提供可重复的对齐.</td>
+</tr>
+<tr style="border-bottom: 1px solid var(--border);">
+<td style="padding: 0.5rem 0.5rem 0.5rem 0; vertical-align: top;"><strong>强制传输</strong></td>
+<td style="padding: 0.5rem 0;">冲动装置和冲动装置产生的反应力应当通过电框带入地板,而不会发生局部扭曲。 装载路径清晰;关节充足.</td>
+</tr>
+<tr style="border-bottom: 1px solid var(--border);">
+<td style="padding: 0.5rem 0.5rem 0.5rem 0; vertical-align: top;"><strong>可重复性</strong></td>
+<td style="padding: 0.5rem 0;">平板和括号可以移动和重载,不失去对齐性. H7孔和道巾定义了基准;shims用于适配.</td>
+</tr>
+<tr style="border-bottom: 1px solid var(--border);">
+<td style="padding: 0.5rem 0.5rem 0.5rem 0; vertical-align: top;"><strong>可适用性</strong></td>
+<td style="padding: 0.5rem 0;">分装可移动且可重新安装维护. 没有永久的"适合一次"对齐.</td>
+</tr>
+<tr style="border-bottom: 1px solid var(--border);">
+<td style="padding: 0.5rem 0.5rem 0.5rem 0; vertical-align: top;"><strong>制造业</strong></td>
+<td style="padding: 0.5rem 0;">由制造伙伴(如Sean/YES)实现的材料、焊接和组装顺序。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="gallery">图</h3>
+<p class="muted">框架 CAD 画廊( 挂牌、 平面) 已启用<a href="../../Frame/Loads-and-load-paths/Loads-and-load-paths.html#gallery">装入路径</a>。 。 。 。</p>
+<h3>建议数字(承包商的清晰度)</h3>
+<ul class="muted">
+<li><strong>添加图</strong>编号 :<strong>Dowel工作流程照片系列</strong>钻探 装车的雷姆 输电车的车牌</li>
+<li><strong>添加图</strong>编号 :<strong>脚平度</strong>——M24闪存挂载接口到管端板.</li>
+<li><strong>添加图</strong>编号 :<strong>全球基准</strong>——单图捆绑框架栏杆至剥离对接链.</li>
+</ul>
+<h3>构成部分</h3>
+<ul>
+<li><strong>主要框架</strong>— 80×80×5 GB/T 平方管,# 8 C-brackets, 完全焊接; 六条腿, M24 被抽取的端板</li>
+<li><strong>平级挂载</strong>- 6111K669 M24 100毫米Swivel平整山(麦克马斯特)</li>
+<li><strong>装入的挂载板</strong>收集组装;收集模块和静态边提取</li>
+<li><strong>传输挂载盘</strong>- 传输子系统:枷锁、两根35毫米轴承、两根LMK35UU线性轴承(原轴承挂板)</li>
+<li><strong>驱动列车挂载板</strong>- 两个齿轮,装有带式滚筒轴承,减少空间器,苏米托莫减少器</li>
+<li><strong>驱动括号</strong>驱动列车/驱动杆架设(视需要)</li>
+</ul>
+<h3>接口和容忍度</h3>
+<p class="muted">已知的界面和框架部件的容限. 链接到相关的子系统.</p>
+<table class="iface-table">
+<thead><tr><th>编</th><th>接口/容忍度</th><th>相关</th></tr></thead>
+<tbody>
+<tr><td>主要框架</td><td>80×80×5 GB/T 平方管; #8 C-括号; gusset; 铁轨/波束上的螺栓板接口; 安装后通过对齐-当时的钻孔/梦想的H7道盖</td><td>. . . . . .</td></tr>
+<tr><td>平级挂载</td><td>6111K669 M24 100毫米(麦克马斯特);六条腿的M24窃听端板</td><td>. . . . . .</td></tr>
+<tr><td>装入的挂载板</td><td>从顶端到框架的山; 圆巾的H7孔; 装配的shims</td><td><a href="../Collection/index.html">收藏</a></td></tr>
+<tr><td>传输挂载盘</td><td>从顶端挂到框架;  doweels的 H7 孔</td><td><a href="../Transmission/index.html">传送</a></td></tr>
+<tr><td>驱动列车挂载板</td><td>从顶端挂到框架;  doweels的 H7 孔</td><td><a href="../Drivetrain/index.html">驱动列车</a></td></tr>
+</tbody>
+</table>
+<script>
+(function(){
+  function initSlideshow(id) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    var slides = el.querySelectorAll('.slide');
+    var capId = id.replace('-slideshow','-caption');
+    var counterId = id.replace('-slideshow','-counter');
+    var prevId = id.replace('-slideshow','-prev');
+    var nextId = id.replace('-slideshow','-next');
+    var cap = document.getElementById(capId);
+    var counter = document.getElementById(counterId);
+    var n = slides.length, i = 0;
+    function go(k) {
+      i = (k + n) % n;
+      slides.forEach(function(s,j){ s.classList.toggle('active', j===i); });
+      if (cap) cap.textContent = slides[i].getAttribute('data-caption') || '';
+      if (counter) counter.textContent = (i+1) + ' / ' + n;
+    }
+    var prevBtn = document.getElementById(prevId);
+    var nextBtn = document.getElementById(nextId);
+    if (prevBtn) prevBtn.addEventListener('click', function(){ go(i-1); });
+    if (nextBtn) nextBtn.addEventListener('click', function(){ go(i+1); });
+  }
+  initSlideshow('frame-assembly-steps-slideshow');
+  initSlideshow('frame-subsystem-closeups-slideshow');
+})();
+  </script>
+<footer style="margin-top:2rem; padding-top:1rem; border-top:1px solid var(--border); color:var(--muted); font-size:0.85rem;">最新更新时间:2026-03-20.</footer>
+</body>
+</html>
