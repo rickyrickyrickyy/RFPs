@@ -44,14 +44,14 @@
 <h1>Peelers</h1>
 <p class="muted">Parte da<a href="../index.html">Extração e sincronização</a>secção. Descascadores acionados e sua estratégia de montagem/alinhamento para malhar com descascadores estáticos lado de coleção.</p>
 <h2>Introdução</h2>
-<p>Os descascadores accionados são os dedos de extracção que se entrelaçam com os descascadores estáticos no<a href="../../Collection/index.html">coleção</a>módulo para comprimir e suco de frutas. A geometria do núcleo é herdada da máquina comercial. O principal trabalho aberto é definir a estratégia de montagem da flange/fabricação da placa e um procedimento de alinhamento que preserva a concentricidade e evita colisões; no final do curso, o intervalo alvo entre as faces descascadas acionadas e estáticas é de aproximadamente 2-3 mm.</p>
+<p>Os descascadores accionados são os dedos de extracção em movimento que se entrelaçam com os descascadores estáticos no<a href="../../Collection/index.html">coleção</a>módulo para comprimir e suco de frutas. A geometria do núcleo é herdada da máquina comercial. O principal trabalho aberto é definir a estratégia de montagem flange/placa de fabricação e um procedimento de alinhamento que preserva a concentricidade e evita colisões; no final do curso o intervalo alvo entre as faces descascadas acionadas e estáticas é de aproximadamente 2-3 mm.</p>
 <h2>&amp; Componentes da chave de cor</h2>
 <p class="muted">Principais componentes e intenções (as cores podem variar de acordo com as figuras CAD).</p>
 <table>
 <tr><th>Cor( s)</th><th>Componente</th></tr>
 <tr><td><em>—</em></td><td><strong>Corpo de descascador conduzido</strong>— geometria herdada da máquina comercial; interfaces com suporte accionado através de um flange de montagem fabricado/máquina (TBD).</td></tr>
-<tr><td><em>—</em></td><td><strong>Flange/placa de montagem do descascador acionado (TBD)</strong>— aproximação prevista: torno-máquina uma flange e soldar uma placa ao descascador para que possa ser aparafusada ao suporte accionado.</td></tr>
-<tr><td><em>—</em></td><td><strong>Interface de descascamento estático (colecção)</strong>— o descascador estático recebe igualmente uma flange de montagem. A superfície interna é usada como parte da interface recipiente/coletor de suco, por isso o acabamento e vedação da superfície são importantes (ver Coleção).</td></tr>
+<tr><td><em>—</em></td><td><strong>Flange/placa de montagem do descascador accionado (TBD)</strong>— aproximação planeada: torno-máquina uma flange e soldar uma placa ao descascador para que possa ser aparafusada ao suporte accionado.</td></tr>
+<tr><td><em>—</em></td><td><strong>Interface de descascador estático (colecção)</strong>— o descascador estático recebe igualmente uma flange de montagem. A superfície interna é usada como parte da interface recipiente/coletor de suco, de modo que o acabamento e vedação da superfície são importantes (ver Coleção).</td></tr>
 </table>
 <h2 id="gallery">Figuras</h2>
 <p class="muted">Descascador acionado/estático CAD, folga no engajamento e placa de montagem de coleta com<strong>pós-alinhamento</strong>buracos realçados. Ver também<a href="../../../Extraction-syncronisation/index.html#gallery">Galeria principal de extracção</a>.</p>
@@ -59,7 +59,7 @@
 <div class="slideshow-track">
 <div class="slide active" data-caption="Figura 1. Liberação — descamadores accionados e estáticos quando acionados (sem colisão / intervalo mínimo)." id="fig1"><img alt="Desobstrução do peeler quando activado" src="../../../Extraction-syncronisation/peelers/images/clearance.png"/></div>
 <div class="slide" data-caption="Figura 2. Descascador conduzido — geometria corpo / dedo (CAD)." id="fig2"><img alt="Descascador conduzido" src="../../../Extraction-syncronisation/peelers/images/drivenPeeler.png"/></div>
-<div class="slide" data-caption="Figura 3. Descascador conduzido — montado no suporte accionado (contexto)." id="fig3"><img alt="Descascador conduzido montado" src="../../../Extraction-syncronisation/peelers/images/drivenmounted.png"/></div>
+<div class="slide" data-caption="Figura 3. Descascador conduzido — montado no suporte (contexto)." id="fig3"><img alt="Descascador conduzido montado" src="../../../Extraction-syncronisation/peelers/images/drivenmounted.png"/></div>
 <div class="slide" data-caption="Figura 4. Descascador estático (lado da coleção) — contexto de montagem e interface de suco." id="fig4"><img alt="Descascador estático" src="../../../Extraction-syncronisation/peelers/images/staticpeeler.png"/></div>
 <div class="slide" data-caption="Figura 5. Placa de montagem da coleção — dois furos destacados para broca + rebordo após o alinhamento inicial do descascador (localização repetível dowel/ombro-bolt)." id="fig5"><img alt="Buracos de arame destacados na placa de coleta" src="../../../Extraction-syncronisation/peelers/images/highlightedDowels.png"/></div>
 </div>
@@ -79,42 +79,42 @@
 <h3>Números recomendados (clareza do contratante)</h3>
 <ul class="muted">
 <li><strong>Adicionar figura</strong>:<strong>Procedimento de flange soldada</strong>— flange usinada em torno do corpo do descascador (preparação de solda + inspecção).</li>
-<li><strong>Adicionar figura</strong>:<strong>Mesh / interlace do dedo</strong>— close-up a meio do curso com chamadas mínimas de abertura.</li>
+<li><strong>Adicionar figura</strong>:<strong>Mesh / interlace do dedo</strong>— close-up a meio do curso com mínimo de chamadas de abertura.</li>
 <li><strong>Adicionar figura</strong>:<strong>Terras de descascador estático</strong>— colector de acasalamento da zona de acabamento superficial<a href="../../Collection/index.html">Colecção</a>).</li>
 </ul>
 <h2>Discussão</h2>
 <h3>Desenho e intenção difíceis</h3>
 <ul>
-<li><strong>Geometria do núcleo</strong>— Os peelers são herdados de uma máquina comercial existente; a intenção é reutilizar a geometria do descascador e construir novos hardwares de montagem/adaptação.</li>
+<li><strong>Geometria do núcleo</strong>— Os peelers são herdados de uma máquina comercial existente; a intenção é reutilizar a geometria do peeler e construir novos hardwares de montagem/adaptação.</li>
 <li><strong>Estratégia de montagem (aberta)</strong>— Fabricar uma flange/placa de montagem para cada descascador, maquinando uma flange (lata) e soldando uma placa para que o descascador possa ser aparafusado no suporte (lado orientado) ou na placa de montagem de recolha (lado estático).</li>
 </ul>
 <h3>Problemas e riscos conhecidos</h3>
 <ul>
-<li><strong>Concentricidade e colisão</strong>— Os descascadores accionados e estáticos devem ser alinhados concentricamente. O desalinhamento pode causar colisão no fim do curso e desgaste rápido.</li>
+<li><strong>Concentricidade e colisão</strong>— os descascadores accionados e estáticos devem ser alinhados concentricamente. O desalinhamento pode causar colisão no fim do curso e desgaste rápido.</li>
 <li><strong>Distorção da soldadura</strong>— A solda de uma placa a um descascador corre o risco de deformar ou deslocar o eixo do descascador; é necessário fixar e inspeccionar.</li>
 <li><strong>Lavagem</strong>- Isto está na zona de salpicos. As características de montagem e os fechos devem ser higiénicos e limpos.</li>
 </ul>
 <h3>DFM e fabricação (China)</h3>
 <ul>
-<li><strong>Fixação e inspecção</strong>— Contratante para propor dispositivos de soldadura/maquinagem da flange/placa e verificação do escoamento/concentricidade do eixo.</li>
+<li><strong>Instalação e inspecção</strong>— Contratante para propor dispositivos de soldadura/maquinagem da flange/placa e verificação do escoamento/concentricidade do eixo.</li>
 <li><strong>Fixadores</strong>— Preferir os fechos higiénicos (cabeça de hex) e evitar os bolsos que prendem a polpa.</li>
 </ul>
 <h3>Fluxo de trabalho de alinhamento (intenção do proprietário)</h3>
 <ol>
 <li>Fornecer<strong>dois orifícios de fixação soltos</strong>(por exemplo, cantos superior esquerdo e inferior-direita) em cada montagem do descascador para ajuste.</li>
-<li>Ajustar descascadores acionados e estáticos em relação uns aos outros até concêntricos/alinhados.</li>
+<li>Ajuste os descascadores acionados e estáticos em relação uns aos outros até concêntricos/alinhados.</li>
 <li>Aperte os fechos para travar, então<strong>broca + resma</strong>os outros dois cantos através do descascador montar no suporte / placa.</li>
 <li>Instalar<strong>pinos de ombro</strong>(ou cavilhas) nos locais redimensionados para alinhamento repetitivo na remontagem.</li>
 </ol>
 <h3>Perguntas para o contratante</h3>
 <ol>
 <li>Proponha tolerâncias práticas e um método de inspeção para a concentricidade/alinhamento do descascador que impeça a colisão e controle o desgaste.</li>
-<li>Propor o melhor método de fabricação de flange/placa (rota de maquinagem, método de solda, fixação) que preserva a precisão do eixo do descascador.</li>
-<li>Recomendar se parafusos de ombro, pinos de dobra, ou outro esquema de localização é melhor para a montagem repetitiva na prática fab China.</li>
+<li>Propor o melhor método de fabricação de flange/placa (rota de usinagem, método de solda, fixação) que preserva a precisão do eixo do descascador.</li>
+<li>Recomendar se parafusos de ombro, pinos dowel, ou outro esquema de localização é melhor para a montagem repetitiva na prática fab China.</li>
 </ol>
 <h3>Interfaces</h3>
 <ul>
-<li><strong>Entrada:</strong>Traço de compressão de<a href="../../Transmission/index.html">Transmissão</a>empurra o módulo de extração para dentro<a href="../../Collection/index.html">Colecção</a>.</li>
+<li><strong>Entrada:</strong>Traço de compressão de<a href="../../Transmission/index.html">Transmissão</a>empurra o módulo de extração para<a href="../../Collection/index.html">Colecção</a>.</li>
 <li><strong>Saída:</strong>Extração de frutos através de malhas descascadas estáticas accionadas; descasque encaminhado para<a href="../../Outflow-disposal/index.html">Sistema de eliminação</a>via deflectores/chutos.</li>
 <li><strong>Montar:</strong>Parafusos de rodas<a href="../driven-bracket/index.html">Suporte acionado</a>. Peelers estáticos parafuso para recolher placa de montagem (ver Coleção).</li>
 </ul>
@@ -123,7 +123,7 @@
 <table class="iface-table">
 <thead><tr><th>Parte</th><th>Interface / tolerância</th><th>Relacionado</th></tr></thead>
 <tbody>
-<tr><td>Descascadores de motor</td><td>Montagem de flange/placa fabricada (TBD); alinhar-se aos descascadores estáticos usando ajuste → fluxo de trabalho ream/ombro-bolt</td><td><a href="../driven-bracket/index.html">Suporte acionado</a>,<a href="../../Collection/index.html">Colecção</a></td></tr>
+<tr><td>Descascadores de motor</td><td>Montagem de flange/placa fabricada (TBD); alinhamento com descascadores estáticos usando ajuste → fluxo de trabalho ream/ombro-bolt</td><td><a href="../driven-bracket/index.html">Suporte acionado</a>,<a href="../../Collection/index.html">Colecção</a></td></tr>
 <tr><td>Descascadores estáticos</td><td>Flange de montagem/placa fabricada (TBD); a superfície interna faz parte da interface entre o recipiente e o colector de sumos; é provável que se lacre através de anéis O</td><td><a href="../../Collection/index.html">Colecção</a></td></tr>
 </tbody>
 </table>

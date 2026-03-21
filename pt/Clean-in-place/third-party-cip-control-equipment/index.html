@@ -42,23 +42,23 @@
 
 <p class="back"><a href="../index.html">← Voltar ao lugar limpo (CIP)</a>·<a href="../../index.html">P6 RFP</a></p>
 <h1>Equipamento de controlo CIP de terceiros</h1>
-<p class="muted">Parte da<a href="../index.html">Limpeza no local (CIP)</a>secção. Como P6 se integra com o sistema CIP da planta (ciclos, ganchos e testes de aceitação).</p>
+<p class="muted">Parte da<a href="../index.html">Limpeza no local (CIP)</a>secção. Como a P6 se integra com o sistema CIP da planta (ciclos, ganchos e testes de aceitação).</p>
 <h2>Introdução</h2>
-<p>O P6 não fornece um controlador CIP autónomo — a solução CIP é fornecida pelo<strong>Sistema CIP da planta</strong>. Esta página define como P6 se integra com esse sistema externo. P6 conecta-se ao fornecimento CIP da planta para a limpeza interna do pulverizador e usa a linha de suco para a limpeza contra-fluxo de retrofluxo do<a href="../../Collection/index.html">recolha de sumos</a>circuito. Durante o PIC, o isolamento do tanque deve impedir que o fluido CIP entre em tanques de suco de produção.</p>
+<p>O P6 não fornece um controlador CIP autónomo — a solução CIP é fornecida pelo<strong>Sistema CIP da planta</strong>. Esta página define como P6 se integra com esse sistema externo. P6 conecta-se ao fornecimento CIP da planta para limpeza interna de spray e usa a linha de suco para limpeza contra-fluxo<a href="../../Collection/index.html">recolha de sumos</a>circuito. Durante o PIC, o isolamento do tanque deve impedir que o fluido CIP entre em tanques de suco de produção.</p>
 <h2>&amp; Componentes da chave de cor</h2>
-<p class="muted">Principais responsabilidades e interfaces do equipamento.</p>
+<p class="muted">Principais responsabilidades e interfaces de equipamentos.</p>
 <table>
 <tr><th>Cor( s)</th><th>Componente</th></tr>
-<tr><td><em>—</em></td><td><strong>Sistema de PIC vegetal</strong>— controlos dos ciclos de lavagem/química, pressão, temperatura e concentração;</td></tr>
-<tr><td><em>—</em></td><td><strong>Manipuladores P6 CIP</strong>— tubagens inoxidáveis rígidas e ligações flexíveis das mangueiras à instalação de abastecimento.</td></tr>
+<tr><td><em>—</em></td><td><strong>Sistema CIP da instalação</strong>— controla ciclos de lavagem/química, pressão, temperatura e concentração; fornece infra-estruturas de abastecimento/retorno.</td></tr>
+<tr><td><em>—</em></td><td><strong>Manipuladores P6 CIP</strong>— tubagens rígidas e ligações flexíveis das mangueiras à instalação de abastecimento.</td></tr>
 <tr><td><em>—</em></td><td><strong>Integração de retrofluxos de linha de suco</strong>— válvulas/junção T que permitem que a solução CIP volte a fluir através de colectores/filtro/circuito de incandescência.</td></tr>
 </table>
 <h2 id="gallery">Figuras</h2>
 <p class="muted">Adicionar diagramas de integração quando disponíveis.</p>
 <h3>Números recomendados (clareza do contratante)</h3>
 <ul class="muted">
-<li><strong>Adicionar figura</strong>: planta pontos de conexão CIP para coletores P6 (fornecimento/retorno, roteamento de mangueira, alimentação movimento aberto/fechado).</li>
-<li><strong>Adicionar figura</strong>: encanamento de retorno de linha de suco (válvula T, válvulas de retenção, canalização/caminho de retorno) amarrado ao sistema Collection.</li>
+<li><strong>Adicionar figura</strong>: planta pontos de conexão CIP para coletores P6 (fornecimento/retorno, roteamento da mangueira, alimentação movimento aberto/fechado).</li>
+<li><strong>Adicionar figura</strong>: canalização de refluxo de linha de sumo (válvula T, válvulas de retenção, canalização/caminho de retorno) ligada ao sistema de recolha.</li>
 <li><strong>Adicionar figura</strong>: fluxo de ensaio de aceitação (pontos de ensaio indicativos e confirmação de lavagem).</li>
 </ul>
 <h2>Discussão</h2>
@@ -78,13 +78,13 @@
 <ul>
 <li><strong>Ligação à limpeza por pulverização</strong>— o fornecimento de CIP das instalações liga-se a colectores de pulverização P6 (grupo alimentador-lide e grupo de deflector de casca). As mangueiras flexíveis são necessárias para permitir o movimento do alimentador abrir/fechar.</li>
 <li><strong>Limpeza do circuito de sumos</strong>— A solução CIP é encaminhada através da linha de suco como um contrafluxo/refluxo para limpar coletores de suco, filtro e circuito de êmbolo.</li>
-<li><strong>Isolamento do tanque durante o PIC</strong>— lógica da válvula necessária: durante o PIC, deve desligar-se o caminho normal de "suco para os tanques/saída" para que o fluido CIP seja encaminhado para o circuito dos colectores/filtro/pulver e<strong>não contém</strong>fluxo para os tanques de suco de produção.</li>
+<li><strong>Isolamento do tanque durante o PIC</strong>— lógica da válvula necessária: durante o PIC, deve desligar-se o caminho normal de "suco para os tanques/saída" para que o fluido CIP seja encaminhado para o circuito dos colectores/filtros/pulgadores e<strong>não contém</strong>fluxo para os tanques de suco de produção.</li>
 <li><strong>Controlo</strong>— todos os ciclos de sequenciamento e controlo dos parâmetros são efectuados pelo sistema CIP da instalação.</li>
 </ul>
 <h3>Perguntas para o contratante</h3>
 <ol>
-<li>Defina o(s) padrão(s) recomendado(s) de ligação (tipo(s) sanitário(s), especificação de mangueira, estratégia de desconexão rápida) adequado(s) para instalações de NC e manutenção sazonal.</li>
-<li>Especificar as válvulas de retenção necessárias/roteamento de retorno/estratégia de drenagem e<strong>Requisitos de comutação da válvula</strong>Assim, o líquido CIP não pode contaminar tanques de suco de produção (isolamento do tanque durante o CIP) e a produção não pode contaminar retornos de CIP durante a limpeza.</li>
+<li>Defina o(s) padrão(s) recomendado(s) de ligação (tipo(s) sanitário(s), especificação da mangueira, estratégia de desconexão rápida) adequado(s) para as plantas de NC e manutenção sazonal.</li>
+<li>Especificar as válvulas de retenção necessárias/roteamento de retorno/estratégia de drenagem e<strong>Requisitos de comutação da válvula</strong>Assim, o líquido CIP não pode contaminar os tanques de suco de produção (isolamento do tanque durante o PIC) e a produção não pode contaminar os retornos de PIC durante a limpeza.</li>
 <li>Propor um protocolo de teste de aceitação: indicadores químicos, critérios de enxaguamento e tempo mínimo de execução durante o PIC (ligado para cobertura de pulverização e eficácia de retrofluxo).</li>
 </ol>
 <h3>Interfaces e tolerâncias</h3>

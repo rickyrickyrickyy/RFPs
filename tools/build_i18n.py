@@ -28,9 +28,161 @@ _TRANSLATE_API_LOCK = threading.Lock()
 ROOT = Path(__file__).resolve().parent.parent
 EXCLUDE_TOP = {"zh", "pt", "assets", "tools", ".git", "node_modules", ".cursor"}
 
-# Optional post-pass: fix common UI strings if MT is awkward (applied after translation)
+# Optional post-pass: fix common UI strings & terminology if MT is awkward (applied after translation)
+# Comprehensive terminology dictionary for P6 RFP project (machine translation corrections)
 UI_FIX_ZH: list[tuple[str, str]] = [
+    # ========== Model & Organization Names (do NOT translate) ==========
+    ("临6", "P6"),
+    ("临P6", "P6"),
+    ("将其替换为P6", "P6"),
+    
+    # ========== Organizations & Proper Nouns ==========
+    ("丢弃", "Delijuice"),
+    ("德利胡斯", "Delijuice"),
+    ("是 弯曲", "YES Machining"),
+    ("是机械", "YES Machining"),
+    ("弯曲", "YES"),
+    
+    # ========== Component/Subsystem Names ==========
+    # Peelers (currently: 偷盗者 = "thieves")
+    ("偷盗者", "剥皮机"),
+    
+    # Chutes and augers (currently: 提琴手和弹琴手 = "violinists and pianists")
+    ("提琴手和弹琴手", "料槽和螺旋输送机"),
+    
+    # Plunger (currently: 螺旋桨 = "propeller" or 弹簧 = "spring")
+    ("螺旋桨驱动", "活塞驱动"),
+    ("弹簧驱动括号", "活塞驱动支架"),
+    
+    # Motor (currently: 汽车 = "automobile/car")
+    ("汽车和压缩机", "电动机和减速器"),
+    ("汽车电力管理", "电动机电源管理"),
+    ("汽车、V带", "电动机、V带"),
+    ("汽车旋转", "电动机旋转"),
+    ("WEG W21/W22 IE3型电力机车", "WEG W21/W22 IE3电动机"),
+    ("电力机车(7.5千瓦", "电动机(7.5千瓦"),
+    ("电力机车接口", "电动机接口"),
+    
+    # Enclosure / Shell (currently: 附文/壳 = "appendix/shell")
+    ("附文/壳", "外壳/防护罩"),
+    ("附文", "外壳"),
+    
+    # Hinges (currently: 超中心链 = "super-center chain")
+    ("超中心链", "超越中心铰链"),
+    ("超中心牌", "超越中心铰链"),
+    
+    # Deflectors (currently: 防御器 = "defender/defense unit")
+    ("防御器", "导流板"),
+    
+    # Loads/Load Paths (currently awkward)
+    ("装入路径", "载荷路径"),
+    ("反应负载", "反应荷载"),
+    ("负载路径到地板", "荷载路径到地面"),
+    
+    # Entry Tubes (currently: 输入管 = "input tube")
+    ("输入管", "进口管"),
+    ("输入管照片", "进口管照片"),
+    
+    # Feeder Body (currently: 支线体 = awkward literal)
+    ("支线体", "进料器体"),
+    ("进食器体", "进料器体"),
+    
+    # Feeding Subassembly (currently: 进食 = overly literal)
+    ("进食子组装", "进料子组件"),
+    ("进食子组", "进料子组件"),
+    ("进食子组件", "进料子组件"),
+    
+    # Plungers and Filter (currently: 管道 = "pipeline/pipes")
+    ("管道和过滤器", "冲程活塞和过滤器"),
+    
+    # Collection/Juice Collection
+    ("汁类收集", "果汁集合"),
+    ("果汁收集", "果汁集合"),
+    ("收集/过滤器", "集合/过滤器"),
+    
+    # Yoke (currently: 枷锁 = "shackle/lock" - archaic)
+    ("枷锁传感器", "轭位置传感器"),
+    ("Yoke 位置传感器", "轭位置传感器"),
+    ("枷锁与驱动", "轭与驱动"),
+    
+    # ========== Machine/Process Terms ==========
+    ("压缩机", "减速器"),
+    ("压缩/调试", "压缩/榨取"),
+    ("创纶", "冷冻"),
+    ("冷冻生产CAD", "冻结生产CAD"),
+    
+    # ========== Structural/Technical Terms ==========
+    ("组装CAD", "装配CAD"),
+    ("组装订单", "装配顺序"),
+    ("传输枷锁", "传输轭"),
+    ("驱动火车", "驱动系统/传动系统"),
+    ("驱动列车", "传动系统"),
+    ("驱动火车挂载板", "传动系统安装板"),
+    ("驱动列车挂载板", "传动系统安装板"),
+    ("传输挂载盘", "传动系统安装盘"),
+    ("传输挂载板", "传动系统安装板"),
+    ("挂载盘", "安装盘"),
+    ("挂装板", "安装板"),
+    ("挂载板", "安装板"),
+    ("挂板", "安装板"),
+    ("装载板", "安装板"),
+    
+    # ========== Assembly/Interface Terms ==========
+    ("装入", "装配"),
+    ("自上而下装配", "自上而下装配"),
+    ("界面", "接口"),
+    ("承包者", "承包商"),
+    ("承包者说明", "承包商说明"),
+    ("承包者问题", "承包商问题"),
+    
+    # ========== Process Flow Terms ==========
+    ("摄入", "进料"),
+    ("柑橘一次上演", "柑橘一次进入"),
+    ("上提取腔", "进入提取腔"),
+    ("果实压缩", "果实压榨"),
+    ("浸泡", "压榨"),
+    ("插件/核弹", "冷冻物/果核"),
+    ("插件", "冷冻物"),
+    ("核弹", "果核"),
+    ("弹出并通向", "弹出以进入"),
+    
+    # ========== Quality/Design Terms ==========
+    ("稳定、对齐、部队传输", "稳定性、对齐、力量传递"),
+    ("部队传输", "力量传递"),
+    ("可重复、易于组装", "可重复性、易于组装"),
+    ("涂抹工作流程", "涂装工作流程"),
+    ("硬度要求", "硬度要求"),
+    ("DFM", "DFM"),  # Design for Manufacturability - keep as is
+    ("问题", "挑战/问题"),
+    
+    # ========== Capitalization/Format Fixes ==========
+    ("BOM", "物料清单"),
+    ("CAD", "CAD"),
+    ("CIP", "CIP"),
+    ("RFP", "RFP"),
+    
+    # ========== Common UI/Navigation Fixes ==========
     ("← ", "← "),
+    ("回到P6", "返回 P6"),
+    ("项目概览", "项目概览"),
+    ("下载", "下载"),
+    ("更多", "更多"),
+    ("参考", "参考"),
+    ("子系统", "子系统"),
+    ("材料单", "物料清单"),
+    ("现场清洁", "原地清洁"),
+    
+    # ========== Other Technical Terms ==========
+    ("滤波器", "过滤器"),
+    ("消毒器", "消毒器"),
+    ("涡轮滤波器", "漩涡过滤器"),
+    ("罐体/净化设备", "储罐/净化设备"),
+    ("核心废物", "果核废料"),
+    ("三维", "闭环"),
+    ("长期协议", "长期协议"),
+    ("小一点", "较小的"),
+    ("逆顶线", "反向旋转线"),
+    ("产品家族", "产品系列"),
 ]
 UI_FIX_PT: list[tuple[str, str]] = []
 

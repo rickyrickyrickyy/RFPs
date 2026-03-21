@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>2. 驱动火车——P6</title>
+<title>2. 驱动系统/传动系统——P6</title>
 <style>
     :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
     body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
@@ -42,19 +42,19 @@
   <a href="../../pt/Drivetrain/index.html">Português</a>
 </nav>
 
-<p class="back"><a href="../index.html">* 回到P6</a></p>
-<h1>2. 驱动火车</h1>
+<p class="back"><a href="../index.html">* 返回 P6</a></p>
+<h1>2. 驱动系统/传动系统</h1>
 <h2>分页</h2>
 <ul>
-<li><a href="motor-and-reducer/index.html">汽车和压缩机</a> <span class="muted">(更新2026-03-20) (中文(简体) ).</span>发动机、V带、Sumitomo减压器;升降、拉伸和轴延问题。</li>
-<li><a href="gears-and-cam-bearings/index.html">齿轮和凸轮轴承</a> <span class="muted">(更新2026-03-20) (中文(简体) ).</span>——齿轮列车,凸轮滚筒,润滑;与传输枷锁的接口.</li>
-<li><a href="drivetrain-mount-plate/index.html">驱动列车挂载板</a> <span class="muted">(更新2026-03-20) (中文(简体) ).</span>· 架上车牌;闪烁/涂抹工作流程和硬度要求。</li>
+<li><a href="motor-and-reducer/index.html">电动机和减速器</a> <span class="muted">(更新2026-03-20) (中文(简体) ).</span>发动机、V带、Sumitomo减压器;升降、拉伸和轴延挑战/问题。</li>
+<li><a href="gears-and-cam-bearings/index.html">齿轮和凸轮轴承</a> <span class="muted">(更新2026-03-20) (中文(简体) ).</span>——齿轮列车,凸轮滚筒,润滑;与传输轭的接口.</li>
+<li><a href="drivetrain-mount-plate/index.html">传动系统安装板</a> <span class="muted">(更新2026-03-20) (中文(简体) ).</span>- 架上车牌;闪烁/涂装工作流程和硬度要求。</li>
 </ul>
 <h2>导言</h2>
-<p>驱动列车将电动机旋转转换成驱动提取循环的回转凸轮运动. WEG W21/W22 IE3型电力机车(7.5千瓦,1460rpm)通过SPA V带驱动一台Sumitomo Cyclo 6000减速器;减速器输出转弯为螺旋齿轮列车,其凸轮轴承与该型电力机车接口<a href="../Transmission/index.html">传输</a>枷锁。 整个组装都挂在专门板块上 螺栓上<a href="../Frame/index.html">边框</a>使它成为扭矩、振动和循环装入机器结构的主要来源。</p>
-<div class="reminder"><strong>目录链接 :</strong> <a href="https://www.weg.net/catalog/weg/US/en/c/MT_IEC_3PHASE_LV_TEFC_W22_IE2/list">WEG W22 IEC TEFC(二)</a>* 妇女<a href="https://us.sumitomodrive.com/sites/default/files/2025-03/cyclo_6000_reducer_catalog_v12_web-2.pdf">苏米托莫Cyclo 6000目录 (PDF).</a></div>
+<p>传动系统将电动机旋转转换成驱动提取循环的回转凸轮运动. WEG W21/W22 IE3电动机(7.5千瓦,1460rpm)通过SPA V带驱动一台Sumitomo Cyclo 6000减速器;减速器输出变为一个螺旋齿轮列车,其凸轮轴承与该型电力机车的接口<a href="../Transmission/index.html">传输</a>枷锁。 整个组装都挂在专门板块上 螺栓上<a href="../Frame/index.html">边框</a>使它成为扭矩、振动和循环装配机器结构的主要来源。</p>
+<div class="reminder"><strong>目录链接 :</strong> <a href="https://www.weg.net/catalog/weg/US/en/c/MT_IEC_3PHASE_LV_TEFC_W22_IE2/list">WEG W22 IEC TEFC(二)</a>· 妇女<a href="https://us.sumitomodrive.com/sites/default/files/2025-03/cyclo_6000_reducer_catalog_v12_web-2.pdf">苏米托莫Cyclo 6000目录 (PDF).</a></div>
 <h2>颜色密钥组件( C)</h2>
-<p class="muted">本节的 CAD 颜色 。 适用于本页的驱动列车数字.</p>
+<p class="muted">本节的 CAD 颜色 。 适用于本页的传动系统数字.</p>
 <table>
 <tr><th>颜色</th><th>构成部分</th></tr>
 <tr><td><span class="swatch" style="background-color:#CA2B6D"></span></td><td><strong>驱动齿轮</strong>——向齿轮列车转移减速器输出扭矩;设置后压,防止绑定.</td></tr>
@@ -62,113 +62,113 @@
 <tr><td><span class="swatch" style="background-color:#8E6FD3"></span></td><td><strong>凸轮轴承</strong>- 与<a href="../Transmission/index.html">传输</a>枷锁</td></tr>
 <tr><td><span class="swatch" style="background-color:#F0DE44"></span></td><td><strong>被动齿轮轴</strong>——支持被动齿轮和凸轮轴承;对齐控制枷锁中风平滑.</td></tr>
 <tr><td><span class="swatch" style="background-color:#7EFF7D"></span></td><td><strong>配置盖式滚筒轴承单元</strong>——SKF F4BRP 208-SRB-CRH(定位,封顶/末盖选项). 用在被动齿轮下 以轴心定位</td></tr>
-<tr><td><span class="swatch" style="background-color:#6F3BC2"></span></td><td><strong>不分配滚筒轴承单元</strong>——SKF F4BRP 208-SRB-CLE(不分配). 用于支持 Sumitomo 减速器输出轴侧, 同时允许轴浮 。</td></tr>
+<tr><td><span class="swatch" style="background-color:#6F3BC2"></span></td><td><strong>不分配滚筒轴承单元</strong>——SKF F4BRP 208-SRB-CLE(不分配). 用于支持 Sumitomo 减小输出轴侧, 同时允许轴浮 。</td></tr>
 <tr><td><span class="swatch" style="background-color:#41A3DD"></span></td><td><strong>缩小空间器</strong>- 固定减速器对峙/位置,这样拉杆和轴线留在飞机上。</td></tr>
-<tr><td><span class="swatch" style="background-color:#FFE99C"></span></td><td><strong>Sumitomo Cyclo 6000 减量器</strong>——动车组列车和齿轮列车之间的减速和扭矩增加;润滑/挂载按Sumitomo手册.</td></tr>
+<tr><td><span class="swatch" style="background-color:#FFE99C"></span></td><td><strong>Sumitomo Cyclo 6000 减量器</strong>——动车组列车和齿轮列车之间的减速和扭矩增高;月球手动的润滑/挂载.</td></tr>
 <tr><td><span class="swatch" style="background-color:#2FAD50"></span></td><td><strong>V带</strong>- DIN 2215 17x957,2带,1000毫米</td></tr>
-<tr><td><span class="swatch" style="background-color:#226634"></span></td><td><strong>WEG W22 1450 rpm 马达</strong>——驱动列车的主动车;最后的电气/机械规格TBD.</td></tr>
-<tr><td><span class="swatch" style="background-color:#6D7F23"></span></td><td><strong>无污电动机挂载空间器</strong>– 用于皮带对齐的马达/推力位置;在螺栓预装下抵抗压缩.</td></tr>
-<tr><td><span class="swatch" style="background-color:#BC4ACC"></span></td><td><strong>木制电动机挂板</strong>发动机安装基座;提供可调节带张力(材料最终设计可能改变)。</td></tr>
+<tr><td><span class="swatch" style="background-color:#226634"></span></td><td><strong>WEG W22 1450 rpm 马达</strong>——传动系统的主动车;最后的电气/机械规格TBD.</td></tr>
+<tr><td><span class="swatch" style="background-color:#6D7F23"></span></td><td><strong>无污电动机挂载空间器</strong>——定位马达/推力用于皮带对齐;在螺栓预装下抵抗压缩.</td></tr>
+<tr><td><span class="swatch" style="background-color:#BC4ACC"></span></td><td><strong>木制电动机安装板</strong>发动机安装基;提供可调节带张力(材料最终设计可能改变)。</td></tr>
 </table>
 <h2 id="gallery">图</h2>
-<p class="muted">驱动列车:马达,减速器,皮带,齿轮列车,凸轮轴承. 数字参考如下:<a href="#fig1">图1</a>, (中文).<a href="#fig2">图2</a>等 类.</p>
+<p class="muted">传动系统:马达,减速器,皮带,齿轮列车,凸轮轴承. 数字参考如下:<a href="#fig1">图1</a>, (中文).<a href="#fig2">图2</a>等 类.</p>
 <div class="slideshow" id="drive-slideshow">
 <div class="slideshow-track">
-<div class="slide active" data-caption="图1. 驱动列车编组——架设板,驱动齿轮(magenta),驱动齿轮(lime green),减压器,马达,牵引车和V带." id="fig1"><img alt="驱动列车组装视图 1" src="../../Drivetrain/images/drivetrain-1.png"/></div>
-<div class="slide" data-caption="图2. 驱动列车编组——安装板上的齿轮列车,变速箱(蜂窝),发动机(暗绿色),带状驱动(蓝色)." id="fig2"><img alt="驱动列车组装视图 2" src="../../Drivetrain/images/drivetrain-2.png"/></div>
-<div class="slide" data-caption="图3. 齿轮列车和轴延长线——两节齿轮(马琴塔、石灰绿色)、中央梁、凸轮轴承(纯度)、减压器。" id="fig3"><img alt="驱动列车齿轮列车和轴" src="../../Drivetrain/images/drivetrain-3.png"/></div>
-<div class="slide" data-caption="图4. 驱动列车细节——驱动齿轮,驱动齿轮,减压车身,马达,牵引车和皮带." id="fig4"><img alt="驱动列车细节" src="../../Drivetrain/images/drivetrain-4.png"/></div>
-<div class="slide" data-caption="图5. 驱动列车——齿轮列车,减速列车,发动机和V带驱动." id="fig5"><img alt="驱动火车齿轮列车和皮带" src="../../Drivetrain/images/drivetrain-5.png"/></div>
-<div class="slide" data-caption="图6. 驱动列车详细情况——轴延伸(涡轮)、齿轮、中央束、架设板。" id="fig6"><img alt="火车轴和齿轮" src="../../Drivetrain/images/drivetrain-6.png"/></div>
+<div class="slide active" data-caption="图1. 传动系统编组——架设板,驱动齿轮(magenta),驱动齿轮(lime green),减压器,马达,牵引车和V带." id="fig1"><img alt="传动系统组装视图 1" src="../../Drivetrain/images/drivetrain-1.png"/></div>
+<div class="slide" data-caption="图2. 传动系统编组——安装板上的齿轮列车,变速箱(蜂窝),发动机(暗绿色),带状驱动(蓝色)." id="fig2"><img alt="传动系统组装视图 2" src="../../Drivetrain/images/drivetrain-2.png"/></div>
+<div class="slide" data-caption="图3. 齿轮列车和轴线延伸——两节齿轮(马琴塔,石灰绿),中心梁,凸轮轴承(普尔),减速器." id="fig3"><img alt="传动系统齿轮列车和轴" src="../../Drivetrain/images/drivetrain-3.png"/></div>
+<div class="slide" data-caption="图4. 传动系统详细情况——驱动齿轮,驱动齿轮,减压车身,马达,牵引车和皮带." id="fig4"><img alt="传动系统细节" src="../../Drivetrain/images/drivetrain-4.png"/></div>
+<div class="slide" data-caption="图5. 传动系统——齿轮列车,减速列车,发动机和V带驱动." id="fig5"><img alt="驱动系统/传动系统齿轮列车和皮带" src="../../Drivetrain/images/drivetrain-5.png"/></div>
+<div class="slide" data-caption="图6. 传动系统详细情况——轴延伸(涡轮)、齿轮、中央束、架设板。" id="fig6"><img alt="火车轴和齿轮" src="../../Drivetrain/images/drivetrain-6.png"/></div>
 <div class="slide" data-caption="图7 侧视——马达,减速器,V带驱动,中心房,梁和山." id="fig7"><img alt="驱动列侧视图" src="../../Drivetrain/images/drivetrain-7.png"/></div>
 </div>
-<p aria-live="polite" class="slideshow-caption" id="drive-caption">图1. 驱动列车编组——架设板,驱动齿轮(magenta),驱动齿轮(lime green),减压器,马达,牵引车和V带.</p>
+<p aria-live="polite" class="slideshow-caption" id="drive-caption">图1. 传动系统编组——架设板,驱动齿轮(magenta),驱动齿轮(lime green),减压器,马达,牵引车和V带.</p>
 <div class="slideshow-controls">
 <button aria-label="上一个" id="drive-prev" type="button">上一个</button>
-<span class="slideshow-counter" id="drive-counter">1,7个</span>
+<span class="slideshow-counter" id="drive-counter">1,7 (中文(简体) ).</span>
 <button aria-label="下一个" id="drive-next" type="button">下一个</button>
 </div>
 </div>
-<h3>建议数字(承包商的清晰度)</h3>
+<h3>建议数字(承包商清晰度)</h3>
 <ul class="muted">
-<li><strong>添加图</strong>编号 :<strong>缩放轴扩展</strong>——适配器草图解比比错(见<a href="motor-and-reducer/index.html">汽车和压缩机</a>(风险)。</li>
+<li><strong>添加图</strong>编号 :<strong>缩放轴扩展</strong>——适配器草图解比错配(见<a href="motor-and-reducer/index.html">电动机和减速器</a>风险。</li>
 <li><strong>添加图</strong>编号 :<strong>定位与非分配轴承</strong>被动齿轮轴上的热膨胀方向。</li>
-<li><strong>添加图</strong>编号 :<strong>封面清除</strong>腰带护卫对拉拉OD 在最大穿戴调整。</li>
+<li><strong>添加图</strong>编号 :<strong>封面清除</strong>腰带护卫和拖拉机OD 在最大穿戴调整。</li>
 </ul>
 <h2>讨论情况</h2>
 <h3>粗略设计意图( M)</h3>
 <ul>
-<li><strong>状态</strong>—— CAD为驱动列车布局和接口存在,但最终规格(带中距,齿轮模块/剖面,螺旋角度决定,详细的轴承选择/安排)仍在开发中.</li>
+<li><strong>状态</strong>——CAD为传动系统布局和接口而存在,但最终规格(带中心距离,齿轮模块/剖面,螺旋角度决定,详细的轴承选择/安排)仍在开发中.</li>
 <li><strong>主移动器</strong>——WEG W21/W22 IE3发动机,产品编号1353507:7.5 kW(10 hp),50 Hz,4-pole,额定速度1460 rpm,额定扭矩~49 N~m,38毫米轴.</li>
-<li><strong>驱动</strong>—— SPA带驱动,目前假定比例为1:1(发动机和减压器上170毫米弹管直径拉杆),计划设置两个带;中心距离和张力机制为TBD,并驱动显著的射线负载进入挂载板.</li>
-<li><strong>缩小器</strong>—— Sumitomo Cyclo 6000系列;输出速度目标~70 rpm. 减速器输出牵引力驱动驱动凸轮轴承的齿轮列车进行回转.</li>
+<li><strong>驱动</strong>——SPA带驱动,目前假定比例为1:1(发动机和减压器上170毫米弹管直径拉力),计划设置两个带;中心距离和张力机制为TBD,并驱动显著的射线负载进入安装板.</li>
+<li><strong>缩小器</strong>——Sumitomo Cyclo 6000系列;输出速度目标~70 rpm. 减速器输出扭矩驱动驱动驱动凸轮轴承的齿轮列车进行对流.</li>
 </ul>
-<h3>已知问题和风险</h3>
+<h3>已知挑战/问题和风险</h3>
 <ul>
-<li><strong>振动+循环装入帧</strong>——机车/减速器和带状张力引入振动;凸轮对流增加循环力含量. 关节(bolts + dowels)的设计必须避免滑/滑.</li>
-<li><strong>带状张力/射线负载</strong>中心距离和张力方法尚未最后确定;带状张力将射线负载设置在电动机/减压轴和挂板上,并影响承载生命和噪音。</li>
-<li><strong>未完成齿轮设计</strong>模块(可能为6或8),螺旋反螺旋,接触率,硬度/热处理,以及反弹目标尚未最后确定. 这些选择支配着疲劳的生活,噪音,效率和制造能力.</li>
-<li><strong>轴承负载浓度</strong>——驱动齿轮和胶带滚筒轴承区看到高强度和瞬间,必须携带到驱动列车的车载板和车框中而不过度偏转.</li>
-<li><strong>轴/骨不匹配 + 自定义扩展</strong>SKF挂载轴承装置(如F4BRP 208单元的标称63.5毫米)不完全符合当前概念中的Cyclo 6000减速轴几何。 减少器输入和输出轴也需要机器布局的扩展. 需要自定义轴延伸/调整器(或备选轴承选择);承包商提出最安全/最易制造的办法。</li>
+<li><strong>振动 + 循环装配帧</strong>——汽车/减速器和腰带张力会引入振动;凸轮对流会增加循环力含量. 关节(bolts + dowels)的设计必须避免滑/滑.</li>
+<li><strong>带状张力/射线负载</strong>中心距离和张力方法尚未最后确定;带状张力将射线负载设置在运动杆/减速杆和安装板上,并影响承载生命和噪音。</li>
+<li><strong>未完成齿轮设计</strong>模块(可能为6或8),螺旋螺旋,接触比,硬度/热处理,以及反弹目标尚未最后确定. 这些选择支配着疲劳的生活,噪音,效率和制造能力.</li>
+<li><strong>轴承负载浓度</strong>——驱动齿轮和胶带滚筒轴承区看到高强度和瞬间,必须携带到传动系统的车架板和车架上而不过度偏转.</li>
+<li><strong>轴/骨不匹配 + 自定义扩展</strong>SKF挂载轴承装置(例如F4BRP 208单元的标称63.5毫米)不完全符合当前概念中的Cyclo 6000减速轴几何。 减少输入和输出轴都需要延长机器布局。 需要自定义轴延伸/调整器(或备选轴承选择);承包商提出最安全/最易制造的方法。</li>
 </ul>
 <h3>DFM和制造业(中国)</h3>
 <ul>
-<li><strong>柴油制造计划</strong>- 承包商提出齿轮材料和热处理、牙修整、可实现的耐受性和检查(说明、铅、径流、反弹)。 优先使用中国现有的流程和供应商。</li>
-<li><strong>持有安排</strong>- 承包者审查定位/非分配办法、预装战略和如何检查/保养。 如果当前 SKF 部件难以在本地来源时提供替代 。</li>
-<li><strong>挂载+服务</strong>——设计应允许皮带张力调整,拉力对齐检查,以及减少服务,而不必不必要地去除大型组件.</li>
+<li><strong>柴油制造计划</strong>- 承包商提出齿轮材料和热处理、牙修补、可实现的耐受性和检查(说明、铅、排出、反弹)。 优先使用中国现有的流程和供应商。</li>
+<li><strong>持有安排</strong>- 承包商审查定位/不分配办法、预装战略和如何检查/保养。 如果当前 SKF 部件难以在本地来源时提供替代 。</li>
+<li><strong>挂载+服务</strong>——设计应允许皮带张力调整,拉力对齐检查,减少服务,而不必不必要地去除大型组件.</li>
 </ul>
 <h3>寻求优化</h3>
 <ul>
-<li><strong>可靠性</strong>——在循环装载下,齿轮和轴承的疲劳寿命长;强力致错配.</li>
+<li><strong>可靠性</strong>——环式装载下齿轮和轴承的疲劳寿命长;强力致错配.</li>
 <li><strong>噪声+效率</strong>——工业汁线可接受噪声;保持损失可控.</li>
-<li><strong>可适用性</strong>——快速皮带更换,张力检查,进入润滑点.</li>
+<li><strong>可适用性</strong>——快速腰带更换,张力检查,进入润滑点.</li>
 <li><strong>减重</strong>——如不损及硬度,接触应力,或可制造性,则希望带动齿轮减重.</li>
 </ul>
-<h3>承包者的问题</h3>
+<h3>承包商的挑战/问题</h3>
 <ol>
-<li>验证马达/带/减速器的配置,并提议强力带张力方法(中心距离,调整范围,目标带张力,以及由此产生的射线负载).</li>
-<li>使用最终齿轮几何,验证驱动列车负载箱. 目前的初步数字:减速输出速度~70 rpm;驱动齿轮扭矩~1023 N~m;估计齿轮网力~6.6 kN微弱和~7.2 kN正常(待验证).</li>
+<li>验证马达/带/减速器的配置,并提出坚固的带张力方法(中心距离,调整范围,目标带张力,以及由此产生的射线负载).</li>
+<li>使用最终齿轮几何,验证传动系统负载箱. 目前的初步数字:减速输出速度~70 rpm;驱动齿轮扭矩~1023 N~m;估计齿轮网力~6.6 kN 微弱和~7.2 kN 正常(待验证).</li>
 <li>建议最后齿轮舱/剖面(spur vs Helical)和热处理/完成疲劳寿命和中国制造。 提供建议的反弹和接触模式目标。</li>
-<li>审查轴承安排(包括用驱动齿轮和凸轮轴承的带状滚筒)。 建议替代、预装战略和预期寿命/保养间隔。</li>
-<li>为减压器的输入和输出提出一个完整的轴向解决方案,包括任何必要的轴向扩展/调整器、容积和组装计划。 解决Cyclo 6000轴轴与选定的挂载轴承单元之间的比对。</li>
-<li>建议对已建成的驱动列车进行验收:反冲范围、径流、对齐、振动/噪声检查以及简单的负载测试。</li>
+<li>审查轴承安排(包括用驱动齿轮和凸轮轴承的薄膜滚筒)。 建议替代、预装战略和预期寿命/保养间隔。</li>
+<li>为减压器的输入和输出提出一个完整的轴向解决方案,包括任何必要的轴向扩展/适应器、容量和组装计划。 处理 Cyclo 6000 轴与选定挂载轴承单元之间的比对。</li>
+<li>建议对已建成的传动系统进行验收:反弹范围、排出、对齐、振动/噪音检查,以及简单的负载测试。</li>
 </ol>
 <h3>供应链和候补</h3>
 <ul>
-<li><strong>汽车</strong>——目前规定了WEG电动机;如果替代品是可以接受的,承包商可提出中方可用的等价物.</li>
-<li><strong>缩小器</strong>目前假定是Sumitomo Cyclo减量器;承包商提出具有类似性能和足迹的等效物或当地采购选择。</li>
-<li><strong>轴心</strong>——CAD中存在一些轴承的SKF部分编号;承包商在需要时可提出当地可用的等价物。</li>
+<li><strong>汽车</strong>目前规定了WEG电动机;如果替代品可以接受,承包商可提出中方可用的等价物。</li>
+<li><strong>缩小器</strong>目前假定是Sumitomo Cyclo减量器;承包商提出具有类似性能和足迹的等同物或当地采购选择。</li>
+<li><strong>轴心</strong>——CAD中存在一些轴承的SKF部分编号;承包商在必要时提出当地可用的等价物。</li>
 </ul>
 <h3>预期成果和接受</h3>
 <ul>
-<li><strong>可交付成果</strong>最终的驱动列车设计包,包括发动机+减压器安装、带式张力法、齿轮图纸/光谱(材料/热处理)、轴承安排和挂载板反应的负载情况摘要。</li>
-<li><strong>接受情况</strong>——驱动列车在目标速度上顺利运行,没有异常的振动/噪声;齿轮接触模式和目标内部的反弹;在循环载荷下的挂载接口上没有联动滑动.</li>
+<li><strong>可交付成果</strong>最终的传动系统设计包,包括发动机+减压器安装、带式张力法、齿轮图纸/光谱(材料/热处理)、轴承安排和安装板反应的负载情况摘要。</li>
+<li><strong>接受情况</strong>——传动系统在目标速度上顺利运行,没有异常的振动/噪声;齿轮接触模式和目标内部的反弹;在循环负载下在挂载接口上没有联动滑动.</li>
 </ul>
 <h3>构成部分摘要</h3>
 <ul>
-<li><strong>轴心</strong>支持轴旋转,减少摩擦,需要定期检查/加速度来维持寿命。</li>
-<li><strong>管道驱动棒</strong>- 把火车/烟囱连接到<a href="../Plug-ejection/index.html">核心弹出</a>螺旋杆;对齐至关重要,因此杆子可以自由通过线性轴承运行。</li>
-<li><strong><a href="../Transmission/yoke/index.html">哟</a></strong>——加入螺旋桨驱动棒,将凸轮轴的旋转运动转换为线性中风进行提取和核心弹出.</li>
-<li><strong>插座拉动/驱动括号</strong>——将杆与螺杆连接起来,使所有四个螺杆一起移动;需要精确地与滤波管和插头剪接器对齐.</li>
+<li><strong>轴心</strong>——支持轴旋转,减少摩擦,需要定期检查/加速度来维持寿命.</li>
+<li><strong>管道驱动棒</strong>将火车/烟囱连接到<a href="../Plug-ejection/index.html">核心弹出</a>螺旋杆;对齐至关重要,因此杆子可以自由通过线性轴承运行。</li>
+<li><strong><a href="../Transmission/yoke/index.html">哟</a></strong>——加入冲压器驱动棒,将凸轮轴承的旋转运动转换为线性中风进行提取和核心弹出.</li>
+<li><strong>插座拉动/驱动括号</strong>——将杆与插管连接起来,使所有四个插管保持齐进;需要精确地与滤管和插管对齐.</li>
 <li><strong>苏米托莫还原器</strong>——降低运动速度,增加扭矩;采用杉间距的升降,润滑,维护等操作手册.</li>
-<li><strong>递减器挂载</strong>——定位并支持驱动列车挂载板上的减速器,使马达,皮带和齿轮在负载下保持对齐.</li>
+<li><strong>递减器挂载</strong>——定位并支持传动系统安装板上的减速器,使马达,皮带和齿轮在负载下保持对齐.</li>
 <li><strong>两个齿轮</strong>——从减压器向凸轮轴承传递扭矩;间距和反斜线必须设置如此的牙齿共享负载而不绑定.</li>
-<li><strong>驱动带和发动机传输</strong>——将WEG电动机对准减压器;皮带张力和调节应易于检查和调整.</li>
-<li><strong>普莱警卫</strong>——防止意外接触皮带和牵引装置,应可移动维护,但在正常运行时安全.</li>
+<li><strong>驱动带和发动机传输</strong>——将WEG电动机对准减压器;带张力和对齐应易于检查和调整.</li>
+<li><strong>普雷卫士</strong>——防止意外接触皮带和牵引装置,应可移动维护,但在正常运行时安全.</li>
 </ul>
 <h3>接口</h3>
 <ul>
-<li><strong>输入 :</strong>WEG W21/W22 IE3型电动机 → V-带 → Sumitomo Cyclo 6000减压器.</li>
+<li><strong>输入 :</strong>WEG W21/W22 IE3型电动机 → V-belt → Sumitomo Cyclo 6000减压器.</li>
 <li><strong>输出 :</strong>凸轮轴承<span class="swatch" style="background-color:#4AB6F6" title="#4AB6F6"></span>接口与<a href="../Transmission/index.html">枷锁</a>传输子系统。</li>
-<li><strong>挂载 :</strong> <a href="../Frame/index.html">驱动列车挂载板</a>在主帧。</li>
+<li><strong>挂载 :</strong> <a href="../Frame/index.html">传动系统安装板</a>在主帧。</li>
 </ul>
 <h3>接口和容忍度</h3>
-<p class="muted">已知的界面与容性. 链接到相关的子系统.</p>
+<p class="muted">已知的接口与容性. 链接到相关的子系统.</p>
 <table class="iface-table">
 <thead><tr><th>编</th><th>接口/容忍度</th><th>相关</th></tr></thead>
 <tbody>
-<tr><td>驱动列车挂载板</td><td>挂载到框架; 每个框架 H7/ dowel 对齐</td><td><a href="../Frame/index.html">框架</a></td></tr>
-<tr><td>凸轮轴承</td><td>与传输枷锁的接口; 驱动线性运动</td><td><a href="../Transmission/index.html">传送</a></td></tr>
+<tr><td>传动系统安装板</td><td>挂载到框架; 每个框架 H7/ dowel 对齐</td><td><a href="../Frame/index.html">框架</a></td></tr>
+<tr><td>凸轮轴承</td><td>与传输轭的接口; 驱动线性运动</td><td><a href="../Transmission/index.html">传送</a></td></tr>
 <tr><td>V带</td><td>DIN 2215 17x957; 2-带; 1000毫米长</td><td>. . . . . .</td></tr>
 <tr><td>苏米托莫6000</td><td>还原器; 光谱 TBD</td><td>. . . . . .</td></tr>
 <tr><td>WEG W21/W22 IE3 导弹</td><td>Motor; 产品 1353507; 数据表待加</td><td>. . . . . .</td></tr>
@@ -192,7 +192,7 @@
   if (hash && hash.match(/^#fig(\d+)$/)) { var idx = parseInt(RegExp.$1, 10) - 1; if (idx >= 0 && idx < n) { i = idx; go(i); } }
 })();
   </script>
-<p class="back"><a href="../index.html">* 回到P6</a></p>
+<p class="back"><a href="../index.html">* 返回 P6</a></p>
 <footer style="margin-top:2rem; padding-top:1rem; border-top:1px solid var(--border); color:var(--muted); font-size:0.85rem;">最新更新时间:2026-03-20.</footer>
 </body>
 </html>

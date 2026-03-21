@@ -42,41 +42,41 @@
 
 <p class="back"><a href="../index.html">← Voltar aos controles e eletrônicos</a>·<a href="../../index.html">P6 RFP</a></p>
 <h1>Sensor de posição do ioque</h1>
-<p class="muted">Parte da<a href="../index.html">Controlos e electrónica</a>secção. Sensação de ciclo/yoke para condições de paragem seguras e contagem de ciclo (implementação TBD).</p>
+<p class="muted">Parte da<a href="../index.html">Controlos e electrónica</a>secção. Sensação de ciclo/yoke para condições de parada seguras e contagem de ciclo (implementação TBD).</p>
 <h2>Introdução</h2>
-<p>O sensor de posição do jugo — parte do<a href="../index.html">Controlos e electrónica</a>Subsistema — Detecta o estado do ciclo da máquina através da detecção da posição do jugo no<a href="../../Transmission/index.html">transmissão</a>. Isto suporta três funções: (1) condições de parada segura controladas (não parar com descascadores em um estado inseguro), (2) contagem de ciclos para monitoramento de operações, e (3) um comportamento crítico de "parada totalmente aberta" para que os operadores possam servir ou remover peças internas quando a máquina é desligada normalmente.</p>
-<p>O tipo exato de sensor (codificador, sensor de distância, interruptor de proximidade, etc.) é TBD. Espera-se que a implementação do hardware do sensor envolva ODM/fornecedores como<strong>J-Pro</strong>.</p>
+<p>O sensor de posição do jugo — parte do<a href="../index.html">Controlos e electrónica</a>Subsistema — detecta o estado do ciclo da máquina, detectando a posição do jugo no<a href="../../Transmission/index.html">transmissão</a>. Isto suporta três funções: (1) condições controladas de parada segura (não parar com descascadores em um estado inseguro), (2) contagem de ciclos para monitoramento de operações, e (3) um comportamento crítico de "parada totalmente aberta" para que os operadores possam servir ou remover peças internas quando a máquina é desligada normalmente.</p>
+<p>O tipo exato do sensor (encoder, sensor de distância, interruptor de proximidade, etc.) é TBD. Espera-se que a implementação do hardware do sensor envolva ODM/fornecedores como<strong>J-Pro</strong>.</p>
 <h2>&amp; Componentes da chave de cor</h2>
 <p class="muted">Opções de detecção (TBD).</p>
 <table>
 <tr><th>Cor( s)</th><th>Componente</th></tr>
-<tr><td><em>—</em></td><td><strong>Sensor de ciclo/ioque</strong>— codificador, interruptor de proximidade ou outro sensor para identificar a posição do ciclo; pode partilhar hardware com a lógica de stop-with-peelers-open.</td></tr>
+<tr><td><em>—</em></td><td><strong>Sensor de ciclo/ioque</strong>— codificador, interruptor de proximidade ou outro sensor para identificar a posição do ciclo; pode partilhar o hardware com a lógica de stop-with-peelers-open.</td></tr>
 <tr><td><em>—</em></td><td><strong>Interruptores de segurança codificados</strong>— os bloqueios das tampas proporcionam o estatuto de "aberto" e inibem a circulação.</td></tr>
 </table>
 <h2 id="gallery">Figuras</h2>
 <p class="muted">Adicionar diagramas de localização do sensor quando o mecanismo é selecionado. (Nenhuma imagem dos sensores ainda está comprometida.)</p>
 <h3>Números recomendados (clareza do contratante)</h3>
 <ul class="muted">
-<li><strong>Adicionar figura</strong>: localização de montagem do sensor proposta em jugo/cam/eixo e características do alvo.</li>
+<li><strong>Adicionar figura</strong>: localização de montagem do sensor proposta em juntas/cam/eixo e características do alvo.</li>
 <li><strong>Adicionar figura</strong>: posições de "parada segura" (peeleres abertos/fechados) ligadas ao sinal de ciclo.</li>
 </ul>
 <h2>Discussão</h2>
 <h3>Desenho e intenção difíceis</h3>
 <ul>
-<li><strong>Parar-com-peeleres-aberto entrelaçamento</strong>— o sensor/logic deve impedir o funcionamento (ou a paragem da força) quando os descasques estiverem abertos/estado inseguro.</li>
-<li><strong>Contagem de ciclos</strong>— prever a contagem de ciclos por período de tempo para a monitorização das operações. Pode compartilhar hardware sensor com lógica de parada de segurança.</li>
+<li><strong>Parar-com-peeleres-aberto entrelaçamento</strong>— o sensor/logic deve impedir o funcionamento (ou a paragem da força) quando os descascadores estiverem abertos/estado inseguro.</li>
+<li><strong>Contagem de ciclos</strong>— prever a contagem de ciclos por período de tempo para a monitorização das operações. Pode compartilhar hardware de sensor com lógica de parada de segurança.</li>
 <li><strong>Abrir completamente a paragem ao desligar normalmente</strong>— quando a máquina é desligada / parada em funcionamento normal (não é E-stop, não é falha de bloqueio de tampa), o drivetrain deve parar e o jugo deve terminar no<strong>posição totalmente aberta</strong>para que os êmbolos/pele possam ser removidos com segurança.</li>
 <li><strong>Comportamento de parada de emergência / bloqueio</strong>— quando o ponto E é pressionado ou quando um interruptor de segurança da tampa codificado indica uma tampa aberta, a máquina deve desligar imediatamente (sem necessidade de reposicionamento para abrir).</li>
 </ul>
 <h3>Problemas e riscos conhecidos</h3>
 <ul>
-<li><strong>Lavagem</strong>— o sensor e a cablagem devem ser protegidos por água e robustos para a limpeza de produtos químicos.</li>
-<li><strong>Integridade do sinal</strong>— a vibração e a contaminação podem causar falsos gatilhos; escolha o tipo de sensor e a montagem em conformidade.</li>
+<li><strong>Lavagem</strong>— os sensores e os cabos devem ser protegidos por água e robustos para a limpeza de produtos químicos.</li>
+<li><strong>Integridade do sinal</strong>— a vibração e a contaminação podem provocar falsos gatilhos; escolha o tipo de sensor e a montagem em conformidade.</li>
 </ul>
 <h3>Perguntas para o contratante</h3>
 <ol>
-<li>Recomendar uma abordagem de sensor (encoder vs proximidade vs limite) e montagem que seja robusta em lavagem/vibração.</li>
-<li>Defina como o sensor será usado para contagem segura de paradas e ciclos, incluindo detecção de falhas (comportamento seguro).</li>
+<li>Recomendar uma abordagem do sensor (encoder vs proximidade vs limite) e montagem robusta em lavagem/vibração.</li>
+<li>Defina como o sensor será usado para a contagem segura de paradas e ciclos, incluindo detecção de falhas (comportamento seguro).</li>
 <li>Propor o mecanismo para identificar o<strong>totalmente aberto</strong>posição final do jugo (setor de distância alvo vs marca de referência do codificador rotativo) e como a calibração é realizada após a manutenção.</li>
 <li>Descreva como os sinais do sensor se interagem com as placas de controle existentes e como/quando se espera que J-Pro (ODM) forneça a solução sensora.</li>
 </ol>
@@ -84,7 +84,7 @@
 <ul>
 <li><strong>Entrada:</strong>Movimentação mecânica (posição yoke/cam/shaft) e estados de interruptor de segurança.</li>
 <li><strong>Saída:</strong>contagem de ciclos e/ou sinal de posição para o controlador; inibe a execução quando inseguro.</li>
-<li><strong>Montar:</strong>mecanismo de transmissão/comboio; encaminhamento do cabo para o gabinete de comando.</li>
+<li><strong>Montar:</strong>mecanismo de transmissão/comboio; encaminhamento de cabos para o gabinete de comando.</li>
 </ul>
 <h3>Interfaces e tolerâncias</h3>
 <p class="muted">Interfaces (tolerâncias TBD; contratante para propor).</p>

@@ -44,22 +44,22 @@
 <h1>Gestão da energia do motor</h1>
 <p class="muted">Parte da<a href="../index.html">Controlos e electrónica</a>secção. Distribuição de energia, proteção e sensoriamento para o motor de tração em um ambiente de lavagem.</p>
 <h2>Introdução</h2>
-<p>Esta página — parte do<a href="../index.html">Controlos e electrónica</a>Subsistema — define a potência eléctrica e os elementos de protecção necessários para o funcionamento<a href="../../Drivetrain/index.html">drivetrain</a>motor (WEG W22, 50 Hz China linha de base) e para fornecer sensoriamento de corrente para detecção de picos e estimativa de rendimento. O design deve ser adequado para ambientes de lavagem industrial e integrar-se ao<a href="../../Enclosure-shell/index.html">compartimento</a>travas de segurança.</p>
+<p>Esta página — parte do<a href="../index.html">Controlos e electrónica</a>Subsistema — define a potência eléctrica e os elementos de protecção necessários para o funcionamento<a href="../../Drivetrain/index.html">drivetrain</a>motor (WEG W22, 50 Hz China linha de base) e para fornecer detecção de corrente para detecção de picos e estimativa de rendimento. O design deve ser adequado para ambientes industriais de lavagem e integrar-se ao<a href="../../Enclosure-shell/index.html">compartimento</a>travas de segurança.</p>
 <h2>&amp; Componentes da chave de cor</h2>
 <p class="muted">Principais componentes elétricos (detalhes de implementação TBD).</p>
 <table>
 <tr><th>Cor( s)</th><th>Componente</th></tr>
-<tr><td><em>—</em></td><td><strong>Desconexão / disjuntor principal</strong>— isolamento local (apoio à operação autónoma e LOTO).</td></tr>
+<tr><td><em>—</em></td><td><strong>Desconexão / disjuntor principal</strong>— isolamento local (apoia uma operação autónoma e LOTO).</td></tr>
 <tr><td><em>—</em></td><td><strong>Contator AC + arranque do motor / arranque suave</strong>— comutação, comportamento de arranque/paragem controlado e protecção de sobrecorrente para o circuito motor.</td></tr>
 <tr><td><em>—</em></td><td><strong>Painel de controlo interno</strong>— relés, comando IO/PCB/PLC conforme necessário (arquitetura final TBD).</td></tr>
-<tr><td><em>—</em></td><td><strong>Sensor de corrente de motor</strong>— medição instantânea da corrente para detecção de picos e estimativa da produção bruta.</td></tr>
+<tr><td><em>—</em></td><td><strong>Sensor de corrente do motor</strong>— medição instantânea da corrente para detecção de picos e estimativa do rendimento bruto.</td></tr>
 </table>
 <h2 id="gallery">Figuras</h2>
-<p class="muted">Adicione diagramas de fiação e layout do gabinete quando disponível. (Nenhuma imagem de potência do motor ainda está comprometida.)</p>
+<p class="muted">Adicione diagramas de fiação e layout do gabinete quando disponível. (Ainda não há imagens de energia do motor.)</p>
 <h3>Números recomendados (clareza do contratante)</h3>
 <ul class="muted">
 <li><strong>Adicionar figura</strong>: diagrama de linha única (potência em → desconectar → contator/iniciador → motor).</li>
-<li><strong>Adicionar figura</strong>: disposição do armário e roteamento de cabos / glandes para proteção de lavagem.</li>
+<li><strong>Adicionar figura</strong>: disposição do armário e roteamento de cabos / glandes para proteção washdown.</li>
 </ul>
 <h2>Discussão</h2>
 <h3>Especificações de base do motor (referência)</h3>
@@ -67,7 +67,7 @@
 <table class="iface-table">
 <thead><tr><th>Parâmetro</th><th>50 Hz (início da China)</th><th>60 Hz (referência)</th></tr></thead>
 <tbody>
-<tr><td>Motor</td><td>WEG W22 (ou equivalente), 10 hp (7,5 kW), 4 pólos</td><td>WEG W22 (ou equivalente), 10 hp, 4-pole</td></tr>
+<tr><td>Motor</td><td>WEG W22 (ou equivalente), 10 cv (7,5 kW), 4 pólos</td><td>WEG W22 (ou equivalente), 10 hp, 4-pole</td></tr>
 <tr><td>Velocidade</td><td>~1470 rpm</td><td>~1760 rpm</td></tr>
 <tr><td>Tensões</td><td>3-fase de 220 / 380 / 440 V (tensão final da planta TBD)</td><td>3-fase de 220 / 380 / 440 V</td></tr>
 <tr><td>Protecção</td><td>IPW55 (conforme especificado)</td><td>IPW55 (conforme especificado)</td></tr>
@@ -88,25 +88,25 @@
 <ul>
 <li><strong>Operação local</strong>— ligar/desligar e correr/parar (estando em pé).</li>
 <li><strong>LOTO</strong>— ponto de isolamento da retaguarda/tagout.</li>
-<li><strong>Fechaduras de segurança</strong>— interruptores de tampa de segurança e lógica de abertura de stop-with-peeler.</li>
+<li><strong>Interligações de segurança</strong>— interruptores de tampa de protecção contra falhas e lógica de abertura de stop-with-peelers.</li>
 <li><strong>Protecção da água</strong>— compartimentos, glândulas, roteamento adequado para uma lavagem rigorosa.</li>
 </ul>
 <h3>Sentindo</h3>
 <ul>
-<li><strong>Sensor de corrente de motor</strong>— medição instantânea da corrente para detecção de picos e estimativa do rendimento bruto (frutos transformados por período).</li>
+<li><strong>Sensor de corrente do motor</strong>— medição instantânea da corrente para detecção de picos e estimativa do rendimento bruto (frutos transformados por período).</li>
 <li><strong>Sensor de ciclo</strong>— contagem de ciclos por período (pode partilhar o hardware com o sensor da posição do jugo/paragem do motor aberto).</li>
 </ul>
 <h3>Perguntas para o contratante</h3>
 <ol>
-<li>Propor uma arquitetura elétrica de segurança de lavagem (classificação IP de cabinete, glândulas, roteamento) adequada para uma planta da China.</li>
-<li>Especificar o arranque/contactor do motor e se é necessário um arranque suave; incluir<strong>protecção sobrecorrente</strong>dimensionamento baseado em pressupostos de corrente/dever motor.</li>
+<li>Propor uma arquitetura elétrica de segurança de lavagem (classificação IP cabinet, glândulas, roteamento) adequada para uma planta da China.</li>
+<li>Indicar o arranque/contactor do motor e se é necessário um arranque suave;<strong>protecção sobrecorrente</strong>dimensionamento baseado em pressupostos de corrente/dever motor.</li>
 <li>Especifique o hardware de sensoriamento atual e como ele será usado para detecção de picos e estimativa de vazão.</li>
-<li>Confirme o(s) conector(es) de entrada e a aproximação de fiação para 380/415 V de 50 Hz de 3 fases (baseline NC) e aconselhe como manter um único projeto compatível com os mercados de 60 Hz, sempre que possível.</li>
+<li>Confirme o(s) conector(es) de entrada e a abordagem de fiação para 380/415 V 3-fase 50 Hz (baseline NC), e aconselhe como manter um único design compatível com os mercados de 60 Hz, sempre que possível.</li>
 </ol>
 <h3>Interfaces</h3>
 <ul>
-<li><strong>Entrada:</strong>potência da instalação (3 fase), comandos do operador, interligações de segurança.</li>
-<li><strong>Saída:</strong>energia protegida para acionamento motor; sinais de sensor para controlar a lógica / exportação de IoT.</li>
+<li><strong>Entrada:</strong>potência da planta (3-fase), comandos do operador, travas de segurança.</li>
+<li><strong>Saída:</strong>energia protegida para conduzir o motor; sinais de sensor para controlar a lógica/exportação de IoT.</li>
 <li><strong>Montar:</strong>armário/painel de controlo interno.</li>
 </ul>
 <h3>Interfaces e tolerâncias</h3>

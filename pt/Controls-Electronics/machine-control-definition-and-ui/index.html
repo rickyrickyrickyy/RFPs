@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Definição do controlo da máquina e IU — Controlos — P6 RFP</title>
+<title>Definição do comando da máquina e IU — Controlos — P6 RFP</title>
 <style>
     :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
     body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
@@ -41,10 +41,10 @@
 </nav>
 
 <p class="back"><a href="../index.html">← Voltar aos controles e eletrônicos</a>·<a href="../../index.html">P6 RFP</a></p>
-<h1>Definição do controle da máquina e UI</h1>
+<h1>Definição de controle de máquina e UI</h1>
 <p class="muted">Parte da<a href="../index.html">Controlos e electrónica</a>secção. Controles autônomos locais, indicadores, UI de segurança e bloqueio/tagout.</p>
 <h2>Introdução</h2>
-<p>Esta página define os controles e indicadores voltados para o operador para P6 dentro do<a href="../index.html">Controlos e electrónica</a>Subsistema. A máquina deve ser operada como uma unidade independente com comandos locais ON/OFF e correr/parar na frente superior, com indicadores claros para RUNNING/STOPPED e estado de segurança aberto. Três travas de segurança da tampa codificadas (da<a href="../../Enclosure-shell/index.html">Anexo / shell</a>) impedir a operação quando qualquer cobertura está aberta. É necessária uma unidade de bloqueio/tagout traseiro (LOTO) para o serviço e a destruição sazonal.</p>
+<p>Esta página define os controles e indicadores voltados para o operador para P6 dentro do<a href="../index.html">Controlos e electrónica</a>Subsistema. A máquina deve ser operada como uma unidade autónoma com comandos locais ON/OFF e correr/parar na frente superior, com indicadores claros para RUNNING/STOPPED e estado de segurança aberto. Três travas de segurança da tampa codificada (do<a href="../../Enclosure-shell/index.html">Anexo / shell</a>) impedir a operação quando qualquer cobertura está aberta. É necessária uma unidade de bloqueio/tagote traseiro (LOTO) para o serviço e a destruição sazonal.</p>
 <h2>&amp; Componentes da chave de cor</h2>
 <p class="muted">Componentes de IU e intenção.</p>
 <table>
@@ -69,14 +69,14 @@
 <h3>Números recomendados (clareza do contratante)</h3>
 <ul class="muted">
 <li><strong>Adicionar figura</strong>:<strong>Disposição da face do painel</strong>— as posições exactas dos botões/indicadores e a rotulagem.</li>
-<li><strong>Adicionar figura</strong>:<strong>Acesso LOTO traseiro</strong>— o operador alcança o caminho com as capas abertas/fechadas.</li>
-<li><strong>Adicionar figura</strong>:<strong>Fiação home-run</strong>— desde o painel até aos interruptores do motor e das tampas (grama de bloqueio).</li>
+<li><strong>Adicionar figura</strong>:<strong>Acesso LOTO traseiro</strong>— o operador atinge o caminho com as capas abertas/fechadas.</li>
+<li><strong>Adicionar figura</strong>:<strong>Fiação home-run</strong>— desde o painel até aos interruptores do motor e das tampas (grama de blocos).</li>
 </ul>
 <h2>Discussão</h2>
 <h3>Desenho e intenção difíceis</h3>
 <ul>
 <li><strong>Operação autónoma</strong>— os controlos de potência e de funcionamento locais permitem uma operação, inspecção, substituição de componentes e uma limpeza simples.</li>
-<li><strong>Indicação de estado clara</strong>— o operador deve verificar rapidamente se a máquina está a funcionar, a parar ou a ser impedida de funcionar devido a condições de segurança abertas.</li>
+<li><strong>Indicação de estado clara</strong>— o operador deve verificar rapidamente se a máquina está a funcionar, parou ou impedida de funcionar devido a condições de segurança abertas.</li>
 </ul>
 <h3>Requisitos do painel de controlo (frente superior)</h3>
 <ul>
@@ -85,7 +85,7 @@
 <li><strong>Paragem de emergência</strong>botão</li>
 <li><strong>RUNNING/STOPPED</strong>indicador</li>
 <li><strong>PODER ligado/desligado</strong>indicador</li>
-<li><strong>MÁQUINA ABERTA</strong>/ indicador de segurança-aberto (estado de interlocução: qualquer alimentador/pulgador / tampa de tampa do drivetrain aberta)</li>
+<li><strong>MÁQUINA ABERTA</strong>/ indicador de segurança-aberto (estado de interlocução: qualquer alimentador/pulgar / tampa de cobertura do trem aberto)</li>
 </ul>
 <h3>Requisitos LOTO (top-rear)</h3>
 <ul>
@@ -95,27 +95,27 @@
 <h3>Problemas e riscos conhecidos</h3>
 <ul>
 <li><strong>Exposição à lavagem</strong>— a IU e a fiação devem estar protegidas contra a água; escolha gabinetes, selos e glândulas adequados para limpeza industrial.</li>
-<li><strong>clareza lógica de segurança</strong>— evitar estados ambíguos; tornar evidente porque é que a máquina não vai arrancar (capa aberta, E-stop, etc.).</li>
+<li><strong>clareza lógica de segurança</strong>— evitar estados ambíguos; torná-lo óbvio porque a máquina não vai iniciar (capa aberta, E-stop, etc.).</li>
 </ul>
 <h3>Perguntas para o contratante</h3>
 <ol>
 <li>Recomendar componentes industriais e classificação do compartimento/PI adequados para a exposição à lavagem.</li>
-<li>Propor layout de painel que seja ergonômico (superior) e manuvável, com rotulagem clara e lógica indicadora.</li>
-<li>Proponha arquitetura e localização LOTO que atenda à prática da planta enquanto permanece simples para os operadores.</li>
-<li>Recomendar o hardware de tampa de segurança codificado (código de ímã anti-desvio) e a abordagem de fiação/integração usando as mesmas placas de controle que a máquina comercial.</li>
+<li>Propor layout de painel que é ergonómico (top-front) e manutável, com clara rotulagem e lógica indicadora.</li>
+<li>Proponha arquitetura e localização LOTO que atenda à prática da planta, permanecendo simples para os operadores.</li>
+<li>Recomendar hardware de tampa de segurança codificada (código de ímã anti-desvio) e abordagem de fiação/integração usando as mesmas placas de controle que a máquina comercial.</li>
 </ol>
 <h3>Interfaces</h3>
 <ul>
 <li><strong>Entrada:</strong>O botão do operador pressiona; estados de travamento de segurança.</li>
 <li><strong>Saída:</strong>comando run/stop para controles motores; indicadores visíveis para o estado.</li>
-<li><strong>Montar:</strong>painel frontal superior; vias de ligação para o gabinete de controlo interno.</li>
+<li><strong>Montar:</strong>painel frontal superior; vias de ligação ao gabinete de controlo interno.</li>
 </ul>
 <h3>Interfaces e tolerâncias</h3>
 <p class="muted">Tolerâncias TBD; contratante para propor detalhes de montagem e vedação consistentes com ambiente de lavagem.</p>
 <table class="iface-table">
 <thead><tr><th>Parte</th><th>Interface / tolerância</th><th>Relacionado</th></tr></thead>
 <tbody>
-<tr><td>IU de topo</td><td>Retentor e vedação das glândulas resistentes à lavagem; rotulagem/ergonomia</td><td><a href="../index.html">Controlos e electrónica</a></td></tr>
+<tr><td>IU de topo</td><td>Retentor resistente à lavagem e vedação das glândulas; rotulagem/ergonomia</td><td><a href="../index.html">Controlos e electrónica</a></td></tr>
 <tr><td>LOTO traseiro</td><td>Ponto de isolamento bloqueável; envelope de acesso</td><td>—</td></tr>
 </tbody>
 </table>
@@ -124,7 +124,7 @@
 <li>Botões de pressão, de pressão ou de pressão</li>
 <li>Indicadores ON/OFF RUNNING/STOPPED</li>
 <li>Indicador de segurança aberto</li>
-<li>Dispositivo de bloqueamento/tagote traseiro</li>
+<li>Dispositivo de bloqueamento/tagout traseiro</li>
 <li>Cercar, fiação, glândulas, etiquetas</li>
 </ul>
 <p class="back"><a href="../index.html">← Voltar aos controles e eletrônicos</a>·<a href="../../index.html">P6 RFP</a></p>

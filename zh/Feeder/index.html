@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>6. 水果摄入系统——P6 RFP</title>
+<title>6. 水果进料系统——P6 RFP</title>
 <style>
     :root { --bg: #1a1d21; --card: #24282e; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
     body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
@@ -38,47 +38,47 @@
   <a href="../../pt/Feeder/index.html">Português</a>
 </nav>
 
-<p class="back"><a href="../index.html">* 回到P6</a></p>
-<h1>6. 水果摄入系统</h1>
+<p class="back"><a href="../index.html">* 返回 P6</a></p>
+<h1>6. 水果进料系统</h1>
 <h2>分页</h2>
 <ul>
-<li><a href="feeding-subassembly/index.html">饲料子组装</a> <span class="muted">(更新2026-03-20) (中文(简体) ).</span>——每单元细数:挂板,90°入口管,直管,弹簧导线,同步弹簧;8 CAD视图和彩色键.</li>
-<li><a href="feeder-body/index.html">进食器体</a> <span class="muted">(更新2026-03-20) (中文(简体) ).</span>罐壳/盖/罩;旋转以连接和冲洗/CIP。</li>
-<li><a href="entry-tubes/index.html">输入管</a> <span class="muted">(更新2026-03-20) (中文(简体) ).</span>——可调高,可移动的管连接上游线与每个供餐单位.</li>
+<li><a href="feeding-subassembly/index.html">饲料子组装</a> <span class="muted">(更新2026-03-20) (中文(简体) ).</span>——每个单元的细数:安装板,90°入口管,直管,弹簧导线,同步弹簧;8 CAD视图和彩色键.</li>
+<li><a href="feeder-body/index.html">进料器体</a> <span class="muted">(更新2026-03-20) (中文(简体) ).</span>罐壳/盖/罩;旋转以连接和冲洗/CIP。</li>
+<li><a href="entry-tubes/index.html">进口管</a> <span class="muted">(更新2026-03-20) (中文(简体) ).</span>——可调高,可移动的管连接上游线与每个供餐单位.</li>
 </ul>
 <h2>导言</h2>
-<p>水果摄入系统(子系统6)可靠地向机器的四个提取站每个周期送出一个橙色. 它包括一个支线支线体(为接入和CIP打开的壳和盖),结构条纹,每个站点喂食子组装(90°管,直管,同步弹簧,和挂板),以及连接上游分拣线的可调节输入管. 在每个周期中,在入口管中堆放的橙子通过90°的管子滚入同步弹簧;弹簧门的柱子释放出单一的果实到<a href="../Extraction-syncronisation/index.html">果实支持</a>见下文。</p>
+<p>果实进料系统(子系统6)可靠地向机器的四个提取站每个周期发送一个橙色. 它由一个连接的进料器体(打开供接入和CIP的壳和盖),结构条纹,每个站点的供餐子组装(90°管,直管,同步弹簧,和安装板),以及连接上游分拣线的可调节进口管组成. 在每一循环中,在入口管中堆叠的橙子通过90°的管子滚入同步的弹簧;弹簧门的柱子并释放出单一的果实到<a href="../Extraction-syncronisation/index.html">果实支持</a>见下文。</p>
 <h2>颜色密钥组件( C)</h2>
 <p class="muted">本节的 CAD 颜色 。 单位详情 :<a href="feeding-subassembly/index.html">饲料子组装</a>。 。 。 。</p>
 <table>
 <tr><th>颜色</th><th>构成部分</th></tr>
-<tr><td><span class="swatch" style="background-color:#DDA44E"></span></td><td><strong>进食器体</strong>——橙色-tan基;在支线链上旋转以获取/ CIP 工业促进中心</td></tr>
+<tr><td><span class="swatch" style="background-color:#DDA44E"></span></td><td><strong>进料器体</strong>– 橙色-坦基;在支线链上旋转以获取/ CIP 工业促进中心</td></tr>
 <tr><td><span class="swatch" style="background-color:#41733B"></span> <span class="swatch" style="background-color:#71AEE8"></span></td><td><strong>括号</strong>——深绿色+浅蓝色;焊接到盖,支持系统</td></tr>
-<tr><td><span class="swatch" style="background-color:#C1EF64"></span></td><td><strong>饲料子组装</strong>——每站1个;曲线管,同步弹簧,挂板,90°管</td></tr>
-<tr><td><span class="swatch" style="background-color:#FFE297"></span></td><td><strong>输入管</strong>浅黄色;引导水果进入每个进食分组</td></tr>
+<tr><td><span class="swatch" style="background-color:#C1EF64"></span></td><td><strong>饲料子组装</strong>——每站1个;曲线管,同步弹簧,安装板,90°管</td></tr>
+<tr><td><span class="swatch" style="background-color:#FFE297"></span></td><td><strong>进口管</strong>浅黄色;引导水果进入每个进食分组</td></tr>
 </table>
 <h2 id="gallery">顶级种子视图</h2>
-<p class="muted">CAD观点显示支线体,支架,供餐子组装,以及进入管. 参见<a href="#fig1">图1</a>, (中文).<a href="#fig2">图2</a>等 类.</p>
+<p class="muted">CAD视图显示进料器体,支架,供餐子组装,以及进入管. 参见<a href="#fig1">图1</a>, (中文).<a href="#fig2">图2</a>等 类.</p>
 <div class="slideshow" id="feeder-slideshow">
 <div class="slideshow-track">
-<div class="slide active" data-caption="图1. 顶层——支线体(橙色-tan),石灰绿饲料子组装,浅黄色入口管,深绿色和浅蓝色支架,紫红色底座." id="fig1"><img alt="Feeder 顶级视图" src="../../Feeder/images/feeder-1.png"/></div>
+<div class="slide active" data-caption="图1. 顶层——进料器体(橙色-tan),石灰绿色喂养子组装,浅黄色入口管,深绿色和浅蓝色支架,紫红色底座." id="fig1"><img alt="Feeder 顶级视图" src="../../Feeder/images/feeder-1.png"/></div>
 <div class="slide" data-caption="图2. 增生——支架体,支架,供料子组装,进气管." id="fig2"><img alt="进纸器提升" src="../../Feeder/images/feeder-2.png"/></div>
-<div class="slide" data-caption="图3. 侧面——支架体,支架,石灰绿饲料子组装,入口管." id="fig3"><img alt="进纸端" src="../../Feeder/images/feeder-3.png"/></div>
-<div class="slide" data-caption="图4. 前部 -- -- 支线上四个供餐单元;每个单元的牙套和入口管。" id="fig4"><img alt="前置四个单元" src="../../Feeder/images/feeder-4.png"/></div>
-<div class="slide" data-caption="图5 侧——支线体,支线子组装与弹簧机制;支线链可允许体旋转." id="fig5"><img alt="带弹簧的进货方" src="../../Feeder/images/feeder-5.png"/></div>
-<div class="slide" data-caption="图6. 前部——4个单元;直升机输送器连接基地;牙套和入口管。" id="fig6"><img alt="带传送器的进纸器" src="../../Feeder/images/feeder-6.png"/></div>
-<div class="slide" data-caption="图7 侧角——四个石灰绿色喂养子组装,泉水,支架." id="fig7"><img alt="进纸器侧角" src="../../Feeder/images/feeder-7.png"/></div>
-<div class="slide" data-caption="图8. 顶部——支线车体上四个石灰绿色子组装;背景为入口管." id="fig8"><img alt="种子顶部视图" src="../../Feeder/images/feeder-8.png"/></div>
-<div class="slide" data-caption="图9. 特写——供料分装基座,进场管,支架细节." id="fig9"><img alt="进纸器特写" src="../../Feeder/images/feeder-9.png"/></div>
+<div class="slide" data-caption="图3. 侧面——支架体,支架,石灰绿饲料子组装,进气管." id="fig3"><img alt="进纸端" src="../../Feeder/images/feeder-3.png"/></div>
+<div class="slide" data-caption="图4. 前部 -- -- 进料器体上四个供餐单元;每个单元的牙套和入口管。" id="fig4"><img alt="前置四个单元" src="../../Feeder/images/feeder-4.png"/></div>
+<div class="slide" data-caption="图5 侧——进料器体,支线子组装有弹簧机制;支线链可允许体旋转." id="fig5"><img alt="带弹簧的进货方" src="../../Feeder/images/feeder-5.png"/></div>
+<div class="slide" data-caption="图6. 前部——四个单元;连接基地的直升机运输机;保险套和入口管。" id="fig6"><img alt="带传送器的进纸器" src="../../Feeder/images/feeder-6.png"/></div>
+<div class="slide" data-caption="图7 侧角——四个石灰绿饲料子组装,弹簧,支架." id="fig7"><img alt="进纸器侧角" src="../../Feeder/images/feeder-7.png"/></div>
+<div class="slide" data-caption="图8. 顶部——四个石灰绿色子组装在支架上;背景为入口管." id="fig8"><img alt="种子顶部视图" src="../../Feeder/images/feeder-8.png"/></div>
+<div class="slide" data-caption="图9. 特写——供料分装基底,入口管,支架细节." id="fig9"><img alt="进纸器特写" src="../../Feeder/images/feeder-9.png"/></div>
 </div>
-<p aria-live="polite" class="slideshow-caption" id="feeder-caption">图1. 顶层——支线体(橙色-tan),石灰绿饲料子组装,浅黄色入口管,深绿色和浅蓝色支架,紫红色底座.</p>
+<p aria-live="polite" class="slideshow-caption" id="feeder-caption">图1. 顶层——进料器体(橙色-tan),石灰绿色喂养子组装,浅黄色入口管,深绿色和浅蓝色支架,紫红色底座.</p>
 <div class="slideshow-controls">
 <button aria-label="上一个" id="feeder-prev" type="button">上一个</button>
 <span class="slideshow-counter" id="feeder-counter">1/9 (中文(简体) ).</span>
 <button aria-label="下一个" id="feeder-next" type="button">下一个</button>
 </div>
 </div>
-<h3>建议数字(承包商的清晰度)</h3>
+<h3>建议数字(承包商清晰度)</h3>
 <ul class="muted">
 <li><strong>添加图</strong>编号 :<strong>四站布局</strong>——键间距尺寸对帧/传输.</li>
 <li><strong>添加图</strong>编号 :<strong>螺旋传送接口</strong>——喂养高度到支线基地(如在画廊中不明显).</li>
@@ -88,40 +88,40 @@
 <h3>粗略设计意图( M)</h3>
 <ul>
 <li><strong>系统目标</strong>- 释放<strong>每个周期1个橙色</strong>进入每个撤离站。</li>
-<li><strong>流量序列</strong>– 上游分拣器/线 – 可调整的入口管 – 90°管 – 橙色停留在同步弹簧上,而上方的柱堆 → 推杆在压缩时打开弹簧,将一个橙色投向水果支撑 → 弹簧在回击时关闭,以握住下一个橙色,而舞台橙色滴入剥皮器.</li>
-<li><strong>模块</strong>——饲料子组装管被旋转到一个山体板上,而山体板被旋转到支架体上,这样模块就可以通过钻出树脂进行交换/输入.</li>
+<li><strong>流量序列</strong>– 上游分拣器/线 – 可调整的入口管 – 90°管 – 橙色停留在同步弹簧上,而上方的柱堆 – 推杆在压缩时打开弹簧,将一个橙色投向水果支撑 – 弹簧在回中风时关闭,以握住下一个橙色,而舞台橙色滴入剥皮器.</li>
+<li><strong>模块</strong>——饲料子组装管被转动到一个山体板上,而山体板被转动到支架机体上,这样模块就可以通过钻出树脂进行交换/输入.</li>
 </ul>
-<h3>已知问题和风险</h3>
+<h3>已知挑战/问题和风险</h3>
 <ul>
-<li><strong>Jams / 双投</strong>——同步春季必须可靠地锁定一个水果柱,一次只释放一个橙色而不会楔形.</li>
-<li><strong>碰撞信封</strong>——果实支持和推杆决不能与进门管/90°管相撞;推杆横向弹性可造成与管/盖的灾难性碰撞.</li>
+<li><strong>Jams / 双投</strong>——同步春季必须可靠地锁定一个水果柱,一次只释放一个橙色而不楔形.</li>
+<li><strong>碰撞信封</strong>——果实支持和推力器决不能与进气管/90°管相撞;推力的横向弹性可造成与管/盖的灾难性碰撞.</li>
 <li><strong>冲洗</strong>——这一地区位于/靠近溅射区;边缘和关节必须清洁,安全处理.</li>
 </ul>
 <h3>DFM和制造业(中国)</h3>
 <ul>
-<li><strong>管道标准</strong>——饲料分组装使用3QQ核动力源/DN90 Sch 5S作为基准;承包商可以选择中国现有的等效物,以维护功能和清洁性.</li>
+<li><strong>管道标准</strong>——饲料分组装使用3′′ 核动力源 / DN90 Sch 5S作为基准;承包商可以选择中方可用的等效物,保存功能和清洁性.</li>
 <li><strong>兴/平</strong>——入口管的可调节性依赖于固定关节;承包商提出坚固的硬件和防厕所.</li>
-<li><strong>CIP 喷嘴整合</strong>- 90°管包括一个喷管喷下入口/泉区的端口/管;喷管和安装细节TBD。</li>
+<li><strong>CIP 喷嘴整合</strong>- 90°管包括喷管喷下入口/泉区的端口/管;喷管和安装细节TBD。</li>
 </ul>
-<h3>承包者的问题</h3>
+<h3>承包商的挑战/问题</h3>
 <ol>
-<li>验证同步弹簧调制概念,以便可靠地一次发布(水果大小范围,摩擦,干扰/双滴故障模式)并提出改进建议.</li>
-<li>提出可调整的管/螺旋/螺旋管设计,锁上时采用刚性,快速拆解以进行季节性维护.</li>
-<li>为入口管和弹簧区(喷射方向、排水路径、避免死区)提出CIP喷管布置和清洁战略。</li>
+<li>验证同步弹簧调制概念,以便可靠地一次发布(水果尺寸范围,摩擦,干扰/双滴故障模式)并提出改进建议.</li>
+<li>提出可调整的管/螺旋/管设计,锁定时刚性,快速拆解,用于季节性维护。</li>
+<li>为入口管和弹簧区(喷射方向、排水道、避免死区)提出CIP喷管布置和清洁战略。</li>
 </ol>
 <h3>子组装</h3>
 <ul>
-<li><a href="feeding-subassembly/index.html">饲料子组装</a>——挂板,花纹90°入管,直管和弹簧导线,同步弹簧(8个CAD视图,颜色键,参数).</li>
+<li><a href="feeding-subassembly/index.html">饲料子组装</a>——安装板,花纹90°的入口管,直管和弹簧导线,同步弹簧(8个CAD视图,色键,参数).</li>
 <li>进气机身 90°进气管 外接管——细节页 TBD.</li>
 </ul>
 <h3>接口</h3>
 <ul>
-<li><strong>进纸器链</strong>——支线车体旋转以获取和CIP;超中心轴(见<a href="../Enclosure-shell/index.html">附文/壳</a>) (中文(简体) ).</li>
-<li><strong>括号</strong>——焊接到盖子上;支持供餐分组装和进门管.</li>
-<li><strong>水果流动</strong>输入管 进食分组装<a href="../Extraction-syncronisation/index.html">提取同步</a>(水果支持,同步春季互动).</li>
-<li><strong>下游地区</strong>——提取后,汁液和皮液流入.<a href="../Collection/index.html">收藏</a>(刀,滤管,插头切割器).</li>
+<li><strong>进纸器链</strong>——支线车体旋转以获取和CIP;超中心轴(见<a href="../Enclosure-shell/index.html">外壳/防护罩</a>) (中文(简体) ).</li>
+<li><strong>括号</strong>——焊接到盖子上;支持喂食子组装和入口管.</li>
+<li><strong>水果流动</strong>进口管 进食分组装<a href="../Extraction-syncronisation/index.html">提取同步</a>(水果支持,同步春季互动).</li>
+<li><strong>下游地区</strong>——提取后,汁液和皮液流入.<a href="../Collection/index.html">收藏</a>(管道,滤管,插头切割器).</li>
 </ul>
-<p class="back"><a href="../index.html">* 回到P6</a></p>
+<p class="back"><a href="../index.html">* 返回 P6</a></p>
 <script>
 (function(){
   var el = document.getElementById('feeder-slideshow');

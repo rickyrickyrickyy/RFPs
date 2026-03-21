@@ -44,7 +44,7 @@
 
 <p class="back"><a href="../index.html">← Voltar ao Quadro</a>·<a href="../../index.html">P6 RFP</a></p>
 <h1>Cargas e caminhos de carga</h1>
-<p>Esta página descreve as cargas operacionais primárias que actuam sobre o quadro P6 — a partir do<a href="../../Drivetrain/index.html">drivetrain</a>,<a href="../../Transmission/index.html">transmissão</a>, extração, e subsistemas de ejeção do núcleo - e como essas cargas são realizadas através da estrutura soldada, placas de montagem, e juntas aparafusadas até os pés de nivelamento e piso. É parte do<a href="../index.html">Frame</a>seção e fornece a base da caixa de carga para empreiteiros que validam a rigidez e alinhamento do quadro.</p>
+<p>Esta página descreve as cargas operacionais primárias que actuam sobre o quadro P6 — a partir do<a href="../../Drivetrain/index.html">drivetrain</a>,<a href="../../Transmission/index.html">transmissão</a>, extração, e subsistemas de ejeção do núcleo — e como essas cargas são realizadas através da estrutura soldada, placas de montagem, e juntas aparafusadas até os pés de nivelamento e piso. É parte do<a href="../index.html">Frame</a>seção e fornece a base de carga-caixa para empreiteiros que validam a rigidez e alinhamento do quadro.</p>
 <section>
 <h2>Cargas primárias</h2>
 <p>O quadro deve conter forças de reacção da<a href="../../Drivetrain/index.html">drivetrain</a>,<a href="../../Transmission/index.html">transmissão</a>,<a href="../../Extraction-syncronisation/index.html">extração</a>(conjuntos e descascadores accionados), e<a href="../../Plug-ejection/index.html">ejeção do núcleo</a>Sem deflexão excessiva. O alinhamento entre jugos, rolamentos e descascadores deve ser mantido para o tempo e a vida útil.</p>
@@ -52,15 +52,15 @@
 <thead><tr><th>Origem</th><th>Tipo de carga</th><th>Caminho através da moldura</th></tr></thead>
 <tbody>
 <tr><td>Comboio (motor, redutor, artes)</td><td>Reação ao binário de acionamento; peso do motor, redutor, trem de engrenagem</td><td>Placa de montagem do trem → trilhos laterais → quadro principal → montagens de nivelamento → piso</td></tr>
-<tr><td>Transmissão (yoke, eixos, rolamentos)</td><td>Reação à força de curso linear; inércia do jugo e massa acionada</td><td>Placa de montagem de transmissão → trilhos laterais → quadro principal → montagens de nivelamento → piso</td></tr>
-<tr><td>Extração (carcaça accionada, descascadores)</td><td>Força de compressão durante o engorduramento; reacção dos descascadores estáticos</td><td>Placa de montagem carregada (lado da coleção) ↔ suporte acionado; placa carregada → carris laterais → quadro principal → piso</td></tr>
+<tr><td>Transmissão (ioque, eixos, rolamentos)</td><td>Reação à força de curso linear; inércia do jugo e massa acionada</td><td>Placa de montagem de transmissão → trilhos laterais → quadro principal → montagens de nivelamento → piso</td></tr>
+<tr><td>Extração (carcaça accionada, descascadores)</td><td>Força de compressão durante o engorduramento; reacção dos descascadores estáticos</td><td>Placa de montagem carregada (lado da coleção) ↔ suporte acionado; placa carregada → trilhos laterais → quadro principal → piso</td></tr>
 <tr><td>Ejeção do núcleo (acionamento do mergulhador)</td><td>Reação à força do êmbolo (molas de compressão, carga da haste)</td><td>Caixas e suportes do mergulhador reagem na estrutura carregada / coleta; em placa de montagem carregada e trilhos laterais → quadro principal → piso</td></tr>
 </tbody>
 </table>
 </section>
 <section>
 <h2>Casos de carga chave (para validar)</h2>
-<p class="muted">Os valores atuais abaixo são preliminares e visam ajudar os contratantes a definir casos de carga e alvos de aceitação. Contratante para validar com geometria final, distância central da correia, módulo de engrenagem/perfil e detalhes cam/yoke.</p>
+<p class="muted">Os valores atuais abaixo são preliminares e visam ajudar os contratantes a definir casos de carga e alvos de aceitação. Contrator para validar com geometria final, distância central da correia, módulo de engrenagem/perfil e detalhes cam/yoke.</p>
 <ul>
 <li><strong>Excitação motor / cinto / redutor</strong>— motor WEG W21/W22 IE3 (7,5 kW/10 hp) conduz o redutor através de correias SPA (razão actualmente 1:1; duas correias planeadas). O tensionamento do cinto e a vibração do motor transmitem cargas radiais e vibrações para a placa e quadro de montagem do drivetrain.</li>
 <li><strong>Redução de saída / malha de engrenagem</strong>— Velocidade de saída do redutor de alvo ~70 rpm. Cálculos preliminares do drivingtrain indicam ~1023 N·m de torque na engrenagem acionada, com forças de malha de engrenagem estimadas na ordem de ~6.6 kN tangencial e ~7.2 kN normal (a validar).</li>
@@ -72,31 +72,31 @@
 <h2>Momentos em rolamentos lineares e placas de montagem</h2>
 <p>A transmissão utiliza dois eixos guiados por dois rolamentos lineares LMK35UU (35 mm). Os rolamentos estão localizados acima da placa de montagem, forças fora do eixo e qualquer assimetria entre os lados esquerdo/direita geram momentos na placa de montagem de transmissão e na moldura.</p>
 <ul>
-<li><strong>Caixa assimétrica / jam</strong>— se um lado se ligar ou vir um atrito superior ao outro, os eixos podem torcer e impor cargas de momento adicionais nos rolamentos e placas lineares.</li>
+<li><strong>Caixa assimétrica / jam</strong>— se um lado ligar ou vir um atrito superior ao outro, os eixos podem torcer e impor cargas de momento adicionais nos rolamentos e placas lineares.</li>
 <li><strong>Revertendo momentos</strong>— O deslocamento vertical entre a linha de reação do rolamento e a placa de montagem cria um momento de inversão que tende a girar a placa de montagem sobre um eixo horizontal. Espera-se que isso seja significativo no lado da coleta durante a compressão.</li>
-<li><strong>Transferência de carga</strong>— Estes momentos devem ser levados através da placa de montagem para os pinos de aparafusamento e fixação aparafusada nos carris laterais, em seguida, para o quadro soldado e para baixo para os montagens de nivelamento e piso.</li>
+<li><strong>Transferência de carga</strong>— Estes momentos devem ser levados através da placa de montagem para os pinos de aparafusamento e fixação aparafusada nos carris laterais, em seguida, para a estrutura soldada e para baixo para as montagens de nivelamento e piso.</li>
 </ul>
 </section>
 <section>
 <h2>Princípios do caminho de carga</h2>
 <ul>
-<li><strong>Limpar caminhos</strong>— nenhuma peça ou junta deve ver a carga desproporcionada; as cargas devem espalhar-se através da estrutura soldada e nas três chapas, conforme previsto.</li>
+<li><strong>Limpar caminhos</strong>— Nenhuma peça ou junta deve ver uma carga desproporcionada; as cargas devem espalhar-se pela estrutura soldada e pelas três chapas, conforme previsto.</li>
 <li><strong>Minimizar deflexão</strong>— A rigidez das interfaces do quadro principal e da placa é fundamental para que o jugo viaje, a malha do descascador e o alinhamento do êmbolo permaneçam dentro da intenção de projeto.</li>
-<li><strong>Reacção no chão</strong>— Todas as cargas de funcionamento devem ser transportadas através das pernas para os suportes de nivelamento (Endplates M24) e para o piso; não devem existir vias de reacção flutuantes ou cantilevered.</li>
-<li><strong>Juntas</strong>— As interfaces aparafusadas (placas para armação, suportes para chapas) devem ser adequadas para o cisalhamento e a tensão; as pás carregam a localização e o cisalhamento, quando especificado.</li>
+<li><strong>Reacção no chão</strong>— Todas as cargas de funcionamento devem ser transportadas através das pernas para os suportes de nivelamento (placas laterais M24) e para o piso; não devem existir vias de reacção flutuantes ou cantilevered.</li>
+<li><strong>Juntas</strong>— As interfaces parafusadas (placas para armação, suportes para chapas) devem ser adequadas para o cisalhamento e a tensão; as dobras transportam a localização e o cisalhamento, quando especificado.</li>
 </ul>
 </section>
 <section>
 <h2>Notas relativas ao RFP</h2>
-<p>Solicita-se aos contratantes que verifiquem e documentem os casos de carga e os caminhos de carga para a configuração tal como construída, e que proponham metas práticas de aceitação para rigidez e alinhamento (incluindo os casos assimétricos/embaraçados para os eixos de transmissão). Se for caso disso, os contratantes devem recomendar se os cálculos simplificados são suficientes ou se o FEA se justifica para as chapas de soldadura e/ou montagem crítica.</p>
+<p>Os contratantes são convidados a verificar e documentar os casos de carga e os caminhos de carga para a configuração tal como construída, e a propor alvos práticos de aceitação para rigidez e alinhamento (incluindo os casos assimétricos/embaraçados para os eixos de transmissão). Se for caso disso, os contratantes devem recomendar se os cálculos simplificados são suficientes ou se o FEA se justifica para as chapas de soldadura e/ou montagem crítica.</p>
 </section>
 <section>
 <h2>Perguntas para o contratante</h2>
 <ol>
-<li>Casos de carga validados derivados (cargas radiais motoras/cintas de tensionamento, forças de malha de engrenagens, forças de reciprocação cam-yoke, compressão de pico), e fornecer força/momento estimativas em cada interface de placa de montagem.</li>
-<li>Validar ou corrigir as figuras preliminares do drivetrain (~1023 N·m torque na engrenagem acionada; ~6.6 kN tangencial e ~7.2 kN forças normais da engrenagem) e documentar suposições.</li>
-<li>Quantificar momentos e cargas de rolamento para os eixos guiados por LMK35UU, incluindo uma caixa assimétrica/embaraçada, e recomendar rigidez da placa de montagem e projeto de articulação.</li>
-<li>Recomendar se a FEA é necessária (soldadura de quadro, placa de transmissão em torno do rolamento de rolos cônicos, placa de transmissão em torno de rolamentos lineares) e fornecer condições de contorno e métricas de aceitação.</li>
+<li>Casos de carga validados derivados (cargas radiais motoras/cintas de tensão, forças de malha de engrenagem, forças de reciprocação cam-yoke, compressão de pico) e fornecer força/momento estimativas em cada interface de placa de montagem.</li>
+<li>Validar ou corrigir as figuras preliminares do drivetrain (~1023 N·m torque na engrenagem acionada; ~6.6 kN tangencial e ~7.2 kN forças de engrenagem normais) e documentar suposições.</li>
+<li>Quantificar momentos e cargas de rolamento para os eixos guiados por LMK35UU, incluindo uma caixa assimétrica/embaralhada, e recomendar rigidez da placa de montagem e projeto de junta.</li>
+<li>Recomendar se a FEA é necessária (soldadura de quadro, placa de transmissão em torno de rolamento de rolos cônicos, placa de transmissão em torno de rolamentos lineares) e fornecer condições de contorno e métricas de aceitação.</li>
 <li>Propor alvos de aceitação para deflexão / desalinhamento permissível que preservam o alinhamento do descascador e a vida útil do rolamento, e recomendar verificações de inspeção para verificar.</li>
 </ol>
 </section>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Placa de montagem do comboio — Eixo — P6 RFP</title>
+<title>Placa de montagem do comboio — Comboio — P6 RFP</title>
 <style>
     :root { --bg: #1a1d21; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --border: #30363d; }
     body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
@@ -44,17 +44,17 @@
 <h1>Placa de montagem do comboio</h1>
 <p class="muted">Parte da<a href="../index.html">Condução</a>secção. Interface estrutural entre o drivetrain (motor/redutor/redutor/reboques) e o<a href="../../Frame/index.html">quadro</a>.</p>
 <h2>Introdução</h2>
-<p>Esta placa localiza e suporta o motor, acionamento da correia, redutor, engrenagens e unidades de rolamento montado. Deve ser rígido o suficiente para manter o alinhamento da malha da engrenagem, gerenciar cargas de reação de tensão da correia e transmitir cargas de rolamento concentradas no quadro sem deflexão excessiva.</p>
+<p>Esta placa localiza e suporta o motor, acionamento da correia, redutor, engrenagens e unidades de rolamento montado. Deve ser rígido o suficiente para manter o alinhamento da malha da engrenagem, gerenciar cargas de reação de tensão da correia e transmitir cargas de rolamento concentradas para o quadro sem deflexão excessiva.</p>
 <h2>&amp; Componentes da chave de cor</h2>
 <p class="muted">Elementos-chave que os contratantes devem rever para rigidez e design conjunto.</p>
 <table>
 <tr><th>Cor( s)</th><th>Componente</th></tr>
 <tr><td><em>—</em></td><td><strong>Placa de montagem</strong>— interface da placa com os carris laterais do quadro (cómodas + parafusos). A rigidez e a flacidez são críticas.</td></tr>
-<tr><td><em>—</em></td><td><strong>Unidades de rolamento montadas</strong>— SKF F4BRP 208-SRB-CRH (localizando-se sob engrenagem passiva) e F4BRP 208-SRB-CLE (lado do eixo do redutor de saída não localizado), ou equivalentes.</td></tr>
+<tr><td><em>—</em></td><td><strong>Unidades de rolamento montadas</strong>— SKF F4BRP 208-SRB-CRH (localizando-se sob engrenagens passivas) e F4BRP 208-SRB-CLE (lado do eixo do redutor de apoio não localizado), ou equivalentes.</td></tr>
 <tr><td><em>—</em></td><td><strong>Redutor + montagem do motor</strong>— características de montagem do alinhamento da polia e das forças de reacção de tensionamento do cinto.</td></tr>
 </table>
 <h2 id="gallery">Figuras</h2>
-<p class="muted">Placa de montagem do comboio CAD. Ver também<a href="../../../Drivetrain/index.html#gallery">Galeria principal do Drivetrain</a>.</p>
+<p class="muted">Unidade de montagem da placa CAD. Ver também<a href="../../../Drivetrain/index.html#gallery">Galeria principal do Drivetrain</a>.</p>
 <figure style="margin: 1rem 0;">
 <img alt="Placa de montagem do trem CAD" src="../../../Drivetrain/drivetrain-mount-plate/images/01.png" style="max-width:100%; height:auto; border:1px solid var(--border); display:block;"/>
 <figcaption class="muted" style="margin-top:0.5rem; font-size:0.9rem;">Figura 1. Placa de montagem do drivetrain — layout, bolsos de rolamento e interface de grade de quadro (CAD).</figcaption>
@@ -68,39 +68,39 @@
 <h2>Discussão</h2>
 <h3>Desenho e intenção difíceis</h3>
 <ul>
-<li><strong>Conceito atual</strong>— Chapa de aço de peça única, de ~20 mm de espessura, projectada como "laje" para rigidez e simplicidade (jacto de água ou corte semelhante; usinagem final em superfícies críticas conforme necessário).</li>
-<li><strong>Localização na máquina</strong>— montado na parte de trás da máquina nos dois carris principais. A aresta traseira é suportada por um feixe cruzado traseiro; o suporte da aresta dianteira é através de gussets/placas amarradas no feixe cruzado próximo, onde a placa de montagem de transmissão é suportada.</li>
-<li><strong>Fontes de carga</strong>— cargas radiais de tensão do cinto; torque de saída do redutor e forças de malha de engrenagens; reacções de rolamento concentradas; forças vibratórias/cíclicas da reciprocação cam-yoke.</li>
+<li><strong>Conceito atual</strong>— Placa de aço de peça única, de ~20 mm de espessura, projectada como uma "laje" para rigidez e simplicidade (jacto de água ou corte semelhante; usinagem final em superfícies críticas conforme necessário).</li>
+<li><strong>Localização na máquina</strong>— montado na parte de trás da máquina nos dois carris principais. A aresta traseira é suportada por um feixe cruzado traseiro; o suporte da aresta dianteira é através de gussets/placas amarradas no feixe transversal próximo, onde a placa de montagem de transmissão é suportada.</li>
+<li><strong>Fontes de carga</strong>— cargas radiais de tensão do cinto; torque de saída do redutor e forças de malha de transmissão; reacções de rolamento concentradas; forças vibratórias/cíclicas da reciprocação cam-yoke.</li>
 <li><strong>Função primária</strong>— manter o alinhamento (meia de rede, interface came/yoke) durante a transmissão de cargas para<a href="../../Frame/index.html">quadro</a>.</li>
 </ul>
 <h3>Problemas e riscos conhecidos</h3>
 <ul>
-<li><strong>Cumprimento local</strong>— Se a placa de montagem ou a sua fixação aos carris forem demasiado flexíveis, o alinhamento da malha de velocidades altera-se sob carga e acelera o desgaste/ruído.</li>
-<li><strong>Deslize/fretting articular</strong>— As dobras carregam o cisalhamento; os parafusos fornecem a pinça. O contratante deve verificar se as cargas cíclicas não causam deslizamento na interface placa/carril.</li>
+<li><strong>Cumprimento local</strong>— Se a placa de montagem ou a sua fixação aos carris forem demasiado flexíveis, o alinhamento da rede de velocidades altera-se sob carga e acelera o desgaste/ruído.</li>
+<li><strong>Deslize/fretting articular</strong>— As agulhas transportam cisalhamento; os parafusos fornecem pinça. O contratante deve verificar se as cargas cíclicas não causam deslizamento na interface placa/carril.</li>
 <li><strong>Usinagem/flatness</strong>— A flacidez nas superfícies de montagem dos rolamentos e nas interfaces ferroviárias pode exigir uma maquinação pós-solda da estrutura, estratégia de shimming ou interfaces ajustáveis.</li>
 <li><strong>Shimming repetitivo</strong>— Espera-se que os travões se espalhem por baixo da chapa para nivelamento/plano. Os locais de Shim e stack-up devem ser definidos para que a configuração seja repetivel após o serviço.</li>
 </ul>
 <h3>DFM e fabricação (China)</h3>
 <ul>
 <li><strong>Rota de fabrico</strong>— Placa de corte de jato de água (ou laser) + usinagem de superfícies/características críticas (flatness, rolamentos pilotos, dados chave). Contratante para propor tolerâncias que são alcançáveis e inspeccionáveis.</li>
-<li><strong>Recursos de suporte</strong>— Define os suportes de placa/gusset e as características de parafuso no feixe cruzado traseiro e os três suportes para a frente (esquerda, centro, direita) para que os caminhos de carga sejam rígidos e inspeccionáveis.</li>
-<li><strong>Fluxo de trabalho de montagem</strong>- Intenção do proprietário é: (1) placa de gota sobre a parte superior, (2) shim para alcançar a planicidade necessária / alinhamento, (3) parafuso através de furos existentes para bloquear a posição, em seguida, (4) broca + ream através da placa nos trilhos laterais para criar o padrão de dobra para remontagem repetivel.</li>
+<li><strong>Recursos de suporte</strong>— Define os suportes de chapas/gusset e as características de parafuso no feixe cruzado traseiro e os três suportes para a frente (esquerda, centro, direita) para que os caminhos de carga sejam rígidos e inspeccionáveis.</li>
+<li><strong>Fluxo de trabalho de montagem</strong>— Intenção do proprietário é: (1) placa de gota sobre a parte superior, (2) shim para alcançar a planicidade necessária / alinhamento, (3) parafuso através de furos existentes para bloquear a posição, em seguida, (4) broca + ream através da placa para os trilhos laterais para criar o padrão de dobra para remontagem repetivel.</li>
 </ul>
 <h3>Perguntas para o contratante</h3>
 <ol>
-<li>Propor uma montagem de rigidez da placa e estratégia de fixação (tamanho/conta, padrão de parafuso/precarga) que previne o deslizamento da articulação e mantém o alinhamento da engrenagem.</li>
-<li>Quantifique as reações do tensionamento da correia e as forças da malha da engrenagem na placa de montagem, e recomende quaisquer endurecimentos/gussets ou mudanças de espessura da placa.</li>
-<li>Proponha um esquema de datum ligando esta placa ao Frame e à Transmissão (interface cam-rouping/yoke) para reconstruções repetiveis.</li>
+<li>Proponha uma estratégia de rigidez e fixação da placa de montagem (tamanho/contagem, padrão/precarga do parafuso) que impeça o deslizamento da articulação e mantenha o alinhamento da engrenagem.</li>
+<li>Quantifique as reações do tensionamento do cinto e as forças da malha da engrenagem na placa de montagem, e recomendo quaisquer endurecimentos / gussets ou mudanças de espessura da placa.</li>
+<li>Propor um esquema de datum ligando esta placa ao Frame e à Transmissão (interface cam-rating/yoke) para reconstruções repetiveis.</li>
 <li>Endereçar o eixo/boro descompasso com as unidades de rolamento SKF escolhidas: propor um adaptador seguro / projeto de extensão de eixo e tolerâncias, ou recomendar unidades de rolamento alternativo.</li>
-<li>Recomendar uma estratégia shim: locais shim, forma de pilha (shims Discrete vs espaçadores de terra), e como fazer o shimming repetible após desmontagem.</li>
-<li>Recomende o layout dodowel em trilhos laterais (intenção proprietário atual: ~3 dowels por lado em um padrão escalonado / zig-zag para evitar caminhos de carga coaxial) e se dowels ou parafusos de ombro são preferidos na prática fab China.</li>
+<li>Recomendar uma estratégia shim: locais shim, forma de pilha (shims Discrete vs espaçadores de terra), e como fazer o shimming repetível após desmontagem.</li>
+<li>Recomende o layout dodowel em trilhos laterais (intenção do proprietário atual: ~3 dowels por lado em um padrão cambaleado / zig-zag para evitar caminhos de carga coaxial) e se dowels ou parafusos de ombro são preferidos na prática fab China.</li>
 </ol>
 <h3>Interfaces e tolerâncias</h3>
 <p class="muted">Interfaces e tolerâncias conhecidas. As ligações vão para subsistemas relacionados.</p>
 <table class="iface-table">
 <thead><tr><th>Parte</th><th>Interface / tolerância</th><th>Relacionado</th></tr></thead>
 <tbody>
-<tr><td>Placa de montagem → trilhos de moldura</td><td>Localizado por dowels (planeado: padrão escalonado) + fixação aparafusada; shimmed para definir flatness/alinhamento; fluxo de trabalho reame-after-alignment pretendido</td><td><a href="../../Frame/index.html">Frame</a></td></tr>
+<tr><td>Placa de montagem → trilhos de moldura</td><td>Localizado por dobras (planeado: padrão escalonado) + fixação aparafusada; shimmed para definir flatness/alinhamento; fluxo de trabalho reame-after-alignment pretendido</td><td><a href="../../Frame/index.html">Frame</a></td></tr>
 <tr><td>SKF F4BRP 208 unidades</td><td>Diâmetro nominal do eixo 63,5 mm (2,5 pol); localização de funções CLE e não locativas por conceito de transmissão</td><td><a href="https://www.skf.com/group/products/mounted-bearings/roller-bearing-units/flanged-units/productid-F4BRP%20208-SRB-CLE">SKF CLE</a></td></tr>
 <tr><td>Rolamentos de cames</td><td>Montado no eixo suportado por esta placa; interfaces para o jugo</td><td><a href="../../Transmission/index.html">Transmissão</a></td></tr>
 </tbody>
